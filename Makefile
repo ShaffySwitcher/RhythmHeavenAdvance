@@ -6,9 +6,13 @@ ifeq ($(strip $(DEVKITARM)),)
 $(error "Please set DEVKITARM in your environment. export DEVKITARM=<path to>devkitARM")
 endif
 
-include $(DEVKITARM)/gba_rules
+include $(DEVKITARM)/base_rules
+
+#include $(DEVKITARM)/gba_rules
 CROSS := arm-none-eabi-
 OBJCOPY := $(CROSS)objcopy
+LD := $(CROSS)ld
+
 
 #---------------------------------------------------------------------------------
 # TARGET is the name of the output
@@ -29,6 +33,7 @@ INCLUDES	:= include
 DATA		:= data
 MUSIC		:=
 BUILD_DIRS  := $(BUILD) $(BUILD)/data $(BUILD)/source
+LD_SCRIPT := rt.ld
 
 #---------------------------------------------------------------------------------
 # options for code generation
@@ -85,20 +90,6 @@ ifneq ($(strip $(MUSIC)),)
 	BINFILES += soundbank.bin
 endif
 
-#---------------------------------------------------------------------------------
-# use CXX for linking C++ projects, CC for standard C
-#---------------------------------------------------------------------------------
-ifeq ($(strip $(CPPFILES)),)
-#---------------------------------------------------------------------------------
-	export LD	:=	$(CC)
-#---------------------------------------------------------------------------------
-else
-#---------------------------------------------------------------------------------
-	export LD	:=	$(CXX)
-#---------------------------------------------------------------------------------
-endif
-#---------------------------------------------------------------------------------
-
 export OFILES_BIN := $(BUILD)/data/$(addsuffix .o,$(BINFILES))
 
 export OFILES_SOURCES := $(CPPFILES:.cpp=.o) $(CFILES:.c=.o) $(SFILES:.s=.o)
@@ -117,11 +108,12 @@ export HFILES := $(addsuffix .h,$(subst .,_,$(BINFILES)))
 
 #---------------------------------------------------------------------------------
 default: $(OUTPUT).gba
+	@diff baserom.gba $(OUTPUT).gba && (echo "$(TARGET).gba: OK") || (echo "The build succeeded, but did not match the official ROM.")
 
 #---------------------------------------------------------------------------------
 clean:
 	@echo clean ...
-	@rm -fr $(BUILD) $(TARGET).elf $(TARGET).gba
+	@rm -fr $(BUILD)
 
 
 #---------------------------------------------------------------------------------
@@ -132,11 +124,15 @@ clean:
 #---------------------------------------------------------------------------------
 
 $(BUILD_DIRS):
-	mkdir -p $@
+	@echo "Creating /$@"
+	@mkdir -p $@
 
 $(OUTPUT).gba	:	$(OUTPUT).elf
+	@$(OBJCOPY) -O binary $< $@
+	@echo "ROM Assembled!"
 
 $(OUTPUT).elf	:	$(OFILES)
+	$(LD) $(OFILES) $(LD_SCRIPT) -o $@
 
 $(OFILES_SOURCES) : $(HFILES)
 
@@ -157,7 +153,7 @@ soundbank.bin soundbank.h : $(AUDIOFILES)
 #---------------------------------------------------------------------------------
 $(BUILD)/data/%.bin.o	$(BUILD)/data/%.bin.h :	data/%.bin | $(BUILD_DIRS)
 #---------------------------------------------------------------------------------
-	@echo $(notdir $<)
+	@echo "Converting $< to $<.o"
 	@bin2s -a 4 -H $(BUILD)/$<.h $< | arm-none-eabi-as -o $(BUILD)/$<.o
 
 
