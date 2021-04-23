@@ -1,0 +1,7 @@
+# Object files
+*.o
+*.elf
+
+# General project-specific ignores
+build/*
+*.gba
