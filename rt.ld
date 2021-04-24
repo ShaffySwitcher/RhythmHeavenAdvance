@@ -6,6 +6,7 @@ SECTIONS {
 		_start = . ;
 		
 		__text_start = _start ;
+		BUILD/source/boot.o(.text);
 		BUILD/data/data.bin.o(.text);
 		__text_end = . ;
 		

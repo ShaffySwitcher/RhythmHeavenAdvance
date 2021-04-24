@@ -12,6 +12,7 @@ include $(DEVKITARM)/base_rules
 CROSS := arm-none-eabi-
 OBJCOPY := $(CROSS)objcopy
 LD := $(CROSS)ld
+AS := $(CROSS)as
 
 
 #---------------------------------------------------------------------------------
@@ -92,15 +93,15 @@ endif
 
 export OFILES_BIN := $(BUILD)/data/$(addsuffix .o,$(BINFILES))
 
-export OFILES_SOURCES := $(CPPFILES:.cpp=.o) $(CFILES:.c=.o) $(SFILES:.s=.o)
+export OFILES_SOURCES := $(CPPFILES:.cpp=.o) $(CFILES:.c=.o) $(BUILD)/source/$(SFILES:.s=.o)
 
 export OFILES := $(OFILES_BIN) $(OFILES_SOURCES)
 
-export HFILES := $(addsuffix .h,$(subst .,_,$(BINFILES)))
+export HFILES := $(BUILD)/data/$(addsuffix .h,$(BINFILES))
 
-#export INCLUDE	:=	$(foreach dir,$(INCLUDES),-iquote $(CURDIR)/$(dir)) \
-					#$(foreach dir,$(LIBDIRS),-I$(dir)/include) \
-					#-I$(CURDIR)/$(BUILD)
+export INCLUDE	:=	$(foreach dir,$(INCLUDES),$(wildcard $(dir)/*.h)) \
+					$(foreach dir,$(LIBDIRS),-I$(dir)/include) \
+					-I$(CURDIR)/$(BUILD)
 
 #export LIBPATHS	:=	$(foreach dir,$(LIBDIRS),-L$(dir)/lib)
 
@@ -128,13 +129,11 @@ $(BUILD_DIRS):
 	@mkdir -p $@
 
 $(OUTPUT).gba	:	$(OUTPUT).elf
-	@$(OBJCOPY) -O binary $< $@
+	@$(OBJCOPY) --pad-to=0x1008000 --gap-fill=0x00 -O binary $< $@
 	@echo "ROM Assembled!"
 
 $(OUTPUT).elf	:	$(OFILES)
-	$(LD) $(OFILES) $(LD_SCRIPT) -o $@
-
-$(OFILES_SOURCES) : $(HFILES)
+	$(LD) $(OFILES) $(INCLUDE) $(LD_SCRIPT) -o $@
 
 #---------------------------------------------------------------------------------
 # The bin2o rule should be copied and modified
@@ -154,7 +153,11 @@ soundbank.bin soundbank.h : $(AUDIOFILES)
 $(BUILD)/data/%.bin.o	$(BUILD)/data/%.bin.h :	data/%.bin | $(BUILD_DIRS)
 #---------------------------------------------------------------------------------
 	@echo "Converting $< to $<.o"
-	@bin2s -a 4 -H $(BUILD)/$<.h $< | arm-none-eabi-as -o $(BUILD)/$<.o
+	@bin2s -a 4 -H $(BUILD)/$<.h $< | $(AS) -o $(BUILD)/$<.o
+	
+$(BUILD)/source/%.o : source/%.s | $(BUILD_DIRS)
+	@echo "Assembling $< to $(basename $<).o"
+	@$(AS) -MD $(BUILD)/source/$*.d -o $@ $<
 
 
 -include $(DEPSDIR)/*.d
