@@ -2,6 +2,7 @@
 .syntax unified
 
 .include "include/gba.inc"
+.include "include/asm_macros.inc"
 
 @ Entry Point
 /* 000000 */ B entry_point
@@ -88,9 +89,11 @@ entry_point:
 /* 0000dc */ MOV R0, 0x1F @ Set R0 to 0x1F
 /* 0000e0 */ MSR CPSR_all, R0
 /* 0000e4 */ LDR SP, val_000104
+
 /* 0000e8 */ LDR R1, =REG_INTERUPT
-/* 0000ec */ ADR R0, addr_00010C
-/* 0000f0 */ STR R0, [R1]
+/* 0000ec */ ADR R0, interrupt_handler
+/* 0000f0 */ STR R0, [R1] @ Save the address of the interrupt handler to REG_INTERUPT
+
 /* 0000f4 */ LDR R1, =0x080002C5
 /* 0000f8 */ MOV LR, PC @ Set LR to PC
 /* 0000fc */ BX R1
@@ -101,7 +104,7 @@ val_000104:
 val_000108:
 /* 000108 */ .word 0x03007FA0
 
-addr_00010C:
+interrupt_handler:
 /* 00010c */ MOV32 R3, REG_IE
 /* 000114 */ LDR R2, [R3] @ Load both REG_IE and REG_IF as one word
 /* 000118 */ AND R1, R2, R2, LSR 0x10 @ Set R1 to all interrupts that have been both registered and acknowledged
