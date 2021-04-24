@@ -84,10 +84,10 @@
 entry_point:
 /* 0000d0 */ MOV R0, 0x12 @ Set R0 to 0x12
 /* 0000d4 */ MSR CPSR_all, R0
-/* 0000d8 */ LDR SP, addr_000108
+/* 0000d8 */ LDR SP, val_000108
 /* 0000dc */ MOV R0, 0x1F @ Set R0 to 0x1F
 /* 0000e0 */ MSR CPSR_all, R0
-/* 0000e4 */ LDR SP, addr_000104
+/* 0000e4 */ LDR SP, val_000104
 /* 0000e8 */ LDR R1, =REG_INTERUPT
 /* 0000ec */ ADR R0, addr_00010C
 /* 0000f0 */ STR R0, [R1]
@@ -96,57 +96,57 @@ entry_point:
 /* 0000fc */ BX R1
 /* 000100 */ B entry_point
 
-addr_000104:
-/* 000104 */ MOVWEQ R7, 0xF00
-
-addr_000108:
-/* 000108 */ MOVWEQ R7, 0xFA0
+val_000104:
+/* 000104 */ .word 0x03007F00
+val_000108:
+/* 000108 */ .word 0x03007FA0
 
 addr_00010C:
-/* 00010c */ MOV R3, REG_DISPCNT @ Set R3 to REG_DISPCNT
-/* 000110 */ ADD R3, R3, 0x200 @ Set R3 to R3 + 0x200
-/* 000114 */ LDR R2, [R3]
-/* 000118 */ AND R1, R2, R2, LSR 0x10 @ Set R1 to R2 & R2, LSR 0x10
-/* 00011c */ ANDS R0, R1, 0x2000 @ Set R0 to R1 & 0x2000
+/* 00010c */ MOV32 R3, REG_IE
+/* 000114 */ LDR R2, [R3] @ Load both REG_IE and REG_IF as one word
+/* 000118 */ AND R1, R2, R2, LSR 0x10 @ Set R1 to all interrupts that have been both registered and acknowledged
+/* 00011c */ ANDS R0, R1, INT_CART
 /* 000120 */ BNE branch_0001D4
-/* 000124 */ MOV R2, 0x0 @ Set R2 to 0x0
-/* 000128 */ ANDS R0, R1, 0x400 @ Set R0 to R1 & 0x400
+
+@ Iterate through all interrupts until one is found, and set R2 based on the one triggered.
+/* 000124 */ MOV R2, 0x0 @ Set R2 to 0
+/* 000128 */ ANDS R0, R1, INT_DMA2
 /* 00012c */ BNE branch_0001C0
-/* 000130 */ ADD R2, R2, 0x4 @ Set R2 to R2 + 0x4
-/* 000134 */ ANDS R0, R1, 0x1 @ Set R0 to R1 & 0x1
+/* 000130 */ ADD R2, R2, 0x4 @ R2 = 0x4
+/* 000134 */ ANDS R0, R1, INT_VBLANK
 /* 000138 */ BNE branch_0001C0
-/* 00013c */ ADD R2, R2, 0x4 @ Set R2 to R2 + 0x4
-/* 000140 */ ANDS R0, R1, 0x2 @ Set R0 to R1 & 0x2
+/* 00013c */ ADD R2, R2, 0x4 @ R2 = 0x8
+/* 000140 */ ANDS R0, R1, INT_HBLANK
 /* 000144 */ BNE branch_0001C0
-/* 000148 */ ADD R2, R2, 0x4 @ Set R2 to R2 + 0x4
-/* 00014c */ ANDS R0, R1, 0x4 @ Set R0 to R1 & 0x4
+/* 000148 */ ADD R2, R2, 0x4 @ R2 = 0xC
+/* 00014c */ ANDS R0, R1, INT_VCOUNT
 /* 000150 */ BNE branch_0001C0
-/* 000154 */ ADD R2, R2, 0x4 @ Set R2 to R2 + 0x4
-/* 000158 */ ANDS R0, R1, 0x8 @ Set R0 to R1 & 0x8
+/* 000154 */ ADD R2, R2, 0x4 @ R2 = 0x10
+/* 000158 */ ANDS R0, R1, INT_TIMER0
 /* 00015c */ BNE branch_0001C0
-/* 000160 */ ADD R2, R2, 0x4 @ Set R2 to R2 + 0x4
-/* 000164 */ ANDS R0, R1, 0x10 @ Set R0 to R1 & 0x10
+/* 000160 */ ADD R2, R2, 0x4 @ R2 = 0x14
+/* 000164 */ ANDS R0, R1, INT_TIMER1
 /* 000168 */ BNE branch_0001C0
-/* 00016c */ ADD R2, R2, 0x4 @ Set R2 to R2 + 0x4
-/* 000170 */ ANDS R0, R1, 0x20 @ Set R0 to R1 & 0x20
+/* 00016c */ ADD R2, R2, 0x4 @ R2 = 0x18
+/* 000170 */ ANDS R0, R1, INT_TIMER2
 /* 000174 */ BNE branch_0001C0
-/* 000178 */ ADD R2, R2, 0x4 @ Set R2 to R2 + 0x4
-/* 00017c */ ANDS R0, R1, 0x40 @ Set R0 to R1 & 0x40
+/* 000178 */ ADD R2, R2, 0x4 @ R2 = 0x1C
+/* 00017c */ ANDS R0, R1, INT_TIMER3
 /* 000180 */ BNE branch_0001C0
-/* 000184 */ ADD R2, R2, 0x4 @ Set R2 to R2 + 0x4
-/* 000188 */ ANDS R0, R1, 0x80 @ Set R0 to R1 & 0x80
+/* 000184 */ ADD R2, R2, 0x4 @ R2 = 0x20
+/* 000188 */ ANDS R0, R1, INT_COM
 /* 00018c */ BNE branch_0001C0
-/* 000190 */ ADD R2, R2, 0x4 @ Set R2 to R2 + 0x4
-/* 000194 */ ANDS R0, R1, 0x100 @ Set R0 to R1 & 0x100
+/* 000190 */ ADD R2, R2, 0x4 @ R2 = 0x24
+/* 000194 */ ANDS R0, R1, INT_DMA0
 /* 000198 */ BNE branch_0001C0
-/* 00019c */ ADD R2, R2, 0x4 @ Set R2 to R2 + 0x4
-/* 0001a0 */ ANDS R0, R1, 0x200 @ Set R0 to R1 & 0x200
+/* 00019c */ ADD R2, R2, 0x4 @ R2 = 0x28
+/* 0001a0 */ ANDS R0, R1, INT_DMA1
 /* 0001a4 */ BNE branch_0001C0
-/* 0001a8 */ ADD R2, R2, 0x4 @ Set R2 to R2 + 0x4
-/* 0001ac */ ANDS R0, R1, 0x800 @ Set R0 to R1 & 0x800
+/* 0001a8 */ ADD R2, R2, 0x4 @ R2 = 0x2C
+/* 0001ac */ ANDS R0, R1, INT_DMA3
 /* 0001b0 */ BNE branch_0001C0
-/* 0001b4 */ ADD R2, R2, 0x4 @ Set R2 to R2 + 0x4
-/* 0001b8 */ ANDS R0, R1, 0x1000 @ Set R0 to R1 & 0x1000
+/* 0001b4 */ ADD R2, R2, 0x4 @ R2 = 0x30
+/* 0001b8 */ ANDS R0, R1, INT_BUTTON
 /* 0001bc */ BNE branch_0001C0
 
 branch_0001C0:
@@ -157,7 +157,7 @@ branch_0001C0:
 /* 0001d0 */ BX R0
 
 branch_0001D4:
-/* 0001d4 */ MOV R0, 0x0 @ Set R0 to 0x0
+/* 0001d4 */ MOV R0, 0x0 @ Set R0 to 0
 /* 0001d8 */ MOV32 R3, REG_SGCNT1
 /* 0001e0 */ STRH R0, [R3]
 
