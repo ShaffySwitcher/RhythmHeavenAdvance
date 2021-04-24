@@ -4,6 +4,6 @@
 .endm
 
 .macro glabel value
-	global \value
+	.global \value
 	\value:
 .endm

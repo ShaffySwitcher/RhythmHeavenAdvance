@@ -91,9 +91,9 @@ ifneq ($(strip $(MUSIC)),)
 	BINFILES += soundbank.bin
 endif
 
-export OFILES_BIN := $(BUILD)/data/$(addsuffix .o,$(BINFILES))
+export OFILES_BIN := $(addprefix $(BUILD)/data/,$(addsuffix .o,$(BINFILES)))
 
-export OFILES_SOURCES := $(CPPFILES:.cpp=.o) $(CFILES:.c=.o) $(BUILD)/source/$(SFILES:.s=.o)
+export OFILES_SOURCES := $(CPPFILES:.cpp=.o) $(CFILES:.c=.o) $(addprefix $(BUILD)/source/,$(SFILES:.s=.o))
 
 export OFILES := $(OFILES_BIN) $(OFILES_SOURCES)
 
@@ -129,11 +129,11 @@ $(BUILD_DIRS):
 	@mkdir -p $@
 
 $(OUTPUT).gba	:	$(OUTPUT).elf
-	@$(OBJCOPY) --pad-to=0x1008000 --gap-fill=0x00 -O binary $< $@
+	@$(OBJCOPY) --pad-to=0x1000000 --gap-fill=0x00 -O binary $< $@
 	@echo "ROM Assembled!"
 
 $(OUTPUT).elf	:	$(OFILES)
-	$(LD) $(OFILES) $(INCLUDE) $(LD_SCRIPT) -o $@
+	$(LD) $(OFILES) $(INCLUDE) -T $(LD_SCRIPT) -o $@
 
 #---------------------------------------------------------------------------------
 # The bin2o rule should be copied and modified

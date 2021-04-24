@@ -1,15 +1,17 @@
 OUTPUT_ARCH(arm)
 
-SECTIONS {
-	.text :
-	{	
-		_start = . ;
+SECTIONS {	
+	. = 0;
+	_start = . ;
+	__romPos = 0;
 		
-		__text_start = _start ;
+	. = 0x08000000;
+	.cartrom . : AT(__romPos) {
+		BUILD/source/rom_header.o(.text);
 		BUILD/source/boot.o(.text);
-		BUILD/data/data.bin.o(.text);
-		__text_end = . ;
-		
-		_end = __text_end ;
+		BUILD/data/bindata_1F4.bin.o(.text);
+		BUILD/data/bindata_2C4.bin.o(.text);
 	}
+
+	_end = . ;
 }
