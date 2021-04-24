@@ -89,7 +89,7 @@ interrupt_handler_registered:
 @ Cartridge interrupt
 interrupt_handler_fatal:
 /* 0001d4 */ MOV R0, 0x0 @ Set R0 to 0
-/* 0001d8 */ MOV32 R3, REG_SGCNT1
+/* 0001d8 */ MOV32 R3, REG_SOUNDCNT_X
 /* 0001e0 */ STRH R0, [R3]
 
 @ Enter an infinite loop to end the program

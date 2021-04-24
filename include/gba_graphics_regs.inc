@@ -12,7 +12,7 @@
 .set VIDEO_MODE_16BIT_BMP_SMALL,	5 @ 16-bit bitmapped 160x128
 
 .set DISPCNT_VIDEO_MODE_MASK,       0x0007
-.set DISPCNT_GBC_MODE, 				(1 << 4)  @ Game Boy Color mode (always 0)
+.set DISPCNT_GBC_MODE, 				(1 << 4)  @ Game Boy Color mode (always 0). Read only
 .set DISPCNT_BMP_ADDR,				(1 << 5)  @ Controls starting address of bitmap in bitmapped modes
 .set DISPCNT_HBLANK_FORCE_PROC, 	(1 << 6)  @ Force processing during hblank
 .set DISPCNT_SPRITE_DIM, 			(1 << 7)  @ If true sprites are stored 1 dimensionally in VRAM, otherwise 2 dimensionally
@@ -32,9 +32,9 @@
 
 .set REG_DISPSTAT,   	IORAMBase + 0x4
 
-.set DISPSTAT_VREFRESH, 				(1 << 0) 	@ V Refresh status. 0 during VDraw, 1 during VBlank
-.set DISPSTAT_HREFRESH, 				(1 << 1) 	@ H Refresh status, same as above
-.set DISPSTAT_VCOUNT_TRIGGERED, 		(1 << 2) 	@ VCount Triggered status, set to 1 when Y trigger interrupt occurs
+.set DISPSTAT_VREFRESH, 				(1 << 0) 	@ V Refresh status. 0 during VDraw, 1 during VBlank. Read only
+.set DISPSTAT_HREFRESH, 				(1 << 1) 	@ H Refresh status, same as above. Read only
+.set DISPSTAT_VCOUNT_TRIGGERED, 		(1 << 2) 	@ VCount Triggered status, set to 1 when Y trigger interrupt occurs. Read only
 .set DISPSTAT_VBLANK_IRQ, 				(1 << 3) 	@ Enables VBlank IRQ, interrupt goes off at start of VBlank
 .set DISPSTAT_HBLANK_IRQ, 				(1 << 4) 	@ Enables HBlank IRQ, interrupt goes off at start of HBlank
 .set DISPSTAT_VCOUNT_IRQ, 				(1 << 5) 	@ Enables VCount trigger IRQ, interrupt goes off when VCount line trigger is reached.
@@ -71,7 +71,7 @@
 .set BGCNT_MOSAIC_EFFECT, 		(1 << 6) 	 @ Mosaic effect
 .set BGCNT_256_PALETTE, 		(1 << 7) 	 @ Color palette type, 1 = 256 color palette, 0 = 16 different 16 color palettes
 .set BGCNT_TILEMAP_ADDR_MASK, 	(0x1F << 8)	 @ Starting address of character tile map. Address = 0x06000000 + M * 0x800
-.set BGCNT_SCREEN_OVER, 		(1 << 13) 	 @ Screen Over. Forced to 0 for bgs 0 and 1.
+.set BGCNT_SCREEN_OVER, 		(1 << 13) 	 @ Screen Over. Forced to 0 and read only for bgs 0 and 1.
 .set BGCNT_TILEMAP_SIZE_MASK, 	(0x03 << 14) @ Size of tile map
 
 
