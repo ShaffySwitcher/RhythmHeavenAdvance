@@ -34,7 +34,7 @@ INCLUDES	:= include
 DATA		:= data
 MUSIC		:=
 BUILD_DIRS  := $(BUILD) $(BUILD)/data $(BUILD)/source
-LD_SCRIPT := rt.ld
+LD_SCRIPT   := rt.ld
 
 #---------------------------------------------------------------------------------
 # options for code generation
@@ -93,15 +93,15 @@ endif
 
 export OFILES_BIN := $(addprefix $(BUILD)/data/,$(addsuffix .o,$(BINFILES)))
 
-export OFILES_SOURCES := $(CPPFILES:.cpp=.o) $(CFILES:.c=.o) $(addprefix $(BUILD)/source/,$(SFILES:.s=.o))
+export OFILES_SOURCES := $(addprefix $(BUILD)/source/,$(SFILES:.s=.o))
 
 export OFILES := $(OFILES_BIN) $(OFILES_SOURCES)
 
 export HFILES := $(BUILD)/data/$(addsuffix .h,$(BINFILES))
 
 export INCLUDE	:=	$(foreach dir,$(INCLUDES),$(wildcard $(dir)/*.h)) \
-					$(foreach dir,$(LIBDIRS),-I$(dir)/include) \
-					-I$(CURDIR)/$(BUILD)
+					$(foreach dir,$(LIBDIRS),-I $(dir)/include) \
+					-I $(CURDIR)/$(BUILD)
 
 #export LIBPATHS	:=	$(foreach dir,$(LIBDIRS),-L$(dir)/lib)
 
@@ -133,7 +133,7 @@ $(OUTPUT).gba	:	$(OUTPUT).elf
 	@echo "ROM Assembled!"
 
 $(OUTPUT).elf	:	$(OFILES)
-	$(LD) $(OFILES) $(INCLUDE) -T $(LD_SCRIPT) -o $@
+	$(LD) $(OFILES) $(INCLUDE) -T $(LD_SCRIPT) -Map $(@:.elf=.map) -o $@
 
 #---------------------------------------------------------------------------------
 # The bin2o rule should be copied and modified
@@ -157,7 +157,7 @@ $(BUILD)/data/%.bin.o	$(BUILD)/data/%.bin.h :	data/%.bin | $(BUILD_DIRS)
 	
 $(BUILD)/source/%.o : source/%.s | $(BUILD_DIRS)
 	@echo "Assembling $< to $(basename $<).o"
-	@$(AS) -MD $(BUILD)/source/$*.d -o $@ $<
+	@$(AS) -MD $(BUILD)/source/$*.d -march=armv4t -o $@ $<
 
 
 -include $(DEPSDIR)/*.d

@@ -1,15 +1,19 @@
 @ DMA Source Registers (Write Only)
 
-.set DMACNT_INC_TYPE_INCREMENT,         0
-.set DMACNT_INC_TYPE_DECREMENT,         1
-.set DMACNT_INC_TYPE_UNCHANGED,         2
-.set DMACNT_INC_TYPE_INCREMENT_WITHOUT, 3 @ Only valid for dest address. Also unsure what it means
+.set DMACNT_DEST_INC_TYPE_INCREMENT,         (0 << 5)
+.set DMACNT_DEST_INC_TYPE_DECREMENT,         (1 << 5)
+.set DMACNT_DEST_INC_TYPE_UNCHANGED,         (2 << 5)
+.set DMACNT_DEST_INC_TYPE_INCREMENT_WITHOUT, (3 << 5) @ Unsure what this means
 
-.set DMACNT_START_MODE_IMMEDIATE,   0
-.set DMACNT_START_MODE_VBLANK,      1
-.set DMACNT_START_MODE_HBLANK,      2
-.set DMACNT_START_MODE_FIFO_EMPTY,  3 @ Only valid on DMA 1 and 2. Ignores size and count, only transfers single 32 bit quantity.
-.set DMACNT_START_MODE_RENDER_LINE, 3 @ Only valid on DMA 3
+.set DMACNT_SRC_INC_TYPE_INCREMENT, (0 << 7)
+.set DMACNT_SRC_INC_TYPE_DECREMENT, (1 << 7)
+.set DMACNT_SRC_INC_TYPE_UNCHANGED, (2 << 7)
+
+.set DMACNT_START_MODE_IMMEDIATE,   (0 << 12)
+.set DMACNT_START_MODE_VBLANK,      (1 << 12)
+.set DMACNT_START_MODE_HBLANK,      (2 << 12)
+.set DMACNT_START_MODE_FIFO_EMPTY,  (3 << 12) @ Only valid on DMA 1 and 2. Ignores size and count, only transfers single 32 bit quantity.
+.set DMACNT_START_MODE_RENDER_LINE, (3 << 12) @ Only valid on DMA 3
 
 .set DMACNT_DEST_INCREMENT_TYPE_MASK, (0x3 << 5)  @ Type of increment applied to destination address
 .set DMACNT_SRC_INCREMENT_TYPE_MASK,  (0x3 << 7)  @ Type of increment applied to source address

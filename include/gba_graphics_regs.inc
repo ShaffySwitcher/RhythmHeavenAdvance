@@ -11,22 +11,20 @@
 .set VIDEO_MODE_8BIT_BMP, 			4 @ 8-bit bitmapped 240x160
 .set VIDEO_MODE_16BIT_BMP_SMALL,	5 @ 16-bit bitmapped 160x128
 
-.set DISPCNT_VIDEO_MODE_MASK,       0x0007
-.set DISPCNT_GBC_MODE, 				(1 << 4)  @ Game Boy Color mode (always 0). Read only
-.set DISPCNT_BMP_ADDR,				(1 << 5)  @ Controls starting address of bitmap in bitmapped modes
-.set DISPCNT_HBLANK_FORCE_PROC, 	(1 << 6)  @ Force processing during hblank
-.set DISPCNT_SPRITE_DIM, 			(1 << 7)  @ If true sprites are stored 1 dimensionally in VRAM, otherwise 2 dimensionally
-.set DISPCNT_FORCE_BLANK, 			(1 << 8)  @ Force display to go blank
-.set DISPCNT_DISPLAY_BG0, 			(1 << 9)  @ Enable display of BG0
-.set DISPCNT_DISPLAY_BG1, 			(1 << 10) @ Enable display of BG1
-.set DISPCNT_DISPLAY_BG2, 			(1 << 11) @ Enable display of BG2
-.set DISPCNT_DISPLAY_BG3, 			(1 << 12) @ Enable display of BG3
-.set DISPCNT_DISPLAY_OAM, 			(1 << 13) @ Enable display of sprites
-.set DISPCNT_ENABLE_WINDOW0, 		(1 << 14) @ Enable Window 0
-.set DISPCNT_ENABLE_WINDOW1, 		(1 << 15) @ Enable Window 1
-.set DISPCNT_ENABLE_SPRITE_WINDOWS, (1 << 16) @ Enable Sprite Windows
-
-.set REG_DISPCNT_H,  	IORAMBase + 0x2
+.set DISPCNT_VIDEO_MODE_MASK,       (0x07 << 0)
+.set DISPCNT_GBC_MODE, 				(1 << 3)    @ Game Boy Color mode (always 0). Read only
+.set DISPCNT_BMP_ADDR,				(1 << 4)    @ Controls starting address of bitmap in bitmapped modes
+.set DISPCNT_HBLANK_FORCE_PROC, 	(1 << 5)    @ Force processing during hblank
+.set DISPCNT_SPRITE_DIM, 			(1 << 6)    @ If true sprites are stored 1 dimensionally in VRAM, otherwise 2 dimensionally
+.set DISPCNT_FORCE_BLANK, 			(1 << 7)    @ Force display to go blank
+.set DISPCNT_DISPLAY_BG0, 			(1 << 8)    @ Enable display of BG0
+.set DISPCNT_DISPLAY_BG1, 			(1 << 9)    @ Enable display of BG1
+.set DISPCNT_DISPLAY_BG2, 			(1 << 10)   @ Enable display of BG2
+.set DISPCNT_DISPLAY_BG3, 			(1 << 11)   @ Enable display of BG3
+.set DISPCNT_DISPLAY_OAM, 			(1 << 12)   @ Enable display of sprites
+.set DISPCNT_ENABLE_WINDOW0, 		(1 << 13)   @ Enable Window 0
+.set DISPCNT_ENABLE_WINDOW1, 		(1 << 14)   @ Enable Window 1
+.set DISPCNT_ENABLE_SPRITE_WINDOWS, (1 << 15)   @ Enable Sprite Windows
 
 
 
@@ -66,7 +64,7 @@
 .set BG_ROT_TILEMAP_64x64, 	2
 .set BG_ROT_TILEMAP_128x128,3
 
-.set BGCNT_PRIORITY_MASK, 		0x0003 		 @ Priority, 0 highest, 3 lowest
+.set BGCNT_PRIORITY_MASK, 		(0x03 << 0)  @ Priority, 0 highest, 3 lowest
 .set BGCNT_TILEDATA_ADDR_MASK, 	(0x03 << 2)  @ Starting address of tile data. Address = 0x06000000 + S * 0x4000
 .set BGCNT_MOSAIC_EFFECT, 		(1 << 6) 	 @ Mosaic effect
 .set BGCNT_256_PALETTE, 		(1 << 7) 	 @ Color palette type, 1 = 256 color palette, 0 = 16 different 16 color palettes

@@ -17,19 +17,19 @@ glabel entry_point
 /* 0000f0 */ STR R0, [R1] @ Save the address of the interrupt handler to REG_INTERUPT
 
 @ Jump into main code
-/* 0000f4 */ LDR R1, =0x080002C5
+/* 0000f4 */ LDR R1, =0x080002C5 @!Pointer
 /* 0000f8 */ MOV LR, PC @ Set LR to PC
-/* 0000fc */ BX R1 @ Jump into RAM
+/* 0000fc */ BX R1
 /* 000100 */ B entry_point
 
 val_000104:
-/* 000104 */ .word 0x03007F00
+/* 000104 */ .word 0x03007F00 @!Pointer
 val_000108:
-/* 000108 */ .word 0x03007FA0
+/* 000108 */ .word 0x03007FA0 @!Pointer
 
 
 
-interrupt_handler:
+glabel interrupt_handler
 /* 00010c */ MOV32 R3, REG_IE
 /* 000114 */ LDR R2, [R3] @ Load both REG_IE and REG_IF as one word
 /* 000118 */ AND R1, R2, R2, LSR 0x10 @ Set R1 to all interrupts that have been both registered and acknowledged
@@ -81,7 +81,7 @@ interrupt_handler:
 
 interrupt_handler_registered:
 /* 0001c0 */ STRH R0, [R3,0x2]
-/* 0001c4 */ LDR R1, =0x03004460
+/* 0001c4 */ LDR R1, =0x03004460 @!Pointer
 /* 0001c8 */ ADD R1, R1, R2 @ Set R1 to R1 + R2
 /* 0001cc */ LDR R0, [R1] @ Jumptable based on interrupt type
 /* 0001d0 */ BX R0
@@ -99,5 +99,6 @@ interrupt_handler_infinite_loop:
 /* 0001e4 */ B interrupt_handler_infinite_loop
 
 .ltorg
+
 
 .end

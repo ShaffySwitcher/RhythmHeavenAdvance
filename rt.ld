@@ -7,11 +7,13 @@ SECTIONS {
 		
 	. = 0x08000000;
 	.cartrom . : AT(__romPos) {
-		BUILD/source/rom_header.o(.text);
-		BUILD/source/boot.o(.text);
-		BUILD/data/bindata_1F4.bin.o(.text);
-		BUILD/data/bindata_2C4.bin.o(.text);
+		build/source/rom_header.o(.text*);
+		build/source/boot.o(.text*);
+		build/source/asm_080001F4.o(.text*);
+		build/source/asm_080002C4.o(.text*);
+		build/data/bindata_080002C4.bin.o(.rodata*);
 	}
 
 	_end = . ;
+	 /DISCARD/ : {*(*);}
 }
