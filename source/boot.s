@@ -83,11 +83,13 @@ interrupt_handler_registered:
 /* 0001c0 */ STRH R0, [R3,0x2]
 /* 0001c4 */ LDR R1, =0x03004460
 /* 0001c8 */ ADD R1, R1, R2 @ Set R1 to R1 + R2
-/* 0001cc */ LDR R0, [R1]
+/* 0001cc */ LDR R0, [R1] @ Jumptable based on interrupt type
 /* 0001d0 */ BX R0
 
 @ Cartridge interrupt
 interrupt_handler_fatal:
+
+ @ Disable the sound circuit
 /* 0001d4 */ MOV R0, 0x0 @ Set R0 to 0
 /* 0001d8 */ MOV32 R3, REG_SOUNDCNT_X
 /* 0001e0 */ STRH R0, [R3]

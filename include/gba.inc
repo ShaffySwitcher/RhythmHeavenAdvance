@@ -24,57 +24,16 @@
 .set REG_INTERUPT,   	InternWorkRAMBase + 0x7FFC
 
 
+
+@ Hardware Registers
+
 .include "include/gba_graphics_regs.inc"
 .include "include/gba_sound_regs.inc"
 .include "include/gba_dma_regs.inc"
 .include "include/gba_timer_regs.inc"
 .include "include/gba_comm_regs.inc"
-
-
-@ Keypad Input and Control Registers
-
-@ Input Register (Read Only)
-@ A B E S R L U D I J XXXXXX
-
-@ A - A button
-@ B - B button
-@ E - Select
-@ S - Start
-@ R - D-pad Right
-@ L - D-pad Left
-@ U - D-pad Up
-@ D - D-pad Down
-@ I - Right shoulder
-@ J - Left shoulder
-
-@ Bits are 0 when pressed, and 1 when released
-
-.set REG_P1,         	IORAMBase + 0x130
-
-@ Key Control Register - Sets which keypresses generate interrupts
-@ A B E S R L U D I J XXXX K T
-
-@ All inputs same as above
-@ K - Generate interrupt on keypress
-@ T - Interrupt type - if 1 then all specified keys must be pressed, if 0 then any key
-
-.set REG_P1CNT,      	IORAMBase + 0x132
-
-
-.set REG_RCNT,         	IORAMBase + 0x134
-.set REG_JOYCNT,    	IORAMBase + 0x140
-.set REG_JOYRE,      	IORAMBase + 0x150
-.set REG_JOYRE_L,    	IORAMBase + 0x150
-.set REG_JOYRE_H,    	IORAMBase + 0x152
-.set REG_JOYTR,      	IORAMBase + 0x154
-.set REG_JOYTR_L,    	IORAMBase + 0x154
-.set REG_JOYTR_H,    	IORAMBase + 0x156
-.set REG_JSTAT,      	IORAMBase + 0x158
-.set REG_JSTAT_L,    	IORAMBase + 0x158
-.set REG_JSTAT_H,    	IORAMBase + 0x15A
-
-
-
+.include "include/gba_input_regs.inc"
+.include "include/gba_transfer_regs.inc"
 .include "include/gba_interrupt_regs.inc"
 
 
