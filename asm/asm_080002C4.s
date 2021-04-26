@@ -4,6 +4,7 @@
 
 .include "include/gba.inc"
 
+glabel func_080002c4
 /* 080002c4 */ PUSH {R4, R5, LR}
 /* 080002c6 */ SUB SP, 0x4
 
@@ -43,21 +44,21 @@
 @ Set DMA channel 3 source address to the location of the interrupt handler
 /* 080002f6 */ LDR R1, =interrupt_handler
 /* 080002f8 */ STR R1, [R0] @ REG_DMA3SAD
-@ Set DMA channel 3 dest address to 0x030044A0
-/* 080002fa */ LDR R3, =0x030044A0 @!Pointer
+@ Set DMA channel 3 dest address to the new location of the interrupt handler
+/* 080002fa */ LDR R3, =interrupt_handler_intern
 /* 080002fc */ STR R3, [R0, 0x4] @ REG_DMA3DAD
 @ Copy 0x80 words (0x200 bytes) from the interrupt handler to the new location.
 /* 080002fe */ LDR R1, =((DMACNT_DEST_INC_TYPE_INCREMENT | DMACNT_DEST_INC_TYPE_INCREMENT | DMACNT_SIZE | DMACNT_START_MODE_IMMEDIATE | DMACNT_ENABLE) << 16 + 0x80)
 /* 08000300 */ STR R1, [R0, 0x8] @ REG_DMA3CNT
 /* 08000302 */ LDR R1, [R0, 0x8] @ REG_DMA3CNT
 
-@ Set DMA channel 3 source address to 0x0804F300
-/* 08000304 */ LDR R1, =0x0804F300 @!Pointer
+@ Set DMA channel 3 source address to D_0804F300
+/* 08000304 */ LDR R1, =D_0804F300
 /* 08000306 */ STR R1, [R0] @ REG_DMA3SAD
-@ Set DMA channel 3 dest address to 0x03004460
-/* 08000308 */ LDR R1, =0x03004460 @!Pointer
+@ Set DMA channel 3 dest address to D_03004460
+/* 08000308 */ LDR R1, =D_03004460
 /* 0800030a */ STR R1, [R0, 0x4] @ REG_DMA3DAD
-@ Copy 0xE words (0x38 bytes) from 0x0804F300 to 0x03004460.
+@ Copy 0xE words (0x38 bytes) from D_0804F300 to D_03004460.
 /* 0800030c */ LDR R1, =((DMACNT_DEST_INC_TYPE_INCREMENT | DMACNT_DEST_INC_TYPE_INCREMENT | DMACNT_SIZE | DMACNT_START_MODE_IMMEDIATE | DMACNT_ENABLE) << 16 + 0xE)
 /* 0800030e */ STR R1, [R0, 0x8] @ REG_DMA3CNT
 /* 08000310 */ LDR R1, [R0, 0x8] @ REG_DMA3CNT
@@ -92,24 +93,24 @@
 
 /* 0800033a */ LDR R4, =REG_IME
 /* 0800033c */ STRH R2, [R4] @ Reset all bits in REG_IME - not yet labelled
-/* 0800033e */ LDR R5, =0x03004498 @!Pointer
-/* 08000340 */ STRB R1, [R5] @ Store 0 at 0x03004498
-/* 08000342 */ BL 0x8000718 @!Pointer
+/* 0800033e */ LDR R5, =D_03004498
+/* 08000340 */ STRB R1, [R5] @ Store 0 at D_03004498
+/* 08000342 */ BL func_08000718
 /* 08000346 */ BL func_08000224
-/* 0800034a */ BL 0x801e100 @!Pointer
-/* 0800034e */ BL 0x804c778 @!Pointer
+/* 0800034a */ BL func_0801e100
+/* 0800034e */ BL func_0804c778
 /* 08000352 */ MOVS R0, 0x23 @ Set R0 to 0x23
 /* 08000354 */ MOVS R1, 0x2 @ Set R1 to 0x2
 /* 08000356 */ MOVS R2, 0x2 @ Set R2 to 0x2
 /* 08000358 */ MOVS R3, 0x4 @ Set R3 to 0x4
-/* 0800035a */ BL 0x804c340 @!Pointer
-/* 0800035e */ LDR R0, =0x030046A8 @!Pointer
+/* 0800035a */ BL func_0804c340
+/* 0800035e */ LDR R0, =D_030046A8
 /* 08000360 */ LDR R0, [R0]
 /* 08000362 */ MOVS R1, 0xB1 @ Set R1 to 0xB1
 /* 08000364 */ LSLS R1, R1, 0x2
 /* 08000366 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1
 /* 08000368 */ LDR R0, [R0]
-/* 0800036a */ BL 0x80029d8 @!Pointer
+/* 0800036a */ BL func_080029d8
 /* 0800036e */ LDR R1, =REG_DISPSTAT
 /* 08000370 */ MOVS R0, 0x8 @ Set R0 to 0x8
 /* 08000372 */ STRH R0, [R1]
@@ -124,26 +125,28 @@
 /* 08000384 */ MOVS R0, 0x1 @ Set R0 to 0x1
 /* 08000386 */ STRH R0, [R4]
 /* 08000388 */ MOVS R0, 0x0 @ Set R0 to 0x0
-/* 0800038a */ BL 0x801d860 @!Pointer
-/* 0800038e */ LDR R4, =0x089DDA4C @!Pointer
+/* 0800038a */ BL func_0801d860
+/* 0800038e */ LDR R4, =D_089DDA4C
 /* 08000390 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0
-/* 08000392 */ BL 0x800046c @!Pointer
-/* 08000396 */ LDR R0, =0x08935FAC @!Pointer
+/* 08000392 */ BL func_0800046C
+/* 08000396 */ LDR R0, =D_08935FAC
 /* 08000398 */ LDR R1, [R0]
 /* 0800039a */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0
-/* 0800039c */ BL 0x80006b0 @!Pointer
-/* 080003a0 */ BL 0x80015bc @!Pointer
-/* 080003a4 */ LDR R4, =0x030046A0 @!Pointer
-/* 080003a6 */ BL 0x80013a8 @!Pointer
-/* 080003aa */ BL 0x8001964 @!Pointer
-/* 080003ae */ BL 0x80015bc @!Pointer
+/* 0800039c */ BL func_080006b0
+/* 080003a0 */ BL func_080015bc
+/* 080003a4 */ LDR R4, =D_030046A0
+
+branch_080003a6:
+/* 080003a6 */ BL func_080013a8
+/* 080003aa */ BL func_08001964
+/* 080003ae */ BL func_080015bc
 /* 080003b2 */ LDR R0, [R4]
 /* 080003b4 */ ADDS R0, 0x1 @ Add 0x1 to R0
 /* 080003b6 */ STR R0, [R4]
-/* 080003b8 */ BL 0x8000490 @!Pointer
+/* 080003b8 */ BL func_08000490
 /* 080003bc */ LDRB R0, [R5]
 /* 080003be */ CMP R0, 0x0 @ Compare R0 and 0x0
-/* 080003c0 */ BEQ branch_080003f0 @!Pointer
+/* 080003c0 */ BEQ branch_080003f0
 /* 080003c2 */ LDR R0, =REG_KEY
 /* 080003c4 */ LDRH R1, [R0] @ Load current inputs into R1
 /* 080003c6 */ MVNS R1, R1 @ Invert input flags so when a key is pressed the bit is set.
@@ -153,23 +156,23 @@
 /* 080003ce */ ANDS R0, R1 @ Set R0 to R0 & R1
 /* 080003d0 */ LSRS R0, R0, 0x10
 /* 080003d2 */ CMP R0, 0xF @ Compare R0 and 0xF
-/* 080003d4 */ BNE branch_080003f0 @!Pointer
+/* 080003d4 */ BNE branch_080003f0
 /* 080003d6 */ MOVS R0, 0x0 @ Set R0 to 0x0
 /* 080003d8 */ LDR R1, =0x3FF
 /* 080003da */ MOVS R2, 0x0 @ Set R2 to 0x0
 /* 080003dc */ MOVS R3, 0x0 @ Set R3 to 0x0
-/* 080003de */ BL 0x8001724 @!Pointer
-/* 080003e2 */ LDR R0, =0x089DD97C @!Pointer
-/* 080003e4 */ BL 0x8000568 @!Pointer
-/* 080003e8 */ BL 0x8009548 @!Pointer
+/* 080003de */ BL func_08001724
+/* 080003e2 */ LDR R0, =D_089DD97C
+/* 080003e4 */ BL func_08000568
+/* 080003e8 */ BL func_08009548
 /* 080003ec */ MOVS R0, 0x0 @ Set R0 to 0x0
 /* 080003ee */ STRB R0, [R5]
 
 branch_080003f0:
-/* 080003f0 */ BL 0x804c170 @!Pointer
-/* 080003f4 */ BL 0x800b590 @!Pointer
-/* 080003f8 */ BL 0x8003ff0 @!Pointer
-/* 080003fc */ B 0x80003a6 @!Pointer
+/* 080003f0 */ BL func_0804c170
+/* 080003f4 */ BL func_0800b590
+/* 080003f8 */ BL func_08003ff0
+/* 080003fc */ B branch_080003a6
 
 .ltorg
 

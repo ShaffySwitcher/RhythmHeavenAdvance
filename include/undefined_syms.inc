@@ -1,0 +1,102 @@
+.ifndef UNDEFINED_SYMS_HEADER
+.set func_UNDEFINED_SYMS_HEADER, 0
+
+.set D_03000000, 0x03000000;
+.set D_03000004, 0x03000004;
+.set D_03000080, 0x03000080;
+.set D_03000084, 0x03000084;
+.set D_03000088, 0x03000088;
+.set D_03004460, 0x03004460
+.set D_03004498, 0x03004498
+.set interrupt_handler_intern, 0x030044A0
+.set D_030046A0, 0x030046A0
+.set D_030046A4, 0x030046A4
+.set D_030046A8, 0x030046A8
+
+.set func_08000568, 0x08000568;
+.set func_08000598, 0x08000598;
+.set func_080005e0, 0x080005e0;
+.set func_08000674, 0x08000674;
+.set func_080006b0, 0x080006b0;
+.set func_080006d0, 0x080006d0;
+.set func_08000718, 0x08000718;
+.set func_08000774, 0x08000774;
+.set func_08000788, 0x08000788;
+.set func_08000804, 0x08000804;
+.set func_0800081c, 0x0800081c;
+.set func_080008bc, 0x080008bc;
+.set func_080008d0, 0x080008d0;
+.set func_080009a0, 0x080009a0;
+.set func_080009b4, 0x080009b4;
+
+.set func_08001360, 0x08001360;
+.set func_080013a8, 0x080013a8;
+.set func_08001464, 0x08001464;
+.set func_080015bc, 0x080015bc;
+.set func_08001724, 0x08001724;
+.set func_08001964, 0x08001964;
+
+.set func_080029d8, 0x080029d8;
+.set func_08002f68, 0x08002f68;
+
+.set func_08003e64, 0x08003e64;
+.set func_08003f28, 0x08003f28;
+.set func_08003ff0, 0x08003ff0;
+
+.set func_0800584c, 0x0800584c;
+.set func_08005a0c, 0x08005a0c;
+
+.set func_0800650c, 0x0800650c;
+.set func_08006580, 0x08006580;
+.set func_08006694, 0x08006694;
+
+.set func_080073b8, 0x080073b8;
+.set func_080073f0, 0x080073f0;
+.set func_08007b4c, 0x08007b4c;
+
+.set func_0800861c, 0x0800861c;
+
+.set func_08009150, 0x08009150;
+.set func_080091d8, 0x080091d8;
+.set func_08009548, 0x08009548;
+.set func_08009844, 0x08009844;
+
+.set func_0800b564, 0x0800b564;
+.set func_0800b590, 0x0800b590;
+
+.set func_0800c490, 0x0800c490;
+
+.set func_08010490, 0x08010490;
+
+.set func_080113d0, 0x080113d0;
+.set func_08011ec0, 0x08011ec0;
+
+.set func_0801242c, 0x0801242c;
+
+.set func_0801350c, 0x0801350c;
+
+.set func_08016e94, 0x08016e94;
+
+.set func_08018e60, 0x08018e60;
+
+.set func_0801c1b8, 0x0801c1b8;
+
+.set func_0801d580, 0x0801d580;
+.set func_0801d860, 0x0801d860;
+
+.set func_0801e100, 0x0801e100;
+
+.set func_0804c170, 0x0804c170;
+.set func_0804c340, 0x0804c340;
+.set func_0804c778, 0x0804c778;
+.set func_0804eaf0, 0x0804eaf0;
+
+
+.set D_0804F300, 0x0804F300;
+
+.set D_08935FAC, 0x08935FAC;
+.set D_08935FB0, 0x08935FB0;
+.set D_089DD97C, 0x089DD97C;
+.set D_089DDA4C, 0x089DDA4C;
+
+.endif

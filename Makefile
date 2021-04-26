@@ -160,7 +160,6 @@ $(BUILD)/asm/%.o : asm/%.s | $(BUILD_DIRS)
 	@echo "Assembling $< to $(basename $<).o"
 	@$(AS) -MD $(BUILD)/asm/$*.d -march=armv4t -o $@ $<
 
-
 -include $(DEPSDIR)/*.d
 #---------------------------------------------------------------------------------------
 
