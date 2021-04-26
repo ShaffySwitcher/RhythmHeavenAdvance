@@ -95,7 +95,7 @@
 /* 0800033e */ LDR R5, =0x03004498 @!Pointer
 /* 08000340 */ STRB R1, [R5] @ Store 0 at 0x03004498
 /* 08000342 */ BL 0x8000718 @!Pointer
-/* 08000346 */ BL 0x8000224 @!Pointer
+/* 08000346 */ BL func_08000224
 /* 0800034a */ BL 0x801e100 @!Pointer
 /* 0800034e */ BL 0x804c778 @!Pointer
 /* 08000352 */ MOVS R0, 0x23 @ Set R0 to 0x23

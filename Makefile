@@ -30,10 +30,11 @@ AS := $(CROSS)as
 TARGET		:= rhythmtengoku
 BUILD		:= build
 SOURCES		:= source
+ASM         := asm
 INCLUDES	:= include
 DATA		:= data
 MUSIC		:=
-BUILD_DIRS  := $(BUILD) $(BUILD)/data $(BUILD)/source
+BUILD_DIRS  := $(BUILD) $(BUILD)/data $(BUILD)/asm
 LD_SCRIPT   := rt.ld
 
 #---------------------------------------------------------------------------------
@@ -75,7 +76,7 @@ LD_SCRIPT   := rt.ld
 
 export OUTPUT	:=	$(BUILD)/$(TARGET)
 
-export VPATH	:=	$(foreach dir,$(SOURCES),$(CURDIR)/$(dir)) \
+export VPATH	:=	$(foreach dir,$(ASM),$(CURDIR)/$(dir)) \
 			$(foreach dir,$(DATA),$(CURDIR)/$(dir)) \
 			$(foreach dir,$(GRAPHICS),$(CURDIR)/$(dir))
 
@@ -83,7 +84,7 @@ export DEPSDIR	:=	$(CURDIR)/$(BUILD)
 
 CFILES		:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.c)))
 CPPFILES	:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.cpp)))
-SFILES		:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.s)))
+SFILES		:=	$(foreach dir,$(ASM),$(notdir $(wildcard $(dir)/*.s)))
 BINFILES	:=	$(foreach dir,$(DATA),$(notdir $(wildcard $(dir)/*.bin)))
 
 ifneq ($(strip $(MUSIC)),)
@@ -93,7 +94,7 @@ endif
 
 export OFILES_BIN := $(addprefix $(BUILD)/data/,$(addsuffix .o,$(BINFILES)))
 
-export OFILES_SOURCES := $(addprefix $(BUILD)/source/,$(SFILES:.s=.o))
+export OFILES_SOURCES := $(addprefix $(BUILD)/asm/,$(SFILES:.s=.o))
 
 export OFILES := $(OFILES_BIN) $(OFILES_SOURCES)
 
@@ -155,9 +156,9 @@ $(BUILD)/data/%.bin.o	$(BUILD)/data/%.bin.h :	data/%.bin | $(BUILD_DIRS)
 	@echo "Converting $< to $<.o"
 	@bin2s -a 4 -H $(BUILD)/$<.h $< | $(AS) -o $(BUILD)/$<.o
 	
-$(BUILD)/source/%.o : source/%.s | $(BUILD_DIRS)
+$(BUILD)/asm/%.o : asm/%.s | $(BUILD_DIRS)
 	@echo "Assembling $< to $(basename $<).o"
-	@$(AS) -MD $(BUILD)/source/$*.d -march=armv4t -o $@ $<
+	@$(AS) -MD $(BUILD)/asm/$*.d -march=armv4t -o $@ $<
 
 
 -include $(DEPSDIR)/*.d

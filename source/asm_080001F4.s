@@ -21,6 +21,8 @@ branch_080001f8:
 /* 0800021e */ POP {R0}
 /* 08000220 */ BX R0
 /* 08000222 */ LSLS R0, R0, 0x0
+
+glabel func_08000224
 /* 08000224 */ PUSH {R4, LR}
 /* 08000226 */ BL 0x08001464 @!Pointer
 /* 0800022a */ BL 0x0800b564 @!Pointer
