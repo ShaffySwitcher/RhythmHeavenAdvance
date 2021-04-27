@@ -20,7 +20,9 @@ SECTIONS {
 		build/asm/asm_08000598.o(.text*);
 		build/asm/asm_080005b8.o(.text*);
 		build/asm/asm_080005e0.o(.text*);
-		build/data/bindata_080005f4.bin.o(.rodata*);
+		build/asm/asm_080005f4.o(.text*);
+		build/asm/asm_08000608.o(.text*);
+		build/data/bindata_0800061c.bin.o(.rodata*);
 	}
 
 	_end = . ;

@@ -8,7 +8,7 @@ glabel func_080005b8
 /* 080005b8 */ PUSH {LR}
 /* 080005ba */ ADDS R3, R0, 0x0 @ Set R3 to R0 + 0x0
 /* 080005bc */ MOVS R2, 0x0 @ Set R2 to 0x0
-/* 080005be */ LDR R1, =0x03000008 @ !PossiblePointer
+/* 080005be */ LDR R1, =D_03000008
 
 branch_080005c0:
 /* 080005c0 */ LDR R0, [R1]
@@ -29,6 +29,7 @@ branch_080005d0:
 branch_080005da:
 /* 080005da */ POP {R1}
 /* 080005dc */ BX R1
-.hword 0
+
+.hword 0 @Padding
 
 .end
