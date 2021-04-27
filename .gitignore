@@ -4,4 +4,6 @@
 
 # General project-specific ignores
 build/*
+tools/*
 *.gba
+*.dump

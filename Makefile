@@ -6,6 +6,9 @@ ifeq ($(strip $(DEVKITARM)),)
 $(error "Please set DEVKITARM in your environment. export DEVKITARM=<path to>devkitARM")
 endif
 
+CPP := $(CC) -E
+CPPFLAGS := -I tools/agbcc -I tools/agbcc/include -I . -iquote include -nostdinc -undef
+
 include $(DEVKITARM)/base_rules
 
 #include $(DEVKITARM)/gba_rules
@@ -13,6 +16,8 @@ CROSS := arm-none-eabi-
 OBJCOPY := $(CROSS)objcopy
 LD := $(CROSS)ld
 AS := $(CROSS)as
+CC1 := tools/agbcc/bin/agbcc
+CFLAGS := -mthumb-interwork -Wimplicit -Wparentheses -Werror -O2 -fhex-asm
 
 
 #---------------------------------------------------------------------------------
@@ -29,12 +34,12 @@ AS := $(CROSS)as
 #---------------------------------------------------------------------------------
 TARGET		:= rhythmtengoku
 BUILD		:= build
-SOURCES		:= source
+SOURCES		:= src
 ASM         := asm
 INCLUDES	:= include
 DATA		:= data
 MUSIC		:=
-BUILD_DIRS  := $(BUILD) $(BUILD)/data $(BUILD)/asm
+BUILD_DIRS  := $(BUILD) $(BUILD)/data $(BUILD)/asm $(BUILD)/src
 LD_SCRIPT   := rt.ld
 
 #---------------------------------------------------------------------------------
@@ -94,14 +99,14 @@ endif
 
 export OFILES_BIN := $(addprefix $(BUILD)/data/,$(addsuffix .o,$(BINFILES)))
 
-export OFILES_SOURCES := $(addprefix $(BUILD)/asm/,$(SFILES:.s=.o))
+export OFILES_SOURCES := $(addprefix $(BUILD)/asm/,$(SFILES:.s=.o)) $(addprefix $(BUILD)/src/,$(CFILES:.c=.o))
 
 export OFILES := $(OFILES_BIN) $(OFILES_SOURCES)
 
 export HFILES := $(BUILD)/data/$(addsuffix .h,$(BINFILES))
 
-export INCLUDE	:=	$(foreach dir,$(INCLUDES),$(wildcard $(dir)/*.h)) \
-					$(foreach dir,$(LIBDIRS),-I $(dir)/include) \
+export INCLUDE	:=	-I $(foreach dir,$(INCLUDES),$(wildcard $(dir)/*.h)) \
+					-I $(foreach dir,$(LIBDIRS),-I $(dir)/include) \
 					-I $(CURDIR)/$(BUILD)
 
 #export LIBPATHS	:=	$(foreach dir,$(LIBDIRS),-L$(dir)/lib)
@@ -134,7 +139,7 @@ $(OUTPUT).gba	:	$(OUTPUT).elf
 	@echo "ROM Assembled!"
 
 $(OUTPUT).elf	:	$(OFILES)
-	$(LD) $(OFILES) $(INCLUDE) -T $(LD_SCRIPT) -Map $(@:.elf=.map) -o $@
+	$(LD) $(OFILES) -T $(LD_SCRIPT) -Map $(@:.elf=.map) -o $@
 
 #---------------------------------------------------------------------------------
 # The bin2o rule should be copied and modified
@@ -156,6 +161,11 @@ $(BUILD)/data/%.bin.o	$(BUILD)/data/%.bin.h :	data/%.bin | $(BUILD_DIRS)
 	@echo "Converting $< to $<.o"
 	@bin2s -a 4 -H $(BUILD)/$<.h $< | $(AS) -o $(BUILD)/$<.o
 	
+$(BUILD)/src/%.o : src/%.c | $(BUILD_DIRS)
+	@$(CPP) $(CPPFLAGS) $< -o $(BUILD)/src/$*.i
+	$(CC1) $(CFLAGS) $(BUILD)/src/$*.i -o $(BUILD)/src/$*.s
+	$(AS) -MD  $(BUILD)/src/$*.d -march=armv4t -o $@ $(BUILD)/src/$*.s
+
 $(BUILD)/asm/%.o : asm/%.s | $(BUILD_DIRS)
 	@echo "Assembling $< to $(basename $<).o"
 	@$(AS) -MD $(BUILD)/asm/$*.d -march=armv4t -o $@ $<

@@ -4,6 +4,8 @@
 .include "include/asm_macros.inc"
 .include "include/undefined_syms.inc"
 
+.global func_080002c4
+
 .set BIOSROMBase,		0x00000000 @ To 0x00004000 (16kb)
 .set ExternWorkRAMBase,	0x02000000 @ To 0x02040000 (256kb)
 .set InternWorkRAMBase,	0x03000000 @ To 0x03008000 (32kb)
