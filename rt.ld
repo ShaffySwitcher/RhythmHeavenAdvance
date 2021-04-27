@@ -34,7 +34,21 @@ SECTIONS {
 		build/asm/asm_08000760.o(.text*);
 		build/asm/asm_08000774.o(.text*);
 		build/asm/asm_08000788.o(.text*);
-		build/data/bindata_08000794.bin.o(.rodata*);
+		build/asm/asm_08000794.o(.text*);
+		build/asm/asm_08000804.o(.text*);
+		build/asm/asm_0800081c.o(.text*);
+		build/asm/asm_08000868.o(.text*);
+		build/asm/asm_080008bc.o(.text*);
+		build/asm/asm_080008d0.o(.text*);
+		build/asm/asm_080008e4.o(.text*);
+		build/asm/asm_0800091c.o(.text*);
+		build/asm/asm_08000928.o(.text*);
+		build/asm/asm_0800096c.o(.text*);
+		build/asm/asm_080009a0.o(.text*);
+		build/asm/asm_080009b4.o(.text*);
+		build/asm/asm_080009c8.o(.text*);
+		build/asm/asm_080009cc.o(.text*);
+		build/data/bindata_080009d0.bin.o(.rodata*);
 	}
 
 	_end = . ;
