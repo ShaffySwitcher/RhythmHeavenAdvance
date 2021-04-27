@@ -22,7 +22,19 @@ SECTIONS {
 		build/asm/asm_080005e0.o(.text*);
 		build/asm/asm_080005f4.o(.text*);
 		build/asm/asm_08000608.o(.text*);
-		build/data/bindata_0800061c.bin.o(.rodata*);
+		build/asm/asm_0800061c.o(.text*);
+		build/asm/asm_08000630.o(.text*);
+		build/asm/asm_08000674.o(.text*);
+		build/asm/asm_080006b0.o(.text*);
+		build/asm/asm_080006d0.o(.text*);
+		build/asm/asm_080006f0.o(.text*);
+		build/asm/asm_0800070c.o(.text*);
+		build/asm/asm_08000718.o(.text*);
+		build/asm/asm_0800074c.o(.text*);
+		build/asm/asm_08000760.o(.text*);
+		build/asm/asm_08000774.o(.text*);
+		build/asm/asm_08000788.o(.text*);
+		build/data/bindata_08000794.bin.o(.rodata*);
 	}
 
 	_end = . ;
