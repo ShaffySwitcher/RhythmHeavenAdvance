@@ -9,7 +9,7 @@ glabel func_08000928
 /* 0800092a */ MOV R6, R8 @ Set R6 to R8
 /* 0800092c */ PUSH {R6}
 /* 0800092e */ ADDS R6, R0, 0x0 @ Set R6 to R0 + 0x0
-/* 08000930 */ LDR R5, =0x030046a8 @ !PossiblePointer
+/* 08000930 */ LDR R5, =D_030046a8
 /* 08000932 */ LDR R4, [R5]
 /* 08000934 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0
 /* 08000936 */ BL func_0800091c
@@ -17,7 +17,7 @@ glabel func_08000928
 /* 0800093c */ MOVS R0, 0x0 @ Set R0 to 0x0
 /* 0800093e */ STR R0, [R4, 0x8]
 /* 08000940 */ LDR R0, [R5]
-/* 08000942 */ LDR R1, =0x00003b04 @ !PossiblePointer
+/* 08000942 */ LDR R1, =0x3B04
 /* 08000944 */ BL func_08000794
 /* 08000948 */ STR R0, [R4, 0x8]
 /* 0800094a */ LDR R0, [R5]

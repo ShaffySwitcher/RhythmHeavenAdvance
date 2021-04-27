@@ -104,7 +104,7 @@ glabel func_080002c4
 /* 08000356 */ MOVS R2, 0x2 @ Set R2 to 0x2
 /* 08000358 */ MOVS R3, 0x4 @ Set R3 to 0x4
 /* 0800035a */ BL func_0804c340
-/* 0800035e */ LDR R0, =D_030046A8
+/* 0800035e */ LDR R0, =D_030046a8
 /* 08000360 */ LDR R0, [R0]
 /* 08000362 */ MOVS R1, 0xB1 @ Set R1 to 0xB1
 /* 08000364 */ LSLS R1, R1, 0x2
@@ -126,15 +126,15 @@ glabel func_080002c4
 /* 08000386 */ STRH R0, [R4]
 /* 08000388 */ MOVS R0, 0x0 @ Set R0 to 0x0
 /* 0800038a */ BL func_0801d860
-/* 0800038e */ LDR R4, =D_089DDA4C
+/* 0800038e */ LDR R4, =D_089dda4c
 /* 08000390 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0
 /* 08000392 */ BL func_0800046C
-/* 08000396 */ LDR R0, =D_08935FAC
+/* 08000396 */ LDR R0, =D_08935fac
 /* 08000398 */ LDR R1, [R0]
 /* 0800039a */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0
 /* 0800039c */ BL func_080006b0
 /* 080003a0 */ BL func_080015bc
-/* 080003a4 */ LDR R4, =D_030046A0
+/* 080003a4 */ LDR R4, =D_030046a0
 
 branch_080003a6:
 /* 080003a6 */ BL func_080013a8
@@ -162,7 +162,7 @@ branch_080003a6:
 /* 080003da */ MOVS R2, 0x0 @ Set R2 to 0x0
 /* 080003dc */ MOVS R3, 0x0 @ Set R3 to 0x0
 /* 080003de */ BL func_08001724
-/* 080003e2 */ LDR R0, =D_089DD97C
+/* 080003e2 */ LDR R0, =D_089dd97c
 /* 080003e4 */ BL func_08000568
 /* 080003e8 */ BL func_08009548
 /* 080003ec */ MOVS R0, 0x0 @ Set R0 to 0x0

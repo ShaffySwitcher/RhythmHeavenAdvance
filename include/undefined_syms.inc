@@ -14,9 +14,10 @@
 .set D_03004460, 0x03004460
 .set D_03004498, 0x03004498
 .set interrupt_handler_intern, 0x030044a0
-.set D_030046A0, 0x030046a0
-.set D_030046A4, 0x030046a4
-.set D_030046A8, 0x030046a8
+.set D_030046a0, 0x030046a0
+.set D_030046a4, 0x030046a4
+.set D_030046a8, 0x030046a8
+.set D_030064c8, 0x030064c8
 
 .set func_08001360, 0x08001360
 .set func_080013a8, 0x080013a8
@@ -71,10 +72,14 @@
 .set func_0804f270, 0x0804f270
 .set D_0804F300, 0x0804f300
 
-.set D_08935FAC, 0x08935fac
-.set D_08935FB0, 0x08935fb0
+.set D_08935fac, 0x08935fac
+.set D_08935fb0, 0x08935fb0
+.set D_08935fb4, 0x08935fb4
+.set D_08935fb8, 0x08935fb8
+.set D_08935fbc, 0x08935fbc
+.set D_08935fc4, 0x08935fc4
 
-.set D_089DD97C, 0x089dd97c
-.set D_089DDA4C, 0x089dda4c
+.set D_089dd97c, 0x089dd97c
+.set D_089dda4c, 0x089dda4c
 
 .endif
