@@ -17,7 +17,7 @@ OBJCOPY := $(CROSS)objcopy
 LD := $(CROSS)ld
 AS := $(CROSS)as
 CC1 := tools/agbcc/bin/agbcc
-CFLAGS := -mthumb-interwork -Wimplicit -Wparentheses -Werror -O2 -fhex-asm
+CFLAGS := -mthumb-interwork -Wimplicit -Wparentheses -O2 -fhex-asm
 
 
 #---------------------------------------------------------------------------------

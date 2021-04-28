@@ -1,12 +1,131 @@
 #include "global.h"
 
-#include "asm/code_080001F4/asm_080001F4.s"
+void func_080001f4_stub(void) {
+	
+}
 
-#include "asm/code_080001F4/asm_080001F8.s"
+void func_080001f8(void) {
+	func_0801350c();
+	func_08018e60();
+	func_0801242c();
+	func_08016e94();
+	func_08010490();
+	func_08011ec0();
+	func_0801c1b8();
+	func_0801d580();
+	func_080113d0();
+}
 
-#include "asm/code_080001F4/asm_08000224.s"
+extern s32 (*D_030046a8)[];
+extern u8 D_03004498;
 
-#include "asm/code_080001F4/asm_080002c4.s"
+void func_08000224(void) {
+	s32 temp_r0;
+	func_08001464();
+	func_0800b564();
+	func_08007b4c();
+	func_08002f68();
+	func_0800650c(func_08000774(), func_08000788());
+	func_08005a0c();
+	func_08003e64();
+	func_08003f28();
+	func_080073b8();
+	func_080073f0();
+	func_08009844();
+	func_0800861c();
+	func_08000804();
+	if (func_080008bc() != 0) {
+		if (func_080008d0() != 0) {
+			func_0800081c();
+		} else {
+			func_080009a0();
+		}
+	}
+	func_080009b4();
+	func_080029d8((*D_030046a8)[177]);
+	func_0800c490();
+	func_0800584c();
+	func_080001f8();
+	func_08001360();
+	func_08009150();
+	func_080091d8();
+	D_03004498 = 1;
+}
+
+extern void *interrupt_handler;
+extern void *interrupt_handler_intern;
+extern void *D_0804F300;
+extern void *D_03004460;
+extern s32 D_089dda4c;
+extern s32 D_08935fac;
+extern s32 D_030046a0;
+extern s32 D_089dd97c;
+
+#define RESET_BUTTON_COMBO (A_BUTTON | B_BUTTON | SELECT_BUTTON | START_BUTTON)
+
+void func_080002c4(void) {
+	REG_WAITCNT = (WAITCNT_SRAM_8
+		| WAITCNT_WS0_N_3 | WAITCNT_WS0_S_1
+		| WAITCNT_WS1_N_3 | WAITCNT_WS1_S_1
+		| WAITCNT_WS2_N_3 | WAITCNT_WS2_S_1
+		| WAITCNT_PHI_OUT_NONE | WAITCNT_PREFETCH_ENABLE | WAITCNT_TYPE_GBA);
+	
+	DmaFill32(3, 0, ExternWorkRAMBase, 0x40000);
+	DmaFill32(3, 0, InternWorkRAMBase, 0x7E00);
+	
+	DmaCopy32(3, &interrupt_handler, &interrupt_handler_intern, 0x200);
+	DmaCopy32(3, &D_0804F300, &D_03004460, 0x38);
+	REG_INTERRUPT = &interrupt_handler_intern;
+	
+	DmaFill32(3, 0, VRAMBase, 0x18000);
+	
+	*(volatile u16*)PaletteRAMBase = 0x7FFF;
+	REG_DISPCNT = 0;
+	REG_IME = 0;
+	
+	D_03004498 = 0;
+	
+	func_08000718();
+	func_08000224();
+	func_0801e100();
+	func_0804c778();
+	func_0804c340(35, 2, 2, 4);
+	func_080029d8((*D_030046a8)[177]);
+	
+	REG_DISPSTAT = 8;
+	REG_IE = (INTERRUPT_CART | INTERRUPT_DMA2 | INTERRUPT_TIMER3 | INTERRUPT_VBLANK);
+	REG_IF = 0xFFFF;
+	REG_IME = 1;
+	
+	func_0801d860(0);
+	func_0800046C(&D_089dda4c);
+	func_080006b0(&D_089dda4c, D_08935fac);
+	func_080015bc();
+	
+	while (1) {
+		func_080013a8();
+		func_08001964();
+		func_080015bc();
+		D_030046a0 += 1;
+		func_08000490();
+		
+		if (D_03004498 != 0) {
+			u16 keysPressed = ~REG_KEY;
+			
+			if ((keysPressed & RESET_BUTTON_COMBO) == RESET_BUTTON_COMBO) {
+				func_08001724(0,0x3FF,0,0);
+				func_08000568(&D_089dd97c);
+				func_08009548();
+				D_03004498 = 0;
+			}
+		}
+		
+		func_0804c170();
+		func_0800b590();
+		func_08003ff0();
+	}
+	
+}
 
 #include "asm/code_080001F4/asm_0800046c.s"
 

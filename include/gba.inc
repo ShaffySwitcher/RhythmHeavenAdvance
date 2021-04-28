@@ -4,8 +4,6 @@
 .include "include/asm_macros.inc"
 .include "include/undefined_syms.inc"
 
-.global func_080002c4
-
 .set BIOSROMBase,		0x00000000 @ To 0x00004000 (16kb)
 .set ExternWorkRAMBase,	0x02000000 @ To 0x02040000 (256kb)
 .set InternWorkRAMBase,	0x03000000 @ To 0x03008000 (32kb)
@@ -18,28 +16,30 @@
 .set GameROMImage2Base,	0x0C000000 @ To 0x0E000000 (32mb) Cartridge ROM Mirror 2
 .set CartRAMBase,		0x0E000000 @ To 0x0E010000 (64kb) Save data
 
-
-.set VideoBuffer,       VRAMBase + 0x0
-.set BackBuffer,		VRAMBase + 0xA000
-.set BGPaletteMem,    	PaletteRAMBase + 0x0
-.set OBJPaletteMem, 	PaletteRAMBase + 0x200
-
-.set D_03007F00, 		InternWorkRAMBase + 0x7F00;
-.set D_03007FA0, 		InternWorkRAMBase + 0x7FA0;
+.set D_03007F00,     	InternWorkRAMBase + 0x7F00
+.set D_03007FA0,	    InternWorkRAMBase + 0x7FA0
 .set REG_INTERUPT,   	InternWorkRAMBase + 0x7FFC
+.set REG_SOUNDCNT_X,  	IORAMBase + 0x84
 
 
+.set INTERRUPT_VBLANK, 	(1 << 0)
+.set INTERRUPT_HBLANK, 	(1 << 1)
+.set INTERRUPT_VCOUNT, 	(1 << 2)
+.set INTERRUPT_TIMER0, 	(1 << 3)
+.set INTERRUPT_TIMER1, 	(1 << 4)
+.set INTERRUPT_TIMER2, 	(1 << 5)
+.set INTERRUPT_TIMER3, 	(1 << 6)
+.set INTERRUPT_COMM, 	(1 << 7)  @ Serial Communication Interrupt
+.set INTERRUPT_DMA0,  	(1 << 8)
+.set INTERRUPT_DMA1,	(1 << 9)
+.set INTERRUPT_DMA2,  	(1 << 10)
+.set INTERRUPT_DMA3,  	(1 << 11)
+.set INTERRUPT_BUTTON, 	(1 << 12) @ Button interrupt
+.set INTERRUPT_CART,  	(1 << 13) @ Cartridge interrupt
 
-@ Hardware Registers
+ @ Interrupt Enable Register - Which interrupts are enabled / disabled
 
-.include "include/gba_graphics_regs.inc"
-.include "include/gba_sound_regs.inc"
-.include "include/gba_dma_regs.inc"
-.include "include/gba_timer_regs.inc"
-.include "include/gba_comm_regs.inc"
-.include "include/gba_input_regs.inc"
-.include "include/gba_transfer_regs.inc"
-.include "include/gba_interrupt_regs.inc"
+.set REG_IE,         	IORAMBase + 0x200
 
 
 
