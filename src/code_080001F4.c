@@ -1,4 +1,5 @@
 #include "global.h"
+#include "code_080001F4.h"
 
 void func_080001f4_stub(void) {
 	
@@ -15,9 +16,6 @@ void func_080001f8(void) {
 	func_0801d580();
 	func_080113d0();
 }
-
-extern s32 (*D_030046a8)[];
-extern u8 D_03004498;
 
 void func_08000224(void) {
 	s32 temp_r0;
@@ -51,15 +49,6 @@ void func_08000224(void) {
 	func_080091d8();
 	D_03004498 = 1;
 }
-
-extern void *interrupt_handler;
-extern void *interrupt_handler_intern;
-extern void *D_0804F300;
-extern void *D_03004460;
-extern s32 D_089dda4c;
-extern s32 D_08935fac;
-extern s32 D_030046a0;
-extern s32 D_089dd97c;
 
 #define RESET_BUTTON_COMBO (A_BUTTON | B_BUTTON | SELECT_BUTTON | START_BUTTON)
 
@@ -98,7 +87,7 @@ void func_080002c4(void) {
 	REG_IME = 1;
 	
 	func_0801d860(0);
-	func_0800046C(&D_089dda4c);
+	func_0800046c(&D_089dda4c);
 	func_080006b0(&D_089dda4c, D_08935fac);
 	func_080015bc();
 	
@@ -127,9 +116,57 @@ void func_080002c4(void) {
 	
 }
 
-#include "asm/code_080001F4/asm_0800046c.s"
+void func_0800046c(struct struct_03000000 *arg1) {
+	D_03000000 = NULL;
+	D_03000004 = arg1;
+	D_030046a4 = 0;
+	func_08000598();
+}
 
-#include "asm/code_080001F4/asm_08000490.s"
+// func_0804eaf0: really weird, jumps directly to second arg, in some kind of table?
+
+void func_08000490(void) {
+	struct struct_03000000 *temp;
+	if (D_03000000 != NULL) {
+		if ((D_03000000->unk8 != NULL) && (func_0804eaf0(D_03000000->unkC, D_03000000->unk8) != 0)) {
+			if (D_03000000->unk10 != NULL) {
+				func_0804eaf0(D_03000000->unk14, D_03000000->unk10);
+			}
+			if (D_030046a4 != 0) {
+				func_08006694(D_030046a4);
+			}
+			
+			D_030046a4 = 0;
+			temp = func_080005e0(D_03000000);
+			D_03000004 = temp;
+			
+			if (D_03000080 != 0) {
+				func_080006b0(D_03000000, D_03000084);
+				func_080006d0(D_03000000, D_03000088);
+			} else {
+				func_08000674(D_03000000);
+			}
+			
+			D_03000000 = 0;
+		}
+	} else {
+		if (D_03000004 == NULL) {
+			D_03000004 = D_08935fb0;
+		}
+		
+		D_03000000 = D_03000004;
+		D_03000004 = NULL;
+		D_03000080 = 0;
+		
+		if (D_03000000->unk18 != 0) {
+			D_030046a4 = func_08006580(D_03000000->unk18);
+		}
+		
+		if (D_03000000->unk0 != NULL) {
+			func_0804eaf0(D_03000000->unk4, D_03000000->unk0);
+		}
+	}
+}
 
 #include "asm/code_080001F4/asm_08000568.s"
 

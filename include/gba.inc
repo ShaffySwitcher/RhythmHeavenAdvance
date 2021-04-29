@@ -18,7 +18,7 @@
 
 .set D_03007F00,     	InternWorkRAMBase + 0x7F00
 .set D_03007FA0,	    InternWorkRAMBase + 0x7FA0
-.set REG_INTERUPT,   	InternWorkRAMBase + 0x7FFC
+.set REG_INTERRUPT,   	InternWorkRAMBase + 0x7FFC
 .set REG_SOUNDCNT_X,  	IORAMBase + 0x84
 
 

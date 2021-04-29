@@ -12,7 +12,7 @@ glabel entry_point
 /* 080000e4 */ LDR SP, val_000104
 
 @ Set interrupt handler
-/* 080000e8 */ LDR R1, =REG_INTERUPT
+/* 080000e8 */ LDR R1, =REG_INTERRUPT
 /* 080000ec */ ADR R0, interrupt_handler
 /* 080000f0 */ STR R0, [R1] @ Save the address of the interrupt handler to REG_INTERUPT
 
