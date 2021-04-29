@@ -67,7 +67,7 @@
 .set func_0804c778, 0x0804c778
 .set func_0804c8b0, 0x0804c8b0
 .set func_0804c96c, 0x0804c96c
-.set func_0804eaf0, 0x0804eaf0
+.set func_0804eaf0, 0x0804eaf0 @ _call_via_r1
 .set func_0804eaf8, 0x0804eaf8
 .set func_0804f270, 0x0804f270
 .set D_0804F300, 0x0804f300

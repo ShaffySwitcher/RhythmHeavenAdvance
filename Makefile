@@ -139,7 +139,7 @@ $(OUTPUT).gba	:	$(OUTPUT).elf
 	@echo "ROM Assembled!"
 
 $(OUTPUT).elf	:	$(OFILES)
-	$(LD) $(OFILES) -T $(LD_SCRIPT) -Map $(@:.elf=.map) -o $@
+	$(LD) $(OFILES) tools/agbcc/lib/libgcc.a -T $(LD_SCRIPT) -Map $(@:.elf=.map) -o $@
 
 #---------------------------------------------------------------------------------
 # The bin2o rule should be copied and modified
@@ -160,7 +160,7 @@ $(BUILD)/data/%.bin.o	$(BUILD)/data/%.bin.h :	data/%.bin | $(BUILD_DIRS)
 #---------------------------------------------------------------------------------
 	@echo "Converting $< to $<.o"
 	@bin2s -a 4 -H $(BUILD)/$<.h $< | $(AS) -o $(BUILD)/$<.o
-	
+
 $(BUILD)/src/%.o : src/%.c | $(BUILD_DIRS)
 	@$(CPP) $(CPPFLAGS) $< -o $(BUILD)/src/$*.i
 	$(CC1) $(CFLAGS) $(BUILD)/src/$*.i -o $(BUILD)/src/$*.s

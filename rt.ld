@@ -17,6 +17,8 @@ SECTIONS {
 		build/src/code_080001F4.o(.text*);
 		build/data/bindata_08000a00.bin.o(.rodata*); /* Seems to be ARM assembly */
 		build/data/bindata_08001360.bin.o(.rodata*);
+		*libgcc.a:_call_via_rX.o(.text*);
+		build/data/bindata_0804eb28.bin.o(.rodata*);
 		build/data/bindata_08935fac.bin.o(.rodata*);
 	}
 

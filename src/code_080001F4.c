@@ -123,14 +123,12 @@ void func_0800046c(struct struct_03000000 *arg1) {
 	func_08000598();
 }
 
-// func_0804eaf0: really weird, jumps directly to second arg, in some kind of table?
-
 void func_08000490(void) {
 	struct struct_03000000 *temp;
 	if (D_03000000 != NULL) {
-		if ((D_03000000->unk8 != NULL) && (func_0804eaf0(D_03000000->unkC, D_03000000->unk8) != 0)) {
+		if ((D_03000000->unk8 != NULL) && (D_03000000->unk8(D_03000000->unkC) != 0)) {
 			if (D_03000000->unk10 != NULL) {
-				func_0804eaf0(D_03000000->unk14, D_03000000->unk10);
+				D_03000000->unk10(D_03000000->unk14);
 			}
 			if (D_030046a4 != 0) {
 				func_08006694(D_030046a4);
@@ -163,22 +161,55 @@ void func_08000490(void) {
 		}
 		
 		if (D_03000000->unk0 != NULL) {
-			func_0804eaf0(D_03000000->unk4, D_03000000->unk0);
+			D_03000000->unk0(D_03000000->unk4);
 		}
 	}
 }
 
-#include "asm/code_080001F4/asm_08000568.s"
+void func_08000568(struct struct_03000000 *arg1) {
+	D_03000000 = NULL;
+	D_03000004 = arg1;
+	func_08000598();
+}
 
-#include "asm/code_080001F4/asm_08000584.s"
+void func_08000584(s32 arg1) {
+	func_080006b0(D_03000000, arg1);
+}
 
-#include "asm/code_080001F4/asm_08000598.s"
+void func_08000598(void) {
+	u32 i;
+	for (i = 0 ; i < 10 ; i++) {
+		D_03000008[i].unk0 = NULL;
+		D_03000008[i].unk4 = NULL;
+		D_03000008[i].unk8 = NULL;
+	}
+}
 
-#include "asm/code_080001F4/asm_080005b8.s"
+struct struct_03000008 *func_080005b8(struct struct_03000000 *arg1) {
+	u32 i;
+	for (i = 0 ; i < 10 ; i++) {
+		if (D_03000008[i].unk0 == arg1) {
+			return &D_03000008[i];
+		}
+	}
+	return NULL;
+}
 
-#include "asm/code_080001F4/asm_080005e0.s"
+struct struct_03000000 *func_080005e0(struct struct_03000000 *arg1) {
+	struct struct_03000008 *temp = func_080005b8(arg1);
+	if (temp == NULL) {
+		return NULL;
+	}
+	return temp->unk4;
+}
 
-#include "asm/code_080001F4/asm_080005f4.s"
+struct struct_03000000 *func_080005f4(struct struct_03000000 *arg1) {
+	struct struct_03000008 *temp = func_080005b8(arg1);
+	if (temp == NULL) {
+		return NULL;
+	}
+	return temp->unk8;
+}
 
 #include "asm/code_080001F4/asm_08000608.s"
 
