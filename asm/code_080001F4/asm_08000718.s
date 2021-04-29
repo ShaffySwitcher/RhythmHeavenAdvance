@@ -1,4 +1,11 @@
-asm("glabel func_08000718 \n\
+asm(".section .text \n\
+\n\
+.syntax unified \n\
+\n\
+.include \"include/gba.inc\" \n\
+\n\
+.balign 4, 0 \n\
+glabel func_08000718 \n\
 /* 08000718 */ MOVS R3, 0x4 @ Set R3 to 0x4 \n\
 /* 0800071a */ LDR R2, =0xFFFC \n\
 /* 0800071c */ LDR R1, =0xEC1 \n\

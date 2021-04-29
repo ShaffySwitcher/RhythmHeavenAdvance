@@ -172,60 +172,105 @@ void func_08000568(struct struct_03000000 *arg1) {
 	func_08000598();
 }
 
-void func_08000584(s32 arg1) {
+void func_08000584(struct struct_03000000 *arg1) {
 	func_080006b0(D_03000000, arg1);
 }
 
 void func_08000598(void) {
 	u32 i;
 	for (i = 0 ; i < 10 ; i++) {
-		D_03000008[i].unk0 = NULL;
-		D_03000008[i].unk4 = NULL;
-		D_03000008[i].unk8 = NULL;
+		D_03000008[i][0] = NULL;
+		D_03000008[i][1] = NULL;
+		D_03000008[i][2] = NULL;
 	}
 }
 
-struct struct_03000008 *func_080005b8(struct struct_03000000 *arg1) {
+struct struct_03000000 **func_080005b8(struct struct_03000000 *arg1) {
 	u32 i;
 	for (i = 0 ; i < 10 ; i++) {
-		if (D_03000008[i].unk0 == arg1) {
-			return &D_03000008[i];
+		if (D_03000008[i][0] == arg1) {
+			return D_03000008[i];
 		}
 	}
 	return NULL;
 }
 
 struct struct_03000000 *func_080005e0(struct struct_03000000 *arg1) {
-	struct struct_03000008 *temp = func_080005b8(arg1);
+	struct struct_03000000 **temp = func_080005b8(arg1);
 	if (temp == NULL) {
 		return NULL;
 	}
-	return temp->unk4;
+	return temp[1];
 }
 
 struct struct_03000000 *func_080005f4(struct struct_03000000 *arg1) {
-	struct struct_03000008 *temp = func_080005b8(arg1);
+	struct struct_03000000 **temp = func_080005b8(arg1);
 	if (temp == NULL) {
 		return NULL;
 	}
-	return temp->unk8;
+	return temp[2];
 }
 
-#include "asm/code_080001F4/asm_08000608.s"
+struct struct_03000000 *func_08000608(void) {
+	return func_080005e0(D_03000000);
+}
 
-#include "asm/code_080001F4/asm_0800061c.s"
+struct struct_03000000 *func_0800061c(void) {
+	return func_080005f4(D_03000000);
+}
 
-#include "asm/code_080001F4/asm_08000630.s"
+struct struct_03000000 **func_08000630(struct struct_03000000 *arg1) {
+	u32 i;
+	if (arg1 == NULL) {
+		return NULL;
+	}
+	for (i = 0 ; i < 10 ; i++) {
+		if (D_03000008[i][0] == NULL) {
+			D_03000008[i][0] = arg1;
+			D_03000008[i][1] = NULL;
+			D_03000008[i][2] = NULL;
+			return D_03000008[i];
+		}
+	}
+	return NULL;
+}
 
-#include "asm/code_080001F4/asm_08000674.s"
+void func_08000674(struct struct_03000000 *arg1) {
+	if (arg1 != NULL) {
+		u32 i;
+		for (i = 0 ; i < 10 ; i++) {
+			if (D_03000008[i][0] == arg1) {
+				D_03000008[i][0] = NULL;
+				D_03000008[i][1] = NULL;
+				D_03000008[i][2] = NULL;
+			}
+		}
+	}
+}
 
-#include "asm/code_080001F4/asm_080006b0.s"
+void func_080006b0(struct struct_03000000 *arg1, struct struct_03000000 *arg2) {
+	struct struct_03000000 **temp;
+	if (((temp = func_080005b8(arg1)) != NULL) || ((temp = func_08000630(arg1)) != NULL)) {
+		temp[1] = arg2;
+	}
+}
 
-#include "asm/code_080001F4/asm_080006d0.s"
+void func_080006d0(struct struct_03000000 *arg1, struct struct_03000000 *arg2) {
+	struct struct_03000000 **temp;
+	if (((temp = func_080005b8(arg1)) != NULL) || ((temp = func_08000630(arg1)) != NULL)) {
+		temp[2] = arg2;
+	}
+}
 
-#include "asm/code_080001F4/asm_080006f0.s"
+void func_080006f0(struct struct_03000000 *arg1, struct struct_03000000 *arg2) {
+	D_03000080 = 1;
+	D_03000084 = arg1;
+	D_03000088 = arg2;
+}
 
-#include "asm/code_080001F4/asm_0800070c.s"
+struct struct_03000000 *func_0800070c(void) {
+	return D_03000000;
+}
 
 #include "asm/code_080001F4/asm_08000718.s"
 
