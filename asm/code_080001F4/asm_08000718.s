@@ -22,4 +22,5 @@ glabel func_08000718 \n\
 /* 08000732 */ BX LR \n\
  \n\
 .ltorg \n\
+.syntax divided \n\
 ");

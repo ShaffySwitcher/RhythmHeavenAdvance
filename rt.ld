@@ -15,6 +15,7 @@ SECTIONS {
 		build/asm/rom_header.o(.text*);
 		build/asm/boot.o(.text*);
 		build/src/code_080001F4.o(.text*);
+		build/src/code_08000718.o(.text*);
 		build/data/bindata_08000a00.bin.o(.rodata*); /* Seems to be ARM assembly */
 		build/data/bindata_08001360.bin.o(.rodata*);
 		*libgcc.a:_call_via_rX.o(.text*);

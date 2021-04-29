@@ -1,6 +1,8 @@
 #include "global.h"
 #include "code_080001F4.h"
 
+asm(".include \"include/gba.inc\"");//Temporary
+
 void func_080001f4_stub(void) {
 	
 }
@@ -271,45 +273,3 @@ void func_080006f0(struct struct_03000000 *arg1, struct struct_03000000 *arg2) {
 struct struct_03000000 *func_0800070c(void) {
 	return D_03000000;
 }
-
-#include "asm/code_080001F4/asm_08000718.s"
-
-#include "asm/code_080001F4/asm_0800074c.s"
-
-#include "asm/code_080001F4/asm_08000760.s"
-
-#include "asm/code_080001F4/asm_08000774.s"
-
-#include "asm/code_080001F4/asm_08000788.s"
-
-#include "asm/code_080001F4/asm_08000794.s"
-
-#include "asm/code_080001F4/asm_08000804.s"
-
-#include "asm/code_080001F4/asm_0800081c.s"
-
-#include "asm/code_080001F4/asm_08000868.s"
-
-#include "asm/code_080001F4/asm_080008bc.s"
-
-#include "asm/code_080001F4/asm_080008d0.s"
-
-#include "asm/code_080001F4/asm_080008e4.s"
-
-#include "asm/code_080001F4/asm_0800091c.s"
-
-#include "asm/code_080001F4/asm_08000928.s"
-
-#include "asm/code_080001F4/asm_0800096c.s"
-
-#include "asm/code_080001F4/asm_080009a0.s"
-
-#include "asm/code_080001F4/asm_080009b4.s"
-
-#include "asm/code_080001F4/asm_080009c8.s"
-
-#include "asm/code_080001F4/asm_080009cc.s"
-
-#include "asm/code_080001F4/asm_080009d0.s"
-
-#include "asm/code_080001F4/asm_080009fc.s"
