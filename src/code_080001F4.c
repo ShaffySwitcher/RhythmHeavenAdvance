@@ -3,6 +3,13 @@
 
 asm(".include \"include/gba.inc\"");//Temporary
 
+static struct struct_03000000 *D_03000000;
+static struct struct_03000000 *D_03000004;
+static struct struct_03000000 *D_03000008[10][3];
+static u8 D_03000080;
+static struct struct_03000000 *D_03000084;
+static struct struct_03000000 *D_03000088;
+
 void func_080001f4_stub(void) {
 	
 }
@@ -20,7 +27,6 @@ void func_080001f8(void) {
 }
 
 void func_08000224(void) {
-	s32 temp_r0;
 	func_08001464();
 	func_0800b564();
 	func_08007b4c();

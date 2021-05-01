@@ -1,4 +1,7 @@
-asm("glabel func_0800081c \n\
+asm(".syntax unified \n\
+\n\
+.balign 4, 0 \n\
+glabel func_0800081c \n\
 /* 0800081c */ PUSH {R4, R5, LR} \n\
 /* 0800081e */ SUB SP, 0x4 \n\
 /* 08000820 */ LDR R0, =D_030046a8 \n\

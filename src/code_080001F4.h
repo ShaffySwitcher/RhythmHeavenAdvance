@@ -15,12 +15,6 @@ struct struct_03000000 {
 	u16 unk18;
 };
 
-extern struct struct_03000000 *D_03000000;
-extern struct struct_03000000 *D_03000004;
-extern struct struct_03000000 *D_03000008[10][3];
-extern u8 D_03000080;
-extern struct struct_03000000 *D_03000084;
-extern struct struct_03000000 *D_03000088;
 extern u8 D_03004498;
 extern s32 D_030046a0;
 extern s32 D_030046a4;
