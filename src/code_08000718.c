@@ -88,7 +88,7 @@ void func_0800081c(void) {
     func_080102f4();
 }
 
-s32 func_08000868(s32 arg1) {
+s32 func_08000868(s32 *arg1) {
     s32 *temp = D_030046a8;
     s32 *temp2 = &D_030064c8;
 	
@@ -117,25 +117,58 @@ void func_080008e4(s32 *arg1) {
     s32 *temp = D_030046a8;
 
     temp[2] = 0;
-    temp[2] = func_08000794(temp, UNKNOWN_SIZE);
+    temp[2] = func_08000794(D_030046a8, UNKNOWN_SIZE);
 	
     func_0804c8b0(D_030046a8,arg1,UNKNOWN_SIZE);
 }
 
-#include "asm/code_080001F4/asm_0800091c.s"
+// types here are probably weird, some kind of offset calculator
+s32 func_0800091c(s32 *arg1) {
+	return (u32)arg1 - (u32)D_030046a8;
+}
 
-#include "asm/code_080001F4/asm_08000928.s"
+void func_08000928(s32 *arg1) {
+    s32 *temp = D_030046a8;
+    s32 temp2 = func_0800091c(temp); // isnt this literally always 0
 
-#include "asm/code_080001F4/asm_0800096c.s"
+    temp[2] = 0;
+    temp[2] = func_08000794(D_030046a8,UNKNOWN_SIZE);
 
-#include "asm/code_080001F4/asm_080009a0.s"
+    func_0804c8b0((u32)D_030046a8 + temp2,(u32)arg1 + temp2,0x10);
+}
 
-#include "asm/code_080001F4/asm_080009b4.s"
+void func_0800096c(s32 *arg1, s32 arg2) {
+    s32 temp2;
 
-#include "asm/code_080001F4/asm_080009c8.s"
+    func_08000928(D_08935fb4);
+    temp2 = func_0800091c(arg1);
 
-#include "asm/code_080001F4/asm_080009cc.s"
+    func_0804c8b0((u32)D_030046a8 + temp2,(u32)D_08935fb4 + temp2,arg2);
+}
 
-#include "asm/code_080001F4/asm_080009d0.s"
+void func_080009a0(void) {
+	func_080008e4(D_08935fb4);
+}
 
-#include "asm/code_080001F4/asm_080009fc.s"
+void func_080009b4(void) {
+	func_080008e4(D_08935fb8);
+}
+
+void func_080009c8_stub(void) {
+
+}
+
+void func_080009cc_stub(void) {
+
+}
+
+s32 func_080009d0(s16 *arg1) {
+    if ((func_0800820c(arg1, &D_08935fc4, 4) == 0) && (arg1[2] == arg1[3])) {
+        return arg1[2];
+    }
+    return 0;
+}
+
+s32 func_080009fc(void) {
+	return 0;
+}
