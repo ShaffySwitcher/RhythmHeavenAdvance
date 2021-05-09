@@ -29,7 +29,7 @@ glabel func_0800b21c \n\
 /* 0800b24c */ LDRH R0, [R6, 0x30] \n\
 /* 0800b24e */ ADDS R0, 0x1 @ Add 0x1 to R0 \n\
 /* 0800b250 */ STRH R0, [R6, 0x30] \n\
-/* 0800b252 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0800b252 */ LDR R0, =D_03005380 \n\
 /* 0800b254 */ LDR R4, [R0] \n\
 /* 0800b256 */ MOVS R0, 0x2A @ Set R0 to 0x2A \n\
 /* 0800b258 */ LDRSH R5, [R6, R0] \n\

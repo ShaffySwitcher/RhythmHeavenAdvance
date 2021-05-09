@@ -5,7 +5,7 @@ asm(".syntax unified \n\
 glabel func_0800c604 \n\
 /* 0800c604 */ PUSH {R4, R5, LR} \n\
 /* 0800c606 */ ADDS R5, R0, 0x0 @ Set R5 to R0 + 0x0 \n\
-/* 0800c608 */ LDR R4, =0x030053c0 @ !PossiblePointer \n\
+/* 0800c608 */ LDR R4, =D_030053c0 \n\
 /* 0800c60a */ MOVS R0, 0x7 @ Set R0 to 0x7 \n\
 /* 0800c60c */ ADDS R1, R5, 0x0 @ Set R1 to R5 + 0x0 \n\
 /* 0800c60e */ ANDS R1, R0 @ Set R1 to R1 & R0 \n\
@@ -20,14 +20,14 @@ glabel func_0800c604 \n\
 /* 0800c620 */ LSRS R0, R0, 0x1D \n\
 /* 0800c622 */ ADDS R0, 0x1 @ Add 0x1 to R0 \n\
 /* 0800c624 */ BL func_0800c3c4 \n\
-/* 0800c628 */ LDR R2, =0x03005588 @ !PossiblePointer \n\
+/* 0800c628 */ LDR R2, =D_03005588 \n\
 /* 0800c62a */ LSLS R0, R5, 0x2 \n\
 /* 0800c62c */ MOVS R3, 0xB0 @ Set R3 to 0xB0 \n\
 /* 0800c62e */ LSLS R3, R3, 0x1 \n\
 /* 0800c630 */ ADDS R1, R4, R3 @ Set R1 to R4 + R3 \n\
 /* 0800c632 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 0800c634 */ STR R0, [R2] \n\
-/* 0800c636 */ LDR R1, =0x0300558c @ !PossiblePointer \n\
+/* 0800c636 */ LDR R1, =D_0300558c \n\
 /* 0800c638 */ MOVS R0, 0x9C @ Set R0 to 0x9C \n\
 /* 0800c63a */ MULS R0, R5 @ Multiply R0 by R5 \n\
 /* 0800c63c */ ADDS R4, 0x7E @ Add 0x7E to R4 \n\

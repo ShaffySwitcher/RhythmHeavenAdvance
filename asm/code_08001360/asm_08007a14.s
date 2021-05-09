@@ -51,7 +51,7 @@ branch_08007a36: \n\
 /* 08007a72 */ MULS R0, R1 @ Multiply R0 by R1 \n\
 /* 08007a74 */ ASRS R0, R0, 0x8 \n\
 /* 08007a76 */ SUBS R3, R3, R0 @ Set R3 to R3 - R0 \n\
-/* 08007a78 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 08007a78 */ LDR R0, =D_03005380 \n\
 /* 08007a7a */ LDR R0, [R0] \n\
 /* 08007a7c */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08007a7e */ LDRSH R1, [R7, R2] \n\

@@ -6,7 +6,7 @@ glabel func_0800c1e8 \n\
 /* 0800c1e8 */ PUSH {LR} \n\
 /* 0800c1ea */ ADDS R3, R0, 0x0 @ Set R3 to R0 + 0x0 \n\
 /* 0800c1ec */ LSLS R1, R1, 0x10 \n\
-/* 0800c1ee */ LDR R0, =0xff880000 @ !PossiblePointer \n\
+/* 0800c1ee */ LDR R0, =0xff880000 \n\
 /* 0800c1f0 */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\
 /* 0800c1f2 */ ASRS R1, R1, 0x10 \n\
 /* 0800c1f4 */ LSLS R0, R1, 0x1 \n\
@@ -18,7 +18,7 @@ glabel func_0800c1e8 \n\
 /* 0800c200 */ NEGS R1, R1 @ Set R1 to -R1 \n\
 /* 0800c202 */ CMP R0, R1 @ Check R0 - R1 \n\
 /* 0800c204 */ BGE branch_0800c208 \n\
-/* 0800c206 */ LDR R2, =0x0000ff80 @ !PossiblePointer \n\
+/* 0800c206 */ LDR R2, =0xff80 \n\
  \n\
 branch_0800c208: \n\
 /* 0800c208 */ LSLS R0, R2, 0x10 \n\

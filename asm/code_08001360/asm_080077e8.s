@@ -38,7 +38,7 @@ branch_08007808: \n\
 /* 08007826 */ BL func_08007b80 \n\
 /* 0800782a */ LDRH R3, [R6, 0x4] \n\
 /* 0800782c */ ADDS R3, R3, R0 @ Set R3 to R3 + R0 \n\
-/* 0800782e */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0800782e */ LDR R0, =D_03005380 \n\
 /* 08007830 */ LDR R0, [R0] \n\
 /* 08007832 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08007834 */ LDRSH R1, [R6, R2] \n\

@@ -19,7 +19,7 @@ glabel func_08009048 \n\
 /* 08009062 */ LSRS R0, R0, 0x8 \n\
 /* 08009064 */ STRB R0, [R2] \n\
 /* 08009066 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
-/* 08009068 */ LDR R3, =0x0000020f @ !PossiblePointer \n\
+/* 08009068 */ LDR R3, =0x20f \n\
 /* 0800906a */ ADDS R2, 0x1 @ Add 0x1 to R2 \n\
  \n\
 branch_0800906c: \n\

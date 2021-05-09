@@ -32,7 +32,7 @@ glabel func_08007aa0 \n\
 /* 08007ad6 */ STRH R2, [R4, 0xC] \n\
 /* 08007ad8 */ LDRH R0, [R5, 0xC] \n\
 /* 08007ada */ STRH R0, [R4, 0xE] \n\
-/* 08007adc */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 08007adc */ LDR R0, =D_03005380 \n\
 /* 08007ade */ LDR R0, [R0] \n\
 /* 08007ae0 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08007ae2 */ LDRSH R1, [R4, R2] \n\

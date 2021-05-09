@@ -8,19 +8,19 @@ glabel func_080093c0 \n\
 /* 080093c4 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 080093c6 */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 080093c8 */ MOV R12, R0 @ Set R12 to R0 \n\
-/* 080093ca */ LDR R2, =0x04000200 @ !PossiblePointer \n\
+/* 080093ca */ LDR R2, =0x04000200 @ !Hardware REG_IE \n\
 /* 080093cc */ LDRH R1, [R2] \n\
 /* 080093ce */ LDR R0, =0xFFBF \n\
 /* 080093d0 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 080093d2 */ STRH R0, [R2] \n\
-/* 080093d4 */ LDR R0, =0x030011A0 @ !PossiblePointer \n\
+/* 080093d4 */ LDR R0, =D_030011a0 \n\
 /* 080093d6 */ LDR R4, [R0] \n\
 /* 080093d8 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 080093da */ ADDS R6, R0, 0x0 @ Set R6 to R0 + 0x0 \n\
-/* 080093dc */ LDR R7, =0x03004AF8 @ !PossiblePointer \n\
+/* 080093dc */ LDR R7, =D_03004af8 \n\
 /* 080093de */ CMP R3, R4 @ Check R3 - R4 \n\
 /* 080093e0 */ BCS branch_080093f0 \n\
-/* 080093e2 */ LDR R5, =0x030011B0 @ !PossiblePointer \n\
+/* 080093e2 */ LDR R5, =D_030011b0 \n\
 /* 080093e4 */ MOV R1, SP @ Set R1 to SP \n\
  \n\
 branch_080093e6: \n\
@@ -33,7 +33,7 @@ branch_080093e6: \n\
 branch_080093f0: \n\
 /* 080093f0 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 080093f2 */ STR R0, [R6] \n\
-/* 080093f4 */ LDR R2, =0x04000200 @ !PossiblePointer \n\
+/* 080093f4 */ LDR R2, =0x04000200 @ !Hardware REG_IE \n\
 /* 080093f6 */ LDRH R0, [R2] \n\
 /* 080093f8 */ MOVS R1, 0x40 @ Set R1 to 0x40 \n\
 /* 080093fa */ ORRS R0, R1 @ Set R0 to R0 | R1 \n\

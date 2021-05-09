@@ -10,11 +10,11 @@ glabel func_080097d0 \n\
  \n\
 branch_080097d8: \n\
 /* 080097d8 */ LSLS R4, R0, 0xC \n\
-/* 080097da */ LDR R2, =0x03001201 @ !PossiblePointer \n\
+/* 080097da */ LDR R2, =D_03001201 \n\
 /* 080097dc */ LDRB R1, [R2] \n\
 /* 080097de */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 080097e0 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
-/* 080097e2 */ LDR R3, =0x03001208 @ !PossiblePointer \n\
+/* 080097e2 */ LDR R3, =D_03001208 \n\
 /* 080097e4 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 080097e6 */ BEQ branch_080097ee \n\
 /* 080097e8 */ LDR R0, [R3] \n\
@@ -25,7 +25,7 @@ branch_080097ee: \n\
 /* 080097ee */ STR R4, [R3] \n\
  \n\
 branch_080097f0: \n\
-/* 080097f0 */ LDR R0, =0x03001204 @ !PossiblePointer \n\
+/* 080097f0 */ LDR R0, =D_03001204 \n\
 /* 080097f2 */ LDR R1, [R0] \n\
 /* 080097f4 */ LDR R0, [R3] \n\
 /* 080097f6 */ CMP R1, R0 @ Check R1 - R0 \n\

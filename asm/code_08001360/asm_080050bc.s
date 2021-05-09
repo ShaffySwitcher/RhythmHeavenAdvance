@@ -24,9 +24,9 @@ branch_080050d4: \n\
 /* 080050dc */ ADDS R4, 0x8 @ Add 0x8 to R4 \n\
 /* 080050de */ CMP R5, R6 @ Check R5 - R6 \n\
 /* 080050e0 */ BCS branch_0800510a \n\
-/* 080050e2 */ LDR R0, =0x000001ff @ !PossiblePointer \n\
+/* 080050e2 */ LDR R0, =0x1ff \n\
 /* 080050e4 */ ADDS R7, R0, 0x0 @ Set R7 to R0 + 0x0 \n\
-/* 080050e6 */ LDR R0, =0xfffffe00 @ !PossiblePointer \n\
+/* 080050e6 */ LDR R0, =0xfffffe00 \n\
 /* 080050e8 */ MOV R12, R0 @ Set R12 to R0 \n\
  \n\
 branch_080050ea: \n\

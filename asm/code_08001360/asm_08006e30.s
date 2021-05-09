@@ -29,14 +29,14 @@ glabel func_08006e30 \n\
 /* 08006e5e */ LDR R1, =0x040000d4 @ !Hardware REG_DMA3SAD \n\
 /* 08006e60 */ MOV R0, SP @ Set R0 to SP \n\
 /* 08006e62 */ STR R0, [R1] \n\
-/* 08006e64 */ LDR R0, =0x03004b2c @ !PossiblePointer \n\
+/* 08006e64 */ LDR R0, =D_03004b2c \n\
 /* 08006e66 */ CMP R2, 0x0 @ Compare R2 and 0x0 \n\
 /* 08006e68 */ BEQ branch_08006e6c \n\
 /* 08006e6a */ ADDS R0, 0x10 @ Add 0x10 to R0 \n\
  \n\
 branch_08006e6c: \n\
 /* 08006e6c */ STR R0, [R1, 0x4] \n\
-/* 08006e6e */ LDR R0, =0x84000004 @ !PossiblePointer \n\
+/* 08006e6e */ LDR R0, =0x84000004 \n\
 /* 08006e70 */ STR R0, [R1, 0x8] \n\
 /* 08006e72 */ LDR R0, [R1, 0x8] \n\
  \n\

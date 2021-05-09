@@ -23,7 +23,7 @@ glabel func_080054b0 \n\
 /* 080054d6 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 080054d8 */ STRB R0, [R4, 0x4] \n\
 /* 080054da */ LDRH R1, [R4, 0x6] \n\
-/* 080054dc */ LDR R0, =0xfffffc00 @ !PossiblePointer \n\
+/* 080054dc */ LDR R0, =0xfffffc00 \n\
 /* 080054de */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 080054e0 */ STRH R0, [R4, 0x6] \n\
 /* 080054e2 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\

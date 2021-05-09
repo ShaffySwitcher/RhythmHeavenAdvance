@@ -54,7 +54,7 @@ glabel func_08006a0c \n\
  \n\
 branch_08006a74: \n\
 /* 08006a74 */ LDRH R0, [R6, 0x1C] \n\
-/* 08006a76 */ LDR R1, =0xfffff000 @ !PossiblePointer \n\
+/* 08006a76 */ LDR R1, =0xfffff000 \n\
 /* 08006a78 */ ANDS R1, R0 @ Set R1 to R1 & R0 \n\
 /* 08006a7a */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 08006a7c */ ORRS R1, R0 @ Set R1 to R1 | R0 \n\

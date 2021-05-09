@@ -13,7 +13,7 @@ glabel func_0800c660 \n\
 /* 0800c66e */ BL func_0800c3b8 \n\
 /* 0800c672 */ LSLS R0, R0, 0x10 \n\
 /* 0800c674 */ LSRS R0, R0, 0x10 \n\
-/* 0800c676 */ LDR R1, =0x089de5c8 @ !PossiblePointer \n\
+/* 0800c676 */ LDR R1, =D_089de5c8 \n\
 /* 0800c678 */ ADDS R2, R4, 0x0 @ Set R2 to R4 + 0x0 \n\
 /* 0800c67a */ ADDS R3, R5, 0x0 @ Set R3 to R5 + 0x0 \n\
 /* 0800c67c */ BL func_08004508 \n\

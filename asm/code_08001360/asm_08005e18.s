@@ -7,7 +7,7 @@ glabel func_08005e18 \n\
 /* 08005e1a */ LSLS R0, R0, 0x10 \n\
 /* 08005e1c */ LSRS R6, R0, 0x10 \n\
 /* 08005e1e */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 08005e20 */ LDR R2, =0x03000908 @ !PossiblePointer \n\
+/* 08005e20 */ LDR R2, =D_03000908 \n\
 /* 08005e22 */ MOVS R4, 0x1 @ Set R4 to 0x1 \n\
 /* 08005e24 */ LSLS R5, R1, 0x1 \n\
  \n\

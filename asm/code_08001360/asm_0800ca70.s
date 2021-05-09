@@ -24,7 +24,7 @@ branch_0800ca8c: \n\
 /* 0800ca90 */ ANDS R1, R6 @ Set R1 to R1 & R6 \n\
 /* 0800ca92 */ LSLS R1, R1, 0x1 \n\
 /* 0800ca94 */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\
-/* 0800ca96 */ LDR R5, =0x03005380 @ !PossiblePointer \n\
+/* 0800ca96 */ LDR R5, =D_03005380 \n\
 /* 0800ca98 */ LDR R0, [R5] \n\
 /* 0800ca9a */ LDRH R2, [R1] \n\
 /* 0800ca9c */ MOV R10, R2 @ Set R10 to R2 \n\

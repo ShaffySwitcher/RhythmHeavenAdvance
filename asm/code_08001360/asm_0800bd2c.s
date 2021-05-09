@@ -9,7 +9,7 @@ glabel func_0800bd2c \n\
 /* 0800bd32 */ PUSH {R6, R7} \n\
 /* 0800bd34 */ SUB SP, 0x4 \n\
 /* 0800bd36 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 0800bd38 */ LDR R0, =0x030053c0 @ !PossiblePointer \n\
+/* 0800bd38 */ LDR R0, =D_030053c0 \n\
 /* 0800bd3a */ MOV R8, R0 @ Set R8 to R0 \n\
 /* 0800bd3c */ MOVS R1, 0x7E @ Set R1 to 0x7E \n\
 /* 0800bd3e */ ADD R1, R8 @ Add R8 to R1 \n\
@@ -48,14 +48,14 @@ branch_0800bd42: \n\
 /* 0800bd7e */ ADDS R6, R3, 0x1 @ Set R6 to R3 + 0x1 \n\
 /* 0800bd80 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0800bd82 */ BEQ branch_0800bdd4 \n\
-/* 0800bd84 */ LDR R2, =0x03005588 @ !PossiblePointer \n\
+/* 0800bd84 */ LDR R2, =D_03005588 \n\
 /* 0800bd86 */ LSLS R1, R3, 0x2 \n\
 /* 0800bd88 */ MOVS R0, 0xB0 @ Set R0 to 0xB0 \n\
 /* 0800bd8a */ LSLS R0, R0, 0x1 \n\
 /* 0800bd8c */ ADD R0, R8 @ Add R8 to R0 \n\
 /* 0800bd8e */ ADDS R3, R1, R0 @ Set R3 to R1 + R0 \n\
 /* 0800bd90 */ STR R3, [R2] \n\
-/* 0800bd92 */ LDR R1, =0x0300558c @ !PossiblePointer \n\
+/* 0800bd92 */ LDR R1, =D_0300558c \n\
 /* 0800bd94 */ MOV R2, R9 @ Set R2 to R9 \n\
 /* 0800bd96 */ ADDS R0, R4, R2 @ Set R0 to R4 + R2 \n\
 /* 0800bd98 */ STR R0, [R1] \n\
@@ -67,7 +67,7 @@ branch_0800bd42: \n\
 /* 0800bda4 */ BL func_0804eaf4 \n\
  \n\
 branch_0800bda8: \n\
-/* 0800bda8 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0800bda8 */ LDR R0, =D_03005380 \n\
 /* 0800bdaa */ LDR R0, [R0] \n\
 /* 0800bdac */ LSLS R4, R6, 0x10 \n\
 /* 0800bdae */ LSRS R4, R4, 0x10 \n\

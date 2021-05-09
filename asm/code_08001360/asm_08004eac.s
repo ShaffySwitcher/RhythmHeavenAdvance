@@ -69,7 +69,7 @@ branch_08004f18: \n\
 /* 08004f20 */ MOVS R5, 0x0 @ Set R5 to 0x0 \n\
 /* 08004f22 */ CMP R5, R7 @ Check R5 - R7 \n\
 /* 08004f24 */ BCS branch_08004fd0 \n\
-/* 08004f26 */ LDR R1, =0xfffffe00 @ !PossiblePointer \n\
+/* 08004f26 */ LDR R1, =0xfffffe00 \n\
 /* 08004f28 */ MOV R8, R1 @ Set R8 to R1 \n\
  \n\
 branch_08004f2a: \n\
@@ -79,7 +79,7 @@ branch_08004f2a: \n\
 /* 08004f32 */ LSLS R1, R2, 0x17 \n\
 /* 08004f34 */ LSRS R1, R1, 0x17 \n\
 /* 08004f36 */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\
-/* 08004f38 */ LDR R3, =0x000001ff @ !PossiblePointer \n\
+/* 08004f38 */ LDR R3, =0x1ff \n\
 /* 08004f3a */ ADDS R0, R3, 0x0 @ Set R0 to R3 + 0x0 \n\
 /* 08004f3c */ ANDS R1, R0 @ Set R1 to R1 & R0 \n\
 /* 08004f3e */ MOV R0, R8 @ Set R0 to R8 \n\
@@ -103,9 +103,9 @@ branch_08004f64: \n\
 /* 08004f64 */ MOVS R5, 0x0 @ Set R5 to 0x0 \n\
 /* 08004f66 */ CMP R5, R7 @ Check R5 - R7 \n\
 /* 08004f68 */ BCS branch_08004fd0 \n\
-/* 08004f6a */ LDR R2, =0x000001ff @ !PossiblePointer \n\
+/* 08004f6a */ LDR R2, =0x1ff \n\
 /* 08004f6c */ MOV R9, R2 @ Set R9 to R2 \n\
-/* 08004f6e */ LDR R3, =0xfffffe00 @ !PossiblePointer \n\
+/* 08004f6e */ LDR R3, =0xfffffe00 \n\
 /* 08004f70 */ MOV R8, R3 @ Set R8 to R3 \n\
  \n\
 branch_08004f72: \n\

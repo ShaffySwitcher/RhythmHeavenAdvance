@@ -136,7 +136,7 @@ branch_08004ae8: \n\
  \n\
 branch_08004aea: \n\
 /* 08004aea */ STRH R0, [R7] \n\
-/* 08004aec */ LDR R2, =0x000001ff @ !PossiblePointer \n\
+/* 08004aec */ LDR R2, =0x1ff \n\
 /* 08004aee */ ADDS R1, R2, 0x0 @ Set R1 to R2 + 0x0 \n\
 /* 08004af0 */ ADDS R0, R6, 0x0 @ Set R0 to R6 + 0x0 \n\
 /* 08004af2 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
@@ -155,7 +155,7 @@ branch_08004aea: \n\
 /* 08004b0c */ LDR R2, [SP, 0xC] \n\
 /* 08004b0e */ CMP R2, 0x3F @ Compare R2 and 0x3F \n\
 /* 08004b10 */ BHI branch_08004b1c \n\
-/* 08004b12 */ LDR R0, =0x030008b8 @ !PossiblePointer \n\
+/* 08004b12 */ LDR R0, =D_030008b8 \n\
 /* 08004b14 */ ADDS R0, R2, R0 @ Set R0 to R2 + R0 \n\
 /* 08004b16 */ STRB R1, [R0] \n\
 /* 08004b18 */ ADDS R2, 0x1 @ Add 0x1 to R2 \n\

@@ -9,7 +9,7 @@ glabel func_08006694 \n\
 /* 0800669a */ ANDS R0, R2 @ Set R0 to R0 & R2 \n\
 /* 0800669c */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0800669e */ BNE branch_080066f2 \n\
-/* 080066a0 */ LDR R1, =0x03000e9c @ !PossiblePointer \n\
+/* 080066a0 */ LDR R1, =D_03000e9c \n\
 /* 080066a2 */ LDR R0, [R1] \n\
 /* 080066a4 */ SUBS R0, R2, R0 @ Set R0 to R2 - R0 \n\
 /* 080066a6 */ LSRS R0, R0, 0x2 \n\
@@ -17,7 +17,7 @@ glabel func_08006694 \n\
 /* 080066aa */ ADDS R6, R1, 0x0 @ Set R6 to R1 + 0x0 \n\
 /* 080066ac */ CMP R3, 0x0 @ Compare R3 and 0x0 \n\
 /* 080066ae */ BLT branch_080066f2 \n\
-/* 080066b0 */ LDR R0, =0x03000ea0 @ !PossiblePointer \n\
+/* 080066b0 */ LDR R0, =D_03000ea0 \n\
 /* 080066b2 */ LDR R1, [R0] \n\
 /* 080066b4 */ ADDS R5, R0, 0x0 @ Set R5 to R0 + 0x0 \n\
 /* 080066b6 */ CMP R3, R1 @ Check R3 - R1 \n\

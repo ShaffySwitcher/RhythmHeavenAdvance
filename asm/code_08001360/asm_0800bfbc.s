@@ -8,7 +8,7 @@ glabel func_0800bfbc \n\
 /* 0800bfc0 */ BL func_08002a18 \n\
 /* 0800bfc4 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0800bfc6 */ BEQ branch_0800c010 \n\
-/* 0800bfc8 */ LDR R4, =0x030053c0 @ !PossiblePointer \n\
+/* 0800bfc8 */ LDR R4, =D_030053c0 \n\
 /* 0800bfca */ STR R0, [R4, 0x4] \n\
 /* 0800bfcc */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\
 /* 0800bfce */ BL func_080102d0 \n\

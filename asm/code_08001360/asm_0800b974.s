@@ -5,10 +5,10 @@ asm(".syntax unified \n\
 glabel func_0800b974 \n\
 /* 0800b974 */ PUSH {R4-R7, LR} \n\
 /* 0800b976 */ MOVS R5, 0x0 @ Set R5 to 0x0 \n\
-/* 0800b978 */ LDR R4, =0x030053c0 @ !PossiblePointer \n\
+/* 0800b978 */ LDR R4, =D_030053c0 \n\
 /* 0800b97a */ ADDS R7, R4, 0x0 @ Set R7 to R4 + 0x0 \n\
 /* 0800b97c */ ADDS R7, 0x2C @ Add 0x2C to R7 \n\
-/* 0800b97e */ LDR R6, =0x03005588 @ !PossiblePointer \n\
+/* 0800b97e */ LDR R6, =D_03005588 \n\
  \n\
 branch_0800b980: \n\
 /* 0800b980 */ MOVS R0, 0x7 @ Set R0 to 0x7 \n\
@@ -45,7 +45,7 @@ branch_0800b980: \n\
 /* 0800b9c0 */ ADDS R0, R4, R3 @ Set R0 to R4 + R3 \n\
 /* 0800b9c2 */ ADDS R3, R1, R0 @ Set R3 to R1 + R0 \n\
 /* 0800b9c4 */ STR R3, [R6] \n\
-/* 0800b9c6 */ LDR R1, =0x0300558c @ !PossiblePointer \n\
+/* 0800b9c6 */ LDR R1, =D_0300558c \n\
 /* 0800b9c8 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 0800b9ca */ ADDS R0, 0x7E @ Add 0x7E to R0 \n\
 /* 0800b9cc */ ADDS R0, R2, R0 @ Set R0 to R2 + R0 \n\

@@ -23,7 +23,7 @@ glabel func_08006ce8 \n\
 /* 08006d0c */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 08006d0e */ BNE branch_08006d30 \n\
 /* 08006d10 */ LDRH R1, [R5, 0x1C] \n\
-/* 08006d12 */ LDR R0, =0xfffff000 @ !PossiblePointer \n\
+/* 08006d12 */ LDR R0, =0xfffff000 \n\
 /* 08006d14 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 08006d16 */ STRH R0, [R5, 0x1C] \n\
 /* 08006d18 */ LDR R2, [R5, 0x28] \n\

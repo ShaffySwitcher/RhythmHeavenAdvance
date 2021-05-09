@@ -6,7 +6,7 @@ glabel func_0800c9c8 \n\
 /* 0800c9c8 */ PUSH {LR} \n\
 /* 0800c9ca */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
 /* 0800c9cc */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 0800c9ce */ LDR R3, =0x0800c9e8 @ !PossiblePointer \n\
+/* 0800c9ce */ LDR R3, =0x0800c9e8 @ !JumpTablePointer \n\
  \n\
 branch_0800c9d0: \n\
 /* 0800c9d0 */ LDRB R0, [R1] \n\

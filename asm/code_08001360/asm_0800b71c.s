@@ -22,7 +22,7 @@ branch_0800b728: \n\
 /* 0800b734 */ ANDS R1, R2 @ Set R1 to R1 & R2 \n\
 /* 0800b736 */ LSLS R1, R1, 0x8 \n\
 /* 0800b738 */ LDR R0, [R4] \n\
-/* 0800b73a */ LDR R2, =0xfffc00ff @ !PossiblePointer \n\
+/* 0800b73a */ LDR R2, =0xfffc00ff \n\
 /* 0800b73c */ ANDS R0, R2 @ Set R0 to R0 & R2 \n\
 /* 0800b73e */ ORRS R0, R1 @ Set R0 to R0 | R1 \n\
 /* 0800b740 */ STR R0, [R4] \n\

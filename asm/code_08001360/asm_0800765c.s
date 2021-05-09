@@ -50,7 +50,7 @@ glabel func_0800765c \n\
 /* 080076b8 */ MOVS R2, 0xC @ Set R2 to 0xC \n\
 /* 080076ba */ LDRSH R0, [R5, R2] \n\
 /* 080076bc */ STR R0, [R4, 0x18] \n\
-/* 080076be */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 080076be */ LDR R0, =D_03005380 \n\
 /* 080076c0 */ LDR R0, [R0] \n\
 /* 080076c2 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 080076c4 */ LDRSH R1, [R5, R3] \n\

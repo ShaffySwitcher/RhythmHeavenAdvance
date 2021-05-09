@@ -12,7 +12,7 @@ glabel func_08009aa4 \n\
 /* 08009ab0 */ LSRS R0, R0, 0x18 \n\
 /* 08009ab2 */ CMP R0, 0x5E @ Compare R0 and 0x5E \n\
 /* 08009ab4 */ BHI branch_08009ad4 \n\
-/* 08009ab6 */ LDR R1, =0x08938138 @ !PossiblePointer \n\
+/* 08009ab6 */ LDR R1, =D_08938138 \n\
 /* 08009ab8 */ LDRB R0, [R1] \n\
 /* 08009aba */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08009abc */ BEQ branch_08009aee \n\
@@ -33,7 +33,7 @@ branch_08009ad0: \n\
 /* 08009ad2 */ B branch_08009af0 \n\
  \n\
 branch_08009ad4: \n\
-/* 08009ad4 */ LDR R1, =0x089380e8 @ !PossiblePointer \n\
+/* 08009ad4 */ LDR R1, =D_089380e8 \n\
 /* 08009ad6 */ B branch_08009ae8 \n\
 \n\
 .ltorg \n\

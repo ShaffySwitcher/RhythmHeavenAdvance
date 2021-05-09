@@ -48,7 +48,7 @@ branch_0800761a: \n\
 branch_08007622: \n\
 /* 08007622 */ STR R4, [R5, 0x8] \n\
 /* 08007624 */ STR R6, [R5, 0xC] \n\
-/* 08007626 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 08007626 */ LDR R0, =D_03005380 \n\
 /* 08007628 */ LDR R0, [R0] \n\
 /* 0800762a */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0800762c */ LDRSH R1, [R5, R2] \n\

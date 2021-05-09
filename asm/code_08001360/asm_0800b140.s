@@ -78,7 +78,7 @@ branch_0800b1ae: \n\
 branch_0800b1ce: \n\
 /* 0800b1ce */ SUBS R0, R1, 0x1 @ Set R0 to R1 - 0x1 \n\
 /* 0800b1d0 */ STRH R0, [R6, 0x30] \n\
-/* 0800b1d2 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0800b1d2 */ LDR R0, =D_03005380 \n\
 /* 0800b1d4 */ LDR R4, [R0] \n\
 /* 0800b1d6 */ MOVS R0, 0x2A @ Set R0 to 0x2A \n\
 /* 0800b1d8 */ LDRSH R5, [R6, R0] \n\

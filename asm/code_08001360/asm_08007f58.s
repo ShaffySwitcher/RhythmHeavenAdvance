@@ -31,7 +31,7 @@ glabel func_08007f58 \n\
 /* 08007f8c */ BGT branch_08007f9c \n\
 /* 08007f8e */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08007f90 */ BEQ branch_08007fac \n\
-/* 08007f92 */ LDR R0, =0x03004b10 @ !PossiblePointer \n\
+/* 08007f92 */ LDR R0, =D_03004b10 \n\
 /* 08007f94 */ B branch_08007fca \n\
 \n\
 .ltorg \n\
@@ -41,13 +41,13 @@ branch_08007f9c: \n\
 /* 08007f9e */ BEQ branch_08007fc0 \n\
 /* 08007fa0 */ CMP R0, 0xC0 @ Compare R0 and 0xC0 \n\
 /* 08007fa2 */ BEQ branch_08007fc0 \n\
-/* 08007fa4 */ LDR R0, =0x03004b10 @ !PossiblePointer \n\
+/* 08007fa4 */ LDR R0, =D_03004b10 \n\
 /* 08007fa6 */ B branch_08007fca \n\
 \n\
 .ltorg \n\
  \n\
 branch_08007fac: \n\
-/* 08007fac */ LDR R1, =0x03004b10 @ !PossiblePointer \n\
+/* 08007fac */ LDR R1, =D_03004b10 \n\
 /* 08007fae */ LSLS R0, R3, 0x8 \n\
 /* 08007fb0 */ ORRS R4, R0 @ Set R4 to R4 | R0 \n\
 /* 08007fb2 */ ADDS R0, R1, 0x0 @ Set R0 to R1 + 0x0 \n\
@@ -58,7 +58,7 @@ branch_08007fac: \n\
 .ltorg \n\
  \n\
 branch_08007fc0: \n\
-/* 08007fc0 */ LDR R1, =0x03004b10 @ !PossiblePointer \n\
+/* 08007fc0 */ LDR R1, =D_03004b10 \n\
 /* 08007fc2 */ ADDS R0, R1, 0x0 @ Set R0 to R1 + 0x0 \n\
 /* 08007fc4 */ ADDS R0, 0x50 @ Add 0x50 to R0 \n\
 /* 08007fc6 */ STRH R3, [R0] \n\

@@ -107,7 +107,7 @@ branch_08005726: \n\
 .ltorg \n\
  \n\
 branch_08005748: \n\
-/* 08005748 */ LDR R0, =0x03004ae8 @ !PossiblePointer \n\
+/* 08005748 */ LDR R0, =D_03004ae8 \n\
 /* 0800574a */ LDRB R0, [R0] \n\
 /* 0800574c */ LSLS R0, R0, 0x2 \n\
 /* 0800574e */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\

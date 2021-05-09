@@ -15,7 +15,7 @@ glabel func_0800a108 \n\
 /* 0800a11a */ LSRS R0, R0, 0x18 \n\
 /* 0800a11c */ CMP R0, 0x5E @ Compare R0 and 0x5E \n\
 /* 0800a11e */ BHI branch_0800a134 \n\
-/* 0800a120 */ LDR R2, =0x08938194 @ !PossiblePointer \n\
+/* 0800a120 */ LDR R2, =D_08938194 \n\
 /* 0800a122 */ LSLS R1, R0, 0x1 \n\
 /* 0800a124 */ ADDS R0, R1, 0x1 @ Set R0 to R1 + 0x1 \n\
 /* 0800a126 */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
@@ -38,7 +38,7 @@ branch_0800a13a: \n\
 /* 0800a140 */ LSRS R0, R0, 0x18 \n\
 /* 0800a142 */ CMP R0, 0x1E @ Compare R0 and 0x1E \n\
 /* 0800a144 */ BHI branch_0800a154 \n\
-/* 0800a146 */ LDR R1, =0x08938140 @ !PossiblePointer \n\
+/* 0800a146 */ LDR R1, =D_08938140 \n\
 /* 0800a148 */ ADDS R0, R3, 0x0 @ Set R0 to R3 + 0x0 \n\
 /* 0800a14a */ SUBS R0, 0x81 @ Subtract 0x81 from R0 \n\
 /* 0800a14c */ B branch_0800a166 \n\
@@ -52,7 +52,7 @@ branch_0800a154: \n\
 /* 0800a15a */ LSRS R0, R0, 0x18 \n\
 /* 0800a15c */ CMP R0, 0xA @ Compare R0 and 0xA \n\
 /* 0800a15e */ BHI branch_0800a174 \n\
-/* 0800a160 */ LDR R1, =0x0893817e @ !PossiblePointer \n\
+/* 0800a160 */ LDR R1, =D_0893817e \n\
 /* 0800a162 */ ADDS R0, R3, 0x0 @ Set R0 to R3 + 0x0 \n\
 /* 0800a164 */ SUBS R0, 0xE0 @ Subtract 0xE0 from R0 \n\
  \n\

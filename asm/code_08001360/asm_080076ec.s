@@ -69,7 +69,7 @@ branch_0800773c: \n\
 /* 08007762 */ LSRS R3, R1, 0x10 \n\
  \n\
 branch_08007764: \n\
-/* 08007764 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 08007764 */ LDR R0, =D_03005380 \n\
 /* 08007766 */ LDR R0, [R0] \n\
 /* 08007768 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0800776a */ LDRSH R1, [R4, R2] \n\

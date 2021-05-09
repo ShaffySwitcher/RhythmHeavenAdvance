@@ -12,7 +12,7 @@ glabel func_080058b0 \n\
 /* 080058bc */ STR R2, [SP, 0x8] \n\
 /* 080058be */ STR R3, [SP, 0xC] \n\
 /* 080058c0 */ STR R4, [SP, 0x10] \n\
-/* 080058c2 */ LDR R1, =0x08936b74 @ !PossiblePointer \n\
+/* 080058c2 */ LDR R1, =D_08936b74 \n\
 /* 080058c4 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 080058c6 */ STR R2, [SP] \n\
 /* 080058c8 */ ADD R2, SP, 0x4 \n\

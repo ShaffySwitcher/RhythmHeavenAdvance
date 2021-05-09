@@ -7,7 +7,7 @@ glabel func_0800c0d8 \n\
 /* 0800c0da */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
 /* 0800c0dc */ LSLS R1, R1, 0x10 \n\
 /* 0800c0de */ LSRS R1, R1, 0x10 \n\
-/* 0800c0e0 */ LDR R2, =0x030053c0 @ !PossiblePointer \n\
+/* 0800c0e0 */ LDR R2, =D_030053c0 \n\
 /* 0800c0e2 */ MOVS R3, 0xC8 @ Set R3 to 0xC8 \n\
 /* 0800c0e4 */ LSLS R3, R3, 0x1 \n\
 /* 0800c0e6 */ ADDS R0, R2, R3 @ Set R0 to R2 + R3 \n\

@@ -63,7 +63,7 @@ glabel func_0800aeb4 \n\
 /* 0800af36 */ LDR R1, [SP, 0x4C] \n\
 /* 0800af38 */ BL func_0800ae00 \n\
 /* 0800af3c */ LDR R0, [R7, 0x4] \n\
-/* 0800af3e */ LDR R1, =0x0800ae89 @ !PossiblePointer \n\
+/* 0800af3e */ LDR R1, =(func_0800ae88 + 1) \n\
 /* 0800af40 */ ADDS R2, R7, 0x0 @ Set R2 to R7 + 0x0 \n\
 /* 0800af42 */ BL func_0800ad20 \n\
 /* 0800af46 */ MOV R0, R9 @ Set R0 to R9 \n\
@@ -122,7 +122,7 @@ glabel func_0800aeb4 \n\
 /* 0800afb0 */ BL func_0800ae1c \n\
 /* 0800afb4 */ LSLS R0, R0, 0x10 \n\
 /* 0800afb6 */ ASRS R0, R0, 0x10 \n\
-/* 0800afb8 */ LDR R1, =0x03005380 @ !PossiblePointer \n\
+/* 0800afb8 */ LDR R1, =D_03005380 \n\
 /* 0800afba */ LDR R1, [R1] \n\
 /* 0800afbc */ STR R0, [SP] \n\
 /* 0800afbe */ STR R4, [SP, 0x4] \n\
@@ -145,7 +145,7 @@ branch_0800afe0: \n\
  \n\
 branch_0800afe2: \n\
 /* 0800afe2 */ STRH R0, [R7, 0x2A] \n\
-/* 0800afe4 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0800afe4 */ LDR R0, =D_03005380 \n\
 /* 0800afe6 */ LDR R0, [R0] \n\
 /* 0800afe8 */ MOVS R2, 0x2A @ Set R2 to 0x2A \n\
 /* 0800afea */ LDRSH R1, [R7, R2] \n\

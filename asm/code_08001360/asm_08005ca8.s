@@ -8,7 +8,7 @@ glabel func_08005ca8 \n\
 /* 08005cac */ CMP R4, 0x0 @ Compare R4 and 0x0 \n\
 /* 08005cae */ BLT branch_08005cd8 \n\
 /* 08005cb0 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 08005cb2 */ LDR R2, =0x03000908 @ !PossiblePointer \n\
+/* 08005cb2 */ LDR R2, =D_03000908 \n\
 /* 08005cb4 */ LSLS R5, R1, 0x1 \n\
 /* 08005cb6 */ MOVS R6, 0x1 @ Set R6 to 0x1 \n\
  \n\

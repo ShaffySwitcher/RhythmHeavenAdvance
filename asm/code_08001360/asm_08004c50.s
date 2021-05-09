@@ -17,9 +17,9 @@ glabel func_08004c50 \n\
 /* 08004c68 */ LDRH R0, [R5] \n\
 /* 08004c6a */ CMP R4, R0 @ Check R4 - R0 \n\
 /* 08004c6c */ BCS branch_08004c9a \n\
-/* 08004c6e */ LDR R0, =0x000001ff @ !PossiblePointer \n\
+/* 08004c6e */ LDR R0, =0x1ff \n\
 /* 08004c70 */ ADDS R7, R0, 0x0 @ Set R7 to R0 + 0x0 \n\
-/* 08004c72 */ LDR R0, =0xfffffe00 @ !PossiblePointer \n\
+/* 08004c72 */ LDR R0, =0xfffffe00 \n\
 /* 08004c74 */ MOV R12, R0 @ Set R12 to R0 \n\
  \n\
 branch_08004c76: \n\

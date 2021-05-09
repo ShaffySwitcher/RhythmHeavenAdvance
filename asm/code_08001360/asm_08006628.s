@@ -6,7 +6,7 @@ glabel func_08006628 \n\
 /* 08006628 */ PUSH {R4-R7, LR} \n\
 /* 0800662a */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 0800662c */ ADDS R5, R1, 0x0 @ Set R5 to R1 + 0x0 \n\
-/* 0800662e */ LDR R0, =0x03000e9c @ !PossiblePointer \n\
+/* 0800662e */ LDR R0, =D_03000e9c \n\
 /* 08006630 */ LDR R6, [R0] \n\
 /* 08006632 */ LSLS R1, R4, 0x2 \n\
 /* 08006634 */ ADDS R1, R1, R6 @ Set R1 to R1 + R6 \n\
@@ -36,7 +36,7 @@ branch_0800665a: \n\
 /* 08006660 */ LDR R3, [R5] \n\
 /* 08006662 */ LSRS R0, R3, 0x10 \n\
 /* 08006664 */ ADDS R1, R4, R0 @ Set R1 to R4 + R0 \n\
-/* 08006666 */ LDR R0, =0x03000ea0 @ !PossiblePointer \n\
+/* 08006666 */ LDR R0, =D_03000ea0 \n\
 /* 08006668 */ LDR R0, [R0] \n\
 /* 0800666a */ CMP R1, R0 @ Check R1 - R0 \n\
 /* 0800666c */ BCS branch_08006682 \n\

@@ -122,7 +122,7 @@ branch_0800a75a: \n\
 /* 0800a75c */ LSRS R3, R0, 0x10 \n\
  \n\
 branch_0800a75e: \n\
-/* 0800a75e */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0800a75e */ LDR R0, =D_03005380 \n\
 /* 0800a760 */ LDR R0, [R0] \n\
 /* 0800a762 */ ADDS R1, R7, R2 @ Set R1 to R7 + R2 \n\
 /* 0800a764 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\

@@ -19,7 +19,7 @@ glabel func_0800c508 \n\
 /* 0800c522 */ ANDS R4, R1 @ Set R4 to R4 & R1 \n\
 /* 0800c524 */ LSLS R4, R4, 0x2 \n\
 /* 0800c526 */ LDR R0, [SP, 0x4] \n\
-/* 0800c528 */ LDR R1, =0xfffe0003 @ !PossiblePointer \n\
+/* 0800c528 */ LDR R1, =0xfffe0003 \n\
 /* 0800c52a */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 0800c52c */ ORRS R0, R4 @ Set R0 to R0 | R4 \n\
 /* 0800c52e */ STR R0, [SP, 0x4] \n\
@@ -29,7 +29,7 @@ glabel func_0800c508 \n\
 /* 0800c536 */ BL func_0800c3b8 \n\
 /* 0800c53a */ LSLS R0, R0, 0x10 \n\
 /* 0800c53c */ LSRS R0, R0, 0x10 \n\
-/* 0800c53e */ LDR R1, =0x08936c24 @ !PossiblePointer \n\
+/* 0800c53e */ LDR R1, =D_08936c24 \n\
 /* 0800c540 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0800c542 */ STR R2, [SP] \n\
 /* 0800c544 */ ADD R2, SP, 0x4 \n\

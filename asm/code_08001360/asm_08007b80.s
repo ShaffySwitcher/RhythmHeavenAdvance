@@ -22,7 +22,7 @@ branch_08007b92: \n\
 /* 08007b9c */ EORS R4, R0 @ Set R4 to R4 ^ R0 \n\
  \n\
 branch_08007b9e: \n\
-/* 08007b9e */ LDR R0, =0x03004af8 @ !PossiblePointer \n\
+/* 08007b9e */ LDR R0, =D_03004af8 \n\
 /* 08007ba0 */ LDR R2, [R0] \n\
 /* 08007ba2 */ ADDS R0, R3, 0x0 @ Set R0 to R3 + 0x0 \n\
 /* 08007ba4 */ BL func_0804eaf4 \n\

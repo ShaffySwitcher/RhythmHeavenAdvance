@@ -16,11 +16,11 @@ glabel func_080066f8 \n\
 /* 0800670c */ ADDS R6, R2, 0x0 @ Set R6 to R2 + 0x0 \n\
 /* 0800670e */ ORRS R6, R0 @ Set R6 to R6 | R0 \n\
 /* 08006710 */ MOVS R5, 0x0 @ Set R5 to 0x0 \n\
-/* 08006712 */ LDR R0, =0x03000ea0 @ !PossiblePointer \n\
+/* 08006712 */ LDR R0, =D_03000ea0 \n\
 /* 08006714 */ LDR R0, [R0] \n\
 /* 08006716 */ CMP R5, R0 @ Check R5 - R0 \n\
 /* 08006718 */ BCS branch_08006740 \n\
-/* 0800671a */ LDR R7, [PC, 0x30] @ 0x0800674c \n\
+/* 0800671a */ LDR R7, =D_03000e9c \n\
  \n\
 branch_0800671c: \n\
 /* 0800671c */ LDR R0, [R7] \n\
@@ -38,7 +38,7 @@ branch_0800672e: \n\
 /* 08006732 */ ADDS R0, R4, R0 @ Set R0 to R4 + R0 \n\
 /* 08006734 */ LDRH R0, [R0, 0x2] \n\
 /* 08006736 */ ADDS R5, R5, R0 @ Set R5 to R5 + R0 \n\
-/* 08006738 */ LDR R0, [PC, 0xC] @ 0x08006748 \n\
+/* 08006738 */ LDR R0, =D_03000ea0 \n\
 /* 0800673a */ LDR R0, [R0] \n\
 /* 0800673c */ CMP R5, R0 @ Check R5 - R0 \n\
 /* 0800673e */ BCC branch_0800671c \n\

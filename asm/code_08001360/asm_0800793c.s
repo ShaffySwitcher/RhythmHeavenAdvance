@@ -37,7 +37,7 @@ glabel func_0800793c \n\
 /* 08007980 */ ASRS R3, R3, 0x8 \n\
 /* 08007982 */ LDRH R0, [R6, 0x4] \n\
 /* 08007984 */ ADDS R3, R3, R0 @ Set R3 to R3 + R0 \n\
-/* 08007986 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 08007986 */ LDR R0, =D_03005380 \n\
 /* 08007988 */ LDR R0, [R0] \n\
 /* 0800798a */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0800798c */ LDRSH R1, [R6, R2] \n\

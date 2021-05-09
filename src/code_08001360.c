@@ -522,7 +522,7 @@ asm(".include \"include/gba.inc\"");//Temporary
 
 #include "asm/code_08001360/asm_080066f8.s"
 
-#include "asm/code_08001360/asm_0800674c.s"
+#include "asm/code_08001360/asm_08006750.s"
 
 #include "asm/code_08001360/asm_0800679c.s"
 

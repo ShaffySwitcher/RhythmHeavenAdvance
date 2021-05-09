@@ -14,14 +14,14 @@ glabel func_080099a0 \n\
 /* 080099b0 */ ADDS R6, R2, 0x0 @ Set R6 to R2 + 0x0 \n\
 /* 080099b2 */ STR R3, [SP, 0x8] \n\
 /* 080099b4 */ MOVS R7, 0x0 @ Set R7 to 0x0 \n\
-/* 080099b6 */ LDR R1, =0x089380ac @ !PossiblePointer \n\
+/* 080099b6 */ LDR R1, =D_089380ac \n\
 /* 080099b8 */ LSLS R0, R6, 0x1 \n\
 /* 080099ba */ ADDS R0, R0, R6 @ Set R0 to R0 + R6 \n\
 /* 080099bc */ LSLS R0, R0, 0x2 \n\
 /* 080099be */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 080099c0 */ LDRB R0, [R0, 0x9] \n\
 /* 080099c2 */ MOV R10, R0 @ Set R10 to R0 \n\
-/* 080099c4 */ LDR R0, =0x089380d0 @ !PossiblePointer \n\
+/* 080099c4 */ LDR R0, =D_089380d0 \n\
 /* 080099c6 */ STR R0, [SP, 0x4] \n\
 /* 080099c8 */ ADD R0, SP, 0x4 \n\
 /* 080099ca */ BL func_0800a108 \n\

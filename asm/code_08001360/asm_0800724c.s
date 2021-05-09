@@ -5,7 +5,7 @@ asm(".syntax unified \n\
 glabel func_0800724c \n\
 /* 0800724c */ PUSH {R4-R7, LR} \n\
 /* 0800724e */ SUB SP, 0x4 \n\
-/* 08007250 */ LDR R7, =0x03004b10 @ !PossiblePointer \n\
+/* 08007250 */ LDR R7, =D_03004b10 \n\
 /* 08007252 */ LDR R0, =0x854 \n\
 /* 08007254 */ ADDS R5, R7, R0 @ Set R5 to R7 + R0 \n\
 /* 08007256 */ LDRB R1, [R5] \n\
@@ -19,11 +19,11 @@ glabel func_0800724c \n\
 /* 08007266 */ LSRS R2, R0, 0x18 \n\
 /* 08007268 */ CMP R2, 0x0 @ Compare R2 and 0x0 \n\
 /* 0800726a */ BEQ branch_080072d8 \n\
-/* 0800726c */ LDR R2, =0x03000ea6 @ !PossiblePointer \n\
+/* 0800726c */ LDR R2, =D_03000ea6 \n\
 /* 0800726e */ LDRH R0, [R2] \n\
 /* 08007270 */ ADDS R0, 0x1 @ Add 0x1 to R0 \n\
 /* 08007272 */ STRH R0, [R2] \n\
-/* 08007274 */ LDR R1, =0x03000ea4 @ !PossiblePointer \n\
+/* 08007274 */ LDR R1, =D_03000ea4 \n\
 /* 08007276 */ LSLS R0, R0, 0x10 \n\
 /* 08007278 */ ASRS R0, R0, 0x10 \n\
 /* 0800727a */ LDRH R4, [R1] \n\
@@ -40,7 +40,7 @@ glabel func_0800724c \n\
 /* 08007290 */ STRB R0, [R5] \n\
 /* 08007292 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 08007294 */ STRH R0, [R7] \n\
-/* 08007296 */ LDR R5, =0x03000ea8 @ !PossiblePointer \n\
+/* 08007296 */ LDR R5, =D_03000ea8 \n\
 /* 08007298 */ LDRH R0, [R5] \n\
 /* 0800729a */ ADDS R1, R7, 0x0 @ Set R1 to R7 + 0x0 \n\
 /* 0800729c */ ADDS R1, 0x54 @ Add 0x54 to R1 \n\
@@ -63,13 +63,13 @@ glabel func_0800724c \n\
 .ltorg \n\
  \n\
 branch_080072d8: \n\
-/* 080072d8 */ LDR R1, =0x03000ea6 @ !PossiblePointer \n\
+/* 080072d8 */ LDR R1, =D_03000ea6 \n\
 /* 080072da */ LDRH R0, [R1] \n\
 /* 080072dc */ SUBS R0, 0x1 @ Subtract 0x1 from R0 \n\
 /* 080072de */ STRH R0, [R1] \n\
 /* 080072e0 */ LSLS R0, R0, 0x10 \n\
 /* 080072e2 */ ADDS R6, R1, 0x0 @ Set R6 to R1 + 0x0 \n\
-/* 080072e4 */ LDR R1, =0x03000ea4 @ !PossiblePointer \n\
+/* 080072e4 */ LDR R1, =D_03000ea4 \n\
 /* 080072e6 */ MOV R12, R1 @ Set R12 to R1 \n\
 /* 080072e8 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 080072ea */ BGT branch_080072fc \n\
@@ -83,7 +83,7 @@ branch_080072d8: \n\
 /* 080072fa */ STRB R0, [R5] \n\
  \n\
 branch_080072fc: \n\
-/* 080072fc */ LDR R0, =0x03000ea8 @ !PossiblePointer \n\
+/* 080072fc */ LDR R0, =D_03000ea8 \n\
 /* 080072fe */ LDRH R0, [R0] \n\
 /* 08007300 */ MOV R3, R12 @ Set R3 to R12 \n\
 /* 08007302 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\

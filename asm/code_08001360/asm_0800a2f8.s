@@ -13,7 +13,7 @@ glabel func_0800a2f8 \n\
  \n\
 branch_0800a306: \n\
 /* 0800a306 */ LSLS R0, R0, 0x2 \n\
-/* 0800a308 */ LDR R1, =0x0800a314 @ !PossiblePointer \n\
+/* 0800a308 */ LDR R1, =0x0800a314 @ !JumpTablePointer \n\
 /* 0800a30a */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 0800a30c */ LDR R0, [R0] \n\
 /* 0800a30e */ MOV PC, R0 @ Set PC to R0 \n\
@@ -155,59 +155,59 @@ branch_0800a306: \n\
 /* 0800a41e */ LSRS R0, R0, 0x20 \n\
 /* 0800a420 */ ADD R4, PC, 0x1B0 \n\
 /* 0800a422 */ LSRS R0, R0, 0x20 \n\
-/* 0800a424 */ LDR R1, =0x030012fd @ !PossiblePointer \n\
+/* 0800a424 */ LDR R1, =D_030012fd \n\
 /* 0800a426 */ ADDS R0, R2, 0x0 @ Set R0 to R2 + 0x0 \n\
 /* 0800a428 */ SUBS R0, 0x30 @ Subtract 0x30 from R0 \n\
 /* 0800a42a */ B branch_0800a49c \n\
 \n\
 .ltorg \n\
-/* 0800a430 */ LDR R1, =0x03001300 @ !PossiblePointer \n\
+/* 0800a430 */ LDR R1, =D_03001300 \n\
 /* 0800a432 */ ADDS R0, R2, 0x0 @ Set R0 to R2 + 0x0 \n\
 /* 0800a434 */ SUBS R0, 0x34 @ Subtract 0x34 from R0 \n\
 /* 0800a436 */ B branch_0800a49c \n\
 \n\
 .ltorg \n\
-/* 0800a43c */ LDR R1, =0x03001300 @ !PossiblePointer \n\
+/* 0800a43c */ LDR R1, =D_03001300 \n\
 /* 0800a43e */ MOVS R2, 0x1 @ Set R2 to 0x1 \n\
 /* 0800a440 */ NEGS R2, R2 @ Set R2 to -R2 \n\
 /* 0800a442 */ ADDS R0, R2, 0x0 @ Set R0 to R2 + 0x0 \n\
 /* 0800a444 */ B branch_0800a49c \n\
 \n\
 .ltorg \n\
-/* 0800a44c */ LDR R1, =0x030012fc @ !PossiblePointer \n\
+/* 0800a44c */ LDR R1, =D_030012fc \n\
 /* 0800a44e */ B branch_0800a49a \n\
 \n\
 .ltorg \n\
-/* 0800a454 */ LDR R1, =0x030012fc @ !PossiblePointer \n\
+/* 0800a454 */ LDR R1, =D_030012fc \n\
 /* 0800a456 */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 0800a458 */ B branch_0800a49c \n\
 \n\
 .ltorg \n\
-/* 0800a460 */ LDR R1, =0x030012fc @ !PossiblePointer \n\
+/* 0800a460 */ LDR R1, =D_030012fc \n\
 /* 0800a462 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0800a464 */ B branch_0800a49c \n\
 \n\
 .ltorg \n\
-/* 0800a46c */ LDR R1, =0x030012fe @ !PossiblePointer \n\
+/* 0800a46c */ LDR R1, =D_030012fe \n\
 /* 0800a46e */ B branch_0800a49a \n\
 \n\
 .ltorg \n\
-/* 0800a474 */ LDR R1, =0x030012fe @ !PossiblePointer \n\
+/* 0800a474 */ LDR R1, =D_030012fe \n\
 /* 0800a476 */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 0800a478 */ B branch_0800a49c \n\
 \n\
 .ltorg \n\
-/* 0800a480 */ LDR R1, =0x030012fe @ !PossiblePointer \n\
+/* 0800a480 */ LDR R1, =D_030012fe \n\
 /* 0800a482 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0800a484 */ B branch_0800a49c \n\
 \n\
 .ltorg \n\
-/* 0800a48c */ LDR R0, =0x030012ff @ !PossiblePointer \n\
+/* 0800a48c */ LDR R0, =D_030012ff \n\
 /* 0800a48e */ STRB R3, [R0] \n\
 /* 0800a490 */ B branch_0800a49e \n\
 \n\
 .ltorg \n\
-/* 0800a498 */ LDR R1, =0x030012ff @ !PossiblePointer \n\
+/* 0800a498 */ LDR R1, =D_030012ff \n\
  \n\
 branch_0800a49a: \n\
 /* 0800a49a */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\

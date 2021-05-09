@@ -5,7 +5,7 @@ asm(".syntax unified \n\
 glabel func_0800bc68 \n\
 /* 0800bc68 */ PUSH {R4-R7, LR} \n\
 /* 0800bc6a */ ADDS R6, R0, 0x0 @ Set R6 to R0 + 0x0 \n\
-/* 0800bc6c */ LDR R7, =0x030053c0 @ !PossiblePointer \n\
+/* 0800bc6c */ LDR R7, =D_030053c0 \n\
 /* 0800bc6e */ LDRB R1, [R7] \n\
 /* 0800bc70 */ LSLS R0, R1, 0x1B \n\
 /* 0800bc72 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
@@ -17,7 +17,7 @@ glabel func_0800bc68 \n\
 /* 0800bc80 */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 0800bc82 */ LSLS R4, R4, 0x10 \n\
 /* 0800bc84 */ LSRS R4, R4, 0x10 \n\
-/* 0800bc86 */ LDR R5, =0x0800bc59 @ !PossiblePointer \n\
+/* 0800bc86 */ LDR R5, =(func_0800bc58 + 1) \n\
 /* 0800bc88 */ ADDS R0, R6, 0x0 @ Set R0 to R6 + 0x0 \n\
 /* 0800bc8a */ BL func_0800c3a4 \n\
 /* 0800bc8e */ ADDS R3, R0, 0x0 @ Set R3 to R0 + 0x0 \n\

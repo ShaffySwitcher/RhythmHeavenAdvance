@@ -27,7 +27,7 @@ glabel func_0800a934 \n\
 /* 0800a95e */ STR R2, [SP, 0x4] \n\
 /* 0800a960 */ CMP R7, R1 @ Check R7 - R1 \n\
 /* 0800a962 */ BCS branch_0800a9e2 \n\
-/* 0800a964 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0800a964 */ LDR R0, =D_03005380 \n\
 /* 0800a966 */ MOV R8, R0 @ Set R8 to R0 \n\
  \n\
 branch_0800a968: \n\

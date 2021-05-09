@@ -10,7 +10,7 @@ glabel func_0800c0f8 \n\
 /* 0800c100 */ LSRS R3, R3, 0x10 \n\
 /* 0800c102 */ LSLS R2, R2, 0x10 \n\
 /* 0800c104 */ LSRS R2, R2, 0x10 \n\
-/* 0800c106 */ LDR R1, =0x030053c0 @ !PossiblePointer \n\
+/* 0800c106 */ LDR R1, =D_030053c0 \n\
 /* 0800c108 */ MOVS R4, 0xC9 @ Set R4 to 0xC9 \n\
 /* 0800c10a */ LSLS R4, R4, 0x1 \n\
 /* 0800c10c */ ADDS R0, R1, R4 @ Set R0 to R1 + R4 \n\

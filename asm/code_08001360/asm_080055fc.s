@@ -25,7 +25,7 @@ glabel func_080055fc \n\
 /* 08005622 */ STRB R1, [R3, 0x4] \n\
 /* 08005624 */ ADDS R1, R3, 0x0 @ Set R1 to R3 + 0x0 \n\
 /* 08005626 */ STRB R7, [R1, 0x5] \n\
-/* 08005628 */ LDR R1, =0x08936b64 @ !PossiblePointer \n\
+/* 08005628 */ LDR R1, =D_08936b64 \n\
 /* 0800562a */ STR R6, [SP] \n\
 /* 0800562c */ ADDS R2, R3, 0x0 @ Set R2 to R3 + 0x0 \n\
 /* 0800562e */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\

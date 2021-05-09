@@ -21,7 +21,7 @@ glabel func_08006a8c \n\
  \n\
 branch_08006aae: \n\
 /* 08006aae */ LDRH R1, [R4, 0x1C] \n\
-/* 08006ab0 */ LDR R0, =0xfffff000 @ !PossiblePointer \n\
+/* 08006ab0 */ LDR R0, =0xfffff000 \n\
 /* 08006ab2 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 08006ab4 */ STRH R0, [R4, 0x1C] \n\
  \n\

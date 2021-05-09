@@ -14,7 +14,7 @@ branch_080086ce: \n\
 /* 080086d0 */ B branch_08008716 \n\
  \n\
 branch_080086d2: \n\
-/* 080086d2 */ LDR R0, =0x0300536c @ !PossiblePointer \n\
+/* 080086d2 */ LDR R0, =D_0300536c  \n\
 /* 080086d4 */ LDR R4, [R0] \n\
 /* 080086d6 */ CMP R4, 0x0 @ Compare R4 and 0x0 \n\
 /* 080086d8 */ BEQ branch_080086e6 \n\

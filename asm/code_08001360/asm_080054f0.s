@@ -12,7 +12,7 @@ glabel func_080054f0 \n\
 /* 080054fc */ ADDS R6, R0, 0x0 @ Set R6 to R0 + 0x0 \n\
 /* 080054fe */ LDRB R0, [R6, 0x5] \n\
 /* 08005500 */ MOV R10, R0 @ Set R10 to R0 \n\
-/* 08005502 */ LDR R2, =0x030008f8 @ !PossiblePointer \n\
+/* 08005502 */ LDR R2, =D_030008f8 \n\
 /* 08005504 */ LDRB R1, [R6, 0x4] \n\
 /* 08005506 */ LSLS R0, R1, 0x1C \n\
 /* 08005508 */ LSRS R0, R0, 0x1C \n\
@@ -69,7 +69,7 @@ branch_0800555a: \n\
 /* 0800555c */ BL func_08005328 \n\
 /* 08005560 */ LSLS R0, R0, 0x18 \n\
 /* 08005562 */ LSRS R0, R0, 0x18 \n\
-/* 08005564 */ LDR R2, =0x030008f8 @ !PossiblePointer \n\
+/* 08005564 */ LDR R2, =D_030008f8 \n\
 /* 08005566 */ STR R0, [R2] \n\
 /* 08005568 */ ADDS R4, 0x2 @ Add 0x2 to R4 \n\
 /* 0800556a */ B branch_080055e4 \n\
@@ -110,14 +110,14 @@ branch_080055a0: \n\
 /* 080055aa */ MOV R1, R10 @ Set R1 to R10 \n\
 /* 080055ac */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 080055ae */ BNE branch_080055e4 \n\
-/* 080055b0 */ LDR R0, =0x030008f8 @ !PossiblePointer \n\
+/* 080055b0 */ LDR R0, =D_030008f8 \n\
 /* 080055b2 */ LDR R2, [R0] \n\
 /* 080055b4 */ MOVS R3, 0xF @ Set R3 to 0xF \n\
 /* 080055b6 */ MOV R1, R8 @ Set R1 to R8 \n\
 /* 080055b8 */ STR R1, [R6, 0xC] \n\
 /* 080055ba */ ANDS R5, R7 @ Set R5 to R5 & R7 \n\
 /* 080055bc */ LDRH R0, [R6, 0x6] \n\
-/* 080055be */ LDR R7, =0xfffffc00 @ !PossiblePointer \n\
+/* 080055be */ LDR R7, =0xfffffc00 \n\
 /* 080055c0 */ ADDS R1, R7, 0x0 @ Set R1 to R7 + 0x0 \n\
 /* 080055c2 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 080055c4 */ ORRS R0, R5 @ Set R0 to R0 | R5 \n\

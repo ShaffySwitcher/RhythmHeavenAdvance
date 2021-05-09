@@ -27,7 +27,7 @@ glabel func_08006bb4 \n\
 /* 08006be2 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 08006be4 */ BL func_08006b30 \n\
 /* 08006be8 */ LDRH R1, [R6, 0x1C] \n\
-/* 08006bea */ LDR R0, =0xfffff000 @ !PossiblePointer \n\
+/* 08006bea */ LDR R0, =0xfffff000 \n\
 /* 08006bec */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 08006bee */ MOVS R1, 0x2 @ Set R1 to 0x2 \n\
 /* 08006bf0 */ ORRS R0, R1 @ Set R0 to R0 | R1 \n\

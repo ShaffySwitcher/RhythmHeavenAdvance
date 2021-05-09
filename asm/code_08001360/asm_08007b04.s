@@ -9,7 +9,7 @@ glabel func_08007b04 \n\
 /* 08007b0a */ ASRS R1, R1, 0x10 \n\
 /* 08007b0c */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 08007b0e */ BLT branch_08007b22 \n\
-/* 08007b10 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 08007b10 */ LDR R0, =D_03005380 \n\
 /* 08007b12 */ LDR R0, [R0] \n\
 /* 08007b14 */ MOVS R2, 0x7 @ Set R2 to 0x7 \n\
 /* 08007b16 */ BL func_0804ddb0 \n\

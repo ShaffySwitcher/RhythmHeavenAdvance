@@ -10,7 +10,7 @@ glabel func_08004070 \n\
 /* 08004078 */ PUSH {R5-R7} \n\
 /* 0800407a */ SUB SP, 0x10 \n\
 /* 0800407c */ ADDS R3, R0, 0x0 @ Set R3 to R0 + 0x0 \n\
-/* 0800407e */ LDR R2, =0x03004b10 @ !PossiblePointer \n\
+/* 0800407e */ LDR R2, =D_03004b10 \n\
 /* 08004080 */ LDR R1, =0x854 \n\
 /* 08004082 */ ADDS R0, R2, R1 @ Set R0 to R2 + R1 \n\
 /* 08004084 */ LDRH R1, [R0] \n\

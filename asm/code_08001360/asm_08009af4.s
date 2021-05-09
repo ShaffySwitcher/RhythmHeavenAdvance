@@ -18,7 +18,7 @@ glabel func_08009af4 \n\
 /* 08009b0c */ MOV R10, R1 @ Set R10 to R1 \n\
 /* 08009b0e */ LDR R3, [R3] \n\
 /* 08009b10 */ STR R3, [SP, 0x4] \n\
-/* 08009b12 */ LDR R2, =0x089380ac @ !PossiblePointer \n\
+/* 08009b12 */ LDR R2, =D_089380ac \n\
 /* 08009b14 */ MOV R4, R9 @ Set R4 to R9 \n\
 /* 08009b16 */ LSLS R1, R4, 0x1 \n\
 /* 08009b18 */ ADD R1, R9 @ Add R9 to R1 \n\
@@ -26,7 +26,7 @@ glabel func_08009af4 \n\
 /* 08009b1c */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
 /* 08009b1e */ LDRB R1, [R1, 0x9] \n\
 /* 08009b20 */ STR R1, [SP, 0x14] \n\
-/* 08009b22 */ LDR R1, =0x03001218 @ !PossiblePointer \n\
+/* 08009b22 */ LDR R1, =D_03001218 \n\
 /* 08009b24 */ LDR R5, [R1] \n\
 /* 08009b26 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 08009b28 */ STR R1, [SP, 0x18] \n\
@@ -49,7 +49,7 @@ branch_08009b44: \n\
 /* 08009b4e */ CMP R0, 0x9 @ Compare R0 and 0x9 \n\
 /* 08009b50 */ BHI branch_08009c2a \n\
 /* 08009b52 */ LSLS R0, R0, 0x2 \n\
-/* 08009b54 */ LDR R1, =0x08009b60 @ !PossiblePointer \n\
+/* 08009b54 */ LDR R1, =0x08009b60 @ !JumpTablePointer \n\
 /* 08009b56 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08009b58 */ LDR R0, [R0] \n\
 /* 08009b5a */ MOV PC, R0 @ Set PC to R0 \n\
@@ -79,7 +79,7 @@ branch_08009b44: \n\
 /* 08009b8a */ ADDS R0, 0x1 @ Add 0x1 to R0 \n\
 /* 08009b8c */ STR R0, [SP, 0x4] \n\
 /* 08009b8e */ B branch_08009c92 \n\
-/* 08009b90 */ LDR R0, =0x0300121c @ !PossiblePointer \n\
+/* 08009b90 */ LDR R0, =D_0300121c \n\
 /* 08009b92 */ LDR R2, [R0] \n\
 /* 08009b94 */ CMP R2, 0x0 @ Compare R2 and 0x0 \n\
 /* 08009b96 */ BEQ branch_08009ba2 \n\
@@ -103,7 +103,7 @@ branch_08009ba2: \n\
 /* 08009bb8 */ LDRB R0, [R1, 0x1] \n\
 /* 08009bba */ SUBS R0, 0x30 @ Subtract 0x30 from R0 \n\
 /* 08009bbc */ MOV R9, R0 @ Set R9 to R0 \n\
-/* 08009bbe */ LDR R2, =0x089380ac @ !PossiblePointer \n\
+/* 08009bbe */ LDR R2, =D_089380ac \n\
 /* 08009bc0 */ LSLS R0, R0, 0x1 \n\
 /* 08009bc2 */ ADD R0, R9 @ Add R9 to R0 \n\
 /* 08009bc4 */ LSLS R0, R0, 0x2 \n\
@@ -237,7 +237,7 @@ branch_08009c9a: \n\
 /* 08009ca0 */ LDR R4, [SP, 0x18] \n\
 /* 08009ca2 */ CMP R4, 0x0 @ Compare R4 and 0x0 \n\
 /* 08009ca4 */ BEQ branch_08009d7a \n\
-/* 08009ca6 */ LDR R0, =0x03001218 @ !PossiblePointer \n\
+/* 08009ca6 */ LDR R0, =D_03001218 \n\
 /* 08009ca8 */ LDR R1, [R0] \n\
 /* 08009caa */ LSLS R0, R4, 0x2 \n\
 /* 08009cac */ ADDS R0, R0, R4 @ Set R0 to R0 + R4 \n\
@@ -296,7 +296,7 @@ branch_08009d0a: \n\
 /* 08009d0a */ LDR R3, [SP, 0x18] \n\
 /* 08009d0c */ CMP R3, 0x0 @ Compare R3 and 0x0 \n\
 /* 08009d0e */ BEQ branch_08009d7a \n\
-/* 08009d10 */ LDR R1, =0x03001218 @ !PossiblePointer \n\
+/* 08009d10 */ LDR R1, =D_03001218 \n\
 /* 08009d12 */ LSLS R0, R3, 0x2 \n\
 /* 08009d14 */ ADDS R0, R0, R3 @ Set R0 to R0 + R3 \n\
 /* 08009d16 */ LSLS R0, R0, 0x2 \n\

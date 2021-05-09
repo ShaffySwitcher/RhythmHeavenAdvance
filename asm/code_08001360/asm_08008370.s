@@ -14,7 +14,7 @@ glabel func_08008370 \n\
 /* 08008380 */ MOV R1, R12 @ Set R1 to R12 \n\
 /* 08008382 */ LSLS R0, R1, 0x3 \n\
 /* 08008384 */ ADDS R4, R4, R0 @ Set R4 to R4 + R0 \n\
-/* 08008386 */ LDR R6, =0x33333333 @ !PossiblePointer \n\
+/* 08008386 */ LDR R6, =0x33333333 \n\
 /* 08008388 */ LSLS R1, R3, 0x4 \n\
 /* 0800838a */ ORRS R1, R3 @ Set R1 to R1 | R3 \n\
 /* 0800838c */ LSLS R0, R3, 0x8 \n\

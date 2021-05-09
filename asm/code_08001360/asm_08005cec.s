@@ -15,9 +15,9 @@ branch_08005cf6: \n\
  \n\
 branch_08005cfa: \n\
 /* 08005cfa */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
-/* 08005cfc */ LDR R2, =0x03000908 @ !PossiblePointer \n\
+/* 08005cfc */ LDR R2, =D_03000908 \n\
 /* 08005cfe */ MOVS R5, 0x1 @ Set R5 to 0x1 \n\
-/* 08005d00 */ LDR R6, =0x0000fffe @ !PossiblePointer \n\
+/* 08005d00 */ LDR R6, =0xfffe \n\
  \n\
 branch_08005d02: \n\
 /* 08005d02 */ LDRB R1, [R2] \n\

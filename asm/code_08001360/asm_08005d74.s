@@ -10,7 +10,7 @@ glabel func_08005d74 \n\
 /* 08005d7c */ CMP R4, 0x0 @ Compare R4 and 0x0 \n\
 /* 08005d7e */ BLT branch_08005da8 \n\
 /* 08005d80 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 08005d82 */ LDR R2, =0x03000908 @ !PossiblePointer \n\
+/* 08005d82 */ LDR R2, =D_03000908 \n\
 /* 08005d84 */ MOVS R6, 0x1 @ Set R6 to 0x1 \n\
  \n\
 branch_08005d86: \n\

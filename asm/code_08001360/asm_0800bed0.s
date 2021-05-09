@@ -7,7 +7,7 @@ glabel func_0800bed0 \n\
 /* 0800bed2 */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 0800bed4 */ ADDS R3, R1, 0x0 @ Set R3 to R1 + 0x0 \n\
 /* 0800bed6 */ ADDS R5, R2, 0x0 @ Set R5 to R2 + 0x0 \n\
-/* 0800bed8 */ LDR R1, =0x030053c0 @ !PossiblePointer \n\
+/* 0800bed8 */ LDR R1, =D_030053c0 \n\
 /* 0800beda */ LDR R1, [R1, 0x4] \n\
 /* 0800bedc */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 0800bede */ BEQ branch_0800beea \n\
@@ -26,13 +26,13 @@ branch_0800beea: \n\
 .ltorg \n\
  \n\
 branch_0800bef8: \n\
-/* 0800bef8 */ LDR R1, =0x03005b3c @ !PossiblePointer \n\
+/* 0800bef8 */ LDR R1, =D_03005b3c \n\
 /* 0800befa */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0800befc */ STRB R0, [R1] \n\
 /* 0800befe */ BL func_08049be4 \n\
 /* 0800bf02 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0800bf04 */ BL func_08049b70 \n\
-/* 0800bf08 */ LDR R6, =0x030053c0 @ !PossiblePointer \n\
+/* 0800bf08 */ LDR R6, =D_030053c0 \n\
 /* 0800bf0a */ CMP R5, 0x0 @ Compare R5 and 0x0 \n\
 /* 0800bf0c */ BGE branch_0800bf20 \n\
 /* 0800bf0e */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
@@ -50,7 +50,7 @@ branch_0800bf28: \n\
 /* 0800bf28 */ STR R0, [R6, 0x4] \n\
 /* 0800bf2a */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 0800bf2c */ BL func_080102d0 \n\
-/* 0800bf30 */ LDR R4, =0x030053c0 @ !PossiblePointer \n\
+/* 0800bf30 */ LDR R4, =D_030053c0 \n\
 /* 0800bf32 */ STRH R0, [R4, 0x8] \n\
 /* 0800bf34 */ BL func_0800be64 \n\
 /* 0800bf38 */ BL func_0800c060 \n\

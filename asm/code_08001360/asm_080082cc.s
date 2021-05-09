@@ -32,7 +32,7 @@ branch_080082f4: \n\
 /* 080082f6 */ MOVS R1, 0xA @ Set R1 to 0xA \n\
 /* 080082f8 */ BL func_0804f150 \n\
 /* 080082fc */ LSLS R0, R0, 0x1 \n\
-/* 080082fe */ LDR R1, =0x08936c64 @ !PossiblePointer \n\
+/* 080082fe */ LDR R1, =D_08936c64 \n\
 /* 08008300 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08008302 */ SUBS R4, 0x2 @ Subtract 0x2 from R4 \n\
 /* 08008304 */ LDRB R1, [R0] \n\

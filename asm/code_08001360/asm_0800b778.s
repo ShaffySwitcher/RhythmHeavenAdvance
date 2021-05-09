@@ -6,7 +6,7 @@ glabel func_0800b778 \n\
 /* 0800b778 */ PUSH {R4-R7, LR} \n\
 /* 0800b77a */ MOV R7, R8 @ Set R7 to R8 \n\
 /* 0800b77c */ PUSH {R7} \n\
-/* 0800b77e */ LDR R7, =0x030053c0 @ !PossiblePointer \n\
+/* 0800b77e */ LDR R7, =D_030053c0 \n\
 /* 0800b780 */ MOVS R1, 0xF @ Set R1 to 0xF \n\
 /* 0800b782 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 0800b784 */ LDRB R2, [R7] \n\

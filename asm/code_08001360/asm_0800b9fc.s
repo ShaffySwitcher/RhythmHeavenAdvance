@@ -10,7 +10,7 @@ glabel func_0800b9fc \n\
 /* 0800ba04 */ PUSH {R5-R7} \n\
 /* 0800ba06 */ SUB SP, 0x4 \n\
 /* 0800ba08 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 0800ba0a */ LDR R2, =0x030053c0 @ !PossiblePointer \n\
+/* 0800ba0a */ LDR R2, =D_030053c0 \n\
 /* 0800ba0c */ LDRB R1, [R2] \n\
 /* 0800ba0e */ LSLS R0, R1, 0x1C \n\
 /* 0800ba10 */ LSRS R0, R0, 0x1C \n\
@@ -85,12 +85,12 @@ branch_0800ba50: \n\
 /* 0800ba8e */ B branch_0800bb8e \n\
  \n\
 branch_0800ba90: \n\
-/* 0800ba90 */ LDR R1, =0x03005588 @ !PossiblePointer \n\
+/* 0800ba90 */ LDR R1, =D_03005588 \n\
 /* 0800ba92 */ LSLS R2, R4, 0x2 \n\
 /* 0800ba94 */ MOV R6, R10 @ Set R6 to R10 \n\
 /* 0800ba96 */ ADDS R0, R2, R6 @ Set R0 to R2 + R6 \n\
 /* 0800ba98 */ STR R0, [R1] \n\
-/* 0800ba9a */ LDR R1, =0x0300558c @ !PossiblePointer \n\
+/* 0800ba9a */ LDR R1, =D_0300558c \n\
 /* 0800ba9c */ ADDS R0, R7, 0x0 @ Set R0 to R7 + 0x0 \n\
 /* 0800ba9e */ ADDS R0, 0x7E @ Add 0x7E to R0 \n\
 /* 0800baa0 */ ADDS R0, R3, R0 @ Set R0 to R3 + R0 \n\
@@ -118,7 +118,7 @@ branch_0800bac8: \n\
 /* 0800bad2 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 0800bad4 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0800bad6 */ BEQ branch_0800baea \n\
-/* 0800bad8 */ LDR R2, =0x030053c0 @ !PossiblePointer \n\
+/* 0800bad8 */ LDR R2, =D_030053c0 \n\
 /* 0800bada */ LDR R1, [R5, 0xC] \n\
 /* 0800badc */ LDR R0, [R2, 0x14] \n\
 /* 0800bade */ CMP R1, R0 @ Check R1 - R0 \n\
@@ -201,7 +201,7 @@ branch_0800bb62: \n\
 /* 0800bb66 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 0800bb68 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0800bb6a */ BNE branch_0800bb8e \n\
-/* 0800bb6c */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0800bb6c */ LDR R0, =D_03005380 \n\
 /* 0800bb6e */ LDR R0, [R0] \n\
 /* 0800bb70 */ MOV R2, R8 @ Set R2 to R8 \n\
 /* 0800bb72 */ LSLS R4, R2, 0x10 \n\
@@ -222,7 +222,7 @@ branch_0800bb8e: \n\
 /* 0800bb94 */ B branch_0800ba50 \n\
  \n\
 branch_0800bb96: \n\
-/* 0800bb96 */ LDR R1, =0x030053c0 @ !PossiblePointer \n\
+/* 0800bb96 */ LDR R1, =D_030053c0 \n\
 /* 0800bb98 */ LDRB R0, [R1, 0x2] \n\
 /* 0800bb9a */ LSLS R0, R0, 0x1E \n\
 /* 0800bb9c */ ADDS R5, R1, 0x0 @ Set R5 to R1 + 0x0 \n\

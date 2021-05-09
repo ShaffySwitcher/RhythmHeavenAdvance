@@ -12,7 +12,7 @@ glabel func_08005b20 \n\
 /* 08005b2c */ LSLS R0, R0, 0x10 \n\
 /* 08005b2e */ LSRS R7, R0, 0x10 \n\
 /* 08005b30 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 08005b32 */ LDR R4, =0x03000908 @ !PossiblePointer \n\
+/* 08005b32 */ LDR R4, =D_03000908 \n\
 /* 08005b34 */ LDRB R1, [R4] \n\
 /* 08005b36 */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 08005b38 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
@@ -62,7 +62,7 @@ branch_08005b6e: \n\
 /* 08005b84 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 08005b86 */ STRH R0, [R4] \n\
 /* 08005b88 */ STR R6, [R4, 0x4] \n\
-/* 08005b8a */ LDR R2, =0x03000900 @ !PossiblePointer \n\
+/* 08005b8a */ LDR R2, =D_03000900 \n\
 /* 08005b8c */ LDR R0, [R2] \n\
 /* 08005b8e */ STR R0, [R4, 0x8] \n\
 /* 08005b90 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\

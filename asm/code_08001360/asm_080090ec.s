@@ -15,7 +15,7 @@ glabel func_080090ec \n\
 /* 080090fe */ STRB R0, [R2] \n\
 /* 08009100 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 08009102 */ STRB R1, [R2] \n\
-/* 08009104 */ LDR R0, =0x0e000003 @ !PossiblePointer \n\
+/* 08009104 */ LDR R0, =D_0e000003 \n\
 /* 08009106 */ STRB R1, [R0] \n\
 /* 08009108 */ SUBS R0, 0x2 @ Subtract 0x2 from R0 \n\
 /* 0800910a */ STRB R1, [R0] \n\
@@ -37,7 +37,7 @@ branch_0800911e: \n\
 /* 08009124 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 08009126 */ CMP R1, R4 @ Check R1 - R4 \n\
 /* 08009128 */ BCS branch_08009138 \n\
-/* 0800912a */ LDR R2, =0x0e000002 @ !PossiblePointer \n\
+/* 0800912a */ LDR R2, =D_0e000002 \n\
  \n\
 branch_0800912c: \n\
 /* 0800912c */ LDRB R0, [R2] \n\
@@ -50,7 +50,7 @@ branch_0800912c: \n\
 branch_08009138: \n\
 /* 08009138 */ CMP R5, 0x0 @ Compare R5 and 0x0 \n\
 /* 0800913a */ BNE branch_08009112 \n\
-/* 0800913c */ LDR R1, =0x0e000003 @ !PossiblePointer \n\
+/* 0800913c */ LDR R1, =D_0e000003 \n\
 /* 0800913e */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 08009140 */ STRB R0, [R1] \n\
  \n\

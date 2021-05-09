@@ -8,7 +8,7 @@ glabel func_080098fc \n\
 /* 08009900 */ ADDS R5, R0, 0x0 @ Set R5 to R0 + 0x0 \n\
 /* 08009902 */ STR R1, [SP] \n\
 /* 08009904 */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
-/* 08009906 */ LDR R1, =0x089380ac @ !PossiblePointer \n\
+/* 08009906 */ LDR R1, =D_089380ac \n\
 /* 08009908 */ LSLS R0, R5, 0x1 \n\
 /* 0800990a */ ADDS R0, R0, R5 @ Set R0 to R0 + R5 \n\
 /* 0800990c */ LSLS R0, R0, 0x2 \n\

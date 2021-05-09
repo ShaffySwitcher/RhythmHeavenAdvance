@@ -12,7 +12,7 @@ glabel func_08008ff8 \n\
 /* 08009004 */ MOVS R1, 0x60 @ Set R1 to 0x60 \n\
 /* 08009006 */ STRB R1, [R2] \n\
 /* 08009008 */ LSLS R0, R0, 0x5 \n\
-/* 0800900a */ LDR R1, =0x0e000001 @ !PossiblePointer \n\
+/* 0800900a */ LDR R1, =D_0e000001 \n\
 /* 0800900c */ STRB R0, [R1] \n\
 /* 0800900e */ LSRS R0, R0, 0x8 \n\
 /* 08009010 */ STRB R0, [R1] \n\

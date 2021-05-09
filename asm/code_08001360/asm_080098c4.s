@@ -14,7 +14,7 @@ glabel func_080098c4 \n\
 /* 080098d6 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
 /* 080098d8 */ CMP R2, 0x0 @ Compare R2 and 0x0 \n\
 /* 080098da */ BLT branch_080098f4 \n\
-/* 080098dc */ LDR R1, =0x089380ac @ !PossiblePointer \n\
+/* 080098dc */ LDR R1, =D_089380ac \n\
 /* 080098de */ LSLS R0, R4, 0x1 \n\
 /* 080098e0 */ ADDS R0, R0, R4 @ Set R0 to R0 + R4 \n\
 /* 080098e2 */ LSLS R0, R0, 0x2 \n\

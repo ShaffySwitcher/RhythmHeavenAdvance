@@ -12,7 +12,7 @@ glabel func_0800a794 \n\
 /* 0800a7a0 */ LDRSH R0, [R5, R2] \n\
 /* 0800a7a2 */ CMP R6, R0 @ Check R6 - R0 \n\
 /* 0800a7a4 */ BCS branch_0800a7ec \n\
-/* 0800a7a6 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0800a7a6 */ LDR R0, =D_03005380 \n\
 /* 0800a7a8 */ MOV R8, R0 @ Set R8 to R0 \n\
 /* 0800a7aa */ LSLS R7, R1, 0x10 \n\
  \n\

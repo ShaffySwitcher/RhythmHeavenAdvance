@@ -32,7 +32,7 @@ branch_0800abd8: \n\
 /* 0800abe2 */ LDRSH R0, [R4, R1] \n\
 /* 0800abe4 */ CMP R7, R0 @ Check R7 - R0 \n\
 /* 0800abe6 */ BCS branch_0800ac48 \n\
-/* 0800abe8 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0800abe8 */ LDR R0, =D_03005380 \n\
 /* 0800abea */ MOV R8, R0 @ Set R8 to R0 \n\
  \n\
 branch_0800abec: \n\

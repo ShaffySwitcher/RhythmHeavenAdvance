@@ -10,7 +10,7 @@ glabel func_0800b408 \n\
 /* 0800b410 */ LSRS R1, R1, 0x10 \n\
 /* 0800b412 */ CMP R6, 0x0 @ Compare R6 and 0x0 \n\
 /* 0800b414 */ BEQ branch_0800b448 \n\
-/* 0800b416 */ LDR R5, =0x03005380 @ !PossiblePointer \n\
+/* 0800b416 */ LDR R5, =D_03005380 \n\
 /* 0800b418 */ LDR R0, [R5] \n\
 /* 0800b41a */ LSLS R4, R1, 0x10 \n\
 /* 0800b41c */ ASRS R4, R4, 0x10 \n\

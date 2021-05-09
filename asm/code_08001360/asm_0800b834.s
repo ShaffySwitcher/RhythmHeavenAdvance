@@ -8,7 +8,7 @@ glabel func_0800b834 \n\
 /* 0800b838 */ MOV R6, R8 @ Set R6 to R8 \n\
 /* 0800b83a */ PUSH {R6, R7} \n\
 /* 0800b83c */ ADDS R5, R0, 0x0 @ Set R5 to R0 + 0x0 \n\
-/* 0800b83e */ LDR R2, =0x030053c0 @ !PossiblePointer \n\
+/* 0800b83e */ LDR R2, =D_030053c0 \n\
 /* 0800b840 */ LDRB R1, [R2, 0x1] \n\
 /* 0800b842 */ MOVS R3, 0x2 @ Set R3 to 0x2 \n\
 /* 0800b844 */ NEGS R3, R3 @ Set R3 to -R3 \n\
@@ -99,13 +99,13 @@ branch_0800b890: \n\
 /* 0800b8e8 */ MOV R1, R12 @ Set R1 to R12 \n\
 /* 0800b8ea */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 0800b8ec */ STRB R0, [R3] \n\
-/* 0800b8ee */ LDR R1, =0x03005588 @ !PossiblePointer \n\
+/* 0800b8ee */ LDR R1, =D_03005588 \n\
 /* 0800b8f0 */ MOVS R3, 0xB0 @ Set R3 to 0xB0 \n\
 /* 0800b8f2 */ LSLS R3, R3, 0x1 \n\
 /* 0800b8f4 */ ADDS R0, R4, R3 @ Set R0 to R4 + R3 \n\
 /* 0800b8f6 */ ADDS R0, R7, R0 @ Set R0 to R7 + R0 \n\
 /* 0800b8f8 */ STR R0, [R1] \n\
-/* 0800b8fa */ LDR R1, =0x0300558c @ !PossiblePointer \n\
+/* 0800b8fa */ LDR R1, =D_0300558c \n\
 /* 0800b8fc */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 0800b8fe */ ADDS R0, 0x7E @ Add 0x7E to R0 \n\
 /* 0800b900 */ ADDS R2, R2, R0 @ Set R2 to R2 + R0 \n\
@@ -134,7 +134,7 @@ branch_0800b930: \n\
 /* 0800b932 */ LDR R2, [R1] \n\
 /* 0800b934 */ CMP R2, 0x0 @ Compare R2 and 0x0 \n\
 /* 0800b936 */ BEQ branch_0800b942 \n\
-/* 0800b938 */ LDR R0, =0x03005520 @ !PossiblePointer \n\
+/* 0800b938 */ LDR R0, =D_03005520 \n\
 /* 0800b93a */ ADDS R0, R7, R0 @ Set R0 to R7 + R0 \n\
 /* 0800b93c */ LDR R1, [R1, 0x4] \n\
 /* 0800b93e */ BL func_0804eaf4 \n\

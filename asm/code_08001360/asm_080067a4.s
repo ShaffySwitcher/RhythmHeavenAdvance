@@ -65,7 +65,7 @@ glabel func_080067a4 \n\
 /* 08006822 */ MOV R5, R9 @ Set R5 to R9 \n\
 /* 08006824 */ STR R5, [R7, 0x18] \n\
 /* 08006826 */ LDRH R1, [R7, 0x1C] \n\
-/* 08006828 */ LDR R0, =0xfffff000 @ !PossiblePointer \n\
+/* 08006828 */ LDR R0, =0xfffff000 \n\
 /* 0800682a */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 0800682c */ STRH R0, [R7, 0x1C] \n\
 /* 0800682e */ LDRB R1, [R7, 0x1D] \n\
@@ -135,7 +135,7 @@ branch_0800688e: \n\
 /* 080068a8 */ LDR R0, [SP, 0x10] \n\
 /* 080068aa */ MOV R2, R10 @ Set R2 to R10 \n\
 /* 080068ac */ BL func_080061d0 \n\
-/* 080068b0 */ LDR R1, =0x0800679d @ !PossiblePointer \n\
+/* 080068b0 */ LDR R1, =(func_0800679c + 1) \n\
 /* 080068b2 */ ADDS R2, R7, 0x0 @ Set R2 to R7 + 0x0 \n\
 /* 080068b4 */ ADDS R2, 0x1E @ Add 0x1E to R2 \n\
 /* 080068b6 */ BL func_08005d38 \n\

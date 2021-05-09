@@ -30,7 +30,7 @@ glabel func_0800aac0 \n\
 /* 0800aaf0 */ LDRSH R5, [R0, R1] \n\
 /* 0800aaf2 */ CMP R5, 0x0 @ Compare R5 and 0x0 \n\
 /* 0800aaf4 */ BLT branch_0800ab1a \n\
-/* 0800aaf6 */ LDR R4, =0x03005380 @ !PossiblePointer \n\
+/* 0800aaf6 */ LDR R4, =D_03005380 \n\
 /* 0800aaf8 */ LDR R0, [R4] \n\
 /* 0800aafa */ ADDS R1, R5, 0x0 @ Set R1 to R5 + 0x0 \n\
 /* 0800aafc */ MOVS R2, 0x7 @ Set R2 to 0x7 \n\

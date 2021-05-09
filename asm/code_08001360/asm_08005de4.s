@@ -7,7 +7,7 @@ glabel func_08005de4 \n\
 /* 08005de6 */ LSLS R0, R0, 0x10 \n\
 /* 08005de8 */ LSRS R6, R0, 0x10 \n\
 /* 08005dea */ MOVS R5, 0x0 @ Set R5 to 0x0 \n\
-/* 08005dec */ LDR R4, =0x03000908 @ !PossiblePointer \n\
+/* 08005dec */ LDR R4, =D_03000908 \n\
  \n\
 branch_08005dee: \n\
 /* 08005dee */ LDRB R1, [R4] \n\

@@ -26,7 +26,7 @@ glabel func_080074ec \n\
 /* 08007516 */ STRH R0, [R4, 0x2] \n\
 /* 08007518 */ LDRH R0, [R5, 0x8] \n\
 /* 0800751a */ STRH R0, [R4, 0x4] \n\
-/* 0800751c */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0800751c */ LDR R0, =D_03005380 \n\
 /* 0800751e */ LDR R0, [R0] \n\
 /* 08007520 */ MOVS R6, 0x0 @ Set R6 to 0x0 \n\
 /* 08007522 */ LDRSH R1, [R5, R6] \n\

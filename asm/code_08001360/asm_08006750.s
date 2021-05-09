@@ -2,18 +2,16 @@ asm(".syntax unified \n\
 \n\
 .balign 4, 0 \n\
 \n\
-glabel func_0800674c \n\
-/* 0800674c */ LSRS R4, R3, 0x1A \n\
-/* 0800674e */ LSLS R0, R0, 0xC \n\
+glabel func_08006750 \n\
 /* 08006750 */ PUSH {R4-R7, LR} \n\
 /* 08006752 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 08006754 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 08006756 */ LDR R0, =0x03000ea0 @ !PossiblePointer \n\
+/* 08006756 */ LDR R0, =D_03000ea0 \n\
 /* 08006758 */ LDR R1, [R0] \n\
-/* 0800675a */ LDR R7, =0x03004ad0 @ !PossiblePointer \n\
+/* 0800675a */ LDR R7, =D_03004ad0 \n\
 /* 0800675c */ CMP R3, R1 @ Check R3 - R1 \n\
 /* 0800675e */ BCS branch_08006784 \n\
-/* 08006760 */ LDR R0, =0x03000e9c @ !PossiblePointer \n\
+/* 08006760 */ LDR R0, =D_03000e9c \n\
 /* 08006762 */ LDR R5, [R0] \n\
 /* 08006764 */ MOVS R6, 0x80 @ Set R6 to 0x80 \n\
 /* 08006766 */ LSLS R6, R6, 0x8 \n\

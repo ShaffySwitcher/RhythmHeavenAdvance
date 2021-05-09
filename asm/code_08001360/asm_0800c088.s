@@ -6,7 +6,7 @@ glabel func_0800c088 \n\
 /* 0800c088 */ PUSH {R4, LR} \n\
 /* 0800c08a */ LSLS R0, R0, 0x10 \n\
 /* 0800c08c */ LSRS R0, R0, 0x10 \n\
-/* 0800c08e */ LDR R4, =0x030053c0 @ !PossiblePointer \n\
+/* 0800c08e */ LDR R4, =D_030053c0 \n\
 /* 0800c090 */ STRH R0, [R4, 0x1E] \n\
 /* 0800c092 */ LSLS R0, R0, 0x10 \n\
 /* 0800c094 */ ASRS R0, R0, 0x10 \n\

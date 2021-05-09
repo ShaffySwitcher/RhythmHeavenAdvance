@@ -4,17 +4,17 @@ asm(".syntax unified \n\
 \n\
 glabel func_08009604 \n\
 /* 08009604 */ PUSH {R4-R6, LR} \n\
-/* 08009606 */ LDR R6, =0x03004af4 @ !PossiblePointer \n\
+/* 08009606 */ LDR R6, =D_03004af4 \n\
 /* 08009608 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0800960a */ STRH R0, [R6] \n\
-/* 0800960c */ LDR R4, =0x03005370 @ !PossiblePointer \n\
+/* 0800960c */ LDR R4, =D_03005370 \n\
 /* 0800960e */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 08009610 */ LDRSH R5, [R4, R0] \n\
 /* 08009612 */ BL func_080093a8 \n\
 /* 08009616 */ ADDS R3, R0, 0x0 @ Set R3 to R0 + 0x0 \n\
 /* 08009618 */ ASRS R2, R3, 0x4 \n\
 /* 0800961a */ STRH R2, [R4] \n\
-/* 0800961c */ LDR R0, =0x030046b0 @ !PossiblePointer \n\
+/* 0800961c */ LDR R0, =D_030046b0 \n\
 /* 0800961e */ LDRH R0, [R0] \n\
 /* 08009620 */ LSLS R0, R0, 0x3 \n\
 /* 08009622 */ CMP R2, R0 @ Check R2 - R0 \n\

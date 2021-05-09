@@ -20,7 +20,7 @@ branch_0800833e: \n\
 /* 08008340 */ MOVS R1, 0xA @ Set R1 to 0xA \n\
 /* 08008342 */ BL func_0804f150 \n\
 /* 08008346 */ LSLS R0, R0, 0x1 \n\
-/* 08008348 */ LDR R1, =0x08936c64 @ !PossiblePointer \n\
+/* 08008348 */ LDR R1, =D_08936c64 \n\
 /* 0800834a */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 0800834c */ SUBS R4, 0x2 @ Subtract 0x2 from R4 \n\
 /* 0800834e */ LDRB R1, [R0] \n\

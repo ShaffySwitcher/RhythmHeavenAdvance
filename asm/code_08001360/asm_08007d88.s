@@ -18,10 +18,10 @@ glabel func_08007d88 \n\
 /* 08007da2 */ ORRS R0, R1 @ Set R0 to R0 | R1 \n\
 /* 08007da4 */ STRB R0, [R3] \n\
 /* 08007da6 */ LDR R2, [R4] \n\
-/* 08007da8 */ LDR R0, =0x0001fffc @ !PossiblePointer \n\
+/* 08007da8 */ LDR R0, =0x1fffc \n\
 /* 08007daa */ ANDS R2, R0 @ Set R2 to R2 & R0 \n\
 /* 08007dac */ LDR R0, [R3] \n\
-/* 08007dae */ LDR R1, =0xfffe0003 @ !PossiblePointer \n\
+/* 08007dae */ LDR R1, =0xfffe0003 \n\
 /* 08007db0 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 08007db2 */ ORRS R0, R2 @ Set R0 to R0 | R2 \n\
 /* 08007db4 */ STR R0, [R3] \n\

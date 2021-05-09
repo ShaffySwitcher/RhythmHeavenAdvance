@@ -27,7 +27,7 @@ branch_0800ae64: \n\
 /* 0800ae64 */ LDR R0, [R4, 0x4] \n\
 /* 0800ae66 */ BL func_0800add8 \n\
 /* 0800ae6a */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
-/* 0800ae6c */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0800ae6c */ LDR R0, =D_03005380 \n\
 /* 0800ae6e */ LDR R0, [R0] \n\
 /* 0800ae70 */ LSLS R1, R1, 0x10 \n\
 /* 0800ae72 */ ASRS R1, R1, 0x10 \n\

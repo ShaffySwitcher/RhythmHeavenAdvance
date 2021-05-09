@@ -66,7 +66,7 @@ branch_08006c4c: \n\
 /* 08006c74 */ CMP R0, R6 @ Check R0 - R6 \n\
 /* 08006c76 */ BNE branch_08006c9c \n\
 /* 08006c78 */ LDRH R0, [R5, 0x1C] \n\
-/* 08006c7a */ LDR R1, =0xfffff000 @ !PossiblePointer \n\
+/* 08006c7a */ LDR R1, =0xfffff000 \n\
 /* 08006c7c */ ANDS R1, R0 @ Set R1 to R1 & R0 \n\
 /* 08006c7e */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 08006c80 */ ORRS R1, R0 @ Set R1 to R1 | R0 \n\

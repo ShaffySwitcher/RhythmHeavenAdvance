@@ -34,7 +34,7 @@ branch_08005232: \n\
 .ltorg \n\
  \n\
 branch_0800523c: \n\
-/* 0800523c */ LDR R1, =0x030008f8 @ !PossiblePointer \n\
+/* 0800523c */ LDR R1, =D_030008f8 \n\
 /* 0800523e */ LDR R0, [R1] \n\
 /* 08005240 */ LSLS R0, R0, 0x4 \n\
 /* 08005242 */ ORRS R0, R2 @ Set R0 to R0 | R2 \n\
@@ -152,7 +152,7 @@ branch_080052f4: \n\
 /* 08005310 */ B branch_08005314 \n\
  \n\
 branch_08005312: \n\
-/* 08005312 */ LDR R0, =0x0000fffe @ !PossiblePointer \n\
+/* 08005312 */ LDR R0, =0xfffe \n\
  \n\
 branch_08005314: \n\
 /* 08005314 */ ADD SP, 0x8 \n\

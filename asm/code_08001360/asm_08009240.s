@@ -4,8 +4,8 @@ asm(".syntax unified \n\
 \n\
 glabel func_08009240 \n\
 /* 08009240 */ PUSH {LR} \n\
-/* 08009242 */ LDR R1, =0x03001108 @ !PossiblePointer \n\
-/* 08009244 */ LDR R0, =0x0300110c @ !PossiblePointer \n\
+/* 08009242 */ LDR R1, =D_03001108 \n\
+/* 08009244 */ LDR R0, =D_0300110c \n\
 /* 08009246 */ LDR R0, [R0] \n\
 /* 08009248 */ LDR R1, [R1] \n\
 /* 0800924a */ BL func_0804eaf0 \n\

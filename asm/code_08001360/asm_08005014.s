@@ -43,14 +43,14 @@ branch_08005050: \n\
 /* 08005056 */ ADDS R1, R2, 0x0 @ Set R1 to R2 + 0x0 \n\
 /* 08005058 */ CMP R1, R3 @ Check R1 - R3 \n\
 /* 0800505a */ BLE branch_08005066 \n\
-/* 0800505c */ LDR R2, =0xfffffe00 @ !PossiblePointer \n\
+/* 0800505c */ LDR R2, =0xfffffe00 \n\
 /* 0800505e */ ADDS R0, R2, 0x0 @ Set R0 to R2 + 0x0 \n\
 /* 08005060 */ ADDS R0, R1, R0 @ Set R0 to R1 + R0 \n\
 /* 08005062 */ LSLS R0, R0, 0x10 \n\
 /* 08005064 */ LSRS R2, R0, 0x10 \n\
  \n\
 branch_08005066: \n\
-/* 08005066 */ LDR R0, =0x030008b8 @ !PossiblePointer \n\
+/* 08005066 */ LDR R0, =D_030008b8 \n\
 /* 08005068 */ ADDS R0, R5, R0 @ Set R0 to R5 + R0 \n\
 /* 0800506a */ LDRB R0, [R0] \n\
 /* 0800506c */ LSRS R0, R0, 0x1 \n\
