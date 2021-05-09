@@ -1,0 +1,12 @@
+asm(".syntax unified \n\
+\n\
+.balign 4, 0 \n\
+\n\
+glabel func_0800584c \n\
+/* 0800584c */ LDR R1, =0x03004ae8 @ !PossiblePointer \n\
+/* 0800584e */ STRB R0, [R1] \n\
+/* 08005850 */ BX LR \n\
+\n\
+.ltorg \n\
+.balign 4, 0 \n\
+.syntax divided");
