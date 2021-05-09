@@ -37,7 +37,7 @@ branch_0800911e: \n\
 /* 08009124 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 08009126 */ CMP R1, R4 @ Check R1 - R4 \n\
 /* 08009128 */ BCS branch_08009138 \n\
-/* 0800912a */ LDR R2, [PC, 0x20] @ 0x0800914c \n\
+/* 0800912a */ LDR R2, =0x0e000002 @ !PossiblePointer \n\
  \n\
 branch_0800912c: \n\
 /* 0800912c */ LDRB R0, [R2] \n\
@@ -50,7 +50,7 @@ branch_0800912c: \n\
 branch_08009138: \n\
 /* 08009138 */ CMP R5, 0x0 @ Compare R5 and 0x0 \n\
 /* 0800913a */ BNE branch_08009112 \n\
-/* 0800913c */ LDR R1, [PC, 0x8] @ 0x08009148 \n\
+/* 0800913c */ LDR R1, =0x0e000003 @ !PossiblePointer \n\
 /* 0800913e */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 08009140 */ STRB R0, [R1] \n\
  \n\
