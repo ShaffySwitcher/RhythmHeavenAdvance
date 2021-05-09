@@ -3,13 +3,10 @@
 
 #include "global.h"
 
-extern u16 D_0300008c;
-extern u16 D_0300008e;
-extern u16 D_03000090;
-extern u16 D_03000092;
-
 extern s32 *D_030046a8;
-extern s32 D_030064c8;
+
+typedef void (struct_030064c8_func)(s32 *, s32 *, s32);
+extern struct_030064c8_func *D_030064c8;
 
 extern s32 *D_08935fb4;
 extern s32 *D_08935fb8;

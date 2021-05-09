@@ -1,9 +1,13 @@
-#include "global.h"
 #include "code_08000718.h"
 
 asm(".include \"include/gba.inc\"");//Temporary
 
 #define UNKNOWN_SIZE 0x3B04 // Recurring amount, related to size of some kind of data structure
+
+static u16 D_0300008c;
+static u16 D_0300008e;
+static u16 D_03000090;
+static u16 D_03000092;
 
 void func_08000718(void) {
     u16 temp = 4;
@@ -90,9 +94,8 @@ void func_0800081c(void) {
 
 s32 func_08000868(s32 *arg1) {
     s32 *temp = D_030046a8;
-    s32 *temp2 = &D_030064c8;
 	
-	func_0804eaf8(arg1, temp, UNKNOWN_SIZE, *temp2);
+    D_030064c8(arg1, temp, UNKNOWN_SIZE);
 	
     if (func_0800820c(temp, &D_08935fbc, 0x4) != 0) {
         return 1;

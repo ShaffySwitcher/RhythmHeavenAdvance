@@ -1,4 +1,3 @@
-#include "global.h"
 #include "code_080001F4.h"
 
 asm(".include \"include/gba.inc\"");//Temporary

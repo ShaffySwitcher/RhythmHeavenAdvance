@@ -8,6 +8,7 @@ SECTIONS {
 	. = 0x03000000;
 	.bss . : SUBALIGN(4) {
 		build/src/code_080001F4.o(.bss*);
+        build/src/code_08000718.o(.bss*);
 	}
 	
 	. = 0x08000000;
@@ -17,6 +18,7 @@ SECTIONS {
 		build/src/code_080001F4.o(.text*);
 		build/src/code_08000718.o(.text*);
 		build/data/bindata_08000a00.bin.o(.rodata*); /* Seems to be ARM assembly */
+        build/src/code_08001360.o(.text*);
 		build/data/bindata_08001360.bin.o(.rodata*);
 		*libgcc.a:_call_via_rX.o(.text*);
 		build/data/bindata_0804eb28.bin.o(.rodata*);

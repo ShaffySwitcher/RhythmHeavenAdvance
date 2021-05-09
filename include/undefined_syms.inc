@@ -1,10 +1,6 @@
 .ifndef UNDEFINED_SYMS_HEADER
 .set func_UNDEFINED_SYMS_HEADER, 0
 
-.set D_0300008c, 0x0300008c
-.set D_0300008e, 0x0300008e
-.set D_03000090, 0x03000090
-.set D_03000092, 0x03000092
 .set D_03004460, 0x03004460
 .set D_03004498, 0x03004498
 .set interrupt_handler_intern, 0x030044a0
@@ -61,8 +57,6 @@
 .set func_0804c778, 0x0804c778
 .set func_0804c8b0, 0x0804c8b0
 .set func_0804c96c, 0x0804c96c
-.set func_0804eaf0, 0x0804eaf0 @ _call_via_r1
-.set func_0804eaf8, 0x0804eaf8
 .set func_0804f270, 0x0804f270
 .set D_0804F300, 0x0804f300
 
