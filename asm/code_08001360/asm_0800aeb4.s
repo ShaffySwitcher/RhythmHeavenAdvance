@@ -141,7 +141,7 @@ glabel func_0800aeb4 \n\
 .ltorg \n\
  \n\
 branch_0800afe0: \n\
-/* 0800afe0 */ LDR R0, =0x0000ffff @ !PossiblePointer \n\
+/* 0800afe0 */ LDR R0, =0xffff \n\
  \n\
 branch_0800afe2: \n\
 /* 0800afe2 */ STRH R0, [R7, 0x2A] \n\

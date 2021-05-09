@@ -12,12 +12,12 @@ glabel func_08001c64 \n\
 /* 08001c70 */ ANDS R1, R0 @ Set R1 to R1 & R0 \n\
 /* 08001c72 */ LSLS R2, R1, 0x1 \n\
 /* 08001c74 */ LDRH R1, [R4] \n\
-/* 08001c76 */ LDR R0, =0xfffffe01 @ !PossiblePointer \n\
+/* 08001c76 */ LDR R0, =0xfffffe01 \n\
 /* 08001c78 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 08001c7a */ ORRS R0, R2 @ Set R0 to R0 | R2 \n\
 /* 08001c7c */ STRH R0, [R4] \n\
 /* 08001c7e */ LDR R0, [R4] \n\
-/* 08001c80 */ LDR R1, =0xfffe01ff @ !PossiblePointer \n\
+/* 08001c80 */ LDR R1, =0xfffe01ff \n\
 /* 08001c82 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 08001c84 */ STR R0, [R4] \n\
 /* 08001c86 */ MOVS R0, 0x3F @ Set R0 to 0x3F \n\
@@ -37,7 +37,7 @@ glabel func_08001c64 \n\
 /* 08001ca2 */ LDR R0, [SP, 0x14] \n\
 /* 08001ca4 */ STR R0, [R4, 0x10] \n\
 /* 08001ca6 */ LDRH R1, [R4, 0x2] \n\
-/* 08001ca8 */ LDR R0, =0xfffffe7f @ !PossiblePointer \n\
+/* 08001ca8 */ LDR R0, =0xfffffe7f \n\
 /* 08001caa */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 08001cac */ MOVS R2, 0x80 @ Set R2 to 0x80 \n\
 /* 08001cae */ LSLS R2, R2, 0x1 \n\

@@ -11,7 +11,7 @@ glabel func_08005ad4 \n\
 /* 08005ade */ MOVS R5, 0x0 @ Set R5 to 0x0 \n\
 /* 08005ae0 */ ADDS R4, R1, 0x0 @ Set R4 to R1 + 0x0 \n\
 /* 08005ae2 */ ADDS R4, 0x8 @ Add 0x8 to R4 \n\
-/* 08005ae4 */ LDR R0, =0x0000ffff @ !PossiblePointer \n\
+/* 08005ae4 */ LDR R0, =0xffff \n\
 /* 08005ae6 */ ADDS R6, R0, 0x0 @ Set R6 to R0 + 0x0 \n\
  \n\
 branch_08005ae8: \n\

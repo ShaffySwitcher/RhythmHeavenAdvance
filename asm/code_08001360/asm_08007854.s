@@ -21,7 +21,7 @@ glabel func_08007854 \n\
 /* 08007874 */ LDRSH R3, [R4, R5] \n\
 /* 08007876 */ MOVS R6, 0x8 @ Set R6 to 0x8 \n\
 /* 08007878 */ LDRSH R2, [R4, R6] \n\
-/* 0800787a */ LDR R5, =0x08935fcc @ !PossiblePointer \n\
+/* 0800787a */ LDR R5, =D_08935fcc \n\
 /* 0800787c */ LSRS R1, R1, 0x17 \n\
 /* 0800787e */ ADDS R1, R1, R5 @ Set R1 to R1 + R5 \n\
 /* 08007880 */ MOVS R6, 0x0 @ Set R6 to 0x0 \n\
@@ -29,7 +29,7 @@ glabel func_08007854 \n\
 /* 08007884 */ MULS R0, R2 @ Multiply R0 by R2 \n\
 /* 08007886 */ ASRS R0, R0, 0x8 \n\
 /* 08007888 */ ADDS R3, R3, R0 @ Set R3 to R3 + R0 \n\
-/* 0800788a */ LDR R0, =0x089361cc @ !PossiblePointer \n\
+/* 0800788a */ LDR R0, =D_089361cc \n\
 /* 0800788c */ LDRB R1, [R4, 0x12] \n\
 /* 0800788e */ LSLS R1, R1, 0x1 \n\
 /* 08007890 */ ADDS R0, R1, R0 @ Set R0 to R1 + R0 \n\

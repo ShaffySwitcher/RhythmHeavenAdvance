@@ -14,7 +14,7 @@ glabel func_0800b590 \n\
 /* 0800b5a0 */ STR R0, [R2] \n\
  \n\
 branch_0800b5a2: \n\
-/* 0800b5a2 */ LDR R0, =0x04000130 @ !PossiblePointer \n\
+/* 0800b5a2 */ LDR R0, =0x04000130 @ !Hardware REG_KEY \n\
 /* 0800b5a4 */ LDRH R0, [R0] \n\
 /* 0800b5a6 */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 0800b5a8 */ LDR R0, =0x0300130e @ !PossiblePointer \n\

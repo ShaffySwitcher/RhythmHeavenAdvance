@@ -14,7 +14,7 @@ glabel func_08004dc0 \n\
 /* 08004dd0 */ BEQ branch_08004e58 \n\
 /* 08004dd2 */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 08004dd4 */ BGE branch_08004ddc \n\
-/* 08004dd6 */ LDR R0, =0x7fffffff @ !PossiblePointer \n\
+/* 08004dd6 */ LDR R0, =0x7fffffff \n\
 /* 08004dd8 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 08004dda */ LDR R1, [R0] \n\
  \n\

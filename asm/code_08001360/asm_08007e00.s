@@ -14,7 +14,7 @@ glabel func_08007e00 \n\
 /* 08007e10 */ ANDS R3, R0 @ Set R3 to R3 & R0 \n\
 /* 08007e12 */ ORRS R3, R2 @ Set R3 to R3 | R2 \n\
 /* 08007e14 */ STRH R3, [R4, 0x2] \n\
-/* 08007e16 */ LDR R0, =0x00007fff @ !PossiblePointer \n\
+/* 08007e16 */ LDR R0, =0x7fff \n\
 /* 08007e18 */ ANDS R1, R0 @ Set R1 to R1 & R0 \n\
 /* 08007e1a */ LDR R0, [R4] \n\
 /* 08007e1c */ LSLS R0, R0, 0xF \n\

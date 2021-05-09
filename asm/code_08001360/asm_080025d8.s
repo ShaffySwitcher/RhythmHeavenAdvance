@@ -6,7 +6,7 @@ glabel func_080025d8 \n\
 /* 080025d8 */ PUSH {LR} \n\
 /* 080025da */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 080025dc */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
-/* 080025de */ LDR R3, =0x03000340 @ !PossiblePointer \n\
+/* 080025de */ LDR R3, =D_03000340 \n\
  \n\
 branch_080025e0: \n\
 /* 080025e0 */ ADDS R0, R1, R3 @ Set R0 to R1 + R3 \n\

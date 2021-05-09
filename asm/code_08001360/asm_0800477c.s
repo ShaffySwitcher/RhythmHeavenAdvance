@@ -22,7 +22,7 @@ glabel func_0800477c \n\
 /* 0800479e */ MOV R2, R12 @ Set R2 to R12 \n\
 /* 080047a0 */ CMP R2, 0x2 @ Compare R2 and 0x2 \n\
 /* 080047a2 */ BEQ branch_080047c0 \n\
-/* 080047a4 */ LDR R0, =0x030008b0 @ !PossiblePointer \n\
+/* 080047a4 */ LDR R0, =D_030008b0 \n\
 /* 080047a6 */ LDRB R1, [R0] \n\
 /* 080047a8 */ LSLS R1, R1, 0x4 \n\
 /* 080047aa */ LDRB R2, [R7] \n\
@@ -40,7 +40,7 @@ branch_080047c0: \n\
 /* 080047c0 */ LDRB R2, [R7] \n\
 /* 080047c2 */ SUBS R2, 0x61 @ Subtract 0x61 from R2 \n\
 /* 080047c4 */ ASRS R1, R2, 0x3 \n\
-/* 080047c6 */ LDR R3, =0x030008b0 @ !PossiblePointer \n\
+/* 080047c6 */ LDR R3, =D_030008b0 \n\
 /* 080047c8 */ LDRB R0, [R3] \n\
 /* 080047ca */ LSLS R0, R0, 0x4 \n\
 /* 080047cc */ ORRS R1, R0 @ Set R1 to R1 | R0 \n\
@@ -105,7 +105,7 @@ branch_08004824: \n\
 /* 0800482a */ LDR R2, [SP, 0x10] \n\
 /* 0800482c */ CMP R2, 0x63 @ Compare R2 and 0x63 \n\
 /* 0800482e */ BNE branch_0800483c \n\
-/* 08004830 */ LDR R0, =0x0000ffff @ !PossiblePointer \n\
+/* 08004830 */ LDR R0, =0xffff \n\
 /* 08004832 */ B branch_08004956 \n\
 \n\
 .ltorg \n\
@@ -139,7 +139,7 @@ branch_0800486a: \n\
 /* 0800486a */ ADDS R0, R7, R6 @ Set R0 to R7 + R6 \n\
 /* 0800486c */ BL func_080049dc \n\
 /* 08004870 */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
-/* 08004872 */ LDR R0, =0x030008b0 @ !PossiblePointer \n\
+/* 08004872 */ LDR R0, =D_030008b0 \n\
 /* 08004874 */ LDRB R0, [R0] \n\
 /* 08004876 */ LSLS R2, R0, 0x3 \n\
 /* 08004878 */ SUBS R2, R2, R0 @ Set R2 to R2 - R0 \n\
@@ -179,7 +179,7 @@ branch_080048b4: \n\
 /* 080048bc */ B branch_08004932 \n\
  \n\
 branch_080048be: \n\
-/* 080048be */ LDR R3, =0x030008b0 @ !PossiblePointer \n\
+/* 080048be */ LDR R3, =D_030008b0 \n\
 /* 080048c0 */ LDRB R0, [R3] \n\
 /* 080048c2 */ LSLS R1, R0, 0x3 \n\
 /* 080048c4 */ SUBS R1, R1, R0 @ Set R1 to R1 - R0 \n\
@@ -212,7 +212,7 @@ branch_080048be: \n\
 .ltorg \n\
  \n\
 branch_08004900: \n\
-/* 08004900 */ LDR R2, =0x030008b0 @ !PossiblePointer \n\
+/* 08004900 */ LDR R2, =D_030008b0 \n\
 /* 08004902 */ LDRB R0, [R2] \n\
 /* 08004904 */ LSLS R1, R0, 0x3 \n\
 /* 08004906 */ SUBS R1, R1, R0 @ Set R1 to R1 - R0 \n\

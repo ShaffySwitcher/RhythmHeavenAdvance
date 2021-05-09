@@ -47,7 +47,7 @@ branch_08003afc: \n\
 /* 08003b0c */ STRH R1, [R4] \n\
 /* 08003b0e */ STRH R2, [R0] \n\
 /* 08003b10 */ SUBS R4, 0x2 @ Subtract 0x2 from R4 \n\
-/* 08003b12 */ LDR R0, =0xffff0000 @ !PossiblePointer \n\
+/* 08003b12 */ LDR R0, =0xffff0000 \n\
 /* 08003b14 */ ADDS R6, R6, R0 @ Set R6 to R6 + R0 \n\
 /* 08003b16 */ SUBS R5, 0x1 @ Subtract 0x1 from R5 \n\
 /* 08003b18 */ CMP R5, 0x0 @ Compare R5 and 0x0 \n\

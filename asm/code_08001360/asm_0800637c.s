@@ -13,7 +13,7 @@ glabel func_0800637c \n\
 /* 0800638a */ LDR R0, [SP, 0x24] \n\
 /* 0800638c */ LSLS R0, R0, 0x1C \n\
 /* 0800638e */ LSRS R4, R0, 0x10 \n\
-/* 08006390 */ LDR R5, =0x00000fff @ !PossiblePointer \n\
+/* 08006390 */ LDR R5, =0xfff \n\
 /* 08006392 */ LSLS R1, R1, 0x1 \n\
 /* 08006394 */ MOV R0, R9 @ Set R0 to R9 \n\
 /* 08006396 */ LDR R3, [R0] \n\

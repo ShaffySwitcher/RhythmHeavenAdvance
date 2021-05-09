@@ -28,7 +28,7 @@ glabel func_0800765c \n\
 /* 0800768a */ SUBS R0, R0, R1 @ Set R0 to R0 - R1 \n\
 /* 0800768c */ STRH R0, [R4, 0x8] \n\
 /* 0800768e */ STR R2, [R4, 0xC] \n\
-/* 08007690 */ LDR R2, =0x03004ae4 @ !PossiblePointer \n\
+/* 08007690 */ LDR R2, =D_03004ae4 \n\
 /* 08007692 */ MOVS R3, 0x6 @ Set R3 to 0x6 \n\
 /* 08007694 */ LDRSH R0, [R4, R3] \n\
 /* 08007696 */ ADDS R6, R0, 0x0 @ Set R6 to R0 + 0x0 \n\

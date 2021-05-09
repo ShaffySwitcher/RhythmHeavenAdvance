@@ -43,7 +43,7 @@ branch_08002fca: \n\
 /* 08002fde */ LSRS R1, R0, 0x10 \n\
  \n\
 branch_08002fe0: \n\
-/* 08002fe0 */ LDR R4, =0x0893640c @ !PossiblePointer \n\
+/* 08002fe0 */ LDR R4, =D_0893640c \n\
 /* 08002fe2 */ LSLS R0, R1, 0x10 \n\
 /* 08002fe4 */ ASRS R0, R0, 0xA \n\
 /* 08002fe6 */ LSLS R1, R3, 0x10 \n\

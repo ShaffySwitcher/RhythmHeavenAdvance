@@ -18,7 +18,7 @@ glabel func_0800232c \n\
 /* 08002344 */ B branch_080024c2 \n\
  \n\
 branch_08002346: \n\
-/* 08002346 */ LDR R0, =0x03000340 @ !PossiblePointer \n\
+/* 08002346 */ LDR R0, =D_03000340 \n\
 /* 08002348 */ LDR R1, [SP] \n\
 /* 0800234a */ ADDS R0, R1, R0 @ Set R0 to R1 + R0 \n\
 /* 0800234c */ LDRB R7, [R0] \n\
@@ -68,7 +68,7 @@ branch_08002392: \n\
 branch_08002398: \n\
 /* 08002398 */ LDR R6, [SP] \n\
 /* 0800239a */ LSLS R1, R6, 0x3 \n\
-/* 0800239c */ LDR R0, =0x03000138 @ !PossiblePointer \n\
+/* 0800239c */ LDR R0, =D_03000138 \n\
 /* 0800239e */ ADDS R5, R1, R0 @ Set R5 to R1 + R0 \n\
 /* 080023a0 */ MOV R3, R10 @ Set R3 to R10 \n\
 /* 080023a2 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
@@ -90,8 +90,8 @@ branch_080023b8: \n\
 /* 080023ba */ ANDS R0, R7 @ Set R0 to R0 & R7 \n\
 /* 080023bc */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 080023be */ BEQ branch_080023f0 \n\
-/* 080023c0 */ LDR R2, =0x08936cac @ !PossiblePointer \n\
-/* 080023c2 */ LDR R1, =0x000007ff @ !PossiblePointer \n\
+/* 080023c0 */ LDR R2, =D_08936cac \n\
+/* 080023c2 */ LDR R1, =0x7ff \n\
 /* 080023c4 */ ADDS R0, R3, 0x0 @ Set R0 to R3 + 0x0 \n\
 /* 080023c6 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 080023c8 */ LSLS R0, R0, 0x1 \n\
@@ -111,14 +111,14 @@ branch_080023b8: \n\
 .ltorg \n\
  \n\
 branch_080023f0: \n\
-/* 080023f0 */ LDR R1, =0x08935fcc @ !PossiblePointer \n\
+/* 080023f0 */ LDR R1, =D_08935fcc \n\
 /* 080023f2 */ MOVS R0, 0xFF @ Set R0 to 0xFF \n\
 /* 080023f4 */ ANDS R3, R0 @ Set R3 to R3 & R0 \n\
 /* 080023f6 */ LSLS R0, R3, 0x1 \n\
 /* 080023f8 */ ADDS R1, R0, R1 @ Set R1 to R0 + R1 \n\
 /* 080023fa */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 080023fc */ LDRSH R4, [R1, R3] \n\
-/* 080023fe */ LDR R1, =0x089361cc @ !PossiblePointer \n\
+/* 080023fe */ LDR R1, =D_089361cc \n\
 /* 08002400 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08002402 */ MOVS R6, 0x0 @ Set R6 to 0x0 \n\
 /* 08002404 */ LDRSH R1, [R0, R6] \n\
@@ -149,15 +149,15 @@ branch_08002406: \n\
 /* 08002434 */ ANDS R0, R7 @ Set R0 to R0 & R7 \n\
 /* 08002436 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08002438 */ BEQ branch_080024c2 \n\
-/* 0800243a */ LDR R0, =0x03000238 @ !PossiblePointer \n\
+/* 0800243a */ LDR R0, =D_03000238 \n\
 /* 0800243c */ LDR R3, [SP, 0x4] \n\
 /* 0800243e */ ADDS R5, R3, R0 @ Set R5 to R3 + R0 \n\
 /* 08002440 */ MOVS R0, 0x8 @ Set R0 to 0x8 \n\
 /* 08002442 */ ANDS R7, R0 @ Set R7 to R7 & R0 \n\
 /* 08002444 */ CMP R7, 0x0 @ Compare R7 and 0x0 \n\
 /* 08002446 */ BEQ branch_08002480 \n\
-/* 08002448 */ LDR R2, =0x08936cac @ !PossiblePointer \n\
-/* 0800244a */ LDR R1, =0x000007ff @ !PossiblePointer \n\
+/* 08002448 */ LDR R2, =D_08936cac \n\
+/* 0800244a */ LDR R1, =0x7ff \n\
 /* 0800244c */ MOV R0, R10 @ Set R0 to R10 \n\
 /* 0800244e */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 08002450 */ LSLS R0, R0, 0x1 \n\
@@ -177,7 +177,7 @@ branch_08002406: \n\
 .ltorg \n\
  \n\
 branch_08002480: \n\
-/* 08002480 */ LDR R0, =0x08935fcc @ !PossiblePointer \n\
+/* 08002480 */ LDR R0, =D_08935fcc \n\
 /* 08002482 */ MOVS R1, 0xFF @ Set R1 to 0xFF \n\
 /* 08002484 */ MOV R3, R10 @ Set R3 to R10 \n\
 /* 08002486 */ ANDS R1, R3 @ Set R1 to R1 & R3 \n\
@@ -185,7 +185,7 @@ branch_08002480: \n\
 /* 0800248a */ ADDS R0, R1, R0 @ Set R0 to R1 + R0 \n\
 /* 0800248c */ MOVS R6, 0x0 @ Set R6 to 0x0 \n\
 /* 0800248e */ LDRSH R4, [R0, R6] \n\
-/* 08002490 */ LDR R0, =0x089361cc @ !PossiblePointer \n\
+/* 08002490 */ LDR R0, =D_089361cc \n\
 /* 08002492 */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\
 /* 08002494 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 08002496 */ LDRSH R1, [R1, R0] \n\

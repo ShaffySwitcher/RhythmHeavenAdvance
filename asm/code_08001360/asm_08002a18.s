@@ -8,12 +8,12 @@ glabel func_08002a18 \n\
 /* 08002a1c */ CMP R5, 0x0 @ Compare R5 and 0x0 \n\
 /* 08002a1e */ BEQ branch_08002a4c \n\
 /* 08002a20 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 08002a22 */ LDR R1, =0x08aa445c @ !PossiblePointer \n\
+/* 08002a22 */ LDR R1, =D_08aa445c \n\
 /* 08002a24 */ LDRB R1, [R1] \n\
 /* 08002a26 */ CMP R3, R1 @ Check R3 - R1 \n\
 /* 08002a28 */ BCS branch_08002a4c \n\
 /* 08002a2a */ ADDS R6, R1, 0x0 @ Set R6 to R1 + 0x0 \n\
-/* 08002a2c */ LDR R4, =0x08aa4460 @ !PossiblePointer \n\
+/* 08002a2c */ LDR R4, =D_08aa4460 \n\
  \n\
 branch_08002a2e: \n\
 /* 08002a2e */ LDR R2, [R4] \n\

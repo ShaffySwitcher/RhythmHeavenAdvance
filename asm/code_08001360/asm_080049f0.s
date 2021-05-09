@@ -39,7 +39,7 @@ branch_08004a1c: \n\
 /* 08004a34 */ ADDS R0, 0x10 @ Add 0x10 to R0 \n\
 /* 08004a36 */ STR R0, [SP, 0x8] \n\
 /* 08004a38 */ MOVS R6, 0x0 @ Set R6 to 0x0 \n\
-/* 08004a3a */ LDR R1, =0x030008b0 @ !PossiblePointer \n\
+/* 08004a3a */ LDR R1, =D_030008b0 \n\
 /* 08004a3c */ STRB R5, [R1] \n\
 /* 08004a3e */ MOV R2, R9 @ Set R2 to R9 \n\
 /* 08004a40 */ STRH R6, [R2, 0x10] \n\
@@ -111,7 +111,7 @@ branch_08004ab0: \n\
 /* 08004ab6 */ BL func_0800477c \n\
 /* 08004aba */ LSLS R0, R0, 0x10 \n\
 /* 08004abc */ LSRS R5, R0, 0x10 \n\
-/* 08004abe */ LDR R0, =0x0000ffff @ !PossiblePointer \n\
+/* 08004abe */ LDR R0, =0xffff \n\
 /* 08004ac0 */ CMP R5, R0 @ Check R5 - R0 \n\
 /* 08004ac2 */ BEQ branch_08004b2c \n\
 /* 08004ac4 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\

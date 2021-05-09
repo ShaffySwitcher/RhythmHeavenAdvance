@@ -71,7 +71,7 @@ branch_080053d6: \n\
 /* 080053da */ BL func_08005208 \n\
 /* 080053de */ LSLS R0, R0, 0x10 \n\
 /* 080053e0 */ LSRS R0, R0, 0x10 \n\
-/* 080053e2 */ LDR R2, =0x000003ff @ !PossiblePointer \n\
+/* 080053e2 */ LDR R2, =0x3ff \n\
 /* 080053e4 */ CMP R0, R2 @ Check R0 - R2 \n\
 /* 080053e6 */ BHI branch_08005404 \n\
 /* 080053e8 */ LSLS R1, R6, 0xC \n\

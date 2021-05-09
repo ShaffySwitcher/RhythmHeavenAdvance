@@ -8,7 +8,7 @@ glabel func_08008ea4 \n\
 /* 08008ea8 */ LSLS R2, R2, 0x4 \n\
 /* 08008eaa */ CMP R4, R2 @ Check R4 - R2 \n\
 /* 08008eac */ BCS branch_08008ec4 \n\
-/* 08008eae */ LDR R3, =0x00007fff @ !PossiblePointer \n\
+/* 08008eae */ LDR R3, =0x7fff \n\
 /* 08008eb0 */ ADDS R5, R3, 0x0 @ Set R5 to R3 + 0x0 \n\
 /* 08008eb2 */ ADDS R3, R0, 0x0 @ Set R3 to R0 + 0x0 \n\
  \n\

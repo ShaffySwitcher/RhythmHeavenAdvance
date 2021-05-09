@@ -15,7 +15,7 @@ glabel func_0800c508 \n\
 /* 0800c51a */ ANDS R4, R5 @ Set R4 to R4 & R5 \n\
 /* 0800c51c */ ORRS R4, R0 @ Set R4 to R4 | R0 \n\
 /* 0800c51e */ STRB R4, [R6] \n\
-/* 0800c520 */ LDR R4, =0x00007fff @ !PossiblePointer \n\
+/* 0800c520 */ LDR R4, =0x7fff \n\
 /* 0800c522 */ ANDS R4, R1 @ Set R4 to R4 & R1 \n\
 /* 0800c524 */ LSLS R4, R4, 0x2 \n\
 /* 0800c526 */ LDR R0, [SP, 0x4] \n\

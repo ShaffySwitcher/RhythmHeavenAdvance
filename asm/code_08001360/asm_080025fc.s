@@ -7,8 +7,8 @@ glabel func_080025fc \n\
 /* 080025fe */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 08002600 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 08002602 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
-/* 08002604 */ LDR R5, =0x03000340 @ !PossiblePointer \n\
-/* 08002606 */ LDR R2, =0x03000368 @ !PossiblePointer \n\
+/* 08002604 */ LDR R5, =D_03000340 \n\
+/* 08002606 */ LDR R2, =D_03000368 \n\
  \n\
 branch_08002608: \n\
 /* 08002608 */ ADDS R0, R1, R5 @ Set R0 to R1 + R5 \n\

@@ -16,7 +16,7 @@ glabel func_0800253c \n\
 /* 08002550 */ LSRS R6, R0, 0x10 \n\
 /* 08002552 */ CMP R4, 0x0 @ Compare R4 and 0x0 \n\
 /* 08002554 */ BLT branch_08002578 \n\
-/* 08002556 */ LDR R2, =0x03000138 @ !PossiblePointer \n\
+/* 08002556 */ LDR R2, =D_03000138 \n\
 /* 08002558 */ LSLS R0, R4, 0x3 \n\
 /* 0800255a */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 0800255c */ STRH R1, [R0] \n\

@@ -82,7 +82,7 @@ branch_08005570: \n\
 /* 08005574 */ BL func_08005208 \n\
 /* 08005578 */ LSLS R0, R0, 0x10 \n\
 /* 0800557a */ LSRS R0, R0, 0x10 \n\
-/* 0800557c */ LDR R7, =0x000003ff @ !PossiblePointer \n\
+/* 0800557c */ LDR R7, =0x3ff \n\
 /* 0800557e */ CMP R0, R7 @ Check R0 - R7 \n\
 /* 08005580 */ BHI branch_080055a0 \n\
 /* 08005582 */ MOV R2, R9 @ Set R2 to R9 \n\

@@ -28,7 +28,7 @@ branch_08005224: \n\
 /* 08005230 */ BNE branch_0800523c \n\
  \n\
 branch_08005232: \n\
-/* 08005232 */ LDR R0, =0x0000ffff @ !PossiblePointer \n\
+/* 08005232 */ LDR R0, =0xffff \n\
 /* 08005234 */ B branch_08005314 \n\
 \n\
 .ltorg \n\

@@ -99,7 +99,7 @@ branch_08005726: \n\
 /* 08005734 */ LDR R1, [R5, 0x4] \n\
 /* 08005736 */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 08005738 */ BGE branch_08005748 \n\
-/* 0800573a */ LDR R0, =0x7fffffff @ !PossiblePointer \n\
+/* 0800573a */ LDR R0, =0x7fffffff \n\
 /* 0800573c */ ANDS R1, R0 @ Set R1 to R1 & R0 \n\
 /* 0800573e */ LDR R1, [R1] \n\
 /* 08005740 */ B branch_08005752 \n\

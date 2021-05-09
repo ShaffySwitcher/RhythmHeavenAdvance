@@ -4,13 +4,13 @@ asm(".syntax unified \n\
 \n\
 glabel func_08002584 \n\
 /* 08002584 */ PUSH {R4, R5, LR} \n\
-/* 08002586 */ LDR R4, =0x03000360 @ !PossiblePointer \n\
+/* 08002586 */ LDR R4, =D_03000360 \n\
 /* 08002588 */ LDRB R0, [R4] \n\
 /* 0800258a */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0800258c */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0800258e */ BEQ branch_080025aa \n\
-/* 08002590 */ LDR R5, =0x03000338 @ !PossiblePointer \n\
-/* 08002592 */ LDR R3, =0x03000138 @ !PossiblePointer \n\
+/* 08002590 */ LDR R5, =D_03000338 \n\
+/* 08002592 */ LDR R3, =D_03000138 \n\
  \n\
 branch_08002594: \n\
 /* 08002594 */ LDR R1, [R5] \n\

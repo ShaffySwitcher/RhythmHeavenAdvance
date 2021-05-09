@@ -32,7 +32,7 @@ branch_0800c244: \n\
 /* 0800c256 */ LDR R4, [R0] \n\
 /* 0800c258 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 0800c25a */ BL func_0800bf7c \n\
-/* 0800c25e */ LDR R2, =0x08aa4460 @ !PossiblePointer \n\
+/* 0800c25e */ LDR R2, =D_08aa4460 \n\
 /* 0800c260 */ LDRB R1, [R4, 0x4] \n\
 /* 0800c262 */ LSLS R1, R1, 0x1B \n\
 /* 0800c264 */ LSRS R1, R1, 0x1B \n\

@@ -7,7 +7,7 @@ glabel func_0800298c \n\
 /* 0800298e */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
 /* 08002990 */ CMP R2, 0x0 @ Compare R2 and 0x0 \n\
 /* 08002992 */ BLT branch_080029a8 \n\
-/* 08002994 */ LDR R0, =0x08aa4460 @ !PossiblePointer \n\
+/* 08002994 */ LDR R0, =D_08aa4460 \n\
 /* 08002996 */ LSLS R1, R2, 0x1 \n\
 /* 08002998 */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
 /* 0800299a */ LSLS R1, R1, 0x2 \n\

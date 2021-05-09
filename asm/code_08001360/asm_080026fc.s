@@ -15,8 +15,8 @@ branch_08002708: \n\
 /* 0800270a */ BL func_08002630 \n\
 /* 0800270e */ LSLS R0, R0, 0x10 \n\
 /* 08002710 */ LSRS R3, R0, 0x10 \n\
-/* 08002712 */ LDR R2, =0x08aa4460 @ !PossiblePointer \n\
-/* 08002714 */ LDR R1, =0x08aa06f8 @ !PossiblePointer \n\
+/* 08002712 */ LDR R2, =D_08aa4460 \n\
+/* 08002714 */ LDR R1, =D_08aa06f8 \n\
 /* 08002716 */ LSLS R0, R3, 0x3 \n\
 /* 08002718 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 0800271a */ LDRH R1, [R0, 0x4] \n\

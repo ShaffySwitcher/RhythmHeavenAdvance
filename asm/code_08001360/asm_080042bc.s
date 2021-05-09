@@ -16,7 +16,7 @@ glabel func_080042bc \n\
 /* 080042d0 */ SUBS R3, R0, R2 @ Set R3 to R0 - R2 \n\
 /* 080042d2 */ CMP R1, R3 @ Check R1 - R3 \n\
 /* 080042d4 */ BGE branch_080042ec \n\
-/* 080042d6 */ LDR R5, =0x0000ffff @ !PossiblePointer \n\
+/* 080042d6 */ LDR R5, =0xffff \n\
 /* 080042d8 */ ADDS R4, R5, 0x0 @ Set R4 to R5 + 0x0 \n\
  \n\
 branch_080042da: \n\

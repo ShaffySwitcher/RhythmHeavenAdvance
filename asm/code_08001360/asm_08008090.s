@@ -19,7 +19,7 @@ glabel func_08008090 \n\
 /* 080080aa */ NEGS R0, R0 @ Set R0 to -R0 \n\
 /* 080080ac */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 080080ae */ STRB R0, [R3] \n\
-/* 080080b0 */ LDR R1, =0x00007fff @ !PossiblePointer \n\
+/* 080080b0 */ LDR R1, =0x7fff \n\
 /* 080080b2 */ ANDS R1, R2 @ Set R1 to R1 & R2 \n\
 /* 080080b4 */ LSLS R1, R1, 0x2 \n\
 /* 080080b6 */ LDR R0, [SP, 0x4] \n\

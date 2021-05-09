@@ -49,7 +49,7 @@ branch_0800ca8c: \n\
 /* 0800cac6 */ LDRH R2, [R7] \n\
 /* 0800cac8 */ MOVS R5, 0x0 @ Set R5 to 0x0 \n\
 /* 0800caca */ LDRSH R1, [R7, R5] \n\
-/* 0800cacc */ LDR R0, =0x00007fff @ !PossiblePointer \n\
+/* 0800cacc */ LDR R0, =0x7fff \n\
 /* 0800cace */ CMP R1, R0 @ Check R1 - R0 \n\
 /* 0800cad0 */ BNE branch_0800cae0 \n\
 /* 0800cad2 */ MOV R0, R9 @ Set R0 to R9 \n\
@@ -73,7 +73,7 @@ branch_0800caee: \n\
 /* 0800caf0 */ LDRH R2, [R5] \n\
 /* 0800caf2 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0800caf4 */ LDRSH R1, [R5, R0] \n\
-/* 0800caf6 */ LDR R0, =0x00007fff @ !PossiblePointer \n\
+/* 0800caf6 */ LDR R0, =0x7fff \n\
 /* 0800caf8 */ CMP R1, R0 @ Check R1 - R0 \n\
 /* 0800cafa */ BNE branch_0800cb04 \n\
 /* 0800cafc */ STRH R4, [R5] \n\

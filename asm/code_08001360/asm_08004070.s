@@ -11,31 +11,31 @@ glabel func_08004070 \n\
 /* 0800407a */ SUB SP, 0x10 \n\
 /* 0800407c */ ADDS R3, R0, 0x0 @ Set R3 to R0 + 0x0 \n\
 /* 0800407e */ LDR R2, =0x03004b10 @ !PossiblePointer \n\
-/* 08004080 */ LDR R1, =0x00000854 @ !PossiblePointer \n\
+/* 08004080 */ LDR R1, =0x854 \n\
 /* 08004082 */ ADDS R0, R2, R1 @ Set R0 to R2 + R1 \n\
 /* 08004084 */ LDRH R1, [R0] \n\
-/* 08004086 */ LDR R0, =0x0000fff2 @ !PossiblePointer \n\
+/* 08004086 */ LDR R0, =0xfff2 \n\
 /* 08004088 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 0800408a */ ADDS R2, 0x54 @ Add 0x54 to R2 \n\
 /* 0800408c */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0800408e */ BEQ branch_08004092 \n\
-/* 08004090 */ LDR R2, =0x030046c0 @ !PossiblePointer \n\
+/* 08004090 */ LDR R2, =D_030046c0 \n\
  \n\
 branch_08004092: \n\
-/* 08004092 */ LDR R0, =0x030008a0 @ !PossiblePointer \n\
+/* 08004092 */ LDR R0, =D_030008a0 \n\
 /* 08004094 */ LDRH R0, [R0] \n\
 /* 08004096 */ LSLS R0, R0, 0x1 \n\
 /* 08004098 */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 0800409a */ LDRH R0, [R0] \n\
 /* 0800409c */ MOV R9, R0 @ Set R9 to R0 \n\
-/* 0800409e */ LDR R0, =0x030008a2 @ !PossiblePointer \n\
+/* 0800409e */ LDR R0, =D_030008a2 \n\
 /* 080040a0 */ LDRH R0, [R0] \n\
 /* 080040a2 */ LSLS R0, R0, 0x1 \n\
 /* 080040a4 */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 080040a6 */ LDRH R0, [R0] \n\
 /* 080040a8 */ STR R0, [SP] \n\
-/* 080040aa */ LDR R1, =0x030008a6 @ !PossiblePointer \n\
-/* 080040ac */ LDR R2, =0x030008a8 @ !PossiblePointer \n\
+/* 080040aa */ LDR R1, =D_030008a6 \n\
+/* 080040ac */ LDR R2, =D_030008a8 \n\
 /* 080040ae */ CMP R3, 0x0 @ Compare R3 and 0x0 \n\
 /* 080040b0 */ BNE branch_080040c0 \n\
 /* 080040b2 */ LDRH R0, [R1] \n\
@@ -80,7 +80,7 @@ branch_080040c0: \n\
 /* 080040fc */ SUBS R7, R7, R0 @ Set R7 to R7 - R0 \n\
 /* 080040fe */ MOV R1, R10 @ Set R1 to R10 \n\
 /* 08004100 */ SUBS R6, R6, R1 @ Set R6 to R6 - R1 \n\
-/* 08004102 */ LDR R0, =0x030008ad @ !PossiblePointer \n\
+/* 08004102 */ LDR R0, =D_030008ad \n\
 /* 08004104 */ LDRB R1, [R0] \n\
 /* 08004106 */ LDR R0, [PC, 0xC0] @ 0x080041c8 \n\
 /* 08004108 */ LDRB R0, [R0] \n\

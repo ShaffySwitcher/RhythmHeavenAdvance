@@ -11,7 +11,7 @@ glabel func_080060bc \n\
 /* 080060c6 */ CMP R6, 0x0 @ Compare R6 and 0x0 \n\
 /* 080060c8 */ BEQ branch_08006188 \n\
 /* 080060ca */ LDRH R4, [R5, 0x8] \n\
-/* 080060cc */ LDR R2, =0x000003ff @ !PossiblePointer \n\
+/* 080060cc */ LDR R2, =0x3ff \n\
 /* 080060ce */ ADDS R0, R2, 0x0 @ Set R0 to R2 + 0x0 \n\
 /* 080060d0 */ ANDS R0, R4 @ Set R0 to R0 & R4 \n\
 /* 080060d2 */ LSLS R0, R0, 0x1 \n\

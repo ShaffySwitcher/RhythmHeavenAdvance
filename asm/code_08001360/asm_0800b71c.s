@@ -18,7 +18,7 @@ branch_0800b728: \n\
 /* 0800b72c */ BNE branch_0800b726 \n\
 /* 0800b72e */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 0800b730 */ STRB R1, [R4] \n\
-/* 0800b732 */ LDR R1, =0x000003ff @ !PossiblePointer \n\
+/* 0800b732 */ LDR R1, =0x3ff \n\
 /* 0800b734 */ ANDS R1, R2 @ Set R1 to R1 & R2 \n\
 /* 0800b736 */ LSLS R1, R1, 0x8 \n\
 /* 0800b738 */ LDR R0, [R4] \n\

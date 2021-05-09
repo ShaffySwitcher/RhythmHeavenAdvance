@@ -8,7 +8,7 @@ glabel func_0800274c \n\
 /* 08002750 */ CMP R6, 0x0 @ Compare R6 and 0x0 \n\
 /* 08002752 */ BEQ branch_08002784 \n\
 /* 08002754 */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
-/* 08002756 */ LDR R0, =0x08aa445c @ !PossiblePointer \n\
+/* 08002756 */ LDR R0, =D_08aa445c \n\
 /* 08002758 */ LDRB R0, [R0] \n\
 /* 0800275a */ CMP R4, R0 @ Check R4 - R0 \n\
 /* 0800275c */ BCS branch_08002784 \n\

@@ -72,7 +72,7 @@ branch_0800390a: \n\
 branch_08003920: \n\
 /* 08003920 */ LDR R3, [R1] \n\
 /* 08003922 */ LDRB R2, [R1, 0x5] \n\
-/* 08003924 */ LDR R0, =0x00007fff @ !PossiblePointer \n\
+/* 08003924 */ LDR R0, =0x7fff \n\
  \n\
 branch_08003926: \n\
 /* 08003926 */ STR R0, [SP] \n\
@@ -93,7 +93,7 @@ branch_0800393c: \n\
 /* 08003944 */ STR R6, [SP, 0x8] \n\
 /* 08003946 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 08003948 */ MOV R1, R8 @ Set R1 to R8 \n\
-/* 0800394a */ LDR R3, =0x00007fff @ !PossiblePointer \n\
+/* 0800394a */ LDR R3, =0x7fff \n\
 /* 0800394c */ BL func_08001c64 \n\
  \n\
 branch_08003950: \n\

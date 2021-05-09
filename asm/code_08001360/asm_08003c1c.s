@@ -42,7 +42,7 @@ branch_08003c52: \n\
 /* 08003c54 */ LDMIA R0!, {R1} \n\
 /* 08003c56 */ STR R0, [R4, 0xC] \n\
 /* 08003c58 */ LSRS R0, R1, 0x1C \n\
-/* 08003c5a */ LDR R5, =0x0fffffff @ !PossiblePointer \n\
+/* 08003c5a */ LDR R5, =0x0fffffff \n\
 /* 08003c5c */ ANDS R5, R1 @ Set R5 to R5 & R1 \n\
 /* 08003c5e */ CMP R0, 0xA @ Compare R0 and 0xA \n\
 /* 08003c60 */ BLS branch_08003c64 \n\
@@ -50,7 +50,7 @@ branch_08003c52: \n\
  \n\
 branch_08003c64: \n\
 /* 08003c64 */ LSLS R0, R0, 0x2 \n\
-/* 08003c66 */ LDR R1, =0x08003c78 @ !PossiblePointer \n\
+/* 08003c66 */ LDR R1, =0x08003c78 @ !JumpTablePointer \n\
 /* 08003c68 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08003c6a */ LDR R0, [R0] \n\
 /* 08003c6c */ MOV PC, R0 @ Set PC to R0 \n\
@@ -107,7 +107,7 @@ branch_08003cc8: \n\
 /* 08003cd0 */ B branch_08003db0 \n\
 /* 08003cd2 */ STR R5, [R4, 0xC] \n\
 /* 08003cd4 */ STR R5, [R4, 0x8] \n\
-/* 08003cd6 */ LDR R0, =0x0000ffff @ !PossiblePointer \n\
+/* 08003cd6 */ LDR R0, =0xffff \n\
 /* 08003cd8 */ STRH R0, [R4, 0x4] \n\
 /* 08003cda */ B branch_08003db0 \n\
 \n\
@@ -152,7 +152,7 @@ branch_08003cc8: \n\
 /* 08003d2c */ ANDS R1, R3 @ Set R1 to R1 & R3 \n\
 /* 08003d2e */ LSLS R1, R1, 0x5 \n\
 /* 08003d30 */ LDRH R2, [R4] \n\
-/* 08003d32 */ LDR R0, =0xfffffc1f @ !PossiblePointer \n\
+/* 08003d32 */ LDR R0, =0xfffffc1f \n\
 /* 08003d34 */ ANDS R0, R2 @ Set R0 to R0 & R2 \n\
 /* 08003d36 */ ORRS R0, R1 @ Set R0 to R0 | R1 \n\
 /* 08003d38 */ STRH R0, [R4] \n\
@@ -169,7 +169,7 @@ branch_08003cc8: \n\
 /* 08003d4e */ ANDS R2, R3 @ Set R2 to R2 & R3 \n\
 /* 08003d50 */ LSLS R2, R2, 0xF \n\
 /* 08003d52 */ LDR R0, [R4] \n\
-/* 08003d54 */ LDR R1, =0xfff07fff @ !PossiblePointer \n\
+/* 08003d54 */ LDR R1, =0xfff07fff \n\
 /* 08003d56 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 08003d58 */ ORRS R0, R2 @ Set R0 to R0 | R2 \n\
 /* 08003d5a */ STR R0, [R4] \n\
@@ -177,7 +177,7 @@ branch_08003cc8: \n\
 /* 08003d5e */ ANDS R1, R3 @ Set R1 to R1 & R3 \n\
 /* 08003d60 */ LSLS R1, R1, 0x4 \n\
 /* 08003d62 */ LDRH R2, [R4, 0x2] \n\
-/* 08003d64 */ LDR R0, =0xfffffe0f @ !PossiblePointer \n\
+/* 08003d64 */ LDR R0, =0xfffffe0f \n\
 /* 08003d66 */ ANDS R0, R2 @ Set R0 to R0 & R2 \n\
 /* 08003d68 */ ORRS R0, R1 @ Set R0 to R0 | R1 \n\
 /* 08003d6a */ STRH R0, [R4, 0x2] \n\

@@ -127,7 +127,7 @@ branch_08003684: \n\
 /* 0800368a */ BCS branch_080036a8 \n\
 /* 0800368c */ ADDS R3, R0, 0x0 @ Set R3 to R0 + 0x0 \n\
 /* 0800368e */ MULS R3, R7 @ Multiply R3 by R7 \n\
-/* 08003690 */ LDR R6, =0x000003ff @ !PossiblePointer \n\
+/* 08003690 */ LDR R6, =0x3ff \n\
 /* 08003692 */ ADDS R5, R6, 0x0 @ Set R5 to R6 + 0x0 \n\
 /* 08003694 */ LSLS R0, R3, 0x1 \n\
 /* 08003696 */ MOV R6, R10 @ Set R6 to R10 \n\

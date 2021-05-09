@@ -6,10 +6,10 @@ glabel func_0800222c \n\
 /* 0800222c */ PUSH {R4-R6, LR} \n\
 /* 0800222e */ ADDS R6, R0, 0x0 @ Set R6 to R0 + 0x0 \n\
 /* 08002230 */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
-/* 08002232 */ LDR R5, =0x03000368 @ !PossiblePointer \n\
+/* 08002232 */ LDR R5, =D_03000368 \n\
  \n\
 branch_08002234: \n\
-/* 08002234 */ LDR R0, =0x03000340 @ !PossiblePointer \n\
+/* 08002234 */ LDR R0, =D_03000340 \n\
 /* 08002236 */ ADDS R0, R4, R0 @ Set R0 to R4 + R0 \n\
 /* 08002238 */ LDRB R0, [R0] \n\
 /* 0800223a */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\

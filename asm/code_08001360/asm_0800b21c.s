@@ -97,7 +97,7 @@ branch_0800b2be: \n\
 /* 0800b2d0 */ MOVS R2, 0x16 @ Set R2 to 0x16 \n\
 /* 0800b2d2 */ LDRSH R1, [R6, R2] \n\
 /* 0800b2d4 */ BL func_0800abb0 \n\
-/* 0800b2d8 */ LDR R0, =0x0000fff0 @ !PossiblePointer \n\
+/* 0800b2d8 */ LDR R0, =0xfff0 \n\
 /* 0800b2da */ STRH R0, [R6, 0x20] \n\
  \n\
 branch_0800b2dc: \n\

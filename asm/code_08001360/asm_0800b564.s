@@ -9,7 +9,7 @@ glabel func_0800b564 \n\
 /* 0800b56a */ LDR R0, =0x03001308 @ !PossiblePointer \n\
 /* 0800b56c */ STR R1, [R0] \n\
 /* 0800b56e */ LDR R2, =0x0300130e @ !PossiblePointer \n\
-/* 0800b570 */ LDR R0, =0x04000130 @ !PossiblePointer \n\
+/* 0800b570 */ LDR R0, =0x04000130 @ !Hardware REG_KEY \n\
 /* 0800b572 */ LDRH R0, [R0] \n\
 /* 0800b574 */ STRH R0, [R2] \n\
 /* 0800b576 */ LDR R0, =0x0300130c @ !PossiblePointer \n\

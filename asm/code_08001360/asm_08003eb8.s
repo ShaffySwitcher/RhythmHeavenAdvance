@@ -24,7 +24,7 @@ glabel func_08003eb8 \n\
 /* 08003ede */ BL func_08008608 \n\
  \n\
 branch_08003ee2: \n\
-/* 08003ee2 */ LDR R7, =0x03004af0 @ !PossiblePointer \n\
+/* 08003ee2 */ LDR R7, =D_03004af0 \n\
 /* 08003ee4 */ LDR R2, [R4, 0x4] \n\
 /* 08003ee6 */ LDRH R3, [R4, 0x8] \n\
 /* 08003ee8 */ LSLS R3, R3, 0x10 \n\
@@ -36,7 +36,7 @@ branch_08003ee2: \n\
 /* 08003ef4 */ ADDS R1, R6, 0x0 @ Set R1 to R6 + 0x0 \n\
 /* 08003ef6 */ BL func_0804eafc \n\
 /* 08003efa */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
-/* 08003efc */ LDR R1, =0x030053b0 @ !PossiblePointer \n\
+/* 08003efc */ LDR R1, =D_030053b0 \n\
 /* 08003efe */ LDRB R0, [R1] \n\
 /* 08003f00 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08003f02 */ BEQ branch_08003f18 \n\

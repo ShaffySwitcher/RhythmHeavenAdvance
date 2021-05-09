@@ -14,8 +14,8 @@ glabel func_08002634 \n\
 /* 08002646 */ LSRS R4, R4, 0x10 \n\
 /* 08002648 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 0800264a */ BL func_0804b534 \n\
-/* 0800264e */ LDR R2, =0x08aa4460 @ !PossiblePointer \n\
-/* 08002650 */ LDR R0, =0x08aa06f8 @ !PossiblePointer \n\
+/* 0800264e */ LDR R2, =D_08aa4460 \n\
+/* 08002650 */ LDR R0, =D_08aa06f8 \n\
 /* 08002652 */ LSLS R4, R4, 0x3 \n\
 /* 08002654 */ ADDS R4, R4, R0 @ Set R4 to R4 + R0 \n\
 /* 08002656 */ LDRH R1, [R4, 0x4] \n\

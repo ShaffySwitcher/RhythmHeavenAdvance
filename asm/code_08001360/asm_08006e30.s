@@ -26,7 +26,7 @@ glabel func_08006e30 \n\
 /* 08006e58 */ STR R0, [SP, 0x8] \n\
 /* 08006e5a */ LDR R0, [SP, 0x24] \n\
 /* 08006e5c */ STR R0, [SP, 0xC] \n\
-/* 08006e5e */ LDR R1, =0x040000d4 @ !PossiblePointer \n\
+/* 08006e5e */ LDR R1, =0x040000d4 @ !Hardware REG_DMA3SAD \n\
 /* 08006e60 */ MOV R0, SP @ Set R0 to SP \n\
 /* 08006e62 */ STR R0, [R1] \n\
 /* 08006e64 */ LDR R0, =0x03004b2c @ !PossiblePointer \n\

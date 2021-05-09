@@ -11,7 +11,7 @@ glabel func_08002790 \n\
 /* 0800279a */ CMP R6, 0x0 @ Compare R6 and 0x0 \n\
 /* 0800279c */ BEQ branch_080027ce \n\
 /* 0800279e */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
-/* 080027a0 */ LDR R0, =0x08aa445c @ !PossiblePointer \n\
+/* 080027a0 */ LDR R0, =D_08aa445c \n\
 /* 080027a2 */ LDRB R0, [R0] \n\
 /* 080027a4 */ CMP R4, R0 @ Check R4 - R0 \n\
 /* 080027a6 */ BCS branch_080027ce \n\

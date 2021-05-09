@@ -11,7 +11,7 @@ glabel func_0800650c \n\
 /* 08006516 */ LDR R1, =0x03000ea0 @ !PossiblePointer \n\
 /* 08006518 */ LSRS R0, R4, 0x2 \n\
 /* 0800651a */ STR R0, [R1] \n\
-/* 0800651c */ LDR R3, =0x0000ffff @ !PossiblePointer \n\
+/* 0800651c */ LDR R3, =0xffff \n\
 /* 0800651e */ CMP R0, R3 @ Check R0 - R3 \n\
 /* 08006520 */ BLS branch_08006524 \n\
 /* 08006522 */ STR R3, [R1] \n\
@@ -27,7 +27,7 @@ branch_08006524: \n\
 /* 08006532 */ STR R4, [R0, 0x8] \n\
 /* 08006534 */ STR R1, [R0, 0x10] \n\
 /* 08006536 */ STR R1, [R0, 0xC] \n\
-/* 08006538 */ LDR R2, =0x040000d4 @ !PossiblePointer \n\
+/* 08006538 */ LDR R2, =0x040000d4 @ !Hardware REG_DMA3SAD \n\
 /* 0800653a */ LDR R1, =0x0800112c @ !PossiblePointer \n\
 /* 0800653c */ STR R1, [R2] \n\
 /* 0800653e */ LDR R3, =0x03000e48 @ !PossiblePointer \n\

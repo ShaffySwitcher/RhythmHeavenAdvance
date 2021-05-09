@@ -12,12 +12,12 @@ glabel func_08001cd8 \n\
 /* 08001ce4 */ ANDS R1, R0 @ Set R1 to R1 & R0 \n\
 /* 08001ce6 */ LSLS R2, R1, 0x1 \n\
 /* 08001ce8 */ LDRH R1, [R4] \n\
-/* 08001cea */ LDR R0, =0xfffffe01 @ !PossiblePointer \n\
+/* 08001cea */ LDR R0, =0xfffffe01 \n\
 /* 08001cec */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 08001cee */ ORRS R0, R2 @ Set R0 to R0 | R2 \n\
 /* 08001cf0 */ STRH R0, [R4] \n\
 /* 08001cf2 */ LDR R0, [R4] \n\
-/* 08001cf4 */ LDR R1, =0xfffe01ff @ !PossiblePointer \n\
+/* 08001cf4 */ LDR R1, =0xfffe01ff \n\
 /* 08001cf6 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 08001cf8 */ STR R0, [R4] \n\
 /* 08001cfa */ MOVS R0, 0x3F @ Set R0 to 0x3F \n\

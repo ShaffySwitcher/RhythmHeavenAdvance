@@ -15,11 +15,11 @@ glabel func_0800186c \n\
 /* 0800187e */ LSRS R3, R3, 0x14 \n\
 /* 08001880 */ CMP R4, 0x0 @ Compare R4 and 0x0 \n\
 /* 08001882 */ BEQ branch_080018c4 \n\
-/* 08001884 */ LDR R0, =0x040000d4 @ !PossiblePointer \n\
+/* 08001884 */ LDR R0, =0x040000d4 @ !Hardware REG_DMA3SAD \n\
 /* 08001886 */ MOV R8, R0 @ Set R8 to R0 \n\
-/* 08001888 */ LDR R1, =0x040000d8 @ !PossiblePointer \n\
+/* 08001888 */ LDR R1, =0x040000d8 @ !Hardware REG_DMA3DAD \n\
 /* 0800188a */ MOV R12, R1 @ Set R12 to R1 \n\
-/* 0800188c */ LDR R7, =0x040000dc @ !PossiblePointer \n\
+/* 0800188c */ LDR R7, =0x040000dc @ !Hardware REG_DMA3CNT_L \n\
 /* 0800188e */ MOV R9, R7 @ Set R9 to R7 \n\
  \n\
 branch_08001890: \n\
@@ -36,7 +36,7 @@ branch_0800189e: \n\
 /* 080018a0 */ LSRS R0, R3 @ Set R0 to R0 >> R3 (logical) \n\
 /* 080018a2 */ MOV R7, R9 @ Set R7 to R9 \n\
 /* 080018a4 */ STRH R0, [R7] \n\
-/* 080018a6 */ LDR R1, =0x040000de @ !PossiblePointer \n\
+/* 080018a6 */ LDR R1, =0x040000de @ !Hardware REG_DMA3CNT_H \n\
 /* 080018a8 */ MOVS R7, 0x80 @ Set R7 to 0x80 \n\
 /* 080018aa */ LSLS R7, R7, 0x8 \n\
 /* 080018ac */ ADDS R0, R7, 0x0 @ Set R0 to R7 + 0x0 \n\

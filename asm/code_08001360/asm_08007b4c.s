@@ -3,8 +3,8 @@ asm(".syntax unified \n\
 .balign 4, 0 \n\
 \n\
 glabel func_08007b4c \n\
-/* 08007b4c */ LDR R2, =0x040000d4 @ !PossiblePointer \n\
-/* 08007b4e */ LDR R1, =0x08000cfc @ !PossiblePointer \n\
+/* 08007b4c */ LDR R2, =0x040000d4 @ !Hardware REG_DMA3SAD \n\
+/* 08007b4e */ LDR R1, =D_08000cfc \n\
 /* 08007b50 */ STR R1, [R2] \n\
 /* 08007b52 */ LDR R3, =0x03000eb0 @ !PossiblePointer \n\
 /* 08007b54 */ STR R3, [R2, 0x4] \n\

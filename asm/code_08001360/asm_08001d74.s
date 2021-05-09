@@ -18,7 +18,7 @@ glabel func_08001d74 \n\
 /* 08001d8c */ MOVS R1, 0xFF @ Set R1 to 0xFF \n\
 /* 08001d8e */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 08001d90 */ LSLS R0, R0, 0x9 \n\
-/* 08001d92 */ LDR R1, =0xfffe01ff @ !PossiblePointer \n\
+/* 08001d92 */ LDR R1, =0xfffe01ff \n\
 /* 08001d94 */ ANDS R1, R2 @ Set R1 to R1 & R2 \n\
 /* 08001d96 */ ORRS R1, R0 @ Set R1 to R1 | R0 \n\
 /* 08001d98 */ STR R1, [R5] \n\

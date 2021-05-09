@@ -57,7 +57,7 @@ branch_08007c78: \n\
 /* 08007c84 */ ANDS R0, R3 @ Set R0 to R0 & R3 \n\
 /* 08007c86 */ ORRS R0, R2 @ Set R0 to R0 | R2 \n\
 /* 08007c88 */ STRH R0, [R4, 0x2] \n\
-/* 08007c8a */ LDR R0, =0x00007fff @ !PossiblePointer \n\
+/* 08007c8a */ LDR R0, =0x7fff \n\
 /* 08007c8c */ ANDS R1, R0 @ Set R1 to R1 & R0 \n\
 /* 08007c8e */ LDR R0, [R4] \n\
 /* 08007c90 */ LSLS R0, R0, 0xF \n\

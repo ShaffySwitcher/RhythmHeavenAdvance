@@ -8,7 +8,7 @@ glabel func_08006e88 \n\
 /* 08006e8c */ PUSH {R7} \n\
 /* 08006e8e */ SUB SP, 0xC \n\
 /* 08006e90 */ LDR R5, =0x03004b10 @ !PossiblePointer \n\
-/* 08006e92 */ LDR R0, =0x00000854 @ !PossiblePointer \n\
+/* 08006e92 */ LDR R0, =0x854 \n\
 /* 08006e94 */ ADDS R0, R0, R5 @ Set R0 to R0 + R5 \n\
 /* 08006e96 */ MOV R8, R0 @ Set R8 to R0 \n\
 /* 08006e98 */ LDRB R1, [R0] \n\
@@ -16,7 +16,7 @@ glabel func_08006e88 \n\
 /* 08006e9c */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 08006e9e */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08006ea0 */ BEQ branch_08006f6c \n\
-/* 08006ea2 */ LDR R0, =0x040000d4 @ !PossiblePointer \n\
+/* 08006ea2 */ LDR R0, =0x040000d4 @ !Hardware REG_DMA3SAD \n\
 /* 08006ea4 */ ADDS R1, R5, 0x4 @ Set R1 to R5 + 0x4 \n\
 /* 08006ea6 */ STR R1, [R0] \n\
 /* 08006ea8 */ LDR R1, =0x04000008 @ !PossiblePointer \n\
@@ -47,12 +47,12 @@ glabel func_08006e88 \n\
 /* 08006ede */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 08006ee0 */ MOV R2, R8 @ Set R2 to R8 \n\
 /* 08006ee2 */ LDRH R1, [R2] \n\
-/* 08006ee4 */ LDR R0, =0x0000fff2 @ !PossiblePointer \n\
+/* 08006ee4 */ LDR R0, =0xfff2 \n\
 /* 08006ee6 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 08006ee8 */ ADDS R5, 0x54 @ Add 0x54 to R5 \n\
 /* 08006eea */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08006eec */ BEQ branch_08006ef0 \n\
-/* 08006eee */ LDR R5, =0x030046c0 @ !PossiblePointer \n\
+/* 08006eee */ LDR R5, =D_030046c0 \n\
  \n\
 branch_08006ef0: \n\
 /* 08006ef0 */ CMP R4, 0x0 @ Compare R4 and 0x0 \n\

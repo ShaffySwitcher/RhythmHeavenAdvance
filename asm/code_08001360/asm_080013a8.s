@@ -25,7 +25,7 @@ branch_080013bc: \n\
 /* 080013cc */ STR R0, [SP] \n\
  \n\
 branch_080013ce: \n\
-/* 080013ce */ LDR R0, =0x03000098 @ !PossiblePointer \n\
+/* 080013ce */ LDR R0, =D_03000098 \n\
 /* 080013d0 */ LDRH R0, [R0] \n\
 /* 080013d2 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 080013d4 */ BEQ branch_080013bc \n\

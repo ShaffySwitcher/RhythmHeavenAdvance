@@ -74,7 +74,7 @@ branch_08005b6e: \n\
 /* 08005b9c */ STRH R1, [R4, 0x18] \n\
 /* 08005b9e */ LDR R0, [R2] \n\
 /* 08005ba0 */ ADDS R0, 0x1 @ Add 0x1 to R0 \n\
-/* 08005ba2 */ LDR R1, =0x7fffffff @ !PossiblePointer \n\
+/* 08005ba2 */ LDR R1, =0x7fffffff \n\
 /* 08005ba4 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 08005ba6 */ STR R0, [R2] \n\
 /* 08005ba8 */ LDR R0, [R4, 0x8] \n\

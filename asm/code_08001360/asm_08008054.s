@@ -9,7 +9,7 @@ glabel func_08008054 \n\
 /* 0800805a */ LSRS R0, R0, 0x10 \n\
 /* 0800805c */ LSLS R1, R1, 0x10 \n\
 /* 0800805e */ LSLS R2, R2, 0x10 \n\
-/* 08008060 */ LDR R4, =0x0000ffff @ !PossiblePointer \n\
+/* 08008060 */ LDR R4, =0xffff \n\
 /* 08008062 */ LSRS R1, R1, 0x10 \n\
 /* 08008064 */ ORRS R1, R2 @ Set R1 to R1 | R2 \n\
 /* 08008066 */ STR R1, [SP, 0x4] \n\

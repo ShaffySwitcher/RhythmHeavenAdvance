@@ -44,7 +44,7 @@ branch_08003034: \n\
 /* 08003048 */ LSRS R1, R0, 0x10 \n\
  \n\
 branch_0800304a: \n\
-/* 0800304a */ LDR R4, =0x0893644e @ !PossiblePointer \n\
+/* 0800304a */ LDR R4, =D_0893644e \n\
 /* 0800304c */ LSLS R0, R1, 0x10 \n\
 /* 0800304e */ ASRS R0, R0, 0x8 \n\
 /* 08003050 */ LSLS R1, R3, 0x10 \n\

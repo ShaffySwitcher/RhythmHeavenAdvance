@@ -8,7 +8,7 @@ glabel func_0800294c \n\
 /* 08002950 */ LSRS R2, R1, 0x18 \n\
 /* 08002952 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08002954 */ BEQ branch_08002960 \n\
-/* 08002956 */ LDR R1, =0x0000ffff @ !PossiblePointer \n\
+/* 08002956 */ LDR R1, =0xffff \n\
 /* 08002958 */ LSLS R2, R2, 0x18 \n\
 /* 0800295a */ ASRS R2, R2, 0x18 \n\
 /* 0800295c */ BL func_0804b66c \n\

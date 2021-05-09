@@ -12,11 +12,11 @@ glabel func_080027d8 \n\
 /* 080027e4 */ CMP R6, 0x0 @ Compare R6 and 0x0 \n\
 /* 080027e6 */ BEQ branch_08002818 \n\
 /* 080027e8 */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
-/* 080027ea */ LDR R0, =0x08aa445c @ !PossiblePointer \n\
+/* 080027ea */ LDR R0, =D_08aa445c \n\
 /* 080027ec */ LDRB R0, [R0] \n\
 /* 080027ee */ CMP R4, R0 @ Check R4 - R0 \n\
 /* 080027f0 */ BCS branch_08002818 \n\
-/* 080027f2 */ LDR R5, =0x08aa4460 @ !PossiblePointer \n\
+/* 080027f2 */ LDR R5, =D_08aa4460 \n\
  \n\
 branch_080027f4: \n\
 /* 080027f4 */ LDR R1, [R5] \n\
@@ -36,7 +36,7 @@ branch_08002800: \n\
 branch_0800280c: \n\
 /* 0800280c */ ADDS R5, 0xC @ Add 0xC to R5 \n\
 /* 0800280e */ ADDS R4, 0x1 @ Add 0x1 to R4 \n\
-/* 08002810 */ LDR R0, =0x08aa445c @ !PossiblePointer \n\
+/* 08002810 */ LDR R0, =D_08aa445c \n\
 /* 08002812 */ LDRB R0, [R0] \n\
 /* 08002814 */ CMP R4, R0 @ Check R4 - R0 \n\
 /* 08002816 */ BCC branch_080027f4 \n\

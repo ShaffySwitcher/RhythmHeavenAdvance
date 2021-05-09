@@ -13,7 +13,7 @@ glabel func_0800716c \n\
 /* 0800717a */ MOV R8, R1 @ Set R8 to R1 \n\
 /* 0800717c */ ADDS R1, R2, 0x0 @ Set R1 to R2 + 0x0 \n\
 /* 0800717e */ ADDS R0, R3, 0x0 @ Set R0 to R3 + 0x0 \n\
-/* 08007180 */ LDR R7, =0x030046c0 @ !PossiblePointer \n\
+/* 08007180 */ LDR R7, =D_030046c0 \n\
 /* 08007182 */ LSLS R0, R0, 0x8 \n\
 /* 08007184 */ BL func_0804f0d8 \n\
 /* 08007188 */ ADDS R5, R0, 0x0 @ Set R5 to R0 + 0x0 \n\

@@ -11,7 +11,7 @@ glabel func_08006628 \n\
 /* 08006632 */ LSLS R1, R4, 0x2 \n\
 /* 08006634 */ ADDS R1, R1, R6 @ Set R1 to R1 + R6 \n\
 /* 08006636 */ LDR R3, [R1] \n\
-/* 08006638 */ LDR R2, =0xffff0000 @ !PossiblePointer \n\
+/* 08006638 */ LDR R2, =0xffff0000 \n\
 /* 0800663a */ ANDS R3, R2 @ Set R3 to R3 & R2 \n\
 /* 0800663c */ STR R3, [R1] \n\
 /* 0800663e */ ADDS R7, R0, 0x0 @ Set R7 to R0 + 0x0 \n\

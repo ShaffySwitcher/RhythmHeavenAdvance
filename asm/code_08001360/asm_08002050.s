@@ -19,7 +19,7 @@ glabel func_08002050 \n\
 /* 0800206a */ STR R3, [SP, 0x8] \n\
 /* 0800206c */ STR R6, [SP, 0xC] \n\
 /* 0800206e */ STR R7, [SP, 0x10] \n\
-/* 08002070 */ LDR R1, =0x089363ec @ !PossiblePointer \n\
+/* 08002070 */ LDR R1, =D_089363ec \n\
 /* 08002072 */ STR R5, [SP] \n\
 /* 08002074 */ ADDS R2, R4, 0x0 @ Set R2 to R4 + 0x0 \n\
 /* 08002076 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\

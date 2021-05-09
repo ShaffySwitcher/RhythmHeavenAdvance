@@ -10,7 +10,7 @@ glabel func_080021b8 \n\
 /* 080021c0 */ ADDS R7, R0, 0x0 @ Set R7 to R0 + 0x0 \n\
 /* 080021c2 */ CMP R7, 0x0 @ Compare R7 and 0x0 \n\
 /* 080021c4 */ BLT branch_08002214 \n\
-/* 080021c6 */ LDR R4, =0x03000138 @ !PossiblePointer \n\
+/* 080021c6 */ LDR R4, =D_03000138 \n\
 /* 080021c8 */ LSLS R5, R7, 0x3 \n\
 /* 080021ca */ ADDS R0, R5, R4 @ Set R0 to R5 + R4 \n\
 /* 080021cc */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
@@ -35,7 +35,7 @@ glabel func_080021b8 \n\
 /* 080021f2 */ ADDS R4, R1, R4 @ Set R4 to R1 + R4 \n\
 /* 080021f4 */ MOV R0, R8 @ Set R0 to R8 \n\
 /* 080021f6 */ STRH R0, [R4] \n\
-/* 080021f8 */ LDR R0, =0x03000238 @ !PossiblePointer \n\
+/* 080021f8 */ LDR R0, =D_03000238 \n\
 /* 080021fa */ ADDS R5, R5, R0 @ Set R5 to R5 + R0 \n\
 /* 080021fc */ MOV R4, R8 @ Set R4 to R8 \n\
 /* 080021fe */ STRH R4, [R5] \n\
@@ -45,7 +45,7 @@ glabel func_080021b8 \n\
 /* 08002206 */ STRH R6, [R2] \n\
 /* 08002208 */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\
 /* 0800220a */ STRH R4, [R1] \n\
-/* 0800220c */ LDR R0, =0x03000340 @ !PossiblePointer \n\
+/* 0800220c */ LDR R0, =D_03000340 \n\
 /* 0800220e */ ADDS R0, R7, R0 @ Set R0 to R7 + R0 \n\
 /* 08002210 */ MOV R1, R9 @ Set R1 to R9 \n\
 /* 08002212 */ STRB R1, [R0] \n\
