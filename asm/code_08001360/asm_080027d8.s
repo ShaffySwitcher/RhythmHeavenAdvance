@@ -16,7 +16,7 @@ glabel func_080027d8 \n\
 /* 080027ec */ LDRB R0, [R0] \n\
 /* 080027ee */ CMP R4, R0 @ Check R4 - R0 \n\
 /* 080027f0 */ BCS branch_08002818 \n\
-/* 080027f2 */ LDR R5, [PC, 0x30] @ 0x08002824 \n\
+/* 080027f2 */ LDR R5, =0x08aa4460 @ !PossiblePointer \n\
  \n\
 branch_080027f4: \n\
 /* 080027f4 */ LDR R1, [R5] \n\
@@ -36,7 +36,7 @@ branch_08002800: \n\
 branch_0800280c: \n\
 /* 0800280c */ ADDS R5, 0xC @ Add 0xC to R5 \n\
 /* 0800280e */ ADDS R4, 0x1 @ Add 0x1 to R4 \n\
-/* 08002810 */ LDR R0, [PC, 0xC] @ 0x08002820 \n\
+/* 08002810 */ LDR R0, =0x08aa445c @ !PossiblePointer \n\
 /* 08002812 */ LDRB R0, [R0] \n\
 /* 08002814 */ CMP R4, R0 @ Check R4 - R0 \n\
 /* 08002816 */ BCC branch_080027f4 \n\

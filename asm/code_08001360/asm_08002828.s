@@ -2,9 +2,7 @@ asm(".syntax unified \n\
 \n\
 .balign 4, 0 \n\
 \n\
-glabel func_08002824 \n\
-/* 08002824 */ ADD R0, R12 @ Add R12 to R0 \n\
-/* 08002826 */ LSRS R2, R5, 0x2 \n\
+glabel func_08002828 \n\
 /* 08002828 */ PUSH {LR} \n\
 /* 0800282a */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0800282c */ BEQ branch_08002834 \n\
