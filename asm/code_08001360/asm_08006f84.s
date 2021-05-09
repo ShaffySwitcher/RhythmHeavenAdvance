@@ -26,16 +26,16 @@ glabel func_08006f84 \n\
  \n\
 branch_08006fae: \n\
 /* 08006fae */ LDRH R1, [R5] \n\
-/* 08006fb0 */ LDR R0, [PC, 0x30] @ 0x08006fe4 \n\
+/* 08006fb0 */ LDR R0, =0xFFF0 \n\
 /* 08006fb2 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 08006fb4 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08006fb6 */ BEQ branch_08006fc8 \n\
-/* 08006fb8 */ LDR R1, [PC, 0x2C] @ 0x08006fe8 \n\
+/* 08006fb8 */ LDR R1, =0x858 \n\
 /* 08006fba */ ADDS R0, R4, R1 @ Set R0 to R4 + R1 \n\
 /* 08006fbc */ LDR R1, [R0] \n\
 /* 08006fbe */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 08006fc0 */ BEQ branch_08006fc8 \n\
-/* 08006fc2 */ LDR R0, [PC, 0x1C] @ 0x08006fe0 \n\
+/* 08006fc2 */ LDR R0, =0x030046c0 @ !PossiblePointer \n\
 /* 08006fc4 */ BL func_0804eaf0 \n\
  \n\
 branch_08006fc8: \n\
