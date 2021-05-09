@@ -10,14 +10,16 @@
 .set D_030064c8, 0x030064c8
 
 .set func_08001360, 0x08001360
-.set func_080029d8, 0x080029d8
-.set func_08002f68, 0x08002f68
+.set func_08003e00, 0x08003e00
 .set func_08003e64, 0x08003e64
+.set func_08003ea4, 0x08003ea4
+.set func_08003eb8, 0x08003eb8
 .set func_08003f28, 0x08003f28
 .set func_08003f50, 0x08003f50
 .set func_08003ff0, 0x08003ff0
 .set func_0800584c, 0x0800584c
 .set func_08005a0c, 0x08005a0c
+.set func_08005b20, 0x08005b20
 .set func_0800650c, 0x0800650c
 .set func_08006580, 0x08006580
 .set func_08006694, 0x08006694
@@ -25,8 +27,12 @@
 .set func_080073b8, 0x080073b8
 .set func_080073f0, 0x080073f0
 .set func_08007b4c, 0x08007b4c
+.set func_08007b80, 0x08007b80
 .set func_0800820c, 0x0800820c
+.set func_08008594, 0x08008594
+.set func_080085e4, 0x080085e4
 .set func_0800861c, 0x0800861c
+.set func_0800869c, 0x0800869c
 .set func_08009150, 0x08009150
 .set func_080091d8, 0x080091d8
 .set func_08009548, 0x08009548
@@ -48,12 +54,35 @@
 .set func_0801d860, 0x0801d860
 .set func_0801e100, 0x0801e100
 
+.set func_08049bfc, 0x08049bfc
+.set func_0804adb0, 0x0804adb0
+.set func_0804b368, 0x0804b368
+.set func_0804b534, 0x0804b534
+.set func_0804b5a0, 0x0804b5a0
+.set func_0804b5d8, 0x0804b5d8
+.set func_0804b5e4, 0x0804b5e4
+.set func_0804b5f0, 0x0804b5f0
+.set func_0804b620, 0x0804b620
+.set func_0804b650, 0x0804b650
+.set func_0804b654, 0x0804b654
+.set func_0804b65c, 0x0804b65c
+.set func_0804b66c, 0x0804b66c
+.set func_0804b710, 0x0804b710
+.set func_0804b7dc, 0x0804b7dc
+.set func_0804b7fc, 0x0804b7fc
 .set func_0804c170, 0x0804c170
 .set func_0804c340, 0x0804c340
 .set func_0804c778, 0x0804c778
 .set func_0804c8b0, 0x0804c8b0
 .set func_0804c96c, 0x0804c96c
 .set func_0804eaec, 0x0804eaec
+.set func_0804eaf0, 0x0804eaf0
+.set func_0804eafc, 0x0804eafc
+.set func_0804eb00, 0x0804eb00
+.set func_0804eb04, 0x0804eb04
+.set func_0804eb28, 0x0804eb28
+.set func_0804ebc0, 0x0804ebc0
+.set func_0804f150, 0x0804f150
 .set func_0804f270, 0x0804f270
 .set D_0804F300, 0x0804f300
 

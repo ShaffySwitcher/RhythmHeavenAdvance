@@ -45,3 +45,251 @@ asm(".include \"include/gba.inc\"");//Temporary
 #include "asm/code_08001360/asm_080019e4.s"
 
 #include "asm/code_08001360/asm_08001a24.s"
+
+#include "asm/code_08001360/asm_08001a28.s"
+
+#include "asm/code_08001360/asm_08001a64.s"
+
+#include "asm/code_08001360/asm_08001b48.s"
+
+#include "asm/code_08001360/asm_08001b98.s"
+
+#include "asm/code_08001360/asm_08001bf8.s"
+
+#include "asm/code_08001360/asm_08001c64.s"
+
+#include "asm/code_08001360/asm_08001cd8.s"
+
+#include "asm/code_08001360/asm_08001d44.s"
+
+#include "asm/code_08001360/asm_08001d74.s"
+
+#include "asm/code_08001360/asm_08001ddc.s"
+
+#include "asm/code_08001360/asm_08001e4c.s"
+
+#include "asm/code_08001360/asm_08001ec4.s"
+
+#include "asm/code_08001360/asm_08001f34.s"
+
+#include "asm/code_08001360/asm_08001f64.s"
+
+#include "asm/code_08001360/asm_08001f94.s"
+
+#include "asm/code_08001360/asm_08001fc4.s"
+
+#include "asm/code_08001360/asm_08001fe0.s"
+
+#include "asm/code_08001360/asm_08002018.s"
+
+#include "asm/code_08001360/asm_08002050.s"
+
+#include "asm/code_08001360/asm_08002088.s"
+
+#include "asm/code_08001360/asm_080020ec.s"
+
+#include "asm/code_08001360/asm_08002150.s"
+
+#include "asm/code_08001360/asm_08002194.s"
+
+#include "asm/code_08001360/asm_080021b8.s"
+
+#include "asm/code_08001360/asm_0800222c.s"
+
+#include "asm/code_08001360/asm_08002260.s"
+
+#include "asm/code_08001360/asm_08002280.s"
+
+#include "asm/code_08001360/asm_080022bc.s"
+
+#include "asm/code_08001360/asm_080022d8.s"
+
+#include "asm/code_08001360/asm_080022f4.s"
+
+#include "asm/code_08001360/asm_08002310.s"
+
+#include "asm/code_08001360/asm_0800232c.s"
+
+#include "asm/code_08001360/asm_080024dc.s"
+
+#include "asm/code_08001360/asm_08002500.s"
+
+#include "asm/code_08001360/asm_08002520.s"
+
+#include "asm/code_08001360/asm_0800253c.s"
+
+#include "asm/code_08001360/asm_08002584.s"
+
+#include "asm/code_08001360/asm_080025bc.s"
+
+#include "asm/code_08001360/asm_080025d8.s"
+
+#include "asm/code_08001360/asm_080025fc.s"
+
+#include "asm/code_08001360/asm_08002630.s"
+
+#include "asm/code_08001360/asm_08002634.s"
+
+#include "asm/code_08001360/asm_0800267c.s"
+
+#include "asm/code_08001360/asm_08002698.s"
+
+#include "asm/code_08001360/asm_080026c4.s"
+
+#include "asm/code_08001360/asm_080026fc.s"
+
+#include "asm/code_08001360/asm_0800274c.s"
+
+#include "asm/code_08001360/asm_08002790.s"
+
+#include "asm/code_08001360/asm_080027d8.s"
+
+#include "asm/code_08001360/asm_08002824.s"
+
+#include "asm/code_08001360/asm_08002838.s"
+
+#include "asm/code_08001360/asm_08002868.s"
+
+#include "asm/code_08001360/asm_08002880.s"
+
+#include "asm/code_08001360/asm_08002894.s"
+
+#include "asm/code_08001360/asm_080028a8.s"
+
+#include "asm/code_08001360/asm_080028c4.s"
+
+#include "asm/code_08001360/asm_080028d8.s"
+
+#include "asm/code_08001360/asm_080028ec.s"
+
+#include "asm/code_08001360/asm_08002920.s"
+
+#include "asm/code_08001360/asm_08002934.s"
+
+#include "asm/code_08001360/asm_0800294c.s"
+
+#include "asm/code_08001360/asm_08002968.s"
+
+#include "asm/code_08001360/asm_08002978.s"
+
+#include "asm/code_08001360/asm_0800298c.s"
+
+#include "asm/code_08001360/asm_080029b0.s"
+
+#include "asm/code_08001360/asm_080029c4.s"
+
+#include "asm/code_08001360/asm_080029d8.s"
+
+#include "asm/code_08001360/asm_08002a18.s"
+
+#include "asm/code_08001360/asm_08002a54.s"
+
+#include "asm/code_08001360/asm_08002a6c.s"
+
+#include "asm/code_08001360/asm_08002b10.s"
+
+#include "asm/code_08001360/asm_08002db0.s"
+
+#include "asm/code_08001360/asm_08002db8.s"
+
+#include "asm/code_08001360/asm_08002dc4.s"
+
+#include "asm/code_08001360/asm_08002dec.s"
+
+#include "asm/code_08001360/asm_08002e18.s"
+
+#include "asm/code_08001360/asm_08002e2c.s"
+
+#include "asm/code_08001360/asm_08002e44.s"
+
+#include "asm/code_08001360/asm_08002e5c.s"
+
+#include "asm/code_08001360/asm_08002e78.s"
+
+#include "asm/code_08001360/asm_08002eb0.s"
+
+#include "asm/code_08001360/asm_08002ecc.s"
+
+#include "asm/code_08001360/asm_08002ee0.s"
+
+#include "asm/code_08001360/asm_08002f04.s"
+
+#include "asm/code_08001360/asm_08002f40.s"
+
+#include "asm/code_08001360/asm_08002f48.s"
+
+#include "asm/code_08001360/asm_08002f54.s"
+
+#include "asm/code_08001360/asm_08002f5c.s"
+
+#include "asm/code_08001360/asm_08002f68.s"
+
+#include "asm/code_08001360/asm_08002f9c.s"
+
+#include "asm/code_08001360/asm_08003004.s"
+
+#include "asm/code_08001360/asm_08003070.s"
+
+#include "asm/code_08001360/asm_0800318c.s"
+
+#include "asm/code_08001360/asm_08003278.s"
+
+#include "asm/code_08001360/asm_08003384.s"
+
+#include "asm/code_08001360/asm_08003398.s"
+
+#include "asm/code_08001360/asm_080033a0.s"
+
+#include "asm/code_08001360/asm_0800351c.s"
+
+#include "asm/code_08001360/asm_08003598.s"
+
+#include "asm/code_08001360/asm_080035a0.s"
+
+#include "asm/code_08001360/asm_080036c4.s"
+
+#include "asm/code_08001360/asm_08003720.s"
+
+#include "asm/code_08001360/asm_0800387c.s"
+
+#include "asm/code_08001360/asm_080038b0.s"
+
+#include "asm/code_08001360/asm_08003974.s"
+
+#include "asm/code_08001360/asm_08003980.s"
+
+#include "asm/code_08001360/asm_080039a8.s"
+
+#include "asm/code_08001360/asm_080039d4.s"
+
+#include "asm/code_08001360/asm_080039e8.s"
+
+#include "asm/code_08001360/asm_08003a00.s"
+
+#include "asm/code_08001360/asm_08003a18.s"
+
+#include "asm/code_08001360/asm_08003a34.s"
+
+#include "asm/code_08001360/asm_08003a40.s"
+
+#include "asm/code_08001360/asm_08003a50.s"
+
+#include "asm/code_08001360/asm_08003a6c.s"
+
+#include "asm/code_08001360/asm_08003a78.s"
+
+#include "asm/code_08001360/asm_08003a88.s"
+
+#include "asm/code_08001360/asm_08003aa4.s"
+
+#include "asm/code_08001360/asm_08003ab8.s"
+
+#include "asm/code_08001360/asm_08003ac4.s"
+
+#include "asm/code_08001360/asm_08003b28.s"
+
+#include "asm/code_08001360/asm_08003b34.s"
+
+#include "asm/code_08001360/asm_08003bd4.s"
+
+#include "asm/code_08001360/asm_08003c18.s"
