@@ -23,7 +23,7 @@ glabel func_080102f4 \n\
 /* 08010316 */ STRH R2, [R0] \n\
 /* 08010318 */ ADDS R0, 0x2 @ Add 0x2 to R0 \n\
 /* 0801031a */ STRH R2, [R0] \n\
-/* 0801031c */ LDR R0, =0x0000ffff @ !PossiblePointer \n\
+/* 0801031c */ LDR R0, =0xffff \n\
 /* 0801031e */ STRH R0, [R4, 0x3E] \n\
 /* 08010320 */ ADDS R5, R3, 0x0 @ Set R5 to R3 + 0x0 \n\
 /* 08010322 */ ADDS R5, 0x16 @ Add 0x16 to R5 \n\
@@ -52,7 +52,7 @@ branch_08010330: \n\
 /* 0801034e */ LSLS R1, R1, 0x1 \n\
 /* 08010350 */ ADDS R6, R4, R1 @ Set R6 to R4 + R1 \n\
 /* 08010352 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
-/* 08010354 */ LDR R3, =0x000001c7 @ !PossiblePointer \n\
+/* 08010354 */ LDR R3, =0x1c7 \n\
 /* 08010356 */ ADDS R5, R4, R3 @ Set R5 to R4 + R3 \n\
 /* 08010358 */ MOVS R0, 0xFF @ Set R0 to 0xFF \n\
 /* 0801035a */ LSLS R0, R0, 0x1 \n\
@@ -72,12 +72,12 @@ branch_0801035e: \n\
 /* 08010372 */ LSLS R1, R1, 0x2 \n\
 /* 08010374 */ ADDS R0, R4, R1 @ Set R0 to R4 + R1 \n\
 /* 08010376 */ BL func_08011a18 \n\
-/* 0801037a */ LDR R2, =0x00000235 @ !PossiblePointer \n\
+/* 0801037a */ LDR R2, =0x235 \n\
 /* 0801037c */ ADDS R1, R4, R2 @ Set R1 to R4 + R2 \n\
 /* 0801037e */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 08010380 */ STRB R0, [R1] \n\
 /* 08010382 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 08010384 */ LDR R3, =0x00000236 @ !PossiblePointer \n\
+/* 08010384 */ LDR R3, =0x236 \n\
 /* 08010386 */ ADDS R1, R4, R3 @ Set R1 to R4 + R3 \n\
 /* 08010388 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
  \n\
@@ -87,13 +87,13 @@ branch_0801038a: \n\
 /* 0801038e */ ADDS R2, 0x1 @ Add 0x1 to R2 \n\
 /* 08010390 */ CMP R2, 0x2F @ Compare R2 and 0x2F \n\
 /* 08010392 */ BLS branch_0801038a \n\
-/* 08010394 */ LDR R0, =0x00000266 @ !PossiblePointer \n\
+/* 08010394 */ LDR R0, =0x266 \n\
 /* 08010396 */ ADDS R1, R4, R0 @ Set R1 to R4 + R0 \n\
 /* 08010398 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0801039a */ STRB R0, [R1] \n\
 /* 0801039c */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 0801039e */ LDR R5, [PC, 0xAC] @ 0x0801044c \n\
-/* 080103a0 */ LDR R3, =0x0000026b @ !PossiblePointer \n\
+/* 0801039e */ LDR R5, =0x030046a8 @ !PossiblePointer \n\
+/* 080103a0 */ LDR R3, =0x26b \n\
 /* 080103a2 */ ADDS R1, R4, R3 @ Set R1 to R4 + R3 \n\
 /* 080103a4 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
  \n\
@@ -104,7 +104,7 @@ branch_080103a6: \n\
 /* 080103ac */ CMP R2, 0x13 @ Compare R2 and 0x13 \n\
 /* 080103ae */ BLS branch_080103a6 \n\
 /* 080103b0 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 080103b2 */ LDR R0, [PC, 0xB4] @ 0x08010468 \n\
+/* 080103b2 */ LDR R0, =0x27f \n\
 /* 080103b4 */ ADDS R1, R4, R0 @ Set R1 to R4 + R0 \n\
 /* 080103b6 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
  \n\
@@ -114,11 +114,11 @@ branch_080103b8: \n\
 /* 080103bc */ ADDS R2, 0x1 @ Add 0x1 to R2 \n\
 /* 080103be */ CMP R2, 0xE @ Compare R2 and 0xE \n\
 /* 080103c0 */ BLS branch_080103b8 \n\
-/* 080103c2 */ LDR R1, [PC, 0xA8] @ 0x0801046c \n\
+/* 080103c2 */ LDR R1, =0x28e \n\
 /* 080103c4 */ ADDS R0, R4, R1 @ Set R0 to R4 + R1 \n\
 /* 080103c6 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 080103c8 */ STRB R2, [R0] \n\
-/* 080103ca */ LDR R3, [PC, 0xA4] @ 0x08010470 \n\
+/* 080103ca */ LDR R3, =0x28f \n\
 /* 080103cc */ ADDS R1, R4, R3 @ Set R1 to R4 + R3 \n\
 /* 080103ce */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 080103d0 */ STRB R0, [R1] \n\
@@ -127,7 +127,7 @@ branch_080103b8: \n\
 /* 080103d6 */ ADDS R1, R4, R0 @ Set R1 to R4 + R0 \n\
 /* 080103d8 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 080103da */ STRB R0, [R1] \n\
-/* 080103dc */ LDR R1, [PC, 0x94] @ 0x08010474 \n\
+/* 080103dc */ LDR R1, =0x291 \n\
 /* 080103de */ ADDS R0, R4, R1 @ Set R0 to R4 + R1 \n\
 /* 080103e0 */ STRB R2, [R0] \n\
 /* 080103e2 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
@@ -172,11 +172,11 @@ branch_080103e8: \n\
 /* 0801042c */ STRB R0, [R4, 0xE] \n\
 /* 0801042e */ STRB R0, [R4, 0x1C] \n\
 /* 08010430 */ STRB R0, [R7] \n\
-/* 08010432 */ LDR R1, [PC, 0x34] @ 0x08010468 \n\
+/* 08010432 */ LDR R1, =0x27f \n\
 /* 08010434 */ ADDS R0, R4, R1 @ Set R0 to R4 + R1 \n\
 /* 08010436 */ MOVS R1, 0x1 @ Set R1 to 0x1 \n\
 /* 08010438 */ STRB R1, [R0] \n\
-/* 0801043a */ LDR R2, [PC, 0x28] @ 0x08010464 \n\
+/* 0801043a */ LDR R2, =0x26b \n\
 /* 0801043c */ ADDS R0, R4, R2 @ Set R0 to R4 + R2 \n\
 /* 0801043e */ STRB R1, [R0] \n\
 /* 08010440 */ SUBS R3, 0x44 @ Subtract 0x44 from R3 \n\
