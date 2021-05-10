@@ -61,197 +61,199 @@ branch_0800cb74: \n\
  \n\
 branch_0800cb88: \n\
 /* 0800cb88 */ BLS branch_0800cb8e \n\
-/* 0800cb8a */ BL func_0800df9e \n\
+/* 0800cb8a */ BL branch_0800df9e \n\
  \n\
 branch_0800cb8e: \n\
 /* 0800cb8e */ LSLS R0, R0, 0x2 \n\
-/* 0800cb90 */ LDR R1, =0x0800cbac @ !JumpTablePointer \n\
+/* 0800cb90 */ LDR R1, =jtbl_0800cbac \n\
 /* 0800cb92 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 0800cb94 */ LDR R0, [R0] \n\
 /* 0800cb96 */ MOV PC, R0 @ Set PC to R0 \n\
 \n\
 .ltorg \n\
  \n\
-.word 0x0800CE78 \n\
-.word 0x0800CE88 \n\
-.word 0x0800D1AE \n\
-.word 0x0800D1D0 \n\
-.word 0x0800D1D8 \n\
-.word 0x0800D1EC \n\
-.word 0x0800D214 \n\
-.word 0x0800D242 \n\
-.word 0x0800D280 \n\
-.word 0x0800D2BE \n\
-.word 0x0800D2F0 \n\
-.word 0x0800D32A \n\
-.word 0x0800D372 \n\
-.word 0x0800CE9A \n\
-.word 0x0800CF10 \n\
-.word 0x0800CF3E \n\
-.word 0x0800CF50 \n\
-.word 0x0800CF5A \n\
-.word 0x0800CF78 \n\
-.word 0x0800CF78 \n\
-.word 0x0800D008 \n\
-.word 0x0800DF9E \n\
-.word 0x0800CFD0 \n\
-.word 0x0800CFEC \n\
-.word 0x0800D47A \n\
-.word 0x0800D4B0 \n\
-.word 0x0800D012 \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800D048 \n\
-.word 0x0800D054 \n\
-.word 0x0800D054 \n\
-.word 0x0800D0AC \n\
-.word 0x0800D0BC \n\
-.word 0x0800D0BC \n\
-.word 0x0800D116 \n\
-.word 0x0800D146 \n\
-.word 0x0800D146 \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800D3BA \n\
-.word 0x0800D3EE \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800D434 \n\
-.word 0x0800D44A \n\
-.word 0x0800DF9E \n\
-.word 0x0800D460 \n\
-.word 0x0800D4D0 \n\
-.word 0x0800D3D4 \n\
-.word 0x0800DF9E \n\
-.word 0x0800D4EE \n\
-.word 0x0800D514 \n\
-.word 0x0800D522 \n\
-.word 0x0800D530 \n\
-.word 0x0800D55C \n\
-.word 0x0800D5F4 \n\
-.word 0x0800D62C \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800D78C \n\
-.word 0x0800D4DA \n\
-.word 0x0800D79C \n\
-.word 0x0800D7B2 \n\
-.word 0x0800D7CC \n\
-.word 0x0800DF9E \n\
-.word 0x0800D800 \n\
-.word 0x0800DF9E \n\
-.word 0x0800D816 \n\
-.word 0x0800DF9E \n\
-.word 0x0800D820 \n\
-.word 0x0800D864 \n\
-.word 0x0800D872 \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800D87E \n\
-.word 0x0800D8B0 \n\
-.word 0x0800D8CC \n\
-.word 0x0800D8F4 \n\
-.word 0x0800D930 \n\
-.word 0x0800D96C \n\
-.word 0x0800DA20 \n\
-.word 0x0800DA3C \n\
-.word 0x0800DA5C \n\
-.word 0x0800DA78 \n\
-.word 0x0800DAE4 \n\
-.word 0x0800DB00 \n\
-.word 0x0800DB54 \n\
-.word 0x0800DB68 \n\
-.word 0x0800DB9A \n\
-.word 0x0800DBD0 \n\
-.word 0x0800DC18 \n\
-.word 0x0800DC60 \n\
-.word 0x0800DD70 \n\
-.word 0x0800DD80 \n\
-.word 0x0800DDD4 \n\
-.word 0x0800DA94 \n\
-.word 0x0800D984 \n\
-.word 0x0800D9F4 \n\
-.word 0x0800DCA2 \n\
-.word 0x0800DCBE \n\
-.word 0x0800DCDE \n\
-.word 0x0800DD0A \n\
-.word 0x0800DD3A \n\
-.word 0x0800DE90 \n\
-.word 0x0800DEFC \n\
-.word 0x0800DF1C \n\
-.word 0x0800DF38 \n\
-.word 0x0800D688 \n\
-.word 0x0800D6E4 \n\
-.word 0x0800DF48 \n\
-.word 0x0800D740 \n\
-.word 0x0800DF52 \n\
-.word 0x0800DF6A \n\
-.word 0x0800D4FC \n\
-.word 0x0800DF7E \n\
-.word 0x0800DEE4 \n\
-.word 0x0800DF9E \n\
-.word 0x0800DF9E \n\
-.word 0x0800D830 \n\
-.word 0x0800D83E \n\
-.word 0x0800D3F8 \n\
-.word 0x0800D804 \n\
-.word 0x0800CECE \n\
-.word 0x0800CF46 \n\
-.word 0x0800D406 \n\
+ jtbl_0800cbac: \n\
+.word jump_0800ce78 \n\
+.word jump_0800ce88 \n\
+.word jump_0800d1ae \n\
+.word jump_0800d1d0 \n\
+.word jump_0800d1d8 \n\
+.word jump_0800d1ec \n\
+.word jump_0800d214 \n\
+.word jump_0800d242 \n\
+.word jump_0800d280 \n\
+.word jump_0800d2be \n\
+.word jump_0800d2f0 \n\
+.word jump_0800d32a \n\
+.word jump_0800d372 \n\
+.word jump_0800ce9a \n\
+.word jump_0800cf10 \n\
+.word jump_0800cf3e \n\
+.word jump_0800cf50 \n\
+.word jump_0800cf5a \n\
+.word jump_0800cf78 \n\
+.word jump_0800cf78 \n\
+.word jump_0800d008 \n\
+.word branch_0800df9e \n\
+.word jump_0800cfd0 \n\
+.word jump_0800cfec \n\
+.word jump_0800d47a \n\
+.word jump_0800d4b0 \n\
+.word jump_0800d012 \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word jump_0800d048 \n\
+.word jump_0800d054 \n\
+.word jump_0800d054 \n\
+.word jump_0800d0ac \n\
+.word jump_0800d0bc \n\
+.word jump_0800d0bc \n\
+.word jump_0800d116 \n\
+.word jump_0800d146 \n\
+.word jump_0800d146 \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word jump_0800d3ba \n\
+.word jump_0800d3ee \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word jump_0800d434 \n\
+.word jump_0800d44a \n\
+.word branch_0800df9e \n\
+.word jump_0800d460 \n\
+.word jump_0800d4d0 \n\
+.word jump_0800d3d4 \n\
+.word branch_0800df9e \n\
+.word jump_0800d4ee \n\
+.word jump_0800d514 \n\
+.word jump_0800d522 \n\
+.word jump_0800d530 \n\
+.word jump_0800d55c \n\
+.word jump_0800d5f4 \n\
+.word jump_0800d62c \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word jump_0800d78c \n\
+.word jump_0800d4da \n\
+.word jump_0800d79c \n\
+.word jump_0800d7b2 \n\
+.word jump_0800d7cc \n\
+.word branch_0800df9e \n\
+.word jump_0800d800 \n\
+.word branch_0800df9e \n\
+.word jump_0800d816 \n\
+.word branch_0800df9e \n\
+.word jump_0800d820 \n\
+.word jump_0800d864 \n\
+.word jump_0800d872 \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word jump_0800d87e \n\
+.word jump_0800d8b0 \n\
+.word jump_0800d8cc \n\
+.word jump_0800d8f4 \n\
+.word jump_0800d930 \n\
+.word jump_0800d96c \n\
+.word jump_0800da20 \n\
+.word jump_0800da3c \n\
+.word jump_0800da5c \n\
+.word jump_0800da78 \n\
+.word jump_0800dae4 \n\
+.word jump_0800db00 \n\
+.word jump_0800db54 \n\
+.word jump_0800db68 \n\
+.word jump_0800db9a \n\
+.word jump_0800dbd0 \n\
+.word jump_0800dc18 \n\
+.word jump_0800dc60 \n\
+.word jump_0800dd70 \n\
+.word jump_0800dd80 \n\
+.word jump_0800ddd4 \n\
+.word jump_0800da94 \n\
+.word jump_0800d984 \n\
+.word jump_0800d9f4 \n\
+.word jump_0800dca2 \n\
+.word jump_0800dcbe \n\
+.word jump_0800dcde \n\
+.word jump_0800dd0a \n\
+.word jump_0800dd3a \n\
+.word jump_0800de90 \n\
+.word jump_0800defc \n\
+.word jump_0800df1c \n\
+.word jump_0800df38 \n\
+.word jump_0800d688 \n\
+.word jump_0800d6e4 \n\
+.word jump_0800df48 \n\
+.word jump_0800d740 \n\
+.word jump_0800df52 \n\
+.word jump_0800df6a \n\
+.word jump_0800d4fc \n\
+.word jump_0800df7e \n\
+.word jump_0800dee4 \n\
+.word branch_0800df9e \n\
+.word branch_0800df9e \n\
+.word jump_0800d830 \n\
+.word jump_0800d83e \n\
+.word jump_0800d3f8 \n\
+.word jump_0800d804 \n\
+.word jump_0800cece \n\
+.word jump_0800cf46 \n\
+.word jump_0800d406 \n\
 \n\
+jump_0800ce78: \n\
 /* 0800ce78 */ MOV R5, R8 @ Set R5 to R8 \n\
 /* 0800ce7a */ LSLS R1, R5, 0x8 \n\
 /* 0800ce7c */ MOV R6, R9 @ Set R6 to R9 \n\
@@ -260,9 +262,9 @@ branch_0800cb8e: \n\
 /* 0800ce82 */ STR R0, [R6, 0xC] \n\
  \n\
 branch_0800ce84: \n\
-/* 0800ce84 */ BL func_0800df9e \n\
+/* 0800ce84 */ BL branch_0800df9e \n\
  \n\
-branch_0800ce88: \n\
+jump_0800ce88: \n\
 /* 0800ce88 */ MOV R0, R9 @ Set R0 to R9 \n\
 /* 0800ce8a */ LDRB R1, [R0] \n\
 /* 0800ce8c */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
@@ -272,7 +274,9 @@ branch_0800ce88: \n\
  \n\
 branch_0800ce94: \n\
 /* 0800ce94 */ STRB R0, [R1] \n\
-/* 0800ce96 */ BL func_0800df9e \n\
+/* 0800ce96 */ BL branch_0800df9e \n\
+\n\
+jump_0800ce9a: \n\
 /* 0800ce9a */ MOV R2, R9 @ Set R2 to R9 \n\
  \n\
 branch_0800ce9c: \n\
@@ -307,12 +311,14 @@ branch_0800cec4: \n\
 /* 0800cec4 */ ORRS R0, R1 @ Set R0 to R0 | R1 \n\
 /* 0800cec6 */ MOV R3, R9 @ Set R3 to R9 \n\
 /* 0800cec8 */ STRB R0, [R3] \n\
-/* 0800ceca */ BL func_0800df9e \n\
+/* 0800ceca */ BL branch_0800df9e \n\
+\n\
+jump_0800cece: \n\
 /* 0800cece */ LDR R0, =0x030053c0 @ !PossiblePointer \n\
 /* 0800ced0 */ LDR R2, [R0, 0x24] \n\
 /* 0800ced2 */ CMP R2, 0x0 @ Compare R2 and 0x0 \n\
 /* 0800ced4 */ BNE branch_0800ceda \n\
-/* 0800ced6 */ BL func_0800df9e \n\
+/* 0800ced6 */ BL branch_0800df9e \n\
  \n\
 branch_0800ceda: \n\
 /* 0800ceda */ MOV R4, R9 @ Set R4 to R9 \n\
@@ -340,9 +346,11 @@ branch_0800cee0: \n\
 /* 0800cf02 */ ANDS R0, R2 @ Set R0 to R0 & R2 \n\
 /* 0800cf04 */ ORRS R0, R1 @ Set R0 to R0 | R1 \n\
 /* 0800cf06 */ STRB R0, [R4] \n\
-/* 0800cf08 */ BL func_0800df9e \n\
+/* 0800cf08 */ BL branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800cf10: \n\
 /* 0800cf10 */ MOV R5, R9 @ Set R5 to R9 \n\
 /* 0800cf12 */ LDRB R2, [R5] \n\
 /* 0800cf14 */ LSLS R1, R2, 0x1B \n\
@@ -364,32 +372,42 @@ branch_0800cee0: \n\
 /* 0800cf34 */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\
 /* 0800cf36 */ LDR R0, [R1] \n\
 /* 0800cf38 */ STR R0, [R5, 0x8] \n\
-/* 0800cf3a */ BL func_0800df9e \n\
+/* 0800cf3a */ BL branch_0800df9e \n\
+\n\
+jump_0800cf3e: \n\
 /* 0800cf3e */ MOV R0, R9 @ Set R0 to R9 \n\
 /* 0800cf40 */ STR R6, [R0, 0x8] \n\
-/* 0800cf42 */ BL func_0800df9e \n\
+/* 0800cf42 */ BL branch_0800df9e \n\
+\n\
+jump_0800cf46: \n\
 /* 0800cf46 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0800cf48 */ MOV R1, R9 @ Set R1 to R9 \n\
 /* 0800cf4a */ STR R0, [R1, 0xC] \n\
-/* 0800cf4c */ BL func_0800df9e \n\
+/* 0800cf4c */ BL branch_0800df9e \n\
+\n\
+jump_0800cf50: \n\
 /* 0800cf50 */ MOV R2, R9 @ Set R2 to R9 \n\
 /* 0800cf52 */ LDR R0, [R2, 0x8] \n\
 /* 0800cf54 */ STR R0, [R2, 0x50] \n\
-/* 0800cf56 */ BL func_0800df9e \n\
+/* 0800cf56 */ BL branch_0800df9e \n\
+\n\
+jump_0800cf5a: \n\
 /* 0800cf5a */ LDR R0, =0x030053c0 @ !PossiblePointer \n\
 /* 0800cf5c */ LDRB R0, [R0] \n\
 /* 0800cf5e */ LSLS R0, R0, 0x1B \n\
 /* 0800cf60 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0800cf62 */ BGE branch_0800cf68 \n\
-/* 0800cf64 */ BL func_0800df9e \n\
+/* 0800cf64 */ BL branch_0800df9e \n\
  \n\
 branch_0800cf68: \n\
 /* 0800cf68 */ MOV R3, R9 @ Set R3 to R9 \n\
 /* 0800cf6a */ LDR R0, [R3, 0x50] \n\
 /* 0800cf6c */ STR R0, [R3, 0x8] \n\
-/* 0800cf6e */ BL func_0800df9e \n\
+/* 0800cf6e */ BL branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800cf78: \n\
 /* 0800cf78 */ CMP R7, 0x1 @ Compare R7 and 0x1 \n\
 /* 0800cf7a */ BEQ branch_0800cf94 \n\
 /* 0800cf7c */ CMP R7, 0x1 @ Compare R7 and 0x1 \n\
@@ -441,43 +459,51 @@ branch_0800cfbc: \n\
 branch_0800cfbe: \n\
 /* 0800cfbe */ CMP R5, 0x0 @ Compare R5 and 0x0 \n\
 /* 0800cfc0 */ BNE branch_0800cfc6 \n\
-/* 0800cfc2 */ BL func_0800df9e \n\
+/* 0800cfc2 */ BL branch_0800df9e \n\
  \n\
 branch_0800cfc6: \n\
 /* 0800cfc6 */ MOV R1, R9 @ Set R1 to R9 \n\
 /* 0800cfc8 */ LDR R0, [R1, 0x8] \n\
 /* 0800cfca */ BL func_0800c6e4 \n\
 /* 0800cfce */ B branch_0800d1a6 \n\
+\n\
+jump_0800cfd0: \n\
 /* 0800cfd0 */ LDR R0, [R6] \n\
 /* 0800cfd2 */ MOV R3, R8 @ Set R3 to R8 \n\
 /* 0800cfd4 */ ANDS R0, R3 @ Set R0 to R0 & R3 \n\
 /* 0800cfd6 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0800cfd8 */ BEQ branch_0800cfde \n\
-/* 0800cfda */ BL func_0800df9e \n\
+/* 0800cfda */ BL branch_0800df9e \n\
  \n\
 branch_0800cfde: \n\
 /* 0800cfde */ MOV R4, R9 @ Set R4 to R9 \n\
 /* 0800cfe0 */ LDR R0, [R4, 0x8] \n\
 /* 0800cfe2 */ BL func_0800c6e4 \n\
 /* 0800cfe6 */ STR R0, [R4, 0x8] \n\
-/* 0800cfe8 */ BL func_0800df9e \n\
+/* 0800cfe8 */ BL branch_0800df9e \n\
+\n\
+jump_0800cfec: \n\
 /* 0800cfec */ LDR R0, [R6] \n\
 /* 0800cfee */ MOV R5, R8 @ Set R5 to R8 \n\
 /* 0800cff0 */ ANDS R0, R5 @ Set R0 to R0 & R5 \n\
 /* 0800cff2 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0800cff4 */ BNE branch_0800cffa \n\
-/* 0800cff6 */ BL func_0800df9e \n\
+/* 0800cff6 */ BL branch_0800df9e \n\
  \n\
 branch_0800cffa: \n\
 /* 0800cffa */ MOV R6, R9 @ Set R6 to R9 \n\
 /* 0800cffc */ LDR R0, [R6, 0x8] \n\
 /* 0800cffe */ BL func_0800c6e4 \n\
 /* 0800d002 */ STR R0, [R6, 0x8] \n\
-/* 0800d004 */ BL func_0800df9e \n\
+/* 0800d004 */ BL branch_0800df9e \n\
+\n\
+jump_0800d008: \n\
 /* 0800d008 */ MOV R1, R9 @ Set R1 to R9 \n\
 /* 0800d00a */ LDR R0, [R1, 0x8] \n\
 /* 0800d00c */ BL func_0800c824 \n\
 /* 0800d010 */ B branch_0800d1a6 \n\
+\n\
+jump_0800d012: \n\
 /* 0800d012 */ CMP R7, 0x1 @ Compare R7 and 0x1 \n\
 /* 0800d014 */ BEQ branch_0800d02a \n\
 /* 0800d016 */ CMP R7, 0x1 @ Compare R7 and 0x1 \n\
@@ -513,10 +539,14 @@ branch_0800d03c: \n\
 /* 0800d040 */ ADDS R1, R5, 0x0 @ Set R1 to R5 + 0x0 \n\
 /* 0800d042 */ BL func_0800c95c \n\
 /* 0800d046 */ B branch_0800d1a6 \n\
+\n\
+jump_0800d048: \n\
 /* 0800d048 */ MOV R3, R9 @ Set R3 to R9 \n\
 /* 0800d04a */ LDR R0, [R3, 0x8] \n\
 /* 0800d04c */ BL func_0800c9a4 \n\
 /* 0800d050 */ BL func_0800d86c \n\
+\n\
+jump_0800d054: \n\
 /* 0800d054 */ CMP R7, 0x1 @ Compare R7 and 0x1 \n\
 /* 0800d056 */ BEQ branch_0800d06c \n\
 /* 0800d058 */ CMP R7, 0x1 @ Compare R7 and 0x1 \n\
@@ -569,19 +599,23 @@ branch_0800d096: \n\
 branch_0800d098: \n\
 /* 0800d098 */ CMP R5, 0x0 @ Compare R5 and 0x0 \n\
 /* 0800d09a */ BNE branch_0800d0a0 \n\
-/* 0800d09c */ BL func_0800df9e \n\
+/* 0800d09c */ BL branch_0800df9e \n\
  \n\
 branch_0800d0a0: \n\
 /* 0800d0a0 */ MOV R3, R9 @ Set R3 to R9 \n\
 /* 0800d0a2 */ LDR R0, [R3, 0x8] \n\
 /* 0800d0a4 */ BL func_0800c9c8 \n\
 /* 0800d0a8 */ BL func_0800d86c \n\
+\n\
+jump_0800d0ac: \n\
 /* 0800d0ac */ MOV R5, R9 @ Set R5 to R9 \n\
 /* 0800d0ae */ LDR R0, [R5, 0x8] \n\
 /* 0800d0b0 */ SUBS R0, 0xC @ Subtract 0xC from R0 \n\
 /* 0800d0b2 */ BL func_0800ca1c \n\
 /* 0800d0b6 */ STR R0, [R5, 0x8] \n\
-/* 0800d0b8 */ BL func_0800df9e \n\
+/* 0800d0b8 */ BL branch_0800df9e \n\
+\n\
+jump_0800d0bc: \n\
 /* 0800d0bc */ LDR R0, =0x030046a4 @ !PossiblePointer \n\
 /* 0800d0be */ LDR R0, [R0] \n\
 /* 0800d0c0 */ ADDS R4, R0, R6 @ Set R4 to R0 + R6 \n\
@@ -638,10 +672,12 @@ branch_0800d10a: \n\
 branch_0800d10c: \n\
 /* 0800d10c */ CMP R5, 0x0 @ Compare R5 and 0x0 \n\
 /* 0800d10e */ BNE branch_0800d114 \n\
-/* 0800d110 */ BL func_0800df9e \n\
+/* 0800d110 */ BL branch_0800df9e \n\
  \n\
 branch_0800d114: \n\
-/* 0800d114 */ B branch_0800d872 \n\
+/* 0800d114 */ B jump_0800d872 \n\
+\n\
+jump_0800d116: \n\
 /* 0800d116 */ LDR R0, =0x030046a4 @ !PossiblePointer \n\
 /* 0800d118 */ LDR R0, [R0] \n\
 /* 0800d11a */ MOV R6, R8 @ Set R6 to R8 \n\
@@ -673,6 +709,8 @@ branch_0800d13a: \n\
 /* 0800d13e */ ADDS R1, R5, 0x0 @ Set R1 to R5 + 0x0 \n\
 /* 0800d140 */ BL func_0800c95c \n\
 /* 0800d144 */ B branch_0800d1a6 \n\
+\n\
+jump_0800d146: \n\
 /* 0800d146 */ LDR R0, =0x030046a4 @ !PossiblePointer \n\
 /* 0800d148 */ LDR R0, [R0] \n\
 /* 0800d14a */ ADDS R4, R0, R6 @ Set R4 to R0 + R6 \n\
@@ -730,7 +768,7 @@ branch_0800d194: \n\
 branch_0800d196: \n\
 /* 0800d196 */ CMP R5, 0x0 @ Compare R5 and 0x0 \n\
 /* 0800d198 */ BNE branch_0800d19e \n\
-/* 0800d19a */ BL func_0800df9e \n\
+/* 0800d19a */ BL branch_0800df9e \n\
  \n\
 branch_0800d19e: \n\
 /* 0800d19e */ MOV R1, R9 @ Set R1 to R9 \n\
@@ -740,7 +778,9 @@ branch_0800d19e: \n\
 branch_0800d1a6: \n\
 /* 0800d1a6 */ MOV R2, R9 @ Set R2 to R9 \n\
 /* 0800d1a8 */ STR R0, [R2, 0x8] \n\
-/* 0800d1aa */ BL func_0800df9e \n\
+/* 0800d1aa */ BL branch_0800df9e \n\
+\n\
+jump_0800d1ae: \n\
 /* 0800d1ae */ MOV R3, R10 @ Set R3 to R10 \n\
 /* 0800d1b0 */ LSLS R0, R3, 0x2 \n\
 /* 0800d1b2 */ LDR R4, =0x03005520 @ !PossiblePointer \n\
@@ -750,12 +790,14 @@ branch_0800d1a6: \n\
 /* 0800d1bc */ LDR R5, =0xfffffea0 @ !PossiblePointer \n\
 /* 0800d1be */ ADDS R1, R4, R5 @ Set R1 to R4 + R5 \n\
 /* 0800d1c0 */ STR R0, [R1, 0x24] \n\
-/* 0800d1c2 */ BL func_0800df9e \n\
+/* 0800d1c2 */ BL branch_0800df9e \n\
 \n\
 .ltorg \n\
+jump_0800d1d0: \n\
 /* 0800d1d0 */ MOV R0, R8 @ Set R0 to R8 \n\
 /* 0800d1d2 */ BL func_0804eb04 \n\
 /* 0800d1d6 */ B branch_0800d1e0 \n\
+jump_0800d1d8: \n\
 /* 0800d1d8 */ MOV R0, R8 @ Set R0 to R8 \n\
 /* 0800d1da */ ADDS R1, R7, 0x0 @ Set R1 to R7 + 0x0 \n\
 /* 0800d1dc */ BL func_0804eb04 \n\
@@ -763,63 +805,68 @@ branch_0800d1a6: \n\
 branch_0800d1e0: \n\
 /* 0800d1e0 */ LDR R1, =0x030053c0 @ !PossiblePointer \n\
 /* 0800d1e2 */ STR R0, [R1, 0x24] \n\
-/* 0800d1e4 */ BL func_0800df9e \n\
+/* 0800d1e4 */ BL branch_0800df9e \n\
 \n\
 .ltorg \n\
+jump_0800d1ec: \n\
 /* 0800d1ec */ CMP R7, 0x1 @ Compare R7 and 0x1 \n\
 /* 0800d1ee */ BEQ branch_0800d204 \n\
 /* 0800d1f0 */ CMP R7, 0x1 @ Compare R7 and 0x1 \n\
 /* 0800d1f2 */ BCC branch_0800d1fc \n\
 /* 0800d1f4 */ CMP R7, 0x2 @ Compare R7 and 0x2 \n\
 /* 0800d1f6 */ BEQ branch_0800d20c \n\
-/* 0800d1f8 */ BL func_0800df9e \n\
+/* 0800d1f8 */ BL branch_0800df9e \n\
  \n\
 branch_0800d1fc: \n\
 /* 0800d1fc */ MOV R0, R8 @ Set R0 to R8 \n\
 /* 0800d1fe */ STR R0, [R6] \n\
-/* 0800d200 */ BL func_0800df9e \n\
+/* 0800d200 */ BL branch_0800df9e \n\
  \n\
 branch_0800d204: \n\
 /* 0800d204 */ MOV R1, R8 @ Set R1 to R8 \n\
 /* 0800d206 */ STRH R1, [R6] \n\
-/* 0800d208 */ BL func_0800df9e \n\
+/* 0800d208 */ BL branch_0800df9e \n\
  \n\
 branch_0800d20c: \n\
 /* 0800d20c */ MOV R2, R8 @ Set R2 to R8 \n\
 /* 0800d20e */ STRB R2, [R6] \n\
-/* 0800d210 */ BL func_0800df9e \n\
+/* 0800d210 */ BL branch_0800df9e \n\
+\n\
+jump_0800d214: \n\
 /* 0800d214 */ CMP R7, 0x1 @ Compare R7 and 0x1 \n\
 /* 0800d216 */ BEQ branch_0800d22e \n\
 /* 0800d218 */ CMP R7, 0x1 @ Compare R7 and 0x1 \n\
 /* 0800d21a */ BCC branch_0800d224 \n\
 /* 0800d21c */ CMP R7, 0x2 @ Compare R7 and 0x2 \n\
 /* 0800d21e */ BEQ branch_0800d238 \n\
-/* 0800d220 */ BL func_0800df9e \n\
+/* 0800d220 */ BL branch_0800df9e \n\
  \n\
 branch_0800d224: \n\
 /* 0800d224 */ LDR R0, [R6] \n\
 /* 0800d226 */ ADD R0, R8 @ Add R8 to R0 \n\
 /* 0800d228 */ STR R0, [R6] \n\
-/* 0800d22a */ BL func_0800df9e \n\
+/* 0800d22a */ BL branch_0800df9e \n\
  \n\
 branch_0800d22e: \n\
 /* 0800d22e */ LDRH R0, [R6] \n\
 /* 0800d230 */ ADD R0, R8 @ Add R8 to R0 \n\
 /* 0800d232 */ STRH R0, [R6] \n\
-/* 0800d234 */ BL func_0800df9e \n\
+/* 0800d234 */ BL branch_0800df9e \n\
  \n\
 branch_0800d238: \n\
 /* 0800d238 */ LDRB R0, [R6] \n\
 /* 0800d23a */ ADD R0, R8 @ Add R8 to R0 \n\
 /* 0800d23c */ STRB R0, [R6] \n\
-/* 0800d23e */ BL func_0800df9e \n\
+/* 0800d23e */ BL branch_0800df9e \n\
+\n\
+jump_0800d242: \n\
 /* 0800d242 */ CMP R7, 0x1 @ Compare R7 and 0x1 \n\
 /* 0800d244 */ BEQ branch_0800d262 \n\
 /* 0800d246 */ CMP R7, 0x1 @ Compare R7 and 0x1 \n\
 /* 0800d248 */ BCC branch_0800d252 \n\
 /* 0800d24a */ CMP R7, 0x2 @ Compare R7 and 0x2 \n\
 /* 0800d24c */ BEQ branch_0800d270 \n\
-/* 0800d24e */ BL func_0800df9e \n\
+/* 0800d24e */ BL branch_0800df9e \n\
  \n\
 branch_0800d252: \n\
 /* 0800d252 */ MOVS R1, 0x1 @ Set R1 to 0x1 \n\
@@ -828,7 +875,7 @@ branch_0800d252: \n\
 /* 0800d258 */ LDR R0, [R6] \n\
 /* 0800d25a */ ORRS R0, R1 @ Set R0 to R0 | R1 \n\
 /* 0800d25c */ STR R0, [R6] \n\
-/* 0800d25e */ BL func_0800df9e \n\
+/* 0800d25e */ BL branch_0800df9e \n\
  \n\
 branch_0800d262: \n\
 /* 0800d262 */ MOV R4, R8 @ Set R4 to R8 \n\
@@ -836,7 +883,7 @@ branch_0800d262: \n\
 /* 0800d266 */ LDRH R0, [R6] \n\
 /* 0800d268 */ ORRS R7, R0 @ Set R7 to R7 | R0 \n\
 /* 0800d26a */ STRH R7, [R6] \n\
-/* 0800d26c */ BL func_0800df9e \n\
+/* 0800d26c */ BL branch_0800df9e \n\
  \n\
 branch_0800d270: \n\
 /* 0800d270 */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
@@ -845,14 +892,16 @@ branch_0800d270: \n\
 /* 0800d276 */ LDRB R1, [R6] \n\
 /* 0800d278 */ ORRS R0, R1 @ Set R0 to R0 | R1 \n\
 /* 0800d27a */ STRB R0, [R6] \n\
-/* 0800d27c */ BL func_0800df9e \n\
+/* 0800d27c */ BL branch_0800df9e \n\
+\n\
+jump_0800d280: \n\
 /* 0800d280 */ CMP R7, 0x1 @ Compare R7 and 0x1 \n\
 /* 0800d282 */ BEQ branch_0800d2a0 \n\
 /* 0800d284 */ CMP R7, 0x1 @ Compare R7 and 0x1 \n\
 /* 0800d286 */ BCC branch_0800d290 \n\
 /* 0800d288 */ CMP R7, 0x2 @ Compare R7 and 0x2 \n\
 /* 0800d28a */ BEQ branch_0800d2ae \n\
-/* 0800d28c */ BL func_0800df9e \n\
+/* 0800d28c */ BL branch_0800df9e \n\
  \n\
 branch_0800d290: \n\
 /* 0800d290 */ MOVS R1, 0x1 @ Set R1 to 0x1 \n\
@@ -861,7 +910,7 @@ branch_0800d290: \n\
 /* 0800d296 */ LDR R0, [R6] \n\
 /* 0800d298 */ BICS R0, R1 @ Clear bits in R1 from R0 \n\
 /* 0800d29a */ STR R0, [R6] \n\
-/* 0800d29c */ BL func_0800df9e \n\
+/* 0800d29c */ BL branch_0800df9e \n\
  \n\
 branch_0800d2a0: \n\
 /* 0800d2a0 */ MOV R1, R8 @ Set R1 to R8 \n\
@@ -869,7 +918,7 @@ branch_0800d2a0: \n\
 /* 0800d2a4 */ LDRH R0, [R6] \n\
 /* 0800d2a6 */ BICS R0, R7 @ Clear bits in R7 from R0 \n\
 /* 0800d2a8 */ STRH R0, [R6] \n\
-/* 0800d2aa */ BL func_0800df9e \n\
+/* 0800d2aa */ BL branch_0800df9e \n\
  \n\
 branch_0800d2ae: \n\
 /* 0800d2ae */ MOVS R1, 0x1 @ Set R1 to 0x1 \n\
@@ -878,7 +927,9 @@ branch_0800d2ae: \n\
 /* 0800d2b4 */ LDRB R0, [R6] \n\
 /* 0800d2b6 */ BICS R0, R1 @ Clear bits in R1 from R0 \n\
 /* 0800d2b8 */ STRB R0, [R6] \n\
-/* 0800d2ba */ BL func_0800df9e \n\
+/* 0800d2ba */ BL branch_0800df9e \n\
+\n\
+jump_0800d2be: \n\
 /* 0800d2be */ LDR R0, =0x030046a4 @ !PossiblePointer \n\
 /* 0800d2c0 */ LDR R0, [R0] \n\
 /* 0800d2c2 */ ADDS R5, R0, R6 @ Set R5 to R0 + R6 \n\
@@ -888,24 +939,26 @@ branch_0800d2ae: \n\
 /* 0800d2ca */ BCC branch_0800d2d8 \n\
 /* 0800d2cc */ CMP R7, 0x2 @ Compare R7 and 0x2 \n\
 /* 0800d2ce */ BEQ branch_0800d2e8 \n\
-/* 0800d2d0 */ BL func_0800df9e \n\
+/* 0800d2d0 */ BL branch_0800df9e \n\
 \n\
 .ltorg \n\
  \n\
 branch_0800d2d8: \n\
 /* 0800d2d8 */ MOV R3, R8 @ Set R3 to R8 \n\
 /* 0800d2da */ STR R3, [R5] \n\
-/* 0800d2dc */ BL func_0800df9e \n\
+/* 0800d2dc */ BL branch_0800df9e \n\
  \n\
 branch_0800d2e0: \n\
 /* 0800d2e0 */ MOV R4, R8 @ Set R4 to R8 \n\
 /* 0800d2e2 */ STRH R4, [R5] \n\
-/* 0800d2e4 */ BL func_0800df9e \n\
+/* 0800d2e4 */ BL branch_0800df9e \n\
  \n\
 branch_0800d2e8: \n\
 /* 0800d2e8 */ MOV R6, R8 @ Set R6 to R8 \n\
 /* 0800d2ea */ STRB R6, [R5] \n\
-/* 0800d2ec */ BL func_0800df9e \n\
+/* 0800d2ec */ BL branch_0800df9e \n\
+\n\
+jump_0800d2f0: \n\
 /* 0800d2f0 */ LDR R0, =0x030046a4 @ !PossiblePointer \n\
 /* 0800d2f2 */ LDR R0, [R0] \n\
 /* 0800d2f4 */ ADDS R5, R0, R6 @ Set R5 to R0 + R6 \n\
@@ -915,7 +968,7 @@ branch_0800d2e8: \n\
 /* 0800d2fc */ BCC branch_0800d30c \n\
 /* 0800d2fe */ CMP R7, 0x2 @ Compare R7 and 0x2 \n\
 /* 0800d300 */ BEQ branch_0800d320 \n\
-/* 0800d302 */ BL func_0800df9e \n\
+/* 0800d302 */ BL branch_0800df9e \n\
 \n\
 .ltorg \n\
  \n\
@@ -923,19 +976,21 @@ branch_0800d30c: \n\
 /* 0800d30c */ LDR R0, [R5] \n\
 /* 0800d30e */ ADD R0, R8 @ Add R8 to R0 \n\
 /* 0800d310 */ STR R0, [R5] \n\
-/* 0800d312 */ BL func_0800df9e \n\
+/* 0800d312 */ BL branch_0800df9e \n\
  \n\
 branch_0800d316: \n\
 /* 0800d316 */ LDRH R0, [R5] \n\
 /* 0800d318 */ ADD R0, R8 @ Add R8 to R0 \n\
 /* 0800d31a */ STRH R0, [R5] \n\
-/* 0800d31c */ BL func_0800df9e \n\
+/* 0800d31c */ BL branch_0800df9e \n\
  \n\
 branch_0800d320: \n\
 /* 0800d320 */ LDRB R0, [R5] \n\
 /* 0800d322 */ ADD R0, R8 @ Add R8 to R0 \n\
 /* 0800d324 */ STRB R0, [R5] \n\
-/* 0800d326 */ BL func_0800df9e \n\
+/* 0800d326 */ BL branch_0800df9e \n\
+\n\
+jump_0800d32a: \n\
 /* 0800d32a */ LDR R0, =0x030046a4 @ !PossiblePointer \n\
 /* 0800d32c */ LDR R0, [R0] \n\
 /* 0800d32e */ ADDS R5, R0, R6 @ Set R5 to R0 + R6 \n\
@@ -945,7 +1000,7 @@ branch_0800d320: \n\
 /* 0800d336 */ BCC branch_0800d344 \n\
 /* 0800d338 */ CMP R7, 0x2 @ Compare R7 and 0x2 \n\
 /* 0800d33a */ BEQ branch_0800d362 \n\
-/* 0800d33c */ BL func_0800df9e \n\
+/* 0800d33c */ BL branch_0800df9e \n\
 \n\
 .ltorg \n\
  \n\
@@ -956,7 +1011,7 @@ branch_0800d344: \n\
 /* 0800d34a */ LDR R0, [R5] \n\
 /* 0800d34c */ ORRS R0, R1 @ Set R0 to R0 | R1 \n\
 /* 0800d34e */ STR R0, [R5] \n\
-/* 0800d350 */ BL func_0800df9e \n\
+/* 0800d350 */ BL branch_0800df9e \n\
  \n\
 branch_0800d354: \n\
 /* 0800d354 */ MOV R1, R8 @ Set R1 to R8 \n\
@@ -964,7 +1019,7 @@ branch_0800d354: \n\
 /* 0800d358 */ LDRH R0, [R5] \n\
 /* 0800d35a */ ORRS R7, R0 @ Set R7 to R7 | R0 \n\
 /* 0800d35c */ STRH R7, [R5] \n\
-/* 0800d35e */ BL func_0800df9e \n\
+/* 0800d35e */ BL branch_0800df9e \n\
  \n\
 branch_0800d362: \n\
 /* 0800d362 */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
@@ -973,7 +1028,9 @@ branch_0800d362: \n\
 /* 0800d368 */ LDRB R1, [R5] \n\
 /* 0800d36a */ ORRS R0, R1 @ Set R0 to R0 | R1 \n\
 /* 0800d36c */ STRB R0, [R5] \n\
-/* 0800d36e */ BL func_0800df9e \n\
+/* 0800d36e */ BL branch_0800df9e \n\
+\n\
+jump_0800d372: \n\
 /* 0800d372 */ LDR R0, =0x030046a4 @ !PossiblePointer \n\
 /* 0800d374 */ LDR R0, [R0] \n\
 /* 0800d376 */ ADDS R5, R0, R6 @ Set R5 to R0 + R6 \n\
@@ -983,7 +1040,7 @@ branch_0800d362: \n\
 /* 0800d37e */ BCC branch_0800d38c \n\
 /* 0800d380 */ CMP R7, 0x2 @ Compare R7 and 0x2 \n\
 /* 0800d382 */ BEQ branch_0800d3aa \n\
-/* 0800d384 */ BL func_0800df9e \n\
+/* 0800d384 */ BL branch_0800df9e \n\
 \n\
 .ltorg \n\
  \n\
@@ -994,7 +1051,7 @@ branch_0800d38c: \n\
 /* 0800d392 */ LDR R0, [R5] \n\
 /* 0800d394 */ BICS R0, R1 @ Clear bits in R1 from R0 \n\
 /* 0800d396 */ STR R0, [R5] \n\
-/* 0800d398 */ BL func_0800df9e \n\
+/* 0800d398 */ BL branch_0800df9e \n\
  \n\
 branch_0800d39c: \n\
 /* 0800d39c */ MOV R4, R8 @ Set R4 to R8 \n\
@@ -1002,7 +1059,7 @@ branch_0800d39c: \n\
 /* 0800d3a0 */ LDRH R0, [R5] \n\
 /* 0800d3a2 */ BICS R0, R7 @ Clear bits in R7 from R0 \n\
 /* 0800d3a4 */ STRH R0, [R5] \n\
-/* 0800d3a6 */ BL func_0800df9e \n\
+/* 0800d3a6 */ BL branch_0800df9e \n\
  \n\
 branch_0800d3aa: \n\
 /* 0800d3aa */ MOVS R1, 0x1 @ Set R1 to 0x1 \n\
@@ -1011,37 +1068,47 @@ branch_0800d3aa: \n\
 /* 0800d3b0 */ LDRB R0, [R5] \n\
 /* 0800d3b2 */ BICS R0, R1 @ Clear bits in R1 from R0 \n\
 /* 0800d3b4 */ STRB R0, [R5] \n\
-/* 0800d3b6 */ BL func_0800df9e \n\
+/* 0800d3b6 */ BL branch_0800df9e \n\
+\n\
+jump_0800d3ba: \n\
 /* 0800d3ba */ CMP R6, 0xFE @ Compare R6 and 0xFE \n\
 /* 0800d3bc */ BHI branch_0800d3ca \n\
 /* 0800d3be */ MOV R0, R8 @ Set R0 to R8 \n\
 /* 0800d3c0 */ ADDS R1, R6, 0x0 @ Set R1 to R6 + 0x0 \n\
 /* 0800d3c2 */ BL func_0800bf9c \n\
-/* 0800d3c6 */ BL func_0800df9e \n\
+/* 0800d3c6 */ BL branch_0800df9e \n\
  \n\
 branch_0800d3ca: \n\
 /* 0800d3ca */ MOV R0, R8 @ Set R0 to R8 \n\
 /* 0800d3cc */ BL func_0800bf7c \n\
-/* 0800d3d0 */ BL func_0800df9e \n\
+/* 0800d3d0 */ BL branch_0800df9e \n\
+\n\
+jump_0800d3d4: \n\
 /* 0800d3d4 */ CMP R6, 0xFE @ Compare R6 and 0xFE \n\
 /* 0800d3d6 */ BHI branch_0800d3e4 \n\
 /* 0800d3d8 */ MOV R0, R8 @ Set R0 to R8 \n\
 /* 0800d3da */ ADDS R1, R6, 0x0 @ Set R1 to R6 + 0x0 \n\
 /* 0800d3dc */ BL func_0800bfac \n\
-/* 0800d3e0 */ BL func_0800df9e \n\
+/* 0800d3e0 */ BL branch_0800df9e \n\
  \n\
 branch_0800d3e4: \n\
 /* 0800d3e4 */ MOV R0, R8 @ Set R0 to R8 \n\
 /* 0800d3e6 */ BL func_0800bf8c \n\
-/* 0800d3ea */ BL func_0800df9e \n\
+/* 0800d3ea */ BL branch_0800df9e \n\
+\n\
+jump_0800d3ee: \n\
 /* 0800d3ee */ MOV R0, R8 @ Set R0 to R8 \n\
 /* 0800d3f0 */ BL func_08002634 \n\
-/* 0800d3f4 */ BL func_0800df9e \n\
+/* 0800d3f4 */ BL branch_0800df9e \n\
+\n\
+jump_0800d3f8: \n\
 /* 0800d3f8 */ MOV R0, R8 @ Set R0 to R8 \n\
 /* 0800d3fa */ ADDS R1, R7, 0x0 @ Set R1 to R7 + 0x0 \n\
 /* 0800d3fc */ ADDS R2, R6, 0x0 @ Set R2 to R6 + 0x0 \n\
 /* 0800d3fe */ BL func_08002698 \n\
-/* 0800d402 */ BL func_0800df9e \n\
+/* 0800d402 */ BL branch_0800df9e \n\
+\n\
+jump_0800d406: \n\
 /* 0800d406 */ LDR R1, =0x0000ffff @ !PossiblePointer \n\
 /* 0800d408 */ ANDS R1, R6 @ Set R1 to R1 & R6 \n\
 /* 0800d40a */ ASRS R2, R6, 0x10 \n\
@@ -1057,9 +1124,11 @@ branch_0800d3e4: \n\
 /* 0800d424 */ LSRS R1, R1, 0x10 \n\
 /* 0800d426 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 0800d428 */ BL func_08002894 \n\
-/* 0800d42c */ BL func_0800df9e \n\
+/* 0800d42c */ BL branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800d434: \n\
 /* 0800d434 */ CMP R7, 0x0 @ Compare R7 and 0x0 \n\
 /* 0800d436 */ BEQ branch_0800d440 \n\
 /* 0800d438 */ MOV R0, R8 @ Set R0 to R8 \n\
@@ -1071,7 +1140,9 @@ branch_0800d440: \n\
  \n\
 branch_0800d442: \n\
 /* 0800d442 */ BL func_0800ed24 \n\
-/* 0800d446 */ BL func_0800df9e \n\
+/* 0800d446 */ BL branch_0800df9e \n\
+\n\
+jump_0800d44a: \n\
 /* 0800d44a */ CMP R7, 0x0 @ Compare R7 and 0x0 \n\
 /* 0800d44c */ BEQ branch_0800d456 \n\
 /* 0800d44e */ MOV R0, R8 @ Set R0 to R8 \n\
@@ -1083,7 +1154,9 @@ branch_0800d456: \n\
  \n\
 branch_0800d458: \n\
 /* 0800d458 */ BL func_0800ed3c \n\
-/* 0800d45c */ BL func_0800df9e \n\
+/* 0800d45c */ BL branch_0800df9e \n\
+\n\
+jump_0800d460: \n\
 /* 0800d460 */ MOV R1, R8 @ Set R1 to R8 \n\
 /* 0800d462 */ LSLS R0, R1, 0x10 \n\
 /* 0800d464 */ LSRS R0, R0, 0x10 \n\
@@ -1093,7 +1166,9 @@ branch_0800d458: \n\
 /* 0800d46e */ LSRS R1, R1, 0x10 \n\
 /* 0800d470 */ ADDS R0, R6, 0x0 @ Set R0 to R6 + 0x0 \n\
 /* 0800d472 */ BL func_080027dc \n\
-/* 0800d476 */ BL func_0800df9e \n\
+/* 0800d476 */ BL branch_0800df9e \n\
+\n\
+jump_0800d47a: \n\
 /* 0800d47a */ ADDS R3, R6, 0x0 @ Set R3 to R6 + 0x0 \n\
 /* 0800d47c */ LDR R7, =0x030053e4 @ !PossiblePointer \n\
 /* 0800d47e */ MOV R2, R8 @ Set R2 to R8 \n\
@@ -1117,9 +1192,11 @@ branch_0800d48e: \n\
 /* 0800d49e */ LSRS R0, R6 @ Set R0 to R0 >> R6 (logical) \n\
 /* 0800d4a0 */ ANDS R0, R2 @ Set R0 to R0 & R2 \n\
 /* 0800d4a2 */ STR R0, [R4, 0x24] \n\
-/* 0800d4a4 */ BL func_0800df9e \n\
+/* 0800d4a4 */ BL branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800d4b0: \n\
 /* 0800d4b0 */ BL func_0804eb04 \n\
 /* 0800d4b4 */ LDR R2, =0x030053c0 @ !PossiblePointer \n\
 /* 0800d4b6 */ MOV R5, R8 @ Set R5 to R8 \n\
@@ -1129,24 +1206,32 @@ branch_0800d48e: \n\
 /* 0800d4be */ LSRS R0, R6 @ Set R0 to R0 >> R6 (logical) \n\
 /* 0800d4c0 */ ANDS R5, R0 @ Set R5 to R5 & R0 \n\
 /* 0800d4c2 */ STR R5, [R2, 0x24] \n\
-/* 0800d4c4 */ BL func_0800df9e \n\
+/* 0800d4c4 */ BL branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800d4d0: \n\
 /* 0800d4d0 */ ADDS R0, R6, 0x0 @ Set R0 to R6 + 0x0 \n\
 /* 0800d4d2 */ BL func_08002e78 \n\
-/* 0800d4d6 */ BL func_0800df9e \n\
+/* 0800d4d6 */ BL branch_0800df9e \n\
+\n\
+jump_0800d4da: \n\
 /* 0800d4da */ BL func_0800c3b8 \n\
 /* 0800d4de */ LSLS R0, R0, 0x10 \n\
 /* 0800d4e0 */ LSRS R0, R0, 0x10 \n\
 /* 0800d4e2 */ ADDS R1, R6, 0x0 @ Set R1 to R6 + 0x0 \n\
 /* 0800d4e4 */ MOV R2, R8 @ Set R2 to R8 \n\
 /* 0800d4e6 */ BL func_08002ee0 \n\
-/* 0800d4ea */ BL func_0800df9e \n\
+/* 0800d4ea */ BL branch_0800df9e \n\
+\n\
+jump_0800d4ee: \n\
 /* 0800d4ee */ MOV R6, R8 @ Set R6 to R8 \n\
 /* 0800d4f0 */ LSLS R0, R6, 0x10 \n\
 /* 0800d4f2 */ LSRS R0, R0, 0x10 \n\
 /* 0800d4f4 */ BL func_0800be88 \n\
-/* 0800d4f8 */ BL func_0800df9e \n\
+/* 0800d4f8 */ BL branch_0800df9e \n\
+\n\
+jump_0800d4fc: \n\
 /* 0800d4fc */ MOV R0, R8 @ Set R0 to R8 \n\
 /* 0800d4fe */ BL func_0800bf7c \n\
 /* 0800d502 */ MOV R0, R8 @ Set R0 to R8 \n\
@@ -1154,17 +1239,23 @@ branch_0800d48e: \n\
 /* 0800d508 */ LSLS R0, R0, 0x10 \n\
 /* 0800d50a */ LSRS R0, R0, 0x10 \n\
 /* 0800d50c */ BL func_0800bdf8 \n\
-/* 0800d510 */ BL func_0800df9e \n\
+/* 0800d510 */ BL branch_0800df9e \n\
+\n\
+jump_0800d514: \n\
 /* 0800d514 */ MOV R1, R8 @ Set R1 to R8 \n\
 /* 0800d516 */ LSLS R0, R1, 0x10 \n\
 /* 0800d518 */ ASRS R0, R0, 0x10 \n\
 /* 0800d51a */ BL func_0800c0c4 \n\
-/* 0800d51e */ BL func_0800df9e \n\
+/* 0800d51e */ BL branch_0800df9e \n\
+\n\
+jump_0800d522: \n\
 /* 0800d522 */ MOV R2, R8 @ Set R2 to R8 \n\
 /* 0800d524 */ LSLS R0, R2, 0x10 \n\
 /* 0800d526 */ ASRS R0, R0, 0x10 \n\
 /* 0800d528 */ BL func_0800c088 \n\
-/* 0800d52c */ BL func_0800df9e \n\
+/* 0800d52c */ BL branch_0800df9e \n\
+\n\
+jump_0800d530: \n\
 /* 0800d530 */ LDR R5, =0x7fffffff @ !PossiblePointer \n\
 /* 0800d532 */ MOV R3, R8 @ Set R3 to R8 \n\
 /* 0800d534 */ ANDS R5, R3 @ Set R5 to R5 & R3 \n\
@@ -1182,9 +1273,11 @@ branch_0800d542: \n\
 /* 0800d54c */ ADDS R2, R5, 0x0 @ Set R2 to R5 + 0x0 \n\
 /* 0800d54e */ ADDS R3, R7, 0x0 @ Set R3 to R7 + 0x0 \n\
 /* 0800d550 */ BL func_08008054 \n\
-/* 0800d554 */ BL func_0800df9e \n\
+/* 0800d554 */ BL branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800d55c: \n\
 /* 0800d55c */ LSLS R0, R7, 0x9 \n\
 /* 0800d55e */ LSRS R5, R0, 0x12 \n\
 /* 0800d560 */ MOVS R0, 0x80 @ Set R0 to 0x80 \n\
@@ -1220,7 +1313,7 @@ branch_0800d572: \n\
 /* 0800d59c */ STR R7, [SP, 0x4] \n\
 /* 0800d59e */ ADDS R3, R6, 0x0 @ Set R3 to R6 + 0x0 \n\
 /* 0800d5a0 */ BL func_08002018 \n\
-/* 0800d5a4 */ BL func_0800df9e \n\
+/* 0800d5a4 */ BL branch_0800df9e \n\
 \n\
 .ltorg \n\
  \n\
@@ -1239,7 +1332,7 @@ branch_0800d5b0: \n\
 /* 0800d5c8 */ STR R7, [SP, 0x4] \n\
 /* 0800d5ca */ ADDS R3, R6, 0x0 @ Set R3 to R6 + 0x0 \n\
 /* 0800d5cc */ BL func_08002050 \n\
-/* 0800d5d0 */ BL func_0800df9e \n\
+/* 0800d5d0 */ BL branch_0800df9e \n\
  \n\
 branch_0800d5d4: \n\
 /* 0800d5d4 */ BL func_0800c3b8 \n\
@@ -1254,7 +1347,9 @@ branch_0800d5d4: \n\
 /* 0800d5e8 */ STR R7, [SP, 0x4] \n\
 /* 0800d5ea */ ADDS R3, R6, 0x0 @ Set R3 to R6 + 0x0 \n\
 /* 0800d5ec */ BL func_08001fe0 \n\
-/* 0800d5f0 */ BL func_0800df9e \n\
+/* 0800d5f0 */ BL branch_0800df9e \n\
+\n\
+jump_0800d5f4: \n\
 /* 0800d5f4 */ MOVS R5, 0x3 @ Set R5 to 0x3 \n\
 /* 0800d5f6 */ ANDS R5, R7 @ Set R5 to R5 & R7 \n\
 /* 0800d5f8 */ MOVS R0, 0x4 @ Set R0 to 0x4 \n\
@@ -1281,9 +1376,11 @@ branch_0800d60e: \n\
 /* 0800d61e */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 0800d620 */ MOV R4, R8 @ Set R4 to R8 \n\
 /* 0800d622 */ STRH R4, [R0] \n\
-/* 0800d624 */ BL func_0800df9e \n\
+/* 0800d624 */ BL branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800d62c: \n\
 /* 0800d62c */ ADD R3, SP, 0xC \n\
 /* 0800d62e */ MOVS R1, 0x3 @ Set R1 to 0x3 \n\
 /* 0800d630 */ ANDS R1, R7 @ Set R1 to R1 & R7 \n\
@@ -1322,6 +1419,8 @@ branch_0800d60e: \n\
 /* 0800d678 */ B branch_0800dd68 \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800d688: \n\
 /* 0800d688 */ ADD R4, SP, 0x1C \n\
 /* 0800d68a */ MOVS R1, 0x3 @ Set R1 to 0x3 \n\
 /* 0800d68c */ ANDS R1, R7 @ Set R1 to R1 & R7 \n\
@@ -1360,6 +1459,8 @@ branch_0800d60e: \n\
 /* 0800d6d4 */ B branch_0800dd68 \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800d6e4: \n\
 /* 0800d6e4 */ ADD R4, SP, 0x2C \n\
 /* 0800d6e6 */ MOVS R1, 0x3 @ Set R1 to 0x3 \n\
 /* 0800d6e8 */ ANDS R1, R7 @ Set R1 to R1 & R7 \n\
@@ -1398,6 +1499,8 @@ branch_0800d60e: \n\
 /* 0800d730 */ B branch_0800dd68 \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800d740: \n\
 /* 0800d740 */ ADD R4, SP, 0x3C \n\
 /* 0800d742 */ MOVS R3, 0x3 @ Set R3 to 0x3 \n\
 /* 0800d744 */ ADDS R1, R7, 0x0 @ Set R1 to R7 + 0x0 \n\
@@ -1433,12 +1536,16 @@ branch_0800d60e: \n\
 /* 0800d784 */ B branch_0800dd68 \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800d78c: \n\
 /* 0800d78c */ LDR R0, =0x030053c0 @ !PossiblePointer \n\
 /* 0800d78e */ LDRH R0, [R0, 0x10] \n\
 /* 0800d790 */ BL func_0800ed60 \n\
-/* 0800d794 */ BL func_0800df9e \n\
+/* 0800d794 */ BL branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800d79c: \n\
 /* 0800d79c */ LSLS R0, R7, 0x10 \n\
 /* 0800d79e */ LSRS R0, R0, 0x10 \n\
 /* 0800d7a0 */ LSLS R1, R6, 0x10 \n\
@@ -1447,16 +1554,20 @@ branch_0800d60e: \n\
 /* 0800d7a6 */ LSLS R2, R3, 0x10 \n\
 /* 0800d7a8 */ LSRS R2, R2, 0x10 \n\
 /* 0800d7aa */ BL func_080041d0 \n\
-/* 0800d7ae */ BL func_0800df9e \n\
+/* 0800d7ae */ BL branch_0800df9e \n\
+\n\
+jump_0800d7b2: \n\
 /* 0800d7b2 */ LDR R2, =0x03004b10 @ !PossiblePointer \n\
 /* 0800d7b4 */ LDRH R1, [R2] \n\
 /* 0800d7b6 */ LDR R0, =0x0000fff8 @ !PossiblePointer \n\
 /* 0800d7b8 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 0800d7ba */ ORRS R0, R6 @ Set R0 to R0 | R6 \n\
 /* 0800d7bc */ STRH R0, [R2] \n\
-/* 0800d7be */ BL func_0800df9e \n\
+/* 0800d7be */ BL branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800d7cc: \n\
 /* 0800d7cc */ CMP R7, 0x0 @ Compare R7 and 0x0 \n\
 /* 0800d7ce */ BEQ branch_0800d7e8 \n\
 /* 0800d7d0 */ ADDS R0, R6, 0x0 @ Set R0 to R6 + 0x0 \n\
@@ -1467,7 +1578,7 @@ branch_0800d60e: \n\
 /* 0800d7dc */ LSLS R1, R4, 0x10 \n\
 /* 0800d7de */ LSRS R1, R1, 0x10 \n\
 /* 0800d7e0 */ BL func_080070c4 \n\
-/* 0800d7e4 */ BL func_0800df9e \n\
+/* 0800d7e4 */ BL branch_0800df9e \n\
  \n\
 branch_0800d7e8: \n\
 /* 0800d7e8 */ ADDS R0, R6, 0x0 @ Set R0 to R6 + 0x0 \n\
@@ -1478,9 +1589,13 @@ branch_0800d7e8: \n\
 /* 0800d7f4 */ LSLS R1, R5, 0x10 \n\
 /* 0800d7f6 */ LSRS R1, R1, 0x10 \n\
 /* 0800d7f8 */ BL func_0800703c \n\
-/* 0800d7fc */ BL func_0800df9e \n\
+/* 0800d7fc */ BL branch_0800df9e \n\
+\n\
+jump_0800d800: \n\
 /* 0800d800 */ ADDS R0, R6, 0x0 @ Set R0 to R6 + 0x0 \n\
 /* 0800d802 */ B branch_0800d80c \n\
+\n\
+jump_0800d804: \n\
 /* 0800d804 */ BL func_0800c1a8 \n\
 /* 0800d808 */ MULS R0, R6 @ Multiply R0 by R6 \n\
 /* 0800d80a */ LSRS R0, R0, 0x8 \n\
@@ -1488,23 +1603,31 @@ branch_0800d7e8: \n\
 branch_0800d80c: \n\
 /* 0800d80c */ MOV R1, R8 @ Set R1 to R8 \n\
 /* 0800d80e */ BL func_0800ebf8 \n\
-/* 0800d812 */ BL func_0800df9e \n\
+/* 0800d812 */ BL branch_0800df9e \n\
+\n\
+jump_0800d816: \n\
 /* 0800d816 */ ADDS R0, R6, 0x0 @ Set R0 to R6 + 0x0 \n\
 /* 0800d818 */ MOV R1, R8 @ Set R1 to R8 \n\
 /* 0800d81a */ BL func_0800ecec \n\
 /* 0800d81e */ B branch_0800df9e \n\
+\n\
+jump_0800d820: \n\
 /* 0800d820 */ MOV R0, R8 @ Set R0 to R8 \n\
 /* 0800d822 */ BL func_0800c3a4 \n\
 /* 0800d826 */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
 /* 0800d828 */ ADDS R0, R6, 0x0 @ Set R0 to R6 + 0x0 \n\
 /* 0800d82a */ BL func_0800c138 \n\
 /* 0800d82e */ B branch_0800df9e \n\
+\n\
+jump_0800d830: \n\
 /* 0800d830 */ LSLS R0, R7, 0x10 \n\
 /* 0800d832 */ LSRS R0, R0, 0x10 \n\
 /* 0800d834 */ LSLS R1, R6, 0x10 \n\
 /* 0800d836 */ LSRS R1, R1, 0x10 \n\
 /* 0800d838 */ BL func_0800c0f8 \n\
 /* 0800d83c */ B branch_0800df9e \n\
+\n\
+jump_0800d83e: \n\
 /* 0800d83e */ LSLS R0, R7, 0x10 \n\
 /* 0800d840 */ LSRS R0, R0, 0x10 \n\
 /* 0800d842 */ LDR R1, =0x030053c0 @ !PossiblePointer \n\
@@ -1521,6 +1644,8 @@ branch_0800d80c: \n\
 /* 0800d85e */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800d864: \n\
 /* 0800d864 */ MOV R3, R9 @ Set R3 to R9 \n\
 /* 0800d866 */ LDR R0, [R3, 0x8] \n\
 /* 0800d868 */ BL func_0800c6e4 \n\
@@ -1528,12 +1653,14 @@ branch_0800d80c: \n\
 /* 0800d86e */ STR R0, [R4, 0x8] \n\
 /* 0800d870 */ B branch_0800df9e \n\
  \n\
-branch_0800d872: \n\
+jump_0800d872: \n\
 /* 0800d872 */ MOV R5, R9 @ Set R5 to R9 \n\
 /* 0800d874 */ LDR R0, [R5, 0x8] \n\
 /* 0800d876 */ BL func_0800c6e4 \n\
 /* 0800d87a */ STR R0, [R5, 0x8] \n\
 /* 0800d87c */ B branch_0800df9e \n\
+\n\
+jump_0800d87e: \n\
 /* 0800d87e */ MOVS R1, 0xFF @ Set R1 to 0xFF \n\
 /* 0800d880 */ ANDS R1, R6 @ Set R1 to R1 & R6 \n\
 /* 0800d882 */ LSLS R1, R1, 0x1 \n\
@@ -1557,6 +1684,8 @@ branch_0800d872: \n\
 /* 0800d8a8 */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800d8b0: \n\
 /* 0800d8b0 */ LSLS R1, R6, 0x1 \n\
 /* 0800d8b2 */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
 /* 0800d8b4 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
@@ -1570,6 +1699,8 @@ branch_0800d872: \n\
 /* 0800d8c6 */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800d8cc: \n\
 /* 0800d8cc */ LSLS R1, R6, 0x1 \n\
 /* 0800d8ce */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
 /* 0800d8d0 */ MOV R4, R8 @ Set R4 to R8 \n\
@@ -1589,6 +1720,8 @@ branch_0800d872: \n\
 /* 0800d8ee */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800d8f4: \n\
 /* 0800d8f4 */ LDR R0, =0x0000ffff @ !PossiblePointer \n\
 /* 0800d8f6 */ ANDS R0, R6 @ Set R0 to R0 & R6 \n\
 /* 0800d8f8 */ LSLS R0, R0, 0x1 \n\
@@ -1616,6 +1749,8 @@ branch_0800d872: \n\
 /* 0800d926 */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800d930: \n\
 /* 0800d930 */ ADD R5, SP, 0x4C \n\
 /* 0800d932 */ MOV R0, R8 @ Set R0 to R8 \n\
 /* 0800d934 */ STRH R0, [R5] \n\
@@ -1643,6 +1778,8 @@ branch_0800d872: \n\
 /* 0800d964 */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800d96c: \n\
 /* 0800d96c */ LSLS R1, R6, 0x1 \n\
 /* 0800d96e */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
 /* 0800d970 */ MOV R6, R8 @ Set R6 to R8 \n\
@@ -1655,6 +1792,8 @@ branch_0800d872: \n\
 /* 0800d97e */ B branch_0800da12 \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800d984: \n\
 /* 0800d984 */ LSLS R0, R7, 0x1 \n\
 /* 0800d986 */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 0800d988 */ LDRH R4, [R0] \n\
@@ -1715,6 +1854,8 @@ branch_0800d9b8: \n\
 /* 0800d9ee */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800d9f4: \n\
 /* 0800d9f4 */ LSLS R1, R7, 0x1 \n\
 /* 0800d9f6 */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
 /* 0800d9f8 */ LDR R4, =0x03005380 @ !PossiblePointer \n\
@@ -1736,6 +1877,8 @@ branch_0800da12: \n\
 /* 0800da18 */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800da20: \n\
 /* 0800da20 */ LSLS R1, R6, 0x1 \n\
 /* 0800da22 */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
 /* 0800da24 */ MOV R3, R8 @ Set R3 to R8 \n\
@@ -1749,6 +1892,8 @@ branch_0800da12: \n\
 /* 0800da36 */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800da3c: \n\
 /* 0800da3c */ LSLS R1, R6, 0x1 \n\
 /* 0800da3e */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
 /* 0800da40 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
@@ -1764,6 +1909,8 @@ branch_0800da12: \n\
 /* 0800da56 */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800da5c: \n\
 /* 0800da5c */ LSLS R1, R6, 0x1 \n\
 /* 0800da5e */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
 /* 0800da60 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
@@ -1777,6 +1924,8 @@ branch_0800da12: \n\
 /* 0800da72 */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800da78: \n\
 /* 0800da78 */ LSLS R1, R6, 0x1 \n\
 /* 0800da7a */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
 /* 0800da7c */ LDR R0, =0x03005380 @ !PossiblePointer \n\
@@ -1790,6 +1939,8 @@ branch_0800da12: \n\
 /* 0800da8e */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800da94: \n\
 /* 0800da94 */ LSLS R0, R6, 0x1 \n\
 /* 0800da96 */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 0800da98 */ LDRH R4, [R0] \n\
@@ -1833,6 +1984,8 @@ branch_0800dad0: \n\
 /* 0800dade */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800dae4: \n\
 /* 0800dae4 */ LSLS R1, R6, 0x1 \n\
 /* 0800dae6 */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
 /* 0800dae8 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
@@ -1846,6 +1999,8 @@ branch_0800dad0: \n\
 /* 0800dafa */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800db00: \n\
 /* 0800db00 */ LSLS R0, R6, 0x1 \n\
 /* 0800db02 */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 0800db04 */ LDRH R4, [R0] \n\
@@ -1887,6 +2042,8 @@ branch_0800db34: \n\
 /* 0800db4e */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800db54: \n\
 /* 0800db54 */ LSLS R0, R7, 0x1 \n\
 /* 0800db56 */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 0800db58 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
@@ -1896,6 +2053,8 @@ branch_0800db34: \n\
 /* 0800db60 */ ASRS R2, R6, 0x10 \n\
 /* 0800db62 */ BL func_0800e208 \n\
 /* 0800db66 */ B branch_0800dd68 \n\
+\n\
+jump_0800db68: \n\
 /* 0800db68 */ ADD R5, SP, 0x4C \n\
 /* 0800db6a */ STRH R6, [R5] \n\
 /* 0800db6c */ MOV R4, SP @ Set R4 to SP \n\
@@ -1919,6 +2078,8 @@ branch_0800db34: \n\
 /* 0800db92 */ ASRS R3, R3, 0x10 \n\
 /* 0800db94 */ BL func_0800e2a8 \n\
 /* 0800db98 */ B branch_0800dd68 \n\
+\n\
+jump_0800db9a: \n\
 /* 0800db9a */ ADD R5, SP, 0x4C \n\
 /* 0800db9c */ STRH R6, [R5] \n\
 /* 0800db9e */ MOV R4, SP @ Set R4 to SP \n\
@@ -1944,6 +2105,8 @@ branch_0800db34: \n\
 /* 0800dbc8 */ STR R4, [SP] \n\
 /* 0800dbca */ BL func_0800e364 \n\
 /* 0800dbce */ B branch_0800dd68 \n\
+\n\
+jump_0800dbd0: \n\
 /* 0800dbd0 */ ADD R5, SP, 0x4C \n\
 /* 0800dbd2 */ MOV R10, R5 @ Set R10 to R5 \n\
 /* 0800dbd4 */ STRH R6, [R5] \n\
@@ -1977,6 +2140,8 @@ branch_0800db34: \n\
 /* 0800dc10 */ ADDS R2, R5, 0x0 @ Set R2 to R5 + 0x0 \n\
 /* 0800dc12 */ BL func_0800e430 \n\
 /* 0800dc16 */ B branch_0800dd68 \n\
+\n\
+jump_0800dc18: \n\
 /* 0800dc18 */ ADD R3, SP, 0x4C \n\
 /* 0800dc1a */ MOV R10, R3 @ Set R10 to R3 \n\
 /* 0800dc1c */ STRH R6, [R3] \n\
@@ -2010,6 +2175,8 @@ branch_0800db34: \n\
 /* 0800dc58 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 0800dc5a */ BL func_0800e62c \n\
 /* 0800dc5e */ B branch_0800dd68 \n\
+\n\
+jump_0800dc60: \n\
 /* 0800dc60 */ ADD R0, SP, 0x4C \n\
 /* 0800dc62 */ MOV R10, R0 @ Set R10 to R0 \n\
 /* 0800dc64 */ STRH R6, [R0] \n\
@@ -2041,6 +2208,8 @@ branch_0800db34: \n\
 /* 0800dc9c */ MOV R5, R8 @ Set R5 to R8 \n\
 /* 0800dc9e */ ASRS R3, R5, 0x10 \n\
 /* 0800dca0 */ B branch_0800dd60 \n\
+\n\
+jump_0800dca2: \n\
 /* 0800dca2 */ LSLS R0, R7, 0x1 \n\
 /* 0800dca4 */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 0800dca6 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
@@ -2054,6 +2223,8 @@ branch_0800db34: \n\
 /* 0800dcb6 */ ASRS R3, R3, 0x10 \n\
 /* 0800dcb8 */ BL func_0800e2a8 \n\
 /* 0800dcbc */ B branch_0800dd68 \n\
+\n\
+jump_0800dcbe: \n\
 /* 0800dcbe */ LSLS R0, R7, 0x1 \n\
 /* 0800dcc0 */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 0800dcc2 */ MOVS R5, 0x0 @ Set R5 to 0x0 \n\
@@ -2069,6 +2240,8 @@ branch_0800db34: \n\
 /* 0800dcd6 */ STR R4, [SP] \n\
 /* 0800dcd8 */ BL func_0800e364 \n\
 /* 0800dcdc */ B branch_0800dd68 \n\
+\n\
+jump_0800dcde: \n\
 /* 0800dcde */ LSLS R0, R7, 0x1 \n\
 /* 0800dce0 */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 0800dce2 */ MOVS R5, 0x0 @ Set R5 to 0x0 \n\
@@ -2089,6 +2262,8 @@ branch_0800db34: \n\
 /* 0800dd02 */ ADDS R2, R7, 0x0 @ Set R2 to R7 + 0x0 \n\
 /* 0800dd04 */ BL func_0800e430 \n\
 /* 0800dd08 */ B branch_0800dd68 \n\
+\n\
+jump_0800dd0a: \n\
 /* 0800dd0a */ MOV R3, R8 @ Set R3 to R8 \n\
 /* 0800dd0c */ LSLS R0, R3, 0x10 \n\
 /* 0800dd0e */ LSRS R0, R0, 0x10 \n\
@@ -2111,6 +2286,8 @@ branch_0800db34: \n\
 /* 0800dd32 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 0800dd34 */ BL func_0800e62c \n\
 /* 0800dd38 */ B branch_0800dd68 \n\
+\n\
+jump_0800dd3a: \n\
 /* 0800dd3a */ MOV R1, R8 @ Set R1 to R8 \n\
 /* 0800dd3c */ LSLS R0, R1, 0x10 \n\
 /* 0800dd3e */ LSRS R0, R0, 0x10 \n\
@@ -2140,6 +2317,8 @@ branch_0800dd68: \n\
 /* 0800dd6a */ ADDS R1, 0x98 @ Add 0x98 to R1 \n\
 /* 0800dd6c */ STR R0, [R1] \n\
 /* 0800dd6e */ B branch_0800df9e \n\
+\n\
+jump_0800dd70: \n\
 /* 0800dd70 */ MOV R0, R9 @ Set R0 to R9 \n\
 /* 0800dd72 */ ADDS R0, 0x98 @ Add 0x98 to R0 \n\
 /* 0800dd74 */ LDR R0, [R0] \n\
@@ -2147,6 +2326,8 @@ branch_0800dd68: \n\
 /* 0800dd78 */ MOV R2, R8 @ Set R2 to R8 \n\
 /* 0800dd7a */ BL func_08005d38 \n\
 /* 0800dd7e */ B branch_0800df9e \n\
+\n\
+jump_0800dd80: \n\
 /* 0800dd80 */ MOV R0, R8 @ Set R0 to R8 \n\
 /* 0800dd82 */ LSLS R1, R0, 0x1 \n\
 /* 0800dd84 */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
@@ -2185,24 +2366,29 @@ branch_0800ddb0: \n\
 /* 0800ddcc */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800ddd4: \n\
 /* 0800ddd4 */ CMP R7, 0x4 @ Compare R7 and 0x4 \n\
 /* 0800ddd6 */ BLS branch_0800ddda \n\
 /* 0800ddd8 */ B branch_0800df9e \n\
  \n\
 branch_0800ddda: \n\
 /* 0800ddda */ LSLS R0, R7, 0x2 \n\
-/* 0800dddc */ LDR R1, =0x0800dde8 @ !JumpTablePointer \n\
+/* 0800dddc */ LDR R1, =jtbl_0800dde8 \n\
 /* 0800ddde */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 0800dde0 */ LDR R0, [R0] \n\
 /* 0800dde2 */ MOV PC, R0 @ Set PC to R0 \n\
 \n\
 .ltorg \n\
-.word 0x0800DDFC \n\
-.word 0x0800DE18 \n\
-.word 0x0800DE3C \n\
-.word 0x0800DE58 \n\
-.word 0x0800DE70 \n\
 \n\
+jtbl_0800dde8: \n\
+.word jump_0800ddfc \n\
+.word jump_0800de18 \n\
+.word jump_0800de3c \n\
+.word jump_0800de58 \n\
+.word jump_0800de70 \n\
+\n\
+jump_0800ddfc: \n\
 /* 0800ddfc */ LDR R0, =0x03005380 @ !PossiblePointer \n\
 /* 0800ddfe */ LDR R0, [R0] \n\
 /* 0800de00 */ LDR R1, [R6] \n\
@@ -2213,6 +2399,8 @@ branch_0800ddda: \n\
 /* 0800de0c */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800de18: \n\
 /* 0800de18 */ BL func_0800c3b8 \n\
 /* 0800de1c */ LSLS R0, R0, 0x10 \n\
 /* 0800de1e */ LSRS R0, R0, 0x10 \n\
@@ -2227,6 +2415,8 @@ branch_0800ddda: \n\
 /* 0800de32 */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800de3c: \n\
 /* 0800de3c */ LDR R0, =0x03005380 @ !PossiblePointer \n\
 /* 0800de3e */ LDR R0, [R0] \n\
 /* 0800de40 */ LDR R1, [R6] \n\
@@ -2237,6 +2427,8 @@ branch_0800ddda: \n\
 /* 0800de4c */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800de58: \n\
 /* 0800de58 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
 /* 0800de5a */ LDR R0, [R0] \n\
 /* 0800de5c */ LDR R1, [R6] \n\
@@ -2246,6 +2438,8 @@ branch_0800ddda: \n\
 /* 0800de64 */ B branch_0800de7c \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800de70: \n\
 /* 0800de70 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
 /* 0800de72 */ LDR R0, [R0] \n\
 /* 0800de74 */ LDR R1, [R6] \n\
@@ -2260,6 +2454,8 @@ branch_0800de7c: \n\
 /* 0800de84 */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800de90: \n\
 /* 0800de90 */ MOVS R0, 0xFF @ Set R0 to 0xFF \n\
 /* 0800de92 */ ANDS R0, R7 @ Set R0 to R0 & R7 \n\
 /* 0800de94 */ LDR R1, =0x0300558c @ !PossiblePointer \n\
@@ -2298,6 +2494,8 @@ branch_0800decc: \n\
 /* 0800dedc */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800dee4: \n\
 /* 0800dee4 */ LDR R0, =0x0300558c @ !PossiblePointer \n\
 /* 0800dee6 */ LDR R1, [R0] \n\
 /* 0800dee8 */ LSLS R0, R7, 0x1 \n\
@@ -2309,6 +2507,8 @@ branch_0800decc: \n\
 /* 0800def6 */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800defc: \n\
 /* 0800defc */ LDR R0, =0x0300558c @ !PossiblePointer \n\
 /* 0800defe */ LDR R0, [R0] \n\
 /* 0800df00 */ LSLS R1, R6, 0x1 \n\
@@ -2321,6 +2521,8 @@ branch_0800decc: \n\
 /* 0800df10 */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800df1c: \n\
 /* 0800df1c */ LDR R0, =0x03005380 @ !PossiblePointer \n\
 /* 0800df1e */ LDR R4, [R0] \n\
 /* 0800df20 */ BL func_0800c3b8 \n\
@@ -2333,17 +2535,23 @@ branch_0800decc: \n\
 /* 0800df32 */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
+\n\
+jump_0800df38: \n\
 /* 0800df38 */ BL func_0800c3b8 \n\
 /* 0800df3c */ LSLS R0, R0, 0x10 \n\
 /* 0800df3e */ LSRS R0, R0, 0x10 \n\
 /* 0800df40 */ MOVS R1, 0x1 @ Set R1 to 0x1 \n\
 /* 0800df42 */ BL func_08005e18 \n\
 /* 0800df46 */ B branch_0800df9e \n\
+\n\
+jump_0800df48: \n\
 /* 0800df48 */ MOV R0, R9 @ Set R0 to R9 \n\
 /* 0800df4a */ ADDS R0, 0x98 @ Add 0x98 to R0 \n\
 /* 0800df4c */ LDR R0, [R0] \n\
 /* 0800df4e */ STR R0, [R6] \n\
 /* 0800df50 */ B branch_0800df9e \n\
+\n\
+jump_0800df52: \n\
 /* 0800df52 */ CMP R6, 0x0 @ Compare R6 and 0x0 \n\
 /* 0800df54 */ BEQ branch_0800df5e \n\
 /* 0800df56 */ LDR R0, [R6] \n\
@@ -2356,6 +2564,8 @@ branch_0800df5e: \n\
 /* 0800df62 */ LDR R0, [R0] \n\
 /* 0800df64 */ BL func_08005bc4 \n\
 /* 0800df68 */ B branch_0800df9e \n\
+\n\
+jump_0800df6a: \n\
 /* 0800df6a */ LSLS R2, R7, 0x1 \n\
 /* 0800df6c */ MOVS R0, 0x80 @ Set R0 to 0x80 \n\
 /* 0800df6e */ LSLS R0, R0, 0x2 \n\
@@ -2365,6 +2575,8 @@ branch_0800df5e: \n\
 /* 0800df76 */ MOVS R3, 0x10 @ Set R3 to 0x10 \n\
 /* 0800df78 */ BL func_0800186c \n\
 /* 0800df7c */ B branch_0800df9e \n\
+\n\
+jump_0800df7e: \n\
 /* 0800df7e */ LDR R0, =0x03005380 @ !PossiblePointer \n\
 /* 0800df80 */ LDR R0, [R0] \n\
 /* 0800df82 */ LDR R1, =0x0300558c @ !PossiblePointer \n\

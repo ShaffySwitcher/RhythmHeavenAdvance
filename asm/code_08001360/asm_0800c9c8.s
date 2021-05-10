@@ -6,7 +6,7 @@ glabel func_0800c9c8 \n\
 /* 0800c9c8 */ PUSH {LR} \n\
 /* 0800c9ca */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
 /* 0800c9cc */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 0800c9ce */ LDR R3, =0x0800c9e8 @ !JumpTablePointer \n\
+/* 0800c9ce */ LDR R3, =jtbl_0800c9e8 \n\
  \n\
 branch_0800c9d0: \n\
 /* 0800c9d0 */ LDRB R0, [R1] \n\
@@ -20,18 +20,22 @@ branch_0800c9d0: \n\
 /* 0800c9e0 */ MOV PC, R0 @ Set PC to R0 \n\
 \n\
 .ltorg \n\
-@JUMPTABLE \n\
-.word 0x0800CA08 \n\
-.word 0x0800CA08 \n\
-.word 0x0800CA0C \n\
-.word 0x0800C9D0 \n\
-.word 0x0800C9D0 \n\
-.word 0x0800C9D0 \n\
-.word 0x0800CA08 \n\
-.word 0x0800CA08 \n\
 \n\
+jtbl_0800c9e8: \n\
+.word jump_0800ca08 \n\
+.word jump_0800ca08 \n\
+.word jump_0800ca0c \n\
+.word branch_0800c9d0 \n\
+.word branch_0800c9d0 \n\
+.word branch_0800c9d0 \n\
+.word jump_0800ca08 \n\
+.word jump_0800ca08 \n\
+\n\
+jump_0800ca08: \n\
 /* 0800ca08 */ ADDS R2, 0x1 @ Add 0x1 to R2 \n\
 /* 0800ca0a */ B branch_0800c9d0 \n\
+\n\
+jump_0800ca0c: \n\
 /* 0800ca0c */ CMP R2, 0x0 @ Compare R2 and 0x0 \n\
 /* 0800ca0e */ BEQ branch_0800ca14 \n\
 /* 0800ca10 */ SUBS R2, 0x1 @ Subtract 0x1 from R2 \n\
