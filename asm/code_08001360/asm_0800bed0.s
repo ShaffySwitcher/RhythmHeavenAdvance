@@ -19,7 +19,7 @@ glabel func_0800bed0 \n\
 branch_0800beea: \n\
 /* 0800beea */ CMP R4, 0x0 @ Compare R4 and 0x0 \n\
 /* 0800beec */ BNE branch_0800bef8 \n\
-/* 0800beee */ LDR R1, [PC, 0x4] @ 0x0800bef4 \n\
+/* 0800beee */ LDR R1, =D_030053c0 \n\
 /* 0800bef0 */ STR R4, [R1, 0x4] \n\
 /* 0800bef2 */ B branch_0800bf70 \n\
 \n\

@@ -23,7 +23,7 @@ glabel func_08016d94 \n\
 /* 08016dbc */ STR R0, [R1, 0x4] \n\
  \n\
 branch_08016dbe: \n\
-/* 08016dbe */ LDR R0, [PC, 0x14] @ 0x08016dd4 \n\
+/* 08016dbe */ LDR R0, =0x030046a4 @ !PossiblePointer \n\
 /* 08016dc0 */ LDR R0, [R0] \n\
 /* 08016dc2 */ LDR R0, [R0] \n\
 /* 08016dc4 */ BL func_0800a914 \n\

@@ -2,11 +2,7 @@ asm(".syntax unified \n\
 \n\
 .balign 4, 0 \n\
 \n\
-glabel func_08011818 \n\
-/* 08011818 */ STRH R0, [R0, R6] \n\
-/* 0801181a */ LSLS R0, R0, 0xC \n\
-/* 0801181c */ LSLS R0, R0, 0x0 \n\
-/* 0801181e */ LSLS R1, R0, 0x18 \n\
+glabel func_08011820 \n\
 /* 08011820 */ PUSH {R4-R7, LR} \n\
 /* 08011822 */ MOV R7, R9 @ Set R7 to R9 \n\
 /* 08011824 */ MOV R6, R8 @ Set R6 to R8 \n\

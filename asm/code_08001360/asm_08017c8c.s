@@ -92,11 +92,11 @@ branch_08017d2e: \n\
 /* 08017d2e */ LDR R1, =0x030046a4 @ !PossiblePointer \n\
 /* 08017d30 */ MOV R9, R1 @ Set R9 to R1 \n\
 /* 08017d32 */ LDR R2, [R1] \n\
-/* 08017d34 */ LDR R1, =0x000004ab @ !PossiblePointer \n\
+/* 08017d34 */ LDR R1, =0x4ab \n\
 /* 08017d36 */ ADDS R0, R2, R1 @ Set R0 to R2 + R1 \n\
 /* 08017d38 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 08017d3a */ LDRSB R1, [R0, R1] \n\
-/* 08017d3c */ LDR R0, =0x000004a9 @ !PossiblePointer \n\
+/* 08017d3c */ LDR R0, =0x4a9 \n\
 /* 08017d3e */ ADDS R2, R2, R0 @ Set R2 to R2 + R0 \n\
 /* 08017d40 */ LDRB R2, [R2] \n\
 /* 08017d42 */ LSLS R2, R2, 0x18 \n\
@@ -106,11 +106,11 @@ branch_08017d2e: \n\
 /* 08017d4c */ MOV R10, R0 @ Set R10 to R0 \n\
 /* 08017d4e */ MOV R1, R9 @ Set R1 to R9 \n\
 /* 08017d50 */ LDR R2, [R1] \n\
-/* 08017d52 */ LDR R1, =0x000004aa @ !PossiblePointer \n\
+/* 08017d52 */ LDR R1, =0x4aa \n\
 /* 08017d54 */ ADDS R0, R2, R1 @ Set R0 to R2 + R1 \n\
 /* 08017d56 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 08017d58 */ LDRSB R1, [R0, R1] \n\
-/* 08017d5a */ LDR R0, =0x000004ac @ !PossiblePointer \n\
+/* 08017d5a */ LDR R0, =0x4ac \n\
 /* 08017d5c */ MOV R8, R0 @ Set R8 to R0 \n\
 /* 08017d5e */ ADD R2, R8 @ Add R8 to R2 \n\
 /* 08017d60 */ LDRB R2, [R2] \n\
@@ -121,12 +121,12 @@ branch_08017d2e: \n\
 /* 08017d6c */ ADDS R6, R0, 0x0 @ Set R6 to R0 + 0x0 \n\
 /* 08017d6e */ MOV R1, R9 @ Set R1 to R9 \n\
 /* 08017d70 */ LDR R0, [R1] \n\
-/* 08017d72 */ LDR R2, [PC, 0x78] @ 0x08017dec \n\
+/* 08017d72 */ LDR R2, =0x4ab \n\
 /* 08017d74 */ ADDS R2, R0, R2 @ Set R2 to R0 + R2 \n\
 /* 08017d76 */ STR R2, [SP, 0x10] \n\
 /* 08017d78 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 08017d7a */ LDRSB R1, [R2, R1] \n\
-/* 08017d7c */ LDR R2, [PC, 0x70] @ 0x08017df0 \n\
+/* 08017d7c */ LDR R2, =0x4a9 \n\
 /* 08017d7e */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 08017d80 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08017d82 */ LDRSB R2, [R0, R2] \n\
@@ -135,7 +135,7 @@ branch_08017d2e: \n\
 /* 08017d8a */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 08017d8c */ MOV R1, R9 @ Set R1 to R9 \n\
 /* 08017d8e */ LDR R0, [R1] \n\
-/* 08017d90 */ LDR R2, [PC, 0x60] @ 0x08017df4 \n\
+/* 08017d90 */ LDR R2, =0x4aa \n\
 /* 08017d92 */ ADDS R2, R0, R2 @ Set R2 to R0 + R2 \n\
 /* 08017d94 */ STR R2, [SP, 0x14] \n\
 /* 08017d96 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\

@@ -29,7 +29,7 @@ branch_0801a734: \n\
 /* 0801a738 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 0801a73a */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0801a73c */ BEQ branch_0801a75a \n\
-/* 0801a73e */ LDR R4, [PC, 0x64] @ 0x0801a7a4 \n\
+/* 0801a73e */ LDR R4, =0x030046a4 @ !PossiblePointer \n\
 /* 0801a740 */ LDR R0, [R4] \n\
 /* 0801a742 */ LDR R0, [R0, 0x8] \n\
 /* 0801a744 */ BL func_0800aa78 \n\
@@ -50,7 +50,7 @@ branch_0801a75a: \n\
 /* 0801a760 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 0801a762 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0801a764 */ BEQ branch_0801a782 \n\
-/* 0801a766 */ LDR R4, [PC, 0x3C] @ 0x0801a7a4 \n\
+/* 0801a766 */ LDR R4, =0x030046a4 @ !PossiblePointer \n\
 /* 0801a768 */ LDR R0, [R4] \n\
 /* 0801a76a */ LDR R0, [R0, 0x8] \n\
 /* 0801a76c */ BL func_0800aa78 \n\
@@ -65,7 +65,7 @@ branch_0801a75a: \n\
 /* 0801a780 */ MOVS R5, 0x2 @ Set R5 to 0x2 \n\
  \n\
 branch_0801a782: \n\
-/* 0801a782 */ LDR R0, [PC, 0x24] @ 0x0801a7a8 \n\
+/* 0801a782 */ LDR R0, =0x03004afc @ !PossiblePointer \n\
 /* 0801a784 */ LDRH R1, [R0] \n\
 /* 0801a786 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0801a788 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\

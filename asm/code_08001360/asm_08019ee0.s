@@ -115,7 +115,7 @@ branch_08019fbc: \n\
 /* 08019fc6 */ LDR R1, [R4] \n\
 /* 08019fc8 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 08019fca */ STRB R0, [R1, 0xC] \n\
-/* 08019fcc */ LDR R0, [PC, 0x44] @ 0x0801a014 \n\
+/* 08019fcc */ LDR R0, =0x03005380 @ !PossiblePointer \n\
 /* 08019fce */ LDR R0, [R0] \n\
 /* 08019fd0 */ LDR R1, [R4] \n\
 /* 08019fd2 */ MOVS R2, 0x10 @ Set R2 to 0x10 \n\

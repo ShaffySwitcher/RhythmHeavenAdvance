@@ -327,7 +327,7 @@ branch_08009d0a: \n\
 /* 08009d4c */ MOVS R7, 0x0 @ Set R7 to 0x0 \n\
  \n\
 branch_08009d4e: \n\
-/* 08009d4e */ LDR R0, [PC, 0x90] @ 0x08009de0 \n\
+/* 08009d4e */ LDR R0, =D_03001218 \n\
 /* 08009d50 */ LDR R4, [R0] \n\
 /* 08009d52 */ ADDS R4, R7, R4 @ Set R4 to R7 + R4 \n\
 /* 08009d54 */ LDRH R0, [R4, 0xA] \n\
@@ -352,7 +352,7 @@ branch_08009d72: \n\
 /* 08009d78 */ ADDS R7, R2, R0 @ Set R7 to R2 + R0 \n\
  \n\
 branch_08009d7a: \n\
-/* 08009d7a */ LDR R0, [PC, 0x64] @ 0x08009de0 \n\
+/* 08009d7a */ LDR R0, =D_03001218 \n\
 /* 08009d7c */ LDR R5, [R0] \n\
 /* 08009d7e */ MOVS R6, 0x0 @ Set R6 to 0x0 \n\
 /* 08009d80 */ LDR R3, [SP, 0x18] \n\

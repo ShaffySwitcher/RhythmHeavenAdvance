@@ -77,7 +77,7 @@ branch_0801acac: \n\
 /* 0801acca */ BL func_0804d8f8 \n\
  \n\
 branch_0801acce: \n\
-/* 0801acce */ LDR R4, [PC, 0x5C] @ 0x0801ad2c \n\
+/* 0801acce */ LDR R4, =0x030046a4 @ !PossiblePointer \n\
 /* 0801acd0 */ LDR R0, [R4] \n\
 /* 0801acd2 */ LDR R1, =0x000004b4 @ !PossiblePointer \n\
 /* 0801acd4 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\

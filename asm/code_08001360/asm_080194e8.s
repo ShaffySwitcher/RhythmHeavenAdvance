@@ -47,7 +47,7 @@ branch_080194fc: \n\
 /* 08019538 */ ADDS R7, 0x1 @ Add 0x1 to R7 \n\
 /* 0801953a */ CMP R7, 0x2 @ Compare R7 and 0x2 \n\
 /* 0801953c */ BLS branch_080194fc \n\
-/* 0801953e */ LDR R0, [PC, 0x10] @ 0x08019550 \n\
+/* 0801953e */ LDR R0, =0x089d7980 @ !PossiblePointer \n\
 /* 08019540 */ LDR R0, [R0] \n\
 /* 08019542 */ ADDS R0, 0x50 @ Add 0x50 to R0 \n\
 /* 08019544 */ BL func_08019480 \n\

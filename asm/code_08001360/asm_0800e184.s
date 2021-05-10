@@ -23,7 +23,7 @@ branch_0800e1a0: \n\
 /* 0800e1a2 */ ASRS R3, R0, 0x10 \n\
 /* 0800e1a4 */ CMP R3, 0x0 @ Compare R3 and 0x0 \n\
 /* 0800e1a6 */ BLT branch_0800e1b8 \n\
-/* 0800e1a8 */ LDR R2, [PC, 0x14] @ 0x0800e1c0 \n\
+/* 0800e1a8 */ LDR R2,  =0x03004b10 @ !PossiblePointer \n\
 /* 0800e1aa */ ADDS R2, 0x48 @ Add 0x48 to R2 \n\
 /* 0800e1ac */ LDRH R1, [R2] \n\
 /* 0800e1ae */ LDR R0, =0x0000ff0f @ !PossiblePointer \n\

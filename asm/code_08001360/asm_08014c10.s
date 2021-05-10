@@ -48,7 +48,7 @@ glabel func_08014c10 \n\
 /* 08014c66 */ MOVS R3, 0xA8 @ Set R3 to 0xA8 \n\
 /* 08014c68 */ BL func_0804d160 \n\
 /* 08014c6c */ LDR R1, [R5] \n\
-/* 08014c6e */ LDR R2, =0x000004ea @ !PossiblePointer \n\
+/* 08014c6e */ LDR R2, =0x4ea \n\
 /* 08014c70 */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
 /* 08014c72 */ STRH R0, [R1] \n\
 /* 08014c74 */ MOV R1, R8 @ Set R1 to R8 \n\
@@ -65,7 +65,7 @@ glabel func_08014c10 \n\
 /* 08014c8a */ MOVS R3, 0xA8 @ Set R3 to 0xA8 \n\
 /* 08014c8c */ BL func_0804d160 \n\
 /* 08014c90 */ LDR R1, [R5] \n\
-/* 08014c92 */ LDR R2, =0x000004ec @ !PossiblePointer \n\
+/* 08014c92 */ LDR R2, =0x4ec \n\
 /* 08014c94 */ MOV R9, R2 @ Set R9 to R2 \n\
 /* 08014c96 */ ADD R1, R9 @ Add R9 to R1 \n\
 /* 08014c98 */ STRH R0, [R1] \n\
@@ -86,17 +86,17 @@ glabel func_08014c10 \n\
 /* 08014cb8 */ LDRSH R1, [R1, R2] \n\
 /* 08014cba */ LDR R4, =0x03004b20 @ !PossiblePointer \n\
 /* 08014cbc */ ADDS R4, 0x2 @ Add 0x2 to R4 \n\
-/* 08014cbe */ LDR R2, [PC, 0x70] @ 0x08014d30 \n\
+/* 08014cbe */ LDR R2, =0x03004b20 @ !PossiblePointer \n\
 /* 08014cc0 */ ADDS R3, R4, 0x0 @ Set R3 to R4 + 0x0 \n\
 /* 08014cc2 */ BL func_0804db44 \n\
 /* 08014cc6 */ MOV R1, R8 @ Set R1 to R8 \n\
 /* 08014cc8 */ LDR R0, [R1] \n\
 /* 08014cca */ LDR R1, [R5] \n\
-/* 08014ccc */ LDR R2, [PC, 0x58] @ 0x08014d28 \n\
+/* 08014ccc */ LDR R2, =0x4ea \n\
 /* 08014cce */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
 /* 08014cd0 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08014cd2 */ LDRSH R1, [R1, R2] \n\
-/* 08014cd4 */ LDR R2, [PC, 0x58] @ 0x08014d30 \n\
+/* 08014cd4 */ LDR R2, =0x03004b20 @ !PossiblePointer \n\
 /* 08014cd6 */ ADDS R3, R4, 0x0 @ Set R3 to R4 + 0x0 \n\
 /* 08014cd8 */ BL func_0804db44 \n\
 /* 08014cdc */ MOV R1, R8 @ Set R1 to R8 \n\
@@ -105,7 +105,7 @@ glabel func_08014c10 \n\
 /* 08014ce2 */ ADD R1, R9 @ Add R9 to R1 \n\
 /* 08014ce4 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08014ce6 */ LDRSH R1, [R1, R2] \n\
-/* 08014ce8 */ LDR R2, [PC, 0x44] @ 0x08014d30 \n\
+/* 08014ce8 */ LDR R2, =0x03004b20 @ !PossiblePointer \n\
 /* 08014cea */ ADDS R3, R4, 0x0 @ Set R3 to R4 + 0x0 \n\
 /* 08014cec */ BL func_0804db44 \n\
 /* 08014cf0 */ LDR R0, =0x030046a8 @ !PossiblePointer \n\

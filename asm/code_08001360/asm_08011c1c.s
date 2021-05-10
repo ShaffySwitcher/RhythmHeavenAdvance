@@ -133,7 +133,7 @@ branch_08011d08: \n\
 /* 08011d1a */ MOVS R1, 0x80 @ Set R1 to 0x80 \n\
 /* 08011d1c */ LSLS R1, R1, 0x8 \n\
 /* 08011d1e */ STR R1, [SP, 0x10] \n\
-/* 08011d20 */ LDR R1, [PC, 0x64] @ 0x08011d88 \n\
+/* 08011d20 */ LDR R1, =0x08900bcc @ !PossiblePointer \n\
 /* 08011d22 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08011d24 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 08011d26 */ BL func_0804d160 \n\

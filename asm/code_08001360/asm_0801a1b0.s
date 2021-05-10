@@ -70,7 +70,7 @@ branch_0801a220: \n\
 /* 0801a226 */ STR R0, [R2, 0x10] \n\
  \n\
 branch_0801a228: \n\
-/* 0801a228 */ LDR R6, [PC, 0x10] @ 0x0801a23c \n\
+/* 0801a228 */ LDR R6, =0x030046a4 @ !PossiblePointer \n\
 /* 0801a22a */ LDR R0, [R6] \n\
 /* 0801a22c */ LDR R0, [R0, 0xC] \n\
 /* 0801a22e */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
@@ -147,7 +147,7 @@ branch_0801a2ca: \n\
 /* 0801a2d4 */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
 /* 0801a2d6 */ LDR R0, [R6] \n\
 /* 0801a2d8 */ STR R1, [R0, 0x4] \n\
-/* 0801a2da */ LDR R0, [PC, 0x28] @ 0x0801a304 \n\
+/* 0801a2da */ LDR R0, =0x03005380 @ !PossiblePointer \n\
 /* 0801a2dc */ LDR R0, [R0] \n\
 /* 0801a2de */ LDR R2, =0x089d7b50 @ !PossiblePointer \n\
 /* 0801a2e0 */ LDR R3, =0x0300558c @ !PossiblePointer \n\

@@ -139,7 +139,7 @@ branch_080123c0: \n\
 /* 080123c2 */ STR R0, [R1] \n\
  \n\
 branch_080123c4: \n\
-/* 080123c4 */ LDR R0, [PC, 0x14] @ 0x080123dc \n\
+/* 080123c4 */ LDR R0,=0x030046a4 @ !PossiblePointer \n\
 /* 080123c6 */ LDR R0, [R0] \n\
 /* 080123c8 */ LDR R0, [R0, 0x4] \n\
 /* 080123ca */ BL func_0800b074 \n\

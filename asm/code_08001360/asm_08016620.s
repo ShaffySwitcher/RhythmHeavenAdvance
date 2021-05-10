@@ -32,7 +32,7 @@ branch_0801664a: \n\
 /* 0801664e */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 08016650 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08016652 */ BEQ branch_08016662 \n\
-/* 08016654 */ LDR R0, [PC, 0x38] @ 0x08016690 \n\
+/* 08016654 */ LDR R0, =0x030046a4 @ !PossiblePointer \n\
 /* 08016656 */ LDR R0, [R0] \n\
 /* 08016658 */ MOVS R3, 0x2 @ Set R3 to 0x2 \n\
 /* 0801665a */ LDRSH R0, [R0, R3] \n\

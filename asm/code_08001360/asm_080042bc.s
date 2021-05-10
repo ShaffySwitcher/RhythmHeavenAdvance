@@ -36,7 +36,7 @@ branch_080042ec: \n\
 /* 080042f0 */ ADDS R3, R0, R2 @ Set R3 to R0 + R2 \n\
 /* 080042f2 */ CMP R1, R3 @ Check R1 - R3 \n\
 /* 080042f4 */ BLE branch_0800430c \n\
-/* 080042f6 */ LDR R5, [PC, 0xCC] @ 0x080043c4 \n\
+/* 080042f6 */ LDR R5, =0xffff \n\
 /* 080042f8 */ ADDS R4, R5, 0x0 @ Set R4 to R5 + 0x0 \n\
  \n\
 branch_080042fa: \n\

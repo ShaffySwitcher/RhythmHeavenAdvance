@@ -75,7 +75,7 @@ branch_0800b7f0: \n\
 /* 0800b802 */ BL func_0800e948 \n\
 /* 0800b806 */ BL func_0800eb0c \n\
 /* 0800b80a */ BL func_0800ec20 \n\
-/* 0800b80e */ LDR R2, [PC, 0x20] @ 0x0800b830 \n\
+/* 0800b80e */ LDR R2, =D_030053c0 \n\
 /* 0800b810 */ LDRB R0, [R2, 0x2] \n\
 /* 0800b812 */ MOVS R1, 0x2 @ Set R1 to 0x2 \n\
 /* 0800b814 */ ORRS R0, R1 @ Set R0 to R0 | R1 \n\

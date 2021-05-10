@@ -64,7 +64,7 @@ branch_0801254c: \n\
 /* 08012552 */ ASRS R0, R0, 0x18 \n\
 /* 08012554 */ CMP R7, R0 @ Check R7 - R0 \n\
 /* 08012556 */ BNE branch_08012580 \n\
-/* 08012558 */ LDR R0, [PC, 0xC] @ 0x08012568 \n\
+/* 08012558 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
 /* 0801255a */ LDR R0, [R0] \n\
 /* 0801255c */ LDR R1, =0x089cdc90 @ !PossiblePointer \n\
 /* 0801255e */ B branch_08012586 \n\
@@ -100,7 +100,7 @@ branch_08012586: \n\
 /* 080125b0 */ ADDS R7, 0x1 @ Add 0x1 to R7 \n\
 /* 080125b2 */ CMP R7, 0x4 @ Compare R7 and 0x4 \n\
 /* 080125b4 */ BLS branch_0801254c \n\
-/* 080125b6 */ LDR R2, [PC, 0x38] @ 0x080125f0 \n\
+/* 080125b6 */ LDR R2, =0x030046a4 @ !PossiblePointer \n\
 /* 080125b8 */ LDR R1, [R2] \n\
 /* 080125ba */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 080125bc */ STR R0, [R1, 0x8] \n\

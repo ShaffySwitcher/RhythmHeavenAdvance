@@ -19,7 +19,7 @@ glabel func_080154f0 \n\
 /* 0801550a */ MOVS R7, 0x0 @ Set R7 to 0x0 \n\
 /* 0801550c */ LDR R5, =0x03005380 @ !PossiblePointer \n\
 /* 0801550e */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
-/* 08015510 */ LDR R2, [PC, 0xE0] @ 0x080155f4 \n\
+/* 08015510 */ LDR R2, =0x32e \n\
 /* 08015512 */ ADDS R2, R0, R2 @ Set R2 to R0 + R2 \n\
 /* 08015514 */ STR R2, [SP, 0x14] \n\
 /* 08015516 */ ADDS R3, R6, 0x2 @ Set R3 to R6 + 0x2 \n\
@@ -39,7 +39,7 @@ branch_0801551a: \n\
 /* 0801552e */ STR R4, [SP, 0x8] \n\
 /* 08015530 */ STR R4, [SP, 0xC] \n\
 /* 08015532 */ STR R4, [SP, 0x10] \n\
-/* 08015534 */ LDR R1, [PC, 0xC0] @ 0x080155f8 \n\
+/* 08015534 */ LDR R1, =0x08902b78 @ !PossiblePointer \n\
 /* 08015536 */ MOVS R2, 0xA @ Set R2 to 0xA \n\
 /* 08015538 */ BL func_0804d160 \n\
 /* 0801553c */ LSLS R2, R7, 0x1 \n\
@@ -56,9 +56,9 @@ branch_0801551a: \n\
 /* 08015554 */ ADDS R7, 0x1 @ Add 0x1 to R7 \n\
 /* 08015556 */ CMP R7, 0x2 @ Compare R7 and 0x2 \n\
 /* 08015558 */ BLS branch_0801551a \n\
-/* 0801555a */ LDR R5, [PC, 0x94] @ 0x080155f0 \n\
+/* 0801555a */ LDR R5, =0x03005380 @ !PossiblePointer \n\
 /* 0801555c */ LDR R0, [R5] \n\
-/* 0801555e */ LDR R1, [PC, 0x9C] @ 0x080155fc \n\
+/* 0801555e */ LDR R1, =0x08902bd8 @ !PossiblePointer \n\
 /* 08015560 */ MOV R3, R8 @ Set R3 to R8 \n\
 /* 08015562 */ STR R3, [SP] \n\
 /* 08015564 */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
@@ -78,7 +78,7 @@ branch_0801551a: \n\
 /* 08015582 */ MOV R3, R10 @ Set R3 to R10 \n\
 /* 08015584 */ BL func_0804db44 \n\
 /* 08015588 */ LDR R0, [R5] \n\
-/* 0801558a */ LDR R1, [PC, 0x74] @ 0x08015600 \n\
+/* 0801558a */ LDR R1, =0x08902bf0 @ !PossiblePointer \n\
 /* 0801558c */ MOV R3, R8 @ Set R3 to R8 \n\
 /* 0801558e */ STR R3, [SP] \n\
 /* 08015590 */ STR R4, [SP, 0x4] \n\
@@ -109,7 +109,7 @@ branch_0801551a: \n\
 /* 080155c8 */ MOV R8, R0 @ Set R8 to R0 \n\
  \n\
 branch_080155ca: \n\
-/* 080155ca */ LDR R0, [PC, 0x24] @ 0x080155f0 \n\
+/* 080155ca */ LDR R0, =0x03005380 @ !PossiblePointer \n\
 /* 080155cc */ LDR R5, [R0] \n\
 /* 080155ce */ MOV R1, R8 @ Set R1 to R8 \n\
 /* 080155d0 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
@@ -124,15 +124,7 @@ branch_080155ca: \n\
 /* 080155e4 */ B branch_08015606 \n\
 \n\
 .ltorg \n\
-/* 080155f4 */ LSLS R6, R5, 0xC \n\
-/* 080155f6 */ LSLS R0, R0, 0x0 \n\
-/* 080155f8 */ CMP R3, 0x78 @ Compare R3 and 0x78 \n\
-/* 080155fa */ LSRS R0, R2, 0x2 \n\
-/* 080155fc */ CMP R3, 0xD8 @ Compare R3 and 0xD8 \n\
-/* 080155fe */ LSRS R0, R2, 0x2 \n\
-/* 08015600 */ CMP R3, 0xF0 @ Compare R3 and 0xF0 \n\
-/* 08015602 */ LSRS R0, R2, 0x2 \n\
- \n\
+\n\
 branch_08015604: \n\
 /* 08015604 */ MOVS R2, 0xA @ Set R2 to 0xA \n\
  \n\

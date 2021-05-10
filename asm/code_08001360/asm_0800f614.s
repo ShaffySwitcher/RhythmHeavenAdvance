@@ -143,7 +143,7 @@ branch_0800f6e8: \n\
 /* 0800f718 */ STR R1, [SP] \n\
 /* 0800f71a */ ADDS R1, R7, 0x0 @ Set R1 to R7 + 0x0 \n\
 /* 0800f71c */ BL func_0804d55c \n\
-/* 0800f720 */ LDR R2, [PC, 0x44] @ 0x0800f768 \n\
+/* 0800f720 */ LDR R2, =0x03005380 @ !PossiblePointer \n\
 /* 0800f722 */ LDR R5, [R2] \n\
 /* 0800f724 */ MOV R0, R10 @ Set R0 to R10 \n\
 /* 0800f726 */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
@@ -170,7 +170,7 @@ branch_0800f6e8: \n\
 /* 0800f754 */ BL func_080024dc \n\
 /* 0800f758 */ CMP R4, 0xFF @ Compare R4 and 0xFF \n\
 /* 0800f75a */ BLE branch_0800f76c \n\
-/* 0800f75c */ LDR R1, [PC, 0x8] @ 0x0800f768 \n\
+/* 0800f75c */ LDR R1, =0x03005380 @ !PossiblePointer \n\
 /* 0800f75e */ LDR R0, [R1] \n\
 /* 0800f760 */ ADDS R1, R7, 0x0 @ Set R1 to R7 + 0x0 \n\
 /* 0800f762 */ MOVS R2, 0x1 @ Set R2 to 0x1 \n\
@@ -188,7 +188,7 @@ branch_0800f76c: \n\
  \n\
 branch_0800f778: \n\
 /* 0800f778 */ BL func_0804dc8c \n\
-/* 0800f77c */ LDR R2, [PC, 0xC] @ 0x0800f78c \n\
+/* 0800f77c */ LDR R2, =0x03005380 @ !PossiblePointer \n\
 /* 0800f77e */ LDR R0, [R2] \n\
 /* 0800f780 */ ADDS R1, R7, 0x0 @ Set R1 to R7 + 0x0 \n\
 /* 0800f782 */ MOVS R2, 0x1 @ Set R2 to 0x1 \n\

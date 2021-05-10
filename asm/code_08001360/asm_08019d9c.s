@@ -52,7 +52,7 @@ branch_08019de2: \n\
 /* 08019dee */ ADDS R4, R0, R1 @ Set R4 to R0 + R1 \n\
  \n\
 branch_08019df0: \n\
-/* 08019df0 */ LDR R0, [PC, 0x9C] @ 0x08019e90 \n\
+/* 08019df0 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
 /* 08019df2 */ LDR R0, [R0] \n\
 /* 08019df4 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08019df6 */ LDRSH R1, [R4, R2] \n\
@@ -93,7 +93,7 @@ branch_08019e14: \n\
 /* 08019e32 */ LDR R6, [SP] \n\
  \n\
 branch_08019e34: \n\
-/* 08019e34 */ LDR R0, [PC, 0x58] @ 0x08019e90 \n\
+/* 08019e34 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
 /* 08019e36 */ LDR R0, [R0] \n\
 /* 08019e38 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08019e3a */ LDRSH R1, [R6, R2] \n\
@@ -124,7 +124,7 @@ branch_08019e56: \n\
 /* 08019e6a */ ADDS R6, R0, R2 @ Set R6 to R0 + R2 \n\
  \n\
 branch_08019e6c: \n\
-/* 08019e6c */ LDR R0, [PC, 0x20] @ 0x08019e90 \n\
+/* 08019e6c */ LDR R0, =0x03005380 @ !PossiblePointer \n\
 /* 08019e6e */ LDR R0, [R0] \n\
 /* 08019e70 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 08019e72 */ LDRSH R1, [R6, R3] \n\

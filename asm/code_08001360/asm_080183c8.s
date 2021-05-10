@@ -50,7 +50,7 @@ branch_08018410: \n\
 /* 0801841c */ ADDS R0, 0x91 @ Add 0x91 to R0 \n\
 /* 0801841e */ MOVS R3, 0x1 @ Set R3 to 0x1 \n\
 /* 08018420 */ STRB R3, [R0] \n\
-/* 08018422 */ LDR R0, [PC, 0x70] @ 0x08018494 \n\
+/* 08018422 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
 /* 08018424 */ LDR R0, [R0] \n\
 /* 08018426 */ LDR R1, [R5] \n\
 /* 08018428 */ ADDS R1, 0x8E @ Add 0x8E to R1 \n\
@@ -62,7 +62,7 @@ branch_08018410: \n\
 /* 08018434 */ STR R4, [SP, 0x8] \n\
 /* 08018436 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 08018438 */ BL func_0804d8f8 \n\
-/* 0801843c */ LDR R0, [PC, 0x5C] @ 0x0801849c \n\
+/* 0801843c */ LDR R0, =0x08a9dbac @ !PossiblePointer \n\
 /* 0801843e */ BL func_08002634 \n\
  \n\
 branch_08018442: \n\
@@ -72,7 +72,7 @@ branch_08018442: \n\
 /* 08018448 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 0801844a */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0801844c */ BEQ branch_080184c4 \n\
-/* 0801844e */ LDR R4, [PC, 0x44] @ 0x08018494 \n\
+/* 0801844e */ LDR R4, =0x03005380 @ !PossiblePointer \n\
 /* 08018450 */ LDR R0, [R4] \n\
 /* 08018452 */ LDR R1, [R5] \n\
 /* 08018454 */ ADDS R1, 0x8C @ Add 0x8C to R1 \n\

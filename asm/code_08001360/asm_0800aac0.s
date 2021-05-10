@@ -53,7 +53,7 @@ branch_0800ab1a: \n\
 /* 0800ab20 */ LDRSH R0, [R1, R2] \n\
 /* 0800ab22 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0800ab24 */ BLT branch_0800ab3e \n\
-/* 0800ab26 */ LDR R0, [PC, 0x64] @ 0x0800ab8c \n\
+/* 0800ab26 */ LDR R0, =D_03005380 \n\
 /* 0800ab28 */ LDR R0, [R0] \n\
 /* 0800ab2a */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0800ab2c */ LDRSH R1, [R1, R2] \n\
@@ -70,7 +70,7 @@ branch_0800ab3e: \n\
 /* 0800ab40 */ ADDS R1, R7, R1 @ Set R1 to R7 + R1 \n\
 /* 0800ab42 */ MOV R0, R10 @ Set R0 to R10 \n\
 /* 0800ab44 */ STRH R0, [R1] \n\
-/* 0800ab46 */ LDR R0, [PC, 0x44] @ 0x0800ab8c \n\
+/* 0800ab46 */ LDR R0, =D_03005380 \n\
 /* 0800ab48 */ LDR R0, [R0] \n\
 /* 0800ab4a */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0800ab4c */ LDRSH R1, [R1, R2] \n\

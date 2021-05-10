@@ -182,7 +182,7 @@ branch_08019d30: \n\
 branch_08019d3a: \n\
 /* 08019d3a */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\
 /* 08019d3c */ BL func_08006694 \n\
-/* 08019d40 */ LDR R0, [PC, 0x18] @ 0x08019d5c \n\
+/* 08019d40 */ LDR R0, =0x030046a4 @ !PossiblePointer \n\
 /* 08019d42 */ LDR R0, [R0] \n\
 /* 08019d44 */ MOV R2, R10 @ Set R2 to R10 \n\
 /* 08019d46 */ STRB R2, [R0, 0x13] \n\

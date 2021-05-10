@@ -33,7 +33,7 @@ branch_080192ca: \n\
 /* 080192d8 */ BLS branch_080192ca \n\
 /* 080192da */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
 /* 080192dc */ BL func_08019278 \n\
-/* 080192e0 */ LDR R0, [PC, 0x1C] @ 0x08019300 \n\
+/* 080192e0 */ LDR R0, =0x089d7980 @ !PossiblePointer \n\
 /* 080192e2 */ LDR R1, [R0] \n\
 /* 080192e4 */ MOVS R2, 0xFE @ Set R2 to 0xFE \n\
 /* 080192e6 */ LSLS R2, R2, 0x1 \n\

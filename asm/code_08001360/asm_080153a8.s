@@ -132,7 +132,7 @@ branch_08015468: \n\
  \n\
 branch_0801549a: \n\
 /* 0801549a */ LDRH R3, [R4] \n\
-/* 0801549c */ LDR R0, [PC, 0x4C] @ 0x080154ec \n\
+/* 0801549c */ LDR R0, =0xffff \n\
 /* 0801549e */ CMP R3, R0 @ Check R3 - R0 \n\
 /* 080154a0 */ BEQ branch_080154b0 \n\
 /* 080154a2 */ ADDS R0, R3, R7 @ Set R0 to R3 + R7 \n\

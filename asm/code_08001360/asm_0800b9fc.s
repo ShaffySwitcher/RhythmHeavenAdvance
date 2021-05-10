@@ -43,7 +43,7 @@ branch_0800ba2a: \n\
  \n\
 branch_0800ba40: \n\
 /* 0800ba40 */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
-/* 0800ba42 */ LDR R7, [PC, 0x78] @ 0x0800babc \n\
+/* 0800ba42 */ LDR R7, =D_030053c0 \n\
 /* 0800ba44 */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 0800ba46 */ MOV R9, R0 @ Set R9 to R0 \n\
 /* 0800ba48 */ MOVS R1, 0xB0 @ Set R1 to 0xB0 \n\

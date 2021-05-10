@@ -156,7 +156,7 @@ branch_08002bf8: \n\
  \n\
 branch_08002c10: \n\
 /* 08002c10 */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
-/* 08002c12 */ LDR R0, [PC, 0x2C] @ 0x08002c40 \n\
+/* 08002c12 */ LDR R0, =0x030053b0 @ !PossiblePointer \n\
 /* 08002c14 */ LDRB R1, [R0] \n\
 /* 08002c16 */ ADDS R6, R0, 0x0 @ Set R6 to R0 + 0x0 \n\
 /* 08002c18 */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\

@@ -18,7 +18,7 @@ branch_080178b8: \n\
 /* 080178c2 */ BNE branch_080178b8 \n\
  \n\
 branch_080178c4: \n\
-/* 080178c4 */ LDR R0, [PC, 0x18] @ 0x080178e0 \n\
+/* 080178c4 */ LDR R0, =0x030046a4 @ !PossiblePointer \n\
 /* 080178c6 */ LDR R0, [R0] \n\
 /* 080178c8 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 080178ca */ STR R1, [R0, 0x18] \n\

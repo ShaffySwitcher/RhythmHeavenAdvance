@@ -58,7 +58,7 @@ branch_08018e00: \n\
 /* 08018e00 */ MOV R5, R8 @ Set R5 to R8 \n\
 /* 08018e02 */ CMP R5, R6 @ Check R5 - R6 \n\
 /* 08018e04 */ BCS branch_08018e22 \n\
-/* 08018e06 */ LDR R7, [PC, 0x4C] @ 0x08018e54 \n\
+/* 08018e06 */ LDR R7, =0x03005380 @ !PossiblePointe \n\
 /* 08018e08 */ LSLS R0, R5, 0x1 \n\
 /* 08018e0a */ MOV R1, R9 @ Set R1 to R9 \n\
 /* 08018e0c */ ADDS R4, R0, R1 @ Set R4 to R0 + R1 \n\
@@ -77,7 +77,7 @@ branch_08018e0e: \n\
 branch_08018e22: \n\
 /* 08018e22 */ LDR R0, =0x08a9db70 @ !PossiblePointer \n\
 /* 08018e24 */ BL func_08002634 \n\
-/* 08018e28 */ LDR R0, [PC, 0x28] @ 0x08018e54 \n\
+/* 08018e28 */ LDR R0, =0x03005380 @ !PossiblePointe \n\
 /* 08018e2a */ LDR R0, [R0] \n\
 /* 08018e2c */ LDR R1, =0x0890b6dc @ !PossiblePointer \n\
 /* 08018e2e */ MOVS R2, 0x8C @ Set R2 to 0x8C \n\

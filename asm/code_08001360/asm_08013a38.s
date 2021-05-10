@@ -70,7 +70,7 @@ glabel func_08013a38 \n\
 /* 08013ac0 */ STRB R0, [R1] \n\
  \n\
 branch_08013ac2: \n\
-/* 08013ac2 */ LDR R6, [PC, 0x80] @ 0x08013b44 \n\
+/* 08013ac2 */ LDR R6, =0x030046a4 @ !PossiblePointer \n\
 /* 08013ac4 */ LDR R2, [R6] \n\
 /* 08013ac6 */ ADDS R0, R2, 0x0 @ Set R0 to R2 + 0x0 \n\
 /* 08013ac8 */ ADDS R0, 0x5C @ Add 0x5C to R0 \n\

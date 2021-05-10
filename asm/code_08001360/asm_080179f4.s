@@ -61,7 +61,7 @@ branch_08017a30: \n\
 /* 08017a5c */ ADDS R0, 0x4C @ Add 0x4C to R0 \n\
 /* 08017a5e */ MOVS R6, 0x0 @ Set R6 to 0x0 \n\
 /* 08017a60 */ STRH R6, [R0] \n\
-/* 08017a62 */ LDR R5, [PC, 0x20] @ 0x08017a84 \n\
+/* 08017a62 */ LDR R5, =0x030046a4 @ !PossiblePointer \n\
 /* 08017a64 */ LDR R0, [R5] \n\
 /* 08017a66 */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
 /* 08017a68 */ ADDS R1, 0x86 @ Add 0x86 to R1 \n\

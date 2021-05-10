@@ -24,7 +24,7 @@ branch_08017012: \n\
  \n\
 branch_08017022: \n\
 /* 08017022 */ LDR R0, =0x03004afc @ !PossiblePointer \n\
-/* 08017024 */ LDR R1, [PC, 0x70] @ 0x08017098 \n\
+/* 08017024 */ LDR R1, =0x030046a4 @ !PossiblePointer \n\
 /* 08017026 */ MOV R12, R1 @ Set R12 to R1 \n\
 /* 08017028 */ LDR R2, [R1] \n\
 /* 0801702a */ LDRH R0, [R0] \n\

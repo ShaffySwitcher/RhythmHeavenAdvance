@@ -24,7 +24,7 @@ branch_0800e15a: \n\
 /* 0800e15c */ ASRS R3, R0, 0x10 \n\
 /* 0800e15e */ CMP R3, 0x0 @ Compare R3 and 0x0 \n\
 /* 0800e160 */ BLT branch_0800e172 \n\
-/* 0800e162 */ LDR R2, [PC, 0x14] @ 0x0800e178 \n\
+/* 0800e162 */ LDR R2, =0x03004b10 @ !PossiblePointer \n\
 /* 0800e164 */ ADDS R2, 0x48 @ Add 0x48 to R2 \n\
 /* 0800e166 */ LDRH R1, [R2] \n\
 /* 0800e168 */ LDR R0, =0x00000fff @ !PossiblePointer \n\

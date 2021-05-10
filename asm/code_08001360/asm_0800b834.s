@@ -43,7 +43,7 @@ branch_0800b866: \n\
 /* 0800b87a */ LDR R0, [R5] \n\
 /* 0800b87c */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0800b87e */ BEQ branch_0800b964 \n\
-/* 0800b880 */ LDR R4, [PC, 0xA0] @ 0x0800b924 \n\
+/* 0800b880 */ LDR R4, =D_030053c0 \n\
 /* 0800b882 */ MOVS R0, 0xC4 @ Set R0 to 0xC4 \n\
 /* 0800b884 */ ADDS R0, R0, R4 @ Set R0 to R0 + R4 \n\
 /* 0800b886 */ MOV R9, R0 @ Set R9 to R0 \n\

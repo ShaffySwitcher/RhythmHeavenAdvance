@@ -39,7 +39,7 @@ branch_08017ee6: \n\
 /* 08017f06 */ MOVS R7, 0x1 @ Set R7 to 0x1 \n\
 /* 08017f08 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08017f0a */ STR R2, [SP, 0x18] \n\
-/* 08017f0c */ LDR R6, [PC, 0x34] @ 0x08017f44 \n\
+/* 08017f0c */ LDR R6, =0x0000270f @ !PossiblePointer \n\
 /* 08017f0e */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 08017f10 */ STR R3, [SP, 0x1C] \n\
 /* 08017f12 */ LDR R0, [R4] \n\
@@ -56,7 +56,7 @@ branch_08017f1a: \n\
 /* 08017f24 */ ADD R3, SP, 0x4 \n\
 /* 08017f26 */ BL func_08017c8c \n\
 /* 08017f2a */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
-/* 08017f2c */ LDR R0, [PC, 0x10] @ 0x08017f40 \n\
+/* 08017f2c */ LDR R0, =0x030046a4 @ !PossiblePointer \n\
 /* 08017f2e */ LDR R0, [R0] \n\
 /* 08017f30 */ ADDS R0, 0x5E @ Add 0x5E to R0 \n\
 /* 08017f32 */ LDRB R0, [R0] \n\
@@ -67,8 +67,6 @@ branch_08017f1a: \n\
 /* 08017f3c */ B branch_08017f82 \n\
 \n\
 .ltorg \n\
-/* 08017f44 */ MOVS R7, 0xF @ Set R7 to 0xF \n\
-/* 08017f46 */ LSLS R0, R0, 0x0 \n\
  \n\
 branch_08017f48: \n\
 /* 08017f48 */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\

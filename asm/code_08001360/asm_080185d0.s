@@ -27,7 +27,7 @@ glabel func_080185d0 \n\
 /* 080185fc */ BEQ branch_08018618 \n\
 /* 080185fe */ LDR R0, [R6] \n\
 /* 08018600 */ LDR R1, [R5] \n\
-/* 08018602 */ LDR R4, [PC, 0x28] @ 0x0801862c \n\
+/* 08018602 */ LDR R4, =0x496 \n\
 /* 08018604 */ ADDS R1, R1, R4 @ Set R1 to R1 + R4 \n\
 /* 08018606 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08018608 */ LDRSH R1, [R1, R2] \n\
