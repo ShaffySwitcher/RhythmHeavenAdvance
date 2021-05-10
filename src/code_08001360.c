@@ -1,4 +1,4 @@
-#include "code_08000718.h"
+#include "code_08001360.h"
 
 asm(".include \"include/gba.inc\"");//Temporary
 
@@ -142,7 +142,7 @@ asm(".include \"include/gba.inc\"");//Temporary
 
 #include "asm/code_08001360/asm_08002790.s"
 
-#include "asm/code_08001360/asm_080027d8.s"
+#include "asm/code_08001360/asm_080027dc.s"
 
 #include "asm/code_08001360/asm_08002828.s"
 
@@ -322,7 +322,7 @@ asm(".include \"include/gba.inc\"");//Temporary
 
 #include "asm/code_08001360/asm_08004070.s"
 
-#include "asm/code_08001360/asm_080041c8.s"
+#include "asm/code_08001360/asm_080041d0.s"
 
 #include "asm/code_08001360/asm_08004248.s"
 
@@ -1249,3 +1249,5 @@ asm(".include \"include/gba.inc\"");//Temporary
 #include "asm/code_08001360/asm_0800ca1c.s"
 
 #include "asm/code_08001360/asm_0800ca70.s"
+
+#include "asm/code_08001360/asm_0800cb28.s"
