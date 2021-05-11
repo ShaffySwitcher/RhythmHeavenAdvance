@@ -115,7 +115,7 @@ branch_0801a66a: \n\
  \n\
 branch_0801a6ac: \n\
 /* 0801a6ac */ STRH R1, [R4] \n\
-/* 0801a6ae */ LDR R0, =0x0000ff60 @ !PossiblePointer \n\
+/* 0801a6ae */ LDR R0, =0xff60 \n\
 /* 0801a6b0 */ STRH R0, [R3] \n\
 /* 0801a6b2 */ MOVS R0, 0x3 @ Set R0 to 0x3 \n\
 /* 0801a6b4 */ STRB R0, [R2] \n\

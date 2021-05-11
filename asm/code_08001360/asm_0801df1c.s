@@ -35,7 +35,7 @@ branch_0801df46: \n\
  \n\
 branch_0801df56: \n\
 /* 0801df56 */ LDR R0, =D_03004b10 \n\
-/* 0801df58 */ LDR R1, =0x00000854 @ !PossiblePointer \n\
+/* 0801df58 */ LDR R1, =0x854 \n\
 /* 0801df5a */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 0801df5c */ LDRB R1, [R0] \n\
 /* 0801df5e */ MOVS R0, 0x8 @ Set R0 to 0x8 \n\

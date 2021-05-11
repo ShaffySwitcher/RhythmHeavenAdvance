@@ -8,7 +8,7 @@ glabel func_0801d5f4 \n\
 /* 0801d5f8 */ BL func_0800c3b8 \n\
 /* 0801d5fc */ LSLS R0, R0, 0x10 \n\
 /* 0801d5fe */ LSRS R0, R0, 0x10 \n\
-/* 0801d600 */ LDR R1, =0x0801d5c1 @ !PossiblePointer \n\
+/* 0801d600 */ LDR R1, =(func_0801d5c0 + 1) \n\
 /* 0801d602 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0801d604 */ MOVS R3, 0x2 @ Set R3 to 0x2 \n\
 /* 0801d606 */ BL func_0800856c \n\

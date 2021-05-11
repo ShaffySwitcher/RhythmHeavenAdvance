@@ -135,7 +135,7 @@ branch_08019b60: \n\
 /* 08019b64 */ MOVS R2, 0x2 @ Set R2 to 0x2 \n\
 /* 08019b66 */ BL func_080087d4 \n\
 /* 08019b6a */ LSLS R0, R0, 0x2 \n\
-/* 08019b6c */ LDR R4, =0x089d7b34 @ !PossiblePointer \n\
+/* 08019b6c */ LDR R4, =D_089d7b34 \n\
 /* 08019b6e */ ADDS R0, R0, R4 @ Set R0 to R0 + R4 \n\
 /* 08019b70 */ LDR R1, [R0] \n\
 /* 08019b72 */ MOV R0, R9 @ Set R0 to R9 \n\

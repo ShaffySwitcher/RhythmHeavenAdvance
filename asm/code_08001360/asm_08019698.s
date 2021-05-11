@@ -12,25 +12,25 @@ glabel func_08019698 \n\
 /* 080196a4 */ LDRH R0, [R2, 0x14] \n\
 /* 080196a6 */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\
 /* 080196a8 */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
-/* 080196aa */ LDR R0, =0x0000043f @ !PossiblePointer \n\
+/* 080196aa */ LDR R0, =0x43f \n\
 /* 080196ac */ CMP R1, R0 @ Check R1 - R0 \n\
 /* 080196ae */ BHI branch_080196b2 \n\
 /* 080196b0 */ MOVS R4, 0x1 @ Set R4 to 0x1 \n\
  \n\
 branch_080196b2: \n\
-/* 080196b2 */ LDR R0, =0x0000033f @ !PossiblePointer \n\
+/* 080196b2 */ LDR R0, =0x33f \n\
 /* 080196b4 */ CMP R1, R0 @ Check R1 - R0 \n\
 /* 080196b6 */ BHI branch_080196ba \n\
 /* 080196b8 */ MOVS R4, 0x2 @ Set R4 to 0x2 \n\
  \n\
 branch_080196ba: \n\
-/* 080196ba */ LDR R0, =0x0000023f @ !PossiblePointer \n\
+/* 080196ba */ LDR R0, =0x23f \n\
 /* 080196bc */ CMP R1, R0 @ Check R1 - R0 \n\
 /* 080196be */ BHI branch_080196c2 \n\
 /* 080196c0 */ MOVS R4, 0x3 @ Set R4 to 0x3 \n\
  \n\
 branch_080196c2: \n\
-/* 080196c2 */ LDR R0, =0x0000013f @ !PossiblePointer \n\
+/* 080196c2 */ LDR R0, =0x13f \n\
 /* 080196c4 */ CMP R1, R0 @ Check R1 - R0 \n\
 /* 080196c6 */ BHI branch_080196ca \n\
 /* 080196c8 */ MOVS R4, 0x4 @ Set R4 to 0x4 \n\

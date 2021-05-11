@@ -9,7 +9,7 @@ glabel func_080191bc \n\
 /* 080191c2 */ LDR R0, [R5] \n\
 /* 080191c4 */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 080191c6 */ ADDS R4, 0x10 @ Add 0x10 to R4 \n\
-/* 080191c8 */ LDR R0, =0x03001540 @ !PossiblePointer \n\
+/* 080191c8 */ LDR R0, =D_03001540 \n\
 /* 080191ca */ LDRB R0, [R0] \n\
 /* 080191cc */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 080191ce */ BEQ branch_08019202 \n\

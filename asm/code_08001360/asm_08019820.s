@@ -21,25 +21,25 @@ branch_08019838: \n\
 /* 0801983a */ LDRH R1, [R1, 0x14] \n\
 /* 0801983c */ ADDS R1, R0, R1 @ Set R1 to R0 + R1 \n\
 /* 0801983e */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 08019840 */ LDR R0, =0x0000073f @ !PossiblePointer \n\
+/* 08019840 */ LDR R0, =0x73f \n\
 /* 08019842 */ CMP R1, R0 @ Check R1 - R0 \n\
 /* 08019844 */ BHI branch_08019848 \n\
 /* 08019846 */ MOVS R2, 0x1 @ Set R2 to 0x1 \n\
  \n\
 branch_08019848: \n\
-/* 08019848 */ LDR R0, =0x0000053f @ !PossiblePointer \n\
+/* 08019848 */ LDR R0, =0x53f \n\
 /* 0801984a */ CMP R1, R0 @ Check R1 - R0 \n\
 /* 0801984c */ BHI branch_08019850 \n\
 /* 0801984e */ MOVS R2, 0x2 @ Set R2 to 0x2 \n\
  \n\
 branch_08019850: \n\
-/* 08019850 */ LDR R0, =0x0000033f @ !PossiblePointer \n\
+/* 08019850 */ LDR R0, =0x33f \n\
 /* 08019852 */ CMP R1, R0 @ Check R1 - R0 \n\
 /* 08019854 */ BHI branch_08019858 \n\
 /* 08019856 */ MOVS R2, 0x3 @ Set R2 to 0x3 \n\
  \n\
 branch_08019858: \n\
-/* 08019858 */ LDR R0, =0x0000013f @ !PossiblePointer \n\
+/* 08019858 */ LDR R0, =0x13f \n\
 /* 0801985a */ CMP R1, R0 @ Check R1 - R0 \n\
 /* 0801985c */ BHI branch_08019860 \n\
 /* 0801985e */ MOVS R2, 0x4 @ Set R2 to 0x4 \n\

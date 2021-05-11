@@ -40,7 +40,7 @@ branch_08019728: \n\
 /* 08019734 */ LDRH R0, [R2, 0x12] \n\
 /* 08019736 */ LDRH R1, [R2, 0x14] \n\
 /* 08019738 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
-/* 0801973a */ LDR R1, =0x0000013f @ !PossiblePointer \n\
+/* 0801973a */ LDR R1, =0x13f \n\
 /* 0801973c */ CMP R0, R1 @ Check R0 - R1 \n\
 /* 0801973e */ BGT branch_08019742 \n\
 /* 08019740 */ MOVS R3, 0x4 @ Set R3 to 0x4 \n\

@@ -106,7 +106,7 @@ branch_080195a2: \n\
 /* 0801961a */ LDR R2, =D_030046a4 \n\
 /* 0801961c */ LDR R1, [R2] \n\
 /* 0801961e */ LDR R2, [R1, 0x4] \n\
-/* 08019620 */ LDR R1, =0x089d7984 @ !PossiblePointer \n\
+/* 08019620 */ LDR R1, =D_089d7984 \n\
 /* 08019622 */ LSLS R0, R0, 0x2 \n\
 /* 08019624 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08019626 */ LDR R1, [R0] \n\

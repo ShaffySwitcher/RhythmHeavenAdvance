@@ -13,7 +13,7 @@ glabel func_0801de6c \n\
 /* 0801de7a */ BEQ branch_0801deae \n\
 /* 0801de7c */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0801de7e */ STRB R0, [R1] \n\
-/* 0801de80 */ LDR R0, =0x88888888 @ !PossiblePointer \n\
+/* 0801de80 */ LDR R0, =0x88888888 \n\
 /* 0801de82 */ LDR R1, [R5, 0x2C] \n\
 /* 0801de84 */ MOVS R4, 0x80 @ Set R4 to 0x80 \n\
 /* 0801de86 */ LSLS R4, R4, 0x1 \n\

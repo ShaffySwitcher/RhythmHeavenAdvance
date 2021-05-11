@@ -28,9 +28,9 @@ branch_0801db40: \n\
 /* 0801db44 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 0801db46 */ LDRSB R1, [R2, R1] \n\
 /* 0801db48 */ LSLS R1, R1, 0x5 \n\
-/* 0801db4a */ LDR R3, =0x03004b74 @ !PossiblePointer \n\
+/* 0801db4a */ LDR R3, =D_03004b74 \n\
 /* 0801db4c */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
-/* 0801db4e */ LDR R2, =0x089dd94a @ !PossiblePointer \n\
+/* 0801db4e */ LDR R2, =D_089dd94a \n\
 /* 0801db50 */ LSLS R0, R0, 0x3 \n\
 /* 0801db52 */ ADDS R2, R0, R2 @ Set R2 to R0 + R2 \n\
 /* 0801db54 */ ADDS R1, R1, R3 @ Set R1 to R1 + R3 \n\

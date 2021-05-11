@@ -63,7 +63,7 @@ branch_08019f4c: \n\
 /* 08019f56 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 08019f58 */ BL func_080005e0 \n\
 /* 08019f5c */ ADDS R6, R0, 0x0 @ Set R6 to R0 + 0x0 \n\
-/* 08019f5e */ LDR R5, =0x089d6d74 @ !PossiblePointer \n\
+/* 08019f5e */ LDR R5, =D_089d6d74 \n\
 /* 08019f60 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 08019f62 */ ADDS R1, R5, 0x0 @ Set R1 to R5 + 0x0 \n\
 /* 08019f64 */ BL func_080006b0 \n\
@@ -75,7 +75,7 @@ branch_08019f4c: \n\
 branch_08019f74: \n\
 /* 08019f74 */ CMP R7, 0x0 @ Compare R7 and 0x0 \n\
 /* 08019f76 */ BNE branch_08019fbc \n\
-/* 08019f78 */ LDR R4, =0x089d7b40 @ !PossiblePointer \n\
+/* 08019f78 */ LDR R4, =D_089d7b40 \n\
 /* 08019f7a */ MOVS R0, 0x4 @ Set R0 to 0x4 \n\
 /* 08019f7c */ BL func_08001980 \n\
 /* 08019f80 */ LSLS R0, R0, 0x10 \n\

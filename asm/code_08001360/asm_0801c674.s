@@ -6,7 +6,7 @@ glabel func_0801c674 \n\
 /* 0801c674 */ PUSH {R4, R5, LR} \n\
 /* 0801c676 */ LDR R1, =D_030046a4 \n\
 /* 0801c678 */ LDR R2, [R1] \n\
-/* 0801c67a */ LDR R3, =0x089d84a0 @ !PossiblePointer \n\
+/* 0801c67a */ LDR R3, =D_089d84a0 \n\
 /* 0801c67c */ LSLS R1, R0, 0x1 \n\
 /* 0801c67e */ ADDS R1, R1, R3 @ Set R1 to R1 + R3 \n\
 /* 0801c680 */ LDRH R4, [R1] \n\
@@ -19,7 +19,7 @@ glabel func_0801c674 \n\
 /* 0801c68e */ LDR R4, =0x376 \n\
 /* 0801c690 */ ADDS R1, R2, R4 @ Set R1 to R2 + R4 \n\
 /* 0801c692 */ STRH R3, [R1] \n\
-/* 0801c694 */ LDR R3, =0x0000037a @ !PossiblePointer \n\
+/* 0801c694 */ LDR R3, =0x37a \n\
 /* 0801c696 */ ADDS R1, R2, R3 @ Set R1 to R2 + R3 \n\
 /* 0801c698 */ STRH R5, [R1] \n\
 /* 0801c69a */ ADDS R4, 0x6 @ Add 0x6 to R4 \n\

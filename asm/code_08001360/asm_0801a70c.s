@@ -101,14 +101,14 @@ branch_0801a7b2: \n\
 /* 0801a7c2 */ MOVS R0, 0x89 @ Set R0 to 0x89 \n\
 /* 0801a7c4 */ LSLS R0, R0, 0x1 \n\
 /* 0801a7c6 */ ADDS R1, R2, R0 @ Set R1 to R2 + R0 \n\
-/* 0801a7c8 */ LDR R0, =0x0000ff60 @ !PossiblePointer \n\
+/* 0801a7c8 */ LDR R0, =0xff60 \n\
 /* 0801a7ca */ STRH R0, [R1] \n\
 /* 0801a7cc */ MOVS R0, 0x8A @ Set R0 to 0x8A \n\
 /* 0801a7ce */ LSLS R0, R0, 0x1 \n\
 /* 0801a7d0 */ ADDS R1, R2, R0 @ Set R1 to R2 + R0 \n\
 /* 0801a7d2 */ MOVS R0, 0xA0 @ Set R0 to 0xA0 \n\
 /* 0801a7d4 */ STRH R0, [R1] \n\
-/* 0801a7d6 */ LDR R0, =0x08a9dc60 @ !PossiblePointer \n\
+/* 0801a7d6 */ LDR R0, =D_08a9dc60 \n\
 /* 0801a7d8 */ BL func_08002634 \n\
 /* 0801a7dc */ B branch_0801a83a \n\
 \n\
@@ -130,9 +130,9 @@ branch_0801a7ec: \n\
 /* 0801a804 */ STRH R0, [R1] \n\
 /* 0801a806 */ ADDS R0, 0x74 @ Add 0x74 to R0 \n\
 /* 0801a808 */ ADDS R1, R2, R0 @ Set R1 to R2 + R0 \n\
-/* 0801a80a */ LDR R0, =0x0000ff60 @ !PossiblePointer \n\
+/* 0801a80a */ LDR R0, =0xff60 \n\
 /* 0801a80c */ STRH R0, [R1] \n\
-/* 0801a80e */ LDR R0, =0x08a9dc4c @ !PossiblePointer \n\
+/* 0801a80e */ LDR R0, =D_08a9dc4c \n\
 /* 0801a810 */ BL func_08002634 \n\
 /* 0801a814 */ B branch_0801a83a \n\
 \n\

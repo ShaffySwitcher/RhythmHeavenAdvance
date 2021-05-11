@@ -73,7 +73,7 @@ branch_08019c64: \n\
 /* 08019c6e */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08019c70 */ BEQ branch_08019c9c \n\
 /* 08019c72 */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\
-/* 08019c74 */ LDR R1, =0x08054f18 @ !PossiblePointer \n\
+/* 08019c74 */ LDR R1, =D_08054f18 \n\
 /* 08019c76 */ MOVS R2, 0x9 @ Set R2 to 0x9 \n\
 /* 08019c78 */ BL func_0804f210 \n\
 /* 08019c7c */ LDR R1, [R4] \n\
@@ -96,13 +96,13 @@ branch_08019c9c: \n\
 /* 08019ca2 */ CMP R0, 0x1 @ Compare R0 and 0x1 \n\
 /* 08019ca4 */ BEQ branch_08019cbc \n\
 /* 08019ca6 */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\
-/* 08019ca8 */ LDR R1, =0x08054f30 @ !PossiblePointer \n\
+/* 08019ca8 */ LDR R1, =D_08054f30 \n\
 /* 08019caa */ B branch_08019cc0 \n\
 \n\
 .ltorg \n\
  \n\
 branch_08019cb0: \n\
-/* 08019cb0 */ LDR R0, =0x08054f14 @ !PossiblePointer \n\
+/* 08019cb0 */ LDR R0, =D_08054f14 \n\
 /* 08019cb2 */ LDRB R0, [R0] \n\
 /* 08019cb4 */ STRB R0, [R5] \n\
 /* 08019cb6 */ B branch_08019cc6 \n\
@@ -111,7 +111,7 @@ branch_08019cb0: \n\
  \n\
 branch_08019cbc: \n\
 /* 08019cbc */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\
-/* 08019cbe */ LDR R1, =0x08054f24 @ !PossiblePointer \n\
+/* 08019cbe */ LDR R1, =D_08054f24 \n\
  \n\
 branch_08019cc0: \n\
 /* 08019cc0 */ MOVS R2, 0x9 @ Set R2 to 0x9 \n\

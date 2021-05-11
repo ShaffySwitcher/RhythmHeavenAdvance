@@ -79,11 +79,11 @@ branch_0801c84e: \n\
 /* 0801c886 */ LSLS R1, R1, 0x3 \n\
 /* 0801c888 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 0801c88a */ LDRB R0, [R0] \n\
-/* 0801c88c */ LDR R1, =0x030046b8 @ !PossiblePointer \n\
+/* 0801c88c */ LDR R1, =D_030046b8 \n\
 /* 0801c88e */ LDRH R1, [R1] \n\
-/* 0801c890 */ LDR R2, =0x03005378 @ !PossiblePointer \n\
+/* 0801c890 */ LDR R2, =D_03005378 \n\
 /* 0801c892 */ LDRH R2, [R2] \n\
-/* 0801c894 */ LDR R3, =0x030046b4 @ !PossiblePointer \n\
+/* 0801c894 */ LDR R3, =D_030046b4 \n\
 /* 0801c896 */ LDRH R3, [R3] \n\
 /* 0801c898 */ BL func_08029cac \n\
 /* 0801c89c */ BL func_0802ab34 \n\

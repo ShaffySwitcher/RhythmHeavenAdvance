@@ -82,7 +82,7 @@ jtbl_0801b25c: \n\
 .word jump_0801b3f4 \n\
 \n\
 jump_0801b274: \n\
-/* 0801b274 */ LDR R0, =0x08a9d378 @ !PossiblePointer \n\
+/* 0801b274 */ LDR R0, =D_08a9d378 \n\
 /* 0801b276 */ BL func_0800274c \n\
 /* 0801b27a */ LDR R1, =D_08a9b820 \n\
 /* 0801b27c */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
@@ -171,7 +171,7 @@ jump_0801b324: \n\
 /* 0801b334 */ ADDS R0, R0, R3 @ Set R0 to R0 + R3 \n\
 /* 0801b336 */ LDR R0, [R0] \n\
 /* 0801b338 */ BL func_0800b3e8 \n\
-/* 0801b33c */ LDR R0, =0x089d853c @ !PossiblePointer \n\
+/* 0801b33c */ LDR R0, =D_089d853c \n\
 /* 0801b33e */ BL func_0801d968 \n\
 /* 0801b342 */ LDR R0, [R4] \n\
 /* 0801b344 */ MOVS R1, 0xD6 @ Set R1 to 0xD6 \n\
@@ -219,12 +219,12 @@ jump_0801b38c: \n\
 /* 0801b39e */ LDR R0, [R0] \n\
 /* 0801b3a0 */ BL func_0800b118 \n\
 /* 0801b3a4 */ LDR R1, [R5] \n\
-/* 0801b3a6 */ LDR R3, =0x0000048e @ !PossiblePointer \n\
+/* 0801b3a6 */ LDR R3, =0x48e \n\
 /* 0801b3a8 */ ADDS R2, R1, R3 @ Set R2 to R1 + R3 \n\
 /* 0801b3aa */ STRH R0, [R2] \n\
 /* 0801b3ac */ ADDS R4, R1, R4 @ Set R4 to R1 + R4 \n\
 /* 0801b3ae */ LDR R0, [R4] \n\
-/* 0801b3b0 */ LDR R4, =0x0000048c @ !PossiblePointer \n\
+/* 0801b3b0 */ LDR R4, =0x48c \n\
 /* 0801b3b2 */ ADDS R1, R1, R4 @ Set R1 to R1 + R4 \n\
 /* 0801b3b4 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 0801b3b6 */ LDRSH R1, [R1, R3] \n\

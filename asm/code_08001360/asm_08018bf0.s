@@ -60,10 +60,10 @@ branch_08018c28: \n\
 /* 08018c68 */ BL func_0804ddb0 \n\
 /* 08018c6c */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 08018c6e */ LDR R0, [R6] \n\
-/* 08018c70 */ LDR R1, =0x0890b6ec @ !PossiblePointer \n\
+/* 08018c70 */ LDR R1, =D_0890b6ec \n\
 /* 08018c72 */ MOV R2, R8 @ Set R2 to R8 \n\
 /* 08018c74 */ STR R2, [SP] \n\
-/* 08018c76 */ LDR R2, =0x00000864 @ !PossiblePointer \n\
+/* 08018c76 */ LDR R2, =0x864 \n\
 /* 08018c78 */ STR R2, [SP, 0x4] \n\
 /* 08018c7a */ STR R5, [SP, 0x8] \n\
 /* 08018c7c */ STR R5, [SP, 0xC] \n\
@@ -72,7 +72,7 @@ branch_08018c28: \n\
 /* 08018c82 */ MOVS R3, 0x78 @ Set R3 to 0x78 \n\
 /* 08018c84 */ BL func_0804d160 \n\
 /* 08018c88 */ LDR R0, [R6] \n\
-/* 08018c8a */ LDR R1, =0x0890b6fc @ !PossiblePointer \n\
+/* 08018c8a */ LDR R1, =D_0890b6fc \n\
 /* 08018c8c */ ADDS R4, 0x78 @ Add 0x78 to R4 \n\
 /* 08018c8e */ LSLS R4, R4, 0x10 \n\
 /* 08018c90 */ ASRS R4, R4, 0x10 \n\

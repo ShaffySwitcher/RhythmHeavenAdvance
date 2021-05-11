@@ -12,7 +12,7 @@ glabel func_080198f8 \n\
 /* 08019904 */ LDR R0, =D_030046a4 \n\
 /* 08019906 */ LDR R0, [R0] \n\
 /* 08019908 */ LDR R0, [R0, 0x4] \n\
-/* 0801990a */ LDR R1, =0x08054ec4 @ !PossiblePointer \n\
+/* 0801990a */ LDR R1, =D_08054ec4 \n\
 /* 0801990c */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0801990e */ MOVS R3, 0x7 @ Set R3 to 0x7 \n\
 /* 08019910 */ BL func_08004b98 \n\
@@ -64,21 +64,21 @@ branch_0801995a: \n\
 .ltorg \n\
  \n\
 branch_08019978: \n\
-/* 08019978 */ LDR R0, =0x089d7ae0 @ !PossiblePointer \n\
+/* 08019978 */ LDR R0, =D_089d7ae0 \n\
 /* 0801997a */ BL func_08019554 \n\
 /* 0801997e */ B branch_08019996 \n\
 \n\
 .ltorg \n\
  \n\
 branch_08019984: \n\
-/* 08019984 */ LDR R0, =0x089d7a8c @ !PossiblePointer \n\
+/* 08019984 */ LDR R0, =D_089d7a8c \n\
 /* 08019986 */ BL func_08019554 \n\
 /* 0801998a */ B branch_08019996 \n\
 \n\
 .ltorg \n\
  \n\
 branch_08019990: \n\
-/* 08019990 */ LDR R0, =0x089d7a38 @ !PossiblePointer \n\
+/* 08019990 */ LDR R0, =D_089d7a38 \n\
 /* 08019992 */ BL func_08019554 \n\
  \n\
 branch_08019996: \n\
@@ -147,7 +147,7 @@ branch_08019a0e: \n\
 /* 08019a12 */ ADDS R1, R3, 0x0 @ Set R1 to R3 + 0x0 \n\
 /* 08019a14 */ BL func_080082cc \n\
 /* 08019a18 */ ADD R1, SP, 0x14 \n\
-/* 08019a1a */ LDR R0, =0x08054eec @ !PossiblePointer \n\
+/* 08019a1a */ LDR R0, =D_08054eec \n\
 /* 08019a1c */ LDMIA R0!, {R2, R3, R5} \n\
 /* 08019a1e */ STMIA R1!, {R2, R3, R5} \n\
 /* 08019a20 */ LDMIA R0!, {R2, R3} \n\

@@ -13,22 +13,22 @@ glabel func_0801ae34 \n\
 /* 0801ae42 */ ADDS R1, 0xC4 @ Add 0xC4 to R1 \n\
 /* 0801ae44 */ ADDS R3, R3, R1 @ Set R3 to R3 + R1 \n\
 /* 0801ae46 */ LDRB R2, [R0] \n\
-/* 0801ae48 */ LDR R1, =0xffffff00 @ !PossiblePointer \n\
+/* 0801ae48 */ LDR R1, =0xffffff00 \n\
 /* 0801ae4a */ ANDS R4, R1 @ Set R4 to R4 & R1 \n\
 /* 0801ae4c */ ORRS R4, R2 @ Set R4 to R4 | R2 \n\
 /* 0801ae4e */ LDRB R1, [R0, 0x1] \n\
 /* 0801ae50 */ LSLS R1, R1, 0x8 \n\
-/* 0801ae52 */ LDR R2, =0xffff00ff @ !PossiblePointer \n\
+/* 0801ae52 */ LDR R2, =0xffff00ff \n\
 /* 0801ae54 */ ANDS R4, R2 @ Set R4 to R4 & R2 \n\
 /* 0801ae56 */ ORRS R4, R1 @ Set R4 to R4 | R1 \n\
 /* 0801ae58 */ LDRB R1, [R0, 0x2] \n\
 /* 0801ae5a */ LSLS R1, R1, 0x10 \n\
-/* 0801ae5c */ LDR R2, =0xff00ffff @ !PossiblePointer \n\
+/* 0801ae5c */ LDR R2, =0xff00ffff \n\
 /* 0801ae5e */ ANDS R4, R2 @ Set R4 to R4 & R2 \n\
 /* 0801ae60 */ ORRS R4, R1 @ Set R4 to R4 | R1 \n\
 /* 0801ae62 */ LDRB R1, [R0, 0x3] \n\
 /* 0801ae64 */ LSLS R1, R1, 0x18 \n\
-/* 0801ae66 */ LDR R2, =0x00ffffff @ !PossiblePointer \n\
+/* 0801ae66 */ LDR R2, =0x00ffffff \n\
 /* 0801ae68 */ ANDS R4, R2 @ Set R4 to R4 & R2 \n\
 /* 0801ae6a */ ORRS R4, R1 @ Set R4 to R4 | R1 \n\
 /* 0801ae6c */ LDRB R1, [R3] \n\

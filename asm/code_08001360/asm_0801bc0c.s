@@ -75,7 +75,7 @@ branch_0801bc6a: \n\
 /* 0801bca2 */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 0801bca4 */ MOVS R1, 0x1 @ Set R1 to 0x1 \n\
 /* 0801bca6 */ STRB R1, [R0] \n\
-/* 0801bca8 */ LDR R0, =0x08a9d378 @ !PossiblePointer \n\
+/* 0801bca8 */ LDR R0, =D_08a9d378 \n\
 /* 0801bcaa */ BL func_08002634 \n\
 /* 0801bcae */ LDR R1, [R4] \n\
 /* 0801bcb0 */ MOVS R2, 0x97 @ Set R2 to 0x97 \n\
