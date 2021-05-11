@@ -111,6 +111,14 @@ export INCLUDE	:=	-I $(foreach dir,$(INCLUDES),$(wildcard $(dir)/*.h)) \
 
 #export LIBPATHS	:=	$(foreach dir,$(LIBDIRS),-L$(dir)/lib)
 
+ifeq (,$(wildcard baserom.gba))
+    $(error No ROM provided. Please place an unmodified ROM named "baserom.gba" in the root folder)
+endif
+
+ifneq ($(shell sha1sum baserom.gba), 67f8adacff79c15d028fffd90de3a77d9ad0602d  baserom.gba)
+    $(error Provided ROM is not correct)
+endif
+
 .PHONY: default clean
 
 #---------------------------------------------------------------------------------
