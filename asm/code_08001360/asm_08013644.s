@@ -299,7 +299,7 @@ branch_080138d4: \n\
 /* 080138f6 */ BEQ branch_08013920 \n\
 /* 080138f8 */ LDR R1, =D_030046a8 \n\
 /* 080138fa */ LDR R0, [R1] \n\
-/* 080138fc */ LDR R2, =0x00000279 @ !PossiblePointer \n\
+/* 080138fc */ LDR R2, =0x279 \n\
 /* 080138fe */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 08013900 */ LDRB R0, [R0] \n\
 /* 08013902 */ BL func_08012cb4 \n\
@@ -346,8 +346,8 @@ branch_08013956: \n\
 /* 08013958 */ LDR R5, =0x089d7c18 @ !PossiblePointer \n\
 /* 0801395a */ ADDS R1, R5, 0x0 @ Set R1 to R5 + 0x0 \n\
 /* 0801395c */ BL func_080006b0 \n\
-/* 08013960 */ LDR R0, =0x089d7964 @ !PossiblePointer \n\
-/* 08013962 */ LDR R4, =0x089cdf08 @ !PossiblePointer \n\
+/* 08013960 */ LDR R0, =D_089d7964 \n\
+/* 08013962 */ LDR R4, =D_089cdf08 \n\
 /* 08013964 */ ADDS R1, R4, 0x0 @ Set R1 to R4 + 0x0 \n\
 /* 08013966 */ BL func_080006b0 \n\
 /* 0801396a */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\

@@ -31,7 +31,7 @@ branch_0801e3da: \n\
 /* 0801e3e8 */ BLE branch_0801e3da \n\
  \n\
 branch_0801e3ea: \n\
-/* 0801e3ea */ LDR R0, =0x030053b8 @ !PossiblePointer \n\
+/* 0801e3ea */ LDR R0, =D_030053b8 \n\
 /* 0801e3ec */ LDRH R1, [R0] \n\
 /* 0801e3ee */ MOVS R0, 0x40 @ Set R0 to 0x40 \n\
 /* 0801e3f0 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
@@ -57,7 +57,7 @@ branch_0801e412: \n\
 /* 0801e414 */ BL func_0801e4f4 \n\
  \n\
 branch_0801e418: \n\
-/* 0801e418 */ LDR R0, =0x030053b8 @ !PossiblePointer \n\
+/* 0801e418 */ LDR R0, =D_030053b8 \n\
 /* 0801e41a */ LDRH R1, [R0] \n\
 /* 0801e41c */ MOVS R0, 0x80 @ Set R0 to 0x80 \n\
 /* 0801e41e */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
@@ -80,7 +80,7 @@ branch_0801e43a: \n\
 /* 0801e43c */ BL func_0801e4f4 \n\
  \n\
 branch_0801e440: \n\
-/* 0801e440 */ LDR R4, =0x030053b8 @ !PossiblePointer \n\
+/* 0801e440 */ LDR R4, =D_030053b8 \n\
 /* 0801e442 */ LDRH R1, [R4] \n\
 /* 0801e444 */ MOVS R0, 0x20 @ Set R0 to 0x20 \n\
 /* 0801e446 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\

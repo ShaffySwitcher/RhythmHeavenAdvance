@@ -28,7 +28,7 @@ glabel func_0801b1d8 \n\
 /* 0801b208 */ MOVS R4, 0x4 @ Set R4 to 0x4 \n\
  \n\
 branch_0801b20a: \n\
-/* 0801b20a */ LDR R0, =0x030053b8 @ !PossiblePointer \n\
+/* 0801b20a */ LDR R0, =D_030053b8 \n\
 /* 0801b20c */ LDRH R1, [R0] \n\
 /* 0801b20e */ MOVS R0, 0x40 @ Set R0 to 0x40 \n\
 /* 0801b210 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
@@ -84,7 +84,7 @@ jtbl_0801b25c: \n\
 jump_0801b274: \n\
 /* 0801b274 */ LDR R0, =0x08a9d378 @ !PossiblePointer \n\
 /* 0801b276 */ BL func_0800274c \n\
-/* 0801b27a */ LDR R1, =0x08a9b820 @ !PossiblePointer \n\
+/* 0801b27a */ LDR R1, =D_08a9b820 \n\
 /* 0801b27c */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0801b27e */ BL func_0800267c \n\
 /* 0801b282 */ LDR R4, =D_030046a4 \n\
@@ -161,7 +161,7 @@ branch_0801b2ee: \n\
 .ltorg \n\
 \n\
 jump_0801b324: \n\
-/* 0801b324 */ LDR R1, =0x08a9b870 @ !PossiblePointer \n\
+/* 0801b324 */ LDR R1, =D_08a9b870 \n\
 /* 0801b326 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0801b328 */ BL func_0800267c \n\
 /* 0801b32c */ LDR R4, =D_030046a4 \n\
@@ -208,7 +208,7 @@ jump_0801b374: \n\
 .ltorg \n\
 \n\
 jump_0801b38c: \n\
-/* 0801b38c */ LDR R1, =0x08a9b820 @ !PossiblePointer \n\
+/* 0801b38c */ LDR R1, =D_08a9b820 \n\
 /* 0801b38e */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0801b390 */ BL func_0800267c \n\
 /* 0801b394 */ LDR R5, =D_030046a4 \n\
@@ -274,7 +274,7 @@ jump_0801b3f4: \n\
 /* 0801b420 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 0801b422 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0801b424 */ BNE branch_0801b438 \n\
-/* 0801b426 */ LDR R1, =0x08a9b8ac @ !PossiblePointer \n\
+/* 0801b426 */ LDR R1, =D_08a9b8ac \n\
 /* 0801b428 */ B branch_0801b46e \n\
 \n\
 .ltorg \n\
@@ -305,7 +305,7 @@ branch_0801b438: \n\
 /* 0801b466 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 0801b468 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0801b46a */ BEQ branch_0801b484 \n\
-/* 0801b46c */ LDR R1, =0x08a9b870 @ !PossiblePointer \n\
+/* 0801b46c */ LDR R1, =D_08a9b870 \n\
  \n\
 branch_0801b46e: \n\
 /* 0801b46e */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
@@ -315,7 +315,7 @@ branch_0801b46e: \n\
 .ltorg \n\
  \n\
 branch_0801b484: \n\
-/* 0801b484 */ LDR R1, =0x08a9b820 @ !PossiblePointer \n\
+/* 0801b484 */ LDR R1, =D_08a9b820 \n\
 /* 0801b486 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0801b488 */ BL func_0800267c \n\
  \n\

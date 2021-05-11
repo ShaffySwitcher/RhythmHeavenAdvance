@@ -227,7 +227,7 @@ branch_08014b24: \n\
 /* 08014b32 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08014b34 */ BEQ branch_08014b5c \n\
 /* 08014b36 */ LDR R0, [R5] \n\
-/* 08014b38 */ LDR R1, =0x00000279 @ !PossiblePointer \n\
+/* 08014b38 */ LDR R1, =0x279 \n\
 /* 08014b3a */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08014b3c */ LDRB R0, [R0] \n\
 /* 08014b3e */ BL func_08012cb4 \n\

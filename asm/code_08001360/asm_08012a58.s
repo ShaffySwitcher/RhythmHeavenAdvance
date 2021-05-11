@@ -14,14 +14,14 @@ glabel func_08012a58 \n\
 /* 08012a68 */ MOVS R1, 0xD0 @ Set R1 to 0xD0 \n\
 /* 08012a6a */ LSLS R1, R1, 0x2 \n\
 /* 08012a6c */ ADDS R7, R0, R1 @ Set R7 to R0 + R1 \n\
-/* 08012a6e */ LDR R2, =0x03004b20 @ !PossiblePointer \n\
+/* 08012a6e */ LDR R2, =D_03004b20 \n\
 /* 08012a70 */ MOV R9, R2 @ Set R9 to R2 \n\
 /* 08012a72 */ LDR R4, =D_03005380 \n\
 /* 08012a74 */ LDR R0, [R4] \n\
-/* 08012a76 */ LDR R1, =0x08902c10 @ !PossiblePointer \n\
+/* 08012a76 */ LDR R1, =D_08902c10 \n\
 /* 08012a78 */ MOVS R2, 0x48 @ Set R2 to 0x48 \n\
 /* 08012a7a */ STR R2, [SP] \n\
-/* 08012a7c */ LDR R2, =0x00008878 @ !PossiblePointer \n\
+/* 08012a7c */ LDR R2, =0x8878 \n\
 /* 08012a7e */ STR R2, [SP, 0x4] \n\
 /* 08012a80 */ MOVS R3, 0x1 @ Set R3 to 0x1 \n\
 /* 08012a82 */ MOV R8, R3 @ Set R8 to R3 \n\
@@ -39,7 +39,7 @@ glabel func_08012a58 \n\
 /* 08012a9c */ LDRSH R0, [R7, R1] \n\
 /* 08012a9e */ BL func_080140f8 \n\
 /* 08012aa2 */ LDR R0, [R4] \n\
-/* 08012aa4 */ LDR R1, =0x08902c30 @ !PossiblePointer \n\
+/* 08012aa4 */ LDR R1, =D_08902c30 \n\
 /* 08012aa6 */ MOVS R2, 0x40 @ Set R2 to 0x40 \n\
 /* 08012aa8 */ STR R2, [SP] \n\
 /* 08012aaa */ MOVS R2, 0x80 @ Set R2 to 0x80 \n\
@@ -130,12 +130,12 @@ branch_08012b7c: \n\
 /* 08012b80 */ B branch_08012c06 \n\
  \n\
 branch_08012b82: \n\
-/* 08012b82 */ LDR R2, =0x00000277 @ !PossiblePointer \n\
+/* 08012b82 */ LDR R2, =0x277 \n\
 /* 08012b84 */ ADDS R0, R1, R2 @ Set R0 to R1 + R2 \n\
 /* 08012b86 */ LDRB R0, [R0] \n\
 /* 08012b88 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08012b8a */ BEQ branch_08012be8 \n\
-/* 08012b8c */ LDR R3, =0x0000027a @ !PossiblePointer \n\
+/* 08012b8c */ LDR R3, =0x27a \n\
 /* 08012b8e */ ADDS R0, R1, R3 @ Set R0 to R1 + R3 \n\
 /* 08012b90 */ LDRB R0, [R0] \n\
 /* 08012b92 */ CMP R0, 0x2 @ Compare R0 and 0x2 \n\
@@ -150,7 +150,7 @@ branch_08012b82: \n\
 /* 08012ba4 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08012ba6 */ BNE branch_08012be8 \n\
 /* 08012ba8 */ STRB R2, [R7, 0x1] \n\
-/* 08012baa */ LDR R1, =0x089cdf24 @ !PossiblePointer \n\
+/* 08012baa */ LDR R1, =D_089cdf24 \n\
 /* 08012bac */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 08012bae */ LDRSB R0, [R7, R0] \n\
 /* 08012bb0 */ LSLS R0, R0, 0x3 \n\

@@ -22,11 +22,11 @@ glabel func_080129e8 \n\
 /* 08012a08 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 08012a0a */ STRB R0, [R1] \n\
 /* 08012a0c */ LDR R0, [R3] \n\
-/* 08012a0e */ LDR R1, =0x00000279 @ !PossiblePointer \n\
+/* 08012a0e */ LDR R1, =0x279 \n\
 /* 08012a10 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08012a12 */ LDRB R0, [R0] \n\
 /* 08012a14 */ STRB R0, [R2, 0x1] \n\
-/* 08012a16 */ LDR R1, =0x089cdf24 @ !PossiblePointer \n\
+/* 08012a16 */ LDR R1, =D_089cdf24 \n\
 /* 08012a18 */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 08012a1a */ LDRSB R0, [R2, R0] \n\
 /* 08012a1c */ LSLS R0, R0, 0x3 \n\

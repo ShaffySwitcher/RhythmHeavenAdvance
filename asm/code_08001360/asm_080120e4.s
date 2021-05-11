@@ -11,7 +11,7 @@ glabel func_080120e4 \n\
 /* 080120f2 */ BL func_08011f2c \n\
 /* 080120f6 */ LDR R0, =D_03005380 \n\
 /* 080120f8 */ LDR R0, [R0] \n\
-/* 080120fa */ LDR R1, =0x089018f8 @ !PossiblePointer \n\
+/* 080120fa */ LDR R1, =D_089018f8 \n\
 /* 080120fc */ MOVS R2, 0x9B @ Set R2 to 0x9B \n\
 /* 080120fe */ STR R2, [SP] \n\
 /* 08012100 */ MOVS R2, 0x80 @ Set R2 to 0x80 \n\
@@ -57,20 +57,20 @@ branch_0801211e: \n\
 /* 08012150 */ LSLS R1, R1, 0x8 \n\
 /* 08012152 */ STR R1, [SP, 0x14] \n\
 /* 08012154 */ STR R2, [SP, 0x18] \n\
-/* 08012156 */ LDR R1, =0x03001318 @ !PossiblePointer \n\
+/* 08012156 */ LDR R1, =D_03001318 \n\
 /* 08012158 */ LDRB R1, [R1] \n\
 /* 0801215a */ STR R1, [SP, 0x1C] \n\
 /* 0801215c */ MOVS R1, 0x14 @ Set R1 to 0x14 \n\
 /* 0801215e */ STR R1, [SP, 0x20] \n\
-/* 08012160 */ LDR R1, =0x08901910 @ !PossiblePointer \n\
+/* 08012160 */ LDR R1, =D_08901910 \n\
 /* 08012162 */ STR R1, [SP, 0x24] \n\
 /* 08012164 */ STR R3, [SP, 0x28] \n\
 /* 08012166 */ MOVS R1, 0x4 @ Set R1 to 0x4 \n\
 /* 08012168 */ STR R1, [SP, 0x2C] \n\
-/* 0801216a */ LDR R1, =0x03001319 @ !PossiblePointer \n\
+/* 0801216a */ LDR R1, =D_03001319 \n\
 /* 0801216c */ LDRB R1, [R1] \n\
 /* 0801216e */ STR R1, [SP, 0x30] \n\
-/* 08012170 */ LDR R1, =0x08011f69 @ !PossiblePointer \n\
+/* 08012170 */ LDR R1, =(func_08011f68 + 1) \n\
 /* 08012172 */ STR R1, [SP, 0x34] \n\
 /* 08012174 */ STR R5, [SP, 0x38] \n\
 /* 08012176 */ MOVS R1, 0xA @ Set R1 to 0xA \n\
@@ -80,17 +80,17 @@ branch_0801211e: \n\
 /* 08012180 */ LDR R4, =D_030046a4 \n\
 /* 08012182 */ LDR R1, [R4] \n\
 /* 08012184 */ STR R0, [R1, 0x4] \n\
-/* 08012186 */ LDR R1, =0x08012091 @ !PossiblePointer \n\
+/* 08012186 */ LDR R1, =(func_08012090 + 1) \n\
 /* 08012188 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0801218a */ BL func_0800b30c \n\
 /* 0801218e */ LDR R0, [R4] \n\
 /* 08012190 */ LDR R0, [R0, 0x4] \n\
-/* 08012192 */ LDR R1, =0x08012085 @ !PossiblePointer \n\
+/* 08012192 */ LDR R1, =(func_08012084 + 1) \n\
 /* 08012194 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08012196 */ BL func_0800b31c \n\
 /* 0801219a */ LDR R0, =D_03005380 \n\
 /* 0801219c */ LDR R0, [R0] \n\
-/* 0801219e */ LDR R1, =0x08901948 @ !PossiblePointer \n\
+/* 0801219e */ LDR R1, =D_08901948 \n\
 /* 080121a0 */ MOVS R2, 0xA0 @ Set R2 to 0xA0 \n\
 /* 080121a2 */ STR R2, [SP] \n\
 /* 080121a4 */ MOVS R2, 0x90 @ Set R2 to 0x90 \n\

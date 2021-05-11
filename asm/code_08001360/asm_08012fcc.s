@@ -23,10 +23,10 @@ glabel func_08012fcc \n\
 /* 08012ff0 */ LDRH R0, [R6] \n\
 /* 08012ff2 */ ADDS R0, 0x44 @ Add 0x44 to R0 \n\
 /* 08012ff4 */ STRH R0, [R6] \n\
-/* 08012ff6 */ LDR R4, =0x089ce0a4 @ !PossiblePointer \n\
+/* 08012ff6 */ LDR R4, =D_089ce0a4 \n\
 /* 08012ff8 */ LDR R0, =D_030046a8 \n\
 /* 08012ffa */ LDR R0, [R0] \n\
-/* 08012ffc */ LDR R3, =0x00000277 @ !PossiblePointer \n\
+/* 08012ffc */ LDR R3, =0x277 \n\
 /* 08012ffe */ ADDS R0, R0, R3 @ Set R0 to R0 + R3 \n\
 /* 08013000 */ LDRB R0, [R0] \n\
 /* 08013002 */ MOVS R1, 0x1 @ Set R1 to 0x1 \n\

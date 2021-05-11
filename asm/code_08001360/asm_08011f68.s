@@ -13,7 +13,7 @@ glabel func_08011f68 \n\
 branch_08011f74: \n\
 /* 08011f74 */ LDR R0, =D_030046a8 \n\
 /* 08011f76 */ LDR R0, [R0] \n\
-/* 08011f78 */ LDR R1, =0x0000027b @ !PossiblePointer \n\
+/* 08011f78 */ LDR R1, =0x27b \n\
 /* 08011f7a */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08011f7c */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 08011f7e */ LDRB R0, [R0] \n\
@@ -28,7 +28,7 @@ branch_08011f74: \n\
 .ltorg \n\
  \n\
 branch_08011f9c: \n\
-/* 08011f9c */ LDR R0, =0x08050bc8 @ !PossiblePointer \n\
+/* 08011f9c */ LDR R0, =D_08050bc8 \n\
  \n\
 branch_08011f9e: \n\
 /* 08011f9e */ POP {R1} \n\

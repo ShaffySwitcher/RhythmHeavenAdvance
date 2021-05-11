@@ -72,7 +72,7 @@ branch_0801ab14: \n\
 /* 0801ab1a */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 0801ab1c */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0801ab1e */ BEQ branch_0801ab58 \n\
-/* 0801ab20 */ LDR R1, =0x08a9b884 @ !PossiblePointer \n\
+/* 0801ab20 */ LDR R1, =D_08a9b884 \n\
 /* 0801ab22 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0801ab24 */ BL func_0800267c \n\
 /* 0801ab28 */ LDR R0, [R7] \n\
@@ -114,7 +114,7 @@ branch_0801ab74: \n\
 /* 0801ab76 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 0801ab78 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0801ab7a */ BEQ branch_0801ac00 \n\
-/* 0801ab7c */ LDR R1, =0x08a9b870 @ !PossiblePointer \n\
+/* 0801ab7c */ LDR R1, =D_08a9b870 \n\
 /* 0801ab7e */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0801ab80 */ BL func_0800267c \n\
 /* 0801ab84 */ MOVS R5, 0x3 @ Set R5 to 0x3 \n\
@@ -129,7 +129,7 @@ branch_0801ab8c: \n\
 /* 0801ab92 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 0801ab94 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0801ab96 */ BEQ branch_0801abd8 \n\
-/* 0801ab98 */ LDR R1, =0x08a9b884 @ !PossiblePointer \n\
+/* 0801ab98 */ LDR R1, =D_08a9b884 \n\
 /* 0801ab9a */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0801ab9c */ BL func_0800267c \n\
 /* 0801aba0 */ LDR R0, [R7] \n\
@@ -161,7 +161,7 @@ branch_0801abd8: \n\
 /* 0801abda */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 0801abdc */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0801abde */ BEQ branch_0801abf0 \n\
-/* 0801abe0 */ LDR R1, =0x08a9b870 @ !PossiblePointer \n\
+/* 0801abe0 */ LDR R1, =D_08a9b870 \n\
 /* 0801abe2 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0801abe4 */ BL func_0800267c \n\
 /* 0801abe8 */ MOVS R5, 0x2 @ Set R5 to 0x2 \n\
@@ -173,7 +173,7 @@ branch_0801abf0: \n\
 /* 0801abf0 */ ANDS R4, R1 @ Set R4 to R4 & R1 \n\
 /* 0801abf2 */ CMP R4, 0x0 @ Compare R4 and 0x0 \n\
 /* 0801abf4 */ BEQ branch_0801ac00 \n\
-/* 0801abf6 */ LDR R1, =0x08a9b870 @ !PossiblePointer \n\
+/* 0801abf6 */ LDR R1, =D_08a9b870 \n\
 /* 0801abf8 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0801abfa */ BL func_0800267c \n\
 /* 0801abfe */ MOVS R5, 0x3 @ Set R5 to 0x3 \n\

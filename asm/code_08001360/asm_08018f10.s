@@ -15,7 +15,7 @@ glabel func_08018f10 \n\
 /* 08018f26 */ BL func_0800c3b8 \n\
 /* 08018f2a */ LSLS R0, R0, 0x10 \n\
 /* 08018f2c */ LSRS R0, R0, 0x10 \n\
-/* 08018f2e */ LDR R1, =0x089de670 @ !PossiblePointer \n\
+/* 08018f2e */ LDR R1, =D_089de670 \n\
 /* 08018f30 */ MOVS R3, 0xD0 @ Set R3 to 0xD0 \n\
 /* 08018f32 */ LSLS R3, R3, 0x2 \n\
 /* 08018f34 */ MOVS R2, 0x6 @ Set R2 to 0x6 \n\

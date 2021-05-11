@@ -6,7 +6,7 @@ glabel func_0801d4b0 \n\
 /* 0801d4b0 */ PUSH {LR} \n\
 /* 0801d4b2 */ ADDS R0, R1, 0x0 @ Set R0 to R1 + 0x0 \n\
 /* 0801d4b4 */ BL func_0801d160 \n\
-/* 0801d4b8 */ LDR R0, =0x08a9b884 @ !PossiblePointer \n\
+/* 0801d4b8 */ LDR R0, =D_08a9b884 \n\
 /* 0801d4ba */ BL func_08002634 \n\
 /* 0801d4be */ POP {R0} \n\
 /* 0801d4c0 */ BX R0 \n\

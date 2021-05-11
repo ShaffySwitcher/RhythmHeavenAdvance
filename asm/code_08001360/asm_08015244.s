@@ -32,7 +32,7 @@ branch_08015264: \n\
 /* 08015276 */ STRB R6, [R0] \n\
 /* 08015278 */ LDR R2, [R2] \n\
 /* 0801527a */ LSLS R0, R4, 0x5 \n\
-/* 0801527c */ LDR R1, =0x089ce344 @ !PossiblePointer \n\
+/* 0801527c */ LDR R1, =D_089ce344 \n\
 /* 0801527e */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08015280 */ STR R0, [R2, 0x44] \n\
 /* 08015282 */ ADDS R2, 0x41 @ Add 0x41 to R2 \n\

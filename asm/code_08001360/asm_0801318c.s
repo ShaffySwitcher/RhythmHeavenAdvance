@@ -25,7 +25,7 @@ branch_080131a6: \n\
  \n\
 branch_080131ae: \n\
 /* 080131ae */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
-/* 080131b0 */ LDR R1, =0x089ceafc @ !PossiblePointer \n\
+/* 080131b0 */ LDR R1, =D_089ceafc \n\
 /* 080131b2 */ MOV R12, R1 @ Set R12 to R1 \n\
 /* 080131b4 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
  \n\
