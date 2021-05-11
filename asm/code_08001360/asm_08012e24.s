@@ -133,7 +133,7 @@ branch_08012f18: \n\
 /* 08012f18 */ MOV R3, R8 @ Set R3 to R8 \n\
 /* 08012f1a */ CMP R3, 0x0 @ Compare R3 and 0x0 \n\
 /* 08012f1c */ BNE branch_08012fa4 \n\
-/* 08012f1e */ LDR R0, =0x03004afc @ !PossiblePointer \n\
+/* 08012f1e */ LDR R0, =D_03004afc \n\
 /* 08012f20 */ LDRH R1, [R0] \n\
 /* 08012f22 */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 08012f24 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\

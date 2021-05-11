@@ -23,7 +23,7 @@ branch_08017012: \n\
 /* 0801701e */ BL func_0804eaec \n\
  \n\
 branch_08017022: \n\
-/* 08017022 */ LDR R0, =0x03004afc @ !PossiblePointer \n\
+/* 08017022 */ LDR R0, =D_03004afc \n\
 /* 08017024 */ LDR R1, =D_030046a4 \n\
 /* 08017026 */ MOV R12, R1 @ Set R12 to R1 \n\
 /* 08017028 */ LDR R2, [R1] \n\
@@ -149,7 +149,7 @@ branch_080170fe: \n\
 /* 08017116 */ STRB R0, [R1] \n\
  \n\
 branch_08017118: \n\
-/* 08017118 */ LDR R1, =0x03004afc @ !PossiblePointer \n\
+/* 08017118 */ LDR R1, =D_03004afc \n\
 /* 0801711a */ LDR R2, [R2] \n\
 /* 0801711c */ MOVS R3, 0x96 @ Set R3 to 0x96 \n\
 /* 0801711e */ LSLS R3, R3, 0x3 \n\

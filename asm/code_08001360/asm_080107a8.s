@@ -9,7 +9,7 @@ glabel func_080107a8 \n\
 /* 080107ae */ LSLS R0, R0, 0x4 \n\
 /* 080107b0 */ BL func_0800b60c \n\
 /* 080107b4 */ STRH R0, [R4, 0x4] \n\
-/* 080107b6 */ LDR R0, =0x80000e10 @ !PossiblePointer \n\
+/* 080107b6 */ LDR R0, =0x80000e10 \n\
 /* 080107b8 */ BL func_0800b60c \n\
 /* 080107bc */ STRH R0, [R4, 0x6] \n\
 /* 080107be */ POP {R4} \n\

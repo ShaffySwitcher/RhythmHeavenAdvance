@@ -9,13 +9,13 @@ glabel func_080109cc \n\
 /* 080109d2 */ BL func_0800b60c \n\
 /* 080109d6 */ LDR R4, =D_030046a4 \n\
 /* 080109d8 */ LDR R3, [R4] \n\
-/* 080109da */ LDR R2, =0x030055a0 @ !PossiblePointer \n\
+/* 080109da */ LDR R2, =D_030055a0 \n\
 /* 080109dc */ LDRH R1, [R2, 0x2C] \n\
 /* 080109de */ SUBS R1, R0, R1 @ Set R1 to R0 - R1 \n\
 /* 080109e0 */ STRH R1, [R3, 0x16] \n\
 /* 080109e2 */ STRH R0, [R2, 0x2C] \n\
 /* 080109e4 */ STRH R0, [R3, 0x18] \n\
-/* 080109e6 */ LDR R0, =0x80000e10 @ !PossiblePointer \n\
+/* 080109e6 */ LDR R0, =0x80000e10 \n\
 /* 080109e8 */ BL func_0800b60c \n\
 /* 080109ec */ LDR R1, [R4] \n\
 /* 080109ee */ STRH R0, [R1, 0x1A] \n\

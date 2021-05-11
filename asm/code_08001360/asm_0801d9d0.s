@@ -13,7 +13,7 @@ glabel func_0801d9d0 \n\
 /* 0801d9de */ LDR R1, [R2, 0x4] \n\
 /* 0801d9e0 */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 0801d9e2 */ BEQ branch_0801d9f0 \n\
-/* 0801d9e4 */ LDR R0, =0x03004afc @ !PossiblePointer \n\
+/* 0801d9e4 */ LDR R0, =D_03004afc \n\
 /* 0801d9e6 */ LDRH R0, [R0] \n\
 /* 0801d9e8 */ LDRH R1, [R1] \n\
 /* 0801d9ea */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\

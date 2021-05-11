@@ -52,7 +52,7 @@ branch_080187ac: \n\
 /* 080187bc */ ADDS R6, R0, 0x0 @ Set R6 to R0 + 0x0 \n\
 /* 080187be */ CMP R6, 0x0 @ Compare R6 and 0x0 \n\
 /* 080187c0 */ BNE branch_0801880a \n\
-/* 080187c2 */ LDR R0, =0x03004afc @ !PossiblePointer \n\
+/* 080187c2 */ LDR R0, =D_03004afc \n\
 /* 080187c4 */ LDRH R1, [R0] \n\
 /* 080187c6 */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 080187c8 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\

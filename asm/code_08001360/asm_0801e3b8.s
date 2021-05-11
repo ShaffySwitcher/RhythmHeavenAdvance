@@ -111,7 +111,7 @@ branch_0801e45e: \n\
 /* 0801e476 */ BL func_0801e4f4 \n\
  \n\
 branch_0801e47a: \n\
-/* 0801e47a */ LDR R0, =0x03004afc @ !PossiblePointer \n\
+/* 0801e47a */ LDR R0, =D_03004afc \n\
 /* 0801e47c */ LDRH R1, [R0] \n\
 /* 0801e47e */ MOVS R0, 0x9 @ Set R0 to 0x9 \n\
 /* 0801e480 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\

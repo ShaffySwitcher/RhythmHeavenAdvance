@@ -187,7 +187,7 @@ branch_08014768: \n\
 /* 080147b4 */ BL func_08002634 \n\
 /* 080147b8 */ LDR R4, =D_030046a8 \n\
 /* 080147ba */ LDR R1, [R4] \n\
-/* 080147bc */ LDR R0, =0x0000029e @ !PossiblePointer \n\
+/* 080147bc */ LDR R0, =0x29e \n\
 /* 080147be */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\
 /* 080147c0 */ LDRB R0, [R1] \n\
 /* 080147c2 */ ADDS R0, 0x1 @ Add 0x1 to R0 \n\

@@ -44,7 +44,7 @@ branch_0801a734: \n\
 /* 0801a758 */ MOVS R5, 0x2 @ Set R5 to 0x2 \n\
  \n\
 branch_0801a75a: \n\
-/* 0801a75a */ LDR R0, =0x03004afc @ !PossiblePointer \n\
+/* 0801a75a */ LDR R0, =D_03004afc \n\
 /* 0801a75c */ LDRH R1, [R0] \n\
 /* 0801a75e */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 0801a760 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
@@ -65,7 +65,7 @@ branch_0801a75a: \n\
 /* 0801a780 */ MOVS R5, 0x2 @ Set R5 to 0x2 \n\
  \n\
 branch_0801a782: \n\
-/* 0801a782 */ LDR R0, =0x03004afc @ !PossiblePointer \n\
+/* 0801a782 */ LDR R0, =D_03004afc \n\
 /* 0801a784 */ LDRH R1, [R0] \n\
 /* 0801a786 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0801a788 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\

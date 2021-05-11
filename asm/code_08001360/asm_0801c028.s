@@ -17,7 +17,7 @@ glabel func_0801c028 \n\
 /* 0801c040 */ BL func_0801c8b8 \n\
 /* 0801c044 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0801c046 */ BEQ branch_0801c072 \n\
-/* 0801c048 */ LDR R0, =0x03004afc @ !PossiblePointer \n\
+/* 0801c048 */ LDR R0, =D_03004afc \n\
 /* 0801c04a */ LDRH R1, [R0] \n\
 /* 0801c04c */ MOVS R4, 0x1 @ Set R4 to 0x1 \n\
 /* 0801c04e */ ANDS R4, R1 @ Set R4 to R4 & R1 \n\

@@ -8,7 +8,7 @@ glabel func_08010904 \n\
 /* 08010908 */ ADDS R4, R1, 0x0 @ Set R4 to R1 + 0x0 \n\
 /* 0801090a */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 0801090c */ MOVS R6, 0xFF @ Set R6 to 0xFF \n\
-/* 0801090e */ LDR R3, =0x030055a0 @ !PossiblePointer \n\
+/* 0801090e */ LDR R3, =D_030055a0 \n\
  \n\
 branch_08010910: \n\
 /* 08010910 */ LDRB R2, [R3] \n\

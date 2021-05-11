@@ -99,7 +99,7 @@ glabel func_08012a58 \n\
 /* 08012b2c */ STRB R0, [R7, 0x1] \n\
 /* 08012b2e */ LDR R5, =D_030046a8 \n\
 /* 08012b30 */ LDR R1, [R5] \n\
-/* 08012b32 */ LDR R4, =0x00000276 @ !PossiblePointer \n\
+/* 08012b32 */ LDR R4, =0x276 \n\
 /* 08012b34 */ ADDS R0, R1, R4 @ Set R0 to R1 + R4 \n\
 /* 08012b36 */ LDRB R0, [R0] \n\
 /* 08012b38 */ CMP R0, 0x1 @ Compare R0 and 0x1 \n\
@@ -179,7 +179,7 @@ branch_08012b82: \n\
 branch_08012be8: \n\
 /* 08012be8 */ LDR R5, =D_030046a8 \n\
 /* 08012bea */ LDR R0, [R5] \n\
-/* 08012bec */ LDR R4, =0x00000276 @ !PossiblePointer \n\
+/* 08012bec */ LDR R4, =0x276 \n\
 /* 08012bee */ ADDS R0, R0, R4 @ Set R0 to R0 + R4 \n\
 /* 08012bf0 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 08012bf2 */ STRB R1, [R0] \n\

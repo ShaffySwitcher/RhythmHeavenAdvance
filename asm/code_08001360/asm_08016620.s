@@ -12,7 +12,7 @@ glabel func_08016620 \n\
 /* 0801662e */ B branch_08016846 \n\
  \n\
 branch_08016630: \n\
-/* 08016630 */ LDR R2, =0x03004afc @ !PossiblePointer \n\
+/* 08016630 */ LDR R2, =D_03004afc \n\
 /* 08016632 */ LDRH R1, [R2] \n\
 /* 08016634 */ MOVS R0, 0x40 @ Set R0 to 0x40 \n\
 /* 08016636 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\

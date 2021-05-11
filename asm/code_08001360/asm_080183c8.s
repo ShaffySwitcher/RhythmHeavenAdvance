@@ -15,7 +15,7 @@ glabel func_080183c8 \n\
 /* 080183da */ B branch_080184f8 \n\
  \n\
 branch_080183dc: \n\
-/* 080183dc */ LDR R6, =0x03004afc @ !PossiblePointer \n\
+/* 080183dc */ LDR R6, =D_03004afc \n\
 /* 080183de */ LDRH R1, [R6] \n\
 /* 080183e0 */ MOVS R0, 0x20 @ Set R0 to 0x20 \n\
 /* 080183e2 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\

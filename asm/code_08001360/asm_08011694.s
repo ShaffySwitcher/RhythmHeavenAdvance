@@ -63,7 +63,7 @@ branch_080116ee: \n\
 /* 080116f8 */ BL func_08011820 \n\
  \n\
 branch_080116fc: \n\
-/* 080116fc */ LDR R0, =0x03004afc @ !PossiblePointer \n\
+/* 080116fc */ LDR R0, =D_03004afc \n\
 /* 080116fe */ LDRH R1, [R0] \n\
 /* 08011700 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 08011702 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\

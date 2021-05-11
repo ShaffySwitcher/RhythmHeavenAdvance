@@ -125,7 +125,7 @@ jump_0801519c: \n\
 /* 080151fc */ BLT branch_08015220 \n\
 /* 080151fe */ LDR R0, =D_030046a8 \n\
 /* 08015200 */ LDR R0, [R0] \n\
-/* 08015202 */ LDR R2, =0x00000246 @ !PossiblePointer \n\
+/* 08015202 */ LDR R2, =0x246 \n\
 /* 08015204 */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 08015206 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08015208 */ LDRB R0, [R0] \n\
