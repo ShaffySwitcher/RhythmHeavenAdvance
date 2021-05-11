@@ -14,7 +14,7 @@ glabel func_080159f4 \n\
 /* 08015a04 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08015a06 */ STRH R3, [R1, 0xC] \n\
 /* 08015a08 */ STR R4, [SP, 0xC] \n\
-/* 08015a0a */ LDR R1, =0x089cfab8 @ !PossiblePointer \n\
+/* 08015a0a */ LDR R1, =D_089cfab8 \n\
 /* 08015a0c */ STR R2, [SP] \n\
 /* 08015a0e */ ADD R2, SP, 0x4 \n\
 /* 08015a10 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\

@@ -209,7 +209,7 @@ branch_0801c3da: \n\
 /* 0801c4be */ BL func_08006590 \n\
 /* 0801c4c2 */ MOV R2, R8 @ Set R2 to R8 \n\
 /* 0801c4c4 */ LDR R1, [R2] \n\
-/* 0801c4c6 */ LDR R3, =0x00000494 @ !PossiblePointer \n\
+/* 0801c4c6 */ LDR R3, =0x494 \n\
 /* 0801c4c8 */ ADDS R1, R1, R3 @ Set R1 to R1 + R3 \n\
 /* 0801c4ca */ STR R0, [R1] \n\
 /* 0801c4cc */ ADD SP, 0x14 \n\

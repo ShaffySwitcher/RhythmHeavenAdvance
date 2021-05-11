@@ -59,7 +59,7 @@ branch_08015d1a: \n\
 /* 08015d60 */ STR R1, [SP, 0x10] \n\
 /* 08015d62 */ MOVS R1, 0x4 @ Set R1 to 0x4 \n\
 /* 08015d64 */ STR R1, [SP, 0x14] \n\
-/* 08015d66 */ LDR R1, =0x08902960 @ !PossiblePointer \n\
+/* 08015d66 */ LDR R1, =D_08902960 \n\
 /* 08015d68 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 08015d6a */ BL func_0804d294 \n\
 /* 08015d6e */ LDR R2, =D_030046a4 \n\
@@ -139,7 +139,7 @@ branch_08015dc2: \n\
 /* 08015e08 */ STR R1, [SP, 0x10] \n\
 /* 08015e0a */ MOVS R1, 0x4 @ Set R1 to 0x4 \n\
 /* 08015e0c */ STR R1, [SP, 0x14] \n\
-/* 08015e0e */ LDR R1, =0x08902998 @ !PossiblePointer \n\
+/* 08015e0e */ LDR R1, =D_08902998 \n\
 /* 08015e10 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 08015e12 */ BL func_0804d294 \n\
 /* 08015e16 */ LDR R2, =D_030046a4 \n\

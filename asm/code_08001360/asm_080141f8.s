@@ -32,7 +32,7 @@ glabel func_080141f8 \n\
 /* 0801422e */ STRB R6, [R1, 0x1] \n\
 /* 08014230 */ STRB R4, [R1, 0x2] \n\
 /* 08014232 */ LDR R1, [R3] \n\
-/* 08014234 */ LDR R0, =0x000002da @ !PossiblePointer \n\
+/* 08014234 */ LDR R0, =0x2da \n\
 /* 08014236 */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\
 /* 08014238 */ LDRB R0, [R1] \n\
 /* 0801423a */ ADDS R0, 0x1 @ Add 0x1 to R0 \n\

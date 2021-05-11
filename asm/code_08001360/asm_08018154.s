@@ -69,7 +69,7 @@ glabel func_08018154 \n\
 /* 080181da */ BL func_0804d160 \n\
 /* 080181de */ MOV R3, R9 @ Set R3 to R9 \n\
 /* 080181e0 */ LDR R1, [R3] \n\
-/* 080181e2 */ LDR R2, =0x00000494 @ !PossiblePointer \n\
+/* 080181e2 */ LDR R2, =0x494 \n\
 /* 080181e4 */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
 /* 080181e6 */ STRH R0, [R1] \n\
 /* 080181e8 */ LDR R0, [R5] \n\

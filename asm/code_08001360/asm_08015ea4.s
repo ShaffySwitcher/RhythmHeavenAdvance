@@ -295,13 +295,13 @@ branch_08016090: \n\
 /* 080160ce */ LDR R0, =D_03005380 \n\
 /* 080160d0 */ MOV R8, R0 @ Set R8 to R0 \n\
 /* 080160d2 */ LDR R0, [R0] \n\
-/* 080160d4 */ LDR R1, =0x08902960 @ !PossiblePointer \n\
+/* 080160d4 */ LDR R1, =D_08902960 \n\
 /* 080160d6 */ LSLS R3, R4, 0x10 \n\
 /* 080160d8 */ ASRS R3, R3, 0x10 \n\
 /* 080160da */ LSLS R2, R5, 0x10 \n\
 /* 080160dc */ ASRS R2, R2, 0x10 \n\
 /* 080160de */ STR R2, [SP] \n\
-/* 080160e0 */ LDR R2, =0x0000479c @ !PossiblePointer \n\
+/* 080160e0 */ LDR R2, =0x479c \n\
 /* 080160e2 */ STR R2, [SP, 0x4] \n\
 /* 080160e4 */ MOVS R2, 0x1 @ Set R2 to 0x1 \n\
 /* 080160e6 */ MOV R9, R2 @ Set R9 to R2 \n\

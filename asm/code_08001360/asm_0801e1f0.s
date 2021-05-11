@@ -153,7 +153,7 @@ branch_0801e318: \n\
 /* 0801e326 */ LDR R1, [R0] \n\
 /* 0801e328 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0801e32a */ STR R0, [R1, 0x8] \n\
-/* 0801e32c */ LDR R0, =0x089d7c18 @ !PossiblePointer \n\
+/* 0801e32c */ LDR R0, =D_089d7c18 \n\
 /* 0801e32e */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 0801e330 */ BL func_080006d0 \n\
 /* 0801e334 */ LDR R0, =0x089cd2cc @ !PossiblePointer \n\

@@ -11,7 +11,7 @@ glabel func_0801490c \n\
  \n\
 branch_08014918: \n\
 /* 08014918 */ LDR R0, [R4] \n\
-/* 0801491a */ LDR R1, =0x000002d9 @ !PossiblePointer \n\
+/* 0801491a */ LDR R1, =0x2d9 \n\
 /* 0801491c */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 0801491e */ LDRB R0, [R0] \n\
 /* 08014920 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\

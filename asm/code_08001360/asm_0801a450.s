@@ -42,7 +42,7 @@ branch_0801a46c: \n\
 /* 0801a49c */ LDR R0, [R4] \n\
 /* 0801a49e */ LDR R1, =0x0890ae34 @ !PossiblePointer \n\
 /* 0801a4a0 */ STR R5, [SP] \n\
-/* 0801a4a2 */ LDR R2, =0x00004864 @ !PossiblePointer \n\
+/* 0801a4a2 */ LDR R2, =0x4864 \n\
 /* 0801a4a4 */ MOV R9, R2 @ Set R9 to R2 \n\
 /* 0801a4a6 */ STR R2, [SP, 0x4] \n\
 /* 0801a4a8 */ STR R5, [SP, 0x8] \n\

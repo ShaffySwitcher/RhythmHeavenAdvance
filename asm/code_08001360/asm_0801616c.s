@@ -88,7 +88,7 @@ branch_080161f8: \n\
 /* 08016214 */ LDR R0, [R4] \n\
 /* 08016216 */ MOVS R2, 0x2 @ Set R2 to 0x2 \n\
 /* 08016218 */ LDRSH R1, [R6, R2] \n\
-/* 0801621a */ LDR R2, =0x08902a40 @ !PossiblePointer \n\
+/* 0801621a */ LDR R2, =D_08902a40 \n\
 /* 0801621c */ MOVS R3, 0x1 @ Set R3 to 0x1 \n\
 /* 0801621e */ STR R3, [SP] \n\
 /* 08016220 */ STR R5, [SP, 0x4] \n\
@@ -107,10 +107,10 @@ branch_080161f8: \n\
 /* 0801623c */ SUBS R3, 0xC @ Subtract 0xC from R3 \n\
 /* 0801623e */ LSLS R3, R3, 0x10 \n\
 /* 08016240 */ ASRS R3, R3, 0x10 \n\
-/* 08016242 */ LDR R4, =0x00004864 @ !PossiblePointer \n\
+/* 08016242 */ LDR R4, =0x4864 \n\
 /* 08016244 */ STR R4, [SP] \n\
 /* 08016246 */ BL func_0804d55c \n\
-/* 0801624a */ LDR R0, =0x08a9db48 @ !PossiblePointer \n\
+/* 0801624a */ LDR R0, =D_08a9db48 \n\
 /* 0801624c */ BL func_08002634 \n\
 /* 08016250 */ STRB R5, [R6] \n\
  \n\

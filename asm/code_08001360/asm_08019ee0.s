@@ -59,7 +59,7 @@ branch_08019f4c: \n\
 /* 08019f4c */ BL func_080139a0 \n\
 /* 08019f50 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08019f52 */ BEQ branch_08019f74 \n\
-/* 08019f54 */ LDR R4, =0x089d7c18 @ !PossiblePointer \n\
+/* 08019f54 */ LDR R4, =D_089d7c18 \n\
 /* 08019f56 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 08019f58 */ BL func_080005e0 \n\
 /* 08019f5c */ ADDS R6, R0, 0x0 @ Set R6 to R0 + 0x0 \n\

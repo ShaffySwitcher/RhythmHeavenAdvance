@@ -13,7 +13,7 @@ glabel func_08014dbc \n\
 /* 08014dca */ BL func_08014b68 \n\
 /* 08014dce */ LDR R0, =D_030046a4 \n\
 /* 08014dd0 */ LDR R0, [R0] \n\
-/* 08014dd2 */ LDR R1, =0x000004ee @ !PossiblePointer \n\
+/* 08014dd2 */ LDR R1, =0x4ee \n\
 /* 08014dd4 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08014dd6 */ STRH R4, [R0] \n\
 /* 08014dd8 */ POP {R4} \n\

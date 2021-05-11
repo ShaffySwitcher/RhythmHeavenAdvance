@@ -19,7 +19,7 @@ glabel func_08014488 \n\
 /* 080144a2 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 080144a4 */ STRB R7, [R0] \n\
 /* 080144a6 */ LDR R0, [R4] \n\
-/* 080144a8 */ LDR R2, =0x00000329 @ !PossiblePointer \n\
+/* 080144a8 */ LDR R2, =0x329 \n\
 /* 080144aa */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 080144ac */ STRB R6, [R0] \n\
 /* 080144ae */ MOV R5, SP @ Set R5 to SP \n\

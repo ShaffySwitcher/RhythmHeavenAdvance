@@ -133,7 +133,7 @@ jump_0801519c: \n\
 /* 0801520c */ BEQ branch_08015220 \n\
 /* 0801520e */ LDR R0, [R6] \n\
 /* 08015210 */ LDR R1, [R5] \n\
-/* 08015212 */ LDR R2, =0x000004fa @ !PossiblePointer \n\
+/* 08015212 */ LDR R2, =0x4fa \n\
 /* 08015214 */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
 /* 08015216 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08015218 */ LDRSH R1, [R1, R2] \n\

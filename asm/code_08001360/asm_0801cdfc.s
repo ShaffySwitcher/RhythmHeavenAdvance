@@ -43,7 +43,7 @@ glabel func_0801cdfc \n\
 /* 0801ce4c */ LDR R1, =0x0890d450 @ !PossiblePointer \n\
 /* 0801ce4e */ MOVS R2, 0x40 @ Set R2 to 0x40 \n\
 /* 0801ce50 */ STR R2, [SP] \n\
-/* 0801ce52 */ LDR R2, =0x00004864 @ !PossiblePointer \n\
+/* 0801ce52 */ LDR R2, =0x4864 \n\
 /* 0801ce54 */ STR R2, [SP, 0x4] \n\
 /* 0801ce56 */ MOV R2, R8 @ Set R2 to R8 \n\
 /* 0801ce58 */ STR R2, [SP, 0x8] \n\

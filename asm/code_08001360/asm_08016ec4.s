@@ -120,7 +120,7 @@ glabel func_08016ec4 \n\
 /* 08016fbc */ BL func_08000608 \n\
 /* 08016fc0 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08016fc2 */ BNE branch_08016fca \n\
-/* 08016fc4 */ LDR R0, =0x089d77e4 @ !PossiblePointer \n\
+/* 08016fc4 */ LDR R0, =D_089d77e4 \n\
 /* 08016fc6 */ BL func_08000584 \n\
  \n\
 branch_08016fca: \n\
