@@ -4,7 +4,7 @@ asm(".syntax unified \n\
 \n\
 glabel func_0800eaa0 \n\
 /* 0800eaa0 */ PUSH {R4, R5, LR} \n\
-/* 0800eaa2 */ LDR R5, =0x030053c0 @ !PossiblePointer \n\
+/* 0800eaa2 */ LDR R5, =D_030053c0 \n\
 /* 0800eaa4 */ LDRB R0, [R5, 0x1] \n\
 /* 0800eaa6 */ LSLS R0, R0, 0x1A \n\
 /* 0800eaa8 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
@@ -45,13 +45,13 @@ branch_0800eae4: \n\
 /* 0800eae8 */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
  \n\
 branch_0800eaea: \n\
-/* 0800eaea */ LDR R0, =0x0000ffff @ !PossiblePointer \n\
+/* 0800eaea */ LDR R0, =0xffff \n\
 /* 0800eaec */ CMP R4, R0 @ Check R4 - R0 \n\
 /* 0800eaee */ BLE branch_0800eaf2 \n\
 /* 0800eaf0 */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
  \n\
 branch_0800eaf2: \n\
-/* 0800eaf2 */ LDR R0, =0x030053c0 @ !PossiblePointer \n\
+/* 0800eaf2 */ LDR R0, =D_030053c0 \n\
 /* 0800eaf4 */ MOVS R1, 0xB8 @ Set R1 to 0xB8 \n\
 /* 0800eaf6 */ LSLS R1, R1, 0x1 \n\
 /* 0800eaf8 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\

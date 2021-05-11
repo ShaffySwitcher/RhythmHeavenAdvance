@@ -12,10 +12,10 @@ glabel func_0801dfe8 \n\
 /* 0801dff8 */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
 /* 0801dffa */ LSLS R1, R1, 0x18 \n\
 /* 0801dffc */ LSRS R1, R1, 0x18 \n\
-/* 0801dffe */ LDR R3, =0x00007fff @ !PossiblePointer \n\
+/* 0801dffe */ LDR R3, =0x7fff \n\
 /* 0801e000 */ LDR R0, =0x0893253c @ !PossiblePointer \n\
 /* 0801e002 */ STR R0, [SP] \n\
-/* 0801e004 */ LDR R0, =0x03004b64 @ !PossiblePointer \n\
+/* 0801e004 */ LDR R0, =D_03004b64 \n\
 /* 0801e006 */ STR R0, [SP, 0x4] \n\
 /* 0801e008 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0801e00a */ MOVS R2, 0x1 @ Set R2 to 0x1 \n\

@@ -13,13 +13,13 @@ glabel func_0800f22c \n\
 /* 0800f23a */ ADDS R0, 0xC @ Add 0xC to R0 \n\
 /* 0800f23c */ STR R0, [SP] \n\
 /* 0800f23e */ LDRB R0, [R7, 0x18] \n\
-/* 0800f240 */ LDR R2, =0x08935fcc @ !PossiblePointer \n\
+/* 0800f240 */ LDR R2, =D_08935fcc \n\
 /* 0800f242 */ LSLS R0, R0, 0x1 \n\
 /* 0800f244 */ ADDS R1, R0, R2 @ Set R1 to R0 + R2 \n\
 /* 0800f246 */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
 /* 0800f248 */ LDRSH R3, [R1, R4] \n\
 /* 0800f24a */ STR R3, [SP, 0x4] \n\
-/* 0800f24c */ LDR R3, =0x089361cc @ !PossiblePointer \n\
+/* 0800f24c */ LDR R3, =D_089361cc \n\
 /* 0800f24e */ ADDS R0, R0, R3 @ Set R0 to R0 + R3 \n\
 /* 0800f250 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 0800f252 */ LDRSH R5, [R0, R1] \n\

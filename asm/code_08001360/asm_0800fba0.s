@@ -28,7 +28,7 @@ glabel func_0800fba0 \n\
 /* 0800fbcc */ LSLS R1, R1, 0x10 \n\
 /* 0800fbce */ LSRS R1, R1, 0x10 \n\
 /* 0800fbd0 */ MOV R8, R1 @ Set R8 to R1 \n\
-/* 0800fbd2 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0800fbd2 */ LDR R0, =D_03005380 \n\
 /* 0800fbd4 */ LDR R0, [R0] \n\
 /* 0800fbd6 */ MOV R1, R9 @ Set R1 to R9 \n\
 /* 0800fbd8 */ LSLS R1, R1, 0x18 \n\

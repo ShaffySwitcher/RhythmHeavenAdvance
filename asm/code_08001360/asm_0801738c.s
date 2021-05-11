@@ -6,7 +6,7 @@ glabel func_0801738c \n\
 /* 0801738c */ PUSH {R4, R5, LR} \n\
 /* 0801738e */ ADDS R4, R1, 0x0 @ Set R4 to R1 + 0x0 \n\
 /* 08017390 */ MOVS R5, 0x0 @ Set R5 to 0x0 \n\
-/* 08017392 */ LDR R1, =0x030046a4 @ !PossiblePointer \n\
+/* 08017392 */ LDR R1, =D_030046a4 \n\
 /* 08017394 */ LDR R3, [R1] \n\
 /* 08017396 */ LDR R2, [R3, 0x10] \n\
 /* 08017398 */ CMP R2, R0 @ Check R2 - R0 \n\

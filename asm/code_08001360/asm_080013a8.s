@@ -31,7 +31,7 @@ branch_080013ce: \n\
 /* 080013d4 */ BEQ branch_080013bc \n\
  \n\
 branch_080013d6: \n\
-/* 080013d6 */ LDR R1, =0x03000098 @ !PossiblePointer \n\
+/* 080013d6 */ LDR R1, =D_03000098 \n\
 /* 080013d8 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 080013da */ STRH R0, [R1] \n\
 /* 080013dc */ ADD SP, 0x4 \n\

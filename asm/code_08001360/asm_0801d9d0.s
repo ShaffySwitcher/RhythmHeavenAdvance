@@ -29,7 +29,7 @@ branch_0801d9f0: \n\
 branch_0801d9fc: \n\
 /* 0801d9fc */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 0801d9fe */ BL func_08002880 \n\
-/* 0801da02 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0801da02 */ LDR R0, =D_03005380 \n\
 /* 0801da04 */ LDR R0, [R0] \n\
 /* 0801da06 */ MOVS R1, 0x1 @ Set R1 to 0x1 \n\
 /* 0801da08 */ BL func_0804e1bc \n\

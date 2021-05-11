@@ -115,7 +115,7 @@ branch_0801de16: \n\
 /* 0801de1e */ LDRH R2, [R4, 0x1A] \n\
  \n\
 branch_0801de20: \n\
-/* 0801de20 */ LDR R1, =0x03004b10 @ !PossiblePointer \n\
+/* 0801de20 */ LDR R1, =D_03004b10 \n\
 /* 0801de22 */ LDRB R0, [R4, 0xC] \n\
 /* 0801de24 */ LSLS R0, R0, 0x2 \n\
 /* 0801de26 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\

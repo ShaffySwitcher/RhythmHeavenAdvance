@@ -12,7 +12,7 @@ glabel func_0800274c \n\
 /* 08002758 */ LDRB R0, [R0] \n\
 /* 0800275a */ CMP R4, R0 @ Check R4 - R0 \n\
 /* 0800275c */ BCS branch_08002784 \n\
-/* 0800275e */ LDR R5, =0x08aa4460 @ !PossiblePointer \n\
+/* 0800275e */ LDR R5, =D_08aa4460 \n\
  \n\
 branch_08002760: \n\
 /* 08002760 */ LDR R1, [R5] \n\
@@ -32,7 +32,7 @@ branch_0800276c: \n\
 branch_08002778: \n\
 /* 08002778 */ ADDS R5, 0xC @ Add 0xC to R5 \n\
 /* 0800277a */ ADDS R4, 0x1 @ Add 0x1 to R4 \n\
-/* 0800277c */ LDR R0, =0x08aa445c @ !PossiblePointer \n\
+/* 0800277c */ LDR R0, =D_08aa445c \n\
 /* 0800277e */ LDRB R0, [R0] \n\
 /* 08002780 */ CMP R4, R0 @ Check R4 - R0 \n\
 /* 08002782 */ BCC branch_08002760 \n\

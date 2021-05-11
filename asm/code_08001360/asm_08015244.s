@@ -10,7 +10,7 @@ glabel func_08015244 \n\
 /* 0801524c */ BL func_08014f30 \n\
 /* 08015250 */ CMP R4, 0x0 @ Compare R4 and 0x0 \n\
 /* 08015252 */ BGE branch_08015264 \n\
-/* 08015254 */ LDR R0, =0x030046a4 @ !PossiblePointer \n\
+/* 08015254 */ LDR R0, =D_030046a4 \n\
 /* 08015256 */ LDR R0, [R0] \n\
 /* 08015258 */ ADDS R0, 0x41 @ Add 0x41 to R0 \n\
 /* 0801525a */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
@@ -20,7 +20,7 @@ glabel func_08015244 \n\
 .ltorg \n\
  \n\
 branch_08015264: \n\
-/* 08015264 */ LDR R2, =0x030046a4 @ !PossiblePointer \n\
+/* 08015264 */ LDR R2, =D_030046a4 \n\
 /* 08015266 */ LDR R0, [R2] \n\
 /* 08015268 */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
 /* 0801526a */ ADDS R1, 0x48 @ Add 0x48 to R1 \n\

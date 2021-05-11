@@ -120,7 +120,7 @@ branch_08013484: \n\
 /* 080134aa */ LDRH R2, [R6, 0x8] \n\
 /* 080134ac */ MOVS R3, 0x60 @ Set R3 to 0x60 \n\
 /* 080134ae */ BL func_08008f04 \n\
-/* 080134b2 */ LDR R1, =0x03004b10 @ !PossiblePointer \n\
+/* 080134b2 */ LDR R1, =D_03004b10 \n\
 /* 080134b4 */ LDRH R2, [R6, 0xA] \n\
 /* 080134b6 */ LSLS R2, R2, 0x1 \n\
 /* 080134b8 */ ADDS R1, 0x54 @ Add 0x54 to R1 \n\

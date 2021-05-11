@@ -9,7 +9,7 @@ glabel func_08010174 \n\
 /* 0801017a */ LSRS R2, R1, 0x10 \n\
 /* 0801017c */ CMP R3, 0x0 @ Compare R3 and 0x0 \n\
 /* 0801017e */ BEQ branch_0801018c \n\
-/* 08010180 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 08010180 */ LDR R0, =D_03005380 \n\
 /* 08010182 */ LDR R0, [R0] \n\
 /* 08010184 */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
 /* 08010186 */ LDRSH R1, [R3, R4] \n\

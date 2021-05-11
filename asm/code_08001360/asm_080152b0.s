@@ -9,12 +9,12 @@ glabel func_080152b0 \n\
 /* 080152b6 */ PUSH {R6, R7} \n\
 /* 080152b8 */ MOV R8, R0 @ Set R8 to R0 \n\
 /* 080152ba */ MOV R9, R1 @ Set R9 to R1 \n\
-/* 080152bc */ LDR R0, =0x030046a8 @ !PossiblePointer \n\
+/* 080152bc */ LDR R0, =D_030046a8 \n\
 /* 080152be */ LDR R0, [R0] \n\
 /* 080152c0 */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
 /* 080152c2 */ MOVS R6, 0x0 @ Set R6 to 0x0 \n\
 /* 080152c4 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 080152c6 */ LDR R3, =0x0000ffff @ !PossiblePointer \n\
+/* 080152c6 */ LDR R3, =0xffff \n\
 /* 080152c8 */ ADDS R0, 0x50 @ Add 0x50 to R0 \n\
  \n\
 branch_080152ca: \n\

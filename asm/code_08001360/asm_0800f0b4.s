@@ -48,7 +48,7 @@ glabel func_0800f0b4 \n\
 /* 0800f110 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0800f112 */ CMP R2, R8 @ Compare R2 and R8 \n\
 /* 0800f114 */ BCS branch_0800f12e \n\
-/* 0800f116 */ LDR R0, =0x0000ffff @ !PossiblePointer \n\
+/* 0800f116 */ LDR R0, =0xffff \n\
 /* 0800f118 */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 0800f11a */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
  \n\
@@ -89,7 +89,7 @@ branch_0800f154: \n\
 /* 0800f156 */ LSLS R0, R4, 0x3 \n\
 /* 0800f158 */ BL func_0800c43c \n\
 /* 0800f15c */ STR R0, [R7, 0x74] \n\
-/* 0800f15e */ LDR R1, =0x04000020 @ !PossiblePointer \n\
+/* 0800f15e */ LDR R1, =0x04000020 @ !Hardware REG_BG2PA \n\
 /* 0800f160 */ MOV R0, R9 @ Set R0 to R9 \n\
 /* 0800f162 */ MOVS R2, 0x8 @ Set R2 to 0x8 \n\
 /* 0800f164 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\

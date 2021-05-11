@@ -13,7 +13,7 @@ glabel func_08016364 \n\
 /* 08016372 */ BL func_08007324 \n\
 /* 08016376 */ BL func_080073f0 \n\
 /* 0801637a */ BL func_08016328 \n\
-/* 0801637e */ LDR R5, =0x03005380 @ !PossiblePointer \n\
+/* 0801637e */ LDR R5, =D_03005380 \n\
 /* 08016380 */ LDR R0, [R5] \n\
 /* 08016382 */ LDR R1, =0x088f5aec @ !PossiblePointer \n\
 /* 08016384 */ MOVS R2, 0x10 @ Set R2 to 0x10 \n\
@@ -44,10 +44,10 @@ glabel func_08016364 \n\
 /* 080163b8 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 080163ba */ MOVS R3, 0x68 @ Set R3 to 0x68 \n\
 /* 080163bc */ BL func_0804d160 \n\
-/* 080163c0 */ LDR R6, =0x030046a4 @ !PossiblePointer \n\
+/* 080163c0 */ LDR R6, =D_030046a4 \n\
 /* 080163c2 */ LDR R1, [R6] \n\
 /* 080163c4 */ STRH R0, [R1, 0x4] \n\
-/* 080163c6 */ LDR R0, =0x030046a8 @ !PossiblePointer \n\
+/* 080163c6 */ LDR R0, =D_030046a8 \n\
 /* 080163c8 */ LDR R0, [R0] \n\
 /* 080163ca */ MOVS R3, 0xB1 @ Set R3 to 0xB1 \n\
 /* 080163cc */ LSLS R3, R3, 0x2 \n\

@@ -15,7 +15,7 @@ glabel func_08018ba0 \n\
 /* 08018bb4 */ BEQ branch_08018bce \n\
 /* 08018bb6 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 08018bb8 */ BL func_0800bd04 \n\
-/* 08018bbc */ LDR R0, =0x030046a4 @ !PossiblePointer \n\
+/* 08018bbc */ LDR R0, =D_030046a4 \n\
 /* 08018bbe */ LDR R1, [R0] \n\
 /* 08018bc0 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 08018bc2 */ STR R0, [R1, 0x8] \n\

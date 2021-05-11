@@ -20,7 +20,7 @@ glabel func_0801da48 \n\
 branch_0801da64: \n\
 /* 0801da64 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0801da66 */ BL func_08002880 \n\
-/* 0801da6a */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0801da6a */ LDR R0, =D_03005380 \n\
 /* 0801da6c */ LDR R0, [R0] \n\
 /* 0801da6e */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 0801da70 */ BL func_0804e1bc \n\

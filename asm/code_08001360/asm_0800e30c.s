@@ -29,7 +29,7 @@ glabel func_0800e30c \n\
 /* 0800e33a */ BL func_0800c3b8 \n\
 /* 0800e33e */ LSLS R0, R0, 0x10 \n\
 /* 0800e340 */ LSRS R0, R0, 0x10 \n\
-/* 0800e342 */ LDR R1, =0x08936bc4 @ !PossiblePointer \n\
+/* 0800e342 */ LDR R1, =D_08936bc4 \n\
 /* 0800e344 */ MOV R2, R9 @ Set R2 to R9 \n\
 /* 0800e346 */ STR R2, [SP] \n\
 /* 0800e348 */ ADD R2, SP, 0x4 \n\

@@ -33,7 +33,7 @@ branch_0800eede: \n\
 /* 0800eee6 */ BHI branch_0800ef1c \n\
 /* 0800eee8 */ CMP R7, 0x0 @ Compare R7 and 0x0 \n\
 /* 0800eeea */ BEQ branch_0800ef10 \n\
-/* 0800eeec */ LDR R2, =0x089ccc94 @ !PossiblePointer \n\
+/* 0800eeec */ LDR R2, =D_089ccc94 \n\
  \n\
 branch_0800eeee: \n\
 /* 0800eeee */ LSLS R1, R0, 0x1 \n\
@@ -111,7 +111,7 @@ branch_0800ef52: \n\
 /* 0800ef64 */ CMP R7, 0x0 @ Compare R7 and 0x0 \n\
 /* 0800ef66 */ BEQ branch_0800efc6 \n\
 /* 0800ef68 */ STRB R6, [R4] \n\
-/* 0800ef6a */ LDR R1, =0x030053c0 @ !PossiblePointer \n\
+/* 0800ef6a */ LDR R1, =D_030053c0 \n\
 /* 0800ef6c */ SUBS R0, 0x30 @ Subtract 0x30 from R0 \n\
 /* 0800ef6e */ LSLS R0, R0, 0x2 \n\
 /* 0800ef70 */ MOVS R2, 0xCC @ Set R2 to 0xCC \n\
@@ -183,7 +183,7 @@ branch_0800efca: \n\
 /* 0800efcc */ BEQ branch_0800f02e \n\
 /* 0800efce */ STRB R6, [R4] \n\
 /* 0800efd0 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
-/* 0800efd2 */ LDR R1, =0x0804f370 @ !PossiblePointer \n\
+/* 0800efd2 */ LDR R1, =D_0804f370 \n\
 /* 0800efd4 */ B branch_0800f016 \n\
 \n\
 .ltorg \n\
@@ -193,7 +193,7 @@ branch_0800efdc: \n\
 /* 0800efde */ BEQ branch_0800f02e \n\
 /* 0800efe0 */ STRB R6, [R4] \n\
 /* 0800efe2 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
-/* 0800efe4 */ LDR R1, =0x0804f374 @ !PossiblePointer \n\
+/* 0800efe4 */ LDR R1, =D_0804f374 \n\
 /* 0800efe6 */ B branch_0800f016 \n\
 \n\
 .ltorg \n\
@@ -203,7 +203,7 @@ branch_0800efec: \n\
 /* 0800efee */ BEQ branch_0800f02e \n\
 /* 0800eff0 */ STRB R6, [R4] \n\
 /* 0800eff2 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
-/* 0800eff4 */ LDR R1, =0x0804f378 @ !PossiblePointer \n\
+/* 0800eff4 */ LDR R1, =D_0804f378 \n\
 /* 0800eff6 */ B branch_0800f016 \n\
 \n\
 .ltorg \n\
@@ -213,7 +213,7 @@ branch_0800effc: \n\
 /* 0800effe */ BEQ branch_0800f02e \n\
 /* 0800f000 */ STRB R6, [R4] \n\
 /* 0800f002 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
-/* 0800f004 */ LDR R1, =0x0804f37c @ !PossiblePointer \n\
+/* 0800f004 */ LDR R1, =D_0804f37c \n\
 /* 0800f006 */ B branch_0800f016 \n\
 \n\
 .ltorg \n\
@@ -223,7 +223,7 @@ branch_0800f00c: \n\
 /* 0800f00e */ BEQ branch_0800f02e \n\
 /* 0800f010 */ STRB R6, [R4] \n\
 /* 0800f012 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
-/* 0800f014 */ LDR R1, =0x0804f380 @ !PossiblePointer \n\
+/* 0800f014 */ LDR R1, =D_0804f380 \n\
  \n\
 branch_0800f016: \n\
 /* 0800f016 */ BL func_080081a8 \n\

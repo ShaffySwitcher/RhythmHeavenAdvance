@@ -4,7 +4,7 @@ asm(".syntax unified \n\
 \n\
 glabel func_080186d4 \n\
 /* 080186d4 */ PUSH {R4, R5, LR} \n\
-/* 080186d6 */ LDR R5, =0x030046a4 @ !PossiblePointer \n\
+/* 080186d6 */ LDR R5, =D_030046a4 \n\
 /* 080186d8 */ LDR R1, [R5] \n\
 /* 080186da */ ADDS R0, R1, 0x0 @ Set R0 to R1 + 0x0 \n\
 /* 080186dc */ ADDS R0, 0x7C @ Add 0x7C to R0 \n\
@@ -36,7 +36,7 @@ branch_0801870c: \n\
 /* 08018716 */ STRB R4, [R0] \n\
  \n\
 branch_08018718: \n\
-/* 08018718 */ LDR R4, =0x030046a4 @ !PossiblePointer \n\
+/* 08018718 */ LDR R4, =D_030046a4 \n\
 /* 0801871a */ LDR R0, [R4] \n\
 /* 0801871c */ LDRH R2, [R0, 0xA] \n\
 /* 0801871e */ LDR R3, =0x0000049e @ !PossiblePointer \n\

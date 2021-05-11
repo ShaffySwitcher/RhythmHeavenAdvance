@@ -89,7 +89,7 @@ branch_08017d1c: \n\
 /* 08017d2c */ LDRSB R5, [R7, R5] \n\
  \n\
 branch_08017d2e: \n\
-/* 08017d2e */ LDR R1, =0x030046a4 @ !PossiblePointer \n\
+/* 08017d2e */ LDR R1, =D_030046a4 \n\
 /* 08017d30 */ MOV R9, R1 @ Set R9 to R1 \n\
 /* 08017d32 */ LDR R2, [R1] \n\
 /* 08017d34 */ LDR R1, =0x4ab \n\

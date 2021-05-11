@@ -36,7 +36,7 @@ glabel func_0800fa6c \n\
 /* 0800faa8 */ LSLS R0, R0, 0x10 \n\
 /* 0800faaa */ LSRS R0, R0, 0x10 \n\
 /* 0800faac */ MOV R8, R0 @ Set R8 to R0 \n\
-/* 0800faae */ LDR R1, =0x03005380 @ !PossiblePointer \n\
+/* 0800faae */ LDR R1, =D_03005380 \n\
 /* 0800fab0 */ LDR R0, [R1] \n\
 /* 0800fab2 */ MOV R2, R9 @ Set R2 to R9 \n\
 /* 0800fab4 */ LSLS R2, R2, 0x18 \n\
@@ -134,7 +134,7 @@ branch_0800fb14: \n\
 /* 0800fb6e */ LDRSH R3, [R4, R7] \n\
 /* 0800fb70 */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\
 /* 0800fb72 */ BL func_080074c4 \n\
-/* 0800fb76 */ LDR R1, =0x03005380 @ !PossiblePointer \n\
+/* 0800fb76 */ LDR R1, =D_03005380 \n\
 /* 0800fb78 */ LDR R0, [R1] \n\
 /* 0800fb7a */ MOVS R2, 0x1 @ Set R2 to 0x1 \n\
 /* 0800fb7c */ LDR R7, [SP, 0x58] \n\

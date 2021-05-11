@@ -12,7 +12,7 @@ glabel func_0801c96c \n\
 /* 0801c978 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
  \n\
 branch_0801c97a: \n\
-/* 0801c97a */ LDR R1, =0x030053c0 @ !PossiblePointer \n\
+/* 0801c97a */ LDR R1, =D_030053c0 \n\
 /* 0801c97c */ MOVS R3, 0xCA @ Set R3 to 0xCA \n\
 /* 0801c97e */ LSLS R3, R3, 0x1 \n\
 /* 0801c980 */ ADDS R0, R1, R3 @ Set R0 to R1 + R3 \n\

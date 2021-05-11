@@ -18,7 +18,7 @@ glabel func_0800fca0 \n\
 /* 0800fcba */ LSLS R0, R0, 0x18 \n\
 /* 0800fcbc */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0800fcbe */ BLT branch_0800fd0c \n\
-/* 0800fcc0 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0800fcc0 */ LDR R0, =D_03005380 \n\
 /* 0800fcc2 */ LDR R3, [R0] \n\
 /* 0800fcc4 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0800fcc6 */ LDRSH R1, [R4, R0] \n\

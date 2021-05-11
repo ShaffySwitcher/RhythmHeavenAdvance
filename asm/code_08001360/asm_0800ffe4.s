@@ -9,7 +9,7 @@ glabel func_0800ffe4 \n\
 /* 0800ffea */ LSRS R2, R1, 0x18 \n\
 /* 0800ffec */ CMP R3, 0x0 @ Compare R3 and 0x0 \n\
 /* 0800ffee */ BEQ branch_0800fffc \n\
-/* 0800fff0 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0800fff0 */ LDR R0, =D_03005380 \n\
 /* 0800fff2 */ LDR R0, [R0] \n\
 /* 0800fff4 */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
 /* 0800fff6 */ LDRSH R1, [R3, R4] \n\

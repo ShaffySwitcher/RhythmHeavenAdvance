@@ -18,7 +18,7 @@ glabel func_080158f4 \n\
 /* 0801590e */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08015910 */ BEQ branch_08015928 \n\
 /* 08015912 */ ADDS R5, R1, 0x0 @ Set R5 to R1 + 0x0 \n\
-/* 08015914 */ LDR R4, =0x00000101 @ !PossiblePointer \n\
+/* 08015914 */ LDR R4, =0x101 \n\
  \n\
 branch_08015916: \n\
 /* 08015916 */ LDMIA R5!, {R0} \n\

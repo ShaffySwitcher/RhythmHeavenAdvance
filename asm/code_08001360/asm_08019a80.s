@@ -16,7 +16,7 @@ glabel func_08019a80 \n\
 /* 08019a94 */ MOV R8, R1 @ Set R8 to R1 \n\
 /* 08019a96 */ ADDS R3, R0, 0x0 @ Set R3 to R0 + 0x0 \n\
 /* 08019a98 */ ADDS R3, 0x7C @ Add 0x7C to R3 \n\
-/* 08019a9a */ LDR R1, =0x030046a4 @ !PossiblePointer \n\
+/* 08019a9a */ LDR R1, =D_030046a4 \n\
 /* 08019a9c */ LDR R0, [R1] \n\
 /* 08019a9e */ MOVS R2, 0x14 @ Set R2 to 0x14 \n\
 /* 08019aa0 */ ADDS R2, R2, R0 @ Set R2 to R2 + R0 \n\
@@ -121,7 +121,7 @@ branch_08019b4c: \n\
 /* 08019b4c */ MOVS R7, 0x0 @ Set R7 to 0x0 \n\
 /* 08019b4e */ CMP R7, R8 @ Compare R7 and R8 \n\
 /* 08019b50 */ BCS branch_08019bc6 \n\
-/* 08019b52 */ LDR R1, =0x03005380 @ !PossiblePointer \n\
+/* 08019b52 */ LDR R1, =D_03005380 \n\
 /* 08019b54 */ MOV R10, R1 @ Set R10 to R1 \n\
 /* 08019b56 */ MOV R6, R12 @ Set R6 to R12 \n\
 /* 08019b58 */ MOV R2, SP @ Set R2 to SP \n\
@@ -177,7 +177,7 @@ branch_08019b60: \n\
 /* 08019bc4 */ BCC branch_08019b60 \n\
  \n\
 branch_08019bc6: \n\
-/* 08019bc6 */ LDR R0, =0x030046a4 @ !PossiblePointer \n\
+/* 08019bc6 */ LDR R0, =D_030046a4 \n\
 /* 08019bc8 */ LDR R0, [R0] \n\
 /* 08019bca */ MOV R7, R8 @ Set R7 to R8 \n\
 /* 08019bcc */ STRB R7, [R0, 0x12] \n\

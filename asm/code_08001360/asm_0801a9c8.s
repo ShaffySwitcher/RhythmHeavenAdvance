@@ -6,9 +6,9 @@ glabel func_0801a9c8 \n\
 /* 0801a9c8 */ PUSH {R4, LR} \n\
 /* 0801a9ca */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0801a9cc */ BL func_0800e030 \n\
-/* 0801a9d0 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0801a9d0 */ LDR R0, =D_03005380 \n\
 /* 0801a9d2 */ LDR R0, [R0] \n\
-/* 0801a9d4 */ LDR R4, =0x030046a4 @ !PossiblePointer \n\
+/* 0801a9d4 */ LDR R4, =D_030046a4 \n\
 /* 0801a9d6 */ LDR R1, [R4] \n\
 /* 0801a9d8 */ MOVS R2, 0x96 @ Set R2 to 0x96 \n\
 /* 0801a9da */ LSLS R2, R2, 0x3 \n\

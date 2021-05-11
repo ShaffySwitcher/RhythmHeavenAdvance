@@ -4,13 +4,13 @@ asm(".syntax unified \n\
 \n\
 glabel func_08014118 \n\
 /* 08014118 */ PUSH {R4, R5, LR} \n\
-/* 0801411a */ LDR R0, =0x030046a4 @ !PossiblePointer \n\
+/* 0801411a */ LDR R0, =D_030046a4 \n\
 /* 0801411c */ LDR R1, [R0] \n\
 /* 0801411e */ LDRB R0, [R1, 0x8] \n\
 /* 08014120 */ LSLS R0, R0, 0x1F \n\
 /* 08014122 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08014124 */ BNE branch_0801419a \n\
-/* 08014126 */ LDR R0, =0x03004b10 @ !PossiblePointer \n\
+/* 08014126 */ LDR R0, =D_03004b10 \n\
 /* 08014128 */ LDRH R4, [R0, 0x18] \n\
 /* 0801412a */ LDRH R5, [R0, 0x1A] \n\
 /* 0801412c */ LDRB R0, [R1] \n\
@@ -46,7 +46,7 @@ branch_0801415a: \n\
 /* 08014162 */ BL func_08015298 \n\
 /* 08014166 */ BL func_08013a38 \n\
 /* 0801416a */ BL func_080140ec \n\
-/* 0801416e */ LDR R2, =0x03004b10 @ !PossiblePointer \n\
+/* 0801416e */ LDR R2, =D_03004b10 \n\
 /* 08014170 */ LDRH R1, [R2, 0x18] \n\
 /* 08014172 */ LSLS R0, R4, 0x10 \n\
 /* 08014174 */ ASRS R0, R0, 0x10 \n\

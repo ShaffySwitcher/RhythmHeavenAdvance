@@ -7,7 +7,7 @@ glabel func_0801ca34 \n\
 /* 0801ca36 */ MOV R7, R9 @ Set R7 to R9 \n\
 /* 0801ca38 */ MOV R6, R8 @ Set R6 to R8 \n\
 /* 0801ca3a */ PUSH {R6, R7} \n\
-/* 0801ca3c */ LDR R2, =0x030046a4 @ !PossiblePointer \n\
+/* 0801ca3c */ LDR R2, =D_030046a4 \n\
 /* 0801ca3e */ LSLS R1, R0, 0x3 \n\
 /* 0801ca40 */ SUBS R1, R1, R0 @ Set R1 to R1 - R0 \n\
 /* 0801ca42 */ LSLS R1, R1, 0x2 \n\
@@ -16,7 +16,7 @@ glabel func_0801ca34 \n\
 /* 0801ca48 */ ADDS R6, R6, R1 @ Set R6 to R6 + R1 \n\
 /* 0801ca4a */ MOVS R0, 0xC @ Set R0 to 0xC \n\
 /* 0801ca4c */ LDRSH R1, [R6, R0] \n\
-/* 0801ca4e */ LDR R2, =0x089361cc @ !PossiblePointer \n\
+/* 0801ca4e */ LDR R2, =D_089361cc \n\
 /* 0801ca50 */ LDRB R0, [R6, 0x10] \n\
 /* 0801ca52 */ LSLS R0, R0, 0x1 \n\
 /* 0801ca54 */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
@@ -36,7 +36,7 @@ glabel func_0801ca34 \n\
 /* 0801ca70 */ MULS R2, R0 @ Multiply R2 by R0 \n\
 /* 0801ca72 */ ASRS R0, R2, 0x8 \n\
 /* 0801ca74 */ MOV R9, R0 @ Set R9 to R0 \n\
-/* 0801ca76 */ LDR R0, =0x08935fcc @ !PossiblePointer \n\
+/* 0801ca76 */ LDR R0, =D_08935fcc \n\
 /* 0801ca78 */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\
 /* 0801ca7a */ MOVS R5, 0x0 @ Set R5 to 0x0 \n\
 /* 0801ca7c */ LDRSH R0, [R1, R5] \n\
@@ -52,7 +52,7 @@ glabel func_0801ca34 \n\
 /* 0801ca90 */ ASRS R1, R1, 0x10 \n\
 /* 0801ca92 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 0801ca94 */ ADDS R3, R0, R4 @ Set R3 to R0 + R4 \n\
-/* 0801ca96 */ LDR R7, =0x03005380 @ !PossiblePointer \n\
+/* 0801ca96 */ LDR R7, =D_03005380 \n\
 /* 0801ca98 */ MOV R8, R7 @ Set R8 to R7 \n\
 /* 0801ca9a */ MOV R1, R8 @ Set R1 to R8 \n\
 /* 0801ca9c */ LDR R0, [R1] \n\

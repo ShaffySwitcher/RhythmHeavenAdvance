@@ -10,7 +10,7 @@ glabel func_0800fd60 \n\
 /* 0800fd68 */ LDRSB R0, [R4, R0] \n\
 /* 0800fd6a */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0800fd6c */ BLT branch_0800fd82 \n\
-/* 0800fd6e */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0800fd6e */ LDR R0, =D_03005380 \n\
 /* 0800fd70 */ LDR R0, [R0] \n\
 /* 0800fd72 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0800fd74 */ LDRSH R1, [R4, R2] \n\

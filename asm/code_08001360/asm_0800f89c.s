@@ -18,12 +18,12 @@ glabel func_0800f89c \n\
 /* 0800f8b4 */ LDRSH R1, [R1, R0] \n\
 /* 0800f8b6 */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 0800f8b8 */ BLT branch_0800f8ca \n\
-/* 0800f8ba */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0800f8ba */ LDR R0, =D_03005380 \n\
 /* 0800f8bc */ LDR R0, [R0] \n\
 /* 0800f8be */ BL func_0804d504 \n\
 /* 0800f8c2 */ LDR R0, [R5, 0x50] \n\
 /* 0800f8c4 */ ADDS R0, R4, R0 @ Set R0 to R4 + R0 \n\
-/* 0800f8c6 */ LDR R1, =0x0000ffff @ !PossiblePointer \n\
+/* 0800f8c6 */ LDR R1, =0xffff \n\
 /* 0800f8c8 */ STRH R1, [R0] \n\
  \n\
 branch_0800f8ca: \n\

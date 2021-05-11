@@ -8,10 +8,10 @@ glabel func_0801853c \n\
 /* 08018540 */ PUSH {R6} \n\
 /* 08018542 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
 /* 08018544 */ ADDS R4, R1, 0x0 @ Set R4 to R1 + 0x0 \n\
-/* 08018546 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 08018546 */ LDR R0, =D_03005380 \n\
 /* 08018548 */ MOV R8, R0 @ Set R8 to R0 \n\
 /* 0801854a */ LDR R0, [R0] \n\
-/* 0801854c */ LDR R6, =0x030046a4 @ !PossiblePointer \n\
+/* 0801854c */ LDR R6, =D_030046a4 \n\
 /* 0801854e */ LDR R1, [R6] \n\
 /* 08018550 */ LDR R5, =0x00000494 @ !PossiblePointer \n\
 /* 08018552 */ ADDS R1, R1, R5 @ Set R1 to R1 + R5 \n\

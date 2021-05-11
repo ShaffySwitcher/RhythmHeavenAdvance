@@ -37,10 +37,10 @@ glabel func_08011300 \n\
 /* 0801134e */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 08011350 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08011352 */ BL func_0800ad30 \n\
-/* 08011356 */ LDR R5, =0x030046a4 @ !PossiblePointer \n\
+/* 08011356 */ LDR R5, =D_030046a4 \n\
 /* 08011358 */ LDR R0, [R5] \n\
 /* 0801135a */ STR R4, [R0, 0x4] \n\
-/* 0801135c */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0801135c */ LDR R0, =D_03005380 \n\
 /* 0801135e */ LDR R0, [R0] \n\
 /* 08011360 */ LDR R1, =0x0890021c @ !PossiblePointer \n\
 /* 08011362 */ MOVS R2, 0x40 @ Set R2 to 0x40 \n\

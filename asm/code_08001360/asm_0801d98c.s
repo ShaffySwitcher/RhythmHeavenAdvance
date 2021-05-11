@@ -11,7 +11,7 @@ glabel func_0801d98c \n\
  \n\
 branch_0801d99a: \n\
 /* 0801d99a */ ADDS R5, 0x1 @ Add 0x1 to R5 \n\
-/* 0801d99c */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0801d99c */ LDR R0, =D_03005380 \n\
 /* 0801d99e */ LDR R0, [R0] \n\
 /* 0801d9a0 */ LSLS R4, R5, 0x10 \n\
 /* 0801d9a2 */ LSRS R4, R4, 0x10 \n\

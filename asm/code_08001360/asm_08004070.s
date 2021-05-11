@@ -82,11 +82,11 @@ branch_080040c0: \n\
 /* 08004100 */ SUBS R6, R6, R1 @ Set R6 to R6 - R1 \n\
 /* 08004102 */ LDR R0, =D_030008ad \n\
 /* 08004104 */ LDRB R1, [R0] \n\
-/* 08004106 */ LDR R0, =0x030008ac @ !PossiblePointer \n\
+/* 08004106 */ LDR R0, =D_030008ac \n\
 /* 08004108 */ LDRB R0, [R0] \n\
 /* 0800410a */ SUBS R5, R1, R0 @ Set R5 to R1 - R0 \n\
 /* 0800410c */ LSLS R0, R0, 0x1 \n\
-/* 0800410e */ LDR R1, =0x03000760 @ !PossiblePointer \n\
+/* 0800410e */ LDR R1, =D_03000760 \n\
 /* 08004110 */ ADDS R4, R0, R1 @ Set R4 to R0 + R1 \n\
 /* 08004112 */ MOVS R0, 0x80 @ Set R0 to 0x80 \n\
 /* 08004114 */ LSLS R0, R0, 0x11 \n\
@@ -128,10 +128,10 @@ branch_08004128: \n\
 /* 0800415a */ BNE branch_08004128 \n\
  \n\
 branch_0800415c: \n\
-/* 0800415c */ LDR R4, =0x03000760 @ !PossiblePointer \n\
+/* 0800415c */ LDR R4, =D_03000760 \n\
 /* 0800415e */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 08004160 */ LDR R1, =0x030008ac @ !PossiblePointer \n\
-/* 08004162 */ LDR R2, =0x030008ad @ !PossiblePointer \n\
+/* 08004160 */ LDR R1, =D_030008ac \n\
+/* 08004162 */ LDR R2, =D_030008ad \n\
 /* 08004164 */ LDRB R5, [R1] \n\
 /* 08004166 */ CMP R3, R5 @ Check R3 - R5 \n\
 /* 08004168 */ BGE branch_0800417a \n\

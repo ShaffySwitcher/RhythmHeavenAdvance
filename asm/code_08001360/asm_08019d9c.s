@@ -9,7 +9,7 @@ glabel func_08019d9c \n\
 /* 08019da2 */ MOV R5, R8 @ Set R5 to R8 \n\
 /* 08019da4 */ PUSH {R5-R7} \n\
 /* 08019da6 */ SUB SP, 0x4 \n\
-/* 08019da8 */ LDR R0, =0x030046a4 @ !PossiblePointer \n\
+/* 08019da8 */ LDR R0, =D_030046a4 \n\
 /* 08019daa */ LDR R0, [R0] \n\
 /* 08019dac */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
 /* 08019dae */ ADDS R1, 0x14 @ Add 0x14 to R1 \n\
@@ -26,7 +26,7 @@ glabel func_08019d9c \n\
 /* 08019dc4 */ ADDS R4, R1, 0x0 @ Set R4 to R1 + 0x0 \n\
  \n\
 branch_08019dc6: \n\
-/* 08019dc6 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 08019dc6 */ LDR R0, =D_03005380 \n\
 /* 08019dc8 */ LDR R0, [R0] \n\
 /* 08019dca */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 08019dcc */ LDRSH R1, [R4, R3] \n\
@@ -52,7 +52,7 @@ branch_08019de2: \n\
 /* 08019dee */ ADDS R4, R0, R1 @ Set R4 to R0 + R1 \n\
  \n\
 branch_08019df0: \n\
-/* 08019df0 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 08019df0 */ LDR R0, =D_03005380 \n\
 /* 08019df2 */ LDR R0, [R0] \n\
 /* 08019df4 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08019df6 */ LDRSH R1, [R4, R2] \n\
@@ -93,7 +93,7 @@ branch_08019e14: \n\
 /* 08019e32 */ LDR R6, [SP] \n\
  \n\
 branch_08019e34: \n\
-/* 08019e34 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 08019e34 */ LDR R0, =D_03005380 \n\
 /* 08019e36 */ LDR R0, [R0] \n\
 /* 08019e38 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08019e3a */ LDRSH R1, [R6, R2] \n\
@@ -124,7 +124,7 @@ branch_08019e56: \n\
 /* 08019e6a */ ADDS R6, R0, R2 @ Set R6 to R0 + R2 \n\
  \n\
 branch_08019e6c: \n\
-/* 08019e6c */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 08019e6c */ LDR R0, =D_03005380 \n\
 /* 08019e6e */ LDR R0, [R0] \n\
 /* 08019e70 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 08019e72 */ LDRSH R1, [R6, R3] \n\
@@ -158,7 +158,7 @@ branch_08019e94: \n\
 /* 08019eae */ LDR R6, [SP] \n\
  \n\
 branch_08019eb0: \n\
-/* 08019eb0 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 08019eb0 */ LDR R0, =D_03005380 \n\
 /* 08019eb2 */ LDR R0, [R0] \n\
 /* 08019eb4 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08019eb6 */ LDRSH R1, [R6, R2] \n\

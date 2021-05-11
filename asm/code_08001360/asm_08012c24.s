@@ -68,7 +68,7 @@ branch_08012c88: \n\
 .ltorg \n\
  \n\
 branch_08012c98: \n\
-/* 08012c98 */ LDR R0, =0x089d7e74 @ !PossiblePointer \n\
+/* 08012c98 */ LDR R0, =D_089d7e74 \n\
 /* 08012c9a */ LSLS R1, R2, 0x4 \n\
 /* 08012c9c */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\
 /* 08012c9e */ LDR R0, [R1] \n\

@@ -26,7 +26,7 @@ branch_08017b5e: \n\
 /* 08017b68 */ B branch_08017b70 \n\
  \n\
 branch_08017b6a: \n\
-/* 08017b6a */ LDR R0, =0x030046a4 @ !PossiblePointer \n\
+/* 08017b6a */ LDR R0, =D_030046a4 \n\
 /* 08017b6c */ LDR R0, [R0] \n\
 /* 08017b6e */ STR R1, [R0, 0x18] \n\
  \n\

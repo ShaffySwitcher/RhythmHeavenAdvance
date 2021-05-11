@@ -73,7 +73,7 @@ branch_0800e5d6: \n\
 /* 0800e5f6 */ STRH R3, [R0, 0x6] \n\
 /* 0800e5f8 */ STRH R4, [R0, 0x8] \n\
 /* 0800e5fa */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
-/* 0800e5fc */ LDR R0, =0x0000ffc0 @ !PossiblePointer \n\
+/* 0800e5fc */ LDR R0, =0xffc0 \n\
  \n\
 branch_0800e5fe: \n\
 /* 0800e5fe */ STRH R0, [R1, 0xA] \n\
@@ -86,7 +86,7 @@ branch_0800e604: \n\
 /* 0800e604 */ BL func_0800c3b8 \n\
 /* 0800e608 */ LSLS R0, R0, 0x10 \n\
 /* 0800e60a */ LSRS R0, R0, 0x10 \n\
-/* 0800e60c */ LDR R1, =0x08936bf4 @ !PossiblePointer \n\
+/* 0800e60c */ LDR R1, =D_08936bf4 \n\
 /* 0800e60e */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0800e610 */ STR R2, [SP] \n\
 /* 0800e612 */ ADD R2, SP, 0x4 \n\

@@ -5,7 +5,7 @@ asm(".syntax unified \n\
 glabel func_08012fcc \n\
 /* 08012fcc */ PUSH {R4-R7, LR} \n\
 /* 08012fce */ SUB SP, 0x10 \n\
-/* 08012fd0 */ LDR R2, =0x030046a4 @ !PossiblePointer \n\
+/* 08012fd0 */ LDR R2, =D_030046a4 \n\
 /* 08012fd2 */ LDR R5, [R2] \n\
 /* 08012fd4 */ MOVS R2, 0xD0 @ Set R2 to 0xD0 \n\
 /* 08012fd6 */ LSLS R2, R2, 0x2 \n\
@@ -24,7 +24,7 @@ glabel func_08012fcc \n\
 /* 08012ff2 */ ADDS R0, 0x44 @ Add 0x44 to R0 \n\
 /* 08012ff4 */ STRH R0, [R6] \n\
 /* 08012ff6 */ LDR R4, =0x089ce0a4 @ !PossiblePointer \n\
-/* 08012ff8 */ LDR R0, =0x030046a8 @ !PossiblePointer \n\
+/* 08012ff8 */ LDR R0, =D_030046a8 \n\
 /* 08012ffa */ LDR R0, [R0] \n\
 /* 08012ffc */ LDR R3, =0x00000277 @ !PossiblePointer \n\
 /* 08012ffe */ ADDS R0, R0, R3 @ Set R0 to R0 + R3 \n\
@@ -35,7 +35,7 @@ glabel func_08012fcc \n\
 /* 0801300a */ SUBS R0, 0x1 @ Subtract 0x1 from R0 \n\
 /* 0801300c */ LSLS R0, R0, 0x2 \n\
 /* 0801300e */ ADDS R0, R0, R4 @ Set R0 to R0 + R4 \n\
-/* 08013010 */ LDR R4, =0x03005380 @ !PossiblePointer \n\
+/* 08013010 */ LDR R4, =D_03005380 \n\
 /* 08013012 */ LDR R3, [R4] \n\
 /* 08013014 */ MOVS R7, 0x6 @ Set R7 to 0x6 \n\
 /* 08013016 */ LDRSH R1, [R5, R7] \n\

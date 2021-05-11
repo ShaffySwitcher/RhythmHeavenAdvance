@@ -17,7 +17,7 @@ glabel func_080141f8 \n\
 /* 08014210 */ BLT branch_08014258 \n\
 /* 08014212 */ CMP R0, R4 @ Check R0 - R4 \n\
 /* 08014214 */ BGE branch_08014258 \n\
-/* 08014216 */ LDR R3, =0x030046a4 @ !PossiblePointer \n\
+/* 08014216 */ LDR R3, =D_030046a4 \n\
 /* 08014218 */ LDR R1, [R3] \n\
 /* 0801421a */ MOVS R2, 0xB7 @ Set R2 to 0xB7 \n\
 /* 0801421c */ LSLS R2, R2, 0x2 \n\

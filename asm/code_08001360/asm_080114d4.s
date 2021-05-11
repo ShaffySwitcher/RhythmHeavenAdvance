@@ -10,7 +10,7 @@ glabel func_080114d4 \n\
 /* 080114de */ BL func_08010ae0 \n\
  \n\
 branch_080114e2: \n\
-/* 080114e2 */ LDR R0, =0x030046a4 @ !PossiblePointer \n\
+/* 080114e2 */ LDR R0, =D_030046a4 \n\
 /* 080114e4 */ LDR R0, [R0] \n\
 /* 080114e6 */ LDR R0, [R0, 0x4] \n\
 /* 080114e8 */ BL func_0800a914 \n\

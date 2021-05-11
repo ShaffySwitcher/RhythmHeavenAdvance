@@ -15,7 +15,7 @@ glabel func_0800fda4 \n\
 /* 0800fdb6 */ BEQ branch_0800fdd0 \n\
 /* 0800fdb8 */ STRH R1, [R4, 0xA] \n\
 /* 0800fdba */ STRH R2, [R4, 0xC] \n\
-/* 0800fdbc */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0800fdbc */ LDR R0, =D_03005380 \n\
 /* 0800fdbe */ LDR R0, [R0] \n\
 /* 0800fdc0 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0800fdc2 */ LDRSH R1, [R4, R2] \n\

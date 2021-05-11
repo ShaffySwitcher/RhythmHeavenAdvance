@@ -9,11 +9,11 @@ glabel func_0800e8f4 \n\
 /* 0800e8fa */ LSRS R1, R0, 0x10 \n\
 /* 0800e8fc */ CMP R3, 0x0 @ Compare R3 and 0x0 \n\
 /* 0800e8fe */ BEQ branch_0800e924 \n\
-/* 0800e900 */ LDR R5, =0x03005380 @ !PossiblePointer \n\
+/* 0800e900 */ LDR R5, =D_03005380 \n\
 /* 0800e902 */ LDR R0, [R5] \n\
 /* 0800e904 */ LSLS R4, R1, 0x10 \n\
 /* 0800e906 */ ASRS R4, R4, 0x10 \n\
-/* 0800e908 */ LDR R2, =0x0800e8d9 @ !PossiblePointer \n\
+/* 0800e908 */ LDR R2, =(func_0800e8d8 + 1) \n\
 /* 0800e90a */ ADDS R1, R4, 0x0 @ Set R1 to R4 + 0x0 \n\
 /* 0800e90c */ BL func_0804daa8 \n\
 /* 0800e910 */ LDR R0, [R5] \n\
@@ -24,7 +24,7 @@ glabel func_0800e8f4 \n\
 .ltorg \n\
  \n\
 branch_0800e924: \n\
-/* 0800e924 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0800e924 */ LDR R0, =D_03005380 \n\
 /* 0800e926 */ LDR R0, [R0] \n\
 /* 0800e928 */ LSLS R1, R1, 0x10 \n\
 /* 0800e92a */ ASRS R1, R1, 0x10 \n\

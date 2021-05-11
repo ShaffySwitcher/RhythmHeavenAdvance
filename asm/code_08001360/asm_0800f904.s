@@ -36,13 +36,13 @@ branch_0800f91a: \n\
 /* 0800f93c */ BEQ branch_0800f988 \n\
 /* 0800f93e */ MOVS R4, 0xE @ Set R4 to 0xE \n\
 /* 0800f940 */ LDRSH R5, [R6, R4] \n\
-/* 0800f942 */ LDR R4, =0x08936cac @ !PossiblePointer \n\
+/* 0800f942 */ LDR R4, =D_08936cac \n\
 /* 0800f944 */ LSLS R1, R2, 0x10 \n\
 /* 0800f946 */ ASRS R1, R1, 0x10 \n\
 /* 0800f948 */ MOVS R2, 0x80 @ Set R2 to 0x80 \n\
 /* 0800f94a */ LSLS R2, R2, 0x2 \n\
 /* 0800f94c */ ADDS R0, R1, R2 @ Set R0 to R1 + R2 \n\
-/* 0800f94e */ LDR R3, =0x000007ff @ !PossiblePointer \n\
+/* 0800f94e */ LDR R3, =0x7ff \n\
 /* 0800f950 */ ANDS R0, R3 @ Set R0 to R0 & R3 \n\
 /* 0800f952 */ LSLS R0, R0, 0x1 \n\
 /* 0800f954 */ ADDS R0, R0, R4 @ Set R0 to R0 + R4 \n\
@@ -75,7 +75,7 @@ branch_0800f988: \n\
 /* 0800f98a */ LSLS R2, R0, 0x18 \n\
 /* 0800f98c */ MOVS R1, 0xE @ Set R1 to 0xE \n\
 /* 0800f98e */ LDRSH R3, [R6, R1] \n\
-/* 0800f990 */ LDR R0, =0x089361cc @ !PossiblePointer \n\
+/* 0800f990 */ LDR R0, =D_089361cc \n\
 /* 0800f992 */ LSRS R2, R2, 0x17 \n\
 /* 0800f994 */ ADDS R0, R2, R0 @ Set R0 to R2 + R0 \n\
 /* 0800f996 */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
@@ -88,7 +88,7 @@ branch_0800f988: \n\
 /* 0800f9a4 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 0800f9a6 */ LSLS R0, R0, 0x10 \n\
 /* 0800f9a8 */ LSRS R7, R0, 0x10 \n\
-/* 0800f9aa */ LDR R0, =0x08935fcc @ !PossiblePointer \n\
+/* 0800f9aa */ LDR R0, =D_08935fcc \n\
 /* 0800f9ac */ ADDS R2, R2, R0 @ Set R2 to R2 + R0 \n\
 /* 0800f9ae */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 0800f9b0 */ LDRSH R0, [R2, R1] \n\
@@ -106,7 +106,7 @@ branch_0800f9bc: \n\
 /* 0800f9c4 */ MOV R12, R0 @ Set R12 to R0 \n\
  \n\
 branch_0800f9c6: \n\
-/* 0800f9c6 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0800f9c6 */ LDR R0, =D_03005380 \n\
 /* 0800f9c8 */ LDR R0, [R0] \n\
 /* 0800f9ca */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 0800f9cc */ LDRSH R1, [R6, R3] \n\

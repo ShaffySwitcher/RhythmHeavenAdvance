@@ -8,7 +8,7 @@ glabel func_08017758 \n\
 /* 0801775c */ ADDS R3, R1, 0x0 @ Set R3 to R1 + 0x0 \n\
 /* 0801775e */ CMP R2, 0x3F @ Compare R2 and 0x3F \n\
 /* 08017760 */ BHI branch_08017770 \n\
-/* 08017762 */ LDR R0, =0x030046a4 @ !PossiblePointer \n\
+/* 08017762 */ LDR R0, =D_030046a4 \n\
 /* 08017764 */ LDR R0, [R0] \n\
 /* 08017766 */ LSLS R1, R2, 0x2 \n\
 /* 08017768 */ LDR R2, =0x000004b4 @ !PossiblePointer \n\

@@ -60,7 +60,7 @@ branch_08011c72: \n\
 /* 08011c7e */ MOVS R1, 0x1C @ Set R1 to 0x1C \n\
 /* 08011c80 */ BL func_08006590 \n\
 /* 08011c84 */ ADDS R5, R0, 0x0 @ Set R5 to R0 + 0x0 \n\
-/* 08011c86 */ LDR R4, =0x03005380 @ !PossiblePointer \n\
+/* 08011c86 */ LDR R4, =D_03005380 \n\
 /* 08011c88 */ LDR R0, [R4] \n\
 /* 08011c8a */ LDR R1, =0x08900d9c @ !PossiblePointer \n\
 /* 08011c8c */ MOVS R2, 0x9C @ Set R2 to 0x9C \n\

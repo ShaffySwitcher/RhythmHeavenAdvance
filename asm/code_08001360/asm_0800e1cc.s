@@ -19,7 +19,7 @@ glabel func_0800e1cc \n\
 /* 0800e1e6 */ BL func_0800c3b8 \n\
 /* 0800e1ea */ LSLS R0, R0, 0x10 \n\
 /* 0800e1ec */ LSRS R0, R0, 0x10 \n\
-/* 0800e1ee */ LDR R1, =0x08936ba4 @ !PossiblePointer \n\
+/* 0800e1ee */ LDR R1, =D_08936ba4 \n\
 /* 0800e1f0 */ STR R6, [SP] \n\
 /* 0800e1f2 */ ADD R2, SP, 0x4 \n\
 /* 0800e1f4 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
