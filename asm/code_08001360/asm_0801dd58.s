@@ -71,7 +71,7 @@ branch_0801ddca: \n\
 /* 0801ddca */ ADDS R0, R3, 0x1 @ Set R0 to R3 + 0x1 \n\
 /* 0801ddcc */ LSLS R0, R0, 0x10 \n\
 /* 0801ddce */ LSRS R3, R0, 0x10 \n\
-/* 0801ddd0 */ LDR R0, =0x03004ac0 @ !PossiblePointer \n\
+/* 0801ddd0 */ LDR R0, =D_03004ac0 \n\
 /* 0801ddd2 */ LDRH R1, [R0] \n\
 /* 0801ddd4 */ LDRH R0, [R4, 0x32] \n\
 /* 0801ddd6 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\

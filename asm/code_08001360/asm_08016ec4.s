@@ -4,7 +4,7 @@ asm(".syntax unified \n\
 \n\
 glabel func_08016ec4 \n\
 /* 08016ec4 */ PUSH {R4-R6, LR} \n\
-/* 08016ec6 */ LDR R0, =0x089cfd7c @ !PossiblePointer \n\
+/* 08016ec6 */ LDR R0, =D_089cfd7c \n\
 /* 08016ec8 */ BL func_08002e78 \n\
 /* 08016ecc */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 08016ece */ BL func_08007324 \n\
@@ -22,7 +22,7 @@ glabel func_08016ec4 \n\
 /* 08016ef2 */ BL func_08019324 \n\
 /* 08016ef6 */ BL func_080192a4 \n\
 /* 08016efa */ LDR R0, [R4] \n\
-/* 08016efc */ LDR R1, =0x000005b7 @ !PossiblePointer \n\
+/* 08016efc */ LDR R1, =0x5b7 \n\
 /* 08016efe */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08016f00 */ MOVS R6, 0x1 @ Set R6 to 0x1 \n\
 /* 08016f02 */ STRB R6, [R0] \n\
@@ -65,7 +65,7 @@ glabel func_08016ec4 \n\
 /* 08016f4c */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
 /* 08016f4e */ ADDS R1, 0x8A @ Add 0x8A to R1 \n\
 /* 08016f50 */ STRH R5, [R1] \n\
-/* 08016f52 */ LDR R1, =0x000004a4 @ !PossiblePointer \n\
+/* 08016f52 */ LDR R1, =0x4a4 \n\
 /* 08016f54 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08016f56 */ STRB R3, [R0] \n\
 /* 08016f58 */ LDR R0, [R4] \n\
@@ -86,7 +86,7 @@ glabel func_08016ec4 \n\
 /* 08016f76 */ MOVS R1, 0xC @ Set R1 to 0xC \n\
 /* 08016f78 */ STRB R1, [R0] \n\
 /* 08016f7a */ LDR R0, [R4] \n\
-/* 08016f7c */ LDR R1, =0x000005b4 @ !PossiblePointer \n\
+/* 08016f7c */ LDR R1, =0x5b4 \n\
 /* 08016f7e */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08016f80 */ STRB R6, [R0] \n\
 /* 08016f82 */ LDR R0, [R4] \n\
@@ -94,12 +94,12 @@ glabel func_08016ec4 \n\
 /* 08016f86 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08016f88 */ STRB R6, [R0] \n\
 /* 08016f8a */ LDR R0, [R4] \n\
-/* 08016f8c */ LDR R1, =0x000004a9 @ !PossiblePointer \n\
+/* 08016f8c */ LDR R1, =0x4a9 \n\
 /* 08016f8e */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08016f90 */ MOVS R1, 0xFF @ Set R1 to 0xFF \n\
 /* 08016f92 */ STRB R1, [R0] \n\
 /* 08016f94 */ LDR R0, [R4] \n\
-/* 08016f96 */ LDR R1, =0x000004aa @ !PossiblePointer \n\
+/* 08016f96 */ LDR R1, =0x4aa \n\
 /* 08016f98 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08016f9a */ STRB R6, [R0] \n\
 /* 08016f9c */ LDR R0, [R4] \n\
@@ -108,7 +108,7 @@ glabel func_08016ec4 \n\
 /* 08016fa2 */ MOVS R1, 0x80 @ Set R1 to 0x80 \n\
 /* 08016fa4 */ STRB R1, [R0] \n\
 /* 08016fa6 */ LDR R0, [R4] \n\
-/* 08016fa8 */ LDR R1, =0x000004ac @ !PossiblePointer \n\
+/* 08016fa8 */ LDR R1, =0x4ac \n\
 /* 08016faa */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08016fac */ MOVS R1, 0x7F @ Set R1 to 0x7F \n\
 /* 08016fae */ STRB R1, [R0] \n\

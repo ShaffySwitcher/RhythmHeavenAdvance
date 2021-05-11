@@ -18,7 +18,7 @@ glabel func_080182b8 \n\
 /* 080182d0 */ MOVS R3, 0x20 @ Set R3 to 0x20 \n\
 /* 080182d2 */ BL func_0800186c \n\
 /* 080182d6 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 080182d8 */ LDR R1, =0x3def3def @ !PossiblePointer \n\
+/* 080182d8 */ LDR R1, =0x3def3def \n\
  \n\
 branch_080182da: \n\
 /* 080182da */ LDR R0, [R4] \n\

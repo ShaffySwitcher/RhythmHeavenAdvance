@@ -79,7 +79,7 @@ branch_08018e22: \n\
 /* 08018e24 */ BL func_08002634 \n\
 /* 08018e28 */ LDR R0, =0x03005380 @ !PossiblePointe \n\
 /* 08018e2a */ LDR R0, [R0] \n\
-/* 08018e2c */ LDR R1, =0x0890b6dc @ !PossiblePointer \n\
+/* 08018e2c */ LDR R1, =D_0890b6dc \n\
 /* 08018e2e */ MOVS R2, 0x8C @ Set R2 to 0x8C \n\
 /* 08018e30 */ STR R2, [SP] \n\
 /* 08018e32 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\

@@ -39,7 +39,7 @@ branch_08017ee6: \n\
 /* 08017f06 */ MOVS R7, 0x1 @ Set R7 to 0x1 \n\
 /* 08017f08 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08017f0a */ STR R2, [SP, 0x18] \n\
-/* 08017f0c */ LDR R6, =0x0000270f @ !PossiblePointer \n\
+/* 08017f0c */ LDR R6, =0x270f \n\
 /* 08017f0e */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 08017f10 */ STR R3, [SP, 0x1C] \n\
 /* 08017f12 */ LDR R0, [R4] \n\
@@ -204,7 +204,7 @@ branch_08018020: \n\
 /* 08018028 */ LDRB R0, [R0] \n\
 /* 0801802a */ BL func_0800c3a4 \n\
 /* 0801802e */ LDR R1, [R4] \n\
-/* 08018030 */ LDR R3, =0x000004a7 @ !PossiblePointer \n\
+/* 08018030 */ LDR R3, =0x4a7 \n\
 /* 08018032 */ ADDS R1, R1, R3 @ Set R1 to R1 + R3 \n\
 /* 08018034 */ STRB R0, [R1] \n\
  \n\

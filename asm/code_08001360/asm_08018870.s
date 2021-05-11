@@ -10,7 +10,7 @@ glabel func_08018870 \n\
 /* 08018878 */ LDR R0, [R0] \n\
 /* 0801887a */ LDR R4, =D_030046a4 \n\
 /* 0801887c */ LDR R1, [R4] \n\
-/* 0801887e */ LDR R2, =0x00000496 @ !PossiblePointer \n\
+/* 0801887e */ LDR R2, =0x496 \n\
 /* 08018880 */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
 /* 08018882 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08018884 */ LDRSH R1, [R1, R2] \n\

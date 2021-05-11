@@ -55,7 +55,7 @@ branch_0801784e: \n\
 .ltorg \n\
  \n\
 branch_0801785c: \n\
-/* 0801785c */ LDR R2, =0x000004a4 @ !PossiblePointer \n\
+/* 0801785c */ LDR R2, =0x4a4 \n\
 /* 0801785e */ ADDS R0, R1, R2 @ Set R0 to R1 + R2 \n\
 /* 08017860 */ LDRB R0, [R0] \n\
 /* 08017862 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
@@ -65,7 +65,7 @@ branch_0801785c: \n\
 /* 0801786a */ LDRB R0, [R0] \n\
 /* 0801786c */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0801786e */ BNE branch_08017886 \n\
-/* 08017870 */ LDR R4, =0x089cfd60 @ !PossiblePointer \n\
+/* 08017870 */ LDR R4, =D_089cfd60 \n\
 /* 08017872 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 08017874 */ BL func_08000584 \n\
 /* 08017878 */ LDR R0, =D_089d7c18 \n\

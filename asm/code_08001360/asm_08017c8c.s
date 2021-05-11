@@ -27,7 +27,7 @@ glabel func_08017c8c \n\
  \n\
 branch_08017cb6: \n\
 /* 08017cb6 */ ANDS R1, R3 @ Set R1 to R1 & R3 \n\
-/* 08017cb8 */ LDR R0, =0xffff7fff @ !PossiblePointer \n\
+/* 08017cb8 */ LDR R0, =0xffff7fff \n\
 /* 08017cba */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 08017cbc */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08017cbe */ BNE branch_08017cc2 \n\
@@ -148,7 +148,7 @@ branch_08017d2e: \n\
 /* 08017da6 */ ADDS R5, R0, 0x0 @ Set R5 to R0 + 0x0 \n\
 /* 08017da8 */ MOV R1, R9 @ Set R1 to R9 \n\
 /* 08017daa */ LDR R0, [R1] \n\
-/* 08017dac */ LDR R2, =0x000004a7 @ !PossiblePointer \n\
+/* 08017dac */ LDR R2, =0x4a7 \n\
 /* 08017dae */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 08017db0 */ LDRB R0, [R0] \n\
 /* 08017db2 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\

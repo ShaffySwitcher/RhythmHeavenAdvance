@@ -26,7 +26,7 @@ glabel func_08018344 \n\
 /* 0801836e */ ADDS R1, 0x8E @ Add 0x8E to R1 \n\
 /* 08018370 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08018372 */ LDRSH R1, [R1, R2] \n\
-/* 08018374 */ LDR R2, =0x0890ab88 @ !PossiblePointer \n\
+/* 08018374 */ LDR R2, =D_0890ab88 \n\
 /* 08018376 */ MOVS R3, 0x1 @ Set R3 to 0x1 \n\
 /* 08018378 */ STR R3, [SP] \n\
 /* 0801837a */ STR R4, [SP, 0x4] \n\
@@ -48,7 +48,7 @@ glabel func_08018344 \n\
 /* 0801839e */ MOVS R2, 0x1 @ Set R2 to 0x1 \n\
 /* 080183a0 */ BL func_0804d770 \n\
 /* 080183a4 */ BL func_080182b8 \n\
-/* 080183a8 */ LDR R0, =0x08a9db98 @ !PossiblePointer \n\
+/* 080183a8 */ LDR R0, =D_08a9db98 \n\
 /* 080183aa */ BL func_08002634 \n\
 /* 080183ae */ ADD SP, 0xC \n\
 /* 080183b0 */ POP {R4-R6} \n\

@@ -46,7 +46,7 @@ branch_0801cfde: \n\
 /* 0801d004 */ MOVS R1, 0x1 @ Set R1 to 0x1 \n\
 /* 0801d006 */ STRH R1, [R0] \n\
 /* 0801d008 */ LDR R1, [R4] \n\
-/* 0801d00a */ LDR R0, =0x0000270f @ !PossiblePointer \n\
+/* 0801d00a */ LDR R0, =0x270f \n\
 /* 0801d00c */ STR R0, [R1, 0x4] \n\
  \n\
 branch_0801d00e: \n\

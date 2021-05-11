@@ -24,7 +24,7 @@ branch_08017938: \n\
 branch_08017946: \n\
 /* 08017946 */ CMP R4, 0x2 @ Compare R4 and 0x2 \n\
 /* 08017948 */ BNE branch_08017966 \n\
-/* 0801794a */ LDR R2, =0x000005b7 @ !PossiblePointer \n\
+/* 0801794a */ LDR R2, =0x5b7 \n\
 /* 0801794c */ ADDS R0, R1, R2 @ Set R0 to R1 + R2 \n\
 /* 0801794e */ LDRB R0, [R0] \n\
 /* 08017950 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\

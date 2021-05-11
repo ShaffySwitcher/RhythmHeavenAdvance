@@ -37,7 +37,7 @@ glabel func_0801aa04 \n\
 /* 0801aa46 */ MOVS R3, 0xA @ Set R3 to 0xA \n\
 /* 0801aa48 */ BL func_0800a204 \n\
 /* 0801aa4c */ LDR R1, [R5] \n\
-/* 0801aa4e */ LDR R4, =0x000004b4 @ !PossiblePointer \n\
+/* 0801aa4e */ LDR R4, =0x4b4 \n\
 /* 0801aa50 */ ADDS R1, R1, R4 @ Set R1 to R1 + R4 \n\
 /* 0801aa52 */ STR R0, [R1] \n\
 /* 0801aa54 */ MOVS R1, 0x28 @ Set R1 to 0x28 \n\

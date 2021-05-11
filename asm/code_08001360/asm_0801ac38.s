@@ -79,13 +79,13 @@ branch_0801acac: \n\
 branch_0801acce: \n\
 /* 0801acce */ LDR R4, =D_030046a4 \n\
 /* 0801acd0 */ LDR R0, [R4] \n\
-/* 0801acd2 */ LDR R1, =0x000004b4 @ !PossiblePointer \n\
+/* 0801acd2 */ LDR R1, =0x4b4 \n\
 /* 0801acd4 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 0801acd6 */ LDR R0, [R0] \n\
 /* 0801acd8 */ ADDS R1, R6, 0x0 @ Set R1 to R6 + 0x0 \n\
 /* 0801acda */ BL func_0800aa4c \n\
 /* 0801acde */ LDR R0, [R4] \n\
-/* 0801ace0 */ LDR R2, =0x000004a2 @ !PossiblePointer \n\
+/* 0801ace0 */ LDR R2, =0x4a2 \n\
 /* 0801ace2 */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 0801ace4 */ STRB R5, [R0] \n\
 /* 0801ace6 */ LDR R1, [R4] \n\
@@ -96,7 +96,7 @@ branch_0801acce: \n\
 /* 0801acf0 */ ADDS R0, R1, R2 @ Set R0 to R1 + R2 \n\
 /* 0801acf2 */ MOV R2, R8 @ Set R2 to R8 \n\
 /* 0801acf4 */ STR R2, [R0] \n\
-/* 0801acf6 */ LDR R0, =0x000004ac @ !PossiblePointer \n\
+/* 0801acf6 */ LDR R0, =0x4ac \n\
 /* 0801acf8 */ ADDS R2, R1, R0 @ Set R2 to R1 + R0 \n\
 /* 0801acfa */ LDR R0, [SP, 0x24] \n\
 /* 0801acfc */ STR R0, [R2] \n\

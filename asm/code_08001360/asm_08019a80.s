@@ -9,7 +9,7 @@ glabel func_08019a80 \n\
 /* 08019a86 */ MOV R5, R8 @ Set R5 to R8 \n\
 /* 08019a88 */ PUSH {R5-R7} \n\
 /* 08019a8a */ SUB SP, 0x24 \n\
-/* 08019a8c */ LDR R0, =0x089d7980 @ !PossiblePointer \n\
+/* 08019a8c */ LDR R0, =D_089d7980 \n\
 /* 08019a8e */ LDR R0, [R0] \n\
 /* 08019a90 */ LDR R5, [R0, 0x78] \n\
 /* 08019a92 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\

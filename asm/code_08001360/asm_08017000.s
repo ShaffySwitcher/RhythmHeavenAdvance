@@ -30,16 +30,16 @@ branch_08017022: \n\
 /* 0801702a */ LDRH R0, [R0] \n\
 /* 0801702c */ LDRH R4, [R2, 0xA] \n\
 /* 0801702e */ ANDS R4, R0 @ Set R4 to R4 & R0 \n\
-/* 08017030 */ LDR R0, =0x03004b00 @ !PossiblePointer \n\
+/* 08017030 */ LDR R0, =D_03004b00 \n\
 /* 08017032 */ LDRH R0, [R0] \n\
 /* 08017034 */ LDRH R6, [R2, 0xC] \n\
 /* 08017036 */ ANDS R6, R0 @ Set R6 to R6 & R0 \n\
-/* 08017038 */ LDR R3, =0x000005b4 @ !PossiblePointer \n\
+/* 08017038 */ LDR R3, =0x5b4 \n\
 /* 0801703a */ ADDS R0, R2, R3 @ Set R0 to R2 + R3 \n\
 /* 0801703c */ LDRB R3, [R0] \n\
 /* 0801703e */ CMP R3, 0x1 @ Compare R3 and 0x1 \n\
 /* 08017040 */ BNE branch_080170e6 \n\
-/* 08017042 */ LDR R7, =0x000005b5 @ !PossiblePointer \n\
+/* 08017042 */ LDR R7, =0x5b5 \n\
 /* 08017044 */ ADDS R5, R2, R7 @ Set R5 to R2 + R7 \n\
 /* 08017046 */ LDRB R0, [R5] \n\
 /* 08017048 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
@@ -84,7 +84,7 @@ branch_08017082: \n\
 /* 08017086 */ STRB R0, [R5] \n\
 /* 08017088 */ MOV R1, R12 @ Set R1 to R12 \n\
 /* 0801708a */ LDR R0, [R1] \n\
-/* 0801708c */ LDR R3, =0x000005b6 @ !PossiblePointer \n\
+/* 0801708c */ LDR R3, =0x5b6 \n\
 /* 0801708e */ ADDS R0, R0, R3 @ Set R0 to R0 + R3 \n\
 /* 08017090 */ MOVS R1, 0xA @ Set R1 to 0xA \n\
 /* 08017092 */ STRB R1, [R0] \n\
@@ -96,13 +96,13 @@ branch_080170b0: \n\
 /* 080170b0 */ MOVS R0, 0xF1 @ Set R0 to 0xF1 \n\
 /* 080170b2 */ NEGS R0, R0 @ Set R0 to -R0 \n\
 /* 080170b4 */ ANDS R4, R0 @ Set R4 to R4 & R0 \n\
-/* 080170b6 */ LDR R0, =0x03004ac0 @ !PossiblePointer \n\
+/* 080170b6 */ LDR R0, =D_03004ac0 \n\
 /* 080170b8 */ LDRH R1, [R0] \n\
 /* 080170ba */ MOVS R0, 0xF0 @ Set R0 to 0xF0 \n\
 /* 080170bc */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 080170be */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 080170c0 */ BEQ branch_080170e4 \n\
-/* 080170c2 */ LDR R0, =0x000005b6 @ !PossiblePointer \n\
+/* 080170c2 */ LDR R0, =0x5b6 \n\
 /* 080170c4 */ ADDS R1, R2, R0 @ Set R1 to R2 + R0 \n\
 /* 080170c6 */ LDRB R0, [R1] \n\
 /* 080170c8 */ SUBS R0, 0x1 @ Subtract 0x1 from R0 \n\
@@ -140,7 +140,7 @@ branch_080170fe: \n\
 /* 08017102 */ BL func_0801875c \n\
 /* 08017106 */ LDR R2, =D_030046a4 \n\
 /* 08017108 */ LDR R0, [R2] \n\
-/* 0801710a */ LDR R3, =0x000004a7 @ !PossiblePointer \n\
+/* 0801710a */ LDR R3, =0x4a7 \n\
 /* 0801710c */ ADDS R1, R0, R3 @ Set R1 to R0 + R3 \n\
 /* 0801710e */ LDRB R0, [R1] \n\
 /* 08017110 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\

@@ -151,14 +151,14 @@ branch_0801903e: \n\
 /* 08019050 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08019052 */ MOVS R3, 0xC8 @ Set R3 to 0xC8 \n\
 /* 08019054 */ BL func_0804d160 \n\
-/* 08019058 */ LDR R0, =0x03001330 @ !PossiblePointer \n\
+/* 08019058 */ LDR R0, =D_03001330 \n\
 /* 0801905a */ LDR R1, [R0] \n\
 /* 0801905c */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 0801905e */ BNE branch_08019062 \n\
 /* 08019060 */ LDR R1, =0x089d784c @ !PossiblePointer \n\
  \n\
 branch_08019062: \n\
-/* 08019062 */ LDR R0, =0x03001334 @ !PossiblePointer \n\
+/* 08019062 */ LDR R0, =D_03001334 \n\
 /* 08019064 */ LDR R6, [R0] \n\
 /* 08019066 */ CMP R6, 0x0 @ Compare R6 and 0x0 \n\
 /* 08019068 */ BNE branch_0801906c \n\

@@ -54,7 +54,7 @@ branch_0801df6a: \n\
 .ltorg \n\
  \n\
 branch_0801df7c: \n\
-/* 0801df7c */ LDR R0, =0x03004ac0 @ !PossiblePointer \n\
+/* 0801df7c */ LDR R0, =D_03004ac0 \n\
 /* 0801df7e */ LDRH R1, [R0] \n\
 /* 0801df80 */ MOVS R0, 0xF @ Set R0 to 0xF \n\
 /* 0801df82 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
