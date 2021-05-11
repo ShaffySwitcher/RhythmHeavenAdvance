@@ -49,36 +49,31 @@ branch_08009b44: \n\
 /* 08009b4e */ CMP R0, 0x9 @ Compare R0 and 0x9 \n\
 /* 08009b50 */ BHI branch_08009c2a \n\
 /* 08009b52 */ LSLS R0, R0, 0x2 \n\
-/* 08009b54 */ LDR R1, =0x08009b60 @ !JumpTablePointer \n\
+/* 08009b54 */ LDR R1, =jtbl_08009b60 \n\
 /* 08009b56 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08009b58 */ LDR R0, [R0] \n\
 /* 08009b5a */ MOV PC, R0 @ Set PC to R0 \n\
 \n\
 .ltorg \n\
-/* 08009b60 */ LDR R3, [SP, 0x240] \n\
-/* 08009b62 */ LSRS R0, R0, 0x20 \n\
-/* 08009b64 */ LDR R3, [SP, 0x2B0] \n\
-/* 08009b66 */ LSRS R0, R0, 0x20 \n\
-/* 08009b68 */ LDR R3, [SP, 0x2D8] \n\
-/* 08009b6a */ LSRS R0, R0, 0x20 \n\
-/* 08009b6c */ LDR R3, [SP, 0x360] \n\
-/* 08009b6e */ LSRS R0, R0, 0x20 \n\
-/* 08009b70 */ LDR R4, [SP, 0x50] \n\
-/* 08009b72 */ LSRS R0, R0, 0x20 \n\
-/* 08009b74 */ LDR R4, [SP, 0xA8] \n\
-/* 08009b76 */ LSRS R0, R0, 0x20 \n\
-/* 08009b78 */ LDR R4, [SP, 0xA8] \n\
-/* 08009b7a */ LSRS R0, R0, 0x20 \n\
-/* 08009b7c */ LDR R4, [SP, 0xA8] \n\
-/* 08009b7e */ LSRS R0, R0, 0x20 \n\
-/* 08009b80 */ LDR R4, [SP, 0xA8] \n\
-/* 08009b82 */ LSRS R0, R0, 0x20 \n\
-/* 08009b84 */ LDR R3, [SP, 0x220] \n\
-/* 08009b86 */ LSRS R0, R0, 0x20 \n\
+jtbl_08009b60: \n\
+.word jump_08009b90 \n\
+.word jump_08009bac \n\
+.word jump_08009bb6 \n\
+.word jump_08009bd8 \n\
+.word jump_08009c14 \n\
+.word branch_08009c2a \n\
+.word branch_08009c2a \n\
+.word branch_08009c2a \n\
+.word branch_08009c2a \n\
+.word jump_08009b88 \n\
+\n\
+jump_08009b88: \n\
 /* 08009b88 */ LDR R0, [SP, 0x4] \n\
 /* 08009b8a */ ADDS R0, 0x1 @ Add 0x1 to R0 \n\
 /* 08009b8c */ STR R0, [SP, 0x4] \n\
 /* 08009b8e */ B branch_08009c92 \n\
+\n\
+jump_08009b90: \n\
 /* 08009b90 */ LDR R0, =D_0300121c \n\
 /* 08009b92 */ LDR R2, [R0] \n\
 /* 08009b94 */ CMP R2, 0x0 @ Compare R2 and 0x0 \n\
@@ -94,11 +89,15 @@ branch_08009ba2: \n\
 /* 08009ba6 */ B branch_08009c28 \n\
 \n\
 .ltorg \n\
+\n\
+jump_08009bac: \n\
 /* 08009bac */ LDR R1, [SP, 0x4] \n\
 /* 08009bae */ LDRB R0, [R1, 0x1] \n\
 /* 08009bb0 */ SUBS R0, 0x30 @ Subtract 0x30 from R0 \n\
 /* 08009bb2 */ STR R0, [SP, 0x44] \n\
 /* 08009bb4 */ B branch_08009bcc \n\
+\n\
+jump_08009bb6: \n\
 /* 08009bb6 */ LDR R1, [SP, 0x4] \n\
 /* 08009bb8 */ LDRB R0, [R1, 0x1] \n\
 /* 08009bba */ SUBS R0, 0x30 @ Subtract 0x30 from R0 \n\
@@ -117,6 +116,8 @@ branch_08009bcc: \n\
 /* 08009bd0 */ B branch_08009c2a \n\
 \n\
 .ltorg \n\
+\n\
+jump_08009bd8: \n\
 /* 08009bd8 */ LDR R1, [SP, 0x4] \n\
 /* 08009bda */ ADDS R0, R1, 0x1 @ Set R0 to R1 + 0x1 \n\
 /* 08009bdc */ STR R0, [SP, 0x4] \n\
@@ -150,6 +151,8 @@ branch_08009c02: \n\
 /* 08009c0e */ LDR R0, [SP, 0x4] \n\
 /* 08009c10 */ ADDS R0, 0x1 @ Add 0x1 to R0 \n\
 /* 08009c12 */ B branch_08009c28 \n\
+\n\
+jump_08009c14: \n\
 /* 08009c14 */ LDR R1, [SP, 0x4] \n\
 /* 08009c16 */ LDRB R0, [R1, 0x1] \n\
 /* 08009c18 */ SUBS R0, 0x30 @ Subtract 0x30 from R0 \n\

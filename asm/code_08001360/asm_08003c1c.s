@@ -50,34 +50,26 @@ branch_08003c52: \n\
  \n\
 branch_08003c64: \n\
 /* 08003c64 */ LSLS R0, R0, 0x2 \n\
-/* 08003c66 */ LDR R1, =0x08003c78 @ !JumpTablePointer \n\
+/* 08003c66 */ LDR R1, =jtbl_08003c78 \n\
 /* 08003c68 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08003c6a */ LDR R0, [R0] \n\
 /* 08003c6c */ MOV PC, R0 @ Set PC to R0 \n\
 \n\
 .ltorg \n\
-/* 08003c78 */ SUBS R4, 0xA4 @ Subtract 0xA4 from R4 \n\
-/* 08003c7a */ LSRS R0, R0, 0x20 \n\
-/* 08003c7c */ SUBS R4, 0xD2 @ Subtract 0xD2 from R4 \n\
-/* 08003c7e */ LSRS R0, R0, 0x20 \n\
-/* 08003c80 */ SUBS R4, 0xE0 @ Subtract 0xE0 from R4 \n\
-/* 08003c82 */ LSRS R0, R0, 0x20 \n\
-/* 08003c84 */ SUBS R4, 0xEC @ Subtract 0xEC from R4 \n\
-/* 08003c86 */ LSRS R0, R0, 0x20 \n\
-/* 08003c88 */ SUBS R4, 0xF0 @ Subtract 0xF0 from R4 \n\
-/* 08003c8a */ LSRS R0, R0, 0x20 \n\
-/* 08003c8c */ SUBS R4, 0xE8 @ Subtract 0xE8 from R4 \n\
-/* 08003c8e */ LSRS R0, R0, 0x20 \n\
-/* 08003c90 */ SUBS R4, 0xFE @ Subtract 0xFE from R4 \n\
-/* 08003c92 */ LSRS R0, R0, 0x20 \n\
-/* 08003c94 */ SUBS R5, 0x24 @ Subtract 0x24 from R5 \n\
-/* 08003c96 */ LSRS R0, R0, 0x20 \n\
-/* 08003c98 */ SUBS R5, 0xB0 @ Subtract 0xB0 from R5 \n\
-/* 08003c9a */ LSRS R0, R0, 0x20 \n\
-/* 08003c9c */ SUBS R5, 0x28 @ Subtract 0x28 from R5 \n\
-/* 08003c9e */ LSRS R0, R0, 0x20 \n\
-/* 08003ca0 */ SUBS R5, 0x8C @ Subtract 0x8C from R5 \n\
-/* 08003ca2 */ LSRS R0, R0, 0x20 \n\
+jtbl_08003c78: \n\
+.word jump_08003ca4 \n\
+.word jump_08003cd2 \n\
+.word jump_08003ce0 \n\
+.word jump_08003cec \n\
+.word jump_08003cf0 \n\
+.word jump_08003ce8 \n\
+.word jump_08003cfe \n\
+.word jump_08003d24 \n\
+.word branch_08003db0 \n\
+.word jump_08003d28 \n\
+.word jump_08003d8c \n\
+\n\
+jump_08003ca4: \n\
 /* 08003ca4 */ CMP R5, 0x0 @ Compare R5 and 0x0 \n\
 /* 08003ca6 */ BEQ branch_08003cc8 \n\
 /* 08003ca8 */ CMP R5, 0x1 @ Compare R5 and 0x1 \n\
@@ -105,6 +97,8 @@ branch_08003cc8: \n\
 /* 08003ccc */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08003cce */ STRH R0, [R4, 0x10] \n\
 /* 08003cd0 */ B branch_08003db0 \n\
+\n\
+jump_08003cd2: \n\
 /* 08003cd2 */ STR R5, [R4, 0xC] \n\
 /* 08003cd4 */ STR R5, [R4, 0x8] \n\
 /* 08003cd6 */ LDR R0, =0xffff \n\
@@ -112,13 +106,21 @@ branch_08003cc8: \n\
 /* 08003cda */ B branch_08003db0 \n\
 \n\
 .ltorg \n\
+\n\
+jump_08003ce0: \n\
 /* 08003ce0 */ LDR R0, [R4, 0x20] \n\
 /* 08003ce2 */ BL func_0804eb00 \n\
 /* 08003ce6 */ B branch_08003db0 \n\
+\n\
+jump_08003ce8: \n\
 /* 08003ce8 */ STR R5, [R4, 0x20] \n\
 /* 08003cea */ B branch_08003db0 \n\
+\n\
+jump_08003cec: \n\
 /* 08003cec */ STRH R5, [R4, 0x12] \n\
 /* 08003cee */ B branch_08003db0 \n\
+\n\
+jump_08003cf0: \n\
 /* 08003cf0 */ LDRB R0, [R4, 0x3] \n\
 /* 08003cf2 */ MOVS R1, 0x3F @ Set R1 to 0x3F \n\
 /* 08003cf4 */ ANDS R1, R0 @ Set R1 to R1 & R0 \n\
@@ -126,6 +128,8 @@ branch_08003cc8: \n\
 /* 08003cf8 */ ORRS R1, R0 @ Set R1 to R1 | R0 \n\
 /* 08003cfa */ STRB R1, [R4, 0x3] \n\
 /* 08003cfc */ B branch_08003dd6 \n\
+\n\
+jump_08003cfe: \n\
 /* 08003cfe */ LDRB R0, [R4] \n\
 /* 08003d00 */ MOVS R1, 0x2 @ Set R1 to 0x2 \n\
 /* 08003d02 */ ORRS R0, R1 @ Set R0 to R0 | R1 \n\
@@ -145,8 +149,12 @@ branch_08003cc8: \n\
 /* 08003d1e */ STRH R0, [R4, 0x10] \n\
 /* 08003d20 */ MOVS R7, 0x0 @ Set R7 to 0x0 \n\
 /* 08003d22 */ B branch_08003db0 \n\
+\n\
+jump_08003d24: \n\
 /* 08003d24 */ STR R5, [R4, 0x18] \n\
 /* 08003d26 */ B branch_08003db0 \n\
+\n\
+jump_08003d28: \n\
 /* 08003d28 */ MOVS R3, 0x1F @ Set R3 to 0x1F \n\
 /* 08003d2a */ ADDS R1, R5, 0x0 @ Set R1 to R5 + 0x0 \n\
 /* 08003d2c */ ANDS R1, R3 @ Set R1 to R1 & R3 \n\
@@ -193,6 +201,8 @@ branch_08003cc8: \n\
 /* 08003d7e */ B branch_08003db0 \n\
 \n\
 .ltorg \n\
+\n\
+jump_08003d8c: \n\
 /* 08003d8c */ LDRB R0, [R4] \n\
 /* 08003d8e */ MOVS R1, 0x2 @ Set R1 to 0x2 \n\
 /* 08003d90 */ ORRS R0, R1 @ Set R0 to R0 | R1 \n\

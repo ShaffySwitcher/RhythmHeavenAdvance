@@ -17,17 +17,20 @@ glabel func_08015108 \n\
  \n\
 branch_0801511e: \n\
 /* 0801511e */ LSLS R0, R1, 0x2 \n\
-/* 08015120 */ LDR R1, =0x08015134 @ !JumpTablePointer \n\
+/* 08015120 */ LDR R1, =jtbl_08015134 \n\
 /* 08015122 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08015124 */ LDR R0, [R0] \n\
 /* 08015126 */ MOV PC, R0 @ Set PC to R0 \n\
 \n\
 .ltorg \n\
-.word 0x08015148 \n\
-.word 0x08015160 \n\
-.word 0x08015170 \n\
-.word 0x0801518C \n\
-.word 0x0801519C \n\
+jtbl_08015134: \n\
+.word jump_08015148 \n\
+.word jump_08015160 \n\
+.word jump_08015170 \n\
+.word jump_0801518c \n\
+.word jump_0801519c \n\
+\n\
+jump_08015148: \n\
 /* 08015148 */ LDR R1, [R5] \n\
 /* 0801514a */ ADDS R1, 0x40 @ Add 0x40 to R1 \n\
 /* 0801514c */ LDRB R0, [R1] \n\
@@ -40,6 +43,8 @@ branch_0801511e: \n\
 /* 0801515a */ ADDS R0, 0x41 @ Add 0x41 to R0 \n\
 /* 0801515c */ MOVS R1, 0x2 @ Set R1 to 0x2 \n\
 /* 0801515e */ B branch_08015228 \n\
+\n\
+jump_08015160: \n\
 /* 08015160 */ LDR R0, [R5] \n\
 /* 08015162 */ LDR R0, [R0, 0x44] \n\
 /* 08015164 */ BL func_08014f98 \n\
@@ -47,6 +52,8 @@ branch_0801511e: \n\
 /* 0801516a */ ADDS R0, 0x41 @ Add 0x41 to R0 \n\
 /* 0801516c */ MOVS R1, 0x3 @ Set R1 to 0x3 \n\
 /* 0801516e */ B branch_08015228 \n\
+\n\
+jump_08015170: \n\
 /* 08015170 */ LDR R1, [R5] \n\
 /* 08015172 */ LDR R0, [R1, 0x44] \n\
 /* 08015174 */ LDRB R0, [R0, 0xE] \n\
@@ -62,6 +69,8 @@ branch_08015184: \n\
 /* 08015186 */ ADDS R0, 0x41 @ Add 0x41 to R0 \n\
 /* 08015188 */ MOVS R1, 0x4 @ Set R1 to 0x4 \n\
 /* 0801518a */ B branch_08015228 \n\
+\n\
+jump_0801518c: \n\
 /* 0801518c */ LDR R0, [R5] \n\
 /* 0801518e */ LDR R0, [R0, 0x44] \n\
 /* 08015190 */ BL func_08015020 \n\
@@ -69,6 +78,8 @@ branch_08015184: \n\
 /* 08015196 */ ADDS R0, 0x41 @ Add 0x41 to R0 \n\
 /* 08015198 */ MOVS R1, 0x5 @ Set R1 to 0x5 \n\
 /* 0801519a */ B branch_08015228 \n\
+\n\
+jump_0801519c: \n\
 /* 0801519c */ LDR R0, [R5] \n\
 /* 0801519e */ LDR R0, [R0, 0x38] \n\
 /* 080151a0 */ BL func_0800ac58 \n\
