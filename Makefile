@@ -38,8 +38,9 @@ SOURCES		:= src
 ASM         := asm
 INCLUDES	:= include
 DATA		:= data
+BIN		    := bin
 MUSIC		:=
-BUILD_DIRS  := $(BUILD) $(BUILD)/data $(BUILD)/asm $(BUILD)/src
+BUILD_DIRS  := $(BUILD) $(BUILD)/data $(BUILD)/asm $(BUILD)/src $(BUILD)/bin
 LD_SCRIPT   := rt.ld
 
 #---------------------------------------------------------------------------------
@@ -81,25 +82,22 @@ LD_SCRIPT   := rt.ld
 
 export OUTPUT	:=	$(BUILD)/$(TARGET)
 
-export VPATH	:=	$(foreach dir,$(ASM),$(CURDIR)/$(dir)) \
-			$(foreach dir,$(DATA),$(CURDIR)/$(dir)) \
-			$(foreach dir,$(GRAPHICS),$(CURDIR)/$(dir))
-
 export DEPSDIR	:=	$(CURDIR)/$(BUILD)
 
 CFILES		:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.c)))
 CPPFILES	:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.cpp)))
 SFILES		:=	$(foreach dir,$(ASM),$(notdir $(wildcard $(dir)/*.s)))
-BINFILES	:=	$(foreach dir,$(DATA),$(notdir $(wildcard $(dir)/*.bin)))
+DATAFILES   :=	$(foreach dir,$(DATA),$(notdir $(wildcard $(dir)/*.s)))
+BINFILES	:=	$(foreach dir,$(BIN),$(notdir $(wildcard $(dir)/*.bin)))
 
 ifneq ($(strip $(MUSIC)),)
 	export AUDIOFILES	:=	$(foreach dir,$(notdir $(wildcard $(MUSIC)/*.*)),$(CURDIR)/$(MUSIC)/$(dir))
 	BINFILES += soundbank.bin
 endif
 
-export OFILES_BIN := $(addprefix $(BUILD)/data/,$(addsuffix .o,$(BINFILES)))
+export OFILES_BIN := $(addprefix $(BUILD)/bin/,$(addsuffix .o,$(BINFILES)))
 
-export OFILES_SOURCES := $(addprefix $(BUILD)/asm/,$(SFILES:.s=.o)) $(addprefix $(BUILD)/src/,$(CFILES:.c=.o))
+export OFILES_SOURCES := $(addprefix $(BUILD)/asm/,$(SFILES:.s=.o)) $(addprefix $(BUILD)/data/,$(DATAFILES:.s=.o)) $(addprefix $(BUILD)/src/,$(CFILES:.c=.o))
 
 export OFILES := $(OFILES_BIN) $(OFILES_SOURCES)
 
@@ -164,7 +162,7 @@ soundbank.bin soundbank.h : $(AUDIOFILES)
 #---------------------------------------------------------------------------------
 # This rule links in binary data with the .bin extension
 #---------------------------------------------------------------------------------
-$(BUILD)/data/%.bin.o	$(BUILD)/data/%.bin.h :	data/%.bin | $(BUILD_DIRS)
+$(BUILD)/bin/%.bin.o	$(BUILD)/bin/%.bin.h :	bin/%.bin | $(BUILD_DIRS)
 #---------------------------------------------------------------------------------
 	@echo "Converting $< to $<.o"
 	@bin2s -a 4 -H $(BUILD)/$<.h $< | $(AS) -o $(BUILD)/$<.o
@@ -177,6 +175,10 @@ $(BUILD)/src/%.o : src/%.c | $(BUILD_DIRS)
 $(BUILD)/asm/%.o : asm/%.s | $(BUILD_DIRS)
 	@echo "Assembling $< to $(basename $<).o"
 	@$(AS) -MD $(BUILD)/asm/$*.d -march=armv4t -o $@ $<
+    
+$(BUILD)/data/%.o : data/%.s | $(BUILD_DIRS)
+	@echo "Assembling $< to $(basename $<).o"
+	@$(AS) -MD $(BUILD)/data/$*.d -march=armv4t -o $@ $<
 
 -include $(DEPSDIR)/*.d
 #---------------------------------------------------------------------------------------

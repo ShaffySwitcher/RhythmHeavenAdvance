@@ -17,28 +17,28 @@ SECTIONS {
 		build/asm/boot.o(.text*);
 		build/src/code_080001f4.o(.text*);
 		build/src/code_08000718.o(.text*);
-		build/data/bindata_08000a00.bin.o(.rodata*); /* Seems to be ARM assembly */
+		build/bin/bindata_08000a00.bin.o(.rodata*); /* Seems to be ARM assembly */
         build/src/code_08001360.o(.text*);
         build/src/code_08001fe0.o(.text*);
         build/src/code_08002f68.o(.text*);
         build/src/code_08003b28.o(.text*);
         build/src/code_08004714.o(.text*);
-		build/data/bindata_0801e704.bin.o(.rodata*);
+		build/bin/bindata_0801e704.bin.o(.rodata*);
 		*libgcc.a:_call_via_rX.o(.text*);
-		build/data/bindata_0804eb28.bin.o(.rodata*);
-        build/data/bindata_0804f300.bin.o(.rodata*);
-        build/asm/data_08054950.o(.text*);
-        build/data/bindata_08058f58.bin.o(.rodata*);
-        build/data/bindata_088f5aec.bin.o(.rodata*);
-        build/data/bindata_089000cc.bin.o(.rodata*);
-        build/data/bindata_0890a3c4.bin.o(.rodata*);
-        build/data/bindata_08932444.bin.o(.rodata*);
-		build/data/bindata_08935fac.bin.o(.rodata*);
-        build/data/bindata_089ccbc0.bin.o(.rodata*);
-        build/data/bindata_089d3984.bin.o(.rodata*);
-        build/data/bindata_08a9b078.bin.o(.rodata*);
-        build/data/bindata_08aa06f8.bin.o(.rodata*);
-        build/data/bindata_08cc4bcc.bin.o(.rodata*);
+		build/bin/bindata_0804eb28.bin.o(.rodata*);
+        build/bin/bindata_0804f300.bin.o(.rodata*);
+        build/data/data_08054950.o(.text*);
+        build/bin/bindata_08058f58.bin.o(.rodata*);
+        build/bin/bindata_088f5aec.bin.o(.rodata*);
+        build/bin/bindata_089000cc.bin.o(.rodata*);
+        build/bin/bindata_0890a3c4.bin.o(.rodata*);
+        build/bin/bindata_08932444.bin.o(.rodata*);
+		build/bin/bindata_08935fac.bin.o(.rodata*);
+        build/bin/bindata_089ccbc0.bin.o(.rodata*);
+        build/bin/bindata_089d3984.bin.o(.rodata*);
+        build/bin/bindata_08a9b078.bin.o(.rodata*);
+        build/bin/bindata_08aa06f8.bin.o(.rodata*);
+        build/bin/bindata_08cc4bcc.bin.o(.rodata*);
 	}
 
 	_end = . ;
