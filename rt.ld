@@ -26,7 +26,19 @@ SECTIONS {
 		build/data/bindata_0801e704.bin.o(.rodata*);
 		*libgcc.a:_call_via_rX.o(.text*);
 		build/data/bindata_0804eb28.bin.o(.rodata*);
+        build/data/bindata_0804f300.bin.o(.rodata*);
+        build/data/bindata_08054950.bin.o(.rodata*);
+        build/data/bindata_08058f58.bin.o(.rodata*);
+        build/data/bindata_088f5aec.bin.o(.rodata*);
+        build/data/bindata_089000cc.bin.o(.rodata*);
+        build/data/bindata_0890a3c4.bin.o(.rodata*);
+        build/data/bindata_08932444.bin.o(.rodata*);
 		build/data/bindata_08935fac.bin.o(.rodata*);
+        build/data/bindata_089ccbc0.bin.o(.rodata*);
+        build/data/bindata_089d3984.bin.o(.rodata*);
+        build/data/bindata_08a9b078.bin.o(.rodata*);
+        build/data/bindata_08aa06f8.bin.o(.rodata*);
+        build/data/bindata_08cc4bcc.bin.o(.rodata*);
 	}
 
 	_end = . ;
