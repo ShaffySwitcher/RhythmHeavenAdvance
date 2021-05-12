@@ -7,7 +7,7 @@ SECTIONS {
 	
 	. = 0x03000000;
 	.bss . : SUBALIGN(4) {
-		build/src/code_080001F4.o(.bss*);
+		build/src/code_080001f4.o(.bss*);
         build/src/code_08000718.o(.bss*);
 	}
 	
@@ -15,10 +15,14 @@ SECTIONS {
 	.cartrom . : AT(__romPos) SUBALIGN(4) {
 		build/asm/rom_header.o(.text*);
 		build/asm/boot.o(.text*);
-		build/src/code_080001F4.o(.text*);
+		build/src/code_080001f4.o(.text*);
 		build/src/code_08000718.o(.text*);
 		build/data/bindata_08000a00.bin.o(.rodata*); /* Seems to be ARM assembly */
         build/src/code_08001360.o(.text*);
+        build/src/code_08001fe0.o(.text*);
+        build/src/code_08002f68.o(.text*);
+        build/src/code_08003b28.o(.text*);
+        build/src/code_08004714.o(.text*);
 		build/data/bindata_0801e704.bin.o(.rodata*);
 		*libgcc.a:_call_via_rX.o(.text*);
 		build/data/bindata_0804eb28.bin.o(.rodata*);
