@@ -26,7 +26,7 @@ SECTIONS {
 		build/bin/bindata_0801e704.bin.o(.rodata*);
 		*libgcc.a:_call_via_rX.o(.text*);
 		build/bin/bindata_0804eb28.bin.o(.rodata*);
-        build/bin/bindata_0804f300.bin.o(.rodata*);
+        build/data/data_0804f300.o(.text*);
         build/data/data_08054950.o(.text*);
         build/bin/bindata_08058f58.bin.o(.rodata*);
         build/bin/bindata_088f5aec.bin.o(.rodata*);
