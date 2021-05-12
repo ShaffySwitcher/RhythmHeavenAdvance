@@ -40,7 +40,7 @@ INCLUDES	:= include
 DATA		:= data
 BIN		    := bin
 MUSIC		:=
-BUILD_DIRS  := $(BUILD) $(BUILD)/data $(BUILD)/asm $(BUILD)/src $(BUILD)/bin
+BUILD_DIRS  := $(BUILD) $(BUILD)/$(DATA) $(BUILD)/$(ASM) $(BUILD)/$(SOURCES) $(BUILD)/$(BIN)
 LD_SCRIPT   := rt.ld
 
 #---------------------------------------------------------------------------------
@@ -100,8 +100,6 @@ export OFILES_BIN := $(addprefix $(BUILD)/bin/,$(addsuffix .o,$(BINFILES)))
 export OFILES_SOURCES := $(addprefix $(BUILD)/asm/,$(SFILES:.s=.o)) $(addprefix $(BUILD)/data/,$(DATAFILES:.s=.o)) $(addprefix $(BUILD)/src/,$(CFILES:.c=.o))
 
 export OFILES := $(OFILES_BIN) $(OFILES_SOURCES)
-
-export HFILES := $(BUILD)/data/$(addsuffix .h,$(BINFILES))
 
 export INCLUDE	:=	-I $(foreach dir,$(INCLUDES),$(wildcard $(dir)/*.h)) \
 					-I $(foreach dir,$(LIBDIRS),-I $(dir)/include) \
@@ -167,18 +165,18 @@ $(BUILD)/bin/%.bin.o	$(BUILD)/bin/%.bin.h :	bin/%.bin | $(BUILD_DIRS)
 	@echo "Converting $< to $<.o"
 	@bin2s -a 4 -H $(BUILD)/$<.h $< | $(AS) -o $(BUILD)/$<.o
 
-$(BUILD)/src/%.o : src/%.c | $(BUILD_DIRS)
-	@$(CPP) $(CPPFLAGS) $< -o $(BUILD)/src/$*.i
-	$(CC1) $(CFLAGS) $(BUILD)/src/$*.i -o $(BUILD)/src/$*.s
-	$(AS) -MD  $(BUILD)/src/$*.d -march=armv4t -o $@ $(BUILD)/src/$*.s
+$(BUILD)/$(SOURCES)/%.o : $(SOURCES)/%.c | $(BUILD_DIRS)
+	@$(CPP) $(CPPFLAGS) $< -o $(BUILD)/$(SOURCES)/$*.i
+	$(CC1) $(CFLAGS) $(BUILD)/$(SOURCES)/$*.i -o $(BUILD)/$(SOURCES)/$*.s
+	$(AS) -MD  $(BUILD)/$(SOURCES)/$*.d -march=armv4t -o $@ $(BUILD)/$(SOURCES)/$*.s
 
-$(BUILD)/asm/%.o : asm/%.s | $(BUILD_DIRS)
+$(BUILD)/$(ASM)/%.o : $(ASM)/%.s | $(BUILD_DIRS)
 	@echo "Assembling $< to $(basename $<).o"
-	@$(AS) -MD $(BUILD)/asm/$*.d -march=armv4t -o $@ $<
+	@$(AS) -MD $(BUILD)/$(ASM)/$*.d -march=armv4t -o $@ $<
     
-$(BUILD)/data/%.o : data/%.s | $(BUILD_DIRS)
+$(BUILD)/$(DATA)/%.o : $(DATA)/%.s | $(BUILD_DIRS)
 	@echo "Assembling $< to $(basename $<).o"
-	@$(AS) -MD $(BUILD)/data/$*.d -march=armv4t -o $@ $<
+	@$(AS) -MD $(BUILD)/$(DATA)/$*.d -march=armv4t -o $@ $<
 
 -include $(DEPSDIR)/*.d
 #---------------------------------------------------------------------------------------
