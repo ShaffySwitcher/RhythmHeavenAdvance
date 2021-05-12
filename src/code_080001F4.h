@@ -22,7 +22,7 @@ extern s32 *D_030046a8;
 
 extern void *interrupt_handler;
 extern void *interrupt_handler_intern;
-extern void *D_0804F300;
+extern void *D_0804f300;
 extern void *D_03004460;
 extern struct struct_03000000 *D_08935fac;
 extern struct struct_03000000 *D_08935fb0;

@@ -270,3 +270,4 @@ branch_0801e6a0: \n\
 .ltorg \n\
 .balign 4, 0 \n\
 .syntax divided");
+

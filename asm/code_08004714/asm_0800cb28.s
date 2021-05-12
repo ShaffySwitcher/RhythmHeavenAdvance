@@ -544,7 +544,7 @@ jump_0800d048: \n\
 /* 0800d048 */ MOV R3, R9 @ Set R3 to R9 \n\
 /* 0800d04a */ LDR R0, [R3, 0x8] \n\
 /* 0800d04c */ BL func_0800c9a4 \n\
-/* 0800d050 */ BL func_0800d86c \n\
+/* 0800d050 */ BL branch_0800d86c \n\
 \n\
 jump_0800d054: \n\
 /* 0800d054 */ CMP R7, 0x1 @ Compare R7 and 0x1 \n\
@@ -605,7 +605,7 @@ branch_0800d0a0: \n\
 /* 0800d0a0 */ MOV R3, R9 @ Set R3 to R9 \n\
 /* 0800d0a2 */ LDR R0, [R3, 0x8] \n\
 /* 0800d0a4 */ BL func_0800c9c8 \n\
-/* 0800d0a8 */ BL func_0800d86c \n\
+/* 0800d0a8 */ BL branch_0800d86c \n\
 \n\
 jump_0800d0ac: \n\
 /* 0800d0ac */ MOV R5, R9 @ Set R5 to R9 \n\
@@ -1649,6 +1649,8 @@ jump_0800d864: \n\
 /* 0800d864 */ MOV R3, R9 @ Set R3 to R9 \n\
 /* 0800d866 */ LDR R0, [R3, 0x8] \n\
 /* 0800d868 */ BL func_0800c6e4 \n\
+\n\
+branch_0800d86c: \n\
 /* 0800d86c */ MOV R4, R9 @ Set R4 to R9 \n\
 /* 0800d86e */ STR R0, [R4, 0x8] \n\
 /* 0800d870 */ B branch_0800df9e \n\
