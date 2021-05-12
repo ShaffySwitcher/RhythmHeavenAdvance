@@ -314,7 +314,19 @@ asm(".include \"include/gba.inc\"");//Temporary
 
 #include "asm/code_08004714/asm_08008184.s"
 
-#include "asm/code_08004714/asm_080081a8.s"
+u8 *func_080081a8(u8 *arg1, u8 *arg2) {
+    u8 *temp = arg1;
+    while (*arg1 != 0) {
+        arg1++;
+    }
+    while (*arg2 != 0) {
+        *arg1 = *arg2;
+        arg2++;
+        arg1++;
+    }
+    *arg1 = 0;
+    return temp;
+}
 
 #include "asm/code_08004714/asm_080081d4.s"
 

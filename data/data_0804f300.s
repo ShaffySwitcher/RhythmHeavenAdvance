@@ -1607,148 +1607,112 @@ glabel D_08050a98
 /* 08050ac8 */ .word 0x00000000
 
 glabel D_08050acc
-/* 08050acc */ .word 0x82c6820a
-/* 08050ad0 */ .word 0x82c682a4
-/* 08050ad4 */ .word 0x0a4181a4
-/* 08050ad8 */ .word 0x5b817083
-/* 08050adc */ .word 0x46837483
-/* 08050ae0 */ .word 0x67834e83
-/* 08050ae4 */ .word 0x4c834081
-/* 08050ae8 */ .word 0x93838383
-/* 08050aec */ .word 0x5b817983
-/* 08050af0 */ .word 0xf0829383
-/* 08050af4 */ .word 0x8352830a
-/* 08050af8 */ .word 0x83768393
-/* 08050afc */ .word 0x835b818a
-/* 08050b00 */ .word 0x82b58267
-/* 08050b04 */ .word 0x82f182bd
-/* 08050b08 */ .word 0x82c182be
-/* 08050b0c */ .word 0x814981c4
-/* 08050b10 */ .word 0x00000048
+.asciz "\nとうとう、\nパーフェクト　キャンペーンを\nコンプリートしたんだって！？"
+.balign 4, 0
 
 glabel D_08050b14
-/* 08050b14 */ .word 0x6c013203
-/* 08050b18 */ .word 0x35013105
-/* 08050b1c */ .word 0xdf820a0a
-/* 08050b20 */ .word 0xe182bf82
-/* 08050b24 */ .word 0xb282b782
-/* 08050b28 */ .word 0xa2825b81
-/* 08050b2c */ .word 0x30032121
-/* 08050b30 */ .word 0x34057301
-/* 08050b34 */ .word 0x00003801
+.asciz "\x03\x32\x01\x6C\x05\x31\x01\x35\n\nめちゃすごーい!!\x03\x30\x01\x73\x05\x34\x01\x38"
+.balign 4, 0
 
 glabel D_08050b38
-/* 08050b38 */ .word 0x5b815183
-/* 08050b3c */ .word 0x76838083
-/* 08050b40 */ .word 0x43838c83
-/* 08050b44 */ .word 0xf0979a97
-/* 08050b48 */ .word 0x00000000
+.asciz "ゲームプレイ履歴"
+.balign 4, 0
 
 glabel D_08050b4c
-/* 08050b4c */ .word 0x00002020
+.asciz "  "
+.balign 4, 0
 
 glabel D_08050b50
-/* 08050b50 */ .word 0x202e6f4e
-/* 08050b54 */ .word 0x00000000
+.asciz "No. "
+.balign 4, 0
 
 glabel D_08050b58
-/* 08050b58 */ .word 0x002d2d2d
+.asciz "---"
+.balign 4, 0
 
 glabel D_08050b5c
-/* 08050b5c */ .word 0xcf8bbd95
-/* 08050b60 */ .word 0x00205f93
+.asciz "平均点 "
+.balign 4, 0
 
 glabel D_08050b64
-/* 08050b64 */ .word 0x30312820
-/* 08050b68 */ .word 0x5f933030
-/* 08050b6c */ .word 0x5f939e96
-/* 08050b70 */ .word 0x00000029
+.asciz " (1000点満点)"
+.balign 4, 0
 
 glabel D_08050b74
-/* 08050b74 */ .word 0xf1825697
-/* 08050b78 */ .word 0xf189be82
-/* 08050b7c */ .word 0x00209490
+.asciz "遊んだ回数 "
+.balign 4, 0
 
 glabel D_08050b80
-/* 08050b80 */ .word 0x0000f189
+.asciz "回"
+.balign 4, 0
 
 glabel D_08050b84
-/* 08050b84 */ .word 0x20282020
-/* 08050b88 */ .word 0x878d898f
-/* 08050b8c */ .word 0x203a698a
-/* 08050b90 */ .word 0x00000000
+.asciz "  ( 初合格: "
+.balign 4, 0
 
 glabel D_08050b94
-/* 08050b94 */ .word 0xbe82dc82
-/* 08050b98 */ .word 0x00000000
+.asciz "まだ"
+.balign 4, 0
 
 glabel D_08050b9c
-/* 08050b9c */ .word 0xda96f189
-/* 08050ba0 */ .word 0x00000000
+.asciz "回目"
+.balign 4, 0
 
 glabel D_08050ba4
-/* 08050ba4 */ .word 0x898f2020
-/* 08050ba8 */ .word 0x878de591
-/* 08050bac */ .word 0x203a698a
-/* 08050bb0 */ .word 0x00000000
+.asciz "\x20\x20初大合格: "
+.balign 4, 0
 
 glabel D_08050bb4
-/* 08050bb4 */ .word 0xbe82dc82
-/* 08050bb8 */ .word 0x00002920
+.asciz "まだ )"
+.balign 4, 0
 
 glabel D_08050bbc
-/* 08050bbc */ .word 0xda96f189
-/* 08050bc0 */ .word 0x00002920
+.asciz "回目 )"
+.balign 4, 0
 
 glabel D_08050bc4
-/* 08050bc4 */ .word 0x00000000
+.asciz ""
+.balign 4, 0
 
 glabel D_08050bc8
-/* 08050bc8 */ .word 0x003f3f3f
+.asciz "???"
+.balign 4, 0
 
 glabel D_08050bcc
-/* 08050bcc */ .word 0x00000000
+.asciz ""
+.balign 4, 0
 
 glabel D_08050bd0
-/* 08050bd0 */ .word 0x51835690
-/* 08050bd4 */ .word 0x80835b81
-/* 08050bd8 */ .word 0x00000000
+.asciz "新ゲーム"
+.balign 4, 0
 
 glabel D_08050bdc
-/* 08050bdc */ .word 0xbe82bd82
-/* 08050be0 */ .word 0xdc82a282
-/* 08050be4 */ .word 0x00007581
+.asciz "ただいま「"
+.balign 4, 0
 
 glabel D_08050be8
-/* 08050be8 */ .word 0xc5827681
-/* 08050bec */ .word 0x5b817083
-/* 08050bf0 */ .word 0x46837483
-/* 08050bf4 */ .word 0x67834e83
-/* 08050bf8 */ .word 0x4292f082
-/* 08050bfc */ .word 0xb782ac90
-/* 08050c00 */ .word 0xc682e982
-/* 08050c04 */ .word 0x00000000
+.asciz "」でパーフェクトを達成すると"
+.balign 4, 0
 
 glabel D_08050c08
-/* 08050c08 */ .word 0xea82e082
-/* 08050c0c */ .word 0xad82c882
-/* 08050c10 */ .word 0x00000000
+.asciz "もれなく"
+.balign 4, 0
 
 glabel D_08050c14
-/* 08050c14 */ .word 0x00007581
+.asciz "「"
+.balign 4, 0
 
 glabel D_08050c18
-/* 08050c18 */ .word 0x00007681
+.asciz "」"
+.balign 4, 0
 
 glabel D_08050c1c
-/* 08050c1c */ .word 0xc88bcc82
-/* 08050c20 */ .word 0x00000000
+.asciz "の曲"
+.balign 4, 0
 
 glabel D_08050c24
-/* 08050c24 */ .word 0x7683f082
-/* 08050c28 */ .word 0x5b838c83
-/* 08050c2c */ .word 0x67839383
-/* 08050c30 */ .word 0x00002121
+.asciz "をプレゼント!!"
+.balign 4, 0
 
 /* 08050c34 */ .word D_08c8ede0
 /* 08050c38 */ .word 0x06000000
