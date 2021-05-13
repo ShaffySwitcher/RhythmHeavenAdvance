@@ -1440,180 +1440,70 @@ glabel D_0805083c
 /* 0805086c */ .word 0x42818883
 /* 08050870 */ .word 0x00000000
 
+@ Keep up the good work.
+@ I'm rooting for you~!
 glabel D_08050874
-/* 08050874 */ .word 0x82b1820a
-/* 08050878 */ .word 0x82a982ea
-/* 0805087c */ .word 0x81e082e7
-/* 08050880 */ .word 0x82aa8240
-/* 08050884 */ .word 0x82ce82f1
-/* 08050888 */ .word 0x82c482c1
-/* 0805088c */ .word 0x0a4281cb
-/* 08050890 */ .word 0xa482a882
-/* 08050894 */ .word 0xf182a682
-/* 08050898 */ .word 0xb5824081
-/* 0805089c */ .word 0xe982c482
-/* 080508a0 */ .word 0xe782a982
-/* 080508a4 */ .word 0x6081cb82
-/* 080508a8 */ .word 0x0a0a4981
-/* 080508ac */ .word 0x00000000
+.asciz "\nこれからも　がんばってね。\nおうえん　してるからね～！\n\n"
+.balign 4, 0
 
+@ Hmmm, if you don't mind,
+@ I'll leave you to it...?
+@
+@ 「Yes, please」
+@ 「No, thank you」
 glabel D_080508b0
-/* 080508b0 */ .word 0x6081a482
-/* 080508b4 */ .word 0x4181f182
-/* 080508b8 */ .word 0xb582e082
-/* 080508bc */ .word 0xe6824081
-/* 080508c0 */ .word 0xea82af82
-/* 080508c4 */ .word 0x4081ce82
-/* 080508c8 */ .word 0xf182c882
-/* 080508cc */ .word 0xaf82be82
-/* 080508d0 */ .word 0xcb82c782
-/* 080508d4 */ .word 0x050a4181
-/* 080508d8 */ .word 0x90350131
-/* 080508dc */ .word 0x82df8269
-/* 080508e0 */ .word 0x82e682e9
-/* 080508e4 */ .word 0x82c982a4
-/* 080508e8 */ .word 0x82c482b5
-/* 080508ec */ .word 0x05ad82a8
-/* 080508f0 */ .word 0x82380134
-/* 080508f4 */ .word 0x81c782af
-/* 080508f8 */ .word 0x0a488163
-/* 080508fc */ .word 0x8140810a
-/* 08050900 */ .word 0x81408140
-/* 08050904 */ .word 0x81408140
-/* 08050908 */ .word 0x81408140
-/* 0805090c */ .word 0x82758140
-/* 08050910 */ .word 0x82cb82a8
-/* 08050914 */ .word 0x82a282aa
-/* 08050918 */ .word 0x82dc82b5
-/* 0805091c */ .word 0x0a7681b7
-/* 08050920 */ .word 0x40814081
-/* 08050924 */ .word 0x40814081
-/* 08050928 */ .word 0x40814081
-/* 0805092c */ .word 0x40814081
-/* 08050930 */ .word 0xaf827581
-/* 08050934 */ .word 0xb182c182
-/* 08050938 */ .word 0xc582a482
-/* 0805093c */ .word 0x7681b782
-/* 08050940 */ .word 0x00000000
+.asciz "う～ん、もし　よければ　なんだけどね、\n\x05\x31\x01\x35進めるようにしておく\x05\x34\x01\x38けど…？\n\n　　　　　　　　「おねがいします」\n　　　　　　　　「けっこうです」"
+.balign 4, 0
 
+@ I got this!
 glabel D_08050944
-/* 08050944 */ .word 0x32030a0a
-/* 08050948 */ .word 0x31056c01
-/* 0805094c */ .word 0xdc823501
-/* 08050950 */ .word 0xb982a982
-/* 08050954 */ .word 0xab82c682
-/* 08050958 */ .word 0x30034981
-/* 0805095c */ .word 0x34057301
-/* 08050960 */ .word 0x00003801
+.asciz "\n\n\x03\x32\x01\x6c\x05\x31\x01\x35まかせとき！\x03\x30\x01\x73\x05\x34\x01\x38"
+.balign 4, 0
+
 
 glabel D_08050964
-/* 08050964 */ .word 0xa482bb82
-/* 08050968 */ .word 0xb782c582
-/* 0805096c */ .word 0x4281a982
-/* 08050970 */ .word 0x82b6820a
-/* 08050974 */ .word 0x82f182d4
-/* 08050978 */ .word 0x834081cc
-/* 0805097c */ .word 0x834a8360
-/* 08050980 */ .word 0x0ac58289
-/* 08050984 */ .word 0xf182aa82
-/* 08050988 */ .word 0xe982ce82
-/* 0805098c */ .word 0xc582f182
-/* 08050990 */ .word 0xcb82b782
-/* 08050994 */ .word 0x830a4281
-/* 08050998 */ .word 0x83898347
-/* 0805099c */ .word 0x81498143
-/* 080509a0 */ .word 0x00000049
+.asciz "そうですか。\nじぶんの　チカラで\nがんばるんですね。\nエライ！！"
+.balign 4, 0
 
+@ I wonder what the next game will be.
+@ I hope you do well~
+@ See you then.
 glabel D_080509a4
-/* 080509a4 */ .word 0x829f8e0a
-/* 080509a8 */ .word 0x815183cc
-/* 080509ac */ .word 0x8180835b
-/* 080509b0 */ .word 0x82c78240
-/* 080509b4 */ .word 0x82c882f1
-/* 080509b8 */ .word 0x82c582cc
-/* 080509bc */ .word 0x82e582b5
-/* 080509c0 */ .word 0x81cb82a4
-/* 080509c4 */ .word 0xa4820a42
-/* 080509c8 */ .word 0xad82dc82
-/* 080509cc */ .word 0xab82c582
-/* 080509d0 */ .word 0xc682e982
-/* 080509d4 */ .word 0xa2824081
-/* 080509d8 */ .word 0xcb82a282
-/* 080509dc */ .word 0x42816081
-/* 080509e0 */ .word 0x82c5820a
-/* 080509e4 */ .word 0x82dc82cd
-/* 080509e8 */ .word 0x004281bd
+.asciz "\n次のゲーム　どんなのでしょうね。\nうまくできると　いいね～。\nではまた。"
+.balign 4, 0
 
+@ So, good luck with that~
 glabel D_080509ec
-/* 080509ec */ .word 0xc5820a0a
-/* 080509f0 */ .word 0x4081cd82
-/* 080509f4 */ .word 0xf182aa82
-/* 080509f8 */ .word 0xc182ce82
-/* 080509fc */ .word 0xad82c482
-/* 08050a00 */ .word 0xb382be82
-/* 08050a04 */ .word 0xcb82a282
-/* 08050a08 */ .word 0x42816081
-/* 08050a0c */ .word 0x00000a0a
+.asciz "\n\nでは　がんばってくださいね～。\n\n"
+.balign 4, 0
 
+@ Are you prepared for the Perfect Campaign?
+@
+@         「Yes」
+@         「No」
 glabel D_08050a10
-/* 08050a10 */ .word 0x35013105
-/* 08050a14 */ .word 0x5b817083
-/* 08050a18 */ .word 0x46837483
-/* 08050a1c */ .word 0x67834e83
-/* 08050a20 */ .word 0x4c834081
-/* 08050a24 */ .word 0x93838383
-/* 08050a28 */ .word 0x5b817983
-/* 08050a2c */ .word 0x34059383
-/* 08050a30 */ .word 0x40813801
-/* 08050a34 */ .word 0x4081c982
-/* 08050a38 */ .word 0xc882bb82
-/* 08050a3c */ .word 0xc482a682
-/* 08050a40 */ .word 0xea824081
-/* 08050a44 */ .word 0xb582f182
-/* 08050a48 */ .word 0xa482e382
-/* 08050a4c */ .word 0xb782c582
-/* 08050a50 */ .word 0x4881a982
-/* 08050a54 */ .word 0x40810a0a
-/* 08050a58 */ .word 0x40814081
-/* 08050a5c */ .word 0x40814081
-/* 08050a60 */ .word 0x40814081
-/* 08050a64 */ .word 0x75814081
-/* 08050a68 */ .word 0xa482bb82
-/* 08050a6c */ .word 0xf182c882
-/* 08050a70 */ .word 0xb782c582
-/* 08050a74 */ .word 0x810a7681
-/* 08050a78 */ .word 0x81408140
-/* 08050a7c */ .word 0x81408140
-/* 08050a80 */ .word 0x81408140
-/* 08050a84 */ .word 0x81408140
-/* 08050a88 */ .word 0x82bf8275
-/* 08050a8c */ .word 0x82a282aa
-/* 08050a90 */ .word 0x83b782dc
-/* 08050a94 */ .word 0x00768188
+.asciz "\x05\x31\x01\x35パーフェクト　キャンペーン\x05\x34\x01\x38　に　そなえて　れんしゅうですか？\n\n　　　　　　　　「そうなんです」\n　　　　　　　　「ちがいますヨ」"
+.balign 4, 0
 
+@ Please do your best to
+@ get a perfect score!
 glabel D_08050a98
-/* 08050a98 */ .word 0x82aa820a
-/* 08050a9c */ .word 0x82ce82f1
-/* 08050aa0 */ .word 0x81c482c1
-/* 08050aa4 */ .word 0x81708340
-/* 08050aa8 */ .word 0x8374835b
-/* 08050aac */ .word 0x834e8346
-/* 08050ab0 */ .word 0x0a418167
-/* 08050ab4 */ .word 0xc182c682
-/* 08050ab8 */ .word 0xad82c482
-/* 08050abc */ .word 0xb382be82
-/* 08050ac0 */ .word 0x6c83a282
-/* 08050ac4 */ .word 0x0a0a4981
-/* 08050ac8 */ .word 0x00000000
+.asciz "\nがんばって　パーフェクト、\nとってくださいネ！\n\n"
+.balign 4, 0
 
+@ I've heard that
+@ you've finally completed 
+@ the Perfect Campaign!?
 glabel D_08050acc
 .asciz "\nとうとう、\nパーフェクト　キャンペーンを\nコンプリートしたんだって！？"
 .balign 4, 0
 
+@ That's amazing!!
 glabel D_08050b14
 .asciz "\x03\x32\x01\x6C\x05\x31\x01\x35\n\nめちゃすごーい!!\x03\x30\x01\x73\x05\x34\x01\x38"
 .balign 4, 0
 
+@ Gameplay History
 glabel D_08050b38
 .asciz "ゲームプレイ履歴"
 .balign 4, 0
@@ -1630,18 +1520,22 @@ glabel D_08050b58
 .asciz "---"
 .balign 4, 0
 
+@ Average points
 glabel D_08050b5c
 .asciz "平均点 "
 .balign 4, 0
 
+@  (Maximum 1000 points)
 glabel D_08050b64
 .asciz " (1000点満点)"
 .balign 4, 0
 
+@ Number of times played
 glabel D_08050b74
 .asciz "遊んだ回数 "
 .balign 4, 0
 
+@ (x) times
 glabel D_08050b80
 .asciz "回"
 .balign 4, 0
@@ -1659,7 +1553,7 @@ glabel D_08050b9c
 .balign 4, 0
 
 glabel D_08050ba4
-.asciz "\x20\x20初大合格: "
+.asciz "  初大合格: "
 .balign 4, 0
 
 glabel D_08050bb4
@@ -1682,6 +1576,7 @@ glabel D_08050bcc
 .asciz ""
 .balign 4, 0
 
+@ New Game
 glabel D_08050bd0
 .asciz "新ゲーム"
 .balign 4, 0
