@@ -111,7 +111,7 @@ ifeq (,$(wildcard baserom.gba))
     $(error No ROM provided. Please place an unmodified ROM named "baserom.gba" in the root folder)
 endif
 
-ifneq ($(shell sha1sum baserom.gba), 67f8adacff79c15d028fffd90de3a77d9ad0602d  baserom.gba)
+ifneq ($(shell sha1sum -t baserom.gba), 67f8adacff79c15d028fffd90de3a77d9ad0602d  baserom.gba)
     $(error Provided ROM is not correct)
 endif
 
