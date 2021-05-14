@@ -7,3 +7,15 @@
 	.global \value
 	\value:
 .endm
+
+.macro text01 value
+    .byte 0x01, \value
+.endm
+
+.macro text03 value
+    .byte 0x03, \value
+.endm
+
+.macro text05 value
+    .byte 0x05, \value
+.endm

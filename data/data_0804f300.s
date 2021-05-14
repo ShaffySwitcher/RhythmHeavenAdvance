@@ -67,311 +67,124 @@ glabel D_0804f3e4
 .asciz "\n\nでは　また。\n\n"
 .balign 4, 0
 
+@ I'm a little busy right now,
+@ so please come back later.
 /* 0804f400 */
-/* 0804f400 */ .word 0x82a2820a
-/* 0804f404 */ .word 0x824081dc
-/* 0804f408 */ .word 0x82e582bf
-/* 0804f40c */ .word 0x81c682c1
-/* 0804f410 */ .word 0x82b58240
-/* 0804f414 */ .word 0x92dd82b1
-/* 0804f418 */ .word 0x82c88286
-/* 0804f41c */ .word 0x0ac582cc
-/* 0804f420 */ .word 0xbd82dc82
-/* 0804f424 */ .word 0xa0824081
-/* 0804f428 */ .word 0xc582c682
-/* 0804f42c */ .word 0xab824081
-/* 0804f430 */ .word 0xad82c482
-/* 0804f434 */ .word 0xb382be82
-/* 0804f438 */ .word 0xcb82a282
-/* 0804f43c */ .word 0x0a0a4281
-/* 0804f440 */ .word 0x00000000
+.asciz "\nいま　ちょっと　しこみ中なので\nまた　あとで　きてくださいね。\n\n"
+.balign 4, 0
 
+@ If there's anything I can do,
+@ <I'll help you>.
 /* 0804f444 */
-/* 0804f444 */ .word 0x82ed820a
-/* 0804f448 */ .word 0x82b582bd
-/* 0804f44c */ .word 0x824081c9
-/* 0804f450 */ .word 0x82ab82c5
-/* 0804f454 */ .word 0x82b182e9
-/* 0804f458 */ .word 0x81aa82c6
-/* 0804f45c */ .word 0x82a08240
-/* 0804f460 */ .word 0x81ce82ea
-/* 0804f464 */ .word 0x31050a41
-/* 0804f468 */ .word 0xbf823501
-/* 0804f46c */ .word 0xe782a982
-/* 0804f470 */ .word 0x4081c982
-/* 0804f474 */ .word 0xe882c882
-/* 0804f478 */ .word 0xb782dc82
-/* 0804f47c */ .word 0x3405e682
-/* 0804f480 */ .word 0x42813801
-/* 0804f484 */ .word 0x00000a0a
+.ascii "\nわたしに　できることが　あれば、\n"
+text05 0x31
+text01 0x35
+.ascii "ちからに　なりますよ"
+text05 0x34
+text01 0x38
+.asciz "。\n\n"
+.balign 4, 0
 
+@ This is what we call the Cafe.
+@ Please come here <when you can't play the game well>
+@ or when you get tired.
 /* 0804f488 */
-/* 0804f488 */ .word 0x82b1820a
-/* 0804f48c */ .word 0x81cd82b1
-/* 0804f490 */ .word 0x82a28240
-/* 0804f494 */ .word 0x82e482ed
-/* 0804f498 */ .word 0x834081e9
-/* 0804f49c */ .word 0x8362834c
-/* 0804f4a0 */ .word 0x82589354
-/* 0804f4a4 */ .word 0x81b782c5
-/* 0804f4a8 */ .word 0x51830a42
-/* 0804f4ac */ .word 0x80835b81
-/* 0804f4b0 */ .word 0x4081aa82
-/* 0804f4b4 */ .word 0x35013105
-/* 0804f4b8 */ .word 0xdc82a482
-/* 0804f4bc */ .word 0xc582ad82
-/* 0804f4c0 */ .word 0xc882ab82
-/* 0804f4c4 */ .word 0xc682a282
-/* 0804f4c8 */ .word 0x3405ab82
-/* 0804f4cc */ .word 0xe2823801
-/* 0804f4d0 */ .word 0x82c2820a
-/* 0804f4d4 */ .word 0x82ea82a9
-/* 0804f4d8 */ .word 0x82c682bd
-/* 0804f4dc */ .word 0x82c982ab
-/* 0804f4e0 */ .word 0x81e082c5
-/* 0804f4e4 */ .word 0x82a88240
-/* 0804f4e8 */ .word 0x89c582a2
-/* 0804f4ec */ .word 0x82b382ba
-/* 0804f4f0 */ .word 0x004281a2
+.ascii "\nここは　いわゆる　キッサ店です。\nゲームが　"
+text05 0x31
+text01 0x35
+.ascii "うまくできないとき"
+text05 0x34
+text01 0x38
+.asciz "や\nつかれたときにでも　おいで下さい。"
+.balign 4, 0
 
+@ Welcome.
+@ This is your first time here, isn't it?
 /* 0804f4f4 */
-/* 0804f4f4 */ .word 0x82a2820a
-/* 0804f4f8 */ .word 0x82c182e7
-/* 0804f4fc */ .word 0x82e182b5
-/* 0804f500 */ .word 0x82dc82a2
-/* 0804f504 */ .word 0x0a4281b9
-/* 0804f508 */ .word 0xbf82b182
-/* 0804f50c */ .word 0xc982e782
-/* 0804f510 */ .word 0x88974081
-/* 0804f514 */ .word 0xcc82bd82
-/* 0804f518 */ .word 0x4081cd82
-/* 0804f51c */ .word 0xb682cd82
-/* 0804f520 */ .word 0xc482df82
-/* 0804f524 */ .word 0xb782c582
-/* 0804f528 */ .word 0x4881cb82
-/* 0804f52c */ .word 0x00000a0a
+.asciz "\nいらっしゃいませ。\nこちらに　来たのは　はじめてですね？\n\n"
+.balign 4, 0
 
+@ Please come back later.
 /* 0804f530 */
-/* 0804f530 */ .word 0xb5820a0a
-/* 0804f534 */ .word 0xe782ce82
-/* 0804f538 */ .word 0x4081ad82
-/* 0804f53c */ .word 0xc482b582
-/* 0804f540 */ .word 0xe782a982
-/* 0804f544 */ .word 0xab824081
-/* 0804f548 */ .word 0xcb82c482
-/* 0804f54c */ .word 0x42816081
-/* 0804f550 */ .word 0x00000a0a
+.asciz "\n\nしばらく　してから　きてね～。\n\n"
+.balign 4, 0
 
+@ Don't get too carried away
+@ and have fun...
 /* 0804f554 */
-/* 0804f554 */ .word 0x82a0820a
-/* 0804f558 */ .word 0x81e882dc
-/* 0804f55c */ .word 0x83808340
-/* 0804f560 */ .word 0x81c9824c
-/* 0804f564 */ .word 0x82c88240
-/* 0804f568 */ .word 0x82b882e7
-/* 0804f56c */ .word 0x798a0ac9
-/* 0804f570 */ .word 0xf182b582
-/* 0804f574 */ .word 0xba89c582
-/* 0804f578 */ .word 0xa282b382
-/* 0804f57c */ .word 0x6381cb82
-/* 0804f580 */ .word 0x00000a0a
+.asciz "\nあまり　ムキに　ならずに\n楽しんで下さいね…\n\n"
+.balign 4, 0
 
+@ At the same time,
+@ I think it makes it more fun to get into the music.
 /* 0804f584 */
-/* 0804f584 */ .word 0x82bb820a
-/* 0804f588 */ .word 0x93c682ea
-/* 0804f58c */ .word 0x829e8eaf
-/* 0804f590 */ .word 0x894081c9
-/* 0804f594 */ .word 0x82798ab9
-/* 0804f598 */ .word 0x834081c9
-/* 0804f59c */ .word 0x82e9826d
-/* 0804f5a0 */ .word 0x0aaa82cc
-/* 0804f5a4 */ .word 0xb582798a
-/* 0804f5a8 */ .word 0xc882ad82
-/* 0804f5ac */ .word 0xc682e982
-/* 0804f5b0 */ .word 0x768ee082
-/* 0804f5b4 */ .word 0xf182a482
-/* 0804f5b8 */ .word 0xb782c582
-/* 0804f5bc */ .word 0x0a0a4281
-/* 0804f5c0 */ .word 0x00000000
+.asciz "\nそれと同時に　音楽に　ノるのが\n楽しくなるとも思うんです。\n\n"
+.balign 4, 0
 
+@ I think you'll get the hang of it
+@ after a few tries.
 /* 0804f5c4 */
-/* 0804f5c4 */ .word 0x82c8820a
-/* 0804f5c8 */ .word 0x82c782f1
-/* 0804f5cc */ .word 0x824081a9
-/* 0804f5d0 */ .word 0x82e982e2
-/* 0804f5d4 */ .word 0x82bf82a4
-/* 0804f5d8 */ .word 0x834081c9
-/* 0804f5dc */ .word 0x82638352
-/* 0804f5e0 */ .word 0xc2820aaa
-/* 0804f5e4 */ .word 0xdf82a982
-/* 0804f5e8 */ .word 0xc682e982
-/* 0804f5ec */ .word 0x768e4081
-/* 0804f5f0 */ .word 0xdc82a282
-/* 0804f5f4 */ .word 0xe682b782
-/* 0804f5f8 */ .word 0x0a0a4281
-/* 0804f5fc */ .word 0x00000000
+.asciz "\nなんどか　やるうちに　コツが\nつかめると　思いますよ。\n\n"
+.balign 4, 0
 
+@ Good luck with your Perfect.
+@ I'll see you later.
 /* 0804f600 */
-/* 0804f600 */ .word 0x8170830a
-/* 0804f604 */ .word 0x8374835b
-/* 0804f608 */ .word 0x834e8346
-/* 0804f60c */ .word 0x82408167
-/* 0804f610 */ .word 0x82f182aa
-/* 0804f614 */ .word 0x82c182ce
-/* 0804f618 */ .word 0x82ad82c4
-/* 0804f61c */ .word 0x82b382be
-/* 0804f620 */ .word 0x81cb82a2
-/* 0804f624 */ .word 0xc5820a42
-/* 0804f628 */ .word 0xdc82cd82
-/* 0804f62c */ .word 0x4281bd82
-/* 0804f630 */ .word 0x00000a0a
+.asciz "\nパーフェクト　がんばってくださいね。\nではまた。\n\n"
+.balign 4, 0
 
+@ I'm sorry for speaking so loudly.
+@ I was kind of happy...
 /* 0804f634 */
-/* 0804f634 */ .word 0x82e5910a
-/* 0804f638 */ .word 0x90a282ab
-/* 0804f63c */ .word 0x82f082ba
-/* 0804f640 */ .word 0x82b582be
-/* 0804f644 */ .word 0x824081c4
-/* 0804f648 */ .word 0x82dd82b7
-/* 0804f64c */ .word 0x82b982dc
-/* 0804f650 */ .word 0x0a4281f1
-/* 0804f654 */ .word 0xf182c882
-/* 0804f658 */ .word 0xa982be82
-/* 0804f65c */ .word 0xa4824081
-/* 0804f660 */ .word 0xb582ea82
-/* 0804f664 */ .word 0xc182a982
-/* 0804f668 */ .word 0xe082bd82
-/* 0804f66c */ .word 0xc582cc82
-/* 0804f670 */ .word 0xa982b782
-/* 0804f674 */ .word 0x6381e782
-/* 0804f678 */ .word 0x00000a0a
+.asciz "\n大きい声をだして　すみません。\nなんだか　うれしかったものですから…\n\n"
+.balign 4, 0
 
+@ I hope you enjoy the game.
+@ I'll see you later.
 /* 0804f67c */
-/* 0804f67c */ .word 0x8151830a
-/* 0804f680 */ .word 0x8180835b
-/* 0804f684 */ .word 0x82798a40
-/* 0804f688 */ .word 0x82f182b5
-/* 0804f68c */ .word 0x82ad82c5
-/* 0804f690 */ .word 0x82b382be
-/* 0804f694 */ .word 0x81cb82a2
-/* 0804f698 */ .word 0xc5820a42
-/* 0804f69c */ .word 0xdc82cd82
-/* 0804f6a0 */ .word 0x4281bd82
-/* 0804f6a4 */ .word 0x00000a0a
+.asciz "\nゲーム　楽しんでくださいね。\nではまた。\n\n"
+.balign 4, 0
 
+@ I see.
+@ I'm sorry I told you
+@ about the rumors.
 /* 0804f6a8 */
-/* 0804f6a8 */ .word 0x82bb820a
-/* 0804f6ac */ .word 0x82c582a4
-/* 0804f6b0 */ .word 0x81a982b7
-/* 0804f6b4 */ .word 0x45830a42
-/* 0804f6b8 */ .word 0x54838f83
-/* 0804f6bc */ .word 0xc8826298
-/* 0804f6c0 */ .word 0xc482f182
-/* 0804f6c4 */ .word 0xb5824081
-/* 0804f6c8 */ .word 0xb582c482
-/* 0804f6cc */ .word 0xa282dc82
-/* 0804f6d0 */ .word 0x82b5820a
-/* 0804f6d4 */ .word 0x82ea82c2
-/* 0804f6d8 */ .word 0x82b582a2
-/* 0804f6dc */ .word 0x82b582dc
-/* 0804f6e0 */ .word 0x004281bd
+.asciz "\nそうですか。\nウワサ話なんて　してしまい\nしつれいしました。"
+.balign 4, 0
 
+@ You must be tired, right?
+@ Please get some rest.
+@ I'll see you later.
 /* 0804f6e4 */
-/* 0804f6e4 */ .word 0x82a8820a
-/* 0804f6e8 */ .word 0x82a982c2
-/* 0804f6ec */ .word 0x82c582ea
-/* 0804f6f0 */ .word 0x82e582b5
-/* 0804f6f4 */ .word 0x0a4881a4
-/* 0804f6f8 */ .word 0xb582ad8f
-/* 0804f6fc */ .word 0x788b4081
-/* 0804f700 */ .word 0xc582f182
-/* 0804f704 */ .word 0xbe82ad82
-/* 0804f708 */ .word 0xa282b382
-/* 0804f70c */ .word 0x42816c83
-/* 0804f710 */ .word 0x82c5820a
-/* 0804f714 */ .word 0x824081cd
-/* 0804f718 */ .word 0x81bd82dc
-/* 0804f71c */ .word 0x00000042
+.asciz "\nおつかれでしょう？\n少し　休んでくださいネ。\nでは　また。"
+.balign 4, 0
 
+@ No, no, no,
+@ you completed the game?
+@ You've done it~!
 /* 0804f720 */
-/* 0804f720 */ .word 0x82a2820a
-/* 0804f724 */ .word 0x82a282e2
-/* 0804f728 */ .word 0x824181e2
-/* 0804f72c */ .word 0x82a982b5
-/* 0804f730 */ .word 0x824081b5
-/* 0804f734 */ .word 0x82f182c8
-/* 0804f738 */ .word 0x824081c6
-/* 0804f73c */ .word 0x0a9f82dc
-/* 0804f740 */ .word 0x93835283
-/* 0804f744 */ .word 0x8a837683
-/* 0804f748 */ .word 0x67835b81
-/* 0804f74c */ .word 0xb782c582
-/* 0804f750 */ .word 0x4281a982
-/* 0804f754 */ .word 0x82e2820a
-/* 0804f758 */ .word 0x82dc82e8
-/* 0804f75c */ .word 0x81c882b7
-/* 0804f760 */ .word 0x00428160
+.asciz "\nいやいや、しかし　なんと　まぁ\nコンプリートですか。\nやりますな～。"
+.balign 4, 0
 
+@ Oh yeah,
+@ to celebrate, I've added a few songs from the studio
+@ albeit in a small way.
 /* 0804f764 */
-/* 0804f764 */ .word 0x82bb820a
-/* 0804f768 */ .word 0x82bb82a4
-/* 0804f76c */ .word 0x0a4181a4
-/* 0804f770 */ .word 0x6a8fa882
-/* 0804f774 */ .word 0xc982a282
-/* 0804f778 */ .word 0xb3824081
-/* 0804f77c */ .word 0xe282b382
-/* 0804f780 */ .word 0xc582a982
-/* 0804f784 */ .word 0x4081cd82
-/* 0804f788 */ .word 0xe882a082
-/* 0804f78c */ .word 0xb782dc82
-/* 0804f790 */ .word 0x830aaa82
-/* 0804f794 */ .word 0x835e8358
-/* 0804f798 */ .word 0x82498357
-/* 0804f79c */ .word 0x82c88bcc
-/* 0804f7a0 */ .word 0x82d382f0
-/* 0804f7a4 */ .word 0x82b582e2
-/* 0804f7a8 */ .word 0x82a882c4
-/* 0804f7ac */ .word 0x82dc82ab
-/* 0804f7b0 */ .word 0x81bd82b5
-/* 0804f7b4 */ .word 0x00000a42
+.asciz "\nそうそう、\nお祝いに　ささやかでは　ありますが\nスタジオの曲をふやしておきました。\n"
+.balign 4, 0
 
+@ I'm so happy,
+@ I'm in tears...
 /* 0804f7b8 */
-/* 0804f7b8 */ .word 0x82c8820a
-/* 0804f7bc */ .word 0x82be82f1
-/* 0804f7c0 */ .word 0x8e4081a9
-/* 0804f7c4 */ .word 0x81e08284
-/* 0804f7c8 */ .word 0x82b78241
-/* 0804f7cc */ .word 0x82b282c1
-/* 0804f7d0 */ .word 0xa4820aad
-/* 0804f7d4 */ .word 0xb582ea82
-/* 0804f7d8 */ .word 0xc182ad82
-/* 0804f7dc */ .word 0x4081c482
-/* 0804f7e0 */ .word 0x8b834583
-/* 0804f7e4 */ .word 0x8b834583
-/* 0804f7e8 */ .word 0xb782c582
-/* 0804f7ec */ .word 0x0a0a6381
-/* 0804f7f0 */ .word 0x00000000
+.asciz "\nなんだか　私も、すっごく\nうれしくって　ウルウルです…\n\n"
+.balign 4, 0
 
+@ You must have a pretty
+@ good sense of rhythm if
+@ you've played that much!
 /* 0804f7f4 */
-/* 0804f7f4 */ .word 0x82e0820a
-/* 0804f7f8 */ .word 0x824181a4
-/* 0804f7fc */ .word 0x82b182bb
-/* 0804f800 */ .word 0x81c582dc
-/* 0804f804 */ .word 0x82e28240
-/* 0804f808 */ .word 0x82b182e8
-/* 0804f80c */ .word 0x82be82f1
-/* 0804f810 */ .word 0x8a830ae7
-/* 0804f814 */ .word 0x80835983
-/* 0804f818 */ .word 0x4081b48a
-/* 0804f81c */ .word 0xc882a982
-/* 0804f820 */ .word 0x4081e882
-/* 0804f824 */ .word 0xad82c797
-/* 0804f828 */ .word 0xc182c882
-/* 0804f82c */ .word 0x820ac482
-/* 0804f830 */ .word 0x82e982a2
-/* 0804f834 */ .word 0x82b582c5
-/* 0804f838 */ .word 0x83a482e5
-/* 0804f83c */ .word 0x0049816c
+.asciz "\nもう、そこまで　やりこんだら\nリズム感　かなり　良くなって\nいるでしょうネ！"
+.balign 4, 0
 
 /* 0804f840 */
 /* 0804f840 */ .word 0x6c013203
