@@ -78,9 +78,9 @@ glabel D_0804f3e4
 @ If you need help, <come to the Cafe>.
 /* 0804f444 */
 .ascii "\nわたしに　できることが　あれば、\n"
-text_macro_unk5_enable
+.text_gold
 .ascii "ちからに　なりますよ"
-text_macro_unk5_disable
+.text_normal
 .asciz "。\n\n"
 .balign 4, 0
 
@@ -89,9 +89,9 @@ text_macro_unk5_disable
 @ or when you just want a break, please come here and relax.
 /* 0804f488 */
 .ascii "\nここは　いわゆる　キッサ店です。\nゲームが　"
-text_macro_unk5_enable
+.text_gold
 .ascii "うまくできないとき"
-text_macro_unk5_disable
+.text_normal
 .asciz "や\nつかれたときにでも　おいで下さい。"
 .balign 4, 0
 
@@ -184,101 +184,101 @@ text_macro_unk5_disable
 
 @ <Unbelievable!!>
 /* 0804f840 */
-text_macro_unk3_enable
-text_macro_unk5_enable
+.text_large
+.text_gold
 .ascii "\n\nアンビリーバボー!!"
-text_macro_unk3_disable
-text_macro_unk5_disable
+.text_small
+.text_normal
 .asciz ""
 .balign 4, 0
 
 @ <Good job!!>
 /* 0804f868 */
-text_macro_unk3_enable
-text_macro_unk5_enable
+.text_large
+.text_gold
 .ascii "\n\nグッド　ジョブ!!"
-text_macro_unk3_disable
-text_macro_unk5_disable
+.text_small
+.text_normal
 .asciz ""
 .balign 4, 0
 
 @ <Congratulations!!>
 /* 0804f88c */
-text_macro_unk3_enable
-text_macro_unk5_enable
+.text_large
+.text_gold
 .ascii "\n\nおめでとー!!"
-text_macro_unk3_disable
-text_macro_unk5_disable
+.text_small
+.text_normal
 .asciz ""
 .balign 4, 0
 
 @ <You're good!!>
 /* 0804f8ac */
-text_macro_unk3_enable
-text_macro_unk5_enable
+.text_large
+.text_gold
 .ascii "\n\nやるじゃなーい!!"
-text_macro_unk3_disable
-text_macro_unk5_disable
+.text_small
+.text_normal
 .asciz ""
 .balign 4, 0
 
 @ <Not too bad!!>
 /* 0804f8d0 */
-text_macro_unk3_enable
-text_macro_unk5_enable
+.text_large
+.text_gold
 .ascii "\n\nすごいじゃなーい!!"
-text_macro_unk3_disable
-text_macro_unk5_disable
+.text_small
+.text_normal
 .asciz ""
 .balign 4, 0
 
 @ <I was moved!>
 /* 0804f8f8 */
-text_macro_unk3_enable
-text_macro_unk5_enable
+.text_large
+.text_gold
 .ascii "\n\n感動したー！"
-text_macro_unk3_disable
-text_macro_unk5_disable
+.text_small
+.text_normal
 .asciz ""
 .balign 4, 0
 
 @ <Good luck!>
 /* 0804f918 */
-text_macro_unk3_enable
-text_macro_unk5_enable
+.text_large
+.text_gold
 .ascii "\n\nグッド　ラック！"
-text_macro_unk3_disable
-text_macro_unk5_disable
+.text_small
+.text_normal
 .asciz ""
 .balign 4, 0
 
 @ <Go! Go!>
 /* 0804f93c */
-text_macro_unk3_enable
-text_macro_unk5_enable
+.text_large
+.text_gold
 .ascii "\n\nイケイケー！"
-text_macro_unk3_disable
-text_macro_unk5_disable
+.text_small
+.text_normal
 .asciz ""
 .balign 4, 0
 
 @ <Fight!>
 /* 0804f95c */
-text_macro_unk3_enable
-text_macro_unk5_enable
+.text_large
+.text_gold
 .ascii "\n\nファイトー！"
-text_macro_unk3_disable
-text_macro_unk5_disable
+.text_small
+.text_normal
 .asciz ""
 .balign 4, 0
 
 @ <Go for it!>
 /* 0804f97c */
-text_macro_unk3_enable
-text_macro_unk5_enable
+.text_large
+.text_gold
 .ascii "\n\nがんばれー！"
-text_macro_unk3_disable
-text_macro_unk5_disable
+.text_small
+.text_normal
 .asciz ""
 .balign 4, 0
 
@@ -1134,11 +1134,13 @@ glabel D_0805071c
 .balign 4, 0
 
 glabel D_08050728
-.asciz "\x05\x31\x01\x35"
+.text_gold
+.asciz ""
 .balign 4, 0
 
 glabel D_08050730
-.asciz "\x05\x34\x01\x38で\n"
+.text_normal
+.asciz "で\n"
 .balign 4, 0
 
 @ I heard you just got a Perfect!?
@@ -1162,7 +1164,8 @@ glabel D_08050788
 .balign 4, 0
 
 glabel D_08050794
-.asciz "\x05\x34\x01\x38に\n"
+.text_normal
+.asciz "に\n"
 .balign 4, 0
 
 @ you trouble earning that medal?
@@ -1177,7 +1180,8 @@ glabel D_080507b8
 
 @ was doing a perfect campaign.
 glabel D_080507d8
-.asciz "\x05\x34\x01\x38　ばかり\n"
+.text_normal
+.asciz "　ばかり\n"
 .balign 4, 0
 
 @ Weren't you playing it just now?
@@ -1199,7 +1203,8 @@ glabel D_08050828
 @ is going
 @ to be having a perfect campaign.
 glabel D_0805083c
-.asciz "\x05\x34\x01\x38で、\nパーフェクトキャンペーンを\nするそうですヨ。"
+.text_normal
+.asciz "で、\nパーフェクトキャンペーンを\nするそうですヨ。"
 .balign 4, 0
 
 @ Please keep on working hard.
@@ -1214,12 +1219,22 @@ glabel D_08050874
 @ [Please skip it.]
 @ [No, thank you.]
 glabel D_080508b0
-.asciz "う～ん、もし　よければ　なんだけどね、\n\x05\x31\x01\x35進めるようにしておく\x05\x34\x01\x38けど…？\n\n　　　　　　　　「おねがいします」\n　　　　　　　　「けっこうです」"
+.ascii "う～ん、もし　よければ　なんだけどね、\n"
+.text_gold
+.ascii "進めるようにしておく"
+.text_normal
+.asciz "けど…？\n\n　　　　　　　　「おねがいします」\n　　　　　　　　「けっこうです」"
 .balign 4, 0
 
 @ <Leave it to me!>
 glabel D_08050944
-.asciz "\n\n\x03\x32\x01\x6c\x05\x31\x01\x35まかせとき！\x03\x30\x01\x73\x05\x34\x01\x38"
+.ascii "\n\n"
+.text_large
+.text_gold
+.ascii "まかせとき！"
+.text_small
+.text_normal
+.asciz ""
 .balign 4, 0
 
 @ Oh, is that so?
@@ -1247,7 +1262,10 @@ glabel D_080509ec
 @         [That's right.]
 @         [Not right now.]
 glabel D_08050a10
-.asciz "\x05\x31\x01\x35パーフェクト　キャンペーン\x05\x34\x01\x38　に　そなえて　れんしゅうですか？\n\n　　　　　　　　「そうなんです」\n　　　　　　　　「ちがいますヨ」"
+.text_gold
+.ascii "パーフェクト　キャンペーン"
+.text_normal
+.asciz "　に　そなえて　れんしゅうですか？\n\n　　　　　　　　「そうなんです」\n　　　　　　　　「ちがいますヨ」"
 .balign 4, 0
 
 @ Just try your best and
@@ -1265,7 +1283,12 @@ glabel D_08050acc
 
 @ Crazy awesome!!
 glabel D_08050b14
-.asciz "\x03\x32\x01\x6C\x05\x31\x01\x35\n\nめちゃすごーい!!\x03\x30\x01\x73\x05\x34\x01\x38"
+.text_large
+.text_gold
+.ascii "\n\nめちゃすごーい!!"
+.text_small
+.text_normal
+.asciz ""
 .balign 4, 0
 
 @ Gameplay Logs

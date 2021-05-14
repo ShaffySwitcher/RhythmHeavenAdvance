@@ -8,34 +8,54 @@
 	\value:
 .endm
 
-.macro text01 value
-    .byte 0x01, \value
+.macro text_size_large
+    .byte 0x03, 0x32
 .endm
 
-.macro text03 value
-    .byte 0x03, \value
+.macro text_size_small
+    .byte 0x03, 0x30
 .endm
 
-.macro text05 value
-    .byte 0x05, \value
+.macro text_linesize_large
+    .byte 0x01, 0x6C
+.endm
+    
+.macro text_linesize_small
+    .byte 0x01, 0x73
 .endm
 
-.macro text_macro_unk3_enable
-    text03 0x32
-    text01 0x6c
+.macro text_style_gold
+    .byte 0x05, 0x31
+.endm
+    
+.macro text_style_normal
+    .byte 0x05, 0x34
+.endm
+    
+.macro text_linestyle_5
+    .byte 0x01, 0x35
+.endm
+    
+.macro text_linestyle_8
+    .byte 0x01, 0x38
 .endm
 
-.macro text_macro_unk5_enable
-    text05 0x31
-    text01 0x35
+.macro .text_large
+    text_size_large
+    text_linesize_large
 .endm
 
-.macro text_macro_unk3_disable
-    text03 0x30
-    text01 0x73
+.macro .text_gold
+    text_style_gold
+    text_linestyle_5
 .endm
 
-.macro text_macro_unk5_disable
-    text05 0x34
-    text01 0x38
+.macro .text_small
+    text_size_small
+    text_linesize_small
+.endm
+
+.macro .text_normal
+    text_style_normal
+    text_linestyle_8
 .endm
