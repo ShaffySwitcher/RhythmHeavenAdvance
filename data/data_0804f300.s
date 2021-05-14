@@ -45,11 +45,12 @@ glabel D_0804f380
 .asciz "－"
 .balign 4, 0
 
-@ News from the Rhythm League
+@ Notification from the Rhythm Reference Room
 glabel D_0804f384
 .asciz "　リズム資料室からお知らせ"
 .balign 4, 0
 
+@ You have recieved [_______]
 glabel D_0804f3a0
 .asciz "　　　　　　　　　　　　　　　　　　　　を入荷しました。"
 .balign 4, 0
@@ -67,348 +68,257 @@ glabel D_0804f3e4
 .asciz "\n\nでは　また。\n\n"
 .balign 4, 0
 
-@ I'm a little busy right now,
-@ so please come back later.
+@ I'm still unpacking boxes, so
+@ please come back in a bit.
 /* 0804f400 */
 .asciz "\nいま　ちょっと　しこみ中なので\nまた　あとで　きてくださいね。\n\n"
 .balign 4, 0
 
-@ If there's anything I can do,
-@ <I'll help you>.
+@ I'm pretty good at Rhythm Games.
+@ If you need help, <come to the Cafe>.
 /* 0804f444 */
 .ascii "\nわたしに　できることが　あれば、\n"
-text05 0x31
-text01 0x35
+text_macro_unk5_enable
 .ascii "ちからに　なりますよ"
-text05 0x34
-text01 0x38
+text_macro_unk5_disable
 .asciz "。\n\n"
 .balign 4, 0
 
-@ This is what we call the Cafe.
-@ Please come here <when you can't play the game well>
-@ or when you get tired.
+@ This is the Cafe.
+@ <When you can't finish a game>,
+@ or when you just want a break, please come here and relax.
 /* 0804f488 */
 .ascii "\nここは　いわゆる　キッサ店です。\nゲームが　"
-text05 0x31
-text01 0x35
+text_macro_unk5_enable
 .ascii "うまくできないとき"
-text05 0x34
-text01 0x38
+text_macro_unk5_disable
 .asciz "や\nつかれたときにでも　おいで下さい。"
 .balign 4, 0
 
-@ Welcome.
-@ This is your first time here, isn't it?
+@ Welcome. This is your
+@ first time here, isn't it?
 /* 0804f4f4 */
 .asciz "\nいらっしゃいませ。\nこちらに　来たのは　はじめてですね？\n\n"
 .balign 4, 0
 
-@ Please come back later.
+@ Come back in a while!
 /* 0804f530 */
 .asciz "\n\nしばらく　してから　きてね～。\n\n"
 .balign 4, 0
 
-@ Don't get too carried away
-@ and have fun...
+@ Don't let it frustrate you.
+@ You're supposed to enjoy yourself.
 /* 0804f554 */
 .asciz "\nあまり　ムキに　ならずに\n楽しんで下さいね…\n\n"
 .balign 4, 0
 
-@ At the same time,
-@ I think it makes it more fun to get into the music.
+@ Just keep moving to the music,
+@ and you'll have fun doing it, too.
 /* 0804f584 */
 .asciz "\nそれと同時に　音楽に　ノるのが\n楽しくなるとも思うんです。\n\n"
 .balign 4, 0
 
-@ I think you'll get the hang of it
-@ after a few tries.
+@ You know, after a few tries
+@ I think you'll manage that superb.
 /* 0804f5c4 */
 .asciz "\nなんどか　やるうちに　コツが\nつかめると　思いますよ。\n\n"
 .balign 4, 0
 
-@ Good luck with your Perfect.
-@ I'll see you later.
+@ Please try your best for those Perfects.
+@ See you soon!
 /* 0804f600 */
 .asciz "\nパーフェクト　がんばってくださいね。\nではまた。\n\n"
 .balign 4, 0
 
-@ I'm sorry for speaking so loudly.
-@ I was kind of happy...
+@ Sorry for yelling. I just got
+@ a little too excited there.
 /* 0804f634 */
 .asciz "\n大きい声をだして　すみません。\nなんだか　うれしかったものですから…\n\n"
 .balign 4, 0
 
-@ I hope you enjoy the game.
-@ I'll see you later.
+@ Please enjoy the
+@ game. See you!
 /* 0804f67c */
 .asciz "\nゲーム　楽しんでくださいね。\nではまた。\n\n"
 .balign 4, 0
 
-@ I see.
-@ I'm sorry I told you
-@ about the rumors.
+@ Was he the one telling gossip? Or did he just hear it?
+@ Is that right? Loose lips can sink
+@ friendships... please forgive me.
 /* 0804f6a8 */
 .asciz "\nそうですか。\nウワサ話なんて　してしまい\nしつれいしました。"
 .balign 4, 0
 
-@ You must be tired, right?
-@ Please get some rest.
-@ I'll see you later.
+@ Had enough, I suppose?
+@ Go get some rest.
+@ I'll be waiting.
 /* 0804f6e4 */
 .asciz "\nおつかれでしょう？\n少し　休んでくださいネ。\nでは　また。"
 .balign 4, 0
 
-@ No, no, no,
-@ you completed the game?
-@ You've done it~!
+@ Wow. It looks like you've
+@ mastered the game. Not bad.
 /* 0804f720 */
 .asciz "\nいやいや、しかし　なんと　まぁ\nコンプリートですか。\nやりますな～。"
 .balign 4, 0
 
-@ Oh yeah,
-@ to celebrate, I've added a few songs from the studio
-@ albeit in a small way.
+@ Well,
+@ in celebration I've added
+@ more songs to the studio.
 /* 0804f764 */
 .asciz "\nそうそう、\nお祝いに　ささやかでは　ありますが\nスタジオの曲をふやしておきました。\n"
 .balign 4, 0
 
-@ I'm so happy,
-@ I'm in tears...
+@ Oh, I'm so happy I think
+@ I might just start to cry.
 /* 0804f7b8 */
 .asciz "\nなんだか　私も、すっごく\nうれしくって　ウルウルです…\n\n"
 .balign 4, 0
 
-@ You must have a pretty
-@ good sense of rhythm if
-@ you've played that much!
+@ You must have excellent
+@ rhythm sense to have
+@ gotten this far.
 /* 0804f7f4 */
 .asciz "\nもう、そこまで　やりこんだら\nリズム感　かなり　良くなって\nいるでしょうネ！"
 .balign 4, 0
 
+@ <Unbelievable!!>
 /* 0804f840 */
-/* 0804f840 */ .word 0x6c013203
-/* 0804f844 */ .word 0x35013105
-/* 0804f848 */ .word 0x41830a0a
-/* 0804f84c */ .word 0x72839383
-/* 0804f850 */ .word 0x5b818a83
-/* 0804f854 */ .word 0x7b836f83
-/* 0804f858 */ .word 0x21215b81
-/* 0804f85c */ .word 0x73013003
-/* 0804f860 */ .word 0x38013405
-/* 0804f864 */ .word 0x00000000
+text_macro_unk3_enable
+text_macro_unk5_enable
+.ascii "\n\nアンビリーバボー!!"
+text_macro_unk3_disable
+text_macro_unk5_disable
+.asciz ""
+.balign 4, 0
 
+@ <Good job!!>
 /* 0804f868 */
-/* 0804f868 */ .word 0x6c013203
-/* 0804f86c */ .word 0x35013105
-/* 0804f870 */ .word 0x4f830a0a
-/* 0804f874 */ .word 0x68836283
-/* 0804f878 */ .word 0x57834081
-/* 0804f87c */ .word 0x75838783
-/* 0804f880 */ .word 0x30032121
-/* 0804f884 */ .word 0x34057301
-/* 0804f888 */ .word 0x00003801
+text_macro_unk3_enable
+text_macro_unk5_enable
+.ascii "\n\nグッド　ジョブ!!"
+text_macro_unk3_disable
+text_macro_unk5_disable
+.asciz ""
+.balign 4, 0
 
+@ <Congratulations!!>
 /* 0804f88c */
-/* 0804f88c */ .word 0x6c013203
-/* 0804f890 */ .word 0x35013105
-/* 0804f894 */ .word 0xa8820a0a
-/* 0804f898 */ .word 0xc582df82
-/* 0804f89c */ .word 0x5b81c682
-/* 0804f8a0 */ .word 0x30032121
-/* 0804f8a4 */ .word 0x34057301
-/* 0804f8a8 */ .word 0x00003801
+text_macro_unk3_enable
+text_macro_unk5_enable
+.ascii "\n\nおめでとー!!"
+text_macro_unk3_disable
+text_macro_unk5_disable
+.asciz ""
+.balign 4, 0
 
+@ <You're good!!>
 /* 0804f8ac */
-/* 0804f8ac */ .word 0x6c013203
-/* 0804f8b0 */ .word 0x35013105
-/* 0804f8b4 */ .word 0xe2820a0a
-/* 0804f8b8 */ .word 0xb682e982
-/* 0804f8bc */ .word 0xc882e182
-/* 0804f8c0 */ .word 0xa2825b81
-/* 0804f8c4 */ .word 0x30032121
-/* 0804f8c8 */ .word 0x34057301
-/* 0804f8cc */ .word 0x00003801
+text_macro_unk3_enable
+text_macro_unk5_enable
+.ascii "\n\nやるじゃなーい!!"
+text_macro_unk3_disable
+text_macro_unk5_disable
+.asciz ""
+.balign 4, 0
 
+@ <Not too bad!!>
 /* 0804f8d0 */
-/* 0804f8d0 */ .word 0x6c013203
-/* 0804f8d4 */ .word 0x35013105
-/* 0804f8d8 */ .word 0xb7820a0a
-/* 0804f8dc */ .word 0xa282b282
-/* 0804f8e0 */ .word 0xe182b682
-/* 0804f8e4 */ .word 0x5b81c882
-/* 0804f8e8 */ .word 0x2121a282
-/* 0804f8ec */ .word 0x73013003
-/* 0804f8f0 */ .word 0x38013405
-/* 0804f8f4 */ .word 0x00000000
+text_macro_unk3_enable
+text_macro_unk5_enable
+.ascii "\n\nすごいじゃなーい!!"
+text_macro_unk3_disable
+text_macro_unk5_disable
+.asciz ""
+.balign 4, 0
 
+@ <I was moved!>
 /* 0804f8f8 */
-/* 0804f8f8 */ .word 0x6c013203
-/* 0804f8fc */ .word 0x35013105
-/* 0804f900 */ .word 0xb48a0a0a
-/* 0804f904 */ .word 0xb582ae93
-/* 0804f908 */ .word 0x5b81bd82
-/* 0804f90c */ .word 0x30034981
-/* 0804f910 */ .word 0x34057301
-/* 0804f914 */ .word 0x00003801
+text_macro_unk3_enable
+text_macro_unk5_enable
+.ascii "\n\n感動したー！"
+text_macro_unk3_disable
+text_macro_unk5_disable
+.asciz ""
+.balign 4, 0
 
+@ <Good luck!>
 /* 0804f918 */
-/* 0804f918 */ .word 0x6c013203
-/* 0804f91c */ .word 0x35013105
-/* 0804f920 */ .word 0x4f830a0a
-/* 0804f924 */ .word 0x68836283
-/* 0804f928 */ .word 0x89834081
-/* 0804f92c */ .word 0x4e836283
-/* 0804f930 */ .word 0x30034981
-/* 0804f934 */ .word 0x34057301
-/* 0804f938 */ .word 0x00003801
+text_macro_unk3_enable
+text_macro_unk5_enable
+.ascii "\n\nグッド　ラック！"
+text_macro_unk3_disable
+text_macro_unk5_disable
+.asciz ""
+.balign 4, 0
 
+@ <Go! Go!>
 /* 0804f93c */
-/* 0804f93c */ .word 0x6c013203
-/* 0804f940 */ .word 0x35013105
-/* 0804f944 */ .word 0x43830a0a
-/* 0804f948 */ .word 0x43835083
-/* 0804f94c */ .word 0x5b815083
-/* 0804f950 */ .word 0x30034981
-/* 0804f954 */ .word 0x34057301
-/* 0804f958 */ .word 0x00003801
+text_macro_unk3_enable
+text_macro_unk5_enable
+.ascii "\n\nイケイケー！"
+text_macro_unk3_disable
+text_macro_unk5_disable
+.asciz ""
+.balign 4, 0
 
+@ <Fight!>
 /* 0804f95c */
-/* 0804f95c */ .word 0x6c013203
-/* 0804f960 */ .word 0x35013105
-/* 0804f964 */ .word 0x74830a0a
-/* 0804f968 */ .word 0x43834083
-/* 0804f96c */ .word 0x5b816783
-/* 0804f970 */ .word 0x30034981
-/* 0804f974 */ .word 0x34057301
-/* 0804f978 */ .word 0x00003801
+text_macro_unk3_enable
+text_macro_unk5_enable
+.ascii "\n\nファイトー！"
+text_macro_unk3_disable
+text_macro_unk5_disable
+.asciz ""
+.balign 4, 0
 
+@ <Go for it!>
 /* 0804f97c */
-/* 0804f97c */ .word 0x6c013203
-/* 0804f980 */ .word 0x35013105
-/* 0804f984 */ .word 0xaa820a0a
-/* 0804f988 */ .word 0xce82f182
-/* 0804f98c */ .word 0x5b81ea82
-/* 0804f990 */ .word 0x30034981
-/* 0804f994 */ .word 0x34057301
-/* 0804f998 */ .word 0x00003801
+text_macro_unk3_enable
+text_macro_unk5_enable
+.ascii "\n\nがんばれー！"
+text_macro_unk3_disable
+text_macro_unk5_disable
+.asciz ""
+.balign 4, 0
 
+@ Maybe I should try a little harder
+@ to get good at Rhythm Heaven...
 /* 0804f99c */
-/* 0804f99c */ .word 0x848e0a0a
-/* 0804f9a0 */ .word 0x4081e082
-/* 0804f9a4 */ .word 0x5b815183
-/* 0804f9a8 */ .word 0x40818083
-/* 0804f9ac */ .word 0xc482b582
-/* 0804f9b0 */ .word 0xe682dd82
-/* 0804f9b4 */ .word 0xa982a482
-/* 0804f9b8 */ .word 0x6381c882
-/* 0804f9bc */ .word 0x00000a0a
+.asciz "\n\n私も　ゲーム　してみようかな…\n\n"
+.balign 4, 0
 
+@ But you'll be a bit happier once you
+@ find your Rhythm Sense, I'm sure.
 /* 0804f9c0 */
-/* 0804f9c0 */ .word 0x82c5820a
-/* 0804f9c4 */ .word 0x834181e0
-/* 0804f9c8 */ .word 0x8359838a
-/* 0804f9cc */ .word 0x82b48a80
-/* 0804f9d0 */ .word 0x824081aa
-/* 0804f9d4 */ .word 0x82ad82e6
-/* 0804f9d8 */ .word 0x82e982c8
-/* 0804f9dc */ .word 0x824081c6
-/* 0804f9e0 */ .word 0x82c182ab
-/* 0804f9e4 */ .word 0x824081c6
-/* 0804f9e8 */ .word 0x82e582bf
-/* 0804f9ec */ .word 0x81c682c1
-/* 0804f9f0 */ .word 0x836e8340
-/* 0804f9f4 */ .word 0x81738362
-/* 0804f9f8 */ .word 0x81c9825b
-/* 0804f9fc */ .word 0x82c88240
-/* 0804fa00 */ .word 0x82f182e9
-/* 0804fa04 */ .word 0x82b582c5
-/* 0804fa08 */ .word 0x82a482e5
-/* 0804fa0c */ .word 0x004281cb
+.asciz "\nでも、リズム感が　よくなると　きっと　ちょっと　ハッピーに　なるんでしょうね。"
+.balign 4, 0
 
+@ Well, not that I'm very
+@ aware of it myself.
 /* 0804fa10 */
-/* 0804fa10 */ .word 0x81dc820a
-/* 0804fa14 */ .word 0x82848e41
-/* 0804fa18 */ .word 0x82f182c8
-/* 0804fa1c */ .word 0x81cd82a9
-/* 0804fa20 */ .word 0x82a08240
-/* 0804fa24 */ .word 0x82dc82f1
-/* 0804fa28 */ .word 0xa2820ae8
-/* 0804fa2c */ .word 0xab82b582
-/* 0804fa30 */ .word 0xe982b782
-/* 0804fa34 */ .word 0xc682b182
-/* 0804fa38 */ .word 0x4081e082
-/* 0804fa3c */ .word 0xa282c882
-/* 0804fa40 */ .word 0xc582f182
-/* 0804fa44 */ .word 0xaa82b782
-/* 0804fa48 */ .word 0x4281cb82
-/* 0804fa4c */ .word 0x00000a0a
+.asciz "\nま、私なんかは　あんまり\nいしきすることも　ないんですがね。\n\n"
+.balign 4, 0
 
+@ By the way, I wonder how
+@ Rhythm Sense is for humans?
 /* 0804fa50 */
-/* 0804fa50 */ .word 0x82bb820a
-/* 0804fa54 */ .word 0x82cd82ea
-/* 0804fa58 */ .word 0x82a482bb
-/* 0804fa5c */ .word 0x834181c6
-/* 0804fa60 */ .word 0x8359838a
-/* 0804fa64 */ .word 0x82b48a80
-/* 0804fa68 */ .word 0x81c482c1
-/* 0804fa6c */ .word 0x8a6c9040
-/* 0804fa70 */ .word 0x82c982d4
-/* 0804fa74 */ .word 0x82c182c6
-/* 0804fa78 */ .word 0x824081c4
-/* 0804fa7c */ .word 0x82a482c7
-/* 0804fa80 */ .word 0x82a482a2
-/* 0804fa84 */ .word 0x82cc82e0
-/* 0804fa88 */ .word 0x82f182c8
-/* 0804fa8c */ .word 0x82b582c5
-/* 0804fa90 */ .word 0x82a482e5
-/* 0804fa94 */ .word 0x81a582cb
-/* 0804fa98 */ .word 0x000a0a42
+.asciz "\nそれはそうと、リズム感って　人間にとって　どういうものなんでしょうねぇ。\n\n"
+.balign 4, 0
 
+@ Did you know that already? Sorry
+@ if it seems like I'm talking down
+@ to you. Anyways, see you again.
 /* 0804fa9c */
-/* 0804fa9c */ .word 0x82dc820a
-/* 0804faa0 */ .word 0x8241819f
-/* 0804faa4 */ .word 0x82a482bb
-/* 0804faa8 */ .word 0x83a482a2
-/* 0804faac */ .word 0x81938382
-/* 0804fab0 */ .word 0x82e78240
-/* 0804fab4 */ .word 0x82a282b5
-/* 0804fab8 */ .word 0x81b782c5
-/* 0804fabc */ .word 0x65830a42
-/* 0804fac0 */ .word 0x67834c83
-/* 0804fac4 */ .word 0xc5825b81
-/* 0804fac8 */ .word 0xb2824081
-/* 0804facc */ .word 0xf182df82
-/* 0804fad0 */ .word 0xb382c882
-/* 0804fad4 */ .word 0x6c83a282
-/* 0804fad8 */ .word 0x820a4281
-/* 0804fadc */ .word 0x81cd82c5
-/* 0804fae0 */ .word 0x82dc8240
-/* 0804fae4 */ .word 0x004281bd
+.asciz "\nまぁ、そういうモン　らしいです。\nテキトーで　ごめんなさいネ。\nでは　また。"
+.balign 4, 0
 
+@ Halfway between one clap and the next
+@ (the "onbeats") is called the "offbeat".
+@ At least, so I understand.
 /* 0804fae8 */
-/* 0804fae8 */ .word 0x82bb820a
-/* 0804faec */ .word 0x8e4081cc
-/* 0804faf0 */ .word 0x82d182e8
-/* 0804faf4 */ .word 0x82a482e5
-/* 0804faf8 */ .word 0x8ec682b5
-/* 0804fafc */ .word 0x82d182e8
-/* 0804fb00 */ .word 0x82a482e5
-/* 0804fb04 */ .word 0x0acc82b5
-/* 0804fb08 */ .word 0xe582bf82
-/* 0804fb0c */ .word 0xc782a482
-/* 0804fb10 */ .word 0xdc824081
-/* 0804fb14 */ .word 0x8692f182
-/* 0804fb18 */ .word 0x5e83cc82
-/* 0804fb1c */ .word 0x7e834383
-/* 0804fb20 */ .word 0x4f839383
-/* 0804fb24 */ .word 0x810aaa82
-/* 0804fb28 */ .word 0x83458375
-/* 0804fb2c */ .word 0x82768189
-/* 0804fb30 */ .word 0x82f182c8
-/* 0804fb34 */ .word 0x82bb82be
-/* 0804fb38 */ .word 0x82c582a4
-/* 0804fb3c */ .word 0x004281b7
+.asciz "\nその　手びょうしと手びょうしの\nちょうど　まん中のタイミングが\n「ウラ」なんだそうです。"
+.balign 4, 0
 
 /* 0804fb40 */
 /* 0804fb40 */ .word 0x82bd820a
@@ -1187,26 +1097,26 @@ text01 0x38
 /* 08050624 */ .word 0x82b782dc
 /* 08050628 */ .word 0x004881a9
 
-@ Oh, here it comes!
-@ I've been waiting for you!
+@ Oh! You're here, you're here!
+@ I've been waiting, you know!!
 glabel D_0805062c
 .asciz "\nお、きたきた！\n待ってたヨ～！！\n\n"
 .balign 4, 0
 
-@ Are you playing the game?
-@ Good luck!
+@ Are you making progress?
+@ Please do your best!
 glabel D_08050650
 .asciz "\nゲーム　すすんでますか？\nがんばって　くださいね～。\n\n"
 .balign 4, 0
 
-@ I'm sure you're tired, aren't you?
-@ It's better to take a break from time to time.
+@ Aren't you getting tired?
+@ Don't forget to rest now and then.
 glabel D_08050688
 .asciz "\nだいぶ　つかれたのでは　ないですか？\nときどき　休んだほうが　よいですよ。\n\n"
 .balign 4, 0
 
-@ You're quite addicted.
-@ Please take some time off.
+@ You've been at this a while,
+@ haven't you? Please rest a little.
 glabel D_080506d8
 .asciz "\nかなり　はまってますねぇ。\nすこしは　休んでくださいね。\n\n"
 .balign 4, 0
@@ -1218,8 +1128,7 @@ glabel D_08050714
 glabel D_08050718
 .asciz "\n"
 .balign 4, 0
-
-@ Yes, yes, 
+ 
 glabel D_0805071c
 .asciz "そうそう、"
 .balign 4, 0
@@ -1232,12 +1141,12 @@ glabel D_08050730
 .asciz "\x05\x34\x01\x38で\n"
 .balign 4, 0
 
-@ I heard you got a perfect!
+@ I heard you just got a Perfect!?
 glabel D_08050738
 .asciz "パーフェクト　だしたんだって！？"
 .balign 4, 0
 
-@ Oh, by the way,
+@ You're still on ______
 glabel D_0805075c
 .asciz "そういえば、"
 .balign 4, 0
@@ -1247,7 +1156,7 @@ glabel D_0805076c
 .asciz "行きづまってませんか？\n\n"
 .balign 4, 0
 
-@ Hmmm...
+@ Hmmm... is _____
 glabel D_08050788
 .asciz "う～む…　"
 .balign 4, 0
@@ -1256,106 +1165,110 @@ glabel D_08050794
 .asciz "\x05\x34\x01\x38に\n"
 .balign 4, 0
 
-@ I see you're having trouble.
+@ you trouble earning that medal?
 glabel D_0805079c
 .asciz "てこずってるんですねぇ。\n\n"
 .balign 4, 0
 
+@ Rumor has it
 glabel D_080507b8
 .asciz "ウワサを　きいたんですけど、\n"
 .balign 4, 0
 
+@ was doing a perfect campaign.
 glabel D_080507d8
 .asciz "\x05\x34\x01\x38　ばかり\n"
 .balign 4, 0
 
-@ It looks like you're doing it.
+@ Weren't you playing it just now?
 glabel D_080507e8
 .asciz "してるみたいですね。"
 .balign 4, 0
 
-@ Oh, I just remembered something!
+@ Ah! Wait, I remember!
 glabel D_08050800
 .asciz "\n\nあ、　ちょっと　思い出しました！\n\n"
 .balign 4, 0
 
-@ Yes, yes,
-@ soon
+@ Hey, here's a tip!
+@ Soon _____
 glabel D_08050828
 .asciz "そうそう、\nもうすぐ"
 .balign 4, 0
 
-@ So,
-@ I heard that there is
-@ going to be a Perfect Campaign.
+@ is going
+@ to be having a perfect campaign.
 glabel D_0805083c
 .asciz "\x05\x34\x01\x38で、\nパーフェクトキャンペーンを\nするそうですヨ。"
 .balign 4, 0
 
-@ Keep up the good work.
-@ I'm rooting for you~!
+@ Please keep on working hard.
+@ I'll be here rooting for you~!
 glabel D_08050874
 .asciz "\nこれからも　がんばってね。\nおうえん　してるからね～！\n\n"
 .balign 4, 0
 
-@ Hmmm, if you don't mind,
-@ I'll leave you to it...?
+@ If you like, I could let you
+@ <skip that game> if you want to...
 @
-@ 「Yes, please」
-@ 「No, thank you」
+@ [Please skip it.]
+@ [No, thank you.]
 glabel D_080508b0
 .asciz "う～ん、もし　よければ　なんだけどね、\n\x05\x31\x01\x35進めるようにしておく\x05\x34\x01\x38けど…？\n\n　　　　　　　　「おねがいします」\n　　　　　　　　「けっこうです」"
 .balign 4, 0
 
-@ I got this!
+@ <Leave it to me!>
 glabel D_08050944
 .asciz "\n\n\x03\x32\x01\x6c\x05\x31\x01\x35まかせとき！\x03\x30\x01\x73\x05\x34\x01\x38"
 .balign 4, 0
 
-
+@ Oh, is that so?
+@ You're determined to beat
+@ it with your own strength.
+@ Excellent!
 glabel D_08050964
 .asciz "そうですか。\nじぶんの　チカラで\nがんばるんですね。\nエライ！！"
 .balign 4, 0
 
-@ I wonder what the next game will be.
-@ I hope you do well~
-@ See you then.
+@ I hope the next game will go
+@ much better for you.
+@ Tell me about it next time.
 glabel D_080509a4
 .asciz "\n次のゲーム　どんなのでしょうね。\nうまくできると　いいね～。\nではまた。"
 .balign 4, 0
 
-@ So, good luck with that~
+@ Well then, please do your best!
 glabel D_080509ec
 .asciz "\n\nでは　がんばってくださいね～。\n\n"
 .balign 4, 0
 
-@ Are you prepared for the Perfect Campaign?
+@ Were you practicing for the <Perfect Campaign>?
 @
-@         「Yes」
-@         「No」
+@         [That's right.]
+@         [Not right now.]
 glabel D_08050a10
 .asciz "\x05\x31\x01\x35パーフェクト　キャンペーン\x05\x34\x01\x38　に　そなえて　れんしゅうですか？\n\n　　　　　　　　「そうなんです」\n　　　　　　　　「ちがいますヨ」"
 .balign 4, 0
 
-@ Please do your best to
-@ get a perfect score!
+@ Just try your best and
+@ go get that Perfect!
 glabel D_08050a98
 .asciz "\nがんばって　パーフェクト、\nとってくださいネ！\n\n"
 .balign 4, 0
 
-@ I've heard that
-@ you've finally completed 
+@ At long last...
+@ You have completed
 @ the Perfect Campaign!
 glabel D_08050acc
 .asciz "\nとうとう、\nパーフェクト　キャンペーンを\nコンプリートしたんだって！？"
 .balign 4, 0
 
-@ That's amazing!!
+@ Crazy awesome!!
 glabel D_08050b14
 .asciz "\x03\x32\x01\x6C\x05\x31\x01\x35\n\nめちゃすごーい!!\x03\x30\x01\x73\x05\x34\x01\x38"
 .balign 4, 0
 
-@ Gameplay History
+@ Gameplay Logs
 glabel D_08050b38
 .asciz "ゲームプレイ履歴"
 .balign 4, 0
@@ -1372,17 +1285,17 @@ glabel D_08050b58
 .asciz "---"
 .balign 4, 0
 
-@ Average points
+@ Average points: 
 glabel D_08050b5c
 .asciz "平均点 "
 .balign 4, 0
 
-@  (Maximum 1000 points)
+@  (Out of 1000 points)
 glabel D_08050b64
 .asciz " (1000点満点)"
 .balign 4, 0
 
-@ Number of times played
+@ Number of times played: 
 glabel D_08050b74
 .asciz "遊んだ回数 "
 .balign 4, 0
@@ -1392,26 +1305,32 @@ glabel D_08050b80
 .asciz "回"
 .balign 4, 0
 
+@ (First OK: 
 glabel D_08050b84
 .asciz "  ( 初合格: "
 .balign 4, 0
 
+@ not yet
 glabel D_08050b94
 .asciz "まだ"
 .balign 4, 0
 
+@ th time
 glabel D_08050b9c
 .asciz "回目"
 .balign 4, 0
 
+@ First Superb: 
 glabel D_08050ba4
 .asciz "  初大合格: "
 .balign 4, 0
 
+@ not yet )
 glabel D_08050bb4
 .asciz "まだ )"
 .balign 4, 0
 
+@ th time )
 glabel D_08050bbc
 .asciz "回目 )"
 .balign 4, 0
@@ -1437,10 +1356,12 @@ glabel D_08050bdc
 .asciz "ただいま「"
 .balign 4, 0
 
+@ Get a perfect on this
 glabel D_08050be8
 .asciz "」でパーフェクトを達成すると"
 .balign 4, 0
 
+@ game, and you'll recieve
 glabel D_08050c08
 .asciz "もれなく"
 .balign 4, 0
@@ -1453,10 +1374,12 @@ glabel D_08050c18
 .asciz "」"
 .balign 4, 0
 
+@ 's song
 glabel D_08050c1c
 .asciz "の曲"
 .balign 4, 0
 
+@ recieved as a present!!
 glabel D_08050c24
 .asciz "をプレゼント!!"
 .balign 4, 0
