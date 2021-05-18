@@ -234,6 +234,7 @@
 .set func_0802a9b4, 0x0802a9b4
 .set func_0802ab34, 0x0802ab34
 
+.set func_08049144, 0x08049144
 .set func_08049b70, 0x08049b70
 .set func_08049be4, 0x08049be4
 .set func_08049bfc, 0x08049bfc
@@ -350,9 +351,12 @@
 .set D_088f5bcc, 0x088f5bcc
 .set D_088f5bdc, 0x088f5bdc
 .set D_088fed8c, 0x088fed8c
+.set D_088fee0c, 0x088fee0c
+.set D_088ff04c, 0x088ff04c
 .set D_088ff2ac, 0x088ff2ac
 .set D_088ff2ec, 0x088ff2ec
 .set D_088ff44c, 0x088ff44c
+.set D_088fff4c, 0x088fff4c
 
 .set D_089000cc, 0x089000cc
 .set D_0890021c, 0x0890021c
@@ -654,17 +658,56 @@
 .set D_08aa445c, 0x08aa445c
 .set D_08aa4460, 0x08aa4460
 
+.set D_08c89a70, 0x08c89a70
+.set D_08c89ba4, 0x08c89ba4
+.set D_08c89cb0, 0x08c89cb0
+.set D_08c89dd4, 0x08c89dd4
+.set D_08c8ac68, 0x08c8ac68
 .set D_08c8ede0, 0x08c8ede0
 .set D_08c8ef24, 0x08c8ef24
 .set D_08c8f094, 0x08c8f094
 .set D_08c8f214, 0x08c8f214
+.set D_08c91cd0, 0x08c91cd0
+.set D_08c91e20, 0x08c91e20
+.set D_08c91f04, 0x08c91f04
+.set D_08c92084, 0x08c92084
+.set D_08c93cfc, 0x08c93cfc
+.set D_08c93e18, 0x08c93e18
+.set D_08c93f48, 0x08c93f48
+.set D_08c94064, 0x08c94064
+.set D_08c9582c, 0x08c9582c
+.set D_08c959ac, 0x08c959ac
+.set D_08c95b24, 0x08c95b24
+.set D_08c95c8c, 0x08c95c8c
 .set D_08c98078, 0x08c98078
 .set D_08c98188, 0x08c98188
 .set D_08c982d0, 0x08c982d0
 .set D_08c98448, 0x08c98448
 .set D_08c992d8, 0x08c992d8
+.set D_08c99420, 0x08c99420
+.set D_08c99580, 0x08c99580
 .set D_08c996f4, 0x08c996f4
+.set D_08c9a4d4, 0x08c9a4d4
+.set D_08c9a610, 0x08c9a610
+.set D_08c9a71c, 0x08c9a71c
+.set D_08c9a890, 0x08c9a890
+.set D_08c9f1e0, 0x08c9f1e0
+.set D_08c9f2a0, 0x08c9f2a0
+.set D_08c9f394, 0x08c9f394
+.set D_08c9f4e4, 0x08c9f4e4
 
+.set D_08cb28a4, 0x08cb28a4
+.set D_08cb2a08, 0x08cb2a08
+.set D_08cb2b54, 0x08cb2b54
+.set D_08cb2ccc, 0x08cb2ccc
+.set D_08cb38ac, 0x08cb38ac
+.set D_08cb39d0, 0x08cb39d0
+.set D_08cb3b10, 0x08cb3b10
+.set D_08cb3c48, 0x08cb3c48
+.set D_08cbcbd8, 0x08cbcbd8
+.set D_08cbce60, 0x08cbce60
+.set D_08cbcd28, 0x08cbcd28
+.set D_08cbcf98, 0x08cbcf98
 .set D_08cc4bcc, 0x08cc4bcc
 .set D_08cd29ac, 0x08cd29ac
 .set D_08cd2cec, 0x08cd2cec
