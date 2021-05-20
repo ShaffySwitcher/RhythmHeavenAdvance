@@ -1,3 +1,4 @@
+#include "global.h"
 #include "code_08003b28.h"
 
 asm(".include \"include/gba.inc\"");//Temporary

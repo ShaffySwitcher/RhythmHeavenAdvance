@@ -13,5 +13,6 @@ typedef int16_t  s16;
 typedef int32_t  s32;
 
 #include "gba/gba.h"
+#include "types.h"
 
 #endif

@@ -1,3 +1,4 @@
+#include "global.h"
 #include "code_08004714.h"
 
 asm(".include \"include/gba.inc\"");//Temporary
@@ -1494,7 +1495,22 @@ u8 *func_080081a8(u8 *arg1, u8 *arg2) {
 
 #include "asm/code_08004714/asm_08013b48.s"
 
-#include "asm/code_08004714/asm_08013b98.s"
+void func_08013b98(s32 arg1, s32 arg2) {
+    s16 temp;
+    s16 temp2;
+
+    D_030046a4->unk10 = arg1;
+    D_030046a4->unk11 = arg2;
+
+    func_0801332c(arg1,arg2,&temp,&temp2);
+
+    temp += 47; // x coordinate of top left of menu
+    temp2 += 68; // y coordinate of top left of menu
+
+    func_0804d5d4(D_03005380, D_030046a4->unkC,temp,temp2);
+    func_0804d5d4(D_03005380, D_030046a4->unkE,temp,temp2);
+    func_08013b48();
+}
 
 #include "asm/code_08004714/asm_08013c04.s"
 

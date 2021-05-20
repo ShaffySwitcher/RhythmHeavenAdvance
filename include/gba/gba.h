@@ -1,8 +1,6 @@
 #ifndef GUARD_GBA_H
 #define GUARD_GBA_H 0
 
-#include "include/undefined_syms.h"
-
 #define BIOSROMBase		0x00000000 // To 0x00004000 (16kb)
 #define ExternWorkRAMBase	0x02000000 // To 0x02040000 (256kb)
 #define InternWorkRAMBase	0x03000000 // To 0x03008000 (32kb)
