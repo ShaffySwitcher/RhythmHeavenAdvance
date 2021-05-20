@@ -11,7 +11,7 @@ glabel func_08005a40 \n\
 /* 08005a4a */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 08005a4c */ BEQ branch_08005a54 \n\
 /* 08005a4e */ LDR R0, [R4, 0xC] \n\
-/* 08005a50 */ BL func_0804eaf0 \n\
+/* 08005a50 */ BL _call_via_r1 \n\
  \n\
 branch_08005a54: \n\
 /* 08005a54 */ CMP R5, 0x0 @ Compare R5 and 0x0 \n\
@@ -20,7 +20,7 @@ branch_08005a54: \n\
 /* 08005a5a */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 08005a5c */ BEQ branch_08005a64 \n\
 /* 08005a5e */ LDR R0, [R4, 0x14] \n\
-/* 08005a60 */ BL func_0804eaf0 \n\
+/* 08005a60 */ BL _call_via_r1 \n\
  \n\
 branch_08005a64: \n\
 /* 08005a64 */ LDR R0, [R4, 0xC] \n\

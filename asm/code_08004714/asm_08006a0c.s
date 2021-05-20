@@ -50,7 +50,7 @@ glabel func_08006a0c \n\
 /* 08006a6a */ BEQ branch_08006a74 \n\
 /* 08006a6c */ LDR R1, [R6, 0x24] \n\
 /* 08006a6e */ ADDS R0, R6, 0x0 @ Set R0 to R6 + 0x0 \n\
-/* 08006a70 */ BL func_0804eaf4 \n\
+/* 08006a70 */ BL _call_via_r2 \n\
  \n\
 branch_08006a74: \n\
 /* 08006a74 */ LDRH R0, [R6, 0x1C] \n\

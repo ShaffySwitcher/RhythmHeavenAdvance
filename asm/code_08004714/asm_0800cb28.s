@@ -530,7 +530,7 @@ branch_0800d030: \n\
 /* 0800d034 */ B branch_0800d03c \n\
  \n\
 branch_0800d036: \n\
-/* 0800d036 */ BL func_0804eb0c \n\
+/* 0800d036 */ BL _call_via_r8 \n\
 /* 0800d03a */ ADDS R5, R0, 0x0 @ Set R5 to R0 + 0x0 \n\
  \n\
 branch_0800d03c: \n\
@@ -786,7 +786,7 @@ jump_0800d1ae: \n\
 /* 0800d1b2 */ LDR R4, =D_03005520 \n\
 /* 0800d1b4 */ ADDS R0, R0, R4 @ Set R0 to R0 + R4 \n\
 /* 0800d1b6 */ MOV R1, R8 @ Set R1 to R8 \n\
-/* 0800d1b8 */ BL func_0804eb04 \n\
+/* 0800d1b8 */ BL _call_via_r6 \n\
 /* 0800d1bc */ LDR R5, =0xfffffea0 \n\
 /* 0800d1be */ ADDS R1, R4, R5 @ Set R1 to R4 + R5 \n\
 /* 0800d1c0 */ STR R0, [R1, 0x24] \n\
@@ -795,12 +795,12 @@ jump_0800d1ae: \n\
 .ltorg \n\
 jump_0800d1d0: \n\
 /* 0800d1d0 */ MOV R0, R8 @ Set R0 to R8 \n\
-/* 0800d1d2 */ BL func_0804eb04 \n\
+/* 0800d1d2 */ BL _call_via_r6 \n\
 /* 0800d1d6 */ B branch_0800d1e0 \n\
 jump_0800d1d8: \n\
 /* 0800d1d8 */ MOV R0, R8 @ Set R0 to R8 \n\
 /* 0800d1da */ ADDS R1, R7, 0x0 @ Set R1 to R7 + 0x0 \n\
-/* 0800d1dc */ BL func_0804eb04 \n\
+/* 0800d1dc */ BL _call_via_r6 \n\
  \n\
 branch_0800d1e0: \n\
 /* 0800d1e0 */ LDR R1, =D_030053c0 \n\
@@ -1197,7 +1197,7 @@ branch_0800d48e: \n\
 .ltorg \n\
 \n\
 jump_0800d4b0: \n\
-/* 0800d4b0 */ BL func_0804eb04 \n\
+/* 0800d4b0 */ BL _call_via_r6 \n\
 /* 0800d4b4 */ LDR R2, =D_030053c0 \n\
 /* 0800d4b6 */ MOV R5, R8 @ Set R5 to R8 \n\
 /* 0800d4b8 */ LSRS R6, R5, 0x1B \n\

@@ -36,7 +36,7 @@ branch_08006fae: \n\
 /* 08006fbe */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 08006fc0 */ BEQ branch_08006fc8 \n\
 /* 08006fc2 */ LDR R0, =D_030046c0 \n\
-/* 08006fc4 */ BL func_0804eaf0 \n\
+/* 08006fc4 */ BL _call_via_r1 \n\
  \n\
 branch_08006fc8: \n\
 /* 08006fc8 */ BL func_0800724c \n\

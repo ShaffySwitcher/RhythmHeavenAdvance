@@ -20,7 +20,7 @@ glabel func_08002a6c \n\
 branch_08002a86: \n\
 /* 08002a86 */ LDR R1, [R4] \n\
 /* 08002a88 */ LDR R0, [R4, 0x4] \n\
-/* 08002a8a */ BL func_0804eaf0 \n\
+/* 08002a8a */ BL _call_via_r1 \n\
 /* 08002a8e */ ADDS R4, 0xC @ Add 0xC to R4 \n\
 /* 08002a90 */ LDR R0, [R4, 0x8] \n\
 /* 08002a92 */ CMP R0, R6 @ Check R0 - R6 \n\

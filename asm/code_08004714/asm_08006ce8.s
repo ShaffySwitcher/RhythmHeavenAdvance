@@ -31,7 +31,7 @@ glabel func_08006ce8 \n\
 /* 08006d1c */ BEQ branch_08006d26 \n\
 /* 08006d1e */ LDR R1, [R5, 0x2C] \n\
 /* 08006d20 */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\
-/* 08006d22 */ BL func_0804eaf4 \n\
+/* 08006d22 */ BL _call_via_r2 \n\
  \n\
 branch_08006d26: \n\
 /* 08006d26 */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\

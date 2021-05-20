@@ -57,7 +57,7 @@ branch_0800b980: \n\
 /* 0800b9d8 */ BEQ branch_0800b9e2 \n\
 /* 0800b9da */ LDR R1, [R0, 0xC] \n\
 /* 0800b9dc */ ADDS R0, R3, 0x0 @ Set R0 to R3 + 0x0 \n\
-/* 0800b9de */ BL func_0804eaf4 \n\
+/* 0800b9de */ BL _call_via_r2 \n\
  \n\
 branch_0800b9e2: \n\
 /* 0800b9e2 */ ADDS R5, 0x1 @ Add 0x1 to R5 \n\

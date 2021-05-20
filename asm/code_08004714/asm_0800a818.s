@@ -61,7 +61,7 @@ branch_0800a862: \n\
 /* 0800a880 */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 0800a882 */ BEQ branch_0800a88a \n\
 /* 0800a884 */ LDR R0, [R4, 0x40] \n\
-/* 0800a886 */ BL func_0804eaf0 \n\
+/* 0800a886 */ BL _call_via_r1 \n\
  \n\
 branch_0800a88a: \n\
 /* 0800a88a */ POP {R4-R6} \n\

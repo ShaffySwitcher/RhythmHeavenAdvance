@@ -46,13 +46,13 @@ branch_0800b4a0: \n\
 /* 0800b4a2 */ MOV R8, R2 @ Set R8 to R2 \n\
 /* 0800b4a4 */ LDR R1, [R5, 0x34] \n\
 /* 0800b4a6 */ ADDS R0, R7, 0x0 @ Set R0 to R7 + 0x0 \n\
-/* 0800b4a8 */ BL func_0804eaf0 \n\
+/* 0800b4a8 */ BL _call_via_r1 \n\
 /* 0800b4ac */ ADDS R6, R0, 0x0 @ Set R6 to R0 + 0x0 \n\
 /* 0800b4ae */ LDR R1, [R5, 0x38] \n\
 /* 0800b4b0 */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 0800b4b2 */ BEQ branch_0800b4c0 \n\
 /* 0800b4b4 */ ADDS R0, R7, 0x0 @ Set R0 to R7 + 0x0 \n\
-/* 0800b4b6 */ BL func_0804eaf0 \n\
+/* 0800b4b6 */ BL _call_via_r1 \n\
 /* 0800b4ba */ LSLS R0, R0, 0x10 \n\
 /* 0800b4bc */ ASRS R3, R0, 0x10 \n\
 /* 0800b4be */ B branch_0800b4c4 \n\

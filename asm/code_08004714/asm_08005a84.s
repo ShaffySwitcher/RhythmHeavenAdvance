@@ -31,7 +31,7 @@ branch_08005a94: \n\
  \n\
 branch_08005ab4: \n\
 /* 08005ab4 */ LDR R0, [R4, 0xC] \n\
-/* 08005ab6 */ BL func_0804eaf0 \n\
+/* 08005ab6 */ BL _call_via_r1 \n\
 /* 08005aba */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08005abc */ BEQ branch_08005ac6 \n\
 /* 08005abe */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\

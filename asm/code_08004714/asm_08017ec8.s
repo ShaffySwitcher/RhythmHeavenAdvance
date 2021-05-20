@@ -194,7 +194,7 @@ branch_08017ffa: \n\
 /* 08018016 */ LDR R1, [SP, 0x20] \n\
 /* 08018018 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 0801801a */ LSRS R1, R1, 0x10 \n\
-/* 0801801c */ BL func_0804eaf4 \n\
+/* 0801801c */ BL _call_via_r2 \n\
  \n\
 branch_08018020: \n\
 /* 08018020 */ LDR R0, [R4] \n\

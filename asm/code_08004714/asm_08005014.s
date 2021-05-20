@@ -64,7 +64,7 @@ branch_08005066: \n\
 /* 0800507c */ MOV R2, R9 @ Set R2 to R9 \n\
 /* 0800507e */ LDR R1, [R2] \n\
 /* 08005080 */ STR R3, [SP] \n\
-/* 08005082 */ BL func_0804eaf0 \n\
+/* 08005082 */ BL _call_via_r1 \n\
 /* 08005086 */ NEGS R0, R0 @ Set R0 to -R0 \n\
 /* 08005088 */ SUBS R0, 0xA @ Subtract 0xA from R0 \n\
 /* 0800508a */ STRB R0, [R4] \n\

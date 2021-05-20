@@ -64,7 +64,7 @@ branch_0800bd42: \n\
 /* 0800bd9e */ BEQ branch_0800bda8 \n\
 /* 0800bda0 */ LDR R1, [R7, 0x1C] \n\
 /* 0800bda2 */ ADDS R0, R3, 0x0 @ Set R0 to R3 + 0x0 \n\
-/* 0800bda4 */ BL func_0804eaf4 \n\
+/* 0800bda4 */ BL _call_via_r2 \n\
  \n\
 branch_0800bda8: \n\
 /* 0800bda8 */ LDR R0, =D_03005380 \n\

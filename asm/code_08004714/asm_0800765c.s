@@ -41,7 +41,7 @@ glabel func_0800765c \n\
 /* 080076a4 */ ADDS R1, R6, 0x0 @ Set R1 to R6 + 0x0 \n\
 /* 080076a6 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 080076a8 */ LDR R1, [R2] \n\
-/* 080076aa */ BL func_0804eaf0 \n\
+/* 080076aa */ BL _call_via_r1 \n\
 /* 080076ae */ LSLS R0, R0, 0x8 \n\
 /* 080076b0 */ STR R0, [R4, 0x10] \n\
 /* 080076b2 */ MOVS R1, 0xA @ Set R1 to 0xA \n\

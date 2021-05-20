@@ -21,7 +21,7 @@ glabel func_08006590 \n\
 /* 080065ae */ LDR R1, [R1] \n\
 /* 080065b0 */ LDR R3, [R2] \n\
 /* 080065b2 */ ADDS R2, R4, 0x0 @ Set R2 to R4 + 0x0 \n\
-/* 080065b4 */ BL func_0804eaf8 \n\
+/* 080065b4 */ BL _call_via_r3 \n\
 /* 080065b8 */ ADDS R3, R0, 0x0 @ Set R3 to R0 + 0x0 \n\
 /* 080065ba */ CMP R3, 0x0 @ Compare R3 and 0x0 \n\
 /* 080065bc */ BGE branch_080065d8 \n\

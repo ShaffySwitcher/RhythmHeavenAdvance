@@ -70,7 +70,7 @@ branch_0800a8da: \n\
 /* 0800a904 */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 0800a906 */ BEQ branch_0800a90e \n\
 /* 0800a908 */ LDR R0, [R4, 0x40] \n\
-/* 0800a90a */ BL func_0804eaf0 \n\
+/* 0800a90a */ BL _call_via_r1 \n\
  \n\
 branch_0800a90e: \n\
 /* 0800a90e */ POP {R4-R6} \n\

@@ -79,7 +79,7 @@ branch_08001ae6: \n\
 /* 08001af0 */ MOVS R3, 0x20 @ Set R3 to 0x20 \n\
 /* 08001af2 */ BL func_0800186c \n\
 /* 08001af6 */ ADD R0, SP, 0x4 \n\
-/* 08001af8 */ BL func_0804eb04 \n\
+/* 08001af8 */ BL _call_via_r6 \n\
 /* 08001afc */ B branch_08001b3c \n\
 \n\
 .ltorg \n\
@@ -110,7 +110,7 @@ branch_08001b04: \n\
 /* 08001b30 */ MOVS R3, 0x20 @ Set R3 to 0x20 \n\
 /* 08001b32 */ BL func_0800186c \n\
 /* 08001b36 */ ADD R0, SP, 0x4 \n\
-/* 08001b38 */ BL func_0804eb04 \n\
+/* 08001b38 */ BL _call_via_r6 \n\
  \n\
 branch_08001b3c: \n\
 /* 08001b3c */ ADD SP, 0x18 \n\

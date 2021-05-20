@@ -149,7 +149,7 @@ branch_08017ae6: \n\
 /* 08017af6 */ LDR R1, [R4, 0x64] \n\
 /* 08017af8 */ LDR R2, [R7, 0x14] \n\
 /* 08017afa */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
-/* 08017afc */ BL func_0804eaf8 \n\
+/* 08017afc */ BL _call_via_r3 \n\
  \n\
 branch_08017b00: \n\
 /* 08017b00 */ MOV R0, R8 @ Set R0 to R8 \n\

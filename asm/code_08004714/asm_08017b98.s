@@ -58,7 +58,7 @@ branch_08017bd4: \n\
 /* 08017bfc */ BEQ branch_08017c06 \n\
 /* 08017bfe */ LDR R1, [R4, 0x64] \n\
 /* 08017c00 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
-/* 08017c02 */ BL func_0804eaf4 \n\
+/* 08017c02 */ BL _call_via_r2 \n\
  \n\
 branch_08017c06: \n\
 /* 08017c06 */ LDR R0, =D_030046a4 \n\
@@ -99,7 +99,7 @@ branch_08017c3c: \n\
 /* 08017c4a */ ADDS R0, 0x2 @ Add 0x2 to R0 \n\
 /* 08017c4c */ LDRH R3, [R0] \n\
 /* 08017c4e */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
-/* 08017c50 */ BL func_0804eb00 \n\
+/* 08017c50 */ BL _call_via_r5 \n\
 /* 08017c54 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08017c56 */ BEQ branch_08017c62 \n\
 /* 08017c58 */ CMP R0, 0x1 @ Compare R0 and 0x1 \n\

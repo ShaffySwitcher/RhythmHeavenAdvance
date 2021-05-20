@@ -10,7 +10,7 @@ glabel func_080091a4 \n\
 /* 080091ac */ BEQ branch_080091b6 \n\
 /* 080091ae */ LDR R0, =D_03001100 \n\
 /* 080091b0 */ LDR R0, [R0] \n\
-/* 080091b2 */ BL func_0804eaf0 \n\
+/* 080091b2 */ BL _call_via_r1 \n\
  \n\
 branch_080091b6: \n\
 /* 080091b6 */ POP {R0} \n\

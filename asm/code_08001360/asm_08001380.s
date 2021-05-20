@@ -10,7 +10,7 @@ glabel func_08001380 \n\
 /* 0800138c */ LDR R0, [R0] \n\
 /* 0800138e */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08001390 */ BEQ branch_08001396 \n\
-/* 08001392 */ BL func_0804eaec \n\
+/* 08001392 */ BL _call_via_r0 \n\
  \n\
 branch_08001396: \n\
 /* 08001396 */ LDR R1, =D_03000098 \n\

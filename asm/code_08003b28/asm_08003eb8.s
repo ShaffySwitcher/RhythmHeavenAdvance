@@ -34,7 +34,7 @@ branch_08003ee2: \n\
 /* 08003ef0 */ LDR R4, [R7] \n\
 /* 08003ef2 */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\
 /* 08003ef4 */ ADDS R1, R6, 0x0 @ Set R1 to R6 + 0x0 \n\
-/* 08003ef6 */ BL func_0804eafc \n\
+/* 08003ef6 */ BL _call_via_r4 \n\
 /* 08003efa */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 08003efc */ LDR R1, =D_030053b0 \n\
 /* 08003efe */ LDRB R0, [R1] \n\
@@ -46,7 +46,7 @@ branch_08003ee2: \n\
 branch_08003f08: \n\
 /* 08003f08 */ LDR R1, [R6] \n\
 /* 08003f0a */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
-/* 08003f0c */ BL func_0804eaf0 \n\
+/* 08003f0c */ BL _call_via_r1 \n\
 /* 08003f10 */ ADDS R4, R4, R0 @ Set R4 to R4 + R0 \n\
 /* 08003f12 */ LDRB R0, [R5] \n\
 /* 08003f14 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\

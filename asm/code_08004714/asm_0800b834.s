@@ -137,7 +137,7 @@ branch_0800b930: \n\
 /* 0800b938 */ LDR R0, =D_03005520 \n\
 /* 0800b93a */ ADDS R0, R7, R0 @ Set R0 to R7 + R0 \n\
 /* 0800b93c */ LDR R1, [R1, 0x4] \n\
-/* 0800b93e */ BL func_0804eaf4 \n\
+/* 0800b93e */ BL _call_via_r2 \n\
  \n\
 branch_0800b942: \n\
 /* 0800b942 */ MOVS R0, 0x9C @ Set R0 to 0x9C \n\

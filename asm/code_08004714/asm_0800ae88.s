@@ -16,7 +16,7 @@ glabel func_0800ae88 \n\
 /* 0800ae9e */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 0800aea0 */ BEQ branch_0800aea8 \n\
 /* 0800aea2 */ LDR R0, [R4, 0x4C] \n\
-/* 0800aea4 */ BL func_0804eaf0 \n\
+/* 0800aea4 */ BL _call_via_r1 \n\
  \n\
 branch_0800aea8: \n\
 /* 0800aea8 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\

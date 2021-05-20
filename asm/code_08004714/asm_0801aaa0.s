@@ -195,7 +195,7 @@ branch_0801ac04: \n\
 /* 0801ac18 */ ADDS R0, R1, R3 @ Set R0 to R1 + R3 \n\
 /* 0801ac1a */ LDR R1, [R0] \n\
 /* 0801ac1c */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\
-/* 0801ac1e */ BL func_0804eaf4 \n\
+/* 0801ac1e */ BL _call_via_r2 \n\
  \n\
 branch_0801ac22: \n\
 /* 0801ac22 */ ADD SP, 0xC \n\

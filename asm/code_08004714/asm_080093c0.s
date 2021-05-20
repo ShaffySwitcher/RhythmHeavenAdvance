@@ -79,7 +79,7 @@ branch_08009432: \n\
 /* 08009432 */ LDR R2, [R7] \n\
 /* 08009434 */ ADDS R0, R3, 0x0 @ Set R0 to R3 + 0x0 \n\
 /* 08009436 */ MOV R1, R12 @ Set R1 to R12 \n\
-/* 08009438 */ BL func_0804eaf4 \n\
+/* 08009438 */ BL _call_via_r2 \n\
 /* 0800943c */ ADD SP, 0x50 \n\
 /* 0800943e */ POP {R4-R7} \n\
 /* 08009440 */ POP {R1} \n\

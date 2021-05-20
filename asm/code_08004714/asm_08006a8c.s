@@ -17,7 +17,7 @@ glabel func_08006a8c \n\
 /* 08006aa4 */ BEQ branch_08006aae \n\
 /* 08006aa6 */ LDR R1, [R4, 0x2C] \n\
 /* 08006aa8 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
-/* 08006aaa */ BL func_0804eaf4 \n\
+/* 08006aaa */ BL _call_via_r2 \n\
  \n\
 branch_08006aae: \n\
 /* 08006aae */ LDRH R1, [R4, 0x1C] \n\

@@ -15,7 +15,7 @@ glabel func_0800b698 \n\
 /* 0800b6aa */ LSLS R3, R3, 0x1 \n\
 /* 0800b6ac */ ADDS R0, R1, R3 @ Set R0 to R1 + R3 \n\
 /* 0800b6ae */ LDR R0, [R0] \n\
-/* 0800b6b0 */ BL func_0804eaf4 \n\
+/* 0800b6b0 */ BL _call_via_r2 \n\
  \n\
 branch_0800b6b4: \n\
 /* 0800b6b4 */ POP {R0} \n\

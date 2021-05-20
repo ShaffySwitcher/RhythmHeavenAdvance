@@ -9,7 +9,7 @@ glabel func_08017b44 \n\
 /* 08017b4a */ CMP R2, 0x0 @ Compare R2 and 0x0 \n\
 /* 08017b4c */ BEQ branch_08017b54 \n\
 /* 08017b4e */ LDR R1, [R4, 0x64] \n\
-/* 08017b50 */ BL func_0804eaf4 \n\
+/* 08017b50 */ BL _call_via_r2 \n\
  \n\
 branch_08017b54: \n\
 /* 08017b54 */ LDR R0, [R4, 0x64] \n\

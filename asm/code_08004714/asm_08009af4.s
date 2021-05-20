@@ -81,7 +81,7 @@ jump_08009b90: \n\
 /* 08009b98 */ LDR R0, [SP, 0x4] \n\
 /* 08009b9a */ LDRB R0, [R0, 0x1] \n\
 /* 08009b9c */ ADDS R1, R7, 0x0 @ Set R1 to R7 + 0x0 \n\
-/* 08009b9e */ BL func_0804eaf4 \n\
+/* 08009b9e */ BL _call_via_r2 \n\
  \n\
 branch_08009ba2: \n\
 /* 08009ba2 */ LDR R0, [SP, 0x4] \n\

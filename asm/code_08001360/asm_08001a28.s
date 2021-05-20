@@ -22,7 +22,7 @@ glabel func_08001a28 \n\
 /* 08001a48 */ MOVS R3, 0x20 @ Set R3 to 0x20 \n\
 /* 08001a4a */ BL func_0800186c \n\
 /* 08001a4e */ ADD R0, SP, 0x4 \n\
-/* 08001a50 */ BL func_0804eb00 \n\
+/* 08001a50 */ BL _call_via_r5 \n\
 /* 08001a54 */ ADD SP, 0x18 \n\
 /* 08001a56 */ POP {R4, R5} \n\
 /* 08001a58 */ POP {R0} \n\

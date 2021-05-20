@@ -165,7 +165,7 @@ branch_0800baea: \n\
 /* 0800bb28 */ MOV R1, R10 @ Set R1 to R10 \n\
 /* 0800bb2a */ ADDS R0, R6, R1 @ Set R0 to R6 + R1 \n\
 /* 0800bb2c */ LDR R1, [R4, 0x4] \n\
-/* 0800bb2e */ BL func_0804eaf8 \n\
+/* 0800bb2e */ BL _call_via_r3 \n\
 /* 0800bb32 */ B branch_0800bb48 \n\
 \n\
 .ltorg \n\
@@ -177,7 +177,7 @@ branch_0800bb38: \n\
 /* 0800bb3e */ MOV R2, R10 @ Set R2 to R10 \n\
 /* 0800bb40 */ ADDS R0, R6, R2 @ Set R0 to R6 + R2 \n\
 /* 0800bb42 */ LDR R1, [R4, 0x14] \n\
-/* 0800bb44 */ BL func_0804eaf8 \n\
+/* 0800bb44 */ BL _call_via_r3 \n\
  \n\
 branch_0800bb48: \n\
 /* 0800bb48 */ LDRB R1, [R5] \n\
@@ -193,7 +193,7 @@ branch_0800bb52: \n\
 /* 0800bb58 */ MOV R1, R10 @ Set R1 to R10 \n\
 /* 0800bb5a */ ADDS R0, R6, R1 @ Set R0 to R6 + R1 \n\
 /* 0800bb5c */ LDR R1, [R4, 0x1C] \n\
-/* 0800bb5e */ BL func_0804eaf8 \n\
+/* 0800bb5e */ BL _call_via_r3 \n\
  \n\
 branch_0800bb62: \n\
 /* 0800bb62 */ LDRB R1, [R5] \n\

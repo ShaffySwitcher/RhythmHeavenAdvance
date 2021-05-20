@@ -127,24 +127,24 @@ void func_080002c4(void) {
 void func_0800046c(struct struct_03000000 *arg1) {
 	D_03000000 = NULL;
 	D_03000004 = arg1;
-	D_030046a4 = 0;
+	D_030046a4 = NULL;
 	func_08000598();
 }
 
 void func_08000490(void) {
-	struct struct_03000000 *temp;
+    struct struct_030046a4 *temp;
+    
 	if (D_03000000 != NULL) {
 		if ((D_03000000->unk8 != NULL) && (D_03000000->unk8(D_03000000->unkC) != 0)) {
 			if (D_03000000->unk10 != NULL) {
 				D_03000000->unk10(D_03000000->unk14);
 			}
-			if (D_030046a4 != 0) {
+			if (D_030046a4 != NULL) {
 				func_08006694(D_030046a4);
 			}
 			
-			D_030046a4 = 0;
-			temp = func_080005e0(D_03000000);
-			D_03000004 = temp;
+			D_030046a4 = NULL;
+			D_03000004 = func_080005e0(D_03000000);
 			
 			if (D_03000080 != 0) {
 				func_080006b0(D_03000000, D_03000084);
@@ -165,7 +165,8 @@ void func_08000490(void) {
 		D_03000080 = 0;
 		
 		if (D_03000000->unk18 != 0) {
-			D_030046a4 = func_08006580(D_03000000->unk18);
+			temp = func_08006580(D_03000000->unk18);
+            D_030046a4 = temp;
 		}
 		
 		if (D_03000000->unk0 != NULL) {

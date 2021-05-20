@@ -18,7 +18,7 @@ branch_0800855a: \n\
 /* 0800855c */ CMP R2, 0x0 @ Compare R2 and 0x0 \n\
 /* 0800855e */ BEQ branch_08008566 \n\
 /* 08008560 */ LDR R0, [R1, 0x4] \n\
-/* 08008562 */ BL func_0804eaf4 \n\
+/* 08008562 */ BL _call_via_r2 \n\
  \n\
 branch_08008566: \n\
 /* 08008566 */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\

@@ -44,13 +44,13 @@ branch_0800b18a: \n\
 /* 0800b18c */ MOV R8, R2 @ Set R8 to R2 \n\
 /* 0800b18e */ LDR R1, [R6, 0x34] \n\
 /* 0800b190 */ ADDS R0, R7, 0x0 @ Set R0 to R7 + 0x0 \n\
-/* 0800b192 */ BL func_0804eaf0 \n\
+/* 0800b192 */ BL _call_via_r1 \n\
 /* 0800b196 */ ADDS R5, R0, 0x0 @ Set R5 to R0 + 0x0 \n\
 /* 0800b198 */ LDR R1, [R6, 0x38] \n\
 /* 0800b19a */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 0800b19c */ BEQ branch_0800b1aa \n\
 /* 0800b19e */ ADDS R0, R7, 0x0 @ Set R0 to R7 + 0x0 \n\
-/* 0800b1a0 */ BL func_0804eaf0 \n\
+/* 0800b1a0 */ BL _call_via_r1 \n\
 /* 0800b1a4 */ LSLS R0, R0, 0x10 \n\
 /* 0800b1a6 */ ASRS R3, R0, 0x10 \n\
 /* 0800b1a8 */ B branch_0800b1ae \n\
@@ -105,7 +105,7 @@ branch_0800b1ee: \n\
 /* 0800b204 */ MOVS R2, 0x26 @ Set R2 to 0x26 \n\
 /* 0800b206 */ LDRSH R1, [R6, R2] \n\
 /* 0800b208 */ ADDS R2, R1, 0x1 @ Set R2 to R1 + 0x1 \n\
-/* 0800b20a */ BL func_0804eaf8 \n\
+/* 0800b20a */ BL _call_via_r3 \n\
  \n\
 branch_0800b20e: \n\
 /* 0800b20e */ POP {R3} \n\

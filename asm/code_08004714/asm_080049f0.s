@@ -21,7 +21,7 @@ glabel func_080049f0 \n\
 /* 08004a0e */ BEQ branch_08004a1c \n\
 /* 08004a10 */ LDR R0, [R1, 0x18] \n\
 /* 08004a12 */ ADDS R1, R4, 0x0 @ Set R1 to R4 + 0x0 \n\
-/* 08004a14 */ BL func_0804eaf4 \n\
+/* 08004a14 */ BL _call_via_r2 \n\
 /* 08004a18 */ MOV R2, R8 @ Set R2 to R8 \n\
 /* 08004a1a */ LDR R4, [R2, 0x18] \n\
  \n\

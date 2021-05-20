@@ -25,7 +25,7 @@ branch_08017364: \n\
 /* 0801736a */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 0801736c */ BEQ branch_08017376 \n\
 /* 0801736e */ ADDS R0, R3, 0x0 @ Set R0 to R3 + 0x0 \n\
-/* 08017370 */ BL func_0804eaf0 \n\
+/* 08017370 */ BL _call_via_r1 \n\
 /* 08017374 */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
  \n\
 branch_08017376: \n\

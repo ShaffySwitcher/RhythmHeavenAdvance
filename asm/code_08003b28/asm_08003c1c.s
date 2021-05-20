@@ -109,7 +109,7 @@ jump_08003cd2: \n\
 \n\
 jump_08003ce0: \n\
 /* 08003ce0 */ LDR R0, [R4, 0x20] \n\
-/* 08003ce2 */ BL func_0804eb00 \n\
+/* 08003ce2 */ BL _call_via_r5 \n\
 /* 08003ce6 */ B branch_08003db0 \n\
 \n\
 jump_08003ce8: \n\

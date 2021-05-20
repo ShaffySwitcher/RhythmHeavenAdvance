@@ -174,7 +174,7 @@ branch_08017dbe: \n\
 /* 08017dd6 */ BEQ branch_08017e00 \n\
 /* 08017dd8 */ LDR R0, [SP] \n\
 /* 08017dda */ LDR R1, [R0, 0x64] \n\
-/* 08017ddc */ BL func_0804eaf4 \n\
+/* 08017ddc */ BL _call_via_r2 \n\
 /* 08017de0 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08017de2 */ BEQ branch_08017e00 \n\
  \n\

@@ -38,7 +38,7 @@ branch_08005b52: \n\
 /* 08005b58 */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 08005b5a */ BEQ branch_08005b6c \n\
 /* 08005b5c */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\
-/* 08005b5e */ BL func_0804eaf0 \n\
+/* 08005b5e */ BL _call_via_r1 \n\
 /* 08005b62 */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
 /* 08005b64 */ B branch_08005b6e \n\
 \n\

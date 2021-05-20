@@ -36,7 +36,7 @@ glabel func_08009948 \n\
 /* 08009984 */ STR R0, [SP, 0x8] \n\
 /* 08009986 */ STR R2, [SP, 0xC] \n\
 /* 08009988 */ MOV R0, SP @ Set R0 to SP \n\
-/* 0800998a */ BL func_0804eb00 \n\
+/* 0800998a */ BL _call_via_r5 \n\
  \n\
 branch_0800998e: \n\
 /* 0800998e */ ADD SP, 0x10 \n\

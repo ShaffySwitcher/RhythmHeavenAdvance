@@ -152,7 +152,7 @@ branch_08002bf8: \n\
 /* 08002c06 */ LDR R4, [R1] \n\
 /* 08002c08 */ ADDS R0, R6, 0x0 @ Set R0 to R6 + 0x0 \n\
 /* 08002c0a */ ADDS R1, R7, 0x0 @ Set R1 to R7 + 0x0 \n\
-/* 08002c0c */ BL func_0804eafc \n\
+/* 08002c0c */ BL _call_via_r4 \n\
  \n\
 branch_08002c10: \n\
 /* 08002c10 */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
@@ -297,7 +297,7 @@ branch_08002cec: \n\
 branch_08002d08: \n\
 /* 08002d08 */ LDR R1, [R4] \n\
 /* 08002d0a */ LDR R0, [R4, 0x4] \n\
-/* 08002d0c */ BL func_0804eaf0 \n\
+/* 08002d0c */ BL _call_via_r1 \n\
 /* 08002d10 */ ADDS R4, 0xC @ Add 0xC to R4 \n\
 /* 08002d12 */ LDR R0, [R4, 0x8] \n\
 /* 08002d14 */ CMP R0, R6 @ Check R0 - R6 \n\

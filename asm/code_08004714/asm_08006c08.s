@@ -76,7 +76,7 @@ branch_08006c4c: \n\
 /* 08006c88 */ BEQ branch_08006c92 \n\
 /* 08006c8a */ LDR R1, [R5, 0x24] \n\
 /* 08006c8c */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\
-/* 08006c8e */ BL func_0804eaf4 \n\
+/* 08006c8e */ BL _call_via_r2 \n\
  \n\
 branch_08006c92: \n\
 /* 08006c92 */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\

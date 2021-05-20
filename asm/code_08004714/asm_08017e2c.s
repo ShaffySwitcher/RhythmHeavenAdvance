@@ -32,7 +32,7 @@ glabel func_08017e2c \n\
 /* 08017e60 */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\
 /* 08017e62 */ MOV R2, R12 @ Set R2 to R12 \n\
 /* 08017e64 */ LDR R3, [SP, 0x14] \n\
-/* 08017e66 */ BL func_0804eafc \n\
+/* 08017e66 */ BL _call_via_r4 \n\
  \n\
 branch_08017e6a: \n\
 /* 08017e6a */ LDR R0, [R6] \n\
@@ -60,7 +60,7 @@ branch_08017e90: \n\
 /* 08017e98 */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\
 /* 08017e9a */ MOV R2, R12 @ Set R2 to R12 \n\
 /* 08017e9c */ LDR R3, [SP, 0x14] \n\
-/* 08017e9e */ BL func_0804eafc \n\
+/* 08017e9e */ BL _call_via_r4 \n\
  \n\
 branch_08017ea2: \n\
 /* 08017ea2 */ LDR R0, [R6] \n\

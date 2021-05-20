@@ -17,7 +17,6 @@ struct struct_03000000 {
 
 extern u8 D_03004498;
 extern s32 D_030046a0;
-extern s32 D_030046a4;
 extern s32 *D_030046a8;
 
 extern void *interrupt_handler;

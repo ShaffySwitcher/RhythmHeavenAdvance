@@ -48,7 +48,7 @@ branch_0801da0e: \n\
 /* 0801da22 */ LDR R0, [R0, 0x4] \n\
 /* 0801da24 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0801da26 */ BEQ branch_0801da2c \n\
-/* 0801da28 */ BL func_0804eaec \n\
+/* 0801da28 */ BL _call_via_r0 \n\
  \n\
 branch_0801da2c: \n\
 /* 0801da2c */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\

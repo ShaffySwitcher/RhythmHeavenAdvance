@@ -7,7 +7,7 @@ glabel func_0801da48 \n\
 /* 0801da4a */ LDR R5, =D_030055e0 \n\
 /* 0801da4c */ LDR R0, [R5, 0x4] \n\
 /* 0801da4e */ LDR R0, [R0, 0x8] \n\
-/* 0801da50 */ BL func_0804eaec \n\
+/* 0801da50 */ BL _call_via_r0 \n\
 /* 0801da54 */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 0801da56 */ CMP R4, 0x1 @ Compare R4 and 0x1 \n\
 /* 0801da58 */ BEQ branch_0801da64 \n\

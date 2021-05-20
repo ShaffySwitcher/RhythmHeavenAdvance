@@ -83,7 +83,7 @@ branch_080195a2: \n\
 /* 080195e6 */ MOVS R3, 0xB0 @ Set R3 to 0xB0 \n\
 /* 080195e8 */ BL func_0804d160 \n\
 /* 080195ec */ LDR R0, [R4, 0x8] \n\
-/* 080195ee */ BL func_0804eaec \n\
+/* 080195ee */ BL _call_via_r0 \n\
 /* 080195f2 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 080195f4 */ MOVS R2, 0x4 @ Set R2 to 0x4 \n\
 /* 080195f6 */ BL func_080087d4 \n\

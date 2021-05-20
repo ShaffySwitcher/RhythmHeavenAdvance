@@ -70,7 +70,7 @@ branch_080161ec: \n\
 /* 080161ee */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 080161f0 */ BEQ branch_080161f8 \n\
 /* 080161f2 */ LDR R0, [R6, 0x18] \n\
-/* 080161f4 */ BL func_0804eaf0 \n\
+/* 080161f4 */ BL _call_via_r1 \n\
  \n\
 branch_080161f8: \n\
 /* 080161f8 */ LDR R4, =D_03005380 \n\

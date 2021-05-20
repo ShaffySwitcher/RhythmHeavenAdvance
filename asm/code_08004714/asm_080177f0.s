@@ -15,7 +15,7 @@ glabel func_080177f0 \n\
 /* 08017806 */ LDR R0, [R0, 0xC] \n\
 /* 08017808 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0801780a */ BEQ branch_08017810 \n\
-/* 0801780c */ BL func_0804eaec \n\
+/* 0801780c */ BL _call_via_r0 \n\
  \n\
 branch_08017810: \n\
 /* 08017810 */ LDR R0, [R5] \n\

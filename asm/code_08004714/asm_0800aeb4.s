@@ -180,13 +180,13 @@ branch_0800b018: \n\
 /* 0800b022 */ LDR R6, [R7, 0x4] \n\
 /* 0800b024 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 0800b026 */ LDR R1, [SP, 0x68] \n\
-/* 0800b028 */ BL func_0804eaf0 \n\
+/* 0800b028 */ BL _call_via_r1 \n\
 /* 0800b02c */ ADDS R5, R0, 0x0 @ Set R5 to R0 + 0x0 \n\
 /* 0800b02e */ MOV R2, R10 @ Set R2 to R10 \n\
 /* 0800b030 */ CMP R2, 0x0 @ Compare R2 and 0x0 \n\
 /* 0800b032 */ BEQ branch_0800b048 \n\
 /* 0800b034 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
-/* 0800b036 */ BL func_0804eb14 \n\
+/* 0800b036 */ BL _call_via_sl \n\
 /* 0800b03a */ LSLS R0, R0, 0x10 \n\
 /* 0800b03c */ ASRS R3, R0, 0x10 \n\
 /* 0800b03e */ B branch_0800b04c \n\

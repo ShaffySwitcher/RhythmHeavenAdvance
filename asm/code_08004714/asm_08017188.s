@@ -23,7 +23,7 @@ glabel func_08017188 \n\
 /* 080171ae */ LDR R1, [R0, 0xC] \n\
 /* 080171b0 */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 080171b2 */ BEQ branch_080171b8 \n\
-/* 080171b4 */ BL func_0804eaf0 \n\
+/* 080171b4 */ BL _call_via_r1 \n\
  \n\
 branch_080171b8: \n\
 /* 080171b8 */ LDR R0, [R4] \n\
@@ -193,7 +193,7 @@ branch_0801730a: \n\
 /* 0801730c */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 0801730e */ BEQ branch_08017316 \n\
 /* 08017310 */ MOV R0, R9 @ Set R0 to R9 \n\
-/* 08017312 */ BL func_0804eaf0 \n\
+/* 08017312 */ BL _call_via_r1 \n\
  \n\
 branch_08017316: \n\
 /* 08017316 */ ADD SP, 0x4 \n\

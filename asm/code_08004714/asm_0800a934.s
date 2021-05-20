@@ -111,7 +111,7 @@ branch_0800a9e2: \n\
 /* 0800a9fc */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 0800a9fe */ BEQ branch_0800aa06 \n\
 /* 0800aa00 */ LDR R0, [R5, 0x48] \n\
-/* 0800aa02 */ BL func_0804eaf0 \n\
+/* 0800aa02 */ BL _call_via_r1 \n\
  \n\
 branch_0800aa06: \n\
 /* 0800aa06 */ ADD SP, 0x8 \n\
