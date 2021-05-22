@@ -1499,8 +1499,8 @@ void func_08013b98(s32 arg1, s32 arg2) {
     s16 temp;
     s16 temp2;
 
-    D_030046a4->unk10 = arg1;
-    D_030046a4->unk11 = arg2;
+    D_030046a4->unk10.asU8[0] = arg1;
+    D_030046a4->unk10.asU8[1] = arg2;
 
     func_0801332c(arg1,arg2,&temp,&temp2);
 
@@ -1716,7 +1716,19 @@ void func_08013b98(s32 arg1, s32 arg2) {
 
 #include "asm/code_08004714/asm_08017380.s"
 
-#include "asm/code_08004714/asm_0801738c.s"
+s32 func_0801738c(struct struct_030046a4_sub *arg1, s32 arg2) {
+    s32 returnVal = 0;
+
+    if (D_030046a4->unk10.asPoint != arg1) {
+        return 0;
+    }
+
+    if ((D_030046a4->unk10.asPoint->unk18 != NULL) && (D_030046a4->unk10.asPoint->unk18[arg2] != NULL)) {
+        returnVal = D_030046a4->unk10.asPoint->unk18[arg2](D_030046a4->unk60);
+    }
+
+    return returnVal;
+}
 
 #include "asm/code_08004714/asm_080173c4.s"
 
@@ -1798,7 +1810,75 @@ void func_08013b98(s32 arg1, s32 arg2) {
 
 #include "asm/code_08004714/asm_080179d8.s"
 
-#include "asm/code_08004714/asm_080179f4.s"
+void func_080179f4(s32 arg1) {
+    struct struct_030046a4_sub2 *temp;
+    struct struct_080179f4 *temp2;
+    struct struct_080179f4 **temp4;
+
+    if ((D_030046a4->unk5C == 0) || ((temp = D_030046a4->unk1C[arg1]) == NULL)) {
+        return;
+    }
+
+    temp2 = func_08006580(0x6C);
+    if (temp->unkC != 0) {
+        temp2->unk64 = func_08006580(temp->unkC);
+    } else {
+        temp2->unk64 = NULL;
+    }
+    func_0800186c(temp,&temp2->unk8,0x40,0x20,0x200);
+
+    temp2->unk48 &= ~1;
+    temp2->unk48 &= ~2;
+
+    do {} while (0); // fake matching / macro?
+    
+    temp2->unk4C = 0;
+
+    if (D_030046a4->unk86 != 0) {
+        temp2->unk4E = func_0800c3a4(D_030046a4->unk86);
+        D_030046a4->unk86 = 0;
+    } else {
+        temp2->unk4E = func_0800c3a4(temp->unk4);
+    }
+
+    temp2->unk54 = ((D_030046a4->unk68 != 0) ? D_030046a4->unk68 : temp->unk2C);
+    temp2->unk58 = ((D_030046a4->unk6C != 0) ? D_030046a4->unk6C : temp->unk30);
+    temp2->unk5C = ((D_030046a4->unk70 != 0) ? D_030046a4->unk70 : temp->unk34);
+    temp2->unk60 = ((D_030046a4->unk74 != 0) ? D_030046a4->unk74 : temp->unk38);
+
+    temp2->unk68 = D_030046a4->unk7A;
+
+    D_030046a4->unk68 = 0;
+    D_030046a4->unk6C = 0;
+    D_030046a4->unk70 = 0;
+    D_030046a4->unk74 = 0;
+
+    temp4 = D_030046a4->unk18;
+    
+    temp2->unk0 = 0;
+    temp2->unk4 = temp4;
+
+    if (temp4 != NULL) {
+        *temp4 = temp2;
+    }
+
+    D_030046a4->unk18 = temp2; // pointer stuff is wrong but it does match
+
+    D_030046a4->unk5D = 0;
+
+    if (temp->unk10 != 0) {
+        temp->unk10(temp2,temp2->unk64,temp->unk14);
+    }
+
+    if (D_030046a4->unk5D != 0) {
+        D_030046a4->unk18 = temp4;
+        *temp4 = 0;
+        func_08006694(temp2);
+    } else {
+        D_030046a4->unk58 = temp2;
+        func_08016e54(temp2->unk54);
+    }
+}
 
 #include "asm/code_08004714/asm_08017b34.s"
 
