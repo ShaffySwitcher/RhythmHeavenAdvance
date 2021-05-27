@@ -1712,15 +1712,30 @@ void func_08013b98(s32 arg1, s32 arg2) {
 
 #include "asm/code_08004714/asm_08017338.s"
 
-#include "asm/code_08004714/asm_08017348.s"
+s32 func_08017348(s32 arg1, s32 arg2) { // bobbing?
+    s32 returnVal = 0;
+    struct_030046a4_func *temp = &D_030046a4->unk4C[0];
+    
+    if (temp == NULL) { // literally never possible
+        return returnVal;
+    }
 
-#include "asm/code_08004714/asm_08017380.s"
+    if (temp[arg2] != NULL) {
+        returnVal = temp[arg2](arg1);
+    }
+    
+    return returnVal;
+}
 
-s32 func_0801738c(struct struct_030046a4_sub *arg1, s32 arg2) {
+void func_08017380(s32 arg1) { // gfx command 1
+    D_030046a4->unk60 = arg1;
+}
+
+s32 func_0801738c(struct struct_030046a4_sub *arg1, s32 arg2) { // gfx command 2
     s32 returnVal = 0;
 
     if (D_030046a4->unk10.asPoint != arg1) {
-        return 0;
+        return returnVal;
     }
 
     if ((D_030046a4->unk10.asPoint->unk18 != NULL) && (D_030046a4->unk10.asPoint->unk18[arg2] != NULL)) {
@@ -1810,7 +1825,7 @@ s32 func_0801738c(struct struct_030046a4_sub *arg1, s32 arg2) {
 
 #include "asm/code_08004714/asm_080179d8.s"
 
-void func_080179f4(s32 arg1) {
+void func_080179f4(s32 arg1) { // universal cue?
     struct struct_030046a4_sub2 *temp;
     struct struct_080179f4 *temp2;
     struct struct_080179f4 **temp4;

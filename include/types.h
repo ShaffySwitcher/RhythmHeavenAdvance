@@ -3,7 +3,7 @@
 
 typedef s32 (*struct_030046a4_func)(s32);
 
-struct struct_030046a4_sub {
+struct struct_030046a4_sub { // might be a list
     u8 pad00[0x18];
     struct_030046a4_func *unk18;
 };
@@ -52,7 +52,8 @@ struct struct_030046a4 {
     } unk10;
     u8 pad14[4];
     struct struct_080179f4 **unk18;
-    struct struct_030046a4_sub2 *unk1C[15]; // size unknown
+    struct struct_030046a4_sub2 *unk1C[12]; // size unknown
+    struct_030046a4_func unk4C[3]; // probably
     struct struct_080179f4 *unk58;
     u8 unk5C;
     u8 unk5D;
