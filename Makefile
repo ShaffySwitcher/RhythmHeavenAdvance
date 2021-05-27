@@ -39,8 +39,8 @@ ASM         := asm
 INCLUDES	:= include
 DATA		:= data
 BIN		    := bin
-MUSIC		:=
-BUILD_DIRS  := $(BUILD) $(BUILD)/$(DATA) $(BUILD)/$(ASM) $(BUILD)/$(SOURCES) $(BUILD)/$(BIN)
+MUSIC		:= audio/music
+BUILD_DIRS  := $(BUILD) $(BUILD)/$(DATA) $(BUILD)/$(ASM) $(BUILD)/$(SOURCES) $(BUILD)/$(BIN) $(BUILD)/$(MUSIC)
 LD_SCRIPT   := rt.ld
 
 #---------------------------------------------------------------------------------
@@ -89,13 +89,9 @@ CPPFILES	:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.cpp)))
 SFILES		:=	$(foreach dir,$(ASM),$(notdir $(wildcard $(dir)/*.s)))
 DATAFILES   :=	$(foreach dir,$(DATA),$(notdir $(wildcard $(dir)/*.s)))
 BINFILES	:=	$(foreach dir,$(BIN),$(notdir $(wildcard $(dir)/*.bin)))
+MIDIFILES   :=  $(foreach dir,$(MUSIC),$(notdir $(wildcard $(dir)/*.mid)))
 
-ifneq ($(strip $(MUSIC)),)
-	export AUDIOFILES	:=	$(foreach dir,$(notdir $(wildcard $(MUSIC)/*.*)),$(CURDIR)/$(MUSIC)/$(dir))
-	BINFILES += soundbank.bin
-endif
-
-export OFILES_BIN := $(addprefix $(BUILD)/bin/,$(addsuffix .o,$(BINFILES)))
+export OFILES_BIN := $(addprefix $(BUILD)/bin/,$(addsuffix .o,$(BINFILES))) $(addprefix $(BUILD)/$(MUSIC)/,$(addsuffix .o,$(MIDIFILES)))
 
 export OFILES_SOURCES := $(addprefix $(BUILD)/asm/,$(SFILES:.s=.o)) $(addprefix $(BUILD)/data/,$(DATAFILES:.s=.o)) $(addprefix $(BUILD)/src/,$(CFILES:.c=.o))
 
@@ -143,37 +139,32 @@ $(OUTPUT).gba	:	$(OUTPUT).elf
 	@echo "ROM Assembled!"
 
 $(OUTPUT).elf	:	$(OFILES)
-	$(LD) $(OFILES) tools/agbcc/lib/libgcc.a -T $(LD_SCRIPT) -Map $(@:.elf=.map) -o $@
+	@echo "Building ROM..."
+	@$(LD) $(OFILES) tools/agbcc/lib/libgcc.a -T $(LD_SCRIPT) -Map $(@:.elf=.map) -o $@
 
-#---------------------------------------------------------------------------------
-# The bin2o rule should be copied and modified
-# for each extension used in the data directories
-#---------------------------------------------------------------------------------
 
-#---------------------------------------------------------------------------------
-# rule to build soundbank from music files
-#---------------------------------------------------------------------------------
-soundbank.bin soundbank.h : $(AUDIOFILES)
-#---------------------------------------------------------------------------------
-	@mmutil $^ -osoundbank.bin -hsoundbank.h
-
-#---------------------------------------------------------------------------------
-# This rule links in binary data with the .bin extension
-#---------------------------------------------------------------------------------
-$(BUILD)/bin/%.bin.o	$(BUILD)/bin/%.bin.h :	bin/%.bin | $(BUILD_DIRS)
-#---------------------------------------------------------------------------------
+# Binary data
+$(BUILD)/$(BIN)/%.bin.o	$(BUILD)/$(BIN)/%.bin.h :	$(BIN)/%.bin | $(BUILD_DIRS)
 	@echo "Converting $< to $<.o"
 	@bin2s -a 4 -H $(BUILD)/$<.h $< | $(AS) -o $(BUILD)/$<.o
+    
+# MIDI files
+$(BUILD)/$(MUSIC)/%.mid.o	$(BUILD)/$(MUSIC)/%.mid.h :	$(MUSIC)/%.mid | $(BUILD_DIRS)
+	@echo "Converting $<"
+	@bin2s -a 4 -H $(BUILD)/$<.h $< | $(AS) -o $(BUILD)/$<.o
 
+# C files
 $(BUILD)/$(SOURCES)/%.o : $(SOURCES)/%.c | $(BUILD_DIRS)
 	@$(CPP) $(CPPFLAGS) $< -o $(BUILD)/$(SOURCES)/$*.i
 	$(CC1) $(CFLAGS) $(BUILD)/$(SOURCES)/$*.i -o $(BUILD)/$(SOURCES)/$*.s
 	$(AS) -MD  $(BUILD)/$(SOURCES)/$*.d -march=armv4t -o $@ $(BUILD)/$(SOURCES)/$*.s
 
+# ASM files
 $(BUILD)/$(ASM)/%.o : $(ASM)/%.s | $(BUILD_DIRS)
 	@echo "Assembling $< to $(basename $<).o"
 	@$(AS) -MD $(BUILD)/$(ASM)/$*.d -march=armv4t -o $@ $<
-    
+
+# Data files
 $(BUILD)/$(DATA)/%.o : $(DATA)/%.s | $(BUILD_DIRS)
 	@echo "Assembling $< to $(basename $<).o"
 	@$(AS) -MD $(BUILD)/$(DATA)/$*.d -march=armv4t -o $@ $<
