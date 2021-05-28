@@ -41,7 +41,8 @@ DATA		:= data
 BIN		    := bin
 AUDIO		:= audio
 MUSIC		:= $(AUDIO)/music
-BUILD_DIRS  := $(BUILD) $(BUILD)/$(DATA) $(BUILD)/$(ASM) $(BUILD)/$(SOURCES) $(BUILD)/$(BIN) $(BUILD)/$(AUDIO) $(BUILD)/$(MUSIC)
+SFX         := $(AUDIO)/sfx
+BUILD_DIRS  := $(BUILD) $(BUILD)/$(DATA) $(BUILD)/$(ASM) $(BUILD)/$(SOURCES) $(BUILD)/$(BIN) $(BUILD)/$(MUSIC) $(BUILD)/$(SFX)
 LD_SCRIPT   := rt.ld
 
 #---------------------------------------------------------------------------------
@@ -89,8 +90,9 @@ CFILES		:=	$(foreach dir,$(SOURCES),$(wildcard $(dir)/*.c))  $(foreach dir,$(AUD
 CPPFILES	:=	$(foreach dir,$(SOURCES),$(wildcard $(dir)/*.cpp))
 SFILES		:=	$(foreach dir,$(ASM),$(wildcard $(dir)/*.s)) $(foreach dir,$(DATA),$(wildcard $(dir)/*.s))
 BINFILES	:=	$(foreach dir,$(BIN),$(wildcard $(dir)/*.bin)) $(foreach dir,$(MUSIC),$(wildcard $(dir)/*.mid))
+WAVFILES    :=  $(foreach dir,$(SFX),$(wildcard $(dir)/*.wav))
 
-export OFILES_BIN := $(addprefix $(BUILD)/,$(addsuffix .o,$(BINFILES)))
+export OFILES_BIN := $(addprefix $(BUILD)/,$(addsuffix .o,$(BINFILES))) $(addprefix $(BUILD)/,$(WAVFILES:.wav=.pcm.o))
 
 export OFILES_SOURCES := $(addprefix $(BUILD)/,$(addsuffix .o,$(SFILES))) $(addprefix $(BUILD)/,$(addsuffix .o,$(CFILES)))
 
@@ -111,6 +113,7 @@ ifneq ($(shell sha1sum -t baserom.gba), 67f8adacff79c15d028fffd90de3a77d9ad0602d
 endif
 
 .PHONY: default clean
+.SECONDARY:
 
 #---------------------------------------------------------------------------------
 default: $(OUTPUT).gba
@@ -144,19 +147,28 @@ $(OUTPUT).elf	:	$(OFILES)
 
 # Binary data
 $(BUILD)/%.bin.o	$(BUILD)/%.bin.h :	%.bin | $(BUILD_DIRS)
-	@echo "Converting $< to $<.o"
+	@echo "Copying $< to $<.o"
 	@bin2s -a 4 -H $(BUILD)/$<.h $< | $(AS) -o $(BUILD)/$<.o
     
 # MIDI files
 $(BUILD)/%.mid.o	$(BUILD)/%.mid.h :	%.mid | $(BUILD_DIRS)
-	@echo "Converting $<"
+	@echo "Copying $<"
 	@bin2s -a 4 -H $(BUILD)/$<.h $< | $(AS) -o $(BUILD)/$<.o
+
+# WAV files
+$(BUILD)/%.pcm.o	$(BUILD)/%.pcm.h :	$(BUILD)/%.pcm | $(BUILD_DIRS)
+	@bin2s -a 4 -H $<.h $< | $(AS) -o $<.o
+
+$(BUILD)/%.pcm : %.wav | $(BUILD_DIRS)
+	@echo "Converting $< to raw PCM audio"
+	@ffmpeg -y -loglevel quiet -i $< -f s8 $@
 
 # C files
 $(BUILD)/%.c.o : %.c | $(BUILD_DIRS)
+	@echo "Compiling $< to $@"
 	@$(CPP) $(CPPFLAGS) $< -o $(BUILD)/$*.i
-	$(CC1) $(CFLAGS) $(BUILD)/$*.i -o $(BUILD)/$*.s
-	$(AS) -MD  $(BUILD)/$*.d -march=armv4t -o $@ $(BUILD)/$*.s
+	@$(CC1) $(CFLAGS) $(BUILD)/$*.i -o $(BUILD)/$*.s
+	@$(AS) -MD  $(BUILD)/$*.d -march=armv4t -o $@ $(BUILD)/$*.s
 
 # ASM files
 $(BUILD)/%.s.o : %.s | $(BUILD_DIRS)
