@@ -84,16 +84,14 @@ export OUTPUT	:=	$(BUILD)/$(TARGET)
 
 export DEPSDIR	:=	$(CURDIR)/$(BUILD)
 
-CFILES		:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.c)))
-CPPFILES	:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.cpp)))
-SFILES		:=	$(foreach dir,$(ASM),$(notdir $(wildcard $(dir)/*.s)))
-DATAFILES   :=	$(foreach dir,$(DATA),$(notdir $(wildcard $(dir)/*.s)))
-BINFILES	:=	$(foreach dir,$(BIN),$(notdir $(wildcard $(dir)/*.bin)))
-MIDIFILES   :=  $(foreach dir,$(MUSIC),$(notdir $(wildcard $(dir)/*.mid)))
+CFILES		:=	$(foreach dir,$(SOURCES),$(wildcard $(dir)/*.c))
+CPPFILES	:=	$(foreach dir,$(SOURCES),$(wildcard $(dir)/*.cpp))
+SFILES		:=	$(foreach dir,$(ASM),$(wildcard $(dir)/*.s)) $(foreach dir,$(DATA),$(wildcard $(dir)/*.s))
+BINFILES	:=	$(foreach dir,$(BIN),$(wildcard $(dir)/*.bin)) $(foreach dir,$(MUSIC),$(wildcard $(dir)/*.mid))
 
-export OFILES_BIN := $(addprefix $(BUILD)/bin/,$(addsuffix .o,$(BINFILES))) $(addprefix $(BUILD)/$(MUSIC)/,$(addsuffix .o,$(MIDIFILES)))
+export OFILES_BIN := $(addprefix $(BUILD)/,$(addsuffix .o,$(BINFILES)))
 
-export OFILES_SOURCES := $(addprefix $(BUILD)/asm/,$(SFILES:.s=.o)) $(addprefix $(BUILD)/data/,$(DATAFILES:.s=.o)) $(addprefix $(BUILD)/src/,$(CFILES:.c=.o))
+export OFILES_SOURCES := $(addprefix $(BUILD)/,$(addsuffix .o,$(SFILES))) $(addprefix $(BUILD)/,$(addsuffix .o,$(CFILES)))
 
 export OFILES := $(OFILES_BIN) $(OFILES_SOURCES)
 
@@ -144,30 +142,25 @@ $(OUTPUT).elf	:	$(OFILES)
 
 
 # Binary data
-$(BUILD)/$(BIN)/%.bin.o	$(BUILD)/$(BIN)/%.bin.h :	$(BIN)/%.bin | $(BUILD_DIRS)
+$(BUILD)/%.bin.o	$(BUILD)/%.bin.h :	%.bin | $(BUILD_DIRS)
 	@echo "Converting $< to $<.o"
 	@bin2s -a 4 -H $(BUILD)/$<.h $< | $(AS) -o $(BUILD)/$<.o
     
 # MIDI files
-$(BUILD)/$(MUSIC)/%.mid.o	$(BUILD)/$(MUSIC)/%.mid.h :	$(MUSIC)/%.mid | $(BUILD_DIRS)
+$(BUILD)/%.mid.o	$(BUILD)/%.mid.h :	%.mid | $(BUILD_DIRS)
 	@echo "Converting $<"
 	@bin2s -a 4 -H $(BUILD)/$<.h $< | $(AS) -o $(BUILD)/$<.o
 
 # C files
-$(BUILD)/$(SOURCES)/%.o : $(SOURCES)/%.c | $(BUILD_DIRS)
-	@$(CPP) $(CPPFLAGS) $< -o $(BUILD)/$(SOURCES)/$*.i
-	$(CC1) $(CFLAGS) $(BUILD)/$(SOURCES)/$*.i -o $(BUILD)/$(SOURCES)/$*.s
-	$(AS) -MD  $(BUILD)/$(SOURCES)/$*.d -march=armv4t -o $@ $(BUILD)/$(SOURCES)/$*.s
+$(BUILD)/%.c.o : %.c | $(BUILD_DIRS)
+	@$(CPP) $(CPPFLAGS) $< -o $(BUILD)/$*.i
+	$(CC1) $(CFLAGS) $(BUILD)/$*.i -o $(BUILD)/$*.s
+	$(AS) -MD  $(BUILD)/$*.d -march=armv4t -o $@ $(BUILD)/$*.s
 
 # ASM files
-$(BUILD)/$(ASM)/%.o : $(ASM)/%.s | $(BUILD_DIRS)
+$(BUILD)/%.s.o : %.s | $(BUILD_DIRS)
 	@echo "Assembling $< to $(basename $<).o"
-	@$(AS) -MD $(BUILD)/$(ASM)/$*.d -march=armv4t -o $@ $<
-
-# Data files
-$(BUILD)/$(DATA)/%.o : $(DATA)/%.s | $(BUILD_DIRS)
-	@echo "Assembling $< to $(basename $<).o"
-	@$(AS) -MD $(BUILD)/$(DATA)/$*.d -march=armv4t -o $@ $<
+	@$(AS) -MD $(BUILD)/$*.d -march=armv4t -o $@ $<
 
 -include $(DEPSDIR)/*.d
 #---------------------------------------------------------------------------------------
