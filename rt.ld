@@ -36,7 +36,8 @@ SECTIONS {
 		build/bin/bindata_08935fac.bin.o(.rodata*);
         build/bin/bindata_089ccbc0.bin.o(.rodata*);
         build/bin/bindata_089d3984.bin.o(.rodata*);
-        build/bin/bindata_08a9b078.bin.o(.rodata*);
+        build/audio/midi_data.c.o(.rodata*);
+        build/bin/bindata_08a9e8e0.bin.o(.rodata*);
         build/bin/bindata_08aa06f8.bin.o(.rodata*);
         
         build/audio/music/Lesson1.mid.o(.rodata*);

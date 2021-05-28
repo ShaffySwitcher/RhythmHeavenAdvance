@@ -39,8 +39,9 @@ ASM         := asm
 INCLUDES	:= include
 DATA		:= data
 BIN		    := bin
-MUSIC		:= audio/music
-BUILD_DIRS  := $(BUILD) $(BUILD)/$(DATA) $(BUILD)/$(ASM) $(BUILD)/$(SOURCES) $(BUILD)/$(BIN) $(BUILD)/$(MUSIC)
+AUDIO		:= audio
+MUSIC		:= $(AUDIO)/music
+BUILD_DIRS  := $(BUILD) $(BUILD)/$(DATA) $(BUILD)/$(ASM) $(BUILD)/$(SOURCES) $(BUILD)/$(BIN) $(BUILD)/$(AUDIO) $(BUILD)/$(MUSIC)
 LD_SCRIPT   := rt.ld
 
 #---------------------------------------------------------------------------------
@@ -84,7 +85,7 @@ export OUTPUT	:=	$(BUILD)/$(TARGET)
 
 export DEPSDIR	:=	$(CURDIR)/$(BUILD)
 
-CFILES		:=	$(foreach dir,$(SOURCES),$(wildcard $(dir)/*.c))
+CFILES		:=	$(foreach dir,$(SOURCES),$(wildcard $(dir)/*.c))  $(foreach dir,$(AUDIO),$(wildcard $(dir)/*.c))
 CPPFILES	:=	$(foreach dir,$(SOURCES),$(wildcard $(dir)/*.cpp))
 SFILES		:=	$(foreach dir,$(ASM),$(wildcard $(dir)/*.s)) $(foreach dir,$(DATA),$(wildcard $(dir)/*.s))
 BINFILES	:=	$(foreach dir,$(BIN),$(wildcard $(dir)/*.bin)) $(foreach dir,$(MUSIC),$(wildcard $(dir)/*.mid))
