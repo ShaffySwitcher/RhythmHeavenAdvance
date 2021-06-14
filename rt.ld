@@ -28,7 +28,7 @@ SECTIONS {
 		build/bin/bindata_0804eb28.bin.o(.rodata*);
         build/data/data_0804f300.s.o(.text*);
         build/data/data_08054950.s.o(.text*);
-        build/bin/bindata_08058f58.bin.o(.rodata*);
+        build/data/data_08058f58.s.o(.text*);
         
         build/audio/sfx/sfx_001.pcm.o(.rodata*);
         build/audio/sfx/sfx_002.pcm.o(.rodata*);
