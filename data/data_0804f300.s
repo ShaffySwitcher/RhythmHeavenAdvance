@@ -65,23 +65,31 @@ glabel D_0804f3e4
 
 @ See you later.
 /* 0804f3ec */
-.asciz "\n\nでは　また。\n\n"
+.asciz "
+
+では　また。
+\n"
 .balign 4, 0
 
 @ I'm still unpacking boxes, so
 @ please come back in a bit.
 /* 0804f400 */
-.asciz "\nいま　ちょっと　しこみ中なので\nまた　あとで　きてくださいね。\n\n"
+.asciz "
+いま　ちょっと　しこみ中なので
+また　あとで　きてくださいね。
+\n"
 .balign 4, 0
 
 @ I'm pretty good at Rhythm Games.
 @ If you need help, <come to the Cafe>.
 /* 0804f444 */
-.ascii "\nわたしに　できることが　あれば、\n"
+.ascii "
+わたしに　できることが　あれば、\n"
 .text_gold
 .ascii "ちからに　なりますよ"
 .text_normal
-.asciz "。\n\n"
+.asciz "。
+\n"
 .balign 4, 0
 
 @ This is the Cafe.
@@ -89,162 +97,221 @@ glabel D_0804f3e4
 @ or when you just want a break,
 @ please come here and relax.
 /* 0804f488 */
-.ascii "\nここは　いわゆる　キッサ店です。\nゲームが　"
+.ascii "
+ここは　いわゆる　キッサ店です。
+ゲームが　"
 .text_gold
 .ascii "うまくできないとき"
 .text_normal
-.asciz "や\nつかれたときにでも　おいで下さい。"
+.asciz "や
+つかれたときにでも　おいで下さい。"
 .balign 4, 0
 
 @ Welcome. This is your
 @ first time here, isn't it?
 /* 0804f4f4 */
-.asciz "\nいらっしゃいませ。\nこちらに　来たのは　はじめてですね？\n\n"
+.asciz "
+いらっしゃいませ。
+こちらに　来たのは　はじめてですね？
+\n"
 .balign 4, 0
 
 @ Come back in a while!
 /* 0804f530 */
-.asciz "\n\nしばらく　してから　きてね～。\n\n"
+.asciz "
+
+しばらく　してから　きてね～。
+\n"
 .balign 4, 0
 
 @ Don't let it frustrate you.
 @ You're supposed to enjoy yourself.
 /* 0804f554 */
-.asciz "\nあまり　ムキに　ならずに\n楽しんで下さいね…\n\n"
+.asciz "
+あまり　ムキに　ならずに
+楽しんで下さいね…
+\n"
 .balign 4, 0
 
 @ Just keep moving to the music,
 @ and you'll have fun doing it, too.
 /* 0804f584 */
-.asciz "\nそれと同時に　音楽に　ノるのが\n楽しくなるとも思うんです。\n\n"
+.asciz "
+それと同時に　音楽に　ノるのが
+楽しくなるとも思うんです。
+\n"
 .balign 4, 0
 
 @ You know, after a few tries
 @ I think you'll manage that superb.
 /* 0804f5c4 */
-.asciz "\nなんどか　やるうちに　コツが\nつかめると　思いますよ。\n\n"
+.asciz "
+なんどか　やるうちに　コツが
+つかめると　思いますよ。
+\n"
 .balign 4, 0
 
 @ Please try your best
 @ for those Perfects.
 @ See you soon!
 /* 0804f600 */
-.asciz "\nパーフェクト　がんばってくださいね。\nではまた。\n\n"
+.asciz "
+パーフェクト　がんばってくださいね。
+ではまた。
+\n"
 .balign 4, 0
 
 @ Sorry for yelling. I just got
 @ a little too excited there.
 /* 0804f634 */
-.asciz "\n大きい声をだして　すみません。\nなんだか　うれしかったものですから…\n\n"
+.asciz "
+大きい声をだして　すみません。
+なんだか　うれしかったものですから…
+\n"
 .balign 4, 0
 
 @ Please enjoy the
 @ game. See you!
 /* 0804f67c */
-.asciz "\nゲーム　楽しんでくださいね。\nではまた。\n\n"
+.asciz "
+ゲーム　楽しんでくださいね。
+ではまた。
+\n"
 .balign 4, 0
 
 @ Is that right? Loose lips can sink
 @ friendships... please forgive me.
 /* 0804f6a8 */
-.asciz "\nそうですか。\nウワサ話なんて　してしまい\nしつれいしました。"
+.asciz "
+そうですか。
+ウワサ話なんて　してしまい
+しつれいしました。"
 .balign 4, 0
 
 @ Had enough, I suppose? Go
 @ get some rest. I'll be waiting.
 /* 0804f6e4 */
-.asciz "\nおつかれでしょう？\n少し　休んでくださいネ。\nでは　また。"
+.asciz "
+おつかれでしょう？
+少し　休んでくださいネ。
+では　また。"
 .balign 4, 0
 
 @ Wow. It looks like you've
 @ mastered the game. Not bad.
 /* 0804f720 */
-.asciz "\nいやいや、しかし　なんと　まぁ\nコンプリートですか。\nやりますな～。"
+.asciz "
+いやいや、しかし　なんと　まぁ
+コンプリートですか。
+やりますな～。"
 .balign 4, 0
 
 @ Well, in celebration I've added
 @ more songs to the studio.
 /* 0804f764 */
-.asciz "\nそうそう、\nお祝いに　ささやかでは　ありますが\nスタジオの曲をふやしておきました。\n"
+.asciz "
+そうそう、
+お祝いに　ささやかでは　ありますが
+スタジオの曲をふやしておきました。\n"
 .balign 4, 0
 
 @ Oh, I'm so happy I think
 @ I might just start to cry.
 /* 0804f7b8 */
-.asciz "\nなんだか　私も、すっごく\nうれしくって　ウルウルです…\n\n"
+.asciz "
+なんだか　私も、すっごく
+うれしくって　ウルウルです…
+\n"
 .balign 4, 0
 
 @ You must have excellent rhythm
 @ sense to have gotten this far.
 /* 0804f7f4 */
-.asciz "\nもう、そこまで　やりこんだら\nリズム感　かなり　良くなって\nいるでしょうネ！"
+.asciz "
+もう、そこまで　やりこんだら
+リズム感　かなり　良くなって
+いるでしょうネ！"
 .balign 4, 0
 
-@ <Unbelievable!!>
+@ Unbelievable!!
 /* 0804f840 */
 .text_large
 .text_gold
-.ascii "\n\nアンビリーバボー!!"
+.ascii "
+
+アンビリーバボー!!"
 .text_small
 .text_normal
 .asciz ""
 .balign 4, 0
 
-@ <Good job!!>
+@ Good job!!
 /* 0804f868 */
 .text_large
 .text_gold
-.ascii "\n\nグッド　ジョブ!!"
+.ascii "
+
+グッド　ジョブ!!"
 .text_small
 .text_normal
 .asciz ""
 .balign 4, 0
 
-@ <Congratulations!!>
+@ Congratulations!!
 /* 0804f88c */
 .text_large
 .text_gold
-.ascii "\n\nおめでとー!!"
+.ascii "
+
+おめでとー!!"
 .text_small
 .text_normal
 .asciz ""
 .balign 4, 0
 
-@ <You're good!!>
+@ You're good!!
 /* 0804f8ac */
 .text_large
 .text_gold
-.ascii "\n\nやるじゃなーい!!"
+.ascii "
+
+やるじゃなーい!!"
 .text_small
 .text_normal
 .asciz ""
 .balign 4, 0
 
-@ <Not too bad!!>
+@ Not too bad!!
 /* 0804f8d0 */
 .text_large
 .text_gold
-.ascii "\n\nすごいじゃなーい!!"
+.ascii "
+
+すごいじゃなーい!!"
 .text_small
 .text_normal
 .asciz ""
 .balign 4, 0
 
-@ <I was moved!>
+@ I was moved!
 /* 0804f8f8 */
 .text_large
 .text_gold
-.ascii "\n\n感動したー！"
+.ascii "
+
+感動したー！"
 .text_small
 .text_normal
 .asciz ""
 .balign 4, 0
 
-@ <Good luck!>
+@ Good luck!
 /* 0804f918 */
 .text_large
 .text_gold
-.ascii "\n\nグッド　ラック！"
+.ascii "
+
+グッド　ラック！"
 .text_small
 .text_normal
 .asciz ""
@@ -254,7 +321,9 @@ glabel D_0804f3e4
 /* 0804f93c */
 .text_large
 .text_gold
-.ascii "\n\nイケイケー！"
+.ascii "
+
+イケイケー！"
 .text_small
 .text_normal
 .asciz ""
@@ -264,7 +333,9 @@ glabel D_0804f3e4
 /* 0804f95c */
 .text_large
 .text_gold
-.ascii "\n\nファイトー！"
+.ascii "
+
+ファイトー！"
 .text_small
 .text_normal
 .asciz ""
@@ -274,7 +345,9 @@ glabel D_0804f3e4
 /* 0804f97c */
 .text_large
 .text_gold
-.ascii "\n\nがんばれー！"
+.ascii "
+
+がんばれー！"
 .text_small
 .text_normal
 .asciz ""
@@ -283,25 +356,34 @@ glabel D_0804f3e4
 @ Maybe I should try a little harder
 @ to get good at Rhythm Heaven...
 /* 0804f99c */
-.asciz "\n\n私も　ゲーム　してみようかな…\n\n"
+.asciz "
+
+私も　ゲーム　してみようかな…
+\n"
 .balign 4, 0
 
 @ But you'll be a bit happier once you
 @ find your Rhythm Sense, I'm sure.
 /* 0804f9c0 */
-.asciz "\nでも、リズム感が　よくなると　きっと　ちょっと　ハッピーに　なるんでしょうね。"
+.asciz "
+でも、リズム感が　よくなると　きっと　ちょっと　ハッピーに　なるんでしょうね。"
 .balign 4, 0
 
 @ Well, not that I'm very
 @ aware of it myself.
 /* 0804fa10 */
-.asciz "\nま、私なんかは　あんまり\nいしきすることも　ないんですがね。\n\n"
+.asciz "
+ま、私なんかは　あんまり
+いしきすることも　ないんですがね。
+\n"
 .balign 4, 0
 
 @ By the way, I wonder how
 @ Rhythm Sense is for humans?
 /* 0804fa50 */
-.asciz "\nそれはそうと、リズム感って　人間にとって　どういうものなんでしょうねぇ。\n\n"
+.asciz "
+それはそうと、リズム感って　人間にとって　どういうものなんでしょうねぇ。
+\n"
 .balign 4, 0
 
 @ Did you know that already?
@@ -309,7 +391,10 @@ glabel D_0804f3e4
 @ talking down to you.
 @ Anyways, see you again.
 /* 0804fa9c */
-.asciz "\nまぁ、そういうモン　らしいです。\nテキトーで　ごめんなさいネ。\nでは　また。"
+.asciz "
+まぁ、そういうモン　らしいです。
+テキトーで　ごめんなさいネ。
+では　また。"
 .balign 4, 0
 
 @ Halfway between one clap
@@ -317,14 +402,20 @@ glabel D_0804f3e4
 @ is called the "offbeat".
 @ At least, so I understand.
 /* 0804fae8 */
-.asciz "\nその　手びょうしと手びょうしの\nちょうど　まん中のタイミングが\n「ウラ」なんだそうです。"
+.asciz "
+その　手びょうしと手びょうしの
+ちょうど　まん中のタイミングが
+「ウラ」なんだそうです。"
 .balign 4, 0
 
 @ How do I explain it...
 @ Well, you naturally clap
 @ your hands to music, right?
 /* 0804fb40 */
-.asciz "\nたとえば、音楽にあわせて\n自然に手をたたくとしますね。\n\n"
+.asciz "
+たとえば、音楽にあわせて
+自然に手をたたくとしますね。
+\n"
 .balign 4, 0
 
 @ Honestly, I wasn't sure
@@ -332,43 +423,62 @@ glabel D_0804f3e4
 @ So, the other day I looked
 @ up the definition.
 /* 0804fb7c */
-.asciz "\nま、私も　それほど　詳しくはないので　アレなんですけどネ。\n\n"
+.asciz "
+ま、私も　それほど　詳しくはないので　アレなんですけどネ。
+\n"
 .balign 4, 0
 
 @ I hear the word "offbeat" often. 
 @ Do you know what an "offbeat" is?
 /* 0804fbbc */
-.asciz "\nそれはそうと、この世界でよく聞く\n「ウラ」って　どういうものか\n知ってますか？"
+.asciz "
+それはそうと、この世界でよく聞く
+「ウラ」って　どういうものか
+知ってますか？"
 .balign 4, 0
 
 @ Well, nothing we can do but practice.
 @ Take care for now.
 /* 0804fc0c */
-.asciz "\nま、ぼちぼち　やっていきましょうネ。\nでは　また。\n\n"
+.asciz "
+ま、ぼちぼち　やっていきましょうネ。
+では　また。
+\n"
 .balign 4, 0
 
 @ Counting to yourself is hard, isn't it?
 @ I always go too fast or lose my place.
 /* 0804fc44 */
-.asciz "\n空白を　カウントするってのは\nムズいもんですね～。\n\n"
+.asciz "
+空白を　カウントするってのは
+ムズいもんですね～。
+\n"
 .balign 4, 0
 
 @ I always have trouble with
 @ the rests in the second test.
 /* 0804fc7c */
-.asciz "\nなかなか　どうして　２つめのテストが　うまく　できないんですヨ。\n\n"
+.asciz "
+なかなか　どうして　２つめのテストが　うまく　できないんですヨ。
+\n"
 .balign 4, 0
 
 @ I just tried it again yesterday, but
 @ 65 points seems to be my limit...
 /* 0804fcc0 */
-.asciz "\n私も　ときどき　やるんですけど\n６５点くらいが　限界なんですよねぇ…\n\n"
+.asciz "
+私も　ときどき　やるんですけど
+６５点くらいが　限界なんですよねぇ…
+\n"
 .balign 4, 0
 
 @ Say, when was the last time you
 @ checked your "Rhythm Test" score?
 /* 0804fd08 */
-.asciz "\nそれはそうと、\n最近　「リズム感測定」してます？\n\n"
+.asciz "
+それはそうと、
+最近　「リズム感測定」してます？
+\n"
 .balign 4, 0
 
 @ Maybe it's for the best.
@@ -376,13 +486,17 @@ glabel D_0804f3e4
 @ just have to keep at it.
 @ You should try your best, too.
 /* 0804fd3c */
-.asciz "\nま、楽器は　すぐには　うまくならないでしょうし、じっくりと　つきあってみましょうかね…"
+.asciz "
+ま、楽器は　すぐには　うまくならないでしょうし、じっくりと　つきあってみましょうかね…"
 .balign 4, 0
 
 @ You'll find it's hard to quit
 @ once you start a lesson.
 /* 0804fd94 */
-.asciz "\nレッスンを　やりだすと　これが\nなかなか　やめられないんですよね～。\n\n"
+.asciz "
+レッスンを　やりだすと　これが
+なかなか　やめられないんですよね～。
+\n"
 .balign 4, 0
 
 @ The teacher is really strict.
@@ -390,122 +504,175 @@ glabel D_0804f3e4
 @ lesson, but he told me to
 @ just keep on trying my best.
 /* 0804fddc */
-.asciz "\n先生が、こういうのは　すききらいが\nあるから、ムリして　しないでネって\n言ってましたけど、"
+.asciz "
+先生が、こういうのは　すききらいが
+あるから、ムリして　しないでネって
+言ってましたけど、"
 .balign 4, 0
 
 @ I take lessons once a week, but
 @ I don't really seem to improve.
 /* 0804fe38 */
-.asciz "\n私は　週に１回だけ　レッスンを\nうけてるんですが、なかなか\n上達しませんねぇ。"
+.asciz "
+私は　週に１回だけ　レッスンを
+うけてるんですが、なかなか
+上達しませんねぇ。"
 .balign 4, 0
 
 @ Let me ask... have you tried the
 @ Drum Lessons in the Prize Corner?
 /* 0804fe88 */
-.asciz "\nそれはそうと、おまけコーナーの　ドラムレッスンって　やったことあります？\n\n"
+.asciz "
+それはそうと、おまけコーナーの　ドラムレッスンって　やったことあります？
+\n"
 .balign 4, 0
 
 @ Learn from me, and don't forget
 @ to take a break every so often.
 @ Anyway, see you again.
 /* 0804fed4 */
-.asciz "\nこんど　ドライブでも　行きませんか？\nま、よかったら　ですけどネ。\nでは　また。"
+.asciz "
+こんど　ドライブでも　行きませんか？
+ま、よかったら　ですけどネ。
+では　また。"
 .balign 4, 0
 
 @ What? Oh, I was talking to myself.
 @ It was a monologue... sorry.
 /* 0804ff24 */
-.asciz "\nあ、いや、こっちの話です。\nひとりごとですので…　すみませんね。\n\n"
+.asciz "
+あ、いや、こっちの話です。
+ひとりごとですので…　すみませんね。
+\n"
 .balign 4, 0
 
 @ I was up all last night playing.
 @ I just couldn't stop myself...
 /* 0804ff68 */
-.asciz "\n\nきのう　おそくまで　遊んでたからなぁ…\n\n"
+.asciz "
+
+きのう　おそくまで　遊んでたからなぁ…
+\n"
 .balign 4, 0
 
 @ By the way, right now
 @ I'm terribly tired...
 /* 0804ff94 */
-.asciz "\nそれはそうと、\nなんだか　今　すごく　ねむいのです…\n\n"
+.asciz "
+それはそうと、
+なんだか　今　すごく　ねむいのです…
+\n"
 .balign 4, 0
 
 @ All I can do is pour
 @ the coffee, but... heh.
 /* 0804ffcc */
-.asciz "\n私は、コーヒーを　入れるだけしか\nできませんが…　ははは…\n\n"
+.asciz "
+私は、コーヒーを　入れるだけしか
+できませんが…　ははは…
+\n"
 .balign 4, 0
 
 @ Well... he isn't a talkative person,
 @ but you seem to be getting along.
 /* 0805000c */
-.asciz "\nま、まぁ　無口な方ですが\nなかよくしたいんじゃないですか？\n\n"
+.asciz "
+ま、まぁ　無口な方ですが
+なかよくしたいんじゃないですか？
+\n"
 .balign 4, 0
 
 @ Hm? You didn't order it?
 @ Ah, I see. This is actually
 @ for the guy next to you...
 /* 0805004c */
-.asciz "\nえ？　たのんでないって？　あぁ、これは　おとなりから　なんですが…\n\n"
+.asciz "
+え？　たのんでないって？　あぁ、これは　おとなりから　なんですが…
+\n"
 .balign 4, 0
 
 @ By the way, here's the
 @ coffee you ordered.
 /* 08050094 */
-.asciz "\nそれはそうと、\nコーヒー　入りましたヨ。\n\n"
+.asciz "
+それはそうと、
+コーヒー　入りましたヨ。
+\n"
 .balign 4, 0
 
 @ Hey, you're a human, right?
 @ Well, despite our species I still
 @ hope that we can get along
 /* 080500c0 */
-.asciz "\nお客さんは　人間ですよね？\nまぁ、私は　犬ですが　これからも\nなかよくしてくださいネ～。"
+.asciz "
+お客さんは　人間ですよね？
+まぁ、私は　犬ですが　これからも
+なかよくしてくださいネ～。"
 .balign 4, 0
 
 @ When you get to be my age,
 @ time really does seem to fly.
 /* 08050118 */
-.asciz "\nいやはや、このトシになると\n時がたつのが　はやいですねぇ。\n\n"
+.asciz "
+いやはや、このトシになると
+時がたつのが　はやいですねぇ。
+\n"
 .balign 4, 0
 
 @ I'm not one of those young pups,
 @ either. I'm nine years old.
 /* 08050158 */
-.asciz "\nかれこれ　９才で　もう　けっこう\nいいトシなんです。\n\n"
+.asciz "
+かれこれ　９才で　もう　けっこう
+いいトシなんです。
+\n"
 .balign 4, 0
 
 @ By the way, if you hadn't
 @ noticed, I'm actually a dog.
 /* 08050190 */
-.asciz "\nそれはそうと、\n実は　私　犬なんですヨ。\n\n"
+.asciz "
+それはそうと、
+実は　私　犬なんですヨ。
+\n"
 .balign 4, 0
 
 @ Just don't think that good
 @ rhythm makes you qualified
 @ to be a doctor, ha ha ha.
 /* 080501bc */
-.asciz "\nまぁ、私には　詳しい理屈なんて\nわからないですけどネ。ははは。\n\n"
+.asciz "
+まぁ、私には　詳しい理屈なんて
+わからないですけどネ。ははは。
+\n"
 .balign 4, 0
 
 @ Music is strange, isn't it?
 @ It has this mysterious
 @ power to heal the heart.
 /* 08050200 */
-.asciz "\n音楽って　フシギですよね～。\nどうして　あんなにも　心を\nゆさぶるんでしょうね。"
+.asciz "
+音楽って　フシギですよね～。
+どうして　あんなにも　心を
+ゆさぶるんでしょうね。"
 .balign 4, 0
 
 @ Taking out a good old record and
 @ reminiscing about the past
 @ always makes me feel better.
 /* 08050250 */
-.asciz "\nけっこう古いレコードなんかを　出してきて　当時を　思い出したりすると、ホッとするんです。"
+.asciz "
+けっこう古いレコードなんかを　出してきて　当時を　思い出したりすると、ホッとするんです。"
 .balign 4, 0
 
 @ By the way, what do
 @ you do when you're sad?
 @ I always listen to music.
 /* 080502ac */
-.asciz "\nそれはそうと、悲しいときって\nどうしてますか？\n私は　もっぱら　音楽を　ききますねぇ。"
+.asciz "
+それはそうと、悲しいときって
+どうしてますか？
+私は　もっぱら　音楽を　ききますねぇ。"
 .balign 4, 0
 
 @ Then again, if we gave speeches
@@ -513,14 +680,20 @@ glabel D_0804f3e4
 @ argued with trumpets, it'd get
 @ noisy, don't you think? Ha ha ha.
 /* 08050304 */
-.asciz "\nでも　もし、ドラムで　選挙演説とか\nボンゴで　夫婦ゲンカとかあったら\nやかましそうですネ。ははは。"
+.asciz "
+でも　もし、ドラムで　選挙演説とか
+ボンゴで　夫婦ゲンカとかあったら
+やかましそうですネ。ははは。"
 .balign 4, 0
 
 @ I learned it from another
 @ customer, and now I want
 @ to try it for myself.
 /* 08050368 */
-.asciz "\nこのまえ　いらっしゃった　お客さんが\n教えてくれたんですけど、ちょっと\n面白そうじゃないですか？"
+.asciz "
+このまえ　いらっしゃった　お客さんが
+教えてくれたんですけど、ちょっと
+面白そうじゃないですか？"
 .balign 4, 0
 
 @ For example... you could play
@@ -528,27 +701,38 @@ glabel D_0804f3e4
 @ you?" or say "Please come
 @ visit!" even from far away.
 /* 080503c8 */
-.asciz "\nタイコの大きな音で　リズムをきざんで\nはなれた人と　コミュニケーションを\nとるらしいんですヨ。"
+.asciz "
+タイコの大きな音で　リズムをきざんで
+はなれた人と　コミュニケーションを
+とるらしいんですヨ。"
 .balign 4, 0
 
 @ By attaching words and meanings
 @ to certain beats, you can have a
 @ conversation without speaking.
 /* 08050428 */
-.asciz "\nリズムパターンに　言葉や　意味を　対応させて、会話をするんだそうです。\n\n"
+.asciz "
+リズムパターンに　言葉や　意味を　対応させて、会話をするんだそうです。
+\n"
 .balign 4, 0
 
 @ Say... did you know that you can
 @ have a conversation with rhythm?
 /* 08050474 */
-.asciz "\nそれはそうと、リズムで\n会話ができるって　知ってました？\n\n"
+.asciz "
+それはそうと、リズムで
+会話ができるって　知ってました？
+\n"
 .balign 4, 0
 
 @ Oh... but if you already knew that,
 @ I'm sorry if I bored you.
 @ See you later.
 /* 080504b0 */
-.asciz "\nご存知でしたら　つまらない話でしたネ。\nすみません。ではまた。\n\n"
+.asciz "
+ご存知でしたら　つまらない話でしたネ。
+すみません。ではまた。
+\n"
 .balign 4, 0
 
 @ Collecting lots of medals will
@@ -556,49 +740,72 @@ glabel D_0804f3e4
 @ you can play with. Please do your
 @ best to collect them all!
 /* 080504f4 */
-.asciz "\nメダルを　集めると　いろいろな\nおまけが　遊べるようになるので\nがんばって　集めてくださいネ。"
+.asciz "
+メダルを　集めると　いろいろな
+おまけが　遊べるようになるので
+がんばって　集めてくださいネ。"
 .balign 4, 0
 
 @ If you get a "Superb",
 @ you'll even get a medal.
 /* 08050554 */
-.asciz "\nで、「ハイレベル」をとると\nメダルが　もらえるんです。\n\n"
+.asciz "
+で、「ハイレベル」をとると
+メダルが　もらえるんです。
+\n"
 .balign 4, 0
 
 @ There are three grades, you know:
 @ "Try Again", "OK" and "Superb".
 /* 08050590 */
-.asciz "\nゲームの成績は「やりなおし」「平凡」「ハイレベル」の３つが、あるんですヨ。\n\n"
+.asciz "
+ゲームの成績は「やりなおし」「平凡」「ハイレベル」の３つが、あるんですヨ。
+\n"
 .balign 4, 0
 
 @ By the way, have you ever
 @ gotten a "Superb" rating on a game?
 /* 080505e0 */
-.asciz "\nそれはそうと、ゲームで\n「ハイレベル」っていう成績を\nとったことありますか？"
+.asciz "
+それはそうと、ゲームで
+「ハイレベル」っていう成績を
+とったことありますか？"
 .balign 4, 0
 
 @ Oh! You're here, you're here!
 @ I've been waiting, you know!!
 glabel D_0805062c
-.asciz "\nお、きたきた！\n待ってたヨ～！！\n\n"
+.asciz "
+お、きたきた！
+待ってたヨ～！！
+\n"
 .balign 4, 0
 
 @ Are you making progress?
 @ Please do your best!
 glabel D_08050650
-.asciz "\nゲーム　すすんでますか？\nがんばって　くださいね～。\n\n"
+.asciz "
+ゲーム　すすんでますか？
+がんばって　くださいね～。
+\n"
 .balign 4, 0
 
 @ Aren't you getting tired?
 @ Don't forget to rest now and then.
 glabel D_08050688
-.asciz "\nだいぶ　つかれたのでは　ないですか？\nときどき　休んだほうが　よいですよ。\n\n"
+.asciz "
+だいぶ　つかれたのでは　ないですか？
+ときどき　休んだほうが　よいですよ。
+\n"
 .balign 4, 0
 
 @ You've been at this a while,
 @ haven't you? Please rest a little.
 glabel D_080506d8
-.asciz "\nかなり　はまってますねぇ。\nすこしは　休んでくださいね。\n\n"
+.asciz "
+かなり　はまってますねぇ。
+すこしは　休んでくださいね。
+\n"
 .balign 4, 0
 
 glabel D_08050714
@@ -637,7 +844,8 @@ glabel D_0805075c
 
 @ Are you having trouble?
 glabel D_0805076c
-.asciz "行きづまってませんか？\n\n"
+.asciz "行きづまってませんか？
+\n"
 .balign 4, 0
 
 @ Hmmm... is
@@ -653,7 +861,8 @@ glabel D_08050794
 
 @ you trouble earning that medal?
 glabel D_0805079c
-.asciz "てこずってるんですねぇ。\n\n"
+.asciz "てこずってるんですねぇ。
+\n"
 .balign 4, 0
 
 @ Rumor has it
@@ -674,26 +883,35 @@ glabel D_080507e8
 
 @ Ah! Wait, I remember!
 glabel D_08050800
-.asciz "\n\nあ、　ちょっと　思い出しました！\n\n"
+.asciz "
+
+あ、　ちょっと　思い出しました！
+\n"
 .balign 4, 0
 
 @ Hey, here's a tip!
 @ Soon
 glabel D_08050828
-.asciz "そうそう、\nもうすぐ"
+.asciz "そうそう、
+もうすぐ"
 .balign 4, 0
 
 @ is going
 @ to be having a perfect campaign.
 glabel D_0805083c
 .text_normal
-.asciz "で、\nパーフェクトキャンペーンを\nするそうですヨ。"
+.asciz "で、
+パーフェクトキャンペーンを
+するそうですヨ。"
 .balign 4, 0
 
 @ Please keep on working hard.
 @ I'll be here rooting for you~!
 glabel D_08050874
-.asciz "\nこれからも　がんばってね。\nおうえん　してるからね～！\n\n"
+.asciz "
+これからも　がんばってね。
+おうえん　してるからね～！
+\n"
 .balign 4, 0
 
 @ If you like, I could let you
@@ -706,12 +924,16 @@ glabel D_080508b0
 .text_gold
 .ascii "進めるようにしておく"
 .text_normal
-.asciz "けど…？\n\n　　　　　　　　「おねがいします」\n　　　　　　　　「けっこうです」"
+.asciz "けど…？
+
+　　　　　　　　「おねがいします」
+　　　　　　　　「けっこうです」"
 .balign 4, 0
 
 @ <Leave it to me!>
 glabel D_08050944
-.ascii "\n\n"
+.ascii "
+\n"
 .text_large
 .text_gold
 .ascii "まかせとき！"
@@ -725,20 +947,29 @@ glabel D_08050944
 @ it with your own strength.
 @ Excellent!
 glabel D_08050964
-.asciz "そうですか。\nじぶんの　チカラで\nがんばるんですね。\nエライ！！"
+.asciz "そうですか。
+じぶんの　チカラで
+がんばるんですね。
+エライ！！"
 .balign 4, 0
 
 @ I hope the next game will go
 @ much better for you.
 @ Tell me about it next time.
 glabel D_080509a4
-.asciz "\n次のゲーム　どんなのでしょうね。\nうまくできると　いいね～。\nではまた。"
+.asciz "
+次のゲーム　どんなのでしょうね。
+うまくできると　いいね～。
+ではまた。"
 .balign 4, 0
 
 @ Well then, please
 @ do your best!
 glabel D_080509ec
-.asciz "\n\nでは　がんばってくださいね～。\n\n"
+.asciz "
+
+では　がんばってくださいね～。
+\n"
 .balign 4, 0
 
 @ Were you practicing for the
@@ -750,27 +981,38 @@ glabel D_08050a10
 .text_gold
 .ascii "パーフェクト　キャンペーン"
 .text_normal
-.asciz "　に　そなえて　れんしゅうですか？\n\n　　　　　　　　「そうなんです」\n　　　　　　　　「ちがいますヨ」"
+.asciz "　に　そなえて　れんしゅうですか？
+
+　　　　　　　　「そうなんです」
+　　　　　　　　「ちがいますヨ」"
 .balign 4, 0
 
 @ Just try your best and
 @ go get that Perfect!
 glabel D_08050a98
-.asciz "\nがんばって　パーフェクト、\nとってくださいネ！\n\n"
+.asciz "
+がんばって　パーフェクト、
+とってくださいネ！
+\n"
 .balign 4, 0
 
 @ At long last...
 @ You have completed
 @ the Perfect Campaign!
 glabel D_08050acc
-.asciz "\nとうとう、\nパーフェクト　キャンペーンを\nコンプリートしたんだって！？"
+.asciz "
+とうとう、
+パーフェクト　キャンペーンを
+コンプリートしたんだって！？"
 .balign 4, 0
 
-@ <Crazy awesome!!>
+@ Crazy awesome!!
 glabel D_08050b14
 .text_large
 .text_gold
-.ascii "\n\nめちゃすごーい!!"
+.ascii "
+
+めちゃすごーい!!"
 .text_small
 .text_normal
 .asciz ""
@@ -2589,7 +2831,10 @@ glabel D_08050c24
 @ is good, so you get
 @ to play in the band!
 /* 080524e4 */
-.asciz "ライブに出演だ！\nキミのリズム感は\nよいと思うから\nどうぞお気楽に～"
+.asciz "ライブに出演だ！
+キミのリズム感は
+よいと思うから
+どうぞお気楽に～"
 .balign 4, 0
 
 @ Concert Hall
@@ -2602,7 +2847,10 @@ glabel D_08050c24
 @ the people who made
 @ the game.
 /* 08052530 */
-.asciz "もし よかったら\n見てみてネ。\nこのゲームの\nスタッフたちです。"
+.asciz "もし よかったら
+見てみてネ。
+このゲームの
+スタッフたちです。"
 .balign 4, 0
 
 @ Credits
@@ -2615,7 +2863,10 @@ glabel D_08050c24
 @ You paid good money
 @ for them, so why not?
 /* 0805257c */
-.asciz "メダルを あつめて\nドラムのレッスンを\nうけてみよう。\n上手になってネ！"
+.asciz "メダルを あつめて
+ドラムのレッスンを
+うけてみよう。
+上手になってネ！"
 .balign 4, 0
 
 @ Drum Lessons
@@ -2628,7 +2879,10 @@ glabel D_08050c24
 @ games. See how
 @ far you can get!
 /* 080525d4 */
-.asciz "メダルを あつめて\nとくべつなゲームに\n挑戦してみてネ！\nいくつかあるヨ。"
+.asciz "メダルを あつめて
+とくべつなゲームに
+挑戦してみてネ！
+いくつかあるヨ。"
 .balign 4, 0
 
 @ Endless Games
@@ -2641,7 +2895,10 @@ glabel D_08050c24
 @ toys. Everyone
 @ likes toys!
 /* 08052624 */
-.asciz "メダルを あつめて\n音のでるおもちゃで\nあそんでみてネ！\nいくつかあるヨ。"
+.asciz "メダルを あつめて
+音のでるおもちゃで
+あそんでみてネ！
+いくつかあるヨ。"
 .balign 4, 0
 
 @ Rhythm Toys
@@ -2654,7 +2911,10 @@ glabel D_08050c24
 @ Come here for
 @ a consultation.
 /* 08052678 */
-.asciz "最近の調子 どう？\nなにか気になれば\nここで相談を\nしてみよう。"
+.asciz "最近の調子 どう？
+なにか気になれば
+ここで相談を
+してみよう。"
 .balign 4, 0
 
 @ Cafe
@@ -2830,7 +3090,10 @@ glabel D_08050c24
 @ far speaks for
 @ itself, you know! (NP)
 /* 08052a94 */
-.asciz "キミの実力を\n試してみてみる？\nこれまでの経験が\nモノを言うヨ～！"
+.asciz "キミの実力を
+試してみてみる？
+これまでの経験が
+モノを言うヨ～！"
 .balign 4, 0
 
 @ Remix 1
@@ -2859,7 +3122,10 @@ glabel D_08050c24
 @ We're all in high
 @ spirits, yay! (NP)
 /* 08052b34 */
-.asciz "これが いまどきの\nぼんおどり！\nノリノリだヨ！\nイェーイ！"
+.asciz "これが いまどきの
+ぼんおどり！
+ノリノリだヨ！
+イェーイ！"
 .balign 4, 0
 
 @ The☆Bon Dance
@@ -2888,7 +3154,10 @@ glabel D_08050c24
 @ Clap your hands
 @ and sing along!
 /* 08052bbc */
-.asciz "ぼんおどりの\nうたに あわせて\nパンッと 手を\nたたきましょう。"
+.asciz "ぼんおどりの
+うたに あわせて
+パンッと 手を
+たたきましょう。"
 .balign 4, 0
 
 @ The☆Bon-Odori
@@ -2917,7 +3186,10 @@ glabel D_08050c24
 @ substance... just
 @ what viewers want.
 /* 08052c58 */
-.asciz "司会者の、\n「たたいた回数」を\n当てるカンタンな\nクイズです。"
+.asciz "司会者の、
+「たたいた回数」を
+当てるカンタンな
+クイズです。"
 .balign 4, 0
 
 @ Quiz Show
@@ -2946,7 +3218,10 @@ glabel D_08050c24
 @ Be charmed by their
 @ cute voices! (NP)
 /* 08052d04 */
-.asciz "あのラップメンに\nライバルが登場だ！\nキュートなボイスに\nもう メロメロ！"
+.asciz "あのラップメンに
+ライバルが登場だ！
+キュートなボイスに
+もう メロメロ！"
 .balign 4, 0
 
 @ Rap Women
@@ -2975,7 +3250,10 @@ glabel D_08050c24
 @ Fitting, because they
 @ are pretty cool too.
 /* 08052dc0 */
-.asciz "クールなふたり組が\nやってきた！\nアツいラップで\n大コーフンだぜ！"
+.asciz "クールなふたり組が
+やってきた！
+アツいラップで
+大コーフンだぜ！"
 .balign 4, 0
 
 @ Rap Men
@@ -3004,7 +3282,10 @@ glabel D_08050c24
 @ We come... in style.
 @ (No practice)
 /* 08052e68 */
-.asciz "宇宙を代表\\する\nダンサーたち！\nキレた動きに\nくぎづけです！！"
+.asciz "宇宙を代表\\する
+ダンサーたち！
+キレた動きに
+くぎづけです！！"
 .balign 4, 0
 
 @ Cosmic Dance
@@ -3033,7 +3314,9 @@ glabel D_08050c24
 @ But, let's dance.
 @ Let's Space Dance!
 /* 08052f18 */
-.asciz "ここは無重力の宇宙。\nでも、 おどろうヨ！\nレッツスペースダンス！"
+.asciz "ここは無重力の宇宙。
+でも、 おどろうヨ！
+レッツスペースダンス！"
 .balign 4, 0
 
 @ Space Dance
@@ -3061,7 +3344,10 @@ glabel D_08050c24
 @ for the penguins'
 @ opening night!
 /* 08052fd4 */
-.asciz "ペンギン君たちの\nショータイムが\nはじまるヨ！\nわーいわーい！"
+.asciz "ペンギン君たちの
+ショータイムが
+はじまるヨ！
+わーいわーい！"
 .balign 4, 0
 
 @ Showtime
@@ -3090,7 +3376,9 @@ glabel D_08050c24
 @ Quick, their show
 @ is about to start!
 /* 0805306c */
-.asciz "こぎつねトラン、\nそしてポリンの\nアクロバティックショーがはじまるヨ！"
+.asciz "こぎつねトラン、
+そしてポリンの
+アクロバティックショーがはじまるヨ！"
 .balign 4, 0
 
 @ Tram & Pauline
@@ -3119,7 +3407,10 @@ glabel D_08050c24
 @ I'm out of this
 @ business for good.
 /* 08053108 */
-.asciz "あなたはネズミ。\n大スキなチーズを\nめざして\nストップ＆ゴー！！"
+.asciz "あなたはネズミ。
+大スキなチーズを
+めざして
+ストップ＆ゴー！！"
 .balign 4, 0
 
 @ Rat Race
@@ -3163,7 +3454,10 @@ glabel D_08050c24
 @ with these three
 @ close friends!
 /* 08053200 */
-.asciz "なかよし３人組、\n声をかけあいながら\nいつも楽しくトスの\n練習してます。"
+.asciz "なかよし３人組、
+声をかけあいながら
+いつも楽しくトスの
+練習してます。"
 .balign 4, 0
 
 @ Toss Boys
@@ -3197,7 +3491,10 @@ glabel D_08050c24
 @ (You only have to
 @ do the fun parts.)
 /* 080532b4 */
-.asciz "筆を使って日本語を\n書きます。\nあなたがするのは\nオイシイとこだけ。"
+.asciz "筆を使って日本語を
+書きます。
+あなたがするのは
+オイシイとこだけ。"
 .balign 4, 0
 
 @ Power Calligraphy
@@ -3226,7 +3523,10 @@ glabel D_08050c24
 @ fireworks. The colors
 @ are amazing!
 /* 08053358 */
-.asciz "夏といえばさ、\nやっぱ花火かな？\n色あざやかに\n打ち上げよう！"
+.asciz "夏といえばさ、
+やっぱ花火かな？
+色あざやかに
+打ち上げよう！"
 .balign 4, 0
 
 @ Fireworks
@@ -3255,7 +3555,10 @@ glabel D_08050c24
 @ cross the sea!
 @ (No practice.)
 /* 080533d4 */
-.asciz "ジャンプが得意な\n白いウサギさん。\nビートにのって\n海をわたろう！"
+.asciz "ジャンプが得意な
+白いウサギさん。
+ビートにのって
+海をわたろう！"
 .balign 4, 0
 
 @ Bunny Hop
@@ -3284,7 +3587,10 @@ glabel D_08050c24
 @ beautiful flower!
 @ Let's see some magic!
 /* 0805348c */
-.asciz "あなたはまほう使い。\nさみしがりやの\nおじょうちゃんに花を\nプレゼントしよう。"
+.asciz "あなたはまほう使い。
+さみしがりやの
+おじょうちゃんに花を
+プレゼントしよう。"
 .balign 4, 0
 
 @ Wizard's Waltz
@@ -3313,7 +3619,10 @@ glabel D_08050c24
 @ Listen to the cues
 @ and hop to it! (NP)
 /* 0805355c */
-.asciz "行進をするのだ。\nこんどのは ちょっと\nテクニカルだ！\nがんばりたまえ。"
+.asciz "行進をするのだ。
+こんどのは ちょっと
+テクニカルだ！
+がんばりたまえ。"
 .balign 4, 0
 
 @ Marcher 2
@@ -3342,7 +3651,9 @@ glabel D_08050c24
 @ of camaraderie.
 @ Also, rhythm.
 /* 0805360c */
-.asciz "行進をするのだ。\nかってな行動はチームをダメにする！\nがんばりたまえ。"
+.asciz "行進をするのだ。
+かってな行動はチームをダメにする！
+がんばりたまえ。"
 .balign 4, 0
 
 @ Marching Orders
@@ -3371,7 +3682,10 @@ glabel D_08050c24
 @ keep up? Don't lose!
 @ (No practice.)
 /* 080536a8 */
-.asciz "サルがパワーアップ！\nあなたは かれらに\nついていけるか！？\nまけるな～！"
+.asciz "サルがパワーアップ！
+あなたは かれらに
+ついていけるか！？
+まけるな～！"
 .balign 4, 0
 
 @ Turbo Tap Trial
@@ -3400,7 +3714,10 @@ glabel D_08050c24
 @ tap-dance with
 @ the monkeys?
 /* 0805374c */
-.asciz "あなたは女の子。\nとなりのサルたちに\n合わせてタップを\nきざむッス！"
+.asciz "あなたは女の子。
+となりのサルたちに
+合わせてタップを
+きざむッス！"
 .balign 4, 0
 
 @ Tap Trial
@@ -3429,7 +3746,10 @@ glabel D_08050c24
 @ Hit the ball.
 @ Don't cry. (NP)
 /* 080537ec */
-.asciz "ズームをきにするな！\n心でボールを打て！\n視覚に頼るな！\n涙もふくな～！"
+.asciz "ズームをきにするな！
+心でボールを打て！
+視覚に頼るな！
+涙もふくな～！"
 .balign 4, 0
 
 @ Spaceball 2
@@ -3458,7 +3778,10 @@ glabel D_08050c24
 @ the trajectories
 @ in your heart!
 /* 0805389c */
-.asciz "ズームをきにするな！\n心でボールを打て！\n視覚に頼るな！\nどんと行け～！"
+.asciz "ズームをきにするな！
+心でボールを打て！
+視覚に頼るな！
+どんと行け～！"
 .balign 4, 0
 
 @ Spaceball
@@ -3487,7 +3810,10 @@ glabel D_08050c24
 @ you can stay behind
 @ and stop them. (NP)
 /* 0805394c */
-.asciz "そこのけ そこのけ\n奴らが通る。\nおぬしは サムライ、\n斬り捨て 御免！"
+.asciz "そこのけ そこのけ
+奴らが通る。
+おぬしは サムライ、
+斬り捨て 御免！"
 .balign 4, 0
 
 @ Samurai Slice
@@ -3515,7 +3841,10 @@ glabel D_08050c24
 @ arrows and aim
 @ for their souls! (NP)
 /* 080539ec */
-.asciz "白いヤツが こちらを\nナメきっている！\nムカムカーッ！！\nこらしめちゃおう！"
+.asciz "白いヤツが こちらを
+ナメきっている！
+ムカムカーッ！！
+こらしめちゃおう！"
 .balign 4, 0
 
 @ Sneaky Spirits 2
@@ -3544,7 +3873,10 @@ glabel D_08050c24
 @ haunted house! Grab
 @ your trusty bow!
 /* 08053a8c */
-.asciz "白いヤツが こちらを\nバカにしている！\nムキーッ！！\nこらしめちゃおう！"
+.asciz "白いヤツが こちらを
+バカにしている！
+ムキーッ！！
+こらしめちゃおう！"
 .balign 4, 0
 
 @ Sneaky Spirits
@@ -3573,7 +3905,10 @@ glabel D_08050c24
 @ my ancestors!
 @ (No practice.)
 /* 08053b44 */
-.asciz "オレのじいちゃんの\nじいちゃんの\nじいちゃんは\n忍者なんだぜ。"
+.asciz "オレのじいちゃんの
+じいちゃんの
+じいちゃんは
+忍者なんだぜ。"
 .balign 4, 0
 
 @ Ninja Reincarnate
@@ -3602,7 +3937,9 @@ glabel D_08050c24
 @ challenge with both
 @ of your hands. (NP)
 /* 08053be8 */
-.asciz "敵襲(てきしゅう)だ！\n十\\字ボタンとAボタンで応戦(おうせん)だ！\nフジヤマ（ふじさん）！！"
+.asciz "敵襲(てきしゅう)だ！
+十\\字ボタンとAボタンで応戦(おうせん)だ！
+フジヤマ（ふじさん）！！"
 .balign 4, 0
 
 @ Ninja Bodyguard
@@ -3631,7 +3968,10 @@ glabel D_08050c24
 @ friends, and they
 @ need our help! (NP)
 /* 08053c90 */
-.asciz "とんでくる丸い玉。\nほんとにイイやつ\nなんですヨ～。\n落とさないでネ！"
+.asciz "とんでくる丸い玉。
+ほんとにイイやつ
+なんですヨ～。
+落とさないでネ！"
 .balign 4, 0
 
 @ Bouncy Road 2
@@ -3660,7 +4000,9 @@ glabel D_08050c24
 @ They're good to us,
 @ so don't drop them!
 /* 08053d3c */
-.asciz "とんでくる丸い玉。\nあれはイイやつです。\n落とさないでネ！"
+.asciz "とんでくる丸い玉。
+あれはイイやつです。
+落とさないでネ！"
 .balign 4, 0
 
 @ Bouncy Road
@@ -3689,7 +4031,10 @@ glabel D_08050c24
 @ outbreak on our
 @ hands. Help us! (NP)
 /* 08053dd4 */
-.asciz "助手からの知らせ\n「大変です！\nバイキン発生です！！\n先生、たすけて～」"
+.asciz "助手からの知らせ
+「大変です！
+バイキン発生です！！
+先生、たすけて～」"
 .balign 4, 0
 
 @ Sick Beats
@@ -3718,7 +4063,10 @@ glabel D_08050c24
 @ are a huge pain!
 @ (No practice.)
 /* 08053ea0 */
-.asciz "またしても生えてくる\nうっとうしい「毛」！\nぬいちゃえ、 \nぬいちゃえ！"
+.asciz "またしても生えてくる
+うっとうしい「毛」！
+ぬいちゃえ、 
+ぬいちゃえ！"
 .balign 4, 0
 
 @ Rhythm Tweezers 2
@@ -3747,7 +4095,10 @@ glabel D_08050c24
 @ Pluck'em,
 @ pluck'em!
 /* 08053f64 */
-.asciz "どんどん生えてくる\nうっとうしい「毛」！\nぬいちゃえ、 \nぬいちゃえ！"
+.asciz "どんどん生えてくる
+うっとうしい「毛」！
+ぬいちゃえ、 
+ぬいちゃえ！"
 .balign 4, 0
 
 @ Rhythm Tweezers
@@ -3776,7 +4127,10 @@ glabel D_08050c24
 @ watch out for those
 @ fish! (No practice.)
 /* 08054014 */
-.asciz "音楽にあわせて\nジャンプしてネ！\nビリビリウオに\n気をつけよう。"
+.asciz "音楽にあわせて
+ジャンプしてネ！
+ビリビリウオに
+気をつけよう。"
 .balign 4, 0
 
 @ Night Walk 2
@@ -3805,7 +4159,10 @@ glabel D_08050c24
 @ and put a spring in
 @ your step. (NP)
 /* 080540c4 */
-.asciz "音楽にあわせて\nジャンプしてネ！\n星たちが あつまって\nあなたも夜空へ…"
+.asciz "音楽にあわせて
+ジャンプしてネ！
+星たちが あつまって
+あなたも夜空へ…"
 .balign 4, 0
 
 @ Night Walk
@@ -3834,7 +4191,10 @@ glabel D_08050c24
 @ both hands to meet
 @ our quotas! (NP)
 /* 0805418c */
-.asciz "これぞ左右独立！\nテンポよく こなして\nレッツ ポリリズム！\nイェーイ！"
+.asciz "これぞ左右独立！
+テンポよく こなして
+レッツ ポリリズム！
+イェーイ！"
 .balign 4, 0
 
 @ Polyrhythm 2
@@ -3892,7 +4252,10 @@ glabel D_08050c24
 @ Their new style is
 @ just too cool! (NP)
 /* 080542f0 */
-.asciz "ラフだった彼らが\nバリっとスーツを\n着てきたヨ！\nカッコイイ！！"
+.asciz "ラフだった彼らが
+バリっとスーツを
+着てきたヨ！
+カッコイイ！！"
 .balign 4, 0
 
 @ The Snappy Trio
@@ -3921,7 +4284,9 @@ glabel D_08050c24
 @ misses a beat. Watch
 @ the other two!
 /* 08054398 */
-.asciz "順番に拍手をするヨ！\nあなたは３番目。\n前の2人をよく見てネ！"
+.asciz "順番に拍手をするヨ！
+あなたは３番目。
+前の2人をよく見てネ！"
 .balign 4, 0
 
 @ The Clappy Trio
@@ -3950,7 +4315,10 @@ glabel D_08050c24
 @ But watch for the
 @ tempo change! (NP)
 /* 0805443c */
-.asciz "とんでくるモノを\nAボタンでパンチ！\nでも、 スピードが\nヘンテコだヨ。"
+.asciz "とんでくるモノを
+Aボタンでパンチ！
+でも、 スピードが
+ヘンテコだヨ。"
 .balign 4, 0
 
 @ Karate Man 2
@@ -3979,7 +4347,10 @@ glabel D_08050c24
 @ intense! (Or, at its
 @ most unorthodox...)
 /* 080544dc */
-.asciz "とんでくるモノを\nAボタンでパンチ！\nよくあるゲーム？\n…かもね。"
+.asciz "とんでくるモノを
+Aボタンでパンチ！
+よくあるゲーム？
+…かもね。"
 .balign 4, 0
 
 @ Karate Man
