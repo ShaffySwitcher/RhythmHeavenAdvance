@@ -3,31 +3,34 @@
 
 asm(".include \"include/gba.inc\"");//Temporary
 
-static u16 D_030000b4;
-static u16 D_03000098;
-static u32 D_0300009c;
+extern u16 D_030000b4;
+extern u16 D_03000098;
+extern u32 D_0300009c;
 
-static u16 D_03004ac0;
-static s16 D_03004afc;
-static s16 D_030053b8;
-static s16 D_03004b00;
-static u16 D_030000a0;
-static u16 D_030000a2;
-static s8 D_030000a8;
-static u16 D_030000ac;
+extern u16 D_03004ac0;
+extern s16 D_03004afc;
+extern s16 D_030053b8;
+extern s16 D_03004b00;
+extern u16 D_030000a0;
+extern u16 D_030000a2;
+extern s8 D_030000a8;
+extern u16 D_030000ac;
 
-static u16 D_030046b8;
-static u16 D_03005378;
-static u16 D_0300537c;
-static u16 D_030046b4;
-static u16 D_030000a4;
-static u16 D_030000a6;
+extern u16 D_030046b8;
+extern u16 D_03005378;
+extern u16 D_0300537c;
+extern u16 D_030046b4;
+extern u16 D_030000a4;
+extern u16 D_030000a6;
+extern u8 D_030000a9;
 
+extern u32 D_030053b4;
+extern u32 D_03005374;
 
 void func_08001360(void) {
     func_08003f28();
-    D_03000098 = 0;
-    D_0300009c = 0;
+    D_03000098 = NULL;
+    D_0300009c = NULL;
     return;
 }
 
@@ -42,11 +45,11 @@ void func_080013e8(u32 arg1) {
 
 void func_080013f4(u16 arg1) {
     D_03004ac0 = arg1;
-    D_03004afc = 0;
-    D_030053b8 = 0;
-    D_03004b00 = 0;
+    D_03004afc = NULL;
+    D_030053b8 = NULL;
+    D_03004b00 = NULL;
     D_030000a0 = arg1;
-    D_030000a2 = 0;
+    D_030000a2 = NULL;
     return;
 }
 
@@ -62,8 +65,8 @@ void func_0800142c(u16 arg1) {
 
 void func_08001464(u16 arg1) {
     func_080013f4(~REG_KEY);
-    func_0800142c(0);
-    D_030000a8 = 0;
+    func_0800142c(NULL);
+    D_030000a8 = NULL;
     D_030000ac = 0x3ff;
 }
 
@@ -75,11 +78,16 @@ void func_08001464(u16 arg1) {
 
 #include "asm/code_08001360/asm_08001724.s"
 
-#include "asm/code_08001360/asm_0800181c.s"
+void func_0800181c(u8 arg1) {
+    D_030000a9 = arg1;
+    return;
+}
 
 #include "asm/code_08001360/asm_08001828.s"
 
-#include "asm/code_08001360/asm_0800184c.s"
+u8 func_0800184c() {
+    return D_030053b4 >= D_03005374;
+}
 
 #include "asm/code_08001360/asm_0800186c.s"
 
@@ -95,7 +103,10 @@ u32 func_08001964(void) {
     return D_030000b4;
 }
 
-#include "asm/code_08001360/asm_08001980.s"	// Random
+u32 func_08001980(u16 arg1) {   // Random
+    D_030000b4 = D_030000b4 * 0x6d + 0x3fd;
+    return (D_030000b4 * arg1 >> 0x10) & 0xffff;
+}
 
 #include "asm/code_08001360/asm_080019a4.s"
 
