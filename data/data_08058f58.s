@@ -3688,373 +3688,165 @@
 .asciz "次は、　速いやつです。\nＡボタンと\x8f\x5c字キーの右を\n交互に押すとラクだヨ。" @ 十 Unsupported SJIS character 
 .balign 4, 0
 
-/* 0805de88 */ .word 0x4b8ffb97
-/* 0805de8c */ .word 0x4081cd82
-/* 0805de90 */ .word 0xc5829f8e
-/* 0805de94 */ .word 0xe38cc58d
-/* 0805de98 */ .word 0xb782c582
-/* 0805de9c */ .word 0x00004281
+/* 0805de88 */ 
+.asciz "練習は　次で最後です。"
+.balign 4, 0
 
-/* 0805dea0 */ .word 0xb882de82
-/* 0805dea4 */ .word 0xb582a982
-/* 0805dea8 */ .word 0xa982a282
-/* 0805deac */ .word 0x4881c882
-/* 0805deb0 */ .word 0x82aa820a
-/* 0805deb4 */ .word 0x82ce82f1
-/* 0805deb8 */ .word 0x83c482c1
-/* 0805debc */ .word 0x0049816c
+/* 0805dea0 */ 
+.asciz "むずかしいかな？\nがんばってネ！"
+.balign 4, 0
 
-/* 0805dec0 */ .word 0xea82bb82
-/* 0805dec4 */ .word 0xcd82c582
-/* 0805dec8 */ .word 0x40814181
-/* 0805decc */ .word 0x4e837b83
-/* 0805ded0 */ .word 0xbf82bd82
-/* 0805ded4 */ .word 0x830ac682
-/* 0805ded8 */ .word 0x8359838a
-/* 0805dedc */ .word 0x836f8380
-/* 0805dee0 */ .word 0x828b8367
-/* 0805dee4 */ .word 0xb5820af0
-/* 0805dee8 */ .word 0xdd82c482
-/* 0805deec */ .word 0xb582dc82
-/* 0805def0 */ .word 0xa482e582
-/* 0805def4 */ .word 0x00004981
+/* 0805dec0 */ 
+.asciz "それでは、　ボクたちと\nリズムバトルを\nしてみましょう！"
+.balign 4, 0
 
-/* 0805def8 */ .word 0x7083658a
-/* 0805defc */ .word 0x5b815e83
-/* 0805df00 */ .word 0xc9829383
-/* 0805df04 */ .word 0xab82c282
-/* 0805df08 */ .word 0x8952820a
-/* 0805df0c */ .word 0x834081f1
-/* 0805df10 */ .word 0x83838360
-/* 0805df14 */ .word 0x82588393
-/* 0805df18 */ .word 0xa0820aaa
-/* 0805df1c */ .word 0xdc82e882
-/* 0805df20 */ .word 0x4281b782
-/* 0805df24 */ .word 0x00000000
+/* 0805def8 */ 
+.asciz "各パターンにつき\n３回　チャンスが\nあります。"
+.balign 4, 0
 
-/* 0805df28 */ .word 0xc482b382
-/* 0805df2c */ .word 0x40814181
-/* 0805df30 */ .word 0xb182c782
-/* 0805df34 */ .word 0xc582dc82
-/* 0805df38 */ .word 0x82c2820a
-/* 0805df3c */ .word 0x82c482a2
-/* 0805df40 */ .word 0x82ea82b1
-/* 0805df44 */ .word 0x82a982e9
-/* 0805df48 */ .word 0x004881c8
+/* 0805df28 */ 
+.asciz "さて、　どこまで\nついてこれるかな？"
+.balign 4, 0
 
-/* 0805df4c */ .word 0x636c6557
-/* 0805df50 */ .word 0x20656d6f
-/* 0805df54 */ .word 0x740a6f74
-/* 0805df58 */ .word 0x20736968
-/* 0805df5c */ .word 0x6b6e7566
-/* 0805df60 */ .word 0x61672079
-/* 0805df64 */ .word 0x0a2c656d
-/* 0805df68 */ .word 0x20656874
-/* 0805df6c */ .word 0x54594852
-/* 0805df70 */ .word 0x54204d48
-/* 0805df74 */ .word 0x0a2d4e45
-/* 0805df78 */ .word 0x554b4f47
-/* 0805df7c */ .word 0x726f7720
-/* 0805df80 */ .word 0x2121646c
-/* 0805df84 */ .word 0x00000000
+/* 0805df4c */ 
+.asciz "Welcome to\nthis funky game,\nthe RHYTHM TEN-\nGOKU world!!"
+.balign 4, 0
 
-/* 0805df88 */ .word 0x59838a83
-/* 0805df8c */ .word 0x56938083
-/* 0805df90 */ .word 0xd682918d
-/* 0805df94 */ .word 0x82e68220
-/* 0805df98 */ .word 0x82b182a4
-/* 0805df9c */ .word 0x0a4981bb
-/* 0805dfa0 */ .word 0x40837483
-/* 0805dfa4 */ .word 0x4c839383
-/* 0805dfa8 */ .word 0xc8825b81
-/* 0805dfac */ .word 0xc682d082
-/* 0805dfb0 */ .word 0xab82c682
-/* 0805dfb4 */ .word 0x8a0af082
-/* 0805dfb8 */ .word 0x82b58279
-/* 0805dfbc */ .word 0x82c582f1
-/* 0805dfc0 */ .word 0x82be82ad
-/* 0805dfc4 */ .word 0x83a282b3
-/* 0805dfc8 */ .word 0x0000216c
+/* 0805df88 */ 
+.asciz "リズム天国へ ようこそ！\nファンキーなひとときを\n楽しんでくださいネ!"
+.balign 4, 0
 
-/* 0805dfcc */ .word 0xcd82c582
-/* 0805dfd0 */ .word 0x40814181
-/* 0805dfd4 */ .word 0xbd82dc82
-/* 0805dfd8 */ .word 0xbf82cc82
-/* 0805dfdc */ .word 0xc782d982
-/* 0805dfe0 */ .word 0x89a8820a
-/* 0805dfe4 */ .word 0x82a282ef
-/* 0805dfe8 */ .word 0x82dc82b5
-/* 0805dfec */ .word 0x82e582b5
-/* 0805dff0 */ .word 0x0a4981a4
-/* 0805dff4 */ .word 0x20656573
-/* 0805dff8 */ .word 0x21756f79
-/* 0805dffc */ .word 0x00000000
+/* 0805dfcc */ 
+.asciz "では、　またのちほど\nお会いしましょう！\nsee you!"
+.balign 4, 0
 
-/* 0805e000 */ .word 0x59838a83
-/* 0805e004 */ .word 0xb48a8083
-/* 0805e008 */ .word 0x82bb820a
-/* 0805e00c */ .word 0x90cd82ea
-/* 0805e010 */ .word 0x93dd8df6
-/* 0805e014 */ .word 0x0ac98249
-/* 0805e018 */ .word 0xf182dd82
-/* 0805e01c */ .word 0xaa82c882
-/* 0805e020 */ .word 0xc1829d8e
-/* 0805e024 */ .word 0xa282c482
-/* 0805e028 */ .word 0x820ae982
-/* 0805e02c */ .word 0x82cc82e0
-/* 0805e030 */ .word 0x82f182c8
-/* 0805e034 */ .word 0x81b782c5
-/* 0805e038 */ .word 0x00000042
+/* 0805e000 */ 
+.asciz "リズム感\nそれは潜在的に\nみんなが持っている\nものなんです。"
+.balign 4, 0
 
-/* 0805e03c */ .word 0x59838a83
-/* 0805e040 */ .word 0xb48a8083
-/* 0805e044 */ .word 0x880acd82
-/* 0805e048 */ .word 0x82af8ed3
-/* 0805e04c */ .word 0x82c482b5
-/* 0805e050 */ .word 0x82ea82a2
-/* 0805e054 */ .word 0xc7820ace
-/* 0805e058 */ .word 0xc782f182
-/* 0805e05c */ .word 0xc797f182
-/* 0805e060 */ .word 0xc882ad82
-/* 0805e064 */ .word 0xdc82e882
-/* 0805e068 */ .word 0x4281b782
-/* 0805e06c */ .word 0x00000000
+/* 0805e03c */ 
+.asciz "リズム感は\n意識していれば\nどんどん良くなります。"
+.balign 4, 0
 
-/* 0805e070 */ .word 0xc482b382
-/* 0805e074 */ .word 0xdc824181
-/* 0805e078 */ .word 0xcd82b882
-/* 0805e07c */ .word 0x82a0820a
-/* 0805e080 */ .word 0x82bd82c8
-/* 0805e084 */ .word 0x838a83cc
-/* 0805e088 */ .word 0x8a808359
-/* 0805e08c */ .word 0x0af082b4
-/* 0805e090 */ .word 0xe982a982
-/* 0805e094 */ .word 0xa98cad82
-/* 0805e098 */ .word 0xdd82c482
-/* 0805e09c */ .word 0xb582dc82
-/* 0805e0a0 */ .word 0xa482e582
-/* 0805e0a4 */ .word 0x00004281
+/* 0805e070 */ 
+.asciz "さて、まずは\nあなたのリズム感を\nかるく見てみましょう。"
+.balign 4, 0
 
-/* 0805e0a8 */ .word 0xa482c782
-/* 0805e0ac */ .word 0xb582c582
-/* 0805e0b0 */ .word 0xa982bd82
-/* 0805e0b4 */ .word 0x940a4881
-/* 0805e0b8 */ .word 0x82be935b
-/* 0805e0bc */ .word 0x82a282cc
-/* 0805e0c0 */ .word 0x898b8cad
-/* 0805e0c4 */ .word 0x0aaa82ca
-/* 0805e0c8 */ .word 0xb9826f8f
-/* 0805e0cc */ .word 0xb582dc82
-/* 0805e0d0 */ .word 0xa982bd82
-/* 0805e0d4 */ .word 0x00004881
+/* 0805e0a8 */ 
+.asciz "どうでしたか？\n納得のいく結果が\n出せましたか？"
+.balign 4, 0
 
-/* 0805e0d8 */ .word 0xdd8df690
-/* 0805e0dc */ .word 0xc8824993
-/* 0805e0e0 */ .word 0x59838a83
-/* 0805e0e4 */ .word 0xb48a8083
-/* 0805e0e8 */ .word 0x8c0acd82
-/* 0805e0ec */ .word 0x82fb9750
-/* 0805e0f0 */ .word 0x82e682c9
-/* 0805e0f4 */ .word 0x0ac482c1
-/* 0805e0f8 */ .word 0xb792ac90
-/* 0805e0fc */ .word 0xe982b782
-/* 0805e100 */ .word 0xc582f182
-/* 0805e104 */ .word 0x4281b782
-/* 0805e108 */ .word 0x00000000
+/* 0805e0d8 */ 
+.asciz "潜在的なリズム感は\n訓練によって\n成長するんです。"
+.balign 4, 0
 
-/* 0805e10c */ .word 0xcc82b182
-/* 0805e110 */ .word 0xc682a082
-/* 0805e114 */ .word 0xc4826f8f
-/* 0805e118 */ .word 0xe982ad82
-/* 0805e11c */ .word 0x838a830a
-/* 0805e120 */ .word 0x837e8359
-/* 0805e124 */ .word 0x828b834a
-/* 0805e128 */ .word 0x815183c8
-/* 0805e12c */ .word 0x8280835b
-/* 0805e130 */ .word 0x798a0ac5
-/* 0805e134 */ .word 0xad82b582
-/* 0805e138 */ .word 0x59838a83
-/* 0805e13c */ .word 0xb48a8083
-/* 0805e140 */ .word 0x820af082
-/* 0805e144 */ .word 0x82aa82dd
-/* 0805e148 */ .word 0x82c482a2
-/* 0805e14c */ .word 0x82c482dd
-/* 0805e150 */ .word 0x82be82ad
-/* 0805e154 */ .word 0x81a282b3
-/* 0805e158 */ .word 0x00000042
+/* 0805e10c */ 
+.asciz "このあと出てくる\nリズミカルなゲームで\n楽しくリズム感を\nみがいてみてください。"
+.balign 4, 0
 
-/* 0805e15c */ .word 0xcd82c582
-/* 0805e160 */ .word 0xdc824181
-/* 0805e164 */ .word 0xa082bd82
-/* 0805e168 */ .word 0xc582c682
-/* 0805e16c */ .word 0x89a8820a
-/* 0805e170 */ .word 0x82a282ef
-/* 0805e174 */ .word 0x82dc82b5
-/* 0805e178 */ .word 0x82e582b5
-/* 0805e17c */ .word 0x004281a4
+/* 0805e15c */ 
+.asciz "では、またあとで\nお会いしましょう。"
+.balign 4, 0
 
-/* 0805e180 */ .word 0x93837983
-/* 0805e184 */ .word 0x93834d83
-/* 0805e188 */ .word 0x73954181
-/* 0805e18c */ .word 0xab919e96
-/* 0805e190 */ .word 0x00004281
+/* 0805e180 */ 
+.asciz "ペンギン、不満足。"
+.balign 4, 0
 
-/* 0805e194 */ .word 0x93837983
-/* 0805e198 */ .word 0x93834d83
-/* 0805e19c */ .word 0x9e96e082
-/* 0805e1a0 */ .word 0x4281ab91
-/* 0805e1a4 */ .word 0x00000000
+/* 0805e194 */ 
+.asciz "ペンギンも満足。"
+.balign 4, 0
 
-/* 0805e1a8 */ .word 0x93837983
-/* 0805e1ac */ .word 0x93834d83
-/* 0805e1b0 */ .word 0xe682cc82
-/* 0805e1b4 */ .word 0xb782a482
-/* 0805e1b8 */ .word 0x00000000
+/* 0805e1a8 */ 
+.asciz "ペンギンのようす"
+.balign 4, 0
 
-/* 0805e1bc */ .word 0xf182d982
-/* 0805e1c0 */ .word 0xf182ce82
-/* 0805e1c4 */ .word 0x58834081
-/* 0805e1c8 */ .word 0x5b815e83
-/* 0805e1cc */ .word 0x49816783
-/* 0805e1d0 */ .word 0x00000000
+/* 0805e1bc */ 
+.asciz "ほんばん　スタート！"
+.balign 4, 0
 
-/* 0805e1d4 */ .word 0x93837983
-/* 0805e1d8 */ .word 0x93834d83
-/* 0805e1dc */ .word 0x4081c682
-/* 0805e1e0 */ .word 0x87835683
-/* 0805e1e4 */ .word 0xf0825b81
-/* 0805e1e8 */ .word 0xe2824081
-/* 0805e1ec */ .word 0xdc82e882
-/* 0805e1f0 */ .word 0x4281b782
-/* 0805e1f4 */ .word 0x00000000
+/* 0805e1d4 */ 
+.asciz "ペンギンと　ショーを　やります。"
+.balign 4, 0
 
-/* 0805e1f8 */ .word 0xa282a082
-/* 0805e1fc */ .word 0xc982b882
-/* 0805e200 */ .word 0xa0824081
-/* 0805e204 */ .word 0xb982ed82
-/* 0805e208 */ .word 0x4081c482
-/* 0805e20c */ .word 0x7b836082
-/* 0805e210 */ .word 0x93835e83
-/* 0805e214 */ .word 0x00004981
+/* 0805e1f8 */ 
+.asciz "あいずに　あわせて　Ａボタン！"
+.balign 4, 0
 
-/* 0805e218 */ .word 0x00000000
+/* 0805e218 */ 
+.asciz ""
+.balign 4, 0
 
-/* 0805e21c */ .word 0x00005082
+/* 0805e21c */ 
+.asciz "１"
+.balign 4, 0
 
-/* 0805e220 */ .word 0x00005182
+/* 0805e220 */ 
+.asciz "２"
+.balign 4, 0
 
-/* 0805e224 */ .word 0x43836e83
-/* 0805e228 */ .word 0x00004981
+/* 0805e224 */ 
+.asciz "ハイ！"
+.balign 4, 0
 
-/* 0805e22c */ .word 0xf182bb82
-/* 0805e230 */ .word 0xa982c882
-/* 0805e234 */ .word 0xb682f182
-/* 0805e238 */ .word 0x00000000
+/* 0805e22c */ 
+.asciz "そんなかんじ"
+.balign 4, 0
 
-/* 0805e23c */ .word 0xac82c282
-/* 0805e240 */ .word 0x4081cd82
-/* 0805e244 */ .word 0xc182c582
-/* 0805e248 */ .word 0xa282a982
-/* 0805e24c */ .word 0x93837983
-/* 0805e250 */ .word 0x93834d83
-/* 0805e254 */ .word 0x00000000
+/* 0805e23c */ 
+.asciz "つぎは　でっかいペンギン"
+.balign 4, 0
 
-/* 0805e258 */ .word 0x43834383
-/* 0805e25c */ .word 0x93834a83
-/* 0805e260 */ .word 0xc5825783
-/* 0805e264 */ .word 0x0000b782
+/* 0805e258 */ 
+.asciz "イイカンジです"
+.balign 4, 0
 
-/* 0805e268 */ .word 0xac82c282
-/* 0805e26c */ .word 0x4081cd82
-/* 0805e270 */ .word 0xeb82b582
-/* 0805e274 */ .word 0x7983a282
-/* 0805e278 */ .word 0x4d839383
-/* 0805e27c */ .word 0x00009383
+/* 0805e268 */ 
+.asciz "つぎは　しろいペンギン"
+.balign 4, 0
 
-/* 0805e280 */ .word 0xe282cd82
-/* 0805e284 */ .word 0x8883a282
-/* 0805e288 */ .word 0x00004981
+/* 0805e280 */ 
+.asciz "はやいヨ！"
+.balign 4, 0
 
-/* 0805e28c */ .word 0xeb82bb82
-/* 0805e290 */ .word 0xeb82bb82
-/* 0805e294 */ .word 0xcd824081
-/* 0805e298 */ .word 0xdc82b682
-/* 0805e29c */ .word 0xdc82e882
-/* 0805e2a0 */ .word 0xb7825b81
-/* 0805e2a4 */ .word 0x49814981
-/* 0805e2a8 */ .word 0x00000000
+/* 0805e28c */ 
+.asciz "そろそろ　はじまりまーす！！"
+.balign 4, 0
 
-/* 0805e2ac */ .word 0xf182c882
-/* 0805e2b0 */ .word 0xa982be82
-/* 0805e2b4 */ .word 0x90974081
-/* 0805e2b8 */ .word 0xc482ea82
-/* 0805e2bc */ .word 0xc882e982
-/* 0805e2c0 */ .word 0x42819f82
-/* 0805e2c4 */ .word 0x00000000
+/* 0805e2ac */ 
+.asciz "なんだか　乱れてるなぁ。"
+.balign 4, 0
 
-/* 0805e2c8 */ .word 0xaa82a791
-/* 0805e2cc */ .word 0xa0824081
-/* 0805e2d0 */ .word 0xc482c182
-/* 0805e2d4 */ .word 0xb682e982
-/* 0805e2d8 */ .word 0xc882e182
-/* 0805e2dc */ .word 0xa982a282
-/* 0805e2e0 */ .word 0x00004981
+/* 0805e2c8 */ 
+.asciz "息が　あってるじゃないか！"
+.balign 4, 0
 
-/* 0805e2e4 */ .word 0xe582bf82
-/* 0805e2e8 */ .word 0xc682c182
-/* 0805e2ec */ .word 0xa0824081
-/* 0805e2f0 */ .word 0xc482ed82
-/* 0805e2f4 */ .word 0xbd82c482
-/* 0805e2f8 */ .word 0x9f82c882
-/* 0805e2fc */ .word 0x00004281
+/* 0805e2e4 */ 
+.asciz "ちょっと　あわててたなぁ。"
+.balign 4, 0
 
-/* 0805e300 */ .word 0xa282e682
-/* 0805e304 */ .word 0x6692bb94
-/* 0805e308 */ .word 0xb582f082
-/* 0805e30c */ .word 0xe982c482
-/* 0805e310 */ .word 0xe182b682
-/* 0805e314 */ .word 0xa282c882
-/* 0805e318 */ .word 0x4981a982
-/* 0805e31c */ .word 0x00000000
+/* 0805e300 */ 
+.asciz "よい判断をしてるじゃないか！"
+.balign 4, 0
 
-/* 0805e320 */ .word 0x72835483
-/* 0805e324 */ .word 0xe88ecc82
-/* 0805e328 */ .word 0xaa824f91
-/* 0805e32c */ .word 0x4b834081
-/* 0805e330 */ .word 0x4b835e83
-/* 0805e334 */ .word 0xbe825e83
-/* 0805e338 */ .word 0xbd82c182
-/* 0805e33c */ .word 0x9f82c882
-/* 0805e340 */ .word 0x00004281
+/* 0805e320 */ 
+.asciz "サビの手前が　ガタガタだったなぁ。"
+.balign 4, 0
 
-/* 0805e344 */ .word 0x72835483
-/* 0805e348 */ .word 0xe88ecc82
-/* 0805e34c */ .word 0xaa824f91
-/* 0805e350 */ .word 0x4c834081
-/* 0805e354 */ .word 0xc1827d83
-/* 0805e358 */ .word 0xbd82c482
-/* 0805e35c */ .word 0x49818883
-/* 0805e360 */ .word 0x00000000
+/* 0805e344 */ 
+.asciz "サビの手前が　キマってたヨ！"
+.balign 4, 0
 
-/* 0805e364 */ .word 0x79835883
-/* 0805e368 */ .word 0x58835b81
-/* 0805e36c */ .word 0xb682a882
-/* 0805e370 */ .word 0xf182b382
-/* 0805e374 */ .word 0xd388cc82
-/* 0805e378 */ .word 0x0000a98c
+/* 0805e364 */ 
+.asciz "スペースおじさんの意見"
+.balign 4, 0
 
-/* 0805e37c */ .word 0x62838c83
-/* 0805e380 */ .word 0x53836383
-/* 0805e384 */ .word 0x49815b81
-/* 0805e388 */ .word 0x00000000
+/* 0805e37c */ 
+.asciz "レッツゴー！"
+.balign 4, 0
 
-/* 0805e38c */ .word 0xf182dd82
-/* 0805e390 */ .word 0xc582c882
-/* 0805e394 */ .word 0x5f834081
-/* 0805e398 */ .word 0x58839383
-/* 0805e39c */ .word 0xe982b782
-/* 0805e3a0 */ .word 0x4281bc82
-/* 0805e3a4 */ .word 0x00000000
+/* 0805e38c */ 
+.asciz "みんなで　ダンスするぞ。"
+.balign 4, 0
 
 /* 0805e3a8 */ .word 0xb882dc82
 /* 0805e3ac */ .word 0x40814181
@@ -4068,38 +3860,47 @@
 /* 0805e3cc */ .word 0xcc82e982
 /* 0805e3d0 */ .word 0x4281be82
 /* 0805e3d4 */ .word 0x00000000
+
 /* 0805e3d8 */ .word 0xcd82c582
 /* 0805e3dc */ .word 0x40814181
 /* 0805e3e0 */ .word 0xc2825082
 /* 0805e3e4 */ .word 0x4281df82
 /* 0805e3e8 */ .word 0x00000000
+
 /* 0805e3ec */ .word 0x6c837d83
 /* 0805e3f0 */ .word 0xe982b782
 /* 0805e3f4 */ .word 0xbe82cc82
 /* 0805e3f8 */ .word 0x00004981
+
 /* 0805e3fc */ .word 0x6a826e82
 /* 0805e400 */ .word 0x00004981
+
 /* 0805e404 */ .word 0xac82c282
 /* 0805e408 */ .word 0x00000000
+
 /* 0805e40c */ .word 0x58838983
 /* 0805e410 */ .word 0x00006783
+
 /* 0805e414 */ .word 0xcd82c582
 /* 0805e418 */ .word 0x40814181
 /* 0805e41c */ .word 0xf182d982
 /* 0805e420 */ .word 0xf182ce82
 /* 0805e424 */ .word 0x4981be82
 /* 0805e428 */ .word 0x00000000
+
 /* 0805e42c */ .word 0xa482c782
 /* 0805e430 */ .word 0x4981e082
 /* 0805e434 */ .word 0x8368830a
 /* 0805e438 */ .word 0x8e808389
 /* 0805e43c */ .word 0x82c58298
 /* 0805e440 */ .word 0x004281b7
+
 /* 0805e444 */ .word 0xb38ca882
 /* 0805e448 */ .word 0xc582438b
 /* 0805e44c */ .word 0xbd82b582
 /* 0805e450 */ .word 0x4881a982
 /* 0805e454 */ .word 0x00000000
+
 /* 0805e458 */ .word 0xf189a18d
 /* 0805e45c */ .word 0x4181cd82
 /* 0805e460 */ .word 0x5a924081
@@ -4114,6 +3915,7 @@
 /* 0805e484 */ .word 0xe582b582
 /* 0805e488 */ .word 0x4281a482
 /* 0805e48c */ .word 0x00000000
+
 /* 0805e490 */ .word 0xcc82848e
 /* 0805e494 */ .word 0x74918989
 /* 0805e498 */ .word 0xe682f082
@@ -4126,6 +3928,7 @@
 /* 0805e4b4 */ .word 0xa282b382
 /* 0805e4b8 */ .word 0x42816c83
 /* 0805e4bc */ .word 0x00000000
+
 /* 0805e4c0 */ .word 0xc182b382
 /* 0805e4c4 */ .word 0xad82bb82
 /* 0805e4c8 */ .word 0xb782c582
@@ -4134,12 +3937,14 @@
 /* 0805e4d4 */ .word 0xdc82ab82
 /* 0805e4d8 */ .word 0x4281b782
 /* 0805e4dc */ .word 0x00000000
+
 /* 0805e4e0 */ .word 0xaa82bf82
 /* 0805e4e4 */ .word 0x4981a482
 /* 0805e4e8 */ .word 0x82e6820a
 /* 0805e4ec */ .word 0x82ab82ad
 /* 0805e4f0 */ .word 0x83c482a2
 /* 0805e4f4 */ .word 0x0042816c
+
 /* 0805e4f8 */ .word 0xaa82bf82
 /* 0805e4fc */ .word 0xf182a482
 /* 0805e500 */ .word 0xb782c582
@@ -4150,34 +3955,42 @@
 /* 0805e514 */ .word 0x82ab82ad
 /* 0805e518 */ .word 0x83c482a2
 /* 0805e51c */ .word 0x0042816c
+
 /* 0805e520 */ .word 0x0805e4c0
 /* 0805e524 */ .word 0x0805e4e0
 /* 0805e528 */ .word 0x0805e4f8
 /* 0805e52c */ .word 0x00000000
+
 /* 0805e530 */ .word 0x82a0820a
 /* 0805e534 */ .word 0x82bd82c8
 /* 0805e538 */ .word 0x82d494cc
 /* 0805e53c */ .word 0x81b782c5
 /* 0805e540 */ .word 0x00000042
+
 /* 0805e544 */ .word 0x82b3820a
 /* 0805e548 */ .word 0x814181a0
 /* 0805e54c */ .word 0x82a28240
 /* 0805e550 */ .word 0x82a282dc
 /* 0805e554 */ .word 0x81c782bf
 /* 0805e558 */ .word 0x00000049
+
 /* 0805e55c */ .word 0x82b3820a
 /* 0805e560 */ .word 0x814181a0
 /* 0805e564 */ .word 0x82b18240
 /* 0805e568 */ .word 0x82c782f1
 /* 0805e56c */ .word 0x81bb82b1
 /* 0805e570 */ .word 0x00000049
+
 /* 0805e574 */ .word 0x0805e530
 /* 0805e578 */ .word 0x0805e544
 /* 0805e57c */ .word 0x0805e55c
 /* 0805e580 */ .word 0x00000000
+
 /* 0805e584 */ .word 0x214b4f0a
 /* 0805e588 */ .word 0x00000000
+
 /* 0805e58c */ .word 0x00000000
+
 /* 0805e590 */ .word 0xa782a882
 /* 0805e594 */ .word 0x40814181
 /* 0805e598 */ .word 0xae82b782
@@ -4185,6 +3998,7 @@
 /* 0805e5a0 */ .word 0xb582dc82
 /* 0805e5a4 */ .word 0xcb82bd82
 /* 0805e5a8 */ .word 0x00004981
+
 /* 0805e5ac */ .word 0xa982c882
 /* 0805e5b0 */ .word 0xa982c882
 /* 0805e5b4 */ .word 0xcc824081
@@ -4194,16 +4008,19 @@
 /* 0805e5c4 */ .word 0xb782c582
 /* 0805e5c8 */ .word 0x4981cb82
 /* 0805e5cc */ .word 0x00000000
+
 /* 0805e5d0 */ .word 0xa282a282
 /* 0805e5d4 */ .word 0xf182a982
 /* 0805e5d8 */ .word 0xc582b682
 /* 0805e5dc */ .word 0x4281b782
 /* 0805e5e0 */ .word 0x00000000
+
 /* 0805e5e4 */ .word 0x0805e58c
 /* 0805e5e8 */ .word 0x0805e590
 /* 0805e5ec */ .word 0x0805e5ac
 /* 0805e5f0 */ .word 0x0805e5d0
 /* 0805e5f4 */ .word 0x00000000
+
 /* 0805e5f8 */ .word 0xcd829f8e
 /* 0805e5fc */ .word 0x40814181
 /* 0805e600 */ .word 0xcc82c88b
@@ -4225,6 +4042,7 @@
 /* 0805e640 */ .word 0xc5829383
 /* 0805e644 */ .word 0x4281b782
 /* 0805e648 */ .word 0x00000000
+
 /* 0805e64c */ .word 0xdc82c282
 /* 0805e650 */ .word 0x4181e882
 /* 0805e654 */ .word 0xc58d4081
@@ -4239,6 +4057,7 @@
 /* 0805e678 */ .word 0xf182b782
 /* 0805e67c */ .word 0xb782c582
 /* 0805e680 */ .word 0x00004281
+
 /* 0805e684 */ .word 0xcc82c88b
 /* 0805e688 */ .word 0x5e835883
 /* 0805e68c */ .word 0x67835b81
@@ -4250,15 +4069,18 @@
 /* 0805e6a4 */ .word 0xb382be82
 /* 0805e6a8 */ .word 0x6c83a282
 /* 0805e6ac */ .word 0x00004281
+
 /* 0805e6b0 */ .word 0xe182b682
 /* 0805e6b4 */ .word 0x40814181
 /* 0805e6b8 */ .word 0xab82a282
 /* 0805e6bc */ .word 0xb782dc82
 /* 0805e6c0 */ .word 0x00004281
+
 /* 0805e6c4 */ .word 0x0805e6b0
 /* 0805e6c8 */ .word 0x0805e4e0
 /* 0805e6cc */ .word 0x0805e4f8
 /* 0805e6d0 */ .word 0x00000000
+
 /* 0805e6d4 */ .word 0xce82b782
 /* 0805e6d8 */ .word 0xb582e782
 /* 0805e6dc */ .word 0x4981a282
@@ -4266,6 +4088,7 @@
 /* 0805e6e4 */ .word 0x8eb292cc
 /* 0805e6e8 */ .word 0x82c58271
 /* 0805e6ec */ .word 0x004281b7
+
 /* 0805e6f0 */ .word 0xc182af82
 /* 0805e6f4 */ .word 0xa482b182
 /* 0805e6f8 */ .word 0xc88a4081
@@ -4273,6 +4096,7 @@
 /* 0805e700 */ .word 0xbd82b582
 /* 0805e704 */ .word 0x4881a982
 /* 0805e708 */ .word 0x00000000
+
 /* 0805e70c */ .word 0xe582bf82
 /* 0805e710 */ .word 0xc682c182
 /* 0805e714 */ .word 0x40814181
@@ -4282,11 +4106,13 @@
 /* 0805e724 */ .word 0xb582dc82
 /* 0805e728 */ .word 0xcb82bd82
 /* 0805e72c */ .word 0x00004281
+
 /* 0805e730 */ .word 0x0805e58c
 /* 0805e734 */ .word 0x0805e6d4
 /* 0805e738 */ .word 0x0805e6f0
 /* 0805e73c */ .word 0x0805e70c
 /* 0805e740 */ .word 0x00000000
+
 /* 0805e744 */ .word 0xcd82c582
 /* 0805e748 */ .word 0x40814181
 /* 0805e74c */ .word 0xcc82c88b
@@ -4300,24 +4126,29 @@
 /* 0805e76c */ .word 0xe582b582
 /* 0805e770 */ .word 0x4281a482
 /* 0805e774 */ .word 0x00000000
+
 /* 0805e778 */ .word 0xe88ea882
 /* 0805e77c */ .word 0x41817b96
 /* 0805e780 */ .word 0xa2824081
 /* 0805e784 */ .word 0xdc82ab82
 /* 0805e788 */ .word 0x4281b782
 /* 0805e78c */ .word 0x00000000
+
 /* 0805e790 */ .word 0x0805e778
 /* 0805e794 */ .word 0x0805e4e0
 /* 0805e798 */ .word 0x0805e4f8
 /* 0805e79c */ .word 0x00000000
+
 /* 0805e7a0 */ .word 0x82aa820a
 /* 0805e7a4 */ .word 0x82ce82f1
 /* 0805e7a8 */ .word 0x81c482c1
 /* 0805e7ac */ .word 0x00000049
+
 /* 0805e7b0 */ .word 0x0805e7a0
 /* 0805e7b4 */ .word 0x0805e544
 /* 0805e7b8 */ .word 0x0805e55c
 /* 0805e7bc */ .word 0x00000000
+
 /* 0805e7c0 */ .word 0xf1895082
 /* 0805e7c4 */ .word 0x8f20c582
 /* 0805e7c8 */ .word 0x8288976f
@@ -4329,6 +4160,7 @@
 /* 0805e7e0 */ .word 0xc582a282
 /* 0805e7e4 */ .word 0x4981b782
 /* 0805e7e8 */ .word 0x00000000
+
 /* 0805e7ec */ .word 0xc182bd82
 /* 0805e7f0 */ .word 0xcc82bd82
 /* 0805e7f4 */ .word 0xf1895182
@@ -4340,6 +4172,7 @@
 /* 0805e80c */ .word 0x82dc82e8
 /* 0805e810 */ .word 0x816c83b7
 /* 0805e814 */ .word 0x00000049
+
 /* 0805e818 */ .word 0xf182c882
 /* 0805e81c */ .word 0xa982c682
 /* 0805e820 */ .word 0x6f8f4081
@@ -4351,11 +4184,13 @@
 /* 0805e838 */ .word 0x82c582b6
 /* 0805e83c */ .word 0x818883b7
 /* 0805e840 */ .word 0x00000049
+
 /* 0805e844 */ .word 0x0805e58c
 /* 0805e848 */ .word 0x0805e7c0
 /* 0805e84c */ .word 0x0805e7ec
 /* 0805e850 */ .word 0x0805e818
 /* 0805e854 */ .word 0x00000000
+
 /* 0805e858 */ .word 0xf182b182
 /* 0805e85c */ .word 0xa982c882
 /* 0805e860 */ .word 0xb682f182
@@ -4382,6 +4217,7 @@
 /* 0805e8b4 */ .word 0xdc82a282
 /* 0805e8b8 */ .word 0x4281b782
 /* 0805e8bc */ .word 0x00000000
+
 /* 0805e8c0 */ .word 0xcc82a082
 /* 0805e8c4 */ .word 0x5b815283
 /* 0805e8c8 */ .word 0x5b816983
@@ -4396,6 +4232,7 @@
 /* 0805e8ec */ .word 0xb382be82
 /* 0805e8f0 */ .word 0x4281a282
 /* 0805e8f4 */ .word 0x00000000
+
 /* 0805e8f8 */ .word 0xcd82c582
 /* 0805e8fc */ .word 0x40814181
 /* 0805e900 */ .word 0xbd82dc82
@@ -4412,6 +4249,7 @@
 /* 0805e92c */ .word 0xa982a082
 /* 0805e930 */ .word 0x4281f182
 /* 0805e934 */ .word 0x00000000
+
 /* 0805e938 */ .word 0xc5827581
 /* 0805e93c */ .word 0xa982b782
 /* 0805e940 */ .word 0x76814881
