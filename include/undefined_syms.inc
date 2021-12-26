@@ -647,6 +647,7 @@
 .set D_089de5c8, 0x089de5c8
 .set D_089de670, 0x089de670
 
+.set D_08a59c58, 0x08a59c58
 .set D_08a9b078, 0x08a9b078
 .set D_08a9b1f4, 0x08a9b1f4
 .set D_08a9b44c, 0x08a9b44c
