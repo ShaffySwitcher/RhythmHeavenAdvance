@@ -2081,7 +2081,7 @@
 .balign 4, 0
 
 /* 0805b550 */ 
-.asciz "Ａボタン、または\x8f\x5c字ボタンで　毛をぬいてネ！" @ 十 Unsupported SJIS character 
+.asciz "Ａボタン、または\x8f\x5c字ボタンで　毛をぬいてネ！" 
 .balign 4, 0
 
 /* 0805b580 */ 
@@ -2549,7 +2549,7 @@
 .balign 4, 0
 
 /* 0805c0ec */ 
-.asciz "適応\x94\x5c力　良いです！" @ 能 Unsupported SJIS character
+.asciz "適応\x94\x5c力　良いです！" 
 .balign 4, 0
 
 /* 0805c104 */ 
@@ -2637,7 +2637,7 @@
 .balign 4, 0
 
 /* 0805c2bc */ 
-.asciz "すごい集中力だヨ\x81\x60！" @ ? Unsupported SJIS character
+.asciz "すごい集中力だヨ\x81\x60！" 
 .balign 4, 0
 
 /* 0805c2d4 */ 
@@ -2921,11 +2921,11 @@
 .balign 4, 0
 
 /* 0805c948 */ 
-.asciz "すばらしい判断力だネ\x81\x60！" @ ? Unsupported SJIS character
+.asciz "すばらしい判断力だネ\x81\x60！" 
 .balign 4, 0
 
 /* 0805c964 */ 
-.asciz "もっと　ウデを　みがいたら\x81\x60？" @ ? Unsupported SJIS character
+.asciz "もっと　ウデを　みがいたら\x81\x60？" 
 .balign 4, 0
 
 /* 0805c984 */ 
@@ -3185,27 +3185,27 @@
 .balign 4, 0
 
 /* 0805d010 */ 
-.asciz ".bた.bま.bや.b\x81\x60　　.bハイ！" @ ? Unsupported SJIS character
+.asciz ".bた.bま.bや.b\x81\x60　　.bハイ！" 
 .balign 4, 0
 
 /* 0805d030 */ 
-.asciz ".dた.bま.bや.b\x81\x60　　.bハイ！" @ ? Unsupported SJIS character
+.asciz ".dた.bま.bや.b\x81\x60　　.bハイ！" 
 .balign 4, 0
 
 /* 0805d050 */ 
-.asciz ".dた.dま.bや.b\x81\x60　　.bハイ！" @ ? Unsupported SJIS character
+.asciz ".dた.dま.bや.b\x81\x60　　.bハイ！" 
 .balign 4, 0
 
 /* 0805d070 */ 
-.asciz ".dた.dま.dや.b\x81\x60　　.bハイ！" @ ? Unsupported SJIS character
+.asciz ".dた.dま.dや.b\x81\x60　　.bハイ！" 
 .balign 4, 0
 
 /* 0805d090 */ 
-.asciz ".dた.dま.dや.d\x81\x60　　.bハイ！" @ ? Unsupported SJIS character
+.asciz ".dた.dま.dや.d\x81\x60　　.bハイ！" 
 .balign 4, 0
 
 /* 0805d0b0 */ 
-.asciz "　.cた.cま.cや.c\x81\x60　.c:0ハイ！" @ ? Unsupported SJIS character
+.asciz "　.cた.cま.cや.c\x81\x60　.c:0ハイ！"
 .balign 4, 0
 
 /* 0805d0d0 */ 
@@ -3497,7 +3497,7 @@
 .balign 4, 0
 
 /* 0805d848 */ 
-.asciz "\nもう いっちょ\x81\x60" @ ? Unsupported SJIS character
+.asciz "\nもう いっちょ\x81\x60" 
 .balign 4, 0
 
 /* 0805d85c */ 
@@ -3681,11 +3681,11 @@
 .balign 4, 0
 
 /* 0805ddfc */ 
-.asciz "ポン太くんも入ります。\nポン太くんの音は\n\x8f\x5c字キーの下で鳴ります。" @ 十 Unsupported SJIS character 
+.asciz "ポン太くんも入ります。\nポン太くんの音は\n\x8f\x5c字キーの下で鳴ります。"
 .balign 4, 0
 
 /* 0805de40 */ 
-.asciz "次は、　速いやつです。\nＡボタンと\x8f\x5c字キーの右を\n交互に押すとラクだヨ。" @ 十 Unsupported SJIS character 
+.asciz "次は、　速いやつです。\nＡボタンと\x8f\x5c字キーの右を\n交互に押すとラクだヨ。"
 .balign 4, 0
 
 /* 0805de88 */ 
@@ -3848,933 +3848,526 @@
 .asciz "みんなで　ダンスするぞ。"
 .balign 4, 0
 
-/* 0805e3a8 */ .word 0xb882dc82
-/* 0805e3ac */ .word 0x40814181
-/* 0805e3b0 */ .word 0xc2825282
-/* 0805e3b4 */ .word 0x4081cc82
-/* 0805e3b8 */ .word 0x4e834183
-/* 0805e3bc */ .word 0x87835683
-/* 0805e3c0 */ .word 0xf0829383
-/* 0805e3c4 */ .word 0xa8824081
-/* 0805e3c8 */ .word 0xa682da82
-/* 0805e3cc */ .word 0xcc82e982
-/* 0805e3d0 */ .word 0x4281be82
-/* 0805e3d4 */ .word 0x00000000
+/* 0805e3a8 */ 
+.asciz "まず、　３つの　アクションを　おぼえるのだ。"
+.balign 4, 0
 
-/* 0805e3d8 */ .word 0xcd82c582
-/* 0805e3dc */ .word 0x40814181
-/* 0805e3e0 */ .word 0xc2825082
-/* 0805e3e4 */ .word 0x4281df82
-/* 0805e3e8 */ .word 0x00000000
+/* 0805e3d8 */ 
+.asciz "では、　１つめ。"
+.balign 4, 0
 
-/* 0805e3ec */ .word 0x6c837d83
-/* 0805e3f0 */ .word 0xe982b782
-/* 0805e3f4 */ .word 0xbe82cc82
-/* 0805e3f8 */ .word 0x00004981
+/* 0805e3ec */ 
+.asciz "マネするのだ！"
+.balign 4, 0
 
-/* 0805e3fc */ .word 0x6a826e82
-/* 0805e400 */ .word 0x00004981
+/* 0805e3fc */ 
+.asciz "ＯＫ！"
+.balign 4, 0
 
-/* 0805e404 */ .word 0xac82c282
-/* 0805e408 */ .word 0x00000000
+/* 0805e404 */ 
+.asciz "つぎ"
+.balign 4, 0
 
-/* 0805e40c */ .word 0x58838983
-/* 0805e410 */ .word 0x00006783
+/* 0805e40c */ 
+.asciz "ラスト"
+.balign 4, 0
 
-/* 0805e414 */ .word 0xcd82c582
-/* 0805e418 */ .word 0x40814181
-/* 0805e41c */ .word 0xf182d982
-/* 0805e420 */ .word 0xf182ce82
-/* 0805e424 */ .word 0x4981be82
-/* 0805e428 */ .word 0x00000000
+/* 0805e414 */ 
+.asciz "では、　ほんばんだ！"
+.balign 4, 0
 
-/* 0805e42c */ .word 0xa482c782
-/* 0805e430 */ .word 0x4981e082
-/* 0805e434 */ .word 0x8368830a
-/* 0805e438 */ .word 0x8e808389
-/* 0805e43c */ .word 0x82c58298
-/* 0805e440 */ .word 0x004281b7
+/* 0805e42c */ 
+.asciz "どうも！\nドラム侍です。"
+.balign 4, 0
 
-/* 0805e444 */ .word 0xb38ca882
-/* 0805e448 */ .word 0xc582438b
-/* 0805e44c */ .word 0xbd82b582
-/* 0805e450 */ .word 0x4881a982
-/* 0805e454 */ .word 0x00000000
+/* 0805e444 */ 
+.asciz "お元気でしたか？"
+.balign 4, 0
 
-/* 0805e458 */ .word 0xf189a18d
-/* 0805e45c */ .word 0x4181cd82
-/* 0805e460 */ .word 0x5a924081
-/* 0805e464 */ .word 0xc88ba282
-/* 0805e468 */ .word 0x878dc982
-/* 0805e46c */ .word 0xb982ed82
-/* 0805e470 */ .word 0xc08ec482
-/* 0805e474 */ .word 0xc982db8d
-/* 0805e478 */ .word 0x74918989
-/* 0805e47c */ .word 0xc482b582
-/* 0805e480 */ .word 0xdc82dd82
-/* 0805e484 */ .word 0xe582b582
-/* 0805e488 */ .word 0x4281a482
-/* 0805e48c */ .word 0x00000000
+/* 0805e458 */ 
+.asciz "今回は、　短い曲に合わせて実際に演奏してみましょう。"
+.balign 4, 0
 
-/* 0805e490 */ .word 0xcc82848e
-/* 0805e494 */ .word 0x74918989
-/* 0805e498 */ .word 0xe682f082
-/* 0805e49c */ .word 0xab82ad82
-/* 0805e4a0 */ .word 0xc482a282
-/* 0805e4a4 */ .word 0x40814181
-/* 0805e4a8 */ .word 0x6c837d83
-/* 0805e4ac */ .word 0xc482b582
-/* 0805e4b0 */ .word 0xbe82ad82
-/* 0805e4b4 */ .word 0xa282b382
-/* 0805e4b8 */ .word 0x42816c83
-/* 0805e4bc */ .word 0x00000000
+/* 0805e490 */ 
+.asciz "私の演奏をよくきいて、　マネしてくださいネ。"
+.balign 4, 0
 
-/* 0805e4c0 */ .word 0xc182b382
-/* 0805e4c4 */ .word 0xad82bb82
-/* 0805e4c8 */ .word 0xb782c582
-/* 0805e4cc */ .word 0x4181aa82
-/* 0805e4d0 */ .word 0xa2824081
-/* 0805e4d4 */ .word 0xdc82ab82
-/* 0805e4d8 */ .word 0x4281b782
-/* 0805e4dc */ .word 0x00000000
+/* 0805e4c0 */ 
+glabel D_0805e4c0
+.asciz "さっそくですが、　いきます。"
+.balign 4, 0
 
-/* 0805e4e0 */ .word 0xaa82bf82
-/* 0805e4e4 */ .word 0x4981a482
-/* 0805e4e8 */ .word 0x82e6820a
-/* 0805e4ec */ .word 0x82ab82ad
-/* 0805e4f0 */ .word 0x83c482a2
-/* 0805e4f4 */ .word 0x0042816c
+/* 0805e4e0 */ 
+glabel D_0805e4e0
+.asciz "ちがう！\nよくきいてネ。"
+.balign 4, 0
 
-/* 0805e4f8 */ .word 0xaa82bf82
-/* 0805e4fc */ .word 0xf182a482
-/* 0805e500 */ .word 0xb782c582
-/* 0805e504 */ .word 0x820a4981
-/* 0805e508 */ .word 0x81ad82e6
-/* 0805e50c */ .word 0x82408141
-/* 0805e510 */ .word 0x826081e6
-/* 0805e514 */ .word 0x82ab82ad
-/* 0805e518 */ .word 0x83c482a2
-/* 0805e51c */ .word 0x0042816c
+/* 0805e4f8 */ 
+glabel D_0805e4f8
+.asciz "ちがうんです！\nよく、　よ\x81\x60くきいてネ。"
+.balign 4, 0
 
-/* 0805e520 */ .word 0x0805e4c0
-/* 0805e524 */ .word 0x0805e4e0
-/* 0805e528 */ .word 0x0805e4f8
-/* 0805e52c */ .word 0x00000000
+/* 0805e520 */ .word D_0805e4c0
+/* 0805e524 */ .word D_0805e4e0
+/* 0805e528 */ .word D_0805e4f8
+/* 0805e52c */ .word 0
 
-/* 0805e530 */ .word 0x82a0820a
-/* 0805e534 */ .word 0x82bd82c8
-/* 0805e538 */ .word 0x82d494cc
-/* 0805e53c */ .word 0x81b782c5
-/* 0805e540 */ .word 0x00000042
+/* 0805e530 */ 
+glabel D_0805e530
+.asciz "\nあなたの番です。"
+.balign 4, 0
 
-/* 0805e544 */ .word 0x82b3820a
-/* 0805e548 */ .word 0x814181a0
-/* 0805e54c */ .word 0x82a28240
-/* 0805e550 */ .word 0x82a282dc
-/* 0805e554 */ .word 0x81c782bf
-/* 0805e558 */ .word 0x00000049
+/* 0805e544 */ 
+glabel D_0805e544
+.asciz "\nさあ、　いまいちど！"
+.balign 4, 0
 
-/* 0805e55c */ .word 0x82b3820a
-/* 0805e560 */ .word 0x814181a0
-/* 0805e564 */ .word 0x82b18240
-/* 0805e568 */ .word 0x82c782f1
-/* 0805e56c */ .word 0x81bb82b1
-/* 0805e570 */ .word 0x00000049
+/* 0805e55c */ 
+glabel D_0805e55c
+.asciz "\nさあ、　こんどこそ！"
+.balign 4, 0
 
-/* 0805e574 */ .word 0x0805e530
-/* 0805e578 */ .word 0x0805e544
-/* 0805e57c */ .word 0x0805e55c
-/* 0805e580 */ .word 0x00000000
+/* 0805e574 */ .word D_0805e530
+/* 0805e578 */ .word D_0805e544
+/* 0805e57c */ .word D_0805e55c
+/* 0805e580 */ .word 0
 
-/* 0805e584 */ .word 0x214b4f0a
-/* 0805e588 */ .word 0x00000000
+/* 0805e584 */ 
+.asciz "\nOK!"
+.balign 4, 0
 
-/* 0805e58c */ .word 0x00000000
+/* 0805e58c */ 
+glabel D_0805e58c
+.asciz ""
+.balign 4, 0
 
-/* 0805e590 */ .word 0xa782a882
-/* 0805e594 */ .word 0x40814181
-/* 0805e598 */ .word 0xae82b782
-/* 0805e59c */ .word 0xab82c582
-/* 0805e5a0 */ .word 0xb582dc82
-/* 0805e5a4 */ .word 0xcb82bd82
-/* 0805e5a8 */ .word 0x00004981
+/* 0805e590 */ 
+glabel D_0805e590
+.asciz "おぉ、　すぐできましたね！"
+.balign 4, 0
 
-/* 0805e5ac */ .word 0xa982c882
-/* 0805e5b0 */ .word 0xa982c882
-/* 0805e5b4 */ .word 0xcc824081
-/* 0805e5b8 */ .word 0xb182dd82
-/* 0805e5bc */ .word 0xaa82dd82
-/* 0805e5c0 */ .word 0xa2828191
-/* 0805e5c4 */ .word 0xb782c582
-/* 0805e5c8 */ .word 0x4981cb82
-/* 0805e5cc */ .word 0x00000000
+/* 0805e5ac */ 
+glabel D_0805e5ac
+.asciz "なかなか　のみこみが早いですね！"
+.balign 4, 0
 
-/* 0805e5d0 */ .word 0xa282a282
-/* 0805e5d4 */ .word 0xf182a982
-/* 0805e5d8 */ .word 0xc582b682
-/* 0805e5dc */ .word 0x4281b782
-/* 0805e5e0 */ .word 0x00000000
+/* 0805e5d0 */ 
+glabel D_0805e5d0
+.asciz "いいかんじです。"
+.balign 4, 0
 
-/* 0805e5e4 */ .word 0x0805e58c
-/* 0805e5e8 */ .word 0x0805e590
-/* 0805e5ec */ .word 0x0805e5ac
-/* 0805e5f0 */ .word 0x0805e5d0
-/* 0805e5f4 */ .word 0x00000000
+/* 0805e5e4 */ .word D_0805e58c
+/* 0805e5e8 */ .word D_0805e590
+/* 0805e5ec */ .word D_0805e5ac
+/* 0805e5f0 */ .word D_0805e5d0
+/* 0805e5f4 */ .word 0
 
-/* 0805e5f8 */ .word 0xcd829f8e
-/* 0805e5fc */ .word 0x40814181
-/* 0805e600 */ .word 0xcc82c88b
-/* 0805e604 */ .word 0x5e835883
-/* 0805e608 */ .word 0x67835b81
-/* 0805e60c */ .word 0x5683c582
-/* 0805e610 */ .word 0x6f839383
-/* 0805e614 */ .word 0xf0828b83
-/* 0805e618 */ .word 0xbd82bd82
-/* 0805e61c */ .word 0xc482a282
-/* 0805e620 */ .word 0xdc82dd82
-/* 0805e624 */ .word 0xe582b582
-/* 0805e628 */ .word 0x4281a482
-/* 0805e62c */ .word 0x8356830a
-/* 0805e630 */ .word 0x836f8393
-/* 0805e634 */ .word 0x81cd828b
-/* 0805e638 */ .word 0x52408141
-/* 0805e63c */ .word 0x5e837b83
-/* 0805e640 */ .word 0xc5829383
-/* 0805e644 */ .word 0x4281b782
-/* 0805e648 */ .word 0x00000000
+/* 0805e5f8 */ 
+.asciz "次は、　曲のスタートでシンバルをたたいてみましょう。\nシンバルは、　Rボタンです。"
+.balign 4, 0
 
-/* 0805e64c */ .word 0xdc82c282
-/* 0805e650 */ .word 0x4181e882
-/* 0805e654 */ .word 0xc58d4081
-/* 0805e658 */ .word 0xbe82898f
-/* 0805e65c */ .word 0x8342af82
-/* 0805e660 */ .word 0x835e837b
-/* 0805e664 */ .word 0x52c68293
-/* 0805e668 */ .word 0x5e837b83
-/* 0805e66c */ .word 0xf0829383
-/* 0805e670 */ .word 0x9e8eaf93
-/* 0805e674 */ .word 0x9f89c982
-/* 0805e678 */ .word 0xf182b782
-/* 0805e67c */ .word 0xb782c582
-/* 0805e680 */ .word 0x00004281
+/* 0805e64c */ 
+.asciz "つまり、　最初だけBボタンとRボタンを同時に押すんです。"
+.balign 4, 0
 
-/* 0805e684 */ .word 0xcc82c88b
-/* 0805e688 */ .word 0x5e835883
-/* 0805e68c */ .word 0x67835b81
-/* 0805e690 */ .word 0xfb97cc82
-/* 0805e694 */ .word 0xf0824b8f
-/* 0805e698 */ .word 0xa282768e
-/* 0805e69c */ .word 0xb5826f8f
-/* 0805e6a0 */ .word 0xad82c482
-/* 0805e6a4 */ .word 0xb382be82
-/* 0805e6a8 */ .word 0x6c83a282
-/* 0805e6ac */ .word 0x00004281
+/* 0805e684 */ 
+.asciz "曲のスタートの練習を思い出してくださいネ。"
+.balign 4, 0
 
-/* 0805e6b0 */ .word 0xe182b682
-/* 0805e6b4 */ .word 0x40814181
-/* 0805e6b8 */ .word 0xab82a282
-/* 0805e6bc */ .word 0xb782dc82
-/* 0805e6c0 */ .word 0x00004281
+/* 0805e6b0 */ 
+glabel D_0805e6b0
+.asciz "じゃ、　いきます。"
+.balign 4, 0
 
-/* 0805e6c4 */ .word 0x0805e6b0
-/* 0805e6c8 */ .word 0x0805e4e0
-/* 0805e6cc */ .word 0x0805e4f8
-/* 0805e6d0 */ .word 0x00000000
+/* 0805e6c4 */ .word D_0805e6b0
+/* 0805e6c8 */ .word D_0805e4e0
+/* 0805e6cc */ .word D_0805e4f8
+/* 0805e6d0 */ .word 0
 
-/* 0805e6d4 */ .word 0xce82b782
-/* 0805e6d8 */ .word 0xb582e782
-/* 0805e6dc */ .word 0x4981a282
-/* 0805e6e0 */ .word 0x82bb820a
-/* 0805e6e4 */ .word 0x8eb292cc
-/* 0805e6e8 */ .word 0x82c58271
-/* 0805e6ec */ .word 0x004281b7
+/* 0805e6d4 */ 
+glabel D_0805e6d4
+.asciz "すばらしい！\nその調子です。"
+.balign 4, 0
 
-/* 0805e6f0 */ .word 0xc182af82
-/* 0805e6f4 */ .word 0xa482b182
-/* 0805e6f8 */ .word 0xc88a4081
-/* 0805e6fc */ .word 0xc5825092
-/* 0805e700 */ .word 0xbd82b582
-/* 0805e704 */ .word 0x4881a982
-/* 0805e708 */ .word 0x00000000
+/* 0805e6f0 */ 
+glabel D_0805e6f0
+.asciz "けっこう　簡単でしたか？"
+.balign 4, 0
 
-/* 0805e70c */ .word 0xe582bf82
-/* 0805e710 */ .word 0xc682c182
-/* 0805e714 */ .word 0x40814181
-/* 0805e718 */ .word 0x4a98ea8b
-/* 0805e71c */ .word 0xbf82b582
-/* 0805e720 */ .word 0xa282e182
-/* 0805e724 */ .word 0xb582dc82
-/* 0805e728 */ .word 0xcb82bd82
-/* 0805e72c */ .word 0x00004281
+/* 0805e70c */ 
+glabel D_0805e70c
+.asciz "ちょっと、　苦労しちゃいましたね。"
+.balign 4, 0
 
-/* 0805e730 */ .word 0x0805e58c
-/* 0805e734 */ .word 0x0805e6d4
-/* 0805e738 */ .word 0x0805e6f0
-/* 0805e73c */ .word 0x0805e70c
-/* 0805e740 */ .word 0x00000000
+/* 0805e730 */ .word D_0805e58c
+/* 0805e734 */ .word D_0805e6d4
+/* 0805e738 */ .word D_0805e6f0
+/* 0805e73c */ .word D_0805e70c
+/* 0805e740 */ .word 0
 
-/* 0805e744 */ .word 0xcd82c582
-/* 0805e748 */ .word 0x40814181
-/* 0805e74c */ .word 0xcc82c88b
-/* 0805e750 */ .word 0xed82498f
-/* 0805e754 */ .word 0xf082e882
-/* 0805e758 */ .word 0xc182a982
-/* 0805e75c */ .word 0xe682b182
-/* 0805e760 */ .word 0x4c83ad82
-/* 0805e764 */ .word 0xc4828183
-/* 0805e768 */ .word 0xdc82dd82
-/* 0805e76c */ .word 0xe582b582
-/* 0805e770 */ .word 0x4281a482
-/* 0805e774 */ .word 0x00000000
+/* 0805e744 */ 
+.asciz "では、　曲の終わりをかっこよくキメてみましょう。"
+.balign 4, 0
 
-/* 0805e778 */ .word 0xe88ea882
-/* 0805e77c */ .word 0x41817b96
-/* 0805e780 */ .word 0xa2824081
-/* 0805e784 */ .word 0xdc82ab82
-/* 0805e788 */ .word 0x4281b782
-/* 0805e78c */ .word 0x00000000
+/* 0805e778 */ 
+glabel D_0805e778
+.asciz "お手本、　いきます。"
+.balign 4, 0
 
-/* 0805e790 */ .word 0x0805e778
-/* 0805e794 */ .word 0x0805e4e0
-/* 0805e798 */ .word 0x0805e4f8
-/* 0805e79c */ .word 0x00000000
+/* 0805e790 */ .word D_0805e778
+/* 0805e794 */ .word D_0805e4e0
+/* 0805e798 */ .word D_0805e4f8
+/* 0805e79c */ .word 0
 
-/* 0805e7a0 */ .word 0x82aa820a
-/* 0805e7a4 */ .word 0x82ce82f1
-/* 0805e7a8 */ .word 0x81c482c1
-/* 0805e7ac */ .word 0x00000049
+/* 0805e7a0 */ 
+glabel D_0805e7a0
+.asciz "\nがんばって！"
+.balign 4, 0
 
-/* 0805e7b0 */ .word 0x0805e7a0
-/* 0805e7b4 */ .word 0x0805e544
-/* 0805e7b8 */ .word 0x0805e55c
-/* 0805e7bc */ .word 0x00000000
+/* 0805e7b0 */ .word D_0805e7a0
+/* 0805e7b4 */ .word D_0805e544
+/* 0805e7b8 */ .word D_0805e55c
+/* 0805e7bc */ .word 0
 
-/* 0805e7c0 */ .word 0xf1895082
-/* 0805e7c4 */ .word 0x8f20c582
-/* 0805e7c8 */ .word 0x8288976f
-/* 0805e7cc */ .word 0x82e182bf
-/* 0805e7d0 */ .word 0x82dc82a2
-/* 0805e7d4 */ .word 0x83bd82b5
-/* 0805e7d8 */ .word 0x0a49816c
-/* 0805e7dc */ .word 0xb282b782
-/* 0805e7e0 */ .word 0xc582a282
-/* 0805e7e4 */ .word 0x4981b782
-/* 0805e7e8 */ .word 0x00000000
+/* 0805e7c0 */ 
+glabel D_0805e7c0
+.asciz "１回で 出来ちゃいましたネ！\nすごいです！"
+.balign 4, 0
 
-/* 0805e7ec */ .word 0xc182bd82
-/* 0805e7f0 */ .word 0xcc82bd82
-/* 0805e7f4 */ .word 0xf1895182
-/* 0805e7f8 */ .word 0x4081c582
-/* 0805e7fc */ .word 0xab82c582
-/* 0805e800 */ .word 0xb582dc82
-/* 0805e804 */ .word 0x4981bd82
-/* 0805e808 */ .word 0x82e2820a
-/* 0805e80c */ .word 0x82dc82e8
-/* 0805e810 */ .word 0x816c83b7
-/* 0805e814 */ .word 0x00000049
+/* 0805e7ec */ 
+glabel D_0805e7ec
+.asciz "たったの２回で　できました！\nやりますネ！"
+.balign 4, 0
 
-/* 0805e818 */ .word 0xf182c882
-/* 0805e81c */ .word 0xa982c682
-/* 0805e820 */ .word 0x6f8f4081
-/* 0805e824 */ .word 0xdc828897
-/* 0805e828 */ .word 0xbd82b582
-/* 0805e82c */ .word 0x49816c83
-/* 0805e830 */ .word 0x8343830a
-/* 0805e834 */ .word 0x82b48a43
-/* 0805e838 */ .word 0x82c582b6
-/* 0805e83c */ .word 0x818883b7
-/* 0805e840 */ .word 0x00000049
+/* 0805e818 */ 
+glabel D_0805e818
+.asciz "なんとか　出来ましたネ！\nイイ感じですヨ！"
+.balign 4, 0
 
-/* 0805e844 */ .word 0x0805e58c
-/* 0805e848 */ .word 0x0805e7c0
-/* 0805e84c */ .word 0x0805e7ec
-/* 0805e850 */ .word 0x0805e818
-/* 0805e854 */ .word 0x00000000
+/* 0805e844 */ .word D_0805e58c
+/* 0805e848 */ .word D_0805e7c0
+/* 0805e84c */ .word D_0805e7ec
+/* 0805e850 */ .word D_0805e818
+/* 0805e854 */ .word 0
 
-/* 0805e858 */ .word 0xf182b182
-/* 0805e85c */ .word 0xa982c882
-/* 0805e860 */ .word 0xb682f182
-/* 0805e864 */ .word 0x4181c582
-/* 0805e868 */ .word 0xc88b4081
-/* 0805e86c */ .word 0x5883cc82
-/* 0805e870 */ .word 0x5b815e83
-/* 0805e874 */ .word 0x41816783
-/* 0805e878 */ .word 0x86924081
-/* 0805e87c */ .word 0x4181d48a
-/* 0805e880 */ .word 0x4c834081
-/* 0805e884 */ .word 0xf0828183
-/* 0805e888 */ .word 0xbb8c5c95
-/* 0805e88c */ .word 0xab82c582
-/* 0805e890 */ .word 0xce82ea82
-/* 0805e894 */ .word 0xb582798a
-/* 0805e898 */ .word 0x8989ad82
-/* 0805e89c */ .word 0xc5827491
-/* 0805e8a0 */ .word 0xe982ab82
-/* 0805e8a4 */ .word 0xc582cc82
-/* 0805e8a8 */ .word 0xc882cd82
-/* 0805e8ac */ .word 0xa982a282
-/* 0805e8b0 */ .word 0x768ec682
-/* 0805e8b4 */ .word 0xdc82a282
-/* 0805e8b8 */ .word 0x4281b782
-/* 0805e8bc */ .word 0x00000000
+/* 0805e858 */ 
+.asciz "こんなかんじで、　曲のスタート、　中間、　キメを\x95\x5c現できれば楽しく演奏できるのではないかと思います。"
+.balign 4, 0
 
-/* 0805e8c0 */ .word 0xcc82a082
-/* 0805e8c4 */ .word 0x5b815283
-/* 0805e8c8 */ .word 0x5b816983
-/* 0805e8cc */ .word 0xfb97c582
-/* 0805e8d0 */ .word 0xb5824b8f
-/* 0805e8d4 */ .word 0x4181c482
-/* 0805e8d8 */ .word 0xba824081
-/* 0805e8dc */ .word 0x798ad082
-/* 0805e8e0 */ .word 0xad82b582
-/* 0805e8e4 */ .word 0xc182c882
-/* 0805e8e8 */ .word 0xad82c482
-/* 0805e8ec */ .word 0xb382be82
-/* 0805e8f0 */ .word 0x4281a282
-/* 0805e8f4 */ .word 0x00000000
+/* 0805e8c0 */ 
+.asciz "あのコーナーで練習して、　ぜひ楽しくなってください。"
+.balign 4, 0
 
-/* 0805e8f8 */ .word 0xcd82c582
-/* 0805e8fc */ .word 0x40814181
-/* 0805e900 */ .word 0xbd82dc82
-/* 0805e904 */ .word 0x820a4281
-/* 0805e908 */ .word 0x82e682b3
-/* 0805e90c */ .word 0x82c882a4
-/* 0805e910 */ .word 0x004281e7
-/* 0805e914 */ .word 0xc5827581
-/* 0805e918 */ .word 0xa982b782
-/* 0805e91c */ .word 0x76814881
-/* 0805e920 */ .word 0x4081cc82
-/* 0805e924 */ .word 0x8a836d83
-/* 0805e928 */ .word 0x4081aa82
-/* 0805e92c */ .word 0xa982a082
-/* 0805e930 */ .word 0x4281f182
-/* 0805e934 */ .word 0x00000000
+/* 0805e8f8 */ 
+.asciz "では、　また。\nさようなら。"
+.balign 4, 0
 
-/* 0805e938 */ .word 0xc5827581
-/* 0805e93c */ .word 0xa982b782
-/* 0805e940 */ .word 0x76814881
-/* 0805e944 */ .word 0x4081cc82
-/* 0805e948 */ .word 0x8a836d83
-/* 0805e94c */ .word 0x4081aa82
-/* 0805e950 */ .word 0x62836f83
-/* 0805e954 */ .word 0x8a836083
-/* 0805e958 */ .word 0x4981e282
-/* 0805e95c */ .word 0x00000000
-/* 0805e960 */ .word 0xa9827581
-/* 0805e964 */ .word 0x6c83e082
-/* 0805e968 */ .word 0xcc827681
-/* 0805e96c */ .word 0x6d834081
-/* 0805e970 */ .word 0xaa828a83
-/* 0805e974 */ .word 0x4c834081
-/* 0805e978 */ .word 0x56837283
-/* 0805e97c */ .word 0x62835b81
-/* 0805e980 */ .word 0x42815883
-/* 0805e984 */ .word 0x00000000
-/* 0805e988 */ .word 0xa9827581
-/* 0805e98c */ .word 0x6c83e082
-/* 0805e990 */ .word 0xcc827681
-/* 0805e994 */ .word 0x6d834081
-/* 0805e998 */ .word 0xc9828a83
-/* 0805e99c */ .word 0x56834081
-/* 0805e9a0 */ .word 0xea827283
-/* 0805e9a4 */ .word 0xc582bd82
-/* 0805e9a8 */ .word 0x00004981
-/* 0805e9ac */ .word 0x54837581
-/* 0805e9b0 */ .word 0x52834383
-/* 0805e9b4 */ .word 0x49815b81
-/* 0805e9b8 */ .word 0xcc827681
-/* 0805e9bc */ .word 0x6d834081
-/* 0805e9c0 */ .word 0xaa828a83
-/* 0805e9c4 */ .word 0x54834081
-/* 0805e9c8 */ .word 0x52834383
-/* 0805e9cc */ .word 0xbf825b81
-/* 0805e9d0 */ .word 0xa482e182
-/* 0805e9d4 */ .word 0x00004281
-/* 0805e9d8 */ .word 0x54837581
-/* 0805e9dc */ .word 0x52834383
-/* 0805e9e0 */ .word 0x49815b81
-/* 0805e9e4 */ .word 0xcc827681
-/* 0805e9e8 */ .word 0x6d834081
-/* 0805e9ec */ .word 0xaa828a83
-/* 0805e9f0 */ .word 0x54834081
-/* 0805e9f4 */ .word 0x52834383
-/* 0805e9f8 */ .word 0xe2825b81
-/* 0805e9fc */ .word 0x4981f182
-/* 0805ea00 */ .word 0x00000000
-/* 0805ea04 */ .word 0x43834183
-/* 0805ea08 */ .word 0xe7826383
-/* 0805ea0c */ .word 0x5283cc82
-/* 0805ea10 */ .word 0x93838183
-/* 0805ea14 */ .word 0x00006783
-/* 0805ea18 */ .word 0xc882d982
-/* 0805ea1c */ .word 0x40814181
-/* 0805ea20 */ .word 0xf182d982
-/* 0805ea24 */ .word 0xf182ce82
-/* 0805ea28 */ .word 0xa2824081
-/* 0805ea2c */ .word 0xa982b182
-/* 0805ea30 */ .word 0x00000000
-/* 0805ea34 */ .word 0xbd82dc82
-/* 0805ea38 */ .word 0xeb82e282
-/* 0805ea3c */ .word 0xc882a482
-/* 0805ea40 */ .word 0x00000000
-/* 0805ea44 */ .word 0x8f836083
-/* 0805ea48 */ .word 0x58836283
-/* 0805ea4c */ .word 0x00000000
-/* 0805ea50 */ .word 0xc182a282
-/* 0805ea54 */ .word 0xe582b582
-/* 0805ea58 */ .word 0x4081c982
-/* 0805ea5c */ .word 0xeb826d83
-/* 0805ea60 */ .word 0xe282a482
-/* 0805ea64 */ .word 0xa282c882
-/* 0805ea68 */ .word 0x0000a982
-/* 0805ea6c */ .word 0xe8826d83
-/* 0805ea70 */ .word 0xbd82a982
-/* 0805ea74 */ .word 0x40814181
-/* 0805ea78 */ .word 0xb582a882
-/* 0805ea7c */ .word 0xe982a682
-/* 0805ea80 */ .word 0x0000b582
-/* 0805ea84 */ .word 0x45837581
-/* 0805ea88 */ .word 0x76816283
-/* 0805ea8c */ .word 0xc1824081
-/* 0805ea90 */ .word 0xa282c482
-/* 0805ea94 */ .word 0x6783a482
-/* 0805ea98 */ .word 0xc5825283
-/* 0805ea9c */ .word 0x60824081
-/* 0805eaa0 */ .word 0x5e837b83
-/* 0805eaa4 */ .word 0xe2829383
-/* 0805eaa8 */ .word 0x00000000
-/* 0805eaac */ .word 0xe582bf82
-/* 0805eab0 */ .word 0xc682c182
-/* 0805eab4 */ .word 0xab824081
-/* 0805eab8 */ .word 0xc482a282
-/* 0805eabc */ .word 0xc882c482
-/* 0805eac0 */ .word 0x00000000
-/* 0805eac4 */ .word 0xa982ed82
-/* 0805eac8 */ .word 0x4881e982
-/* 0805eacc */ .word 0x00000000
-/* 0805ead0 */ .word 0xe582bf82
-/* 0805ead4 */ .word 0xc682c182
-/* 0805ead8 */ .word 0x40814181
-/* 0805eadc */ .word 0xc182e282
-/* 0805eae0 */ .word 0xdd82c482
-/* 0805eae4 */ .word 0x00000000
-/* 0805eae8 */ .word 0xf182aa82
-/* 0805eaec */ .word 0xc182ce82
-/* 0805eaf0 */ .word 0xe282c482
-/* 0805eaf4 */ .word 0x00000000
-/* 0805eaf8 */ .word 0x45837581
-/* 0805eafc */ .word 0x76816283
-/* 0805eb00 */ .word 0xc1824081
-/* 0805eb04 */ .word 0x6783c482
-/* 0805eb08 */ .word 0xe2825283
-/* 0805eb0c */ .word 0x6081c582
-/* 0805eb10 */ .word 0x00000000
-/* 0805eb14 */ .word 0x45837581
-/* 0805eb18 */ .word 0x76816283
-/* 0805eb1c */ .word 0xc1824081
-/* 0805eb20 */ .word 0x6783c482
-/* 0805eb24 */ .word 0xe2825283
-/* 0805eb28 */ .word 0xbf82c182
-/* 0805eb2c */ .word 0x5b81e382
-/* 0805eb30 */ .word 0x0000c982
-/* 0805eb34 */ .word 0x6a826e82
-/* 0805eb38 */ .word 0x00004981
-/* 0805eb3c */ .word 0xdc82a282
-/* 0805eb40 */ .word 0xcd82cc82
-/* 0805eb44 */ .word 0x40814181
-/* 0805eb48 */ .word 0x622e7581
-/* 0805eb4c */ .word 0xc5826081
-/* 0805eb50 */ .word 0xa982b782
-/* 0805eb54 */ .word 0x382e4881
-/* 0805eb58 */ .word 0xcc827681
-/* 0805eb5c */ .word 0x6d834081
-/* 0805eb60 */ .word 0xe2828a83
-/* 0805eb64 */ .word 0xf182cb82
-/* 0805eb68 */ .word 0x00000000
-/* 0805eb6c */ .word 0xf182b182
-/* 0805eb70 */ .word 0xcd82c782
-/* 0805eb74 */ .word 0x40814181
-/* 0805eb78 */ .word 0x392e7581
-/* 0805eb7c */ .word 0xa9826081
-/* 0805eb80 */ .word 0x6c83e082
-/* 0805eb84 */ .word 0x7681382e
-/* 0805eb88 */ .word 0x4081cc82
-/* 0805eb8c */ .word 0x8a836d83
-/* 0805eb90 */ .word 0x0000e282
-/* 0805eb94 */ .word 0xc182a282
-/* 0805eb98 */ .word 0xf182d882
-/* 0805eb9c */ .word 0xab824081
-/* 0805eba0 */ .word 0xc482a282
-/* 0805eba4 */ .word 0xc482dd82
-/* 0805eba8 */ .word 0x0000c882
-/* 0805ebac */ .word 0xc882d982
-/* 0805ebb0 */ .word 0x40814181
-/* 0805ebb4 */ .word 0xf182aa82
-/* 0805ebb8 */ .word 0xc182ce82
-/* 0805ebbc */ .word 0xe282c482
-/* 0805ebc0 */ .word 0x00000000
-/* 0805ebc4 */ .word 0xc682a082
-/* 0805ebc8 */ .word 0xc182a282
-/* 0805ebcc */ .word 0x4181b182
-/* 0805ebd0 */ .word 0x75814081
-/* 0805ebd4 */ .word 0x6081612e
-/* 0805ebd8 */ .word 0x43835483
-/* 0805ebdc */ .word 0x5b815283
-/* 0805ebe0 */ .word 0x49814981
-/* 0805ebe4 */ .word 0x7681382e
-/* 0805ebe8 */ .word 0x4081cc82
-/* 0805ebec */ .word 0x8a836d83
-/* 0805ebf0 */ .word 0x0000e282
-/* 0805ebf4 */ .word 0xc182a282
-/* 0805ebf8 */ .word 0xf182d882
-/* 0805ebfc */ .word 0xab824081
-/* 0805ec00 */ .word 0xc482a282
-/* 0805ec04 */ .word 0xc482dd82
-/* 0805ec08 */ .word 0x0000e282
-/* 0805ec0c */ .word 0xb582e682
-/* 0805ec10 */ .word 0x4181e182
-/* 0805ec14 */ .word 0xaa824081
-/* 0805ec18 */ .word 0xce82f182
-/* 0805ec1c */ .word 0xc482c182
-/* 0805ec20 */ .word 0x0000e282
-/* 0805ec24 */ .word 0x6a826e82
-/* 0805ec28 */ .word 0x40814981
-/* 0805ec2c */ .word 0x93837a83
-/* 0805ec30 */ .word 0x41817d83
-/* 0805ec34 */ .word 0x54834081
-/* 0805ec38 */ .word 0x52834383
-/* 0805ec3c */ .word 0xe2825b81
-/* 0805ec40 */ .word 0x00000000
-/* 0805ec44 */ .word 0xf1899f8e
-/* 0805ec48 */ .word 0xaa824181
-/* 0805ec4c */ .word 0xce82f182
-/* 0805ec50 */ .word 0xc482c182
-/* 0805ec54 */ .word 0xb382ba89
-/* 0805ec58 */ .word 0x6c83a282
-/* 0805ec5c */ .word 0x00004281
-/* 0805ec60 */ .word 0xb582a882
-/* 0805ec64 */ .word 0xc182a982
-/* 0805ec68 */ .word 0xc582bd82
-/* 0805ec6c */ .word 0xcb82b782
-/* 0805ec70 */ .word 0x49816081
-/* 0805ec74 */ .word 0x00000000
-/* 0805ec78 */ .word 0x00000000
-/* 0805ec7c */ .word 0xe2965391
-/* 0805ec80 */ .word 0xf089b390
-/* 0805ec84 */ .word 0xa8824181
-/* 0805ec88 */ .word 0xc582df82
-/* 0805ec8c */ .word 0xa482c682
-/* 0805ec90 */ .word 0xb482b282
-/* 0805ec94 */ .word 0xdc82a282
-/* 0805ec98 */ .word 0xbd82b582
-/* 0805ec9c */ .word 0x49816081
-/* 0805eca0 */ .word 0x00000000
-/* 0805eca4 */ .word 0x94638e0a
-/* 0805eca8 */ .word 0x8149814f
-/* 0805ecac */ .word 0x00000049
-/* 0805ecb0 */ .word 0xbd82dc82
-/* 0805ecb4 */ .word 0xed90a792
-/* 0805ecb8 */ .word 0xc482b582
-/* 0805ecbc */ .word 0xb382ba89
-/* 0805ecc0 */ .word 0x4281a282
-/* 0805ecc4 */ .word 0x82b3820a
-/* 0805ecc8 */ .word 0x82a482e6
-/* 0805eccc */ .word 0x81e782c8
-/* 0805ecd0 */ .word 0x00000042
-/* 0805ecd4 */ .word 0xef89698e
-/* 0805ecd8 */ .word 0xcc82d28e
-/* 0805ecdc */ .word 0xd0824081
-/* 0805ece0 */ .word 0xb182c682
-/* 0805ece4 */ .word 0x0000c682
-/* 0805ece8 */ .word 0x8fc58d0a
-/* 0805ecec */ .word 0x96cc8289
-/* 0805ecf0 */ .word 0x82e891e2
-/* 0805ecf4 */ .word 0x00b782c5
-/* 0805ecf8 */ .word 0x82c5820a
-/* 0805ecfc */ .word 0x824181cd
-/* 0805ed00 */ .word 0x96e29651
-/* 0805ed04 */ .word 0x000000da
-/* 0805ed08 */ .word 0x9652820a
-/* 0805ed0c */ .word 0x82da96e2
-/* 0805ed10 */ .word 0x00b782c5
-/* 0805ed14 */ .word 0x82b3820a
-/* 0805ed18 */ .word 0x824181a0
-/* 0805ed1c */ .word 0x96e29653
-/* 0805ed20 */ .word 0x82c582da
-/* 0805ed24 */ .word 0x004981b7
-/* 0805ed28 */ .word 0xb182b182
-/* 0805ed2c */ .word 0xe782a982
-/* 0805ed30 */ .word 0x4181aa82
-/* 0805ed34 */ .word 0x947b960a
-/* 0805ed38 */ .word 0x82c582d4
-/* 0805ed3c */ .word 0x81bc82b7
-/* 0805ed40 */ .word 0x00000049
-/* 0805ed44 */ .word 0xa482c682
-/* 0805ed48 */ .word 0xa482c682
-/* 0805ed4c */ .word 0x820a4181
-/* 0805ed50 */ .word 0x96e29654
-/* 0805ed54 */ .word 0x82c582da
-/* 0805ed58 */ .word 0x814981b7
-/* 0805ed5c */ .word 0x00000049
-/* 0805ed60 */ .word 0x8fc58d0a
-/* 0805ed64 */ .word 0x91e29649
-/* 0805ed68 */ .word 0x82c582e8
-/* 0805ed6c */ .word 0x814981b7
-/* 0805ed70 */ .word 0x00000049
-/* 0805ed74 */ .word 0x82c7820a
-/* 0805ed78 */ .word 0x00bc82a4
-/* 0805ed7c */ .word 0x82bb820a
-/* 0805ed80 */ .word 0x82dc82b1
-/* 0805ed84 */ .word 0x814981c5
-/* 0805ed88 */ .word 0x00000049
-/* 0805ed8c */ .word 0x82b3820a
-/* 0805ed90 */ .word 0x904181c4
-/* 0805ed94 */ .word 0x82f089b3
-/* 0805ed98 */ .word 0x004881cd
-/* 0805ed9c */ .word 0x89b3900a
-/* 0805eda0 */ .word 0x814981f0
-/* 0805eda4 */ .word 0x00000049
-/* 0805eda8 */ .word 0xce82b782
-/* 0805edac */ .word 0xb582e782
-/* 0805edb0 */ .word 0x4981a282
-/* 0805edb4 */ .word 0x9653910a
-/* 0805edb8 */ .word 0x89b390e2
-/* 0805edbc */ .word 0x814981f0
-/* 0805edc0 */ .word 0xdc8f0a49
-/* 0805edc4 */ .word 0x5082e08b
-/* 0805edc8 */ .word 0x4f824f82
-/* 0805edcc */ .word 0x5f939c96
-/* 0805edd0 */ .word 0x49814981
-/* 0805edd4 */ .word 0x00000000
-/* 0805edd8 */ .word 0xcd82c582
-/* 0805eddc */ .word 0xbd82dc82
-/* 0805ede0 */ .word 0x548f8897
-/* 0805ede4 */ .word 0x820a4181
-/* 0805ede8 */ .word 0x82e682b3
-/* 0805edec */ .word 0x82c882a4
-/* 0805edf0 */ .word 0x004281e7
-/* 0805edf4 */ .word 0xf182b182
-/* 0805edf8 */ .word 0xf182ce82
-/* 0805edfc */ .word 0x4281cd82
-/* 0805ee00 */ .word 0x834e830a
-/* 0805ee04 */ .word 0x83598343
-/* 0805ee08 */ .word 0x83938369
-/* 0805ee0c */ .word 0x815f835f
-/* 0805ee10 */ .word 0x82488149
-/* 0805ee14 */ .word 0x8a9e8ecc
-/* 0805ee18 */ .word 0x82c582d4
-/* 0805ee1c */ .word 0x004281b7
-/* 0805ee20 */ .word 0x818b830a
-/* 0805ee24 */ .word 0x828b835b
-/* 0805ee28 */ .word 0x82a982cd
-/* 0805ee2c */ .word 0x82bd82f1
-/* 0805ee30 */ .word 0x000000f1
-/* 0805ee34 */ .word 0xaa82848e
-/* 0805ee38 */ .word 0x5e837b83
-/* 0805ee3c */ .word 0xf0829383
-/* 0805ee40 */ .word 0xbd82bd82
-/* 0805ee44 */ .word 0xbd82a282
-/* 0805ee48 */ .word 0x9490f189
-/* 0805ee4c */ .word 0x9693f082
-/* 0805ee50 */ .word 0xe982c482
-/* 0805ee54 */ .word 0xaf82be82
-/* 0805ee58 */ .word 0x00004281
-/* 0805ee5c */ .word 0xc7827581
-/* 0805ee60 */ .word 0xbc82a482
-/* 0805ee64 */ .word 0xcc827681
-/* 0805ee68 */ .word 0xc682a082
-/* 0805ee6c */ .word 0xaf934181
-/* 0805ee70 */ .word 0x9490b682
-/* 0805ee74 */ .word 0xaf82be82
-/* 0805ee78 */ .word 0xbd82bd82
-/* 0805ee7c */ .word 0xc482a282
-/* 0805ee80 */ .word 0xb382ba89
-/* 0805ee84 */ .word 0x4281a282
-/* 0805ee88 */ .word 0x00000000
-/* 0805ee8c */ .word 0x7b836082
-/* 0805ee90 */ .word 0x93835e83
-/* 0805ee94 */ .word 0x4081c682
-/* 0805ee98 */ .word 0x9a8e5c8f
-/* 0805ee9c */ .word 0x5e837b83
-/* 0805eea0 */ .word 0x41819383
-/* 0805eea4 */ .word 0xbf82c782
-/* 0805eea8 */ .word 0xc582e782
-/* 0805eeac */ .word 0x6e82e082
-/* 0805eeb0 */ .word 0xc5826a82
-/* 0805eeb4 */ .word 0x4281b782
-/* 0805eeb8 */ .word 0x00000000
-/* 0805eebc */ .word 0xcd82c582
-/* 0805eec0 */ .word 0xa2824181
-/* 0805eec4 */ .word 0xc482c182
-/* 0805eec8 */ .word 0xdc82dd82
-/* 0805eecc */ .word 0xe582b582
-/* 0805eed0 */ .word 0x4281a482
-/* 0805eed4 */ .word 0x00000000
-/* 0805eed8 */ .word 0xc982b989
-/* 0805eedc */ .word 0xed82878d
-/* 0805eee0 */ .word 0xc482b982
-/* 0805eee4 */ .word 0x60824181
-/* 0805eee8 */ .word 0x5e837b83
-/* 0805eeec */ .word 0xf0829383
-/* 0805eef0 */ .word 0xb5829f89
-/* 0805eef4 */ .word 0xad82c482
-/* 0805eef8 */ .word 0xb382be82
-/* 0805eefc */ .word 0x0000a282
-/* 0805ef00 */ .word 0xc682a082
-/* 0805ef04 */ .word 0xaa95bc94
-/* 0805ef08 */ .word 0x00000000
-/* 0805ef0c */ .word 0x00000033
-/* 0805ef10 */ .word 0x00000032
-/* 0805ef14 */ .word 0x00000031
-/* 0805ef18 */ .word 0x5b837581
-/* 0805ef1c */ .word 0x76818d83
-/* 0805ef20 */ .word 0xaf93c682
-/* 0805ef24 */ .word 0xc9829e8e
-/* 0805ef28 */ .word 0x60824181
-/* 0805ef2c */ .word 0x5e837b83
-/* 0805ef30 */ .word 0xf0829383
-/* 0805ef34 */ .word 0xb5829f89
-/* 0805ef38 */ .word 0xad82c482
-/* 0805ef3c */ .word 0xb382be82
-/* 0805ef40 */ .word 0x0000a282
-/* 0805ef44 */ .word 0xaa82b989
-/* 0805ef48 */ .word 0xa682c18f
-/* 0805ef4c */ .word 0xc682e982
-/* 0805ef50 */ .word 0xeb82b182
-/* 0805ef54 */ .word 0x4181cd82
-/* 0805ef58 */ .word 0xc5825390
-/* 0805ef5c */ .word 0x45834a83
-/* 0805ef60 */ .word 0x67839383
-/* 0805ef64 */ .word 0xc482b582
-/* 0805ef68 */ .word 0xbe82ad82
-/* 0805ef6c */ .word 0xa282b382
-/* 0805ef70 */ .word 0x00000000
-/* 0805ef74 */ .word 0xcd82c582
-/* 0805ef78 */ .word 0xaa914181
-/* 0805ef7c */ .word 0xf082e892
-/* 0805ef80 */ .word 0xb682cd82
-/* 0805ef84 */ .word 0xdc82df82
-/* 0805ef88 */ .word 0x0000b782
-/* 0805ef8c */ .word 0xc982b989
-/* 0805ef90 */ .word 0xed82878d
-/* 0805ef94 */ .word 0xc482b982
-/* 0805ef98 */ .word 0x60824181
-/* 0805ef9c */ .word 0x5e837b83
-/* 0805efa0 */ .word 0xf0829383
-/* 0805efa4 */ .word 0xb5829f89
-/* 0805efa8 */ .word 0xad82c482
-/* 0805efac */ .word 0xb382be82
-/* 0805efb0 */ .word 0x0000a282
-/* 0805efb4 */ .word 0xcc82bb82
-/* 0805efb8 */ .word 0xdc82dc82
-/* 0805efbc */ .word 0x4c834181
-/* 0805efc0 */ .word 0x76835b81
-/* 0805efc4 */ .word 0xc282b582
-/* 0805efc8 */ .word 0xaf82c382
-/* 0805efcc */ .word 0xba89c482
-/* 0805efd0 */ .word 0xa282b382
-/* 0805efd4 */ .word 0x00000000
-/* 0805efd8 */ .word 0xa282be82
-/* 0805efdc */ .word 0x4181d482
-/* 0805efe0 */ .word 0xcd977793
-/* 0805efe4 */ .word 0x4b95aa82
-/* 0805efe8 */ .word 0xa9827697
-/* 0805efec */ .word 0x6381e082
-/* 0805eff0 */ .word 0x00000000
-/* 0805eff4 */ .word 0xa482e082
-/* 0805eff8 */ .word 0xb582ad8f
-/* 0805effc */ .word 0xaa824181
-/* 0805f000 */ .word 0xce82f182
-/* 0805f004 */ .word 0xdc82e882
-/* 0805f008 */ .word 0xe582b582
-/* 0805f00c */ .word 0x4281a482
-/* 0805f010 */ .word 0x00000000
-/* 0805f014 */ .word 0xc0956c90
-/* 0805f018 */ .word 0xcc82dd82
-/* 0805f01c */ .word 0x6d8ab390
-/* 0805f020 */ .word 0xf082b382
-/* 0805f024 */ .word 0x9d8ea882
-/* 0805f028 */ .word 0xc582bf82
-/* 0805f02c */ .word 0x4281b782
-/* 0805f030 */ .word 0x00000000
-/* 0805f034 */ .word 0x6d8ab390
-/* 0805f038 */ .word 0xcc91c882
-/* 0805f03c */ .word 0x9e8ee093
-/* 0805f040 */ .word 0xf082768c
-/* 0805f044 */ .word 0x9d8ea882
-/* 0805f048 */ .word 0xc582bf82
-/* 0805f04c */ .word 0x4981b782
-/* 0805f050 */ .word 0x00000000
-/* 0805f054 */ .word 0xb282b782
-/* 0805f058 */ .word 0x4981a282
-/* 0805f05c */ .word 0x64934081
-/* 0805f060 */ .word 0x9e8e6794
-/* 0805f064 */ .word 0xc882768c
-/* 0805f068 */ .word 0xcc82dd82
-/* 0805f06c */ .word 0x6d8ab390
-/* 0805f070 */ .word 0x4981b382
-/* 0805f074 */ .word 0x00004981
-/* 0805f078 */ .word 0xc882a082
-/* 0805f07c */ .word 0xcc82bd82
-/* 0805f080 */ .word 0x59838a83
-/* 0805f084 */ .word 0xb48a8083
-/* 0805f088 */ .word 0xb582f082
-/* 0805f08c */ .word 0xd782e782
-/* 0805f090 */ .word 0xb582dc82
-/* 0805f094 */ .word 0xa482e582
-/* 0805f098 */ .word 0x00000000
-/* 0805f09c */ .word 0xea82b182
-/* 0805f0a0 */ .word 0xe782a982
-/* 0805f0a4 */ .word 0x52824181
-/* 0805f0a8 */ .word 0xcc82f189
-/* 0805f0ac */ .word 0x58836583
-/* 0805f0b0 */ .word 0xf0826783
-/* 0805f0b4 */ .word 0xdc82b582
-/* 0805f0b8 */ .word 0x0000b782
-/* 0805f0bc */ .word 0xcd82c582
-/* 0805f0c0 */ .word 0x50824181
-/* 0805f0c4 */ .word 0xda96f189
-/* 0805f0c8 */ .word 0xb782c582
-/* 0805f0cc */ .word 0x00000000
-/* 0805f0d0 */ .word 0xf1895182
-/* 0805f0d4 */ .word 0xcc82da96
-/* 0805f0d8 */ .word 0x58836583
-/* 0805f0dc */ .word 0x41816783
-/* 0805f0e0 */ .word 0xab82a282
-/* 0805f0e4 */ .word 0xb782dc82
-/* 0805f0e8 */ .word 0x00000000
-/* 0805f0ec */ .word 0xa282b382
-/* 0805f0f0 */ .word 0xcc82b282
-/* 0805f0f4 */ .word 0x58836583
-/* 0805f0f8 */ .word 0xc5826783
-/* 0805f0fc */ .word 0x0000b782
-/* 0805f100 */ .word 0xc482b382
-/* 0805f104 */ .word 0x8b8c4181
-/* 0805f108 */ .word 0xcd82ca89
-/* 0805f10c */ .word 0x48816381
-/* 0805f110 */ .word 0x00000000
-/* 0805f114 */ .word 0xad82e682
-/* 0805f118 */ .word 0xa282ab82
-/* 0805f11c */ .word 0x7d83c482
-/* 0805f120 */ .word 0xb5826c83
-/* 0805f124 */ .word 0xcb82c482
-/* 0805f128 */ .word 0x8d0a4281
-/* 0805f12c */ .word 0x82ab8244
-/* 0805f130 */ .word 0x835e83c8
-/* 0805f134 */ .word 0x837e8343
-/* 0805f138 */ .word 0x824f8393
-/* 0805f13c */ .word 0x82c782c5
-/* 0805f140 */ .word 0x81bc82a4
-/* 0805f144 */ .word 0x89890a42
-/* 0805f148 */ .word 0xf0827491
-/* 0805f14c */ .word 0xdf827e8e
-/* 0805f150 */ .word 0xc682e982
-/* 0805f154 */ .word 0x820a4181
-/* 0805f158 */ .word 0x96e88ea8
-/* 0805f15c */ .word 0x82aa827b
-/* 0805f160 */ .word 0x82af82ab
-/* 0805f164 */ .word 0x818883e9
-/* 0805f168 */ .word 0x00000049
+/* 0805e914 */ 
+.asciz "「ですか？」の　ノリが　あかん。"
+.balign 4, 0
+
+/* 0805e938 */ 
+.asciz "「ですか？」の　ノリが　バッチリや！"
+.balign 4, 0
+
+/* 0805e960 */ 
+.asciz "「かもネ」の　ノリが　キビシーッス。"
+.balign 4, 0
+
+/* 0805e988 */ 
+.asciz "「かもネ」の　ノリに　シビれたで！"
+.balign 4, 0
+
+/* 0805e9ac */ 
+.asciz "「サイコー！」の　ノリが　サイコーちゃう。"
+.balign 4, 0
+
+/* 0805e9d8 */ 
+.asciz "「サイコー！」の　ノリが　サイコーやん！"
+.balign 4, 0
+
+/* 0805ea04 */ 
+.asciz "アイツらのコメント"
+.balign 4, 0
+
+/* 0805ea18 */ 
+.asciz "ほな、　ほんばん　いこか"
+.balign 4, 0
+
+/* 0805ea34 */ 
+.asciz "またやろうな"
+.balign 4, 0
+
+/* 0805ea44 */ 
+.asciz "チワッス"
+.balign 4, 0
+
+/* 0805ea50 */ 
+.asciz "いっしょに　ノろうやないか"
+.balign 4, 0
+
+/* 0805ea6c */ 
+.asciz "ノりかた、　おしえるし"
+.balign 4, 0
+
+/* 0805ea84 */ 
+.asciz "「ウッ」　っていうトコで　Ａボタンや"
+.balign 4, 0
+
+/* 0805eaac */ 
+.asciz "ちょっと　きいててな"
+.balign 4, 0
+
+/* 0805eac4 */ 
+.asciz "わかる？"
+.balign 4, 0
+
+/* 0805ead0 */ 
+.asciz "ちょっと、　やってみ"
+.balign 4, 0
+
+/* 0805eae8 */ 
+.asciz "がんばってや"
+.balign 4, 0
+
+/* 0805eaf8 */ 
+.asciz "「ウッ」　ってトコやで\x81\x60"
+.balign 4, 0
+
+/* 0805eb14 */
+.asciz "「ウッ」　ってトコやっちゅーに"
+.balign 4, 0
+
+/* 0805eb34 */ 
+.asciz "ＯＫ！"
+.balign 4, 0
+
+/* 0805eb3c */ 
+.asciz "いまのは、　「.b\x81\x60ですか？.8」の　ノリやねん"
+.balign 4, 0
+
+/* 0805eb6c */ 
+.asciz "こんどは、　「.9\x81\x60かもネ.8」の　ノリや"
+.balign 4, 0
+
+/* 0805eb94 */ 
+.asciz "いっぺん　きいてみてな"
+.balign 4, 0
+
+/* 0805ebac */ 
+.asciz "ほな、　がんばってや"
+.balign 4, 0
+
+/* 0805ebc4 */ 
+.asciz "あといっこ、　「.a\x81\x60サイコー！！.8」の　ノリや"
+.balign 4, 0
+
+/* 0805ebf4 */ 
+.asciz "いっぺん　きいてみてや"
+.balign 4, 0
+
+/* 0805ec0c */ 
+.asciz "よしゃ、　がんばってや"
+.balign 4, 0
+
+/* 0805ec24 */ 
+.asciz "ＯＫ！　ホンマ、　サイコーや"
+.balign 4, 0
+
+/* 0805ec44 */ 
+.asciz "次回、がんばって下さいネ。"
+.balign 4, 0
+
+/* 0805ec60 */ 
+.asciz "おしかったですね\x81\x60！"
+.balign 4, 0
+
+/* 0805ec78 */ 
+.asciz ""
+.balign 4, 0
+
+/* 0805ec7c */ 
+.asciz "全問正解、おめでとうございました\x81\x60！"
+.balign 4, 0
+
+/* 0805eca4 */ 
+.asciz "\n残念！！"
+.balign 4, 0
+
+/* 0805ecb0 */ 
+.asciz "また挑戦して下さい。\nさようなら。"
+.balign 4, 0
+
+/* 0805ecd4 */ 
+.asciz "司会者の　ひとこと"
+.balign 4, 0
+
+/* 0805ece8 */ 
+.asciz "\n最初の問題です"
+.balign 4, 0
+
+/* 0805ecf8 */ 
+.asciz "\nでは、２問目"
+.balign 4, 0
+
+/* 0805ed08 */ 
+.asciz "\n３問目です"
+.balign 4, 0
+
+/* 0805ed14 */ 
+.asciz "\nさあ、４問目です！"
+.balign 4, 0
+
+/* 0805ed28 */ 
+.asciz "ここからが、\n本番ですぞ！"
+.balign 4, 0
+
+/* 0805ed44 */ 
+.asciz "とうとう、\n５問目です！！"
+.balign 4, 0
+
+/* 0805ed60 */ 
+.asciz "\n最終問題です！！"
+.balign 4, 0
+
+/* 0805ed74 */ 
+.asciz "\nどうぞ"
+.balign 4, 0
+
+/* 0805ed7c */ 
+.asciz "\nそこまで！！"
+.balign 4, 0
+
+/* 0805ed8c */ 
+.asciz "\nさて、正解は？"
+.balign 4, 0
+
+/* 0805ed9c */ 
+.asciz "\n正解！！"
+.balign 4, 0
+
+/* 0805eda8 */ 
+.asciz "すばらしい！\n全問正解！！\n賞金１００万点！！"
+.balign 4, 0
+
+/* 0805edd8 */ 
+.asciz "ではまた来週、\nさようなら。"
+.balign 4, 0
+
+/* 0805edf4 */ 
+.asciz "こんばんは。\nクイズナンダダ！？の時間です。"
+.balign 4, 0
+
+/* 0805ee20 */ 
+.asciz "\nルールはかんたん"
+.balign 4, 0
+
+/* 0805ee34 */ 
+.asciz "私がボタンをたたいた回数を当てるだけ。"
+.balign 4, 0
+
+/* 0805ee5c */ 
+.asciz "「どうぞ」のあと、同じ数だけたたいて下さい。"
+.balign 4, 0
+
+/* 0805ee8c */ 
+.asciz "Ａボタンと　\x8f\x5c字ボタン、どちらでもＯＫです。"
+.balign 4, 0
+
+/* 0805eebc */ 
+.asciz "では、いってみましょう。"
+.balign 4, 0
+
+/* 0805eed8 */ 
+.asciz "音に合わせて、Ａボタンを押してください"
+.balign 4, 0
+
+/* 0805ef00 */ 
+.asciz "あと半分"
+.balign 4, 0
+
+/* 0805ef0c */ 
+.asciz "3"
+.balign 4, 0
+
+/* 0805ef10 */ 
+.asciz "2"
+.balign 4, 0
+
+/* 0805ef14 */ 
+.asciz "1"
+.balign 4, 0
+
+/* 0805ef18 */ 
+.asciz "「ゼロ」と同時に、Ａボタンを押してください"
+.balign 4, 0
+
+/* 0805ef44 */ 
+.asciz "音が消えるところは、心でカウントしてください"
+.balign 4, 0
+
+/* 0805ef74 */ 
+.asciz "では、測定をはじめます"
+.balign 4, 0
+
+/* 0805ef8c */ 
+.asciz "音に合わせて、Ａボタンを押してください"
+.balign 4, 0
+
+/* 0805efb4 */ 
+.asciz "そのまま、キープしつづけて下さい"
+.balign 4, 0
+
+/* 0805efd8 */ 
+.asciz "だいぶ、努力が必要かも…"
+.balign 4, 0
+
+/* 0805eff4 */ 
+.asciz "もう少し、がんばりましょう。"
+.balign 4, 0
+
+/* 0805f014 */ 
+.asciz "人並みの正確さをお持ちです。"
+.balign 4, 0
+
+/* 0805f034 */ 
+.asciz "正確な体内時計をお持ちです！"
+.balign 4, 0
+
+/* 0805f054 */ 
+.asciz "すごい！　電波時計なみの正確さ！！"
+.balign 4, 0
+
+/* 0805f078 */ 
+.asciz "あなたのリズム感をしらべましょう"
+.balign 4, 0
+
+/* 0805f09c */ 
+.asciz "これから、３回のテストをします"
+.balign 4, 0
+
+/* 0805f0bc */ 
+.asciz "では、１回目です"
+.balign 4, 0
+
+/* 0805f0d0 */ 
+.asciz "２回目のテスト、いきます"
+.balign 4, 0
+
+/* 0805f0ec */ 
+.asciz "さいごのテストです"
+.balign 4, 0
+
+/* 0805f100 */ 
+.asciz "さて、結果は…？"
+.balign 4, 0
+
+/* 0805f114 */ 
+.asciz "よくきいてマネしてね。\n好きなタイミングでどうぞ。\n演奏を止めると、\nお手本がきけるヨ！"
+.balign 4, 0
+
+@ Bytecode pieces (Possibly Drum Lessons)
+@ TODO Properly dump using Tengokompiler 
 /* 0805f16c */ .word 0x00000003
 /* 0805f170 */ .word 0x080179f5
 /* 0805f174 */ .word 0x00000002
@@ -4796,6 +4389,7 @@
 /* 0805f1b4 */ .word 0x0000000e
 /* 0805f1b8 */ .word 0x00000000
 /* 0805f1bc */ .word 0x00000000
+
 /* 0805f1c0 */ .word 0x00000003
 /* 0805f1c4 */ .word 0x080179f5
 /* 0805f1c8 */ .word 0x00000001
@@ -4805,16 +4399,12 @@
 /* 0805f1d8 */ .word 0x0000000e
 /* 0805f1dc */ .word 0x00000000
 /* 0805f1e0 */ .word 0x00000000
-/* 0805f1e4 */ .word 0x8350820a
-/* 0805f1e8 */ .word 0x818a8f4a
-/* 0805f1ec */ .word 0x82b98941
-/* 0805f1f0 */ .word 0x82d382aa
-/* 0805f1f4 */ .word 0x83e982a6
-/* 0805f1f8 */ .word 0x0a498188
-/* 0805f1fc */ .word 0xa982ed82
-/* 0805f200 */ .word 0xa982e982
-/* 0805f204 */ .word 0x4881c882
-/* 0805f208 */ .word 0x0000000a
+
+/* 0805f1e4 */ 
+.asciz "\n１カ所、音がふえるヨ！\nわかるかな？\n"
+.balign 4, 0
+
+@ Bytecode 
 /* 0805f20c */ .word 0x00000003
 /* 0805f210 */ .word 0x080179f5
 /* 0805f214 */ .word 0x00000002
@@ -4842,18 +4432,12 @@
 /* 0805f26c */ .word 0x0000000e
 /* 0805f270 */ .word 0x00000000
 /* 0805f274 */ .word 0x00000000
-/* 0805f278 */ .word 0x82b3820a
-/* 0805f27c */ .word 0x82c982e7
-/* 0805f280 */ .word 0x8f4a8350
-/* 0805f284 */ .word 0x0a41818a
-/* 0805f288 */ .word 0xaa82b989
-/* 0805f28c */ .word 0xa682d382
-/* 0805f290 */ .word 0x8883e982
-/* 0805f294 */ .word 0x820a4981
-/* 0805f298 */ .word 0x82a982ed
-/* 0805f29c */ .word 0x82a982e9
-/* 0805f2a0 */ .word 0x0a4881c8
-/* 0805f2a4 */ .word 0x00000000
+
+/* 0805f278 */ 
+.asciz "\nさらに１カ所、\n音がふえるヨ！\nわかるかな？\n"
+.balign 4, 0
+
+@ Bytecode
 /* 0805f2a8 */ .word 0x00000003
 /* 0805f2ac */ .word 0x080179f5
 /* 0805f2b0 */ .word 0x00000002
@@ -4887,18 +4471,12 @@
 /* 0805f320 */ .word 0x0000000e
 /* 0805f324 */ .word 0x00000000
 /* 0805f328 */ .word 0x00000000
-/* 0805f32c */ .word 0x82dc820a
-/* 0805f330 */ .word 0x82dc82bd
-/* 0805f334 */ .word 0x835082bd
-/* 0805f338 */ .word 0x818a8f4a
-/* 0805f33c */ .word 0xb9890a41
-/* 0805f340 */ .word 0xd382aa82
-/* 0805f344 */ .word 0xe982a682
-/* 0805f348 */ .word 0x49818883
-/* 0805f34c */ .word 0x82ed820a
-/* 0805f350 */ .word 0x82e982a9
-/* 0805f354 */ .word 0x81c882a9
-/* 0805f358 */ .word 0x00000a48
+
+/* 0805f32c */ 
+.asciz "\nまたまた１カ所、\n音がふえるヨ！\nわかるかな？\n"
+.balign 4, 0
+
+@ Bytecode
 /* 0805f35c */ .word 0x00000003
 /* 0805f360 */ .word 0x080179f5
 /* 0805f364 */ .word 0x00000002
@@ -4938,21 +4516,12 @@
 /* 0805f3ec */ .word 0x0000000e
 /* 0805f3f0 */ .word 0x00000000
 /* 0805f3f4 */ .word 0x00000000
-/* 0805f3f8 */ .word 0x82bb820a
-/* 0805f3fc */ .word 0x82c482b5
-/* 0805f400 */ .word 0x82bd82dc
-/* 0805f404 */ .word 0x82f182c8
-/* 0805f408 */ .word 0x0a4981c6
-/* 0805f40c */ .word 0x4a835082
-/* 0805f410 */ .word 0x41818a8f
-/* 0805f414 */ .word 0xaa82b989
-/* 0805f418 */ .word 0xa682d382
-/* 0805f41c */ .word 0x8883e982
-/* 0805f420 */ .word 0x820a4981
-/* 0805f424 */ .word 0x82a982ed
-/* 0805f428 */ .word 0x82a982e9
-/* 0805f42c */ .word 0x0a4881c8
-/* 0805f430 */ .word 0x00000000
+
+/* 0805f3f8 */ 
+.asciz "\nそしてまたなんと！\n１カ所、音がふえるヨ！\nわかるかな？\n"
+.balign 4, 0
+
+@ Bytecode
 /* 0805f434 */ .word 0x00000003
 /* 0805f438 */ .word 0x080179f5
 /* 0805f43c */ .word 0x00000001
@@ -4968,21 +4537,12 @@
 /* 0805f464 */ .word 0x0000000e
 /* 0805f468 */ .word 0x00000000
 /* 0805f46c */ .word 0x00000000
-/* 0805f470 */ .word 0x82b1820a
-/* 0805f474 */ .word 0x82dc82ea
-/* 0805f478 */ .word 0x82c882bd
-/* 0805f47c */ .word 0x81c682f1
-/* 0805f480 */ .word 0x0a498149
-/* 0805f484 */ .word 0x4a835082
-/* 0805f488 */ .word 0x41818a8f
-/* 0805f48c */ .word 0xaa82b989
-/* 0805f490 */ .word 0xa682d382
-/* 0805f494 */ .word 0x8883e982
-/* 0805f498 */ .word 0x820a4981
-/* 0805f49c */ .word 0x82a982ed
-/* 0805f4a0 */ .word 0x82a982e9
-/* 0805f4a4 */ .word 0x0a4881c8
-/* 0805f4a8 */ .word 0x00000000
+
+/* 0805f470 */ 
+.asciz "\nこれまたなんと！！\n１カ所、音がふえるヨ！\nわかるかな？\n"
+.balign 4, 0
+
+@ Bytecode
 /* 0805f4ac */ .word 0x00000003
 /* 0805f4b0 */ .word 0x080179f5
 /* 0805f4b4 */ .word 0x00000002
@@ -5028,28 +4588,12 @@
 /* 0805f554 */ .word 0x0000000e
 /* 0805f558 */ .word 0x00000000
 /* 0805f55c */ .word 0x00000000
-/* 0805f560 */ .word 0xad82e682
-/* 0805f564 */ .word 0xa282ab82
-/* 0805f568 */ .word 0x7d83c482
-/* 0805f56c */ .word 0xb5826c83
-/* 0805f570 */ .word 0xcb82c482
-/* 0805f574 */ .word 0x8d0a4281
-/* 0805f578 */ .word 0x82ab8244
-/* 0805f57c */ .word 0x835e83c8
-/* 0805f580 */ .word 0x837e8343
-/* 0805f584 */ .word 0x824f8393
-/* 0805f588 */ .word 0x82c782c5
-/* 0805f58c */ .word 0x81bc82a4
-/* 0805f590 */ .word 0x89890a42
-/* 0805f594 */ .word 0xf0827491
-/* 0805f598 */ .word 0xdf827e8e
-/* 0805f59c */ .word 0xc682e982
-/* 0805f5a0 */ .word 0x820a4181
-/* 0805f5a4 */ .word 0x96e88ea8
-/* 0805f5a8 */ .word 0x82aa827b
-/* 0805f5ac */ .word 0x82af82ab
-/* 0805f5b0 */ .word 0x818883e9
-/* 0805f5b4 */ .word 0x00000049
+
+/* 0805f560 */ 
+.asciz "よくきいてマネしてね。\n好きなタイミングでどうぞ。\n演奏を止めると、\nお手本がきけるヨ！"
+.balign 4, 0
+
+@ Bytecode 
 /* 0805f5b8 */ .word 0x00000003
 /* 0805f5bc */ .word 0x080179f5
 /* 0805f5c0 */ .word 0x00000002
@@ -5077,6 +4621,7 @@
 /* 0805f618 */ .word 0x0000000e
 /* 0805f61c */ .word 0x00000000
 /* 0805f620 */ .word 0x00000000
+
 /* 0805f624 */ .word 0x00000003
 /* 0805f628 */ .word 0x080179f5
 /* 0805f62c */ .word 0x00000001
@@ -5086,16 +4631,12 @@
 /* 0805f63c */ .word 0x0000000e
 /* 0805f640 */ .word 0x00000000
 /* 0805f644 */ .word 0x00000000
-/* 0805f648 */ .word 0x8350820a
-/* 0805f64c */ .word 0x818a8f4a
-/* 0805f650 */ .word 0x82b98941
-/* 0805f654 */ .word 0x82d382aa
-/* 0805f658 */ .word 0x83e982a6
-/* 0805f65c */ .word 0x0a498188
-/* 0805f660 */ .word 0xa982ed82
-/* 0805f664 */ .word 0xa982e982
-/* 0805f668 */ .word 0x4881c882
-/* 0805f66c */ .word 0x0000000a
+
+/* 0805f648 */ 
+.asciz "\n１カ所、音がふえるヨ！\nわかるかな？\n"
+.balign 4, 0
+
+@ Bytecode 
 /* 0805f670 */ .word 0x00000003
 /* 0805f674 */ .word 0x080179f5
 /* 0805f678 */ .word 0x00000001
@@ -5111,22 +4652,12 @@
 /* 0805f6a0 */ .word 0x0000000e
 /* 0805f6a4 */ .word 0x00000000
 /* 0805f6a8 */ .word 0x00000000
-/* 0805f6ac */ .word 0xe782b382
-/* 0805f6b0 */ .word 0x5082c982
-/* 0805f6b4 */ .word 0x4181c282
-/* 0805f6b8 */ .word 0x82b9890a
-/* 0805f6bc */ .word 0x82d382aa
-/* 0805f6c0 */ .word 0x83e982a6
-/* 0805f6c4 */ .word 0x0a498188
-/* 0805f6c8 */ .word 0xa982ed82
-/* 0805f6cc */ .word 0xa982e982
-/* 0805f6d0 */ .word 0x4881c882
-/* 0805f6d4 */ .word 0x8371830a
-/* 0805f6d8 */ .word 0x81678393
-/* 0805f6dc */ .word 0x8e5c8f46
-/* 0805f6e0 */ .word 0x837b839a
-/* 0805f6e4 */ .word 0x8f93835e
-/* 0805f6e8 */ .word 0x000000e3
+
+/* 0805f6ac */ 
+.asciz "さらに１つ、\n音がふえるヨ！\nわかるかな？\nヒント：\x8f\x5c字ボタン上"
+.balign 4, 0
+
+@ Bytecode 
 /* 0805f6ec */ .word 0x00000003
 /* 0805f6f0 */ .word 0x080179f5
 /* 0805f6f4 */ .word 0x00000001
@@ -5148,18 +4679,12 @@
 /* 0805f734 */ .word 0x0000000e
 /* 0805f738 */ .word 0x00000000
 /* 0805f73c */ .word 0x00000000
-/* 0805f740 */ .word 0x82dc820a
-/* 0805f744 */ .word 0x82dc82bd
-/* 0805f748 */ .word 0x835082bd
-/* 0805f74c */ .word 0x818a8f4a
-/* 0805f750 */ .word 0xb9890a41
-/* 0805f754 */ .word 0xd382aa82
-/* 0805f758 */ .word 0xe982a682
-/* 0805f75c */ .word 0x49818883
-/* 0805f760 */ .word 0x82ed820a
-/* 0805f764 */ .word 0x82e982a9
-/* 0805f768 */ .word 0x81c882a9
-/* 0805f76c */ .word 0x00000a48
+
+/* 0805f740 */ 
+.asciz "\nまたまた１カ所、\n音がふえるヨ！\nわかるかな？\n"
+.balign 4, 0
+
+@ Bytecode 
 /* 0805f770 */ .word 0x00000003
 /* 0805f774 */ .word 0x080179f5
 /* 0805f778 */ .word 0x00000002
@@ -5193,6 +4718,7 @@
 /* 0805f7e8 */ .word 0x0000000e
 /* 0805f7ec */ .word 0x00000000
 /* 0805f7f0 */ .word 0x00000000
+
 /* 0805f7f4 */ .word 0xb582bb82
 /* 0805f7f8 */ .word 0xdc82c482
 /* 0805f7fc */ .word 0xc882bd82
@@ -5212,6 +4738,8 @@
 /* 0805f834 */ .word 0x839a8e5c
 /* 0805f838 */ .word 0x835e837b
 /* 0805f83c */ .word 0x00458993
+
+@ Bytecode 
 /* 0805f840 */ .word 0x00000003
 /* 0805f844 */ .word 0x080179f5
 /* 0805f848 */ .word 0x00000002
@@ -5251,6 +4779,7 @@
 /* 0805f8d0 */ .word 0x0000000e
 /* 0805f8d4 */ .word 0x00000000
 /* 0805f8d8 */ .word 0x00000000
+
 /* 0805f8dc */ .word 0x82b1820a
 /* 0805f8e0 */ .word 0x82dc82ea
 /* 0805f8e4 */ .word 0x82c882bd
@@ -5266,6 +4795,8 @@
 /* 0805f90c */ .word 0x82a982e9
 /* 0805f910 */ .word 0x0a4881c8
 /* 0805f914 */ .word 0x00000000
+
+@ Bytecode 
 /* 0805f918 */ .word 0x00000003
 /* 0805f91c */ .word 0x080179f5
 /* 0805f920 */ .word 0x00000002
@@ -5311,6 +4842,7 @@
 /* 0805f9c0 */ .word 0x0000000e
 /* 0805f9c4 */ .word 0x00000000
 /* 0805f9c8 */ .word 0x00000000
+
 /* 0805f9cc */ .word 0x9a8e5c8f
 /* 0805f9d0 */ .word 0x5e837b83
 /* 0805f9d4 */ .word 0xcc829383
@@ -5328,6 +4860,7 @@
 /* 0805fa04 */ .word 0x836f8393
 /* 0805fa08 */ .word 0x82c5828b
 /* 0805fa0c */ .word 0x004281b7
+
 /* 0805fa10 */ .word 0x89836883
 /* 0805fa14 */ .word 0x5a838083
 /* 0805fa18 */ .word 0x67836283
@@ -5348,12 +4881,14 @@
 /* 0805fa54 */ .word 0x82e882bd
 /* 0805fa58 */ .word 0x82dc82b5
 /* 0805fa5c */ .word 0x004281b7
+
 /* 0805fa60 */ .word 0x82c5820a
 /* 0805fa64 */ .word 0x824181cd
 /* 0805fa68 */ .word 0x8dac82c2
 /* 0805fa6c */ .word 0x82ab8273
 /* 0805fa70 */ .word 0x825b81dc
 /* 0805fa74 */ .word 0x004981b7
+
 /* 0805fa78 */ .word 0xad82e682
 /* 0805fa7c */ .word 0xa282ab82
 /* 0805fa80 */ .word 0x7d83c482
@@ -5376,6 +4911,8 @@
 /* 0805fac4 */ .word 0x82af82ab
 /* 0805fac8 */ .word 0x818883e9
 /* 0805facc */ .word 0x00000049
+
+@ Bytecode 
 /* 0805fad0 */ .word 0x00000003
 /* 0805fad4 */ .word 0x080179f5
 /* 0805fad8 */ .word 0x00000002
@@ -5412,6 +4949,7 @@
 /* 0805fb54 */ .word 0x0000000e
 /* 0805fb58 */ .word 0x00000000
 /* 0805fb5c */ .word 0x00000000
+
 /* 0805fb60 */ .word 0x8350820a
 /* 0805fb64 */ .word 0x818a8f4a
 /* 0805fb68 */ .word 0x82b98941
@@ -5425,6 +4963,8 @@
 /* 0805fb88 */ .word 0x81678393
 /* 0805fb8c */ .word 0x8ebc9746
 /* 0805fb90 */ .word 0x000000e8
+
+@ Bytecode 
 /* 0805fb94 */ .word 0x00000003
 /* 0805fb98 */ .word 0x080179f5
 /* 0805fb9c */ .word 0x00000002
@@ -5461,6 +5001,7 @@
 /* 0805fc18 */ .word 0x0000000e
 /* 0805fc1c */ .word 0x00000000
 /* 0805fc20 */ .word 0x00000000
+
 /* 0805fc24 */ .word 0x82b3820a
 /* 0805fc28 */ .word 0x82c982e7
 /* 0805fc2c */ .word 0x8f4a8350
@@ -5473,6 +5014,8 @@
 /* 0805fc48 */ .word 0x82a982e9
 /* 0805fc4c */ .word 0x0a4881c8
 /* 0805fc50 */ .word 0x00000000
+
+@ Bytecode 
 /* 0805fc54 */ .word 0x00000003
 /* 0805fc58 */ .word 0x080179f5
 /* 0805fc5c */ .word 0x00000001
@@ -5488,6 +5031,7 @@
 /* 0805fc84 */ .word 0x0000000e
 /* 0805fc88 */ .word 0x00000000
 /* 0805fc8c */ .word 0x00000000
+
 /* 0805fc90 */ .word 0x82dc820a
 /* 0805fc94 */ .word 0x82dc82bd
 /* 0805fc98 */ .word 0x835082bd
@@ -5500,6 +5044,8 @@
 /* 0805fcb4 */ .word 0x82e982a9
 /* 0805fcb8 */ .word 0x81c882a9
 /* 0805fcbc */ .word 0x00000a48
+
+@ Bytecode 
 /* 0805fcc0 */ .word 0x00000003
 /* 0805fcc4 */ .word 0x080179f5
 /* 0805fcc8 */ .word 0x00000001
@@ -5521,6 +5067,7 @@
 /* 0805fd08 */ .word 0x0000000e
 /* 0805fd0c */ .word 0x00000000
 /* 0805fd10 */ .word 0x00000000
+
 /* 0805fd14 */ .word 0x82bb820a
 /* 0805fd18 */ .word 0x82c482b5
 /* 0805fd1c */ .word 0x82bd82dc
@@ -5536,6 +5083,8 @@
 /* 0805fd44 */ .word 0x82a982e9
 /* 0805fd48 */ .word 0x0a4881c8
 /* 0805fd4c */ .word 0x00000000
+
+@ Bytecode 
 /* 0805fd50 */ .word 0x00000003
 /* 0805fd54 */ .word 0x080179f5
 /* 0805fd58 */ .word 0x00000001
@@ -5563,6 +5112,7 @@
 /* 0805fdb0 */ .word 0x0000000e
 /* 0805fdb4 */ .word 0x00000000
 /* 0805fdb8 */ .word 0x00000000
+
 /* 0805fdbc */ .word 0x82b1820a
 /* 0805fdc0 */ .word 0x82dc82ea
 /* 0805fdc4 */ .word 0x82c882bd
@@ -5578,6 +5128,8 @@
 /* 0805fdec */ .word 0x82a982e9
 /* 0805fdf0 */ .word 0x0a4881c8
 /* 0805fdf4 */ .word 0x00000000
+
+@ Bytecode 
 /* 0805fdf8 */ .word 0x00000003
 /* 0805fdfc */ .word 0x080179f5
 /* 0805fe00 */ .word 0x00000002
@@ -5620,6 +5172,7 @@
 /* 0805fe94 */ .word 0x0000000e
 /* 0805fe98 */ .word 0x00000000
 /* 0805fe9c */ .word 0x00000000
+
 /* 0805fea0 */ .word 0xad82e682
 /* 0805fea4 */ .word 0xa282ab82
 /* 0805fea8 */ .word 0x7d83c482
@@ -5642,6 +5195,8 @@
 /* 0805feec */ .word 0x82af82ab
 /* 0805fef0 */ .word 0x818883e9
 /* 0805fef4 */ .word 0x00000049
+
+@ Bytecode 
 /* 0805fef8 */ .word 0x00000003
 /* 0805fefc */ .word 0x080179f5
 /* 0805ff00 */ .word 0x00000002
@@ -5675,6 +5230,7 @@
 /* 0805ff70 */ .word 0x0000000e
 /* 0805ff74 */ .word 0x00000000
 /* 0805ff78 */ .word 0x00000000
+
 /* 0805ff7c */ .word 0x8350820a
 /* 0805ff80 */ .word 0x818a8f4a
 /* 0805ff84 */ .word 0x82b98941
@@ -5689,6 +5245,8 @@
 /* 0805ffa8 */ .word 0x7b835246
 /* 0805ffac */ .word 0x93835e83
 /* 0805ffb0 */ .word 0x00000000
+
+@ Bytecode 
 /* 0805ffb4 */ .word 0x00000003
 /* 0805ffb8 */ .word 0x080179f5
 /* 0805ffbc */ .word 0x00000001
@@ -5701,6 +5259,7 @@
 /* 0805ffd8 */ .word 0x0000000e
 /* 0805ffdc */ .word 0x00000000
 /* 0805ffe0 */ .word 0x00000000
+
 /* 0805ffe4 */ .word 0x82b3820a
 /* 0805ffe8 */ .word 0x82c982e7
 /* 0805ffec */ .word 0x8f4a8350
@@ -5713,6 +5272,8 @@
 /* 08060008 */ .word 0x82a982e9
 /* 0806000c */ .word 0x0a4881c8
 /* 08060010 */ .word 0x00000000
+
+@ Bytecode 
 /* 08060014 */ .word 0x00000003
 /* 08060018 */ .word 0x080179f5
 /* 0806001c */ .word 0x00000002
@@ -5740,6 +5301,7 @@
 /* 08060074 */ .word 0x0000000e
 /* 08060078 */ .word 0x00000000
 /* 0806007c */ .word 0x00000000
+
 /* 08060080 */ .word 0xbd82dc82
 /* 08060084 */ .word 0xbd82dc82
 /* 08060088 */ .word 0x4a835082
@@ -5757,6 +5319,8 @@
 /* 080600b8 */ .word 0x837b839a
 /* 080600bc */ .word 0x8993835e
 /* 080600c0 */ .word 0x00000045
+
+@ Bytecode 
 /* 080600c4 */ .word 0x00000003
 /* 080600c8 */ .word 0x080179f5
 /* 080600cc */ .word 0x00000002
@@ -5790,6 +5354,7 @@
 /* 0806013c */ .word 0x0000000e
 /* 08060140 */ .word 0x00000000
 /* 08060144 */ .word 0x00000000
+
 /* 08060148 */ .word 0x82bb820a
 /* 0806014c */ .word 0x82c482b5
 /* 08060150 */ .word 0x82bd82dc
@@ -5805,6 +5370,8 @@
 /* 08060178 */ .word 0x82a982e9
 /* 0806017c */ .word 0x0a4881c8
 /* 08060180 */ .word 0x00000000
+
+@ Bytecode 
 /* 08060184 */ .word 0x00000003
 /* 08060188 */ .word 0x080179f5
 /* 0806018c */ .word 0x00000002
@@ -5844,6 +5411,7 @@
 /* 08060214 */ .word 0x0000000e
 /* 08060218 */ .word 0x00000000
 /* 0806021c */ .word 0x00000000
+
 /* 08060220 */ .word 0x82b1820a
 /* 08060224 */ .word 0x82dc82ea
 /* 08060228 */ .word 0x82c882bd
@@ -5858,6 +5426,8 @@
 /* 0806024c */ .word 0x82a982ed
 /* 08060250 */ .word 0x82a982e9
 /* 08060254 */ .word 0x0a4881c8
+
+@ Bytecode 
 /* 08060258 */ .word 0x00000000
 /* 0806025c */ .word 0x00000003
 /* 08060260 */ .word 0x080179f5
@@ -5904,6 +5474,7 @@
 /* 08060304 */ .word 0x0000000e
 /* 08060308 */ .word 0x00000000
 /* 0806030c */ .word 0x00000000
+
 /* 08060310 */ .word 0xad82e682
 /* 08060314 */ .word 0xa282ab82
 /* 08060318 */ .word 0x7d83c482
@@ -5926,6 +5497,8 @@
 /* 0806035c */ .word 0x82af82ab
 /* 08060360 */ .word 0x818883e9
 /* 08060364 */ .word 0x00000049
+
+@ Bytecode 
 /* 08060368 */ .word 0x00000003
 /* 0806036c */ .word 0x080179f5
 /* 08060370 */ .word 0x00000002
@@ -5959,6 +5532,7 @@
 /* 080603e0 */ .word 0x0000000e
 /* 080603e4 */ .word 0x00000000
 /* 080603e8 */ .word 0x00000000
+
 /* 080603ec */ .word 0x8350820a
 /* 080603f0 */ .word 0x818a8f4a
 /* 080603f4 */ .word 0x82b98941
@@ -5973,6 +5547,8 @@
 /* 08060418 */ .word 0x7b835246
 /* 0806041c */ .word 0x93835e83
 /* 08060420 */ .word 0x00000000
+
+@ Bytecode 
 /* 08060424 */ .word 0x00000003
 /* 08060428 */ .word 0x080179f5
 /* 0806042c */ .word 0x00000001
@@ -5985,6 +5561,7 @@
 /* 08060448 */ .word 0x0000000e
 /* 0806044c */ .word 0x00000000
 /* 08060450 */ .word 0x00000000
+
 /* 08060454 */ .word 0x82b3820a
 /* 08060458 */ .word 0x82c982e7
 /* 0806045c */ .word 0x8f4a8350
@@ -5996,6 +5573,8 @@
 /* 08060474 */ .word 0x82a982ed
 /* 08060478 */ .word 0x82a982e9
 /* 0806047c */ .word 0x0a4881c8
+
+@ Bytecode 
 /* 08060480 */ .word 0x00000000
 /* 08060484 */ .word 0x00000003
 /* 08060488 */ .word 0x080179f5
@@ -6024,6 +5603,7 @@
 /* 080604e4 */ .word 0x0000000e
 /* 080604e8 */ .word 0x00000000
 /* 080604ec */ .word 0x00000000
+
 /* 080604f0 */ .word 0x82dc820a
 /* 080604f4 */ .word 0x82dc82bd
 /* 080604f8 */ .word 0x835082bd
@@ -6036,6 +5616,8 @@
 /* 08060514 */ .word 0x82e982a9
 /* 08060518 */ .word 0x81c882a9
 /* 0806051c */ .word 0x00000a48
+
+@ Bytecode 
 /* 08060520 */ .word 0x00000003
 /* 08060524 */ .word 0x080179f5
 /* 08060528 */ .word 0x00000001
@@ -6054,6 +5636,7 @@
 /* 0806055c */ .word 0x0000000e
 /* 08060560 */ .word 0x00000000
 /* 08060564 */ .word 0x00000000
+
 /* 08060568 */ .word 0x82bb820a
 /* 0806056c */ .word 0x82c482b5
 /* 08060570 */ .word 0x82bd82dc
@@ -6069,6 +5652,8 @@
 /* 08060598 */ .word 0x82a982e9
 /* 0806059c */ .word 0x0a4881c8
 /* 080605a0 */ .word 0x00000000
+
+@ Bytecode 
 /* 080605a4 */ .word 0x00000003
 /* 080605a8 */ .word 0x080179f5
 /* 080605ac */ .word 0x00000002
@@ -6102,6 +5687,7 @@
 /* 0806061c */ .word 0x0000000e
 /* 08060620 */ .word 0x00000000
 /* 08060624 */ .word 0x00000000
+
 /* 08060628 */ .word 0x82b1820a
 /* 0806062c */ .word 0x82dc82ea
 /* 08060630 */ .word 0x82c882bd
@@ -6117,6 +5703,8 @@
 /* 08060658 */ .word 0x82a982e9
 /* 0806065c */ .word 0x0a4881c8
 /* 08060660 */ .word 0x00000000
+
+@ Bytecode 
 /* 08060664 */ .word 0x00000003
 /* 08060668 */ .word 0x080179f5
 /* 0806066c */ .word 0x00000002
@@ -6156,6 +5744,7 @@
 /* 080606f4 */ .word 0x0000000e
 /* 080606f8 */ .word 0x00000000
 /* 080606fc */ .word 0x00000000
+
 /* 08060700 */ .word 0x82dc820a
 /* 08060704 */ .word 0x82dc82bd
 /* 08060708 */ .word 0x82c882bd
@@ -6171,6 +5760,8 @@
 /* 08060730 */ .word 0x82a982e9
 /* 08060734 */ .word 0x0a4881c8
 /* 08060738 */ .word 0x00000000
+
+@ Bytecode 
 /* 0806073c */ .word 0x00000003
 /* 08060740 */ .word 0x080179f5
 /* 08060744 */ .word 0x00000002
@@ -6216,6 +5807,7 @@
 /* 080607e4 */ .word 0x0000000e
 /* 080607e8 */ .word 0x00000000
 /* 080607ec */ .word 0x00000000
+
 /* 080607f0 */ .word 0xea82b182
 /* 080607f4 */ .word 0xb382c582
 /* 080607f8 */ .word 0xb282a282
@@ -6233,6 +5825,8 @@
 /* 08060828 */ .word 0x81678393
 /* 0806082c */ .word 0x8ebc9746
 /* 08060830 */ .word 0x000000e8
+
+@ Bytecode 
 /* 08060834 */ .word 0x00000003
 /* 08060838 */ .word 0x080179f5
 /* 0806083c */ .word 0x00000002
@@ -6287,6 +5881,7 @@
 /* 08060900 */ .word 0x0000000e
 /* 08060904 */ .word 0x00000000
 /* 08060908 */ .word 0x00000000
+
 /* 0806090c */ .word 0xad82e682
 /* 08060910 */ .word 0xa282ab82
 /* 08060914 */ .word 0x7d83c482
@@ -6309,6 +5904,8 @@
 /* 08060958 */ .word 0x82af82ab
 /* 0806095c */ .word 0x818883e9
 /* 08060960 */ .word 0x00000049
+
+@ Bytecode 
 /* 08060964 */ .word 0x00000003
 /* 08060968 */ .word 0x080179f5
 /* 0806096c */ .word 0x00000001
@@ -6339,6 +5936,7 @@
 /* 080609d0 */ .word 0x0000000e
 /* 080609d4 */ .word 0x00000000
 /* 080609d8 */ .word 0x00000000
+
 /* 080609dc */ .word 0x834c830a
 /* 080609e0 */ .word 0x824e8362
 /* 080609e4 */ .word 0x895182f0
@@ -6355,6 +5953,8 @@
 /* 08060a10 */ .word 0xbe829383
 /* 08060a14 */ .word 0xc582af82
 /* 08060a18 */ .word 0x00000000
+
+@ Bytecode 
 /* 08060a1c */ .word 0x00000003
 /* 08060a20 */ .word 0x080179f5
 /* 08060a24 */ .word 0x00000001
@@ -6409,6 +6009,7 @@
 /* 08060ae8 */ .word 0x0000000e
 /* 08060aec */ .word 0x00000000
 /* 08060af0 */ .word 0x00000000
+
 /* 08060af4 */ .word 0xe782b382
 /* 08060af8 */ .word 0x5082c982
 /* 08060afc */ .word 0x8a8f4a83
@@ -6426,6 +6027,8 @@
 /* 08060b2c */ .word 0x91cd824e
 /* 08060b30 */ .word 0x93c6824f
 /* 08060b34 */ .word 0x00b682af
+
+@ Bytecode 
 /* 08060b38 */ .word 0x00000003
 /* 08060b3c */ .word 0x080179f5
 /* 08060b40 */ .word 0x00000001
@@ -6468,6 +6071,7 @@
 /* 08060bd4 */ .word 0x0000000e
 /* 08060bd8 */ .word 0x00000000
 /* 08060bdc */ .word 0x00000000
+
 /* 08060be0 */ .word 0x82dc820a
 /* 08060be4 */ .word 0x82dc82bd
 /* 08060be8 */ .word 0x835082bd
@@ -6480,6 +6084,8 @@
 /* 08060c04 */ .word 0x82e982a9
 /* 08060c08 */ .word 0x81c882a9
 /* 08060c0c */ .word 0x00000a48
+
+@ Bytecode 
 /* 08060c10 */ .word 0x00000003
 /* 08060c14 */ .word 0x080179f5
 /* 08060c18 */ .word 0x00000001
@@ -6528,6 +6134,7 @@
 /* 08060cc4 */ .word 0x0000000e
 /* 08060cc8 */ .word 0x00000000
 /* 08060ccc */ .word 0x00000000
+
 /* 08060cd0 */ .word 0x82bb820a
 /* 08060cd4 */ .word 0x82c482b5
 /* 08060cd8 */ .word 0x82bd82dc
@@ -6543,6 +6150,8 @@
 /* 08060d00 */ .word 0x82a982e9
 /* 08060d04 */ .word 0x0a4881c8
 /* 08060d08 */ .word 0x00000000
+
+@ Bytecode 
 /* 08060d0c */ .word 0x00000003
 /* 08060d10 */ .word 0x080179f5
 /* 08060d14 */ .word 0x00000001
@@ -6597,6 +6206,7 @@
 /* 08060dd8 */ .word 0x0000000e
 /* 08060ddc */ .word 0x00000000
 /* 08060de0 */ .word 0x00000000
+
 /* 08060de4 */ .word 0x82b1820a
 /* 08060de8 */ .word 0x82dc82ea
 /* 08060dec */ .word 0x82c882bd
@@ -6612,6 +6222,7 @@
 /* 08060e14 */ .word 0x82a982e9
 /* 08060e18 */ .word 0x0a4881c8
 /* 08060e1c */ .word 0x00000000
+
 /* 08060e20 */ .word 0x00000003
 /* 08060e24 */ .word 0x080179f5
 /* 08060e28 */ .word 0x00000001
@@ -6672,6 +6283,7 @@
 /* 08060f04 */ .word 0x0000000e
 /* 08060f08 */ .word 0x00000000
 /* 08060f0c */ .word 0x00000000
+
 /* 08060f10 */ .word 0x82dc820a
 /* 08060f14 */ .word 0x82dc82bd
 /* 08060f18 */ .word 0x82c882bd
@@ -6687,6 +6299,8 @@
 /* 08060f40 */ .word 0x82a982e9
 /* 08060f44 */ .word 0x0a4881c8
 /* 08060f48 */ .word 0x00000000
+
+@ Bytecode 
 /* 08060f4c */ .word 0x00000003
 /* 08060f50 */ .word 0x080179f5
 /* 08060f54 */ .word 0x00000001
@@ -6708,6 +6322,7 @@
 /* 08060f94 */ .word 0x0000000e
 /* 08060f98 */ .word 0x00000000
 /* 08060f9c */ .word 0x00000000
+
 /* 08060fa0 */ .word 0xad82e682
 /* 08060fa4 */ .word 0xa282ab82
 /* 08060fa8 */ .word 0x7d83c482
@@ -6730,6 +6345,8 @@
 /* 08060fec */ .word 0x82af82ab
 /* 08060ff0 */ .word 0x818883e9
 /* 08060ff4 */ .word 0x00000049
+
+@ Bytecode 
 /* 08060ff8 */ .word 0x00000003
 /* 08060ffc */ .word 0x080179f5
 /* 08061000 */ .word 0x00000001
@@ -6760,6 +6377,7 @@
 /* 08061064 */ .word 0x0000000e
 /* 08061068 */ .word 0x00000000
 /* 0806106c */ .word 0x00000000
+
 /* 08061070 */ .word 0x8350820a
 /* 08061074 */ .word 0x818a8f4a
 /* 08061078 */ .word 0x82b98941
@@ -6776,6 +6394,8 @@
 /* 080610a4 */ .word 0x824f91cd
 /* 080610a8 */ .word 0x82af93c6
 /* 080610ac */ .word 0x000000b6
+
+@ Bytecode 
 /* 080610b0 */ .word 0x00000003
 /* 080610b4 */ .word 0x080179f5
 /* 080610b8 */ .word 0x00000001
@@ -6800,6 +6420,7 @@
 /* 08061104 */ .word 0x0000000e
 /* 08061108 */ .word 0x00000000
 /* 0806110c */ .word 0x00000000
+
 /* 08061110 */ .word 0xe782b382
 /* 08061114 */ .word 0x5082c982
 /* 08061118 */ .word 0x8a8f4a83
@@ -6817,6 +6438,8 @@
 /* 08061148 */ .word 0x91cd824e
 /* 0806114c */ .word 0x93c6824f
 /* 08061150 */ .word 0x00b682af
+
+@ Bytecode 
 /* 08061154 */ .word 0x00000003
 /* 08061158 */ .word 0x080179f5
 /* 0806115c */ .word 0x00000002
@@ -6844,6 +6467,7 @@
 /* 080611b4 */ .word 0x0000000e
 /* 080611b8 */ .word 0x00000000
 /* 080611bc */ .word 0x00000000
+
 /* 080611c0 */ .word 0xbd82dc82
 /* 080611c4 */ .word 0xbd82dc82
 /* 080611c8 */ .word 0x4a835082
@@ -6861,6 +6485,8 @@
 /* 080611f8 */ .word 0x837b839a
 /* 080611fc */ .word 0x8f93835e
 /* 08061200 */ .word 0x000000e3
+
+@ Bytecode 
 /* 08061204 */ .word 0x00000003
 /* 08061208 */ .word 0x080179f5
 /* 0806120c */ .word 0x00000002
@@ -6894,6 +6520,7 @@
 /* 0806127c */ .word 0x0000000e
 /* 08061280 */ .word 0x00000000
 /* 08061284 */ .word 0x00000000
+
 /* 08061288 */ .word 0x82bb820a
 /* 0806128c */ .word 0x82c482b5
 /* 08061290 */ .word 0x82bd82dc
@@ -6909,6 +6536,8 @@
 /* 080612b8 */ .word 0x82a982e9
 /* 080612bc */ .word 0x0a4881c8
 /* 080612c0 */ .word 0x00000000
+
+@ Bytecode 
 /* 080612c4 */ .word 0x00000003
 /* 080612c8 */ .word 0x080179f5
 /* 080612cc */ .word 0x00000001
@@ -6936,6 +6565,8 @@
 /* 08061324 */ .word 0x82e982ab
 /* 08061328 */ .word 0x81c882a9
 /* 0806132c */ .word 0x00000a48
+
+@ Bytecode 
 /* 08061330 */ .word 0x00000003
 /* 08061334 */ .word 0x080179f5
 /* 08061338 */ .word 0x00000002
@@ -6981,6 +6612,7 @@
 /* 080613d8 */ .word 0x0000000e
 /* 080613dc */ .word 0x00000000
 /* 080613e0 */ .word 0x00000000
+
 /* 080613e4 */ .word 0xad82e682
 /* 080613e8 */ .word 0xa282ab82
 /* 080613ec */ .word 0x7d83c482
@@ -7003,6 +6635,8 @@
 /* 08061430 */ .word 0x82af82ab
 /* 08061434 */ .word 0x818883e9
 /* 08061438 */ .word 0x00000049
+
+@ Bytecode 
 /* 0806143c */ .word 0x00000003
 /* 08061440 */ .word 0x080179f5
 /* 08061444 */ .word 0x00000003
@@ -7039,6 +6673,7 @@
 /* 080614c0 */ .word 0x0000000e
 /* 080614c4 */ .word 0x00000000
 /* 080614c8 */ .word 0x00000000
+
 /* 080614cc */ .word 0x8350820a
 /* 080614d0 */ .word 0x818a8f4a
 /* 080614d4 */ .word 0x82b98941
@@ -7049,6 +6684,8 @@
 /* 080614e8 */ .word 0xa982e982
 /* 080614ec */ .word 0x4881c882
 /* 080614f0 */ .word 0x0000000a
+
+@ Bytecode 
 /* 080614f4 */ .word 0x00000003
 /* 080614f8 */ .word 0x080179f5
 /* 080614fc */ .word 0x00000003
@@ -7082,6 +6719,7 @@
 /* 0806156c */ .word 0x0000000e
 /* 08061570 */ .word 0x00000000
 /* 08061574 */ .word 0x00000000
+
 /* 08061578 */ .word 0x82b3820a
 /* 0806157c */ .word 0x82c982e7
 /* 08061580 */ .word 0x8f4a8350
@@ -7094,6 +6732,8 @@
 /* 0806159c */ .word 0x82a982e9
 /* 080615a0 */ .word 0x0a4881c8
 /* 080615a4 */ .word 0x00000000
+
+@ Bytecode 
 /* 080615a8 */ .word 0x00000003
 /* 080615ac */ .word 0x080179f5
 /* 080615b0 */ .word 0x00000003
@@ -7109,6 +6749,7 @@
 /* 080615d8 */ .word 0x0000000e
 /* 080615dc */ .word 0x00000000
 /* 080615e0 */ .word 0x00000000
+
 /* 080615e4 */ .word 0x82dc820a
 /* 080615e8 */ .word 0x82dc82bd
 /* 080615ec */ .word 0x835082bd
@@ -7121,6 +6762,7 @@
 /* 08061608 */ .word 0x82e982a9
 /* 0806160c */ .word 0x81c882a9
 /* 08061610 */ .word 0x00000a48
+
 /* 08061614 */ .word 0x00000003
 /* 08061618 */ .word 0x080179f5
 /* 0806161c */ .word 0x00000003
@@ -7181,6 +6823,7 @@
 /* 080616f8 */ .word 0x0000000e
 /* 080616fc */ .word 0x00000000
 /* 08061700 */ .word 0x00000000
+
 /* 08061704 */ .word 0x89a18d0a
 /* 08061708 */ .word 0x81cd82f1
 /* 0806170c */ .word 0x83588341
@@ -7196,6 +6839,7 @@
 /* 08061734 */ .word 0xe582b582
 /* 08061738 */ .word 0x4281a482
 /* 0806173c */ .word 0x0000000a
+
 /* 08061740 */ .word 0x7b83410a
 /* 08061744 */ .word 0x93835e83
 /* 08061748 */ .word 0x5c8fc682
@@ -7215,6 +6859,7 @@
 /* 08061780 */ .word 0xab82c582
 /* 08061784 */ .word 0x8883e982
 /* 08061788 */ .word 0x00004981
+
 /* 0806178c */ .word 0x82c5820a
 /* 08061790 */ .word 0x824081cd
 /* 08061794 */ .word 0x82c182b3
@@ -7227,6 +6872,7 @@
 /* 080617b0 */ .word 0xdc82df82
 /* 080617b4 */ .word 0xb7825b81
 /* 080617b8 */ .word 0x000a4981
+
 /* 080617bc */ .word 0x82e38f0a
 /* 080617c0 */ .word 0x82f58cc5
 /* 080617c4 */ .word 0x82c482c1
@@ -7240,6 +6886,7 @@
 /* 080617e4 */ .word 0xc5827683
 /* 080617e8 */ .word 0x4281b782
 /* 080617ec */ .word 0x00000000
+
 /* 080617f0 */ .word 0x82dc820a
 /* 080617f4 */ .word 0x828692f1
 /* 080617f8 */ .word 0x837e83cc
@@ -7259,6 +6906,7 @@
 /* 08061830 */ .word 0x82a19643
 /* 08061834 */ .word 0x81b782c5
 /* 08061838 */ .word 0x00000042
+
 /* 0806183c */ .word 0x82a4820a
 /* 08061840 */ .word 0x81ad82dc
 /* 08061844 */ .word 0x82c58240
@@ -7277,12 +6925,14 @@
 /* 08061878 */ .word 0x82dd82c4
 /* 0806187c */ .word 0x816c83c4
 /* 08061880 */ .word 0x00000049
+
 /* 08061884 */ .word 0x82c5820a
 /* 08061888 */ .word 0x824181cd
 /* 0806188c */ .word 0x8dac82c2
 /* 08061890 */ .word 0x82ab8273
 /* 08061894 */ .word 0x825b81dc
 /* 08061898 */ .word 0x004981b7
+
 /* 0806189c */ .word 0x9189890a
 /* 080618a0 */ .word 0x91aa8274
 /* 080618a4 */ .word 0x82ad82ac
@@ -7298,6 +6948,7 @@
 /* 080618cc */ .word 0x82b78249
 /* 080618d0 */ .word 0x81c682e9
 /* 080618d4 */ .word 0x00000063
+
 /* 080618d8 */ .word 0x9189890a
 /* 080618dc */ .word 0x81aa8274
 /* 080618e0 */ .word 0x82e48241
@@ -7312,6 +6963,7 @@
 /* 08061904 */ .word 0x83c482dd
 /* 08061908 */ .word 0x0a42816c
 /* 0806190c */ .word 0x00000000
+
 /* 08061910 */ .word 0x82e0820a
 /* 08061914 */ .word 0x83cc82c6
 /* 08061918 */ .word 0x83938365
@@ -7328,6 +6980,7 @@
 /* 08061944 */ .word 0x826a826e
 /* 08061948 */ .word 0x81b782c5
 /* 0806194c */ .word 0x00000042
+
 /* 08061950 */ .word 0x82bf820a
 /* 08061954 */ .word 0x82dd82c8
 /* 08061958 */ .word 0x835883c9
@@ -7340,11 +6993,13 @@
 /* 08061974 */ .word 0xc882dc82
 /* 08061978 */ .word 0x8883a282
 /* 0806197c */ .word 0x00004281
+
 /* 08061980 */ .word 0x82c5820a
 /* 08061984 */ .word 0x8e4181cd
 /* 08061988 */ .word 0x82a2829f
 /* 0806198c */ .word 0x82c482c1
 /* 08061990 */ .word 0x82e682dd
+
 /* 08061994 */ .word 0x004981a4
 /* 08061998 */ .word 0xad82e682
 /* 0806199c */ .word 0xa282ab82
@@ -7368,6 +7023,8 @@
 /* 080619e4 */ .word 0x82af82ab
 /* 080619e8 */ .word 0x818883e9
 /* 080619ec */ .word 0x00000049
+
+@ Bytecode 
 /* 080619f0 */ .word 0x00000003
 /* 080619f4 */ .word 0x080179f5
 /* 080619f8 */ .word 0x00000001
@@ -7398,6 +7055,7 @@
 /* 08061a5c */ .word 0x0000000e
 /* 08061a60 */ .word 0x00000000
 /* 08061a64 */ .word 0x00000000
+
 /* 08061a68 */ .word 0x8350820a
 /* 08061a6c */ .word 0x818a8f4a
 /* 08061a70 */ .word 0x82b98941
@@ -7408,6 +7066,8 @@
 /* 08061a84 */ .word 0xa982e982
 /* 08061a88 */ .word 0x4881c882
 /* 08061a8c */ .word 0x00000000
+
+@ Bytecode 
 /* 08061a90 */ .word 0x00000003
 /* 08061a94 */ .word 0x080179f5
 /* 08061a98 */ .word 0x00000001
@@ -7429,6 +7089,7 @@
 /* 08061ad8 */ .word 0x0000000e
 /* 08061adc */ .word 0x00000000
 /* 08061ae0 */ .word 0x00000000
+
 /* 08061ae4 */ .word 0x82b3820a
 /* 08061ae8 */ .word 0x82c982e7
 /* 08061aec */ .word 0x8f4a8350
@@ -7440,6 +7101,8 @@
 /* 08061b04 */ .word 0x82a982ed
 /* 08061b08 */ .word 0x82a982e9
 /* 08061b0c */ .word 0x004881c8
+
+@ Bytecode 
 /* 08061b10 */ .word 0x00000003
 /* 08061b14 */ .word 0x080179f5
 /* 08061b18 */ .word 0x00000002
@@ -7461,6 +7124,7 @@
 /* 08061b58 */ .word 0x0000000e
 /* 08061b5c */ .word 0x00000000
 /* 08061b60 */ .word 0x00000000
+
 /* 08061b64 */ .word 0x82b1820a
 /* 08061b68 */ .word 0x82c782f1
 /* 08061b6c */ .word 0x825082cd
@@ -7473,6 +7137,8 @@
 /* 08061b88 */ .word 0x82a982e9
 /* 08061b8c */ .word 0x0a4881c8
 /* 08061b90 */ .word 0x00000000
+
+@ Bytecode 
 /* 08061b94 */ .word 0x00000003
 /* 08061b98 */ .word 0x080179f5
 /* 08061b9c */ .word 0x00000002
@@ -7500,6 +7166,7 @@
 /* 08061bf4 */ .word 0x0000000e
 /* 08061bf8 */ .word 0x00000000
 /* 08061bfc */ .word 0x00000000
+
 /* 08061c00 */ .word 0x82b3820a
 /* 08061c04 */ .word 0x82c982e7
 /* 08061c08 */ .word 0x81c28250
@@ -7511,6 +7178,8 @@
 /* 08061c20 */ .word 0x82e982a9
 /* 08061c24 */ .word 0x81c882a9
 /* 08061c28 */ .word 0x00000048
+
+@ Bytecode 
 /* 08061c2c */ .word 0x00000003
 /* 08061c30 */ .word 0x080179f5
 /* 08061c34 */ .word 0x00000002
@@ -7544,6 +7213,7 @@
 /* 08061ca4 */ .word 0x0000000e
 /* 08061ca8 */ .word 0x00000000
 /* 08061cac */ .word 0x00000000
+
 /* 08061cb0 */ .word 0x82dc820a
 /* 08061cb4 */ .word 0x82dc82bd
 /* 08061cb8 */ .word 0x825082bd
@@ -7555,6 +7225,8 @@
 /* 08061cd0 */ .word 0x82a982ed
 /* 08061cd4 */ .word 0x82a982e9
 /* 08061cd8 */ .word 0x004881c8
+
+@ Bytecode 
 /* 08061cdc */ .word 0x00000003
 /* 08061ce0 */ .word 0x080179f5
 /* 08061ce4 */ .word 0x00000001
@@ -7570,6 +7242,7 @@
 /* 08061d0c */ .word 0x0000000e
 /* 08061d10 */ .word 0x00000000
 /* 08061d14 */ .word 0x00000000
+
 /* 08061d18 */ .word 0xf189a18d
 /* 08061d1c */ .word 0x4181cd82
 /* 08061d20 */ .word 0x58836f83
@@ -7592,6 +7265,7 @@
 /* 08061d64 */ .word 0x82b582dc
 /* 08061d68 */ .word 0x81a482e5
 /* 08061d6c */ .word 0x00000042
+
 /* 08061d70 */ .word 0x7b83420a
 /* 08061d74 */ .word 0x93835e83
 /* 08061d78 */ .word 0x5c8fc682
@@ -7611,6 +7285,7 @@
 /* 08061db0 */ .word 0xe982ab82
 /* 08061db4 */ .word 0x49818883
 /* 08061db8 */ .word 0x00000000
+
 /* 08061dbc */ .word 0x82b5820a
 /* 08061dc0 */ .word 0x82c482c1
 /* 08061dc4 */ .word 0x8ec682e9
@@ -7629,6 +7304,7 @@
 /* 08061df8 */ .word 0xe782a982
 /* 08061dfc */ .word 0x42816c83
 /* 08061e00 */ .word 0x00000000
+
 /* 08061e04 */ .word 0x82c5820a
 /* 08061e08 */ .word 0x824081cd
 /* 08061e0c */ .word 0x82bf82da
@@ -7637,6 +7313,7 @@
 /* 08061e18 */ .word 0xdc82df82
 /* 08061e1c */ .word 0x6c83b782
 /* 08061e20 */ .word 0x000a6081
+
 /* 08061e24 */ .word 0xad82e682
 /* 08061e28 */ .word 0xa282ab82
 /* 08061e2c */ .word 0x7d83c482
@@ -7659,6 +7336,8 @@
 /* 08061e70 */ .word 0x82af82ab
 /* 08061e74 */ .word 0x818883e9
 /* 08061e78 */ .word 0x00000049
+
+@ Bytecode 
 /* 08061e7c */ .word 0x00000003
 /* 08061e80 */ .word 0x080179f5
 /* 08061e84 */ .word 0x00000001
@@ -7689,6 +7368,7 @@
 /* 08061ee8 */ .word 0x0000000e
 /* 08061eec */ .word 0x00000000
 /* 08061ef0 */ .word 0x00000000
+
 /* 08061ef4 */ .word 0x836f830a
 /* 08061ef8 */ .word 0x83c68258
 /* 08061efc */ .word 0x836c8358
@@ -7701,6 +7381,8 @@
 /* 08061f18 */ .word 0x82e982ab
 /* 08061f1c */ .word 0x81c882a9
 /* 08061f20 */ .word 0x00000048
+
+@ Bytecode 
 /* 08061f24 */ .word 0x00000003
 /* 08061f28 */ .word 0x080179f5
 /* 08061f2c */ .word 0x00000001
@@ -7755,6 +7437,7 @@
 /* 08061ff0 */ .word 0x0000000e
 /* 08061ff4 */ .word 0x00000000
 /* 08061ff8 */ .word 0x00000000
+
 /* 08061ffc */ .word 0x836f830a
 /* 08062000 */ .word 0x83688358
 /* 08062004 */ .word 0x82808389
@@ -7771,6 +7454,8 @@
 /* 08062030 */ .word 0x82a982ed
 /* 08062034 */ .word 0x82a982e9
 /* 08062038 */ .word 0x004881c8
+
+@ Bytecode 
 /* 0806203c */ .word 0x00000003
 /* 08062040 */ .word 0x080179f5
 /* 08062044 */ .word 0x00000001
@@ -7813,6 +7498,7 @@
 /* 080620d8 */ .word 0x0000000e
 /* 080620dc */ .word 0x00000000
 /* 080620e0 */ .word 0x00000000
+
 /* 080620e4 */ .word 0x82b1820a
 /* 080620e8 */ .word 0x82c782f1
 /* 080620ec */ .word 0x825082cd
@@ -7825,6 +7511,8 @@
 /* 08062108 */ .word 0x82a982e9
 /* 0806210c */ .word 0x0a4881c8
 /* 08062110 */ .word 0x00000000
+
+@ Bytecode 
 /* 08062114 */ .word 0x00000003
 /* 08062118 */ .word 0x080179f5
 /* 0806211c */ .word 0x00000001
@@ -7873,6 +7561,7 @@
 /* 080621c8 */ .word 0x0000000e
 /* 080621cc */ .word 0x00000000
 /* 080621d0 */ .word 0x00000000
+
 /* 080621d4 */ .word 0x82b3820a
 /* 080621d8 */ .word 0x82c982e7
 /* 080621dc */ .word 0x81c28250
@@ -7884,6 +7573,7 @@
 /* 080621f4 */ .word 0x82e982a9
 /* 080621f8 */ .word 0x81c882a9
 /* 080621fc */ .word 0x00000048
+
 /* 08062200 */ .word 0x00000003
 /* 08062204 */ .word 0x080179f5
 /* 08062208 */ .word 0x00000001
@@ -7938,6 +7628,7 @@
 /* 080622cc */ .word 0x0000000e
 /* 080622d0 */ .word 0x00000000
 /* 080622d4 */ .word 0x00000000
+
 /* 080622d8 */ .word 0xad82e682
 /* 080622dc */ .word 0xa282ab82
 /* 080622e0 */ .word 0x7d83c482
@@ -7960,6 +7651,8 @@
 /* 08062324 */ .word 0x82af82ab
 /* 08062328 */ .word 0x818883e9
 /* 0806232c */ .word 0x00000049
+
+@ Bytecode 
 /* 08062330 */ .word 0x00000003
 /* 08062334 */ .word 0x080179f5
 /* 08062338 */ .word 0x00000002
@@ -7996,6 +7689,7 @@
 /* 080623b4 */ .word 0x0000000e
 /* 080623b8 */ .word 0x00000000
 /* 080623bc */ .word 0x00000000
+
 /* 080623c0 */ .word 0x80835e83
 /* 080623c4 */ .word 0xc482c182
 /* 080623c8 */ .word 0xa482a282
@@ -8013,6 +7707,8 @@
 /* 080623f8 */ .word 0x82bd82f0
 /* 080623fc */ .word 0x83ad82bd
 /* 08062400 */ .word 0x00498188
+
+@ Bytecode 
 /* 08062404 */ .word 0x00000003
 /* 08062408 */ .word 0x080179f5
 /* 0806240c */ .word 0x00000002
@@ -8046,6 +7742,7 @@
 /* 0806247c */ .word 0x0000000e
 /* 08062480 */ .word 0x00000000
 /* 08062484 */ .word 0x00000000
+
 /* 08062488 */ .word 0x80835e83
 /* 0806248c */ .word 0xc182be82
 /* 08062490 */ .word 0xc682bd82
@@ -8065,6 +7762,8 @@
 /* 080624c8 */ .word 0xdd82a482
 /* 080624cc */ .word 0xa282bd82
 /* 080624d0 */ .word 0x00000029
+
+@ Bytecode 
 /* 080624d4 */ .word 0x00000003
 /* 080624d8 */ .word 0x080179f5
 /* 080624dc */ .word 0x00000002
@@ -8098,6 +7797,7 @@
 /* 0806254c */ .word 0x0000000e
 /* 08062550 */ .word 0x00000000
 /* 08062554 */ .word 0x00000000
+
 /* 08062558 */ .word 0x82b3820a
 /* 0806255c */ .word 0x82ab82c1
 /* 08062560 */ .word 0x824081c6
@@ -8114,6 +7814,8 @@
 /* 0806258c */ .word 0x82e982a9
 /* 08062590 */ .word 0x81c882a9
 /* 08062594 */ .word 0x00000a48
+
+@ Bytecode 
 /* 08062598 */ .word 0x00000003
 /* 0806259c */ .word 0x080179f5
 /* 080625a0 */ .word 0x00000002
@@ -8153,6 +7855,7 @@
 /* 08062628 */ .word 0x0000000e
 /* 0806262c */ .word 0x00000000
 /* 08062630 */ .word 0x00000000
+
 /* 08062634 */ .word 0xad82e682
 /* 08062638 */ .word 0xa282ab82
 /* 0806263c */ .word 0x7d83c482
@@ -8175,6 +7878,8 @@
 /* 08062680 */ .word 0x82af82ab
 /* 08062684 */ .word 0x818883e9
 /* 08062688 */ .word 0x00000049
+
+@ Bytecode 
 /* 0806268c */ .word 0x00000003
 /* 08062690 */ .word 0x080179f5
 /* 08062694 */ .word 0x00000002
@@ -8241,6 +7946,7 @@
 /* 08062788 */ .word 0x0000000e
 /* 0806278c */ .word 0x00000000
 /* 08062790 */ .word 0x00000000
+
 /* 08062794 */ .word 0x8356830a
 /* 08062798 */ .word 0x836f8393
 /* 0806279c */ .word 0x83c6828b
@@ -8253,6 +7959,8 @@
 /* 080627b8 */ .word 0x82ab82c5
 /* 080627bc */ .word 0x82a982e9
 /* 080627c0 */ .word 0x004881c8
+
+@ Bytecode 
 /* 080627c4 */ .word 0x00000003
 /* 080627c8 */ .word 0x080179f5
 /* 080627cc */ .word 0x00000002
@@ -8328,6 +8036,7 @@
 /* 080628e4 */ .word 0x0000000e
 /* 080628e8 */ .word 0x00000000
 /* 080628ec */ .word 0x00000000
+
 /* 080628f0 */ .word 0xc182bd82
 /* 080628f4 */ .word 0xcc82bd82
 /* 080628f8 */ .word 0xc2825082
@@ -8352,6 +8061,7 @@
 /* 08062944 */ .word 0x82e982ea
 /* 08062948 */ .word 0x81c882a9
 /* 0806294c */ .word 0x00000048
+
 /* 08062950 */ .word 0x00000003
 /* 08062954 */ .word 0x080179f5
 /* 08062958 */ .word 0x00000002
@@ -8421,6 +8131,7 @@
 /* 08062a58 */ .word 0x0000000e
 /* 08062a5c */ .word 0x00000000
 /* 08062a60 */ .word 0x00000000
+
 /* 08062a64 */ .word 0x82a8820a
 /* 08062a68 */ .word 0x82e882ed
 /* 08062a6c */ .word 0x82c682cc
@@ -8436,6 +8147,7 @@
 /* 08062a94 */ .word 0x82c482c1
 /* 08062a98 */ .word 0x81c482dd
 /* 08062a9c */ .word 0x00000a49
+
 /* 08062aa0 */ .word 0x00000003
 /* 08062aa4 */ .word 0x080179f5
 /* 08062aa8 */ .word 0x00000002
@@ -8517,6 +8229,7 @@
 /* 08062bd8 */ .word 0x0000000e
 /* 08062bdc */ .word 0x00000000
 /* 08062be0 */ .word 0x00000000
+
 /* 08062be4 */ .word 0x8341830a
 /* 08062be8 */ .word 0x835a834e
 /* 08062bec */ .word 0x82678393
@@ -8533,6 +8246,8 @@
 /* 08062c18 */ .word 0x82a982b5
 /* 08062c1c */ .word 0x81a282c8
 /* 08062c20 */ .word 0x00498149
+
+@ Bytecode 
 /* 08062c24 */ .word 0x00000003
 /* 08062c28 */ .word 0x080179f5
 /* 08062c2c */ .word 0x00000002
@@ -8626,6 +8341,7 @@
 /* 08062d8c */ .word 0x0000000e
 /* 08062d90 */ .word 0x00000000
 /* 08062d94 */ .word 0x00000000
+
 /* 08062d98 */ .word 0xad82e682
 /* 08062d9c */ .word 0xa282ab82
 /* 08062da0 */ .word 0x7d83c482
@@ -8647,6 +8363,8 @@
 /* 08062de0 */ .word 0x82aa827b
 /* 08062de4 */ .word 0x82af82ab
 /* 08062de8 */ .word 0x818883e9
+
+@ Bytecode 
 /* 08062dec */ .word 0x00000049
 /* 08062df0 */ .word 0x00000003
 /* 08062df4 */ .word 0x080179f5
@@ -8708,6 +8426,7 @@
 /* 08062ed4 */ .word 0x0000000e
 /* 08062ed8 */ .word 0x00000000
 /* 08062edc */ .word 0x00000000
+
 /* 08062ee0 */ .word 0x8356830a
 /* 08062ee4 */ .word 0x836f8393
 /* 08062ee8 */ .word 0x83c6828b
@@ -8720,6 +8439,8 @@
 /* 08062f04 */ .word 0x82ab82c5
 /* 08062f08 */ .word 0x82a982e9
 /* 08062f0c */ .word 0x004881c8
+
+@ Bytecode 
 /* 08062f10 */ .word 0x00000003
 /* 08062f14 */ .word 0x080179f5
 /* 08062f18 */ .word 0x00000002
@@ -8789,6 +8510,7 @@
 /* 08063018 */ .word 0x0000000e
 /* 0806301c */ .word 0x00000000
 /* 08063020 */ .word 0x00000000
+
 /* 08063024 */ .word 0x836f830a
 /* 08063028 */ .word 0x83688358
 /* 0806302c */ .word 0x82808389
@@ -8802,6 +8524,8 @@
 /* 0806304c */ .word 0x82e982ab
 /* 08063050 */ .word 0x81c882a9
 /* 08063054 */ .word 0x00000a48
+
+@ Bytecode 
 /* 08063058 */ .word 0x00000003
 /* 0806305c */ .word 0x080179f5
 /* 08063060 */ .word 0x00000002
@@ -8877,6 +8601,7 @@
 /* 08063178 */ .word 0x0000000e
 /* 0806317c */ .word 0x00000000
 /* 08063180 */ .word 0x00000000
+
 /* 08063184 */ .word 0x58836f83
 /* 08063188 */ .word 0x89836883
 /* 0806318c */ .word 0xf0828083
@@ -8893,6 +8618,8 @@
 /* 080631b8 */ .word 0x81c482c1
 /* 080631bc */ .word 0x0a498149
 /* 080631c0 */ .word 0x00000000
+
+@ Bytecode 
 /* 080631c4 */ .word 0x00000003
 /* 080631c8 */ .word 0x080179f5
 /* 080631cc */ .word 0x00000002
@@ -8974,6 +8701,7 @@
 /* 080632fc */ .word 0x0000000e
 /* 08063300 */ .word 0x00000000
 /* 08063304 */ .word 0x00000000
+
 /* 08063308 */ .word 0xad82e682
 /* 0806330c */ .word 0xa282ab82
 /* 08063310 */ .word 0x7d83c482
@@ -8996,6 +8724,8 @@
 /* 08063354 */ .word 0x82af82ab
 /* 08063358 */ .word 0x818883e9
 /* 0806335c */ .word 0x00000049
+
+@ Bytecode 
 /* 08063360 */ .word 0x00000003
 /* 08063364 */ .word 0x080179f5
 /* 08063368 */ .word 0x00000001
@@ -9050,6 +8780,7 @@
 /* 0806342c */ .word 0x0000000e
 /* 08063430 */ .word 0x00000000
 /* 08063434 */ .word 0x00000000
+
 /* 08063438 */ .word 0x8358830a
 /* 0806343c */ .word 0x8341836c
 /* 08063440 */ .word 0x83898368
@@ -9062,6 +8793,8 @@
 /* 0806345c */ .word 0x836d838a
 /* 08063460 */ .word 0x83be828a
 /* 08063464 */ .word 0x00498188
+
+@ Bytecode 
 /* 08063468 */ .word 0x00000003
 /* 0806346c */ .word 0x080179f5
 /* 08063470 */ .word 0x00000001
@@ -9119,6 +8852,7 @@
 /* 08063540 */ .word 0x0000000e
 /* 08063544 */ .word 0x00000000
 /* 08063548 */ .word 0x00000000
+
 /* 0806354c */ .word 0x8356830a
 /* 08063550 */ .word 0x836f8393
 /* 08063554 */ .word 0x83c5828b
@@ -9135,6 +8869,8 @@
 /* 08063580 */ .word 0x82e982ab
 /* 08063584 */ .word 0x816c83e6
 /* 08063588 */ .word 0x00000a48
+
+@ Bytecode 
 /* 0806358c */ .word 0x00000003
 /* 08063590 */ .word 0x080179f5
 /* 08063594 */ .word 0x00000001
@@ -9147,6 +8883,7 @@
 /* 080635b0 */ .word 0x0000000e
 /* 080635b4 */ .word 0x00000000
 /* 080635b8 */ .word 0x00000000
+
 /* 080635bc */ .word 0x6c835883
 /* 080635c0 */ .word 0xcc824183
 /* 080635c4 */ .word 0x5e837083
@@ -9164,6 +8901,8 @@
 /* 080635f4 */ .word 0x82ab820a
 /* 080635f8 */ .word 0x81c682c1
 /* 080635fc */ .word 0x00000a42
+
+@ Bytecode 
 /* 08063600 */ .word 0x00000003
 /* 08063604 */ .word 0x080179f5
 /* 08063608 */ .word 0x00000001
@@ -9230,6 +8969,7 @@
 /* 080636fc */ .word 0x0000000e
 /* 08063700 */ .word 0x00000000
 /* 08063704 */ .word 0x00000000
+
 /* 08063708 */ .word 0x8250820a
 /* 0806370c */ .word 0x82be82c2
 /* 08063710 */ .word 0x894181af
@@ -9245,6 +8985,8 @@
 /* 08063738 */ .word 0x82ce82f1
 /* 0806373c */ .word 0x83c482c1
 /* 08063740 */ .word 0x0049816c
+
+@ Bytecode 
 /* 08063744 */ .word 0x00000003
 /* 08063748 */ .word 0x080179f5
 /* 0806374c */ .word 0x00000001
@@ -9320,6 +9062,7 @@
 /* 08063864 */ .word 0x0000000e
 /* 08063868 */ .word 0x00000000
 /* 0806386c */ .word 0x00000000
+
 /* 08063870 */ .word 0x82dc820a
 /* 08063874 */ .word 0x82dc82bd
 /* 08063878 */ .word 0x825082bd
@@ -9334,6 +9077,8 @@
 /* 0806389c */ .word 0x82e68252
 /* 080638a0 */ .word 0x81ac82b7
 /* 080638a4 */ .word 0x00000049
+
+@ Bytecode 
 /* 080638a8 */ .word 0x00000003
 /* 080638ac */ .word 0x080179f5
 /* 080638b0 */ .word 0x00000001
@@ -9418,6 +9163,7 @@
 /* 080639ec */ .word 0x0000000e
 /* 080639f0 */ .word 0x00000000
 /* 080639f4 */ .word 0x00000000
+
 /* 080639f8 */ .word 0xad82e682
 /* 080639fc */ .word 0xa282ab82
 /* 08063a00 */ .word 0x7d83c482
@@ -9440,6 +9186,8 @@
 /* 08063a44 */ .word 0x82af82ab
 /* 08063a48 */ .word 0x818883e9
 /* 08063a4c */ .word 0x00000049
+
+@ Bytecode 
 /* 08063a50 */ .word 0x00000003
 /* 08063a54 */ .word 0x080179f5
 /* 08063a58 */ .word 0x00000002
@@ -9506,6 +9254,7 @@
 /* 08063b4c */ .word 0x0000000e
 /* 08063b50 */ .word 0x00000000
 /* 08063b54 */ .word 0x00000000
+
 /* 08063b58 */ .word 0x8356830a
 /* 08063b5c */ .word 0x836f8393
 /* 08063b60 */ .word 0x83c5828b
@@ -9522,6 +9271,8 @@
 /* 08063b8c */ .word 0x82e982ab
 /* 08063b90 */ .word 0x816c83e6
 /* 08063b94 */ .word 0x00000a48
+
+@ Bytecode 
 /* 08063b98 */ .word 0x00000003
 /* 08063b9c */ .word 0x080179f5
 /* 08063ba0 */ .word 0x00000001
@@ -9534,6 +9285,7 @@
 /* 08063bbc */ .word 0x0000000e
 /* 08063bc0 */ .word 0x00000000
 /* 08063bc4 */ .word 0x00000000
+
 /* 08063bc8 */ .word 0x8360830a
 /* 08063bcc */ .word 0x83628387
 /* 08063bd0 */ .word 0x82be8267
@@ -9544,6 +9296,8 @@
 /* 08063be4 */ .word 0xe982a982
 /* 08063be8 */ .word 0xc882a982
 /* 08063bec */ .word 0x000a4881
+
+@ Bytecode 
 /* 08063bf0 */ .word 0x00000003
 /* 08063bf4 */ .word 0x080179f5
 /* 08063bf8 */ .word 0x00000002
@@ -9601,6 +9355,7 @@
 /* 08063cc8 */ .word 0x0000000e
 /* 08063ccc */ .word 0x00000000
 /* 08063cd0 */ .word 0x00000000
+
 /* 08063cd4 */ .word 0x8250820a
 /* 08063cd8 */ .word 0x82be82c2
 /* 08063cdc */ .word 0x894181af
@@ -9617,6 +9372,8 @@
 /* 08063d08 */ .word 0x82c182ce
 /* 08063d0c */ .word 0x816c83c4
 /* 08063d10 */ .word 0x00000a49
+
+@ Bytecode 
 /* 08063d14 */ .word 0x00000003
 /* 08063d18 */ .word 0x080179f5
 /* 08063d1c */ .word 0x00000002
@@ -9680,6 +9437,7 @@
 /* 08063e04 */ .word 0x0000000e
 /* 08063e08 */ .word 0x00000000
 /* 08063e0c */ .word 0x00000000
+
 /* 08063e10 */ .word 0xad82e682
 /* 08063e14 */ .word 0xa282ab82
 /* 08063e18 */ .word 0x7d83c482
@@ -9702,6 +9460,8 @@
 /* 08063e5c */ .word 0x82af82ab
 /* 08063e60 */ .word 0x818883e9
 /* 08063e64 */ .word 0x00000049
+
+@ Bytecode 
 /* 08063e68 */ .word 0x00000003
 /* 08063e6c */ .word 0x080179f5
 /* 08063e70 */ .word 0x00000002
@@ -9858,6 +9618,7 @@
 /* 080640cc */ .word 0x0000000e
 /* 080640d0 */ .word 0x00000000
 /* 080640d4 */ .word 0x00000000
+
 /* 080640d8 */ .word 0x8358830a
 /* 080640dc */ .word 0x8241836c
 /* 080640e0 */ .word 0x835683c6
@@ -9873,6 +9634,8 @@
 /* 08064108 */ .word 0x82c182ce
 /* 0806410c */ .word 0x0a4981c4
 /* 08064110 */ .word 0x00000000
+
+@ Bytecode 
 /* 08064114 */ .word 0x00000003
 /* 08064118 */ .word 0x080179f5
 /* 0806411c */ .word 0x00000002
