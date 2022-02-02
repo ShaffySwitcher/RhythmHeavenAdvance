@@ -27,53 +27,53 @@ branch_080224c8: \n\
 /* 080224ce */ STRB R5, [R4] \n\
 /* 080224d0 */ LDR R0, [R6] \n\
 /* 080224d2 */ STR R7, [SP] \n\
-/* 080224d4 */ LDR R1, [PC, 0xC4] @ 0x0802259c \n\
+/* 080224d4 */ LDR R1, =0x00004864 \n\
 /* 080224d6 */ STR R1, [SP, 0x4] \n\
 /* 080224d8 */ STR R5, [SP, 0x8] \n\
 /* 080224da */ STR R5, [SP, 0xC] \n\
 /* 080224dc */ MOV R1, R8 @ Set R1 to R8 \n\
 /* 080224de */ STR R1, [SP, 0x10] \n\
-/* 080224e0 */ LDR R1, [PC, 0xBC] @ 0x080225a0 \n\
+/* 080224e0 */ LDR R1, =0x088ba10c @ !PossiblePointer \n\
 /* 080224e2 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 080224e4 */ MOVS R3, 0x68 @ Set R3 to 0x68 \n\
 /* 080224e6 */ BL func_0804d160 \n\
 /* 080224ea */ STRH R0, [R4, 0x2] \n\
 /* 080224ec */ LDR R0, [R6] \n\
 /* 080224ee */ STR R7, [SP] \n\
-/* 080224f0 */ LDR R2, [PC, 0xB0] @ 0x080225a4 \n\
+/* 080224f0 */ LDR R2, =0x00004863 \n\
 /* 080224f2 */ STR R2, [SP, 0x4] \n\
 /* 080224f4 */ STR R5, [SP, 0x8] \n\
 /* 080224f6 */ STR R5, [SP, 0xC] \n\
 /* 080224f8 */ MOV R1, R8 @ Set R1 to R8 \n\
 /* 080224fa */ STR R1, [SP, 0x10] \n\
-/* 080224fc */ LDR R1, [PC, 0xA8] @ 0x080225a8 \n\
+/* 080224fc */ LDR R1, =0x088ba134 @ !PossiblePointer \n\
 /* 080224fe */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08022500 */ MOVS R3, 0x40 @ Set R3 to 0x40 \n\
 /* 08022502 */ BL func_0804d160 \n\
 /* 08022506 */ STRH R0, [R4, 0x6] \n\
 /* 08022508 */ LDR R0, [R6] \n\
 /* 0802250a */ STR R7, [SP] \n\
-/* 0802250c */ LDR R2, [PC, 0x94] @ 0x080225a4 \n\
+/* 0802250c */ LDR R2, =0x00004863 \n\
 /* 0802250e */ STR R2, [SP, 0x4] \n\
 /* 08022510 */ STR R5, [SP, 0x8] \n\
 /* 08022512 */ STR R5, [SP, 0xC] \n\
 /* 08022514 */ MOV R1, R8 @ Set R1 to R8 \n\
 /* 08022516 */ STR R1, [SP, 0x10] \n\
-/* 08022518 */ LDR R1, [PC, 0x90] @ 0x080225ac \n\
+/* 08022518 */ LDR R1, =0x088ba15c @ !PossiblePointer \n\
 /* 0802251a */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0802251c */ MOVS R3, 0x40 @ Set R3 to 0x40 \n\
 /* 0802251e */ BL func_0804d160 \n\
 /* 08022522 */ STRH R0, [R4, 0x4] \n\
 /* 08022524 */ LDR R0, [R6] \n\
 /* 08022526 */ STR R7, [SP] \n\
-/* 08022528 */ LDR R1, [PC, 0x84] @ 0x080225b0 \n\
+/* 08022528 */ LDR R1, =0x00004865 \n\
 /* 0802252a */ STR R1, [SP, 0x4] \n\
 /* 0802252c */ MOVS R1, 0x1 @ Set R1 to 0x1 \n\
 /* 0802252e */ STR R1, [SP, 0x8] \n\
 /* 08022530 */ STR R5, [SP, 0xC] \n\
-/* 08022532 */ LDR R1, [PC, 0x80] @ 0x080225b4 \n\
+/* 08022532 */ LDR R1, =0x00008002 \n\
 /* 08022534 */ STR R1, [SP, 0x10] \n\
-/* 08022536 */ LDR R1, [PC, 0x80] @ 0x080225b8 \n\
+/* 08022536 */ LDR R1, =0x088ba4e4 @ !PossiblePointer \n\
 /* 08022538 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0802253a */ MOVS R3, 0xC8 @ Set R3 to 0xC8 \n\
 /* 0802253c */ BL func_0804d160 \n\

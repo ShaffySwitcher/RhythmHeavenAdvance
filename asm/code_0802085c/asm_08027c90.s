@@ -19,7 +19,7 @@ glabel func_08027c90 \n\
 /* 08027caa */ LDRB R0, [R0] \n\
 /* 08027cac */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08027cae */ BEQ branch_08027cde \n\
-/* 08027cb0 */ LDR R0, [PC, 0x44] @ 0x08027cf8 \n\
+/* 08027cb0 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
 /* 08027cb2 */ LDR R0, [R0] \n\
 /* 08027cb4 */ SUBS R2, 0x3 @ Subtract 0x3 from R2 \n\
 /* 08027cb6 */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
@@ -28,16 +28,16 @@ glabel func_08027c90 \n\
 /* 08027cbc */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08027cbe */ BL func_0804d770 \n\
 /* 08027cc2 */ LDR R0, [R5] \n\
-/* 08027cc4 */ LDR R1, [PC, 0x34] @ 0x08027cfc \n\
+/* 08027cc4 */ LDR R1, =0x00000566 \n\
 /* 08027cc6 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08027cc8 */ LDRH R0, [R0] \n\
 /* 08027cca */ BL func_0800bdf8 \n\
 /* 08027cce */ LDR R0, [R5] \n\
-/* 08027cd0 */ LDR R2, [PC, 0x2C] @ 0x08027d00 \n\
+/* 08027cd0 */ LDR R2, =0x00000563 \n\
 /* 08027cd2 */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 08027cd4 */ STRB R4, [R0] \n\
 /* 08027cd6 */ LDR R0, [R5] \n\
-/* 08027cd8 */ LDR R1, [PC, 0x28] @ 0x08027d04 \n\
+/* 08027cd8 */ LDR R1, =0x00000564 \n\
 /* 08027cda */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08027cdc */ STRH R4, [R0] \n\
  \n\

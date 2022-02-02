@@ -25,7 +25,8 @@ SECTIONS {
         build/src/code_08004714.c.o(.text*);
         build/src/code_0801e704.c.o(.text*);
         build/src/code_0802085c.c.o(.text*);
-        build/bin/bindata_080290c0.bin.o(.rodata*);
+        build/src/code_080290c0.c.o(.text*);
+        build/bin/bindata_0802dd84.bin.o(.rodata*);
         *libgcc.a:_call_via_rX.o(.text*);
         build/bin/bindata_0804eb28.bin.o(.rodata*);
         build/data/data_0804f300.s.o(.text*);
