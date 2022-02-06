@@ -14,7 +14,7 @@ glabel func_080239bc \n\
 branch_080239cc: \n\
 /* 080239cc */ MOVS R0, 0x3 @ Set R0 to 0x3 \n\
 /* 080239ce */ BL func_0800e030 \n\
-/* 080239d2 */ LDR R1, =0x03004b10 @ !PossiblePointer \n\
+/* 080239d2 */ LDR R1, =D_03004b10 \n\
 /* 080239d4 */ LSLS R0, R4, 0x3 \n\
 /* 080239d6 */ SUBS R0, R0, R4 @ Set R0 to R0 - R4 \n\
 /* 080239d8 */ LSLS R0, R0, 0x2 \n\

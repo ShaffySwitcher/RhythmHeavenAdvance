@@ -10,7 +10,7 @@ glabel func_080242f8 \n\
 	PUSH {R5, R6, R7} \n\
 	SUB SP, 0x28 \n\
 	STR R0, [SP, 0x14] \n\
-	LDR R0, =0x030055D0 @ !PossiblePointer \n\
+	LDR R0, =D_030055d0 \n\
 	LDR R0, [R0] \n\
 	MOVS R1, 0xd5 \n\
 	LSLS R1, R1, 0x2 \n\
@@ -33,15 +33,15 @@ glabel func_080242f8 \n\
 	MOVS R1, 0x0 \n\
 	BL func_0800e0a0 \n\
 	BL func_08024bd0 \n\
-	LDR R4, =0x088C3F7C @ !PossiblePointer \n\
+	LDR R4, =D_088c3f7c \n\
 	CMP R0, 0x0 \n\
 	BEQ branch_08024344 \n\
-	LDR R4, =0x088C2C40 @ !PossiblePointer \n\
+	LDR R4, =D_088c2c40 \n\
  \n\
 branch_08024344: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R1, =0x03005380 @ !PossiblePointer \n\
+	LDR R1, =D_03005380 \n\
 	LDR R0, [R1] \n\
 	MOVS R1, 0x78 \n\
 	STR R1, [SP] \n\
@@ -60,19 +60,19 @@ branch_08024344: \n\
 	BL func_0804d160 \n\
 	STRH R0, [R7, 0x2] \n\
 	BL func_08024bd0 \n\
-	LDR R4, =0x088C3F5C @ !PossiblePointer \n\
+	LDR R4, =D_088c3f5c \n\
 	CMP R0, 0x0 \n\
 	BEQ branch_0802437e \n\
-	LDR R4, =0x088C2C20 @ !PossiblePointer \n\
+	LDR R4, =0x088c2c20 \n\
  \n\
 branch_0802437e: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R2, =0x03005380 @ !PossiblePointer \n\
+	LDR R2, =D_03005380 \n\
 	LDR R0, [R2] \n\
 	MOVS R1, 0x78 \n\
 	STR R1, [SP] \n\
-	LDR R1, =0x00004805 @ !PossiblePointer \n\
+	LDR R1, =0x00004805\n\
 	STR R1, [SP, 0x4] \n\
 	MOVS R1, 0x1 \n\
 	STR R1, [SP, 0x8] \n\
@@ -86,19 +86,19 @@ branch_0802437e: \n\
 	BL func_0804d160 \n\
 	STRH R0, [R7] \n\
 	BL func_08024bd0 \n\
-	LDR R4, =0x088C3F9C @ !PossiblePointer \n\
+	LDR R4, =D_088c3f9c \n\
 	CMP R0, 0x0 \n\
 	BEQ branch_080243b6 \n\
-	LDR R4, =0x088C2C60 @ !PossiblePointer \n\
+	LDR R4, =D_088c2c60 \n\
  \n\
 branch_080243b6: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R1, =0x03005380 @ !PossiblePointer \n\
+	LDR R1, =D_03005380 \n\
 	LDR R0, [R1] \n\
 	MOVS R1, 0x78 \n\
 	STR R1, [SP] \n\
-	LDR R1, =0x000047FB @ !PossiblePointer \n\
+	LDR R1, =0x000047fb \n\
 	STR R1, [SP, 0x4] \n\
 	MOVS R1, 0x1 \n\
 	STR R1, [SP, 0x8] \n\
@@ -112,19 +112,19 @@ branch_080243b6: \n\
 	BL func_0804d160 \n\
 	STRH R0, [R7, 0x4] \n\
 	BL func_08024bd0 \n\
-	LDR R4, =0x088C3D2C @ !PossiblePointer \n\
+	LDR R4, =D_088c3d2c \n\
 	CMP R0, 0x0 \n\
 	BEQ branch_080243ee \n\
-	LDR R4, =0x088C29F0 @ !PossiblePointer \n\
+	LDR R4, =D_088c29f0 \n\
  \n\
 branch_080243ee: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R2, =0x03005380 @ !PossiblePointer \n\
+	LDR R2, =D_03005380 \n\
 	LDR R0, [R2] \n\
 	MOVS R1, 0x57 \n\
 	STR R1, [SP] \n\
-	LDR R1, =0x000047EC @ !PossiblePointer \n\
+	LDR R1, =0x000047ec \n\
 	STR R1, [SP, 0x4] \n\
 	MOVS R1, 0x1 \n\
 	STR R1, [SP, 0x8] \n\
@@ -138,19 +138,19 @@ branch_080243ee: \n\
 	BL func_0804d160 \n\
 	STRH R0, [R7, 0x6] \n\
 	BL func_08024bd0 \n\
-	LDR R4, =0x088C3D84 @ !PossiblePointer \n\
+	LDR R4, =D_088c3d84 \n\
 	CMP R0, 0x0 \n\
 	BEQ branch_08024426 \n\
-	LDR R4, =0x088C2A48 @ !PossiblePointer \n\
+	LDR R4, =D_088c2a48 \n\
  \n\
 branch_08024426: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R1, =0x03005380 @ !PossiblePointer \n\
+	LDR R1, =D_03005380 \n\
 	LDR R0, [R1] \n\
 	MOVS R1, 0x55 \n\
 	STR R1, [SP] \n\
-	LDR R1, =0x0000480A @ !PossiblePointer \n\
+	LDR R1, =0x0000480a \n\
 	STR R1, [SP, 0x4] \n\
 	MOVS R1, 0x1 \n\
 	STR R1, [SP, 0x8] \n\
@@ -164,20 +164,20 @@ branch_08024426: \n\
 	BL func_0804d160 \n\
 	STRH R0, [R7, 0x8] \n\
 	BL func_08024bd0 \n\
-	LDR R4, =0x088C3FBC @ !PossiblePointer \n\
+	LDR R4, =D_088c3fbc \n\
 	CMP R0, 0x0 \n\
 	BEQ branch_0802445e \n\
-	LDR R4, =0x088C2C80 @ !PossiblePointer \n\
+	LDR R4, =D_088c2c80 \n\
  \n\
 branch_0802445e: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R2, =0x03005380 @ !PossiblePointer \n\
+	LDR R2, =D_03005380 \n\
 	LDR R0, [R2] \n\
 	MOVS R1, 0x78 \n\
 	MOV R9, R1 \n\
 	STR R1, [SP] \n\
-	LDR R1, =0x000047F6 @ !PossiblePointer \n\
+	LDR R1, =0x000047f6 \n\
 	STR R1, [SP, 0x4] \n\
 	MOVS R2, 0x1 \n\
 	MOV R8, R2 \n\
@@ -192,19 +192,19 @@ branch_0802445e: \n\
 	BL func_0804d160 \n\
 	STRH R0, [R7, 0xa] \n\
 	BL func_08024bd0 \n\
-	LDR R4, =0x088C3FDC @ !PossiblePointer \n\
+	LDR R4, =D_088c3fdc \n\
 	CMP R0, 0x0 \n\
 	BEQ branch_0802449a \n\
-	LDR R4, =0x088C2CA0 @ !PossiblePointer \n\
+	LDR R4, =D_088c2ca0 \n\
  \n\
 branch_0802449a: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R1, =0x03005380 @ !PossiblePointer \n\
+	LDR R1, =D_03005380 \n\
 	LDR R0, [R1] \n\
 	MOV R2, R9 \n\
 	STR R2, [SP] \n\
-	LDR R1, =0x00004814 @ !PossiblePointer \n\
+	LDR R1, =0x00004814 \n\
 	STR R1, [SP, 0x4] \n\
 	MOV R1, R8 \n\
 	STR R1, [SP, 0x8] \n\
@@ -216,19 +216,19 @@ branch_0802449a: \n\
 	BL func_0804d160 \n\
 	STRH R0, [R7, 0xc] \n\
 	BL func_08024bd0 \n\
-	LDR R4, =0x088C40FC @ !PossiblePointer \n\
+	LDR R4, =D_088c40fc \n\
 	CMP R0, 0x0 \n\
 	BEQ branch_080244ce \n\
-	LDR R4, =0x088C2DC0 @ !PossiblePointer \n\
+	LDR R4, =D_088c2dc0 \n\
  \n\
 branch_080244ce: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R2, =0x03005380 @ !PossiblePointer \n\
+	LDR R2, =D_03005380 \n\
 	LDR R0, [R2] \n\
 	MOV R1, R9 \n\
 	STR R1, [SP] \n\
-	LDR R1, =0x00004864 @ !PossiblePointer \n\
+	LDR R1, =0x00004864 \n\
 	STR R1, [SP, 0x4] \n\
 	MOV R2, R8 \n\
 	STR R2, [SP, 0x8] \n\
@@ -240,19 +240,19 @@ branch_080244ce: \n\
 	BL func_0804d160 \n\
 	STRH R0, [R7, 0x12] \n\
 	BL func_08024bd0 \n\
-	LDR R4, =0x088C40DC @ !PossiblePointer \n\
+	LDR R4, =D_088c40dc \n\
 	CMP R0, 0x0 \n\
 	BEQ branch_08024502 \n\
-	LDR R4, =0x088C2DA0 @ !PossiblePointer \n\
+	LDR R4, =D_088c2da0 \n\
  \n\
 branch_08024502: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R1, =0x03005380 @ !PossiblePointer \n\
+	LDR R1, =D_03005380 \n\
 	LDR R0, [R1] \n\
 	MOV R2, R9 \n\
 	STR R2, [SP] \n\
-	LDR R1, =0x0000486E @ !PossiblePointer \n\
+	LDR R1, =0x0000486e \n\
 	STR R1, [SP, 0x4] \n\
 	MOV R1, R8 \n\
 	STR R1, [SP, 0x8] \n\
@@ -264,19 +264,19 @@ branch_08024502: \n\
 	BL func_0804d160 \n\
 	STRH R0, [R7, 0x14] \n\
 	BL func_08024bd0 \n\
-	LDR R4, =0x088C413C @ !PossiblePointer \n\
+	LDR R4, =D_088c413c \n\
 	CMP R0, 0x0 \n\
 	BEQ branch_08024536 \n\
-	LDR R4, =0x088C2E00 @ !PossiblePointer \n\
+	LDR R4, =D_088c2e00 \n\
  \n\
 branch_08024536: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R2, =0x03005380 @ !PossiblePointer \n\
+	LDR R2, =D_03005380 \n\
 	LDR R0, [R2] \n\
 	MOV R1, R9 \n\
 	STR R1, [SP] \n\
-	LDR R1, =0x0000480F @ !PossiblePointer \n\
+	LDR R1, =0x0000480f \n\
 	STR R1, [SP, 0x4] \n\
 	MOV R2, R8 \n\
 	STR R2, [SP, 0x8] \n\
@@ -288,19 +288,19 @@ branch_08024536: \n\
 	BL func_0804d160 \n\
 	STRH R0, [R7, 0x16] \n\
 	BL func_08024bd0 \n\
-	LDR R4, =0x088C415C @ !PossiblePointer \n\
+	LDR R4, =D_088c415c \n\
 	CMP R0, 0x0 \n\
 	BEQ branch_0802456a \n\
-	LDR R4, =0x088C2E20 @ !PossiblePointer \n\
+	LDR R4, =D_088c2e20 \n\
  \n\
 branch_0802456a: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R1, =0x03005380 @ !PossiblePointer \n\
+	LDR R1, =D_03005380 \n\
 	LDR R0, [R1] \n\
 	MOV R2, R9 \n\
 	STR R2, [SP] \n\
-	LDR R1, =0x000047F1 @ !PossiblePointer \n\
+	LDR R1, =0x000047f1 \n\
 	STR R1, [SP, 0x4] \n\
 	MOV R1, R8 \n\
 	STR R1, [SP, 0x8] \n\
@@ -312,19 +312,19 @@ branch_0802456a: \n\
 	BL func_0804d160 \n\
 	STRH R0, [R7, 0x18] \n\
 	BL func_08024bd0 \n\
-	LDR R4, =0x088C411C @ !PossiblePointer \n\
+	LDR R4, =D_088c411c \n\
 	CMP R0, 0x0 \n\
 	BEQ branch_0802459e \n\
-	LDR R4, =0x088C2DE0 @ !PossiblePointer \n\
+	LDR R4, =D_088c2de0 \n\
  \n\
 branch_0802459e: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R2, =0x03005380 @ !PossiblePointer \n\
+	LDR R2, =D_03005380 \n\
 	LDR R0, [R2] \n\
 	MOV R1, R9 \n\
 	STR R1, [SP] \n\
-	LDR R1, =0x000047F2 @ !PossiblePointer \n\
+	LDR R1, =0x000047f2 \n\
 	STR R1, [SP, 0x4] \n\
 	MOV R2, R8 \n\
 	STR R2, [SP, 0x8] \n\
@@ -336,19 +336,19 @@ branch_0802459e: \n\
 	BL func_0804d160 \n\
 	STRH R0, [R7, 0x1a] \n\
 	BL func_08024bd0 \n\
-	LDR R4, =0x088C406C @ !PossiblePointer \n\
+	LDR R4, =D_088c406c \n\
 	CMP R0, 0x0 \n\
 	BEQ branch_080245d2 \n\
-	LDR R4, =0x088C2D30 @ !PossiblePointer \n\
+	LDR R4, =D_088c2d30 \n\
  \n\
 branch_080245d2: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R1, =0x03005380 @ !PossiblePointer \n\
+	LDR R1, =D_03005380 \n\
 	LDR R0, [R1] \n\
 	MOV R2, R9 \n\
 	STR R2, [SP] \n\
-	LDR R1, =0x00004878 @ !PossiblePointer \n\
+	LDR R1, =0x00004878 \n\
 	STR R1, [SP, 0x4] \n\
 	MOV R1, R8 \n\
 	STR R1, [SP, 0x8] \n\
@@ -360,19 +360,19 @@ branch_080245d2: \n\
 	BL func_0804d160 \n\
 	STRH R0, [R7, 0x1c] \n\
 	BL func_08024bd0 \n\
-	LDR R4, =0x088C3FFC @ !PossiblePointer \n\
+	LDR R4, =D_088c3ffc \n\
 	CMP R0, 0x0 \n\
 	BEQ branch_08024606 \n\
-	LDR R4, =0x088C2CC0 @ !PossiblePointer \n\
+	LDR R4, =D_088c2cc0 \n\
  \n\
 branch_08024606: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R2, =0x03005380 @ !PossiblePointer \n\
+	LDR R2, =D_03005380 \n\
 	LDR R0, [R2] \n\
 	MOV R1, R9 \n\
 	STR R1, [SP] \n\
-	LDR R1, =0x00004882 @ !PossiblePointer \n\
+	LDR R1, =0x00004882 \n\
 	STR R1, [SP, 0x4] \n\
 	MOV R2, R8 \n\
 	STR R2, [SP, 0x8] \n\
@@ -384,19 +384,19 @@ branch_08024606: \n\
 	BL func_0804d160 \n\
 	STRH R0, [R7, 0x1e] \n\
 	BL func_08024bd0 \n\
-	LDR R4, =0x088C417C @ !PossiblePointer \n\
+	LDR R4, =D_088c417c \n\
 	CMP R0, 0x0 \n\
 	BEQ branch_0802463a \n\
-	LDR R4, =0x088C2E40 @ !PossiblePointer \n\
+	LDR R4, =D_088c2e40 \n\
  \n\
 branch_0802463a: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R1, =0x03005380 @ !PossiblePointer \n\
+	LDR R1, =D_03005380 \n\
 	LDR R0, [R1] \n\
 	MOV R2, R9 \n\
 	STR R2, [SP] \n\
-	LDR R1, =0x00004805 @ !PossiblePointer \n\
+	LDR R1, =0x00004805 \n\
 	STR R1, [SP, 0x4] \n\
 	MOV R1, R8 \n\
 	STR R1, [SP, 0x8] \n\
@@ -443,9 +443,9 @@ branch_0802463a: \n\
 	RSBS R0, R0, 0x0 \n\
 	MOV R1, R8 \n\
 	STRB R0, [R1] \n\
-	LDR R6, =0x03004B20 @ !PossiblePointer \n\
+	LDR R6, =D_03004b20 \n\
 	ADDS R4, R6, 0x2 \n\
-	LDR R2, =0x03005380 @ !PossiblePointer \n\
+	LDR R2, =D_03005380 \n\
 	LDR R0, [R2] \n\
 	B branch_0802476c \n\
  \n\
@@ -453,14 +453,14 @@ branch_0802463a: \n\
 branch_0802476c: \n\
 	BL func_0804e0c0 \n\
 	ADDS R1, R0, 0x0 \n\
-	LDR R2, =0x03005380 @ !PossiblePointer \n\
+	LDR R2, =D_03005380 \n\
 	LDR R0, [R2] \n\
 	LSLS R1, R1, 0x10 \n\
 	LSRS R1, R1, 0x10 \n\
 	ADDS R2, R6, 0x0 \n\
 	ADDS R3, R4, 0x0 \n\
 	BL func_0804e188 \n\
-	LDR R1, =0x03005380 @ !PossiblePointer \n\
+	LDR R1, =D_03005380 \n\
 	LDR R0, [R1] \n\
 	MOVS R2, 0x0 \n\
 	LDRSH R1, [R7, R2] \n\
@@ -471,14 +471,14 @@ branch_0802476c: \n\
 	ADDS R2, R4, 0x0 \n\
 	ADDS R3, R5, 0x0 \n\
 	BL func_0804db44 \n\
-	LDR R1, =0x03005380 @ !PossiblePointer \n\
+	LDR R1, =D_03005380 \n\
 	LDR R0, [R1] \n\
 	MOVS R2, 0x6 \n\
 	LDRSH R1, [R7, R2] \n\
 	ADDS R2, R4, 0x0 \n\
 	ADDS R3, R5, 0x0 \n\
 	BL func_0804db44 \n\
-	LDR R1, =0x03005380 @ !PossiblePointer \n\
+	LDR R1, =D_03005380 \n\
 	LDR R0, [R1] \n\
 	MOVS R2, 0x8 \n\
 	LDRSH R1, [R7, R2] \n\
@@ -507,7 +507,7 @@ branch_0802476c: \n\
 	ADDS R0, R4, 0x0 \n\
 	MOVS R1, 0x1 \n\
 	BL func_0800acd8 \n\
-	LDR R0, =0x030055D0 @ !PossiblePointer \n\
+	LDR R0, =D_030055d0 \n\
 	LDR R0, [R0] \n\
 	LDRB R0, [R0] \n\
 	LDR R6, [SP, 0x18] \n\
@@ -563,7 +563,7 @@ branch_08024856: \n\
 	MOVS R0, 0xf3 \n\
 	MOVS R1, 0x0 \n\
 	BL func_08017338 \n\
-	LDR R5, =0x030055D0 @ !PossiblePointer \n\
+	LDR R5, =D_030055d0 \n\
 	LDR R0, [R5] \n\
 	MOVS R2, 0xe0 \n\
 	LSLS R2, R2, 0x2 \n\
@@ -571,9 +571,9 @@ branch_08024856: \n\
 	MOVS R4, 0x0 \n\
 	STRB R4, [R0] \n\
 	LDR R0, [R5] \n\
-	LDR R1, =0x00000396 @ !PossiblePointer \n\
+	LDR R1, =0x00000396 \n\
 	ADDS R2, R0, R1 \n\
-	LDR R1, =0x0000FFFF @ !PossiblePointer \n\
+	LDR R1, =0x0000ffff \n\
 	STRH R1, [R2] \n\
 	ADDS R0, 0x4 \n\
 	BL func_0802a9b4 \n\
@@ -615,12 +615,12 @@ branch_080248be: \n\
 	MOVS R2, 0x0 \n\
 	MOVS R3, 0x0 \n\
 	BL func_0800e0a0 \n\
-	LDR R0, =0x03005380 @ !PossiblePointer \n\
+	LDR R0, =D_03005380 \n\
 	LDR R0, [R0] \n\
-	LDR R1, =0x088C2F58 @ !PossiblePointer \n\
+	LDR R1, =D_088c2f58 \n\
 	MOVS R2, 0x30 \n\
 	STR R2, [SP] \n\
-	LDR R2, =0x000048C8 @ !PossiblePointer \n\
+	LDR R2, =0x000048c8 \n\
 	STR R2, [SP, 0x4] \n\
 	LDR R2, [SP, 0x14] \n\
 	STR R2, [SP, 0x8] \n\

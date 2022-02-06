@@ -7,17 +7,17 @@ glabel func_08022b0c \n\
 /* 08022b0e */ SUB SP, 0x14 \n\
 /* 08022b10 */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 08022b12 */ ADDS R6, R1, 0x0 @ Set R6 to R1 + 0x0 \n\
-/* 08022b14 */ LDR R2, =0x088ba2f4 @ !PossiblePointer \n\
+/* 08022b14 */ LDR R2, =D_088ba2f4 \n\
 /* 08022b16 */ CMP R6, 0x0 @ Compare R6 and 0x0 \n\
 /* 08022b18 */ BNE branch_08022b1c \n\
-/* 08022b1a */ LDR R2, =0x088ba30c @ !PossiblePointer \n\
+/* 08022b1a */ LDR R2, =D_088ba30c \n\
  \n\
 branch_08022b1c: \n\
-/* 08022b1c */ LDR R5, =0x03005380 @ !PossiblePointer \n\
+/* 08022b1c */ LDR R5, =D_03005380 \n\
 /* 08022b1e */ LDR R0, [R5] \n\
 /* 08022b20 */ MOVS R1, 0x40 @ Set R1 to 0x40 \n\
 /* 08022b22 */ STR R1, [SP] \n\
-/* 08022b24 */ LDR R1, =0x00004814 @ !PossiblePointer \n\
+/* 08022b24 */ LDR R1, =0x00004814 \n\
 /* 08022b26 */ STR R1, [SP, 0x4] \n\
 /* 08022b28 */ MOVS R1, 0x1 @ Set R1 to 0x1 \n\
 /* 08022b2a */ STR R1, [SP, 0x8] \n\

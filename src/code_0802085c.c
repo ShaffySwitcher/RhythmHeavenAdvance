@@ -45,7 +45,7 @@ asm(".include \"include/gba.inc\"");//Temporary
 
 #include "asm/code_0802085c/asm_08020f48.s"
 
-#include "asm/code_0802085c/asm_08020f88.s"
+#include "asm/code_0802085c/asm_08020f8c.s"
 
 #include "asm/code_0802085c/asm_08020f98.s"
 
@@ -99,7 +99,7 @@ asm(".include \"include/gba.inc\"");//Temporary
 
 #include "asm/code_0802085c/asm_08021554.s"
 
-#include "asm/code_0802085c/asm_080215c4.s"
+#include "asm/code_0802085c/asm_080215cc.s"	// 080215cc
 
 #include "asm/code_0802085c/asm_0802160c.s"
 
@@ -219,7 +219,7 @@ asm(".include \"include/gba.inc\"");//Temporary
 
 #include "asm/code_0802085c/asm_080231c8.s"
 
-#include "asm/code_0802085c/asm_08023270.s"
+#include "asm/code_0802085c/asm_0802327c.s"
 
 #include "asm/code_0802085c/asm_080233b4.s"
 
@@ -305,7 +305,7 @@ asm(".include \"include/gba.inc\"");//Temporary
 
 #include "asm/code_0802085c/asm_08023a18.s"
 
-#include "asm/code_0802085c/asm_08023ba8.s"
+#include "asm/code_0802085c/asm_08023bb8.s"
 
 #include "asm/code_0802085c/asm_08023bcc.s"
 

@@ -17,12 +17,12 @@ glabel func_08020da0 \n\
 /* 08020dba */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
 /* 08020dbc */ LSLS R1, R1, 0x18 \n\
 /* 08020dbe */ LSRS R1, R1, 0x18 \n\
-/* 08020dc0 */ LDR R6, =0x030055d0 @ !PossiblePointer \n\
+/* 08020dc0 */ LDR R6, =D_030055d0 \n\
 /* 08020dc2 */ LDR R0, [R6] \n\
 /* 08020dc4 */ LDR R3, [R0, 0x58] \n\
 /* 08020dc6 */ ADDS R0, 0x60 @ Add 0x60 to R0 \n\
 /* 08020dc8 */ STR R0, [SP] \n\
-/* 08020dca */ LDR R5, =0x03004b64 @ !PossiblePointer \n\
+/* 08020dca */ LDR R5, =D_03004b64 \n\
 /* 08020dcc */ STR R5, [SP, 0x4] \n\
 /* 08020dce */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 08020dd0 */ MOVS R2, 0x7 @ Set R2 to 0x7 \n\

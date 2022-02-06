@@ -2,20 +2,14 @@ asm(".syntax unified \n\
 \n\
 .balign 4, 0 \n\
 \n\
-glabel func_08023270 \n\
-/* 08023270 */ STRH R0, [R0, R6] \n\
-/* 08023272 */ LSLS R0, R0, 0xC \n\
-/* 08023274 */ LSLS R4, R3, 0x10 \n\
-/* 08023276 */ LSLS R0, R0, 0x0 \n\
-/* 08023278 */ LSLS R4, R4, 0x10 \n\
-/* 0802327a */ LSLS R0, R0, 0x0 \n\
+glabel func_0802327c \n\
 /* 0802327c */ PUSH {R4-R7, LR} \n\
 /* 0802327e */ MOV R7, R10 @ Set R7 to R10 \n\
 /* 08023280 */ MOV R6, R9 @ Set R6 to R9 \n\
 /* 08023282 */ MOV R5, R8 @ Set R5 to R8 \n\
 /* 08023284 */ PUSH {R5-R7} \n\
 /* 08023286 */ SUB SP, 0x14 \n\
-/* 08023288 */ LDR R4, =0x030055d0 @ !PossiblePointer \n\
+/* 08023288 */ LDR R4, =D_030055d0 \n\
 /* 0802328a */ LDR R2, [R4] \n\
 /* 0802328c */ LDRB R0, [R2] \n\
 /* 0802328e */ MOVS R1, 0x1 @ Set R1 to 0x1 \n\
@@ -30,7 +24,7 @@ glabel func_08023270 \n\
 /* 080232a0 */ STR R0, [R1] \n\
 /* 080232a2 */ LDR R1, =0x00000424 @ !PossiblePointer \n\
 /* 080232a4 */ ADDS R2, R2, R1 @ Set R2 to R2 + R1 \n\
-/* 080232a6 */ LDR R0, =0x030046a8 @ !PossiblePointer \n\
+/* 080232a6 */ LDR R0, =D_030046a8 \n\
 /* 080232a8 */ LDR R0, [R0] \n\
 /* 080232aa */ MOVS R1, 0xAA @ Set R1 to 0xAA \n\
 /* 080232ac */ LSLS R1, R1, 0x2 \n\
@@ -38,7 +32,7 @@ glabel func_08023270 \n\
 /* 080232b0 */ LDR R0, [R0] \n\
 /* 080232b2 */ STR R0, [R2] \n\
 /* 080232b4 */ MOVS R5, 0x0 @ Set R5 to 0x0 \n\
-/* 080232b6 */ LDR R6, =0x03005380 @ !PossiblePointer \n\
+/* 080232b6 */ LDR R6, =D_03005380 \n\
 /* 080232b8 */ MOV R8, R4 @ Set R8 to R4 \n\
 /* 080232ba */ LDR R7, =0x0000041c @ !PossiblePointer \n\
 /* 080232bc */ LSLS R3, R3, 0x10 \n\
@@ -56,7 +50,7 @@ branch_080232c2: \n\
 /* 080232d0 */ STR R1, [SP, 0x8] \n\
 /* 080232d2 */ STR R1, [SP, 0xC] \n\
 /* 080232d4 */ STR R1, [SP, 0x10] \n\
-/* 080232d6 */ LDR R1, =0x088ba3e4 @ !PossiblePointer \n\
+/* 080232d6 */ LDR R1, =D_088ba3e4 @ !PossiblePointer \n\
 /* 080232d8 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 080232da */ MOVS R3, 0x58 @ Set R3 to 0x58 \n\
 /* 080232dc */ BL func_0804d160 \n\
@@ -89,8 +83,8 @@ branch_080232c2: \n\
 /* 08023318 */ CMP R5, 0x3 @ Compare R5 and 0x3 \n\
 /* 0802331a */ BLS branch_080232c2 \n\
 /* 0802331c */ MOVS R5, 0x0 @ Set R5 to 0x0 \n\
-/* 0802331e */ LDR R6, =0x03005380 @ !PossiblePointer \n\
-/* 08023320 */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 0802331e */ LDR R6, =D_03005380 \n\
+/* 08023320 */ LDR R0, =D_030055d0 \n\
 /* 08023322 */ MOV R8, R0 @ Set R8 to R0 \n\
 /* 08023324 */ MOVS R7, 0x85 @ Set R7 to 0x85 \n\
 /* 08023326 */ LSLS R7, R7, 0x3 \n\

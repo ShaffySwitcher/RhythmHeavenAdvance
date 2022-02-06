@@ -9,7 +9,7 @@ glabel func_08021888 \n\
 /* 0802188e */ ADDS R4, R1, 0x0 @ Set R4 to R1 + 0x0 \n\
 /* 08021890 */ ADDS R5, R2, 0x0 @ Set R5 to R2 + 0x0 \n\
 /* 08021892 */ ADDS R6, R3, 0x0 @ Set R6 to R3 + 0x0 \n\
-/* 08021894 */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 08021894 */ LDR R0, =D_030055d0 \n\
 /* 08021896 */ LDR R0, [R0] \n\
 /* 08021898 */ ADDS R0, 0x4 @ Add 0x4 to R0 \n\
 /* 0802189a */ MOV R8, R0 @ Set R8 to R0 \n\
@@ -55,7 +55,7 @@ branch_080218bc: \n\
 /* 080218ec */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 080218ee */ STRB R0, [R1] \n\
 /* 080218f0 */ BL func_080220c4 \n\
-/* 080218f4 */ LDR R0, =0x08a9e160 @ !PossiblePointer \n\
+/* 080218f4 */ LDR R0, =D_08a9e160 \n\
 /* 080218f6 */ BL func_08002634 \n\
 /* 080218fa */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 080218fc */ B branch_0802196a \n\

@@ -12,7 +12,7 @@ glabel func_08020a4c \n\
 /* 08020a58 */ ADDS R5, R0, 0x0 @ Set R5 to R0 + 0x0 \n\
 /* 08020a5a */ ADDS R6, R1, 0x0 @ Set R6 to R1 + 0x0 \n\
 /* 08020a5c */ MOV R9, R2 @ Set R9 to R2 \n\
-/* 08020a5e */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 08020a5e */ LDR R0, =D_030055d0 \n\
 /* 08020a60 */ MOV R8, R0 @ Set R8 to R0 \n\
 /* 08020a62 */ LSLS R0, R6, 0x1 \n\
 /* 08020a64 */ ADDS R0, R0, R6 @ Set R0 to R0 + R6 \n\
@@ -28,7 +28,7 @@ glabel func_08020a4c \n\
 /* 08020a78 */ LDR R0, [R1, 0x4] \n\
 /* 08020a7a */ LDR R1, [R7, 0x4] \n\
 /* 08020a7c */ BL func_08004d44 \n\
-/* 08020a80 */ LDR R4, =0x03005380 @ !PossiblePointer \n\
+/* 08020a80 */ LDR R4, =D_03005380 \n\
 /* 08020a82 */ LDR R0, [R4] \n\
 /* 08020a84 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08020a86 */ LDRSH R1, [R7, R2] \n\
@@ -37,7 +37,7 @@ glabel func_08020a4c \n\
 /* 08020a8e */ MOVS R3, 0x2 @ Set R3 to 0x2 \n\
 /* 08020a90 */ LDRSH R1, [R7, R3] \n\
 /* 08020a92 */ BL func_0804d504 \n\
-/* 08020a96 */ LDR R0, =0x0000ffff @ !PossiblePointer \n\
+/* 08020a96 */ LDR R0, =0x0000ffff \n\
 /* 08020a98 */ STRH R0, [R7] \n\
  \n\
 branch_08020a9a: \n\
@@ -90,14 +90,14 @@ branch_08020af0: \n\
 /* 08020af0 */ STR R0, [SP, 0x1C] \n\
  \n\
 branch_08020af2: \n\
-/* 08020af2 */ LDR R0, =0x089deedc @ !PossiblePointer \n\
+/* 08020af2 */ LDR R0, =D_089deedc \n\
 /* 08020af4 */ MOV R2, R9 @ Set R2 to R9 \n\
 /* 08020af6 */ LSLS R1, R2, 0x1 \n\
 /* 08020af8 */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\
 /* 08020afa */ LSLS R4, R6, 0x1 \n\
 /* 08020afc */ ADDS R4, R4, R6 @ Set R4 to R4 + R6 \n\
 /* 08020afe */ LSLS R4, R4, 0x13 \n\
-/* 08020b00 */ LDR R6, =0x03005380 @ !PossiblePointer \n\
+/* 08020b00 */ LDR R6, =D_03005380 \n\
 /* 08020b02 */ LDR R0, [R6] \n\
 /* 08020b04 */ LDRH R3, [R1] \n\
 /* 08020b06 */ STR R3, [SP, 0x18] \n\
@@ -129,7 +129,7 @@ branch_08020af2: \n\
 /* 08020b3e */ LDR R0, [R6] \n\
 /* 08020b40 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08020b42 */ LDRSH R1, [R7, R2] \n\
-/* 08020b44 */ LDR R3, =0x030055d0 @ !PossiblePointer \n\
+/* 08020b44 */ LDR R3, =D_030055d0 \n\
 /* 08020b46 */ MOV R8, R3 @ Set R8 to R3 \n\
 /* 08020b48 */ LDR R3, [R3] \n\
 /* 08020b4a */ ADDS R2, R3, 0x0 @ Set R2 to R3 + 0x0 \n\

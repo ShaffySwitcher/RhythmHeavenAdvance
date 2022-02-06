@@ -6,7 +6,7 @@ glabel func_08021084 \n\
 /* 08021084 */ PUSH {R4-R6, LR} \n\
 /* 08021086 */ SUB SP, 0xC \n\
 /* 08021088 */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
-/* 0802108a */ LDR R6, =0x030055d0 @ !PossiblePointer \n\
+/* 0802108a */ LDR R6, =D_030055d0 \n\
 /* 0802108c */ MOVS R5, 0x0 @ Set R5 to 0x0 \n\
  \n\
 branch_0802108e: \n\
@@ -36,7 +36,7 @@ branch_0802108e: \n\
 /* 080210c0 */ ADDS R3, R0, 0x0 @ Set R3 to R0 + 0x0 \n\
  \n\
 branch_080210c2: \n\
-/* 080210c2 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 080210c2 */ LDR R0, =D_03005380 \n\
 /* 080210c4 */ LDR R0, [R0] \n\
 /* 080210c6 */ LDR R1, [R6] \n\
 /* 080210c8 */ ADDS R1, 0x44 @ Add 0x44 to R1 \n\
@@ -58,7 +58,7 @@ branch_080210e4: \n\
 /* 080210e6 */ ADDS R4, 0x1 @ Add 0x1 to R4 \n\
 /* 080210e8 */ CMP R4, 0x3 @ Compare R4 and 0x3 \n\
 /* 080210ea */ BLS branch_0802108e \n\
-/* 080210ec */ LDR R6, =0x030055d0 @ !PossiblePointer \n\
+/* 080210ec */ LDR R6, =D_030055d0 \n\
 /* 080210ee */ LDR R1, [R6] \n\
 /* 080210f0 */ ADDS R0, R1, 0x0 @ Set R0 to R1 + 0x0 \n\
 /* 080210f2 */ ADDS R0, 0x40 @ Add 0x40 to R0 \n\
@@ -72,7 +72,7 @@ branch_080210e4: \n\
 /* 08021102 */ MOVS R0, 0x21 @ Set R0 to 0x21 \n\
 /* 08021104 */ BL func_080206a0 \n\
 /* 08021108 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 0802110a */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0802110a */ LDR R0, =D_03005380 \n\
 /* 0802110c */ LDR R0, [R0] \n\
 /* 0802110e */ LDR R1, [R6] \n\
 /* 08021110 */ MOVS R3, 0x3E @ Set R3 to 0x3E \n\
@@ -101,7 +101,7 @@ branch_08021144: \n\
 /* 08021144 */ MOVS R0, 0x1F @ Set R0 to 0x1F \n\
 /* 08021146 */ BL func_080206a0 \n\
 /* 0802114a */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 0802114c */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0802114c */ LDR R0, =D_03005380 \n\
 /* 0802114e */ LDR R0, [R0] \n\
 /* 08021150 */ LDR R1, [R6] \n\
 /* 08021152 */ MOVS R3, 0x3E @ Set R3 to 0x3E \n\
@@ -115,7 +115,7 @@ branch_08021144: \n\
 /* 08021162 */ BL func_0804d8f8 \n\
  \n\
 branch_08021166: \n\
-/* 08021166 */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 08021166 */ LDR R0, =D_030055d0 \n\
 /* 08021168 */ LDR R0, [R0] \n\
 /* 0802116a */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
 /* 0802116c */ ADDS R1, 0x54 @ Add 0x54 to R1 \n\

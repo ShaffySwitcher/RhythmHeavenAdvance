@@ -9,7 +9,7 @@ glabel func_080228d8 \n\
 /* 080228de */ LDRB R0, [R5] \n\
 /* 080228e0 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 080228e2 */ BEQ branch_080229b4 \n\
-/* 080228e4 */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 080228e4 */ LDR R0, =D_030055d0 \n\
 /* 080228e6 */ LDR R0, [R0] \n\
 /* 080228e8 */ ADDS R0, 0x8C @ Add 0x8C to R0 \n\
 /* 080228ea */ STR R5, [R0] \n\
@@ -33,7 +33,7 @@ jtbl_08022908: \n\
 .word jump_0802298c \n\
 \n\
 jump_0802291c: \n\
-/* 0802291c */ LDR R6, =0x03005380 @ !PossiblePointer \n\
+/* 0802291c */ LDR R6, =D_03005380 \n\
 /* 0802291e */ LDR R0, [R6] \n\
 /* 08022920 */ MOVS R2, 0x2 @ Set R2 to 0x2 \n\
 /* 08022922 */ LDRSH R1, [R5, R2] \n\
@@ -41,12 +41,12 @@ jump_0802291c: \n\
 /* 08022928 */ LDR R1, [R6] \n\
 /* 0802292a */ LSLS R0, R0, 0x10 \n\
 /* 0802292c */ ASRS R4, R0, 0x10 \n\
-/* 0802292e */ LDR R2, =0x0000485a @ !PossiblePointer \n\
+/* 0802292e */ LDR R2, =0x0000485a \n\
 /* 08022930 */ ADDS R0, R1, 0x0 @ Set R0 to R1 + 0x0 \n\
 /* 08022932 */ ADDS R1, R4, 0x0 @ Set R1 to R4 + 0x0 \n\
 /* 08022934 */ BL func_0804d67c \n\
 /* 08022938 */ LDR R0, [R6] \n\
-/* 0802293a */ LDR R2, =0x088ba364 @ !PossiblePointer \n\
+/* 0802293a */ LDR R2, =D_088ba364 \n\
 /* 0802293c */ MOVS R1, 0x1 @ Set R1 to 0x1 \n\
 /* 0802293e */ STR R1, [SP] \n\
 /* 08022940 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
@@ -56,14 +56,14 @@ jump_0802291c: \n\
 /* 08022948 */ ADDS R1, R4, 0x0 @ Set R1 to R4 + 0x0 \n\
 /* 0802294a */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 0802294c */ BL func_0804d8f8 \n\
-/* 08022950 */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 08022950 */ LDR R0, =D_030055d0 \n\
 /* 08022952 */ LDR R0, [R0] \n\
 /* 08022954 */ LDRB R0, [R0] \n\
 /* 08022956 */ CMP R0, 0x1 @ Compare R0 and 0x1 \n\
 /* 08022958 */ BNE branch_0802297c \n\
 /* 0802295a */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\
 /* 0802295c */ BL func_08022894 \n\
-/* 08022960 */ LDR R0, =0x08a9c450 @ !PossiblePointer \n\
+/* 08022960 */ LDR R0, =D_08a9c450 \n\
 /* 08022962 */ BL func_08002634 \n\
 /* 08022966 */ B branch_080229b0 \n\
 \n\

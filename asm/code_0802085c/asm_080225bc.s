@@ -5,7 +5,7 @@ asm(".syntax unified \n\
 glabel func_080225bc \n\
 /* 080225bc */ PUSH {R4, LR} \n\
 /* 080225be */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 080225c0 */ LDR R0, [PC, 0x2C] @ 0x080225f0 \n\
+/* 080225c0 */ LDR R0, =D_030055d0 \n\
 /* 080225c2 */ LDR R3, [R0] \n\
 /* 080225c4 */ ADDS R0, R3, 0x0 @ Set R0 to R3 + 0x0 \n\
 /* 080225c6 */ ADDS R0, 0xB2 @ Add 0xB2 to R0 \n\
@@ -28,8 +28,8 @@ glabel func_080225bc \n\
 /* 080225e8 */ LDR R1, [R1] \n\
 /* 080225ea */ BL __udivsi3 \n\
 /* 080225ee */ B branch_0802260a \n\
-/* 080225f0 */ STRB R0, [R2, R7] \n\
-/* 080225f2 */ LSLS R0, R0, 0xC \n\
+ \n\
+.ltorg \n\
  \n\
 branch_080225f4: \n\
 /* 080225f4 */ MOVS R0, 0xD @ Set R0 to 0xD \n\

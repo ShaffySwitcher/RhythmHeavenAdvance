@@ -5,7 +5,7 @@ asm(".syntax unified \n\
 glabel func_080205e8 \n\
 /* 080205e8 */ PUSH {R4-R6, LR} \n\
 /* 080205ea */ ADDS R6, R1, 0x0 @ Set R6 to R1 + 0x0 \n\
-/* 080205ec */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 080205ec */ LDR R0, =D_030055d0 \n\
 /* 080205ee */ LDR R4, [R0] \n\
 /* 080205f0 */ ADDS R5, R4, 0x0 @ Set R5 to R4 + 0x0 \n\
 /* 080205f2 */ ADDS R5, 0x8 @ Add 0x8 to R5 \n\
@@ -28,12 +28,12 @@ glabel func_080205e8 \n\
  \n\
 branch_0802061c: \n\
 /* 0802061c */ STR R1, [R6, 0x20] \n\
-/* 0802061e */ LDR R0, =0x0000fff8 @ !PossiblePointer \n\
+/* 0802061e */ LDR R0, =0x0000fff8 \n\
 /* 08020620 */ STRH R0, [R6, 0xE] \n\
 /* 08020622 */ LDR R0, [R6, 0x14] \n\
 /* 08020624 */ LSLS R0, R0, 0x8 \n\
 /* 08020626 */ STR R0, [R6, 0x14] \n\
-/* 08020628 */ LDR R0, =0xfffffc00 @ !PossiblePointer \n\
+/* 08020628 */ LDR R0, =0xfffffc00 \n\
 /* 0802062a */ STR R0, [R6, 0x24] \n\
 /* 0802062c */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0802062e */ STRB R0, [R6] \n\

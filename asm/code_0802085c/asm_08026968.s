@@ -5,7 +5,7 @@ asm(".syntax unified \n\
 glabel func_08026968 \n\
 /* 08026968 */ PUSH {R4, R5, LR} \n\
 /* 0802696a */ ADDS R5, R0, 0x0 @ Set R5 to R0 + 0x0 \n\
-/* 0802696c */ LDR R4, =0x030055d0 @ !PossiblePointer \n\
+/* 0802696c */ LDR R4, =D_030055d0 \n\
 /* 0802696e */ LDR R1, [R4] \n\
 /* 08026970 */ MOVS R2, 0xE8 @ Set R2 to 0xE8 \n\
 /* 08026972 */ LSLS R2, R2, 0x2 \n\
@@ -21,7 +21,7 @@ glabel func_08026968 \n\
 /* 08026988 */ LSLS R3, R3, 0x2 \n\
 /* 0802698a */ ADDS R1, R2, R3 @ Set R1 to R2 + R3 \n\
 /* 0802698c */ STR R0, [R1] \n\
-/* 0802698e */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0802698e */ LDR R0, =D_03005380 \n\
 /* 08026990 */ LDR R0, [R0] \n\
 /* 08026992 */ ADDS R3, 0x8 @ Add 0x8 to R3 \n\
 /* 08026994 */ ADDS R1, R2, R3 @ Set R1 to R2 + R3 \n\
@@ -48,7 +48,7 @@ branch_080269ac: \n\
 /* 080269c4 */ LSLS R2, R2, 0x2 \n\
 /* 080269c6 */ ADDS R0, R1, R2 @ Set R0 to R1 + R2 \n\
 /* 080269c8 */ STR R5, [R0] \n\
-/* 080269ca */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 080269ca */ LDR R0, =D_03005380 \n\
 /* 080269cc */ LDR R0, [R0] \n\
 /* 080269ce */ MOVS R3, 0xE9 @ Set R3 to 0xE9 \n\
 /* 080269d0 */ LSLS R3, R3, 0x2 \n\

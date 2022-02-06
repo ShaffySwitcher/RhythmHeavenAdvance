@@ -4,9 +4,9 @@ asm(".syntax unified \n\
 \n\
 glabel func_0802555c \n\
 /* 0802555c */ PUSH {LR} \n\
-/* 0802555e */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 0802555e */ LDR R0, =D_030055d0 \n\
 /* 08025560 */ LDR R0, [R0] \n\
-/* 08025562 */ LDR R1, =0x000013d4 @ !PossiblePointer \n\
+/* 08025562 */ LDR R1, =0x000013d4 \n\
 /* 08025564 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08025566 */ LDR R0, [R0] \n\
 /* 08025568 */ ASRS R0, R0, 0x8 \n\
@@ -31,13 +31,13 @@ jtbl_0802558c: \n\
 .word jump_080255dc \n\
 \n\
 jump_080255a0: \n\
-/* 080255a0 */ LDR R1, =0x08a9b924 @ !PossiblePointer \n\
+/* 080255a0 */ LDR R1, =D_08a9b924 \n\
 /* 080255a2 */ B branch_080255aa \n\
 \n\
 .ltorg \n\
 \n\
 jump_080255a8: \n\
-/* 080255a8 */ LDR R1, =0x08a9b8fc @ !PossiblePointer \n\
+/* 080255a8 */ LDR R1, =D_08a9b8fc \n\
  \n\
 branch_080255aa: \n\
 /* 080255aa */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
@@ -52,7 +52,7 @@ branch_080255aa: \n\
 .ltorg \n\
 \n\
 jump_080255c4: \n\
-/* 080255c4 */ LDR R1, =0x08a9b8d4 @ !PossiblePointer \n\
+/* 080255c4 */ LDR R1, =D_08a9b8d4 \n\
 /* 080255c6 */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 080255c8 */ MOVS R2, 0x50 @ Set R2 to 0x50 \n\
 /* 080255ca */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
@@ -64,7 +64,7 @@ jump_080255c4: \n\
 .ltorg \n\
 \n\
 jump_080255dc: \n\
-/* 080255dc */ LDR R1, =0x08a9b8c0 @ !PossiblePointer \n\
+/* 080255dc */ LDR R1, =D_08a9b8c0 \n\
 /* 080255de */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 080255e0 */ MOVS R2, 0x60 @ Set R2 to 0x60 \n\
 /* 080255e2 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\

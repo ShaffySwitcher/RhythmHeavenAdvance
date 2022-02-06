@@ -7,7 +7,7 @@ glabel func_08024d6c \n\
 /* 08024d6e */ ADDS R4, R1, 0x0 @ Set R4 to R1 + 0x0 \n\
 /* 08024d70 */ BL func_08018054 \n\
 /* 08024d74 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 08024d76 */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 08024d76 */ LDR R0, =D_030055d0 \n\
 /* 08024d78 */ LDR R1, [R0] \n\
 /* 08024d7a */ MOVS R3, 0xE3 @ Set R3 to 0xE3 \n\
 /* 08024d7c */ LSLS R3, R3, 0x2 \n\

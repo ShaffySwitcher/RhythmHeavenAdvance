@@ -4,13 +4,13 @@ asm(".syntax unified \n\
 \n\
 glabel func_0801f6d0 \n\
 /* 0801f6d0 */ PUSH {R4, LR} \n\
-/* 0801f6d2 */ LDR R4, =0x030055d0 @ !PossiblePointer \n\
+/* 0801f6d2 */ LDR R4, =D_030055d0 \n\
 /* 0801f6d4 */ LDR R0, [R4] \n\
 /* 0801f6d6 */ ADDS R0, 0x84 @ Add 0x84 to R0 \n\
 /* 0801f6d8 */ LDR R0, [R0] \n\
 /* 0801f6da */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0801f6dc */ BEQ branch_0801f70e \n\
-/* 0801f6de */ LDR R0, =0x030053c0 @ !PossiblePointer \n\
+/* 0801f6de */ LDR R0, =D_030053c0 \n\
 /* 0801f6e0 */ MOVS R1, 0xC8 @ Set R1 to 0xC8 \n\
 /* 0801f6e2 */ LSLS R1, R1, 0x1 \n\
 /* 0801f6e4 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\

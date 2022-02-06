@@ -10,7 +10,7 @@ glabel func_0801eb94 \n\
 /* 0801eb9e */ B branch_0801ed12 \n\
  \n\
 branch_0801eba0: \n\
-/* 0801eba0 */ LDR R0, =0x03004afc @ !PossiblePointer \n\
+/* 0801eba0 */ LDR R0, =D_03004afc \n\
 /* 0801eba2 */ LDRH R1, [R0] \n\
 /* 0801eba4 */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 0801eba6 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
@@ -25,20 +25,20 @@ branch_0801eba0: \n\
 /* 0801ebba */ BL func_08002ee0 \n\
  \n\
 branch_0801ebbe: \n\
-/* 0801ebbe */ LDR R0, =0x030053b8 @ !PossiblePointer \n\
+/* 0801ebbe */ LDR R0, =D_030053b8 \n\
 /* 0801ebc0 */ LDRH R1, [R0] \n\
 /* 0801ebc2 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0801ebc4 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 0801ebc6 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0801ebc8 */ BEQ branch_0801ecae \n\
-/* 0801ebca */ LDR R0, =0x040000b0 @ !PossiblePointer \n\
+/* 0801ebca */ LDR R0, =0x040000b0 @ !Hardware REG_DMA0SAD \n\
 /* 0801ebcc */ MOVS R3, 0x80 @ Set R3 to 0x80 \n\
 /* 0801ebce */ LSLS R3, R3, 0x14 \n\
 /* 0801ebd0 */ STR R3, [R0] \n\
 /* 0801ebd2 */ MOVS R2, 0xC0 @ Set R2 to 0xC0 \n\
 /* 0801ebd4 */ LSLS R2, R2, 0x13 \n\
 /* 0801ebd6 */ STR R2, [R0, 0x4] \n\
-/* 0801ebd8 */ LDR R1, =0x80008000 @ !PossiblePointer \n\
+/* 0801ebd8 */ LDR R1, =0x80008000 \n\
 /* 0801ebda */ STR R1, [R0, 0x8] \n\
 /* 0801ebdc */ LDR R4, [R0, 0x8] \n\
 /* 0801ebde */ STR R3, [R0] \n\
@@ -147,7 +147,7 @@ branch_0801ebbe: \n\
 /* 0801ecac */ LDR R0, [R0, 0x8] \n\
  \n\
 branch_0801ecae: \n\
-/* 0801ecae */ LDR R0, =0x03004ac0 @ !PossiblePointer \n\
+/* 0801ecae */ LDR R0, =D_03004ac0 \n\
 /* 0801ecb0 */ LDRH R1, [R0] \n\
 /* 0801ecb2 */ MOVS R0, 0x80 @ Set R0 to 0x80 \n\
 /* 0801ecb4 */ LSLS R0, R0, 0x1 \n\
@@ -177,7 +177,7 @@ branch_0801ecf4: \n\
 /* 0801ecf4 */ BL func_08004058 \n\
  \n\
 branch_0801ecf8: \n\
-/* 0801ecf8 */ LDR R0, =0x03004afc @ !PossiblePointer \n\
+/* 0801ecf8 */ LDR R0, =D_03004afc \n\
 /* 0801ecfa */ LDRH R1, [R0] \n\
 /* 0801ecfc */ MOVS R0, 0x4 @ Set R0 to 0x4 \n\
 /* 0801ecfe */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
@@ -185,7 +185,7 @@ branch_0801ecf8: \n\
 /* 0801ed02 */ BEQ branch_0801ed12 \n\
 /* 0801ed04 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0801ed06 */ BL func_0800bd04 \n\
-/* 0801ed0a */ LDR R0, =0x030046a4 @ !PossiblePointer \n\
+/* 0801ed0a */ LDR R0, =D_030046a4 \n\
 /* 0801ed0c */ LDR R1, [R0] \n\
 /* 0801ed0e */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0801ed10 */ STR R0, [R1, 0x8] \n\

@@ -5,7 +5,7 @@ asm(".syntax unified \n\
 glabel func_08024cb0 \n\
 /* 08024cb0 */ PUSH {R4, LR} \n\
 /* 08024cb2 */ BL func_080249f0 \n\
-/* 08024cb6 */ LDR R4, =0x030055d0 @ !PossiblePointer \n\
+/* 08024cb6 */ LDR R4, =D_030055d0 \n\
 /* 08024cb8 */ LDR R2, [R4] \n\
 /* 08024cba */ MOVS R1, 0xE0 @ Set R1 to 0xE0 \n\
 /* 08024cbc */ LSLS R1, R1, 0x2 \n\
@@ -13,13 +13,13 @@ glabel func_08024cb0 \n\
 /* 08024cc0 */ LDRB R0, [R0] \n\
 /* 08024cc2 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08024cc4 */ BEQ branch_08024ce0 \n\
-/* 08024cc6 */ LDR R1, =0x089e0014 @ !PossiblePointer \n\
+/* 08024cc6 */ LDR R1, =D_089e0014 \n\
 /* 08024cc8 */ LDRB R0, [R2] \n\
 /* 08024cca */ LSLS R0, R0, 0x2 \n\
 /* 08024ccc */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08024cce */ LDR R0, [R0] \n\
-/* 08024cd0 */ LDR R1, =0x03004afc @ !PossiblePointer \n\
-/* 08024cd2 */ LDR R3, =0x00000396 @ !PossiblePointer \n\
+/* 08024cd0 */ LDR R1, =D_03004afc \n\
+/* 08024cd2 */ LDR R3, =0x00000396 \n\
 /* 08024cd4 */ ADDS R2, R2, R3 @ Set R2 to R2 + R3 \n\
 /* 08024cd6 */ LDRH R3, [R1] \n\
 /* 08024cd8 */ LDRH R1, [R2] \n\
@@ -31,13 +31,13 @@ branch_08024ce0: \n\
 /* 08024ce2 */ LDRB R0, [R1] \n\
 /* 08024ce4 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08024ce6 */ BNE branch_08024d14 \n\
-/* 08024ce8 */ LDR R0, =0x00000382 @ !PossiblePointer \n\
+/* 08024ce8 */ LDR R0, =0x00000382 \n\
 /* 08024cea */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\
 /* 08024cec */ LDRH R0, [R1] \n\
 /* 08024cee */ ADDS R0, 0x10 @ Add 0x10 to R0 \n\
 /* 08024cf0 */ STRH R0, [R1] \n\
-/* 08024cf2 */ LDR R2, =0x08936cac @ !PossiblePointer \n\
-/* 08024cf4 */ LDR R1, =0x000007ff @ !PossiblePointer \n\
+/* 08024cf2 */ LDR R2, =D_08936cac \n\
+/* 08024cf4 */ LDR R1, =0x000007ff \n\
 /* 08024cf6 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 08024cf8 */ LSLS R0, R0, 0x1 \n\
 /* 08024cfa */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
@@ -50,7 +50,7 @@ branch_08024ce0: \n\
 /* 08024d08 */ NEGS R1, R1 @ Set R1 to -R1 \n\
 /* 08024d0a */ MOVS R2, 0x2 @ Set R2 to 0x2 \n\
 /* 08024d0c */ BL func_080087d4 \n\
-/* 08024d10 */ LDR R1, =0x03004b10 @ !PossiblePointer \n\
+/* 08024d10 */ LDR R1, =D_03004b10 \n\
 /* 08024d12 */ STRH R0, [R1, 0x16] \n\
  \n\
 branch_08024d14: \n\

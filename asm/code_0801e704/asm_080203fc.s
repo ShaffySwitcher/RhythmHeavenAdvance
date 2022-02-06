@@ -9,9 +9,9 @@ glabel func_080203fc \n\
 /* 08020402 */ LDR R3, [R5, 0x8] \n\
 /* 08020404 */ CMP R2, R3 @ Check R2 - R3 \n\
 /* 08020406 */ BLS branch_0802045c \n\
-/* 08020408 */ LDR R0, =0x08a9e4d0 @ !PossiblePointer \n\
+/* 08020408 */ LDR R0, =D_08a9e4d0 \n\
 /* 0802040a */ BL func_08002634 \n\
-/* 0802040e */ LDR R4, =0x030055d0 @ !PossiblePointer \n\
+/* 0802040e */ LDR R4, =D_030055d0 \n\
 /* 08020410 */ LDR R0, [R4] \n\
 /* 08020412 */ LDR R0, [R0, 0x44] \n\
 /* 08020414 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
@@ -52,7 +52,7 @@ branch_0802045c: \n\
 /* 08020462 */ MOVS R1, 0x8A @ Set R1 to 0x8A \n\
 /* 08020464 */ BL func_08008f04 \n\
 /* 08020468 */ STR R0, [R5, 0x10] \n\
-/* 0802046a */ LDR R2, =0x03004af8 @ !PossiblePointer \n\
+/* 0802046a */ LDR R2, =D_03004af8 \n\
 /* 0802046c */ LSLS R1, R4, 0x2 \n\
 /* 0802046e */ LDR R0, [R5, 0x1C] \n\
 /* 08020470 */ MULS R0, R1 @ Multiply R0 by R1 \n\

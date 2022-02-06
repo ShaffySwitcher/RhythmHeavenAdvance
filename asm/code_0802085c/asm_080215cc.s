@@ -2,17 +2,13 @@ asm(".syntax unified \n\
 \n\
 .balign 4, 0 \n\
 \n\
-glabel func_080215c4 \n\
-/* 080215c4 */ LDR R2, [PC, 0x3F0] @ 0x080219b8 \n\
-/* 080215c6 */ LSLS R0, R0, 0xC \n\
-/* 080215c8 */ STRH R0, [R0, R6] \n\
-/* 080215ca */ LSLS R0, R0, 0xC \n\
+glabel func_080215cc \n\
 /* 080215cc */ PUSH {R4, R5, LR} \n\
-/* 080215ce */ LDR R4, =0x030055d0 @ !PossiblePointer \n\
+/* 080215ce */ LDR R4, =D_030055d0 \n\
 /* 080215d0 */ LDR R0, [R4] \n\
 /* 080215d2 */ ADDS R0, 0x4 @ Add 0x4 to R0 \n\
 /* 080215d4 */ BL func_08021e40 \n\
-/* 080215d8 */ LDR R5, =0x03005380 @ !PossiblePointer \n\
+/* 080215d8 */ LDR R5, =D_03005380 \n\
 /* 080215da */ LDR R0, [R5] \n\
 /* 080215dc */ LDR R1, [R4] \n\
 /* 080215de */ MOVS R2, 0x20 @ Set R2 to 0x20 \n\

@@ -23,9 +23,9 @@ branch_08026c92: \n\
 /* 08026ca6 */ BL func_080255f8 \n\
  \n\
 branch_08026caa: \n\
-/* 08026caa */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 08026caa */ LDR R0, =D_030055d0 \n\
 /* 08026cac */ LDR R0, [R0] \n\
-/* 08026cae */ LDR R1, =0x0000181e @ !PossiblePointer \n\
+/* 08026cae */ LDR R1, =0x0000181e \n\
 /* 08026cb0 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08026cb2 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 08026cb4 */ STRH R1, [R0] \n\

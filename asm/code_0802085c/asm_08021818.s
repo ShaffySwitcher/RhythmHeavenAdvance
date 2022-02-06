@@ -8,7 +8,7 @@ glabel func_08021818 \n\
 /* 0802181c */ PUSH {R6} \n\
 /* 0802181e */ MOV R8, R0 @ Set R8 to R0 \n\
 /* 08021820 */ LDRH R6, [R0, 0x28] \n\
-/* 08021822 */ LDR R0, =0xffffff00 @ !PossiblePointer \n\
+/* 08021822 */ LDR R0, =0xffffff00 \n\
 /* 08021824 */ ADDS R2, R6, R0 @ Set R2 to R6 + R0 \n\
 /* 08021826 */ MOVS R1, 0x51 @ Set R1 to 0x51 \n\
 /* 08021828 */ ADDS R0, R2, 0x0 @ Set R0 to R2 + 0x0 \n\

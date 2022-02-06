@@ -9,14 +9,14 @@ glabel func_0802303c \n\
 /* 08023046 */ BL func_080226a0 \n\
 /* 0802304a */ BL func_080223ac \n\
 /* 0802304e */ BL func_0802ab34 \n\
-/* 08023052 */ LDR R5, =0x030055d0 @ !PossiblePointer \n\
+/* 08023052 */ LDR R5, =D_030055d0 \n\
 /* 08023054 */ LDR R0, [R5] \n\
 /* 08023056 */ LDR R4, =0x00000414 @ !PossiblePointer \n\
 /* 08023058 */ ADDS R0, R0, R4 @ Set R0 to R0 + R4 \n\
 /* 0802305a */ LDRB R0, [R0] \n\
 /* 0802305c */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0802305e */ BEQ branch_0802307a \n\
-/* 08023060 */ LDR R0, =0x03004afc @ !PossiblePointer \n\
+/* 08023060 */ LDR R0, =D_03004afc \n\
 /* 08023062 */ LDRH R1, [R0] \n\
 /* 08023064 */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 08023066 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\

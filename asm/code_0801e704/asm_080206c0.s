@@ -23,7 +23,7 @@ branch_080206dc: \n\
 /* 080206de */ ADDS R1, R4, 0x0 @ Set R1 to R4 + 0x0 \n\
 /* 080206e0 */ BL func_0802075c \n\
 /* 080206e4 */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
-/* 080206e6 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 080206e6 */ LDR R0, =D_03005380 \n\
 /* 080206e8 */ LDR R0, [R0] \n\
 /* 080206ea */ LSLS R3, R6, 0x10 \n\
 /* 080206ec */ ASRS R3, R3, 0x10 \n\
@@ -39,7 +39,7 @@ branch_080206dc: \n\
 /* 08020700 */ STR R2, [SP, 0x10] \n\
 /* 08020702 */ MOVS R2, 0x7F @ Set R2 to 0x7F \n\
 /* 08020704 */ BL func_0804d160 \n\
-/* 08020708 */ LDR R5, =0x030055d0 @ !PossiblePointer \n\
+/* 08020708 */ LDR R5, =D_030055d0 \n\
 /* 0802070a */ LDR R3, [R5] \n\
 /* 0802070c */ LSLS R2, R4, 0x1 \n\
 /* 0802070e */ ADDS R1, R3, 0x0 @ Set R1 to R3 + 0x0 \n\
@@ -63,7 +63,7 @@ branch_080206dc: \n\
 /* 08020732 */ ADDS R0, 0x55 @ Add 0x55 to R0 \n\
 /* 08020734 */ STRB R1, [R0] \n\
 /* 08020736 */ LDR R0, [R5] \n\
-/* 08020738 */ LDR R2, =0x00000862 @ !PossiblePointer \n\
+/* 08020738 */ LDR R2, =0x00000862 \n\
 /* 0802073a */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 0802073c */ STRB R7, [R0] \n\
 /* 0802073e */ ADD SP, 0x14 \n\

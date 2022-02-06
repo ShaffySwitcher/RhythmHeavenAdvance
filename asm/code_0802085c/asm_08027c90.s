@@ -5,9 +5,9 @@ asm(".syntax unified \n\
 glabel func_08027c90 \n\
 /* 08027c90 */ PUSH {R4, R5, LR} \n\
 /* 08027c92 */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
-/* 08027c94 */ LDR R5, =0x030055d0 @ !PossiblePointer \n\
+/* 08027c94 */ LDR R5, =D_030055d0 \n\
 /* 08027c96 */ LDR R1, [R5] \n\
-/* 08027c98 */ LDR R2, =0x00000562 @ !PossiblePointer \n\
+/* 08027c98 */ LDR R2, =0x00000562 \n\
 /* 08027c9a */ ADDS R0, R1, R2 @ Set R0 to R1 + R2 \n\
 /* 08027c9c */ LDRB R0, [R0] \n\
 /* 08027c9e */ CMP R0, R4 @ Check R0 - R4 \n\
@@ -19,7 +19,7 @@ glabel func_08027c90 \n\
 /* 08027caa */ LDRB R0, [R0] \n\
 /* 08027cac */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08027cae */ BEQ branch_08027cde \n\
-/* 08027cb0 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 08027cb0 */ LDR R0, =D_03005380 \n\
 /* 08027cb2 */ LDR R0, [R0] \n\
 /* 08027cb4 */ SUBS R2, 0x3 @ Subtract 0x3 from R2 \n\
 /* 08027cb6 */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
@@ -42,9 +42,9 @@ glabel func_08027c90 \n\
 /* 08027cdc */ STRH R4, [R0] \n\
  \n\
 branch_08027cde: \n\
-/* 08027cde */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 08027cde */ LDR R0, =D_030055d0 \n\
 /* 08027ce0 */ LDR R0, [R0] \n\
-/* 08027ce2 */ LDR R2, =0x00000562 @ !PossiblePointer \n\
+/* 08027ce2 */ LDR R2, =0x00000562 \n\
 /* 08027ce4 */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 08027ce6 */ STRB R4, [R0] \n\
  \n\

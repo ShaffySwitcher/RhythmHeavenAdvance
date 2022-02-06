@@ -32,17 +32,17 @@ branch_0802033e: \n\
  \n\
 branch_08020340: \n\
 /* 08020340 */ STR R0, [R7, 0x1C] \n\
-/* 08020342 */ LDR R1, =0x089de9a0 @ !PossiblePointer \n\
-/* 08020344 */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 08020342 */ LDR R1, =D_089de9a0 \n\
+/* 08020344 */ LDR R0, =D_030055d0 \n\
 /* 08020346 */ MOV R9, R0 @ Set R9 to R0 \n\
 /* 08020348 */ LDR R0, [R0] \n\
-/* 0802034a */ LDR R2, =0x00000159 @ !PossiblePointer \n\
+/* 0802034a */ LDR R2, =0x00000159 \n\
 /* 0802034c */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 0802034e */ LDRB R0, [R0] \n\
 /* 08020350 */ LSLS R0, R0, 0x2 \n\
 /* 08020352 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08020354 */ LDR R0, [R0] \n\
-/* 08020356 */ LDR R1, =0x0000479c @ !PossiblePointer \n\
+/* 08020356 */ LDR R1, =0x0000479c \n\
 /* 08020358 */ STR R1, [SP] \n\
 /* 0802035a */ MOVS R1, 0x80 @ Set R1 to 0x80 \n\
 /* 0802035c */ LSLS R1, R1, 0x1 \n\
@@ -65,7 +65,7 @@ branch_08020340: \n\
 /* 08020380 */ LDR R1, [R7, 0x1C] \n\
 /* 08020382 */ ADDS R0, R1, 0x0 @ Set R0 to R1 + 0x0 \n\
 /* 08020384 */ SUBS R0, 0x30 @ Subtract 0x30 from R0 \n\
-/* 08020386 */ LDR R4, =0x03004ae4 @ !PossiblePointer \n\
+/* 08020386 */ LDR R4, =D_03004ae4 \n\
 /* 08020388 */ LSLS R0, R0, 0x10 \n\
 /* 0802038a */ BL __udivsi3 \n\
 /* 0802038e */ LDR R1, [R4] \n\

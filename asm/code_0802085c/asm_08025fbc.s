@@ -7,17 +7,17 @@ glabel func_08025fbc \n\
 /* 08025fbe */ MOV R6, R8 @ Set R6 to R8 \n\
 /* 08025fc0 */ PUSH {R6} \n\
 /* 08025fc2 */ ADDS R5, R0, 0x0 @ Set R5 to R0 + 0x0 \n\
-/* 08025fc4 */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 08025fc4 */ LDR R0, =D_030055d0 \n\
 /* 08025fc6 */ LDR R0, [R0] \n\
 /* 08025fc8 */ LDRB R0, [R0] \n\
 /* 08025fca */ LSLS R4, R0, 0x1 \n\
 /* 08025fcc */ ADDS R4, R4, R0 @ Set R4 to R4 + R0 \n\
 /* 08025fce */ LSLS R4, R4, 0x2 \n\
 /* 08025fd0 */ LSLS R1, R1, 0x2 \n\
-/* 08025fd2 */ LDR R0, =0x089e0ab0 @ !PossiblePointer \n\
+/* 08025fd2 */ LDR R0, =D_089e0ab0 \n\
 /* 08025fd4 */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\
 /* 08025fd6 */ ADDS R4, R4, R1 @ Set R4 to R4 + R1 \n\
-/* 08025fd8 */ LDR R6, =0x03005380 @ !PossiblePointer \n\
+/* 08025fd8 */ LDR R6, =D_03005380 \n\
 /* 08025fda */ LDR R0, [R6] \n\
 /* 08025fdc */ LSLS R5, R5, 0x10 \n\
 /* 08025fde */ ASRS R5, R5, 0x10 \n\

@@ -11,7 +11,7 @@ glabel func_0801fdc4 \n\
 /* 0801fdce */ ADDS R5, R1, 0x0 @ Set R5 to R1 + 0x0 \n\
 /* 0801fdd0 */ ADDS R6, R2, 0x0 @ Set R6 to R2 + 0x0 \n\
 /* 0801fdd2 */ ADDS R7, R3, 0x0 @ Set R7 to R3 + 0x0 \n\
-/* 0801fdd4 */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 0801fdd4 */ LDR R0, =D_030055d0 \n\
 /* 0801fdd6 */ LDR R0, [R0] \n\
 /* 0801fdd8 */ LDR R0, [R0, 0x4] \n\
 /* 0801fdda */ SUBS R7, R7, R0 @ Set R7 to R7 - R0 \n\

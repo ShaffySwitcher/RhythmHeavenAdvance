@@ -14,9 +14,9 @@ glabel func_08024ae4 \n\
 /* 08024af4 */ B branch_08024b8c \n\
  \n\
 branch_08024af6: \n\
-/* 08024af6 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 08024af6 */ LDR R0, =D_03005380 \n\
 /* 08024af8 */ LDR R0, [R0] \n\
-/* 08024afa */ LDR R1, =0x030055d0 @ !PossiblePointer \n\
+/* 08024afa */ LDR R1, =D_030055d0 \n\
 /* 08024afc */ LDR R1, [R1] \n\
 /* 08024afe */ MOVS R2, 0xE5 @ Set R2 to 0xE5 \n\
 /* 08024b00 */ LSLS R2, R2, 0x2 \n\
@@ -30,16 +30,16 @@ branch_08024af6: \n\
 .ltorg \n\
  \n\
 branch_08024b18: \n\
-/* 08024b18 */ LDR R6, =0x03005380 @ !PossiblePointer \n\
+/* 08024b18 */ LDR R6, =D_03005380 \n\
 /* 08024b1a */ LDR R0, [R6] \n\
-/* 08024b1c */ LDR R5, =0x030055d0 @ !PossiblePointer \n\
+/* 08024b1c */ LDR R5, =D_030055d0 \n\
 /* 08024b1e */ LDR R1, [R5] \n\
 /* 08024b20 */ MOVS R4, 0xE5 @ Set R4 to 0xE5 \n\
 /* 08024b22 */ LSLS R4, R4, 0x2 \n\
 /* 08024b24 */ ADDS R1, R1, R4 @ Set R1 to R1 + R4 \n\
 /* 08024b26 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08024b28 */ LDRSH R1, [R1, R2] \n\
-/* 08024b2a */ LDR R2, =0x088c2f58 @ !PossiblePointer \n\
+/* 08024b2a */ LDR R2, =D_088c2f58 \n\
 /* 08024b2c */ MOVS R3, 0x1 @ Set R3 to 0x1 \n\
 /* 08024b2e */ STR R3, [SP] \n\
 /* 08024b30 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
@@ -58,16 +58,16 @@ branch_08024b18: \n\
 .ltorg \n\
  \n\
 branch_08024b58: \n\
-/* 08024b58 */ LDR R6, =0x03005380 @ !PossiblePointer \n\
+/* 08024b58 */ LDR R6, =D_03005380 \n\
 /* 08024b5a */ LDR R0, [R6] \n\
-/* 08024b5c */ LDR R5, =0x030055d0 @ !PossiblePointer \n\
+/* 08024b5c */ LDR R5, =D_030055d0 \n\
 /* 08024b5e */ LDR R1, [R5] \n\
 /* 08024b60 */ MOVS R4, 0xE5 @ Set R4 to 0xE5 \n\
 /* 08024b62 */ LSLS R4, R4, 0x2 \n\
 /* 08024b64 */ ADDS R1, R1, R4 @ Set R1 to R1 + R4 \n\
 /* 08024b66 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08024b68 */ LDRSH R1, [R1, R2] \n\
-/* 08024b6a */ LDR R2, =0x088c2f40 @ !PossiblePointer \n\
+/* 08024b6a */ LDR R2, =D_088c2f40 \n\
 /* 08024b6c */ MOVS R3, 0x1 @ Set R3 to 0x1 \n\
 /* 08024b6e */ STR R3, [SP] \n\
 /* 08024b70 */ MOVS R3, 0x7F @ Set R3 to 0x7F \n\
