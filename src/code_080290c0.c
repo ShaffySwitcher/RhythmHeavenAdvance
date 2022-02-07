@@ -7,7 +7,7 @@ asm(".include \"include/gba.inc\"");//Temporary
 
 #include "asm/code_080290c0/asm_080290c4.s"
 
-#include "asm/code_080290c0/asm_0802916c.s"
+#include "asm/code_080290c0/asm_08029178.s"
 
 #include "asm/code_080290c0/asm_0802918c.s"
 
@@ -37,7 +37,7 @@ asm(".include \"include/gba.inc\"");//Temporary
 
 #include "asm/code_080290c0/asm_08029a1c.s"
 
-#include "asm/code_080290c0/asm_08029b88.s"
+#include "asm/code_080290c0/asm_08029b8c.s"
 
 #include "asm/code_080290c0/asm_08029ba0.s"
 

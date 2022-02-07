@@ -4,18 +4,18 @@ asm(".syntax unified \n\
 \n\
 glabel func_0802d96c \n\
 /* 0802d96c */ PUSH {R4, LR} \n\
-/* 0802d96e */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 0802d96e */ LDR R0, =D_030055d0 \n\
 /* 0802d970 */ LDR R4, [R0] \n\
 /* 0802d972 */ MOVS R0, 0xF1 @ Set R0 to 0xF1 \n\
 /* 0802d974 */ LSLS R0, R0, 0x2 \n\
 /* 0802d976 */ ADDS R2, R4, R0 @ Set R2 to R4 + R0 \n\
 /* 0802d978 */ MOVS R0, 0x8 @ Set R0 to 0x8 \n\
 /* 0802d97a */ STR R0, [R2] \n\
-/* 0802d97c */ LDR R1, =0x03004b10 @ !PossiblePointer \n\
+/* 0802d97c */ LDR R1, =D_03004b10 \n\
 /* 0802d97e */ MOV R12, R1 @ Set R12 to R1 \n\
 /* 0802d980 */ ADDS R1, 0x4C @ Add 0x4C to R1 \n\
 /* 0802d982 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 0802d984 */ LDR R0, =0x00003a44 @ !PossiblePointer \n\
+/* 0802d984 */ LDR R0, =0x00003a44 \n\
 /* 0802d986 */ STRH R0, [R1] \n\
 /* 0802d988 */ LDR R2, [R2] \n\
 /* 0802d98a */ LSLS R1, R2, 0x8 \n\
@@ -31,16 +31,16 @@ glabel func_0802d96c \n\
 /* 0802d99e */ STRH R0, [R2, 0x3E] \n\
 /* 0802d9a0 */ MOV R1, R12 @ Set R1 to R12 \n\
 /* 0802d9a2 */ ADDS R1, 0x40 @ Add 0x40 to R1 \n\
-/* 0802d9a4 */ LDR R0, =0x000080a0 @ !PossiblePointer \n\
+/* 0802d9a4 */ LDR R0, =0x000080a0 \n\
 /* 0802d9a6 */ STRH R0, [R1] \n\
 /* 0802d9a8 */ ADDS R1, 0x2 @ Add 0x2 to R1 \n\
 /* 0802d9aa */ MOVS R0, 0xA0 @ Set R0 to 0xA0 \n\
 /* 0802d9ac */ STRH R0, [R1] \n\
 /* 0802d9ae */ ADDS R1, 0x2 @ Add 0x2 to R1 \n\
-/* 0802d9b0 */ LDR R0, =0x00003337 @ !PossiblePointer \n\
+/* 0802d9b0 */ LDR R0, =0x00003337 \n\
 /* 0802d9b2 */ STRH R0, [R1] \n\
 /* 0802d9b4 */ ADDS R1, 0x2 @ Add 0x2 to R1 \n\
-/* 0802d9b6 */ LDR R0, =0x00002033 @ !PossiblePointer \n\
+/* 0802d9b6 */ LDR R0, =0x00002033 \n\
 /* 0802d9b8 */ STRH R0, [R1] \n\
 /* 0802d9ba */ LDRH R1, [R2] \n\
 /* 0802d9bc */ MOVS R2, 0x80 @ Set R2 to 0x80 \n\

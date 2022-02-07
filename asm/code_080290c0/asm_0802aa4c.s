@@ -5,10 +5,10 @@ asm(".syntax unified \n\
 glabel func_0802aa4c \n\
 /* 0802aa4c */ PUSH {R4, R5, LR} \n\
 /* 0802aa4e */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
-/* 0802aa50 */ LDR R5, =0x08aa4460 @ !PossiblePointer \n\
+/* 0802aa50 */ LDR R5, =D_08aa4460 \n\
  \n\
 branch_0802aa52: \n\
-/* 0802aa52 */ LDR R0, =0x03001568 @ !PossiblePointer \n\
+/* 0802aa52 */ LDR R0, =D_03001568 \n\
 /* 0802aa54 */ LDR R0, [R0] \n\
 /* 0802aa56 */ ADDS R1, R0, R4 @ Set R1 to R0 + R4 \n\
 /* 0802aa58 */ LDRB R0, [R1] \n\

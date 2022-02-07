@@ -8,7 +8,7 @@ glabel func_0802aac0 \n\
 /* 0802aac4 */ PUSH {R7} \n\
 /* 0802aac6 */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 0802aac8 */ MOV R8, R1 @ Set R8 to R1 \n\
-/* 0802aaca */ LDR R0, =0x03001568 @ !PossiblePointer \n\
+/* 0802aaca */ LDR R0, =D_03001568 \n\
 /* 0802aacc */ LDR R0, [R0] \n\
 /* 0802aace */ ADDS R5, R0, 0x0 @ Set R5 to R0 + 0x0 \n\
 /* 0802aad0 */ ADDS R5, 0x10 @ Add 0x10 to R5 \n\

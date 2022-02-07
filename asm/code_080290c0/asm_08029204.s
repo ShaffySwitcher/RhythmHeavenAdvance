@@ -4,9 +4,9 @@ asm(".syntax unified \n\
 \n\
 glabel func_08029204 \n\
 /* 08029204 */ PUSH {R4-R6, LR} \n\
-/* 08029206 */ LDR R4, =0x030055d0 @ !PossiblePointer \n\
+/* 08029206 */ LDR R4, =D_030055d0 \n\
 /* 08029208 */ LDR R2, [R4] \n\
-/* 0802920a */ LDR R0, =0x00000402 @ !PossiblePointer \n\
+/* 0802920a */ LDR R0, =0x00000402 \n\
 /* 0802920c */ ADDS R1, R2, R0 @ Set R1 to R2 + R0 \n\
 /* 0802920e */ LDRH R0, [R1] \n\
 /* 08029210 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
@@ -23,9 +23,9 @@ glabel func_08029204 \n\
 /* 08029226 */ MOVS R0, 0x80 @ Set R0 to 0x80 \n\
 /* 08029228 */ LSLS R0, R0, 0x1 \n\
 /* 0802922a */ STRH R0, [R1] \n\
-/* 0802922c */ LDR R0, =0x000003fe @ !PossiblePointer \n\
+/* 0802922c */ LDR R0, =0x000003fe \n\
 /* 0802922e */ ADDS R1, R2, R0 @ Set R1 to R2 + R0 \n\
-/* 08029230 */ LDR R0, =0x0000ff70 @ !PossiblePointer \n\
+/* 08029230 */ LDR R0, =0x0000ff70 \n\
 /* 08029232 */ STRH R0, [R1] \n\
 /* 08029234 */ MOVS R1, 0x80 @ Set R1 to 0x80 \n\
 /* 08029236 */ LSLS R1, R1, 0x3 \n\
@@ -39,7 +39,7 @@ glabel func_08029204 \n\
 /* 08029246 */ ADDS R1, R2, R6 @ Set R1 to R2 + R6 \n\
 /* 08029248 */ LDR R1, [R1] \n\
 /* 0802924a */ BL func_0800aa4c \n\
-/* 0802924e */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0802924e */ LDR R0, =D_03005380 \n\
 /* 08029250 */ LDR R0, [R0] \n\
 /* 08029252 */ LDR R2, [R4] \n\
 /* 08029254 */ MOVS R3, 0xFE @ Set R3 to 0xFE \n\
@@ -55,7 +55,7 @@ glabel func_08029204 \n\
 /* 08029268 */ BL func_0804cebc \n\
  \n\
 branch_0802926c: \n\
-/* 0802926c */ LDR R5, =0x030055d0 @ !PossiblePointer \n\
+/* 0802926c */ LDR R5, =D_030055d0 \n\
 /* 0802926e */ LDR R4, [R5] \n\
 /* 08029270 */ MOVS R6, 0xFF @ Set R6 to 0xFF \n\
 /* 08029272 */ LSLS R6, R6, 0x2 \n\
@@ -84,7 +84,7 @@ branch_0802926c: \n\
 /* 080292a0 */ SUBS R0, R0, R1 @ Set R0 to R0 - R1 \n\
 /* 080292a2 */ MULS R0, R2 @ Multiply R0 by R2 \n\
 /* 080292a4 */ ASRS R0, R0, 0x8 \n\
-/* 080292a6 */ LDR R1, =0x000003fa @ !PossiblePointer \n\
+/* 080292a6 */ LDR R1, =0x000003fa \n\
 /* 080292a8 */ ADDS R2, R4, R1 @ Set R2 to R4 + R1 \n\
 /* 080292aa */ STRH R0, [R2] \n\
 /* 080292ac */ LDRH R1, [R3] \n\

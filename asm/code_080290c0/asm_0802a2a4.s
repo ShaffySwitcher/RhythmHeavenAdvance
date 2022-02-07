@@ -5,7 +5,7 @@ asm(".syntax unified \n\
 glabel func_0802a2a4 \n\
 /* 0802a2a4 */ PUSH {R4-R6, LR} \n\
 /* 0802a2a6 */ SUB SP, 0xC \n\
-/* 0802a2a8 */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 0802a2a8 */ LDR R0, =D_030055d0 \n\
 /* 0802a2aa */ LDR R4, [R0] \n\
 /* 0802a2ac */ MOVS R0, 0xD6 @ Set R0 to 0xD6 \n\
 /* 0802a2ae */ LSLS R0, R0, 0x2 \n\
@@ -17,11 +17,11 @@ glabel func_0802a2a4 \n\
 /* 0802a2ba */ MOVS R1, 0x4 @ Set R1 to 0x4 \n\
 /* 0802a2bc */ ORRS R0, R1 @ Set R0 to R0 | R1 \n\
 /* 0802a2be */ STRB R0, [R4] \n\
-/* 0802a2c0 */ LDR R6, =0x03005380 @ !PossiblePointer \n\
+/* 0802a2c0 */ LDR R6, =D_03005380 \n\
 /* 0802a2c2 */ LDR R0, [R6] \n\
 /* 0802a2c4 */ MOVS R2, 0x4 @ Set R2 to 0x4 \n\
 /* 0802a2c6 */ LDRSH R1, [R4, R2] \n\
-/* 0802a2c8 */ LDR R2, =0x088c9f90 @ !PossiblePointer \n\
+/* 0802a2c8 */ LDR R2, =D_088c9f90 \n\
 /* 0802a2ca */ MOVS R3, 0x1 @ Set R3 to 0x1 \n\
 /* 0802a2cc */ STR R3, [SP] \n\
 /* 0802a2ce */ MOVS R5, 0x0 @ Set R5 to 0x0 \n\

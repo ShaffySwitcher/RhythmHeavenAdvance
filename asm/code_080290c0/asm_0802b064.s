@@ -6,10 +6,10 @@ glabel func_0802b064 \n\
 /* 0802b064 */ PUSH {R4, R5, LR} \n\
 /* 0802b066 */ BL func_0802a994 \n\
 /* 0802b06a */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
-/* 0802b06c */ LDR R5, =0x08aa4460 @ !PossiblePointer \n\
+/* 0802b06c */ LDR R5, =D_08aa4460 \n\
  \n\
 branch_0802b06e: \n\
-/* 0802b06e */ LDR R0, =0x03001568 @ !PossiblePointer \n\
+/* 0802b06e */ LDR R0, =D_03001568 \n\
 /* 0802b070 */ LDR R0, [R0] \n\
 /* 0802b072 */ ADDS R0, R0, R4 @ Set R0 to R0 + R4 \n\
 /* 0802b074 */ LDRB R0, [R0] \n\

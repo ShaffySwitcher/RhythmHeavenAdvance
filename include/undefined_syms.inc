@@ -107,6 +107,7 @@
 .set D_03001560, 0x03001560
 .set D_03001561, 0x03001561
 .set D_03001564, 0x03001564
+.set D_03001568, 0x03001568
 .set D_03004460, 0x03004460
 .set D_03004498, 0x03004498
 .set interrupt_handler_intern, 0x030044a0
@@ -299,7 +300,7 @@
 .set func_0804f270, 0x0804f270
 .set func_0804f2bc, 0x0804f2bc
 
-// Todo - set glabel's in the data_XXXXX stuff for this
+// Todo: set labels in the data_XXXXXXXX stuff for this
 .set D_08058f58, 0x08058f58
 .set D_08059330, 0x08059330
 .set D_08059334, 0x08059334
@@ -329,6 +330,8 @@
 .set D_0805a0c0, 0x0805a0c0
 .set D_0805a0c8, 0x0805a0c8
 .set D_0805a0cc, 0x0805a0cc
+.set D_0805a3a0, 0x0805a3a0
+.set D_0805a3cc, 0x0805a3cc
 
 .set D_088a0ca0, 0x088a0ca0
 .set D_088a0cd0, 0x088a0cd0
@@ -454,10 +457,12 @@
 .set D_088c61d8, 0x088c61d8
 .set D_088c61c0, 0x088c61c0
 .set D_088c61f0, 0x088c61f0
+.set D_088c6210, 0x088c6210
 .set D_088c62d0, 0x088c62d0
 .set D_088c62f0, 0x088c62f0
 .set D_088c6328, 0x088c6328
 .set D_088c6378, 0x088c6378
+.set D_088c63f0, 0x088c63f0
 .set D_088c64f8, 0x088c64f8
 .set D_088c6520, 0x088c6520
 .set D_088c6548, 0x088c6548
@@ -485,6 +490,38 @@
 .set D_088c84b0, 0x088c84b0
 .set D_088c87a0, 0x088c87a0
 .set D_088c88e0, 0x088c88e0
+.set D_088c9a98, 0x088c9a98
+.set D_088c9ab8, 0x088c9ab8
+.set D_088c9b08, 0x088c9b08
+.set D_088c9b98, 0x088c9b98
+.set D_088c9d10, 0x088c9d10
+.set D_088c9d58, 0x088c9d58
+.set D_088c9d88, 0x088c9d88
+.set D_088c9dc0, 0x088c9dc0
+.set D_088c9dd0, 0x088c9dd0
+.set D_088c9de0, 0x088c9de0
+.set D_088c9ec8, 0x088c9ec8
+.set D_088c9f58, 0x088c9f58
+.set D_088c9f90, 0x088c9f90
+.set D_088ca0d8, 0x088ca0d8
+.set D_088ca120, 0x088ca120
+.set D_088ca140, 0x088ca140
+.set D_088ca158, 0x088ca158
+.set D_088cb47c, 0x088cb47c
+.set D_088cb4a4, 0x088cb4a4
+.set D_088cb4f4, 0x088cb4f4
+.set D_088cb55c, 0x088cb55c
+.set D_088cb5b4, 0x088cb5b4
+.set D_088cb704, 0x088cb704
+.set D_088cb774, 0x088cb774
+.set D_088cb87c, 0x088cb87c
+.set D_088cb89c, 0x088cb89c
+.set D_088cb8bc, 0x088cb8bc
+.set D_088cb8e4, 0x088cb8e4
+.set D_088cb904, 0x088cb904
+.set D_088cb994, 0x088cb994
+.set D_088cb9fc, 0x088cb9fc
+.set D_088cbe00, 0x088cbe00
 
 .set D_088eba24, 0x088eba24
 .set D_088eba34, 0x088eba34
@@ -905,6 +942,40 @@
 .set D_089e2a04, 0x089e2a04
 .set D_089e2a08, 0x089e2a08
 .set D_089e2a50, 0x089e2a50
+.set D_089e2ad4, 0x089e2ad4
+.set D_089e2b04, 0x089e2b04
+.set D_089e2b58, 0x089e2b58
+.set D_089e2b78, 0x089e2b78
+.set D_089e2b98, 0x089e2b98
+.set D_089e2ba8, 0x089e2ba8
+.set D_089e2ed4, 0x089e2ed4
+.set D_089e2ee8, 0x089e2ee8
+.set D_089e2ef8, 0x089e2ef8
+.set D_089e2f00, 0x089e2f00
+.set D_089e3380, 0x089e3380
+.set D_089e3384, 0x089e3384
+.set D_089e33dc, 0x089e33dc
+.set D_089e33ec, 0x089e33ec
+.set D_089e3410, 0x089e3410
+.set D_089e342c, 0x089e342c
+.set D_089e3444, 0x089e3444
+.set D_089e3478, 0x089e3478
+.set D_089e349c, 0x089e349c
+.set D_089e3528, 0x089e3528
+.set D_089e3538, 0x089e3538
+.set D_089e35a8, 0x089e35a8
+.set D_089e3610, 0x089e3610
+.set D_089e3620, 0x089e3620
+.set D_089e3634, 0x089e3634
+.set D_089e3648, 0x089e3648
+.set D_089e37e4, 0x089e37e4
+.set D_089e384c, 0x089e384c
+.set D_089e3910, 0x089e3910
+.set D_089e3ac4, 0x089e3ac4
+.set D_089e3ad8, 0x089e3ad8
+.set D_089e3aec, 0x089e3aec
+.set D_089e3b00, 0x089e3b00
+.set D_089e3b14, 0x089e3b14
 .set D_089e5ec0, 0x089e5ec0
 
 .set D_08a59c58, 0x08a59c58
@@ -921,6 +992,7 @@
 .set D_08a59ce8, 0x08a59ce8
 .set D_08a59cf4, 0x08a59cf4
 
+// Todo: That is MidiData stuff. Use labels from midi_data.c and not the D_XXXXXXXX
 .set D_08a9b078, 0x08a9b078
 .set D_08a9b1f4, 0x08a9b1f4
 .set D_08a9b44c, 0x08a9b44c
@@ -939,7 +1011,6 @@
 .set D_08a9ba28, 0x08a9ba28
 .set D_08a9ba3c, 0x08a9ba3c
 .set D_08a9bb68, 0x08a9bb68
-
 .set D_08a9c1e4, 0x08a9c1e4
 .set D_08a9c374, 0x08a9c374
 .set D_08a9c450, 0x08a9c450
@@ -949,8 +1020,12 @@
 .set D_08a9c4a0, 0x08a9c4a0
 .set D_08a9c4b4, 0x08a9c4b4
 .set D_08a9c4c8, 0x08a9c4c8
+.set D_08a9d170, 0x08a9d170
+.set D_08a9d1ac, 0x08a9d1ac
+.set D_08a9d1e8, 0x08a9d1e8
 .set D_08a9d24c, 0x08a9d24c
 .set D_08a9d490, 0x08a9d490
+.set D_08a9d580, 0x08a9d580
 .set D_08a9d9a4, 0x08a9d9a4
 .set D_08a9d9b8, 0x08a9d9b8
 .set D_08a9d9cc, 0x08a9d9cc
@@ -975,7 +1050,6 @@
 .set D_08a9dc4c, 0x08a9dc4c
 .set D_08a9dc60, 0x08a9dc60
 .set D_08a9dc74, 0x08a9dc74
-
 .set D_08a9e084, 0x08a9e084
 .set D_08a9e14c, 0x08a9e14c
 .set D_08a9e160, 0x08a9e160
@@ -989,6 +1063,9 @@
 .set D_08a9e534, 0x08a9e534
 .set D_08a9e548, 0x08a9e548
 .set D_08a9e64c, 0x08a9e64c
+.set D_08a9e778, 0x08a9e778
+.set D_08a9e78c, 0x08a9e78c
+.set D_08a9e7a0, 0x08a9e7a0
 
 .set D_08aa06f8, 0x08aa06f8
 .set D_08aa4324, 0x08aa4324

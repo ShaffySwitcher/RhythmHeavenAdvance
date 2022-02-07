@@ -24,7 +24,7 @@ glabel func_0802afb0 \n\
 /* 0802afd4 */ ANDS R6, R0 @ Set R6 to R6 & R0 \n\
 /* 0802afd6 */ MOVS R4, 0x2 @ Set R4 to 0x2 \n\
 /* 0802afd8 */ ANDS R4, R0 @ Set R4 to R4 & R0 \n\
-/* 0802afda */ LDR R0, =0x03001568 @ !PossiblePointer \n\
+/* 0802afda */ LDR R0, =D_03001568 \n\
 /* 0802afdc */ LDR R0, [R0] \n\
 /* 0802afde */ MOVS R3, 0xCE @ Set R3 to 0xCE \n\
 /* 0802afe0 */ LSLS R3, R3, 0x2 \n\
@@ -51,7 +51,7 @@ branch_0802b000: \n\
 /* 0802b006 */ ASRS R1, R0, 0x10 \n\
 /* 0802b008 */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 0802b00a */ BLT branch_0802b01a \n\
-/* 0802b00c */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0802b00c */ LDR R0, =D_03005380 \n\
 /* 0802b00e */ LDR R0, [R0] \n\
 /* 0802b010 */ STR R6, [SP] \n\
 /* 0802b012 */ MOVS R2, 0x1 @ Set R2 to 0x1 \n\

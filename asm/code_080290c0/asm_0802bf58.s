@@ -12,7 +12,7 @@ glabel func_0802bf58 \n\
 /* 0802bf68 */ BL func_0802d2bc \n\
 /* 0802bf6c */ MOVS R0, 0x14 @ Set R0 to 0x14 \n\
 /* 0802bf6e */ BL func_0800c3a4 \n\
-/* 0802bf72 */ LDR R1, =0x030055d0 @ !PossiblePointer \n\
+/* 0802bf72 */ LDR R1, =D_030055d0 \n\
 /* 0802bf74 */ LDR R1, [R1] \n\
 /* 0802bf76 */ MOVS R2, 0xF0 @ Set R2 to 0xF0 \n\
 /* 0802bf78 */ LSLS R2, R2, 0x2 \n\

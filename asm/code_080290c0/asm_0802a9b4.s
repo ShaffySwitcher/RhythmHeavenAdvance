@@ -4,9 +4,9 @@ asm(".syntax unified \n\
 \n\
 glabel func_0802a9b4 \n\
 /* 0802a9b4 */ PUSH {R4, R5, LR} \n\
-/* 0802a9b6 */ LDR R2, =0x03001568 @ !PossiblePointer \n\
+/* 0802a9b6 */ LDR R2, =D_03001568 \n\
 /* 0802a9b8 */ STR R0, [R2] \n\
-/* 0802a9ba */ LDR R1, =0x089e2f00 @ !PossiblePointer \n\
+/* 0802a9ba */ LDR R1, =D_089e2f00 \n\
 /* 0802a9bc */ STR R1, [R0, 0xC] \n\
 /* 0802a9be */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 0802a9c0 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
@@ -19,7 +19,7 @@ branch_0802a9c2: \n\
 /* 0802a9ca */ CMP R1, 0x9 @ Compare R1 and 0x9 \n\
 /* 0802a9cc */ BLS branch_0802a9c2 \n\
 /* 0802a9ce */ BL func_0802a994 \n\
-/* 0802a9d2 */ LDR R5, =0x03001568 @ !PossiblePointer \n\
+/* 0802a9d2 */ LDR R5, =D_03001568 \n\
 /* 0802a9d4 */ LDR R2, [R5] \n\
 /* 0802a9d6 */ MOVS R0, 0xCC @ Set R0 to 0xCC \n\
 /* 0802a9d8 */ LSLS R0, R0, 0x2 \n\
@@ -35,11 +35,11 @@ branch_0802a9c2: \n\
 /* 0802a9ec */ MOVS R3, 0xCE @ Set R3 to 0xCE \n\
 /* 0802a9ee */ LSLS R3, R3, 0x2 \n\
 /* 0802a9f0 */ ADDS R1, R2, R3 @ Set R1 to R2 + R3 \n\
-/* 0802a9f2 */ LDR R0, =0x0000ffff @ !PossiblePointer \n\
+/* 0802a9f2 */ LDR R0, =0x0000ffff \n\
 /* 0802a9f4 */ STRH R0, [R1] \n\
-/* 0802a9f6 */ LDR R0, =0x0000033a @ !PossiblePointer \n\
+/* 0802a9f6 */ LDR R0, =0x0000033a \n\
 /* 0802a9f8 */ ADDS R1, R2, R0 @ Set R1 to R2 + R0 \n\
-/* 0802a9fa */ LDR R0, =0x0000270f @ !PossiblePointer \n\
+/* 0802a9fa */ LDR R0, =0x0000270f \n\
 /* 0802a9fc */ STRH R0, [R1] \n\
 /* 0802a9fe */ MOVS R0, 0x18 @ Set R0 to 0x18 \n\
 /* 0802aa00 */ BL func_0800c3a4 \n\
@@ -49,7 +49,7 @@ branch_0802a9c2: \n\
 /* 0802aa0a */ ADDS R1, R2, R3 @ Set R1 to R2 + R3 \n\
 /* 0802aa0c */ LSLS R0, R0, 0x8 \n\
 /* 0802aa0e */ STR R0, [R1] \n\
-/* 0802aa10 */ LDR R0, =0x00000342 @ !PossiblePointer \n\
+/* 0802aa10 */ LDR R0, =0x00000342 \n\
 /* 0802aa12 */ ADDS R1, R2, R0 @ Set R1 to R2 + R0 \n\
 /* 0802aa14 */ MOVS R0, 0x25 @ Set R0 to 0x25 \n\
 /* 0802aa16 */ STRH R0, [R1] \n\

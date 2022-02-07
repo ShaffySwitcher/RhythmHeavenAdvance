@@ -9,9 +9,9 @@ glabel func_0802c23c \n\
 /* 0802c242 */ SUB SP, 0x14 \n\
 /* 0802c244 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0802c246 */ MOV R8, R0 @ Set R8 to R0 \n\
-/* 0802c248 */ LDR R5, =0x030055d0 @ !PossiblePointer \n\
+/* 0802c248 */ LDR R5, =D_030055d0 \n\
 /* 0802c24a */ MOVS R7, 0x0 @ Set R7 to 0x0 \n\
-/* 0802c24c */ LDR R6, =0x03005380 @ !PossiblePointer \n\
+/* 0802c24c */ LDR R6, =D_03005380 \n\
 /* 0802c24e */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
  \n\
 branch_0802c250: \n\
@@ -34,7 +34,7 @@ branch_0802c250: \n\
 /* 0802c270 */ STR R7, [SP, 0xC] \n\
 /* 0802c272 */ MOVS R1, 0x4 @ Set R1 to 0x4 \n\
 /* 0802c274 */ STR R1, [SP, 0x10] \n\
-/* 0802c276 */ LDR R1, =0x088cb4a4 @ !PossiblePointer \n\
+/* 0802c276 */ LDR R1, =D_088cb4a4 \n\
 /* 0802c278 */ B branch_0802c29e \n\
 \n\
 .ltorg \n\
@@ -50,7 +50,7 @@ branch_0802c288: \n\
 /* 0802c296 */ STR R7, [SP, 0xC] \n\
 /* 0802c298 */ MOVS R1, 0x4 @ Set R1 to 0x4 \n\
 /* 0802c29a */ STR R1, [SP, 0x10] \n\
-/* 0802c29c */ LDR R1, =0x088cb994 @ !PossiblePointer \n\
+/* 0802c29c */ LDR R1, =D_088cb994 \n\
  \n\
 branch_0802c29e: \n\
 /* 0802c29e */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
@@ -68,7 +68,7 @@ branch_0802c29e: \n\
 /* 0802c2b8 */ ADDS R1, R1, R4 @ Set R1 to R1 + R4 \n\
 /* 0802c2ba */ MOVS R2, 0x8 @ Set R2 to 0x8 \n\
 /* 0802c2bc */ LDRSH R1, [R1, R2] \n\
-/* 0802c2be */ LDR R2, =0x0802c1f1 @ !PossiblePointer \n\
+/* 0802c2be */ LDR R2, =(func_0802c1f0 + 1) \n\
 /* 0802c2c0 */ MOV R3, R8 @ Set R3 to R8 \n\
 /* 0802c2c2 */ BL func_0804daa8 \n\
 /* 0802c2c6 */ LDR R0, [R6] \n\
@@ -91,9 +91,9 @@ branch_0802c29e: \n\
 /* 0802c2ec */ MOV R2, R8 @ Set R2 to R8 \n\
 /* 0802c2ee */ CMP R2, 0x1 @ Compare R2 and 0x1 \n\
 /* 0802c2f0 */ BLE branch_0802c250 \n\
-/* 0802c2f2 */ LDR R5, =0x03005380 @ !PossiblePointer \n\
+/* 0802c2f2 */ LDR R5, =D_03005380 \n\
 /* 0802c2f4 */ LDR R0, [R5] \n\
-/* 0802c2f6 */ LDR R4, =0x030055d0 @ !PossiblePointer \n\
+/* 0802c2f6 */ LDR R4, =D_030055d0 \n\
 /* 0802c2f8 */ LDR R1, [R4] \n\
 /* 0802c2fa */ MOVS R2, 0x8 @ Set R2 to 0x8 \n\
 /* 0802c2fc */ LDRSH R1, [R1, R2] \n\

@@ -3,7 +3,7 @@ asm(".syntax unified \n\
 .balign 4, 0 \n\
 \n\
 glabel func_0802ac44 \n\
-/* 0802ac44 */ LDR R1, =0x03001568 @ !PossiblePointer \n\
+/* 0802ac44 */ LDR R1, =D_03001568 \n\
 /* 0802ac46 */ LDR R1, [R1] \n\
 /* 0802ac48 */ STR R0, [R1, 0xC] \n\
 /* 0802ac4a */ BX LR \n\

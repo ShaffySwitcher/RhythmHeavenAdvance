@@ -7,7 +7,7 @@ glabel func_0802a300 \n\
 /* 0802a302 */ LDR R2, [R0, 0x14] \n\
 /* 0802a304 */ SUBS R2, 0x80 @ Subtract 0x80 from R2 \n\
 /* 0802a306 */ STR R2, [R0, 0x14] \n\
-/* 0802a308 */ LDR R1, =0x03005380 @ !PossiblePointer \n\
+/* 0802a308 */ LDR R1, =D_03005380 \n\
 /* 0802a30a */ LDR R3, [R1] \n\
 /* 0802a30c */ MOVS R4, 0x4 @ Set R4 to 0x4 \n\
 /* 0802a30e */ LDRSH R1, [R0, R4] \n\

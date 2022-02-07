@@ -14,7 +14,7 @@ glabel func_0802a154 \n\
 /* 0802a164 */ LSRS R4, R4, 0x10 \n\
 /* 0802a166 */ LSLS R5, R5, 0x10 \n\
 /* 0802a168 */ LSRS R5, R5, 0x10 \n\
-/* 0802a16a */ LDR R7, =0x030055d0 @ !PossiblePointer \n\
+/* 0802a16a */ LDR R7, =D_030055d0 \n\
 /* 0802a16c */ LDR R0, [R7] \n\
 /* 0802a16e */ MOV R9, R0 @ Set R9 to R0 \n\
 /* 0802a170 */ MOVS R6, 0xD6 @ Set R6 to 0xD6 \n\
@@ -27,12 +27,12 @@ glabel func_0802a154 \n\
 /* 0802a17e */ MOVS R1, 0x2 @ Set R1 to 0x2 \n\
 /* 0802a180 */ ORRS R0, R1 @ Set R0 to R0 | R1 \n\
 /* 0802a182 */ STRB R0, [R6] \n\
-/* 0802a184 */ LDR R1, =0x03005380 @ !PossiblePointer \n\
+/* 0802a184 */ LDR R1, =D_03005380 \n\
 /* 0802a186 */ MOV R8, R1 @ Set R8 to R1 \n\
 /* 0802a188 */ LDR R0, [R1] \n\
 /* 0802a18a */ MOVS R2, 0x4 @ Set R2 to 0x4 \n\
 /* 0802a18c */ LDRSH R1, [R6, R2] \n\
-/* 0802a18e */ LDR R2, =0x088c9d58 @ !PossiblePointer \n\
+/* 0802a18e */ LDR R2, =D_088c9d58 \n\
 /* 0802a190 */ MOVS R3, 0x1 @ Set R3 to 0x1 \n\
 /* 0802a192 */ STR R3, [SP] \n\
 /* 0802a194 */ STR R3, [SP, 0x4] \n\
@@ -43,7 +43,7 @@ glabel func_0802a154 \n\
 /* 0802a1a0 */ LDR R0, [R1] \n\
 /* 0802a1a2 */ MOVS R2, 0x4 @ Set R2 to 0x4 \n\
 /* 0802a1a4 */ LDRSH R1, [R6, R2] \n\
-/* 0802a1a6 */ LDR R2, =0x000003be @ !PossiblePointer \n\
+/* 0802a1a6 */ LDR R2, =0x000003be \n\
 /* 0802a1a8 */ ADD R9, R2 @ Add R2 to R9 \n\
 /* 0802a1aa */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0802a1ac */ MOV R3, R9 @ Set R3 to R9 \n\
@@ -64,7 +64,7 @@ glabel func_0802a154 \n\
 /* 0802a1ce */ MOVS R1, 0x1 @ Set R1 to 0x1 \n\
 /* 0802a1d0 */ ORRS R0, R1 @ Set R0 to R0 | R1 \n\
 /* 0802a1d2 */ STRB R0, [R2, 0x1] \n\
-/* 0802a1d4 */ LDR R0, =0x08a9e778 @ !PossiblePointer \n\
+/* 0802a1d4 */ LDR R0, =D_08a9e778 \n\
 /* 0802a1d6 */ BL func_08002634 \n\
 /* 0802a1da */ LDR R0, [R7] \n\
 /* 0802a1dc */ MOVS R1, 0xAA @ Set R1 to 0xAA \n\
@@ -77,7 +77,7 @@ glabel func_0802a154 \n\
  \n\
 branch_0802a1ec: \n\
 /* 0802a1ec */ LDR R0, [R7] \n\
-/* 0802a1ee */ LDR R2, =0x00000554 @ !PossiblePointer \n\
+/* 0802a1ee */ LDR R2, =0x00000554 \n\
 /* 0802a1f0 */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 0802a1f2 */ LDRB R0, [R0] \n\
 /* 0802a1f4 */ MOVS R1, 0x2 @ Set R1 to 0x2 \n\

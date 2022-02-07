@@ -15,9 +15,9 @@ glabel func_08029d40 \n\
 /* 08029d52 */ NEGS R0, R0 @ Set R0 to -R0 \n\
 /* 08029d54 */ ANDS R3, R0 @ Set R3 to R3 & R0 \n\
 /* 08029d56 */ STRB R3, [R1] \n\
-/* 08029d58 */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 08029d58 */ LDR R0, =D_030055d0 \n\
 /* 08029d5a */ LDR R0, [R0] \n\
-/* 08029d5c */ LDR R2, =0x00000576 @ !PossiblePointer \n\
+/* 08029d5c */ LDR R2, =0x00000576 \n\
 /* 08029d5e */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 08029d60 */ LDRB R2, [R0] \n\
 /* 08029d62 */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\

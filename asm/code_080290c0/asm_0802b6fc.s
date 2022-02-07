@@ -10,9 +10,9 @@ glabel func_0802b6fc \n\
 /* 0802b704 */ BEQ branch_0802b720 \n\
 /* 0802b706 */ MOVS R0, 0x8 @ Set R0 to 0x8 \n\
 /* 0802b708 */ BL func_0800c3a4 \n\
-/* 0802b70c */ LDR R1, =0x030055d0 @ !PossiblePointer \n\
+/* 0802b70c */ LDR R1, =D_030055d0 \n\
 /* 0802b70e */ LDR R1, [R1] \n\
-/* 0802b710 */ LDR R3, =0x000003b2 @ !PossiblePointer \n\
+/* 0802b710 */ LDR R3, =0x000003b2 \n\
 /* 0802b712 */ ADDS R2, R1, R3 @ Set R2 to R1 + R3 \n\
 /* 0802b714 */ STRH R0, [R2] \n\
 /* 0802b716 */ LDRH R0, [R4, 0x10] \n\
