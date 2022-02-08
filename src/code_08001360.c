@@ -5,7 +5,10 @@ asm(".include \"include/gba.inc\"");//Temporary
 
 extern u16 D_030000b4;
 extern u16 D_03000098;
-extern u32 D_0300009c;
+
+typedef u32 (*D_0300009c_func)(void);
+
+extern D_0300009c_func D_0300009c;
 
 extern u16 D_03004ac0;
 extern s16 D_03004afc;
@@ -27,6 +30,7 @@ extern u8 D_030000a9;
 extern u32 D_030053b4;
 extern u32 D_03005374;
 
+
 void func_08001360(void) {
     func_08003f28();
     D_03000098 = NULL;
@@ -34,9 +38,24 @@ void func_08001360(void) {
     return;
 }
 
-#include "asm/code_08001360/asm_08001380.s"
+void func_08001380() {
+    func_08006e00();
+    func_08003f50();
+    if (D_0300009c != 0) {
+        D_0300009c();
+    }
+    D_03000098 = 1;
+    return;
+}
 
-#include "asm/code_08001360/asm_080013a8.s"
+
+void func_080013a8(void) {
+    volatile u32 temp;
+    if (!(REG_DISPCNT & 0x80)) {
+        while (!D_03000098) temp = *((u32*)GameROMBase + (u16)func_08001964());
+    }
+    D_03000098 = 0;
+}
 
 void func_080013e8(u32 arg1) {
 	D_0300009c = arg1;
@@ -83,7 +102,12 @@ void func_0800181c(u8 arg1) {
     return;
 }
 
-#include "asm/code_08001360/asm_08001828.s"
+u32 func_08001828(void) {
+    if (D_030053b4 < D_03005374) {
+        return D_030053b4 + 1;
+    }
+    return D_030053b4;
+}
 
 u8 func_0800184c() {
     return D_030053b4 >= D_03005374;
@@ -140,10 +164,28 @@ void func_08001a24() {
 
 #include "asm/code_08001360/asm_08001ec4.s"
 
-#include "asm/code_08001360/asm_08001f34.s"
+u32 func_08001f34(struct struct_08001f94 *arg1) {
+    u32 temp;
+    temp = func_08006580(0x18);
+    func_08001bf8(temp, arg1->unk0, arg1->unk1, arg1->unk4, arg1->unk8, 0, arg1->unkC);
+    return temp;
+}
 
-#include "asm/code_08001360/asm_08001f64.s"
+u32 func_08001f64(struct struct_08001f94 *arg1) {
+    u32 temp;
+    temp = func_08006580(0x18);
+    func_08001c64(temp, arg1->unk0, arg1->unk1, arg1->unk4, arg1->unk8, 0, arg1->unkC);
+    return temp;
+}
 
-#include "asm/code_08001360/asm_08001f94.s"
+u32 func_08001f94(struct struct_08001f94 *arg1) {
+    u32 temp;
+    temp = func_08006580(0x18);
+    func_08001cd8(temp, arg1->unk0, arg1->unk1, arg1->unk4, arg1->unk8, 0, arg1->unkC);
+    return temp;
+}
 
-#include "asm/code_08001360/asm_08001fc4.s"
+u8 func_08001fc4(u8 *arg1) {
+    func_08001b48();
+    return ((*arg1 << 31) == 0);
+}
