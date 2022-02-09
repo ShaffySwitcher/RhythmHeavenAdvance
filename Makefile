@@ -84,8 +84,6 @@ LD_SCRIPT   := rt.ld
 
 export OUTPUT	:=	$(BUILD)/$(TARGET)
 
-export DEPSDIR	:=	$(CURDIR)/$(BUILD)
-
 CFILES		:=	$(foreach dir,$(SOURCES),$(wildcard $(dir)/*.c))  $(foreach dir,$(AUDIO),$(wildcard $(dir)/*.c))
 CPPFILES	:=	$(foreach dir,$(SOURCES),$(wildcard $(dir)/*.cpp))
 SFILES		:=	$(foreach dir,$(ASM),$(wildcard $(dir)/*.s)) $(foreach dir,$(DATA),$(wildcard $(dir)/*.s))
@@ -168,16 +166,16 @@ $(BUILD)/%.pcm : %.wav | $(BUILD_DIRS)
 # C files
 $(BUILD)/%.c.o : %.c | $(BUILD_DIRS)
 	@echo "Compiling $< to $@"
-	@$(CPP) $(CPPFLAGS) $< -o $(BUILD)/$*.i
+	@$(CPP) -MMD -MF $(BUILD)/$*.d -MT $@ $(CPPFLAGS) $< -o $(BUILD)/$*.i
 	@$(CC1) $(CFLAGS) $(BUILD)/$*.i -o $(BUILD)/$*.s
-	@$(AS) -MD  $(BUILD)/$*.d -march=armv4t -o $@ $(BUILD)/$*.s
+	@$(AS) -march=armv4t -o $@ $(BUILD)/$*.s
 
 # ASM files
 $(BUILD)/%.s.o : %.s | $(BUILD_DIRS)
 	@echo "Assembling $< to $(basename $<).o"
 	@$(AS) -MD $(BUILD)/$*.d -march=armv4t -o $@ $<
 
--include $(DEPSDIR)/*.d
+-include $(addprefix $(BUILD)/,$(CFILES:.c=.d))
 #---------------------------------------------------------------------------------------
 
 #---------------------------------------------------------------------------------------
