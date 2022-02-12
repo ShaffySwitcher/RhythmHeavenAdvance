@@ -35,8 +35,8 @@ void *func_08000774(void) {
 	return (void *)(ExternWorkRAMBase + D_03000090*4);
 }
 
-void *func_08000788(void) {
-	return (void *)(D_03000092*4);
+u32 func_08000788(void) {
+	return D_03000092*4;
 }
 
 s32 func_08000794(s32 *arg1, u32 arg2) {
