@@ -6,14 +6,20 @@ asm(".include \"include/gba.inc\"");//Temporary
 typedef s32 (*functype_03000e98)(void *, s32, s32);
 
 struct struct_03004ad0 {
-    s32 unk0;
-    u8 pad[0xC];
+    u32 unk0;
+    struct struct_030046a4 **unk4;
+    u32 unk8;
+    u32 unkC;
     u32 unk10;
 };
 
+void *D_03000e48; // functype_03000e98
 functype_03000e98 D_03000e98;
 struct struct_030046a4 **D_03000e9c;
-s32 D_03000ea0;
+u32 D_03000ea0;
+
+void *D_0800112c;
+void *D_0800116c;
 struct struct_03004ad0 D_03004ad0;
 
 #include "asm/code_08004714/asm_08004714.s"
@@ -170,7 +176,26 @@ struct struct_03004ad0 D_03004ad0;
 
 #include "asm/code_08004714/asm_08006448.s"
 
-#include "asm/code_08004714/asm_0800650c.s"
+void func_0800650c(struct struct_030046a4 **arg0, u32 arg1) {
+    D_03000e9c = arg0;
+    D_03000ea0 = arg1 / 4;
+
+    if (D_03000ea0 > 0xFFFF) {
+        D_03000ea0 = 0xFFFF;
+    }
+
+    *arg0 = (void *)(D_03000ea0 << 16);
+
+    D_03004ad0.unk0 = 0;
+    D_03004ad0.unk4 = arg0;
+    D_03004ad0.unk8 = arg1;
+    D_03004ad0.unk10 = 0;
+    D_03004ad0.unkC = 0;
+
+	DmaCopy32(3, &D_0800112c, &D_03000e48, ((u32)&D_0800116c - (u32)&D_0800112c));
+	
+    D_03000e98 = (functype_03000e98)&D_03000e48;
+}
 
 struct struct_030046a4 *func_08006580(u32 arg0) {
 	return func_08006590(0, arg0);

@@ -47,7 +47,7 @@ BIN		    := bin
 AUDIO		:= audio
 MUSIC		:= $(AUDIO)/music
 SFX         := $(AUDIO)/sfx
-BUILD_DIRS  := $(BUILD) $(BUILD)/$(BUILD)/$(AUDIO) $(BUILD)/$(DATA) $(BUILD)/$(ASM) $(BUILD)/$(SOURCES) $(BUILD)/$(BIN) $(BUILD)/$(MUSIC) $(BUILD)/$(SFX)
+BUILD_DIRS  := $(BUILD) $(BUILD)/$(DATA) $(BUILD)/$(ASM) $(BUILD)/$(SOURCES) $(BUILD)/$(BIN) $(BUILD)/$(MUSIC) $(BUILD)/$(SFX)
 LD_SCRIPT   := rt.ld
 
 #---------------------------------------------------------------------------------
