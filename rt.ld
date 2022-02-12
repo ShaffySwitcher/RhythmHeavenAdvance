@@ -1007,6 +1007,7 @@ SECTIONS {
         build/audio/midi_data.c.o(.rodata*);
         build/bin/bindata_08a9e8e0.bin.o(.rodata*);
         build/bin/bindata_08aa06f8.bin.o(.rodata*);
+		build/audio/sfx_table.json.c.o(.rodata*);
         
         build/audio/music/Lesson1.mid.o(.rodata*);
         build/audio/music/Lesson2.mid.o(.rodata*);

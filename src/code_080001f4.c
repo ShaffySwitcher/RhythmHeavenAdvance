@@ -165,7 +165,7 @@ void func_08000490(void) {
 		D_03000080 = 0;
 		
 		if (D_03000000->unk18 != 0) {
-			temp = func_08006580(D_03000000->unk18);
+			temp = (struct struct_030046a4 *)func_08006580(D_03000000->unk18); //! temp cast until prototype exists
             D_030046a4 = temp;
 		}
 		

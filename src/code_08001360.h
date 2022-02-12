@@ -12,4 +12,6 @@ struct struct_08001f94 {
     u32 unkC;
 };
 
+extern u32 func_08001964(void);
+
 #endif
