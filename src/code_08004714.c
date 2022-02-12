@@ -3,6 +3,19 @@
 
 asm(".include \"include/gba.inc\"");//Temporary
 
+typedef s32 (*functype_03000e98)(void *, s32, s32);
+
+struct struct_03004ad0 {
+    s32 unk0;
+    u8 pad[0xC];
+    u32 unk10;
+};
+
+functype_03000e98 D_03000e98;
+struct struct_030046a4 **D_03000e9c;
+s32 D_03000ea0;
+struct struct_03004ad0 D_03004ad0;
+
 #include "asm/code_08004714/asm_08004714.s"
 
 #include "asm/code_08004714/asm_08004748.s"
@@ -159,9 +172,34 @@ asm(".include \"include/gba.inc\"");//Temporary
 
 #include "asm/code_08004714/asm_0800650c.s"
 
-#include "asm/code_08004714/asm_08006580.s"
+struct struct_030046a4 *func_08006580(u32 arg0) {
+	return func_08006590(0, arg0);
+}
 
-#include "asm/code_08004714/asm_08006590.s"
+struct struct_030046a4 *func_08006590(u16 arg0, u32 arg1) {
+    u32 temp0 = (arg1+3)/4 + 1;
+    s32 temp1 = D_03000e98(D_03000e9c, D_03000ea0, temp0);
+    s32 temp2, temp3;
+
+    if (temp1 < 0) {
+        D_03004ad0.unk0 = 1;
+        return NULL;
+    }
+
+    temp2 = (u16)((u32)D_03000e9c[temp1] >> 16);
+    D_03000e9c[temp1] = (void *)((temp0 << 16) | 0x8000 | arg0);
+    temp3 = temp1 + temp0;
+
+    if (temp0 < temp2) {
+        D_03000e9c[temp3] = (void *)((temp2 - temp0)<< 16);
+    }
+
+    if ((temp3 << 2) > D_03004ad0.unk10) {
+        D_03004ad0.unk10 = (temp3 << 2);
+    }
+
+    return (struct struct_030046a4 *)(&(D_03000e9c[temp1]) + 1);
+}
 
 #include "asm/code_08004714/asm_08006628.s"
 
@@ -1714,7 +1752,7 @@ void func_08013b98(s32 arg1, s32 arg2) {
 
 s32 func_08017348(s32 arg1, s32 arg2) { // bobbing?
     s32 returnVal = 0;
-    struct_030046a4_func *temp = &D_030046a4->unk4C[0];
+    struct_030046a4_func *temp = (struct_030046a4_func *)&D_030046a4->unk4C;
     
     if (temp == NULL) { // literally never possible
         return returnVal;
@@ -1728,7 +1766,7 @@ s32 func_08017348(s32 arg1, s32 arg2) { // bobbing?
 }
 
 void func_08017380(s32 arg1) { // gfx command 1
-    D_030046a4->unk60 = arg1;
+    D_030046a4->unk54.unkC = arg1;
 }
 
 s32 func_0801738c(struct struct_030046a4_sub *arg1, s32 arg2) { // gfx command 2
@@ -1739,7 +1777,7 @@ s32 func_0801738c(struct struct_030046a4_sub *arg1, s32 arg2) { // gfx command 2
     }
 
     if ((D_030046a4->unk10.asPoint->unk18 != NULL) && (D_030046a4->unk10.asPoint->unk18[arg2] != NULL)) {
-        returnVal = D_030046a4->unk10.asPoint->unk18[arg2](D_030046a4->unk60);
+        returnVal = D_030046a4->unk10.asPoint->unk18[arg2](D_030046a4->unk54.unkC);
     }
 
     return returnVal;
@@ -1827,16 +1865,16 @@ s32 func_0801738c(struct struct_030046a4_sub *arg1, s32 arg2) { // gfx command 2
 
 void func_080179f4(s32 arg1) { // universal cue?
     struct struct_030046a4_sub2 *temp;
-    struct struct_080179f4 *temp2;
-    struct struct_080179f4 **temp4;
+    struct struct_030046a4 *temp2;
+    struct struct_030046a4 *temp4;
 
-    if ((D_030046a4->unk5C == 0) || ((temp = D_030046a4->unk1C[arg1]) == NULL)) {
+    if ((D_030046a4->unk54.unk8.asU8[0] == 0) || ((temp = D_030046a4->unk1C[arg1]) == NULL)) {
         return;
     }
 
-    temp2 = func_08006580(0x6C);
+    temp2 = (struct struct_030046a4 *)func_08006580(0x6C); //! temp cast until prototype exists
     if (temp->unkC != 0) {
-        temp2->unk64 = func_08006580(temp->unkC);
+        temp2->unk64 = (struct struct_030046a4 *)func_08006580(temp->unkC); //! temp cast until prototype exists
     } else {
         temp2->unk64 = NULL;
     }
@@ -1856,17 +1894,17 @@ void func_080179f4(s32 arg1) { // universal cue?
         temp2->unk4E = func_0800c3a4(temp->unk4);
     }
 
-    temp2->unk54 = ((D_030046a4->unk68 != 0) ? D_030046a4->unk68 : temp->unk2C);
-    temp2->unk58 = ((D_030046a4->unk6C != 0) ? D_030046a4->unk6C : temp->unk30);
-    temp2->unk5C = ((D_030046a4->unk70 != 0) ? D_030046a4->unk70 : temp->unk34);
-    temp2->unk60 = ((D_030046a4->unk74 != 0) ? D_030046a4->unk74 : temp->unk38);
+    temp2->unk54.unk0.asPoint = ((D_030046a4->unk68.unk0.asPoint != 0) ? D_030046a4->unk68.unk0.asPoint : temp->unk2C.unk0.asPoint);
+    temp2->unk54.unk4 = ((D_030046a4->unk68.unk4 != 0) ? D_030046a4->unk68.unk4 : temp->unk2C.unk4);
+    temp2->unk54.unk8.asPoint = ((D_030046a4->unk68.unk8.asPoint != 0) ? D_030046a4->unk68.unk8.asPoint : temp->unk2C.unk8.asPoint);
+    temp2->unk54.unkC = ((D_030046a4->unk68.unkC != 0) ? D_030046a4->unk68.unkC : temp->unk2C.unkC);
 
-    temp2->unk68 = D_030046a4->unk7A;
+    temp2->unk68.unk0.asU8[0] = D_030046a4->unk7A;
 
-    D_030046a4->unk68 = 0;
-    D_030046a4->unk6C = 0;
-    D_030046a4->unk70 = 0;
-    D_030046a4->unk74 = 0;
+    D_030046a4->unk68.unk0.asPoint = NULL;
+    D_030046a4->unk68.unk4 = NULL;
+    D_030046a4->unk68.unk8.asPoint = NULL;
+    D_030046a4->unk68.unkC = 0;
 
     temp4 = D_030046a4->unk18;
     
@@ -1874,24 +1912,24 @@ void func_080179f4(s32 arg1) { // universal cue?
     temp2->unk4 = temp4;
 
     if (temp4 != NULL) {
-        *temp4 = temp2;
+        temp4->unk0 = temp2;
     }
 
-    D_030046a4->unk18 = temp2; // pointer stuff is wrong but it does match
+    D_030046a4->unk18 = temp2;
 
-    D_030046a4->unk5D = 0;
+    D_030046a4->unk54.unk8.asU8[1] = 0;
 
     if (temp->unk10 != 0) {
         temp->unk10(temp2,temp2->unk64,temp->unk14);
     }
 
-    if (D_030046a4->unk5D != 0) {
+    if (D_030046a4->unk54.unk8.asU8[1] != 0) {
         D_030046a4->unk18 = temp4;
-        *temp4 = 0;
+        temp4->unk0 = NULL;
         func_08006694(temp2);
     } else {
-        D_030046a4->unk58 = temp2;
-        func_08016e54(temp2->unk54);
+        D_030046a4->unk54.unk4 = temp2;
+        func_08016e54(temp2->unk54.unk0);
     }
 }
 
