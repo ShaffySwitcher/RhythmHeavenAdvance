@@ -3,11 +3,11 @@
 
 asm(".include \"include/gba.inc\"");//Temporary
 
-typedef s32 (*functype_03000e98)(void *, s32, s32);
+typedef s32 (*functype_03000e98)(u32 *, s32, s32);
 
 struct struct_03004ad0 {
     u32 unk0;
-    struct struct_030046a4 **unk4;
+    u32 *unk4;
     u32 unk8;
     u32 unkC;
     u32 unk10;
@@ -15,7 +15,7 @@ struct struct_03004ad0 {
 
 void *D_03000e48; // functype_03000e98
 functype_03000e98 D_03000e98;
-struct struct_030046a4 **D_03000e9c;
+u32 *D_03000e9c;
 u32 D_03000ea0;
 
 void *D_0800112c;
@@ -176,7 +176,7 @@ struct struct_03004ad0 D_03004ad0;
 
 #include "asm/code_08004714/asm_08006448.s"
 
-void func_0800650c(struct struct_030046a4 **arg0, u32 arg1) {
+void func_0800650c(u32 *arg0, u32 arg1) {
     D_03000e9c = arg0;
     D_03000ea0 = arg1 / 4;
 
@@ -184,7 +184,7 @@ void func_0800650c(struct struct_030046a4 **arg0, u32 arg1) {
         D_03000ea0 = 0xFFFF;
     }
 
-    *arg0 = (void *)(D_03000ea0 << 16);
+    arg0[0] = D_03000ea0 << 16;
 
     D_03004ad0.unk0 = 0;
     D_03004ad0.unk4 = arg0;
@@ -201,6 +201,7 @@ struct struct_030046a4 *func_08006580(u32 arg0) {
 	return func_08006590(0, arg0);
 }
 
+// is this return type correct? it could possibly be a void*
 struct struct_030046a4 *func_08006590(u16 arg0, u32 arg1) {
     u32 temp0 = (arg1+3)/4 + 1;
     s32 temp1 = D_03000e98(D_03000e9c, D_03000ea0, temp0);
@@ -211,12 +212,12 @@ struct struct_030046a4 *func_08006590(u16 arg0, u32 arg1) {
         return NULL;
     }
 
-    temp2 = (u16)((u32)D_03000e9c[temp1] >> 16);
-    D_03000e9c[temp1] = (void *)((temp0 << 16) | 0x8000 | arg0);
+    temp2 = (u16)(D_03000e9c[temp1] >> 16);
+    D_03000e9c[temp1] = (temp0 << 16) | 0x8000 | arg0;
     temp3 = temp1 + temp0;
 
     if (temp0 < temp2) {
-        D_03000e9c[temp3] = (void *)((temp2 - temp0)<< 16);
+        D_03000e9c[temp3] = (temp2 - temp0) << 16;
     }
 
     if ((temp3 << 2) > D_03004ad0.unk10) {
@@ -226,13 +227,98 @@ struct struct_030046a4 *func_08006590(u16 arg0, u32 arg1) {
     return (struct struct_030046a4 *)(&(D_03000e9c[temp1]) + 1);
 }
 
-#include "asm/code_08004714/asm_08006628.s"
+void func_08006628(u32 arg0, s32 arg1) {
+    u32 temp2;
 
-#include "asm/code_08004714/asm_08006694.s"
+    D_03000e9c[arg0] &= 0xFFFF0000;
 
-#include "asm/code_08004714/asm_080066f8.s"
+    if (arg1 >= 0) {
+        if ((D_03000e9c[arg1] & 0x8000) == 0) {
+            D_03000e9c[arg1] += D_03000e9c[arg0];
+            arg0 = arg1;
+        }
+    }
 
-#include "asm/code_08004714/asm_08006750.s"
+    temp2 = arg0 + (D_03000e9c[arg0] >> 16);
+    if (temp2 < D_03000ea0) {
+        if ((D_03000e9c[temp2] & 0x8000) == 0) {
+            D_03000e9c[arg0] += D_03000e9c[temp2];
+        }
+    }
+}
+
+void func_08006694(struct struct_030046a4 *arg0) {
+    s32 temp0,temp1,temp2;
+
+    if ((u32)arg0 & 0x3) {
+        return;
+    }
+	
+    temp0 = ((u32)arg0 - (u32)D_03000e9c) / 4 - 1; // definitely some kind of size
+    if ((temp0 < 0) || (temp0 >= D_03000ea0)) {
+        return;
+    }
+
+    temp2 = -1;
+    temp1 = 0;
+
+    if (temp1 >= D_03000ea0) {
+        return;
+    }
+
+    while (temp1 <= temp0) {
+        if (temp1 == temp0) {
+            func_08006628(temp0,temp2);
+            break;
+        }
+		
+        temp2 = temp1;
+		temp1 += D_03000e9c[temp1] >> 16;
+		
+        if (temp1 >= D_03000ea0) {
+            break;
+        }
+    }
+}
+
+void func_080066f8(u16 arg0) {
+    u32 temp2, temp0, temp1;
+    
+    if (arg0 == 0) {
+        return;
+    }
+
+    temp2 = -1;
+    temp0 = arg0 | 0x8000;
+    temp1 = 0;
+
+    while (temp1 < D_03000ea0) {
+        if ((u16)D_03000e9c[temp1] == temp0) {
+            func_08006628(temp1,temp2);
+        }
+
+        temp2 = temp1;
+        temp1 += D_03000e9c[temp1] >> 16;
+
+        if (temp1 >= D_03000ea0) {
+            break;
+        }
+    }
+}
+
+void func_08006750(void) {
+    u32 temp0 = 0;
+    u32 temp1 = 0;
+
+    while (temp1 < D_03000ea0) {
+        if (D_03000e9c[temp1] & 0x8000) {
+            temp0 += D_03000e9c[temp1] >> 16;
+        }
+        temp1 += D_03000e9c[temp1] >> 16;
+    }
+
+    D_03004ad0.unkC = temp0 * 4;
+}
 
 #include "asm/code_08004714/asm_0800679c.s"
 
