@@ -63,6 +63,8 @@ struct InstrumentSubbankMultiKey {
 	void *subbank;
 };
 
+typedef const struct InstrumentHeader *InstrumentBank[];
+
 struct MidiInfo {
     const u32 *romAddress;
     u32 unk4f1:5;
