@@ -61,13 +61,4 @@ struct struct_030046a4 {
 extern struct struct_030046a4 *D_030046a4;
 extern s32 D_03005380;
 
-struct SampleInfo {
-	u32 length;
-	u32 sampleRate;
-	u32 pitch;
-	u32 loopStart;
-	u32 loopEnd;
-	const u32 *romAddress;
-};
-
 #endif

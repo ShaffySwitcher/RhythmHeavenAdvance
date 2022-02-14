@@ -1004,6 +1004,8 @@ SECTIONS {
 		build/bin/bindata_08935fac.bin.o(.rodata*);
         build/bin/bindata_089ccbc0.bin.o(.rodata*);
         build/bin/bindata_089d3984.bin.o(.rodata*);
+		build/audio/instruments.c.o(.rodata*);
+		build/bin/bindata_08a93a28.bin.o(.rodata*);
         build/audio/midi_data.c.o(.rodata*);
         build/bin/bindata_08a9e8e0.bin.o(.rodata*);
         build/bin/bindata_08aa06f8.bin.o(.rodata*);
