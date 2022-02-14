@@ -2,7 +2,7 @@ extern const u32 Lesson1_mid;
 const struct MidiInfo Lesson1MidiInfo = {
     /* ROM Address */        &Lesson1_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             120,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -15,7 +15,7 @@ extern const u32 Lesson2_mid;
 const struct MidiInfo Lesson2MidiInfo = {
     /* ROM Address */        &Lesson2_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             127,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -28,7 +28,7 @@ extern const u32 Lesson3_mid;
 const struct MidiInfo Lesson3MidiInfo = {
     /* ROM Address */        &Lesson3_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             115,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -41,7 +41,7 @@ extern const u32 L1_pat01_mid;
 const struct MidiInfo L1_pat01MidiInfo = {
     /* ROM Address */        &L1_pat01_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -54,7 +54,7 @@ extern const u32 L1_pat02_mid;
 const struct MidiInfo L1_pat02MidiInfo = {
     /* ROM Address */        &L1_pat02_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -67,7 +67,7 @@ extern const u32 L1_pat03_mid;
 const struct MidiInfo L1_pat03MidiInfo = {
     /* ROM Address */        &L1_pat03_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -80,7 +80,7 @@ extern const u32 L1_pat04_mid;
 const struct MidiInfo L1_pat04MidiInfo = {
     /* ROM Address */        &L1_pat04_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -93,7 +93,7 @@ extern const u32 L1_pat05_mid;
 const struct MidiInfo L1_pat05MidiInfo = {
     /* ROM Address */        &L1_pat05_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -106,7 +106,7 @@ extern const u32 L1_pat06_mid;
 const struct MidiInfo L1_pat06MidiInfo = {
     /* ROM Address */        &L1_pat06_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -119,7 +119,7 @@ extern const u32 L1_pat07_mid;
 const struct MidiInfo L1_pat07MidiInfo = {
     /* ROM Address */        &L1_pat07_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -132,7 +132,7 @@ extern const u32 L1_pat08_mid;
 const struct MidiInfo L1_pat08MidiInfo = {
     /* ROM Address */        &L1_pat08_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -145,7 +145,7 @@ extern const u32 L1_pat09_mid;
 const struct MidiInfo L1_pat09MidiInfo = {
     /* ROM Address */        &L1_pat09_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -158,7 +158,7 @@ extern const u32 L1_pat10_mid;
 const struct MidiInfo L1_pat10MidiInfo = {
     /* ROM Address */        &L1_pat10_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -171,7 +171,7 @@ extern const u32 L1_pat11_mid;
 const struct MidiInfo L1_pat11MidiInfo = {
     /* ROM Address */        &L1_pat11_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -184,7 +184,7 @@ extern const u32 L1_pat12_mid;
 const struct MidiInfo L1_pat12MidiInfo = {
     /* ROM Address */        &L1_pat12_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -197,7 +197,7 @@ extern const u32 L1_pat13_mid;
 const struct MidiInfo L1_pat13MidiInfo = {
     /* ROM Address */        &L1_pat13_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -210,7 +210,7 @@ extern const u32 L1_pat14_mid;
 const struct MidiInfo L1_pat14MidiInfo = {
     /* ROM Address */        &L1_pat14_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -223,7 +223,7 @@ extern const u32 L1_pat15_mid;
 const struct MidiInfo L1_pat15MidiInfo = {
     /* ROM Address */        &L1_pat15_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -236,7 +236,7 @@ extern const u32 L1_pat16_mid;
 const struct MidiInfo L1_pat16MidiInfo = {
     /* ROM Address */        &L1_pat16_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -249,7 +249,7 @@ extern const u32 L2_pat00_mid;
 const struct MidiInfo L2_pat00MidiInfo = {
     /* ROM Address */        &L2_pat00_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             85,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -262,7 +262,7 @@ extern const u32 L2_pat01_mid;
 const struct MidiInfo L2_pat01MidiInfo = {
     /* ROM Address */        &L2_pat01_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             85,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -275,7 +275,7 @@ extern const u32 L2_pat02_mid;
 const struct MidiInfo L2_pat02MidiInfo = {
     /* ROM Address */        &L2_pat02_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             85,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -288,7 +288,7 @@ extern const u32 L2_pat03_mid;
 const struct MidiInfo L2_pat03MidiInfo = {
     /* ROM Address */        &L2_pat03_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             85,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -301,7 +301,7 @@ extern const u32 L2_pat04_mid;
 const struct MidiInfo L2_pat04MidiInfo = {
     /* ROM Address */        &L2_pat04_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             85,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -314,7 +314,7 @@ extern const u32 L2_pat05_mid;
 const struct MidiInfo L2_pat05MidiInfo = {
     /* ROM Address */        &L2_pat05_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             85,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -327,7 +327,7 @@ extern const u32 L2_pat06_mid;
 const struct MidiInfo L2_pat06MidiInfo = {
     /* ROM Address */        &L2_pat06_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             85,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -340,7 +340,7 @@ extern const u32 L2_pat07_mid;
 const struct MidiInfo L2_pat07MidiInfo = {
     /* ROM Address */        &L2_pat07_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             85,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -353,7 +353,7 @@ extern const u32 L2_pat08_mid;
 const struct MidiInfo L2_pat08MidiInfo = {
     /* ROM Address */        &L2_pat08_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             85,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -366,7 +366,7 @@ extern const u32 L2_pat09_mid;
 const struct MidiInfo L2_pat09MidiInfo = {
     /* ROM Address */        &L2_pat09_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             85,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -379,7 +379,7 @@ extern const u32 L2_pat10_mid;
 const struct MidiInfo L2_pat10MidiInfo = {
     /* ROM Address */        &L2_pat10_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             85,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -392,7 +392,7 @@ extern const u32 L2_pat11_mid;
 const struct MidiInfo L2_pat11MidiInfo = {
     /* ROM Address */        &L2_pat11_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             85,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -405,7 +405,7 @@ extern const u32 L2_pat12_mid;
 const struct MidiInfo L2_pat12MidiInfo = {
     /* ROM Address */        &L2_pat12_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             85,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -418,7 +418,7 @@ extern const u32 L2_pat13_mid;
 const struct MidiInfo L2_pat13MidiInfo = {
     /* ROM Address */        &L2_pat13_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             85,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -431,7 +431,7 @@ extern const u32 L2_pat14_mid;
 const struct MidiInfo L2_pat14MidiInfo = {
     /* ROM Address */        &L2_pat14_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             85,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -444,7 +444,7 @@ extern const u32 L2_pat15_mid;
 const struct MidiInfo L2_pat15MidiInfo = {
     /* ROM Address */        &L2_pat15_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             85,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -457,7 +457,7 @@ extern const u32 L2_pat16_mid;
 const struct MidiInfo L2_pat16MidiInfo = {
     /* ROM Address */        &L2_pat16_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             85,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -470,7 +470,7 @@ extern const u32 L3_intro_mid;
 const struct MidiInfo L3_introMidiInfo = {
     /* ROM Address */        &L3_intro_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -483,7 +483,7 @@ extern const u32 L3_C32_mid;
 const struct MidiInfo L3_C32MidiInfo = {
     /* ROM Address */        &L3_C32_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -496,7 +496,7 @@ extern const u32 L3_C32_no_swing_mid;
 const struct MidiInfo L3_C32_no_swingMidiInfo = {
     /* ROM Address */        &L3_C32_no_swing_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -509,7 +509,7 @@ extern const u32 L3_C33_mid;
 const struct MidiInfo L3_C33MidiInfo = {
     /* ROM Address */        &L3_C33_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -522,7 +522,7 @@ extern const u32 L3_C34_mid;
 const struct MidiInfo L3_C34MidiInfo = {
     /* ROM Address */        &L3_C34_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -535,7 +535,7 @@ extern const u32 L3_C35_mid;
 const struct MidiInfo L3_C35MidiInfo = {
     /* ROM Address */        &L3_C35_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -548,7 +548,7 @@ extern const u32 L3_C36_mid;
 const struct MidiInfo L3_C36MidiInfo = {
     /* ROM Address */        &L3_C36_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -561,7 +561,7 @@ extern const u32 L3_C37_mid;
 const struct MidiInfo L3_C37MidiInfo = {
     /* ROM Address */        &L3_C37_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -574,7 +574,7 @@ extern const u32 L3_C38_mid;
 const struct MidiInfo L3_C38MidiInfo = {
     /* ROM Address */        &L3_C38_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -587,7 +587,7 @@ extern const u32 L3_C39_mid;
 const struct MidiInfo L3_C39MidiInfo = {
     /* ROM Address */        &L3_C39_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -600,7 +600,7 @@ extern const u32 L3_C40_mid;
 const struct MidiInfo L3_C40MidiInfo = {
     /* ROM Address */        &L3_C40_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -613,7 +613,7 @@ extern const u32 L3_C41_end_mid;
 const struct MidiInfo L3_C41_endMidiInfo = {
     /* ROM Address */        &L3_C41_end_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -626,7 +626,7 @@ extern const u32 s_aimu_bgm_mid;
 const struct MidiInfo s_aimu_bgmMidiInfo = {
     /* ROM Address */        &s_aimu_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -639,7 +639,7 @@ extern const u32 s_menu_bgm_mid;
 const struct MidiInfo s_menu_bgmMidiInfo = {
     /* ROM Address */        &s_menu_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         51,
+    /* Sound Bank */         INST_BANK_19,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -652,7 +652,7 @@ extern const u32 s_shibafu1_bgm_mid;
 const struct MidiInfo s_shibafu1_bgmMidiInfo = {
     /* ROM Address */        &s_shibafu1_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         52,
+    /* Sound Bank */         INST_BANK_20,
     /* Volume */             75,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -665,7 +665,7 @@ extern const u32 s_shibafu2_bgm_mid;
 const struct MidiInfo s_shibafu2_bgmMidiInfo = {
     /* ROM Address */        &s_shibafu2_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         53,
+    /* Sound Bank */         INST_BANK_21,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -678,7 +678,7 @@ extern const u32 s_tebyoushi_bgm_mid;
 const struct MidiInfo s_tebyoushi_bgmMidiInfo = {
     /* ROM Address */        &s_tebyoushi_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         54,
+    /* Sound Bank */         INST_BANK_22,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -691,7 +691,7 @@ extern const u32 s_tebyoushi_dexy_bgm_mid;
 const struct MidiInfo s_tebyoushi_dexy_bgmMidiInfo = {
     /* ROM Address */        &s_tebyoushi_dexy_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         64,
+    /* Sound Bank */         INST_BANK_32,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -704,7 +704,7 @@ extern const u32 s_tapdance_bgm_mid;
 const struct MidiInfo s_tapdance_bgmMidiInfo = {
     /* ROM Address */        &s_tapdance_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         55,
+    /* Sound Bank */         INST_BANK_23,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -717,7 +717,7 @@ extern const u32 s_tapdance_ska_bgm_mid;
 const struct MidiInfo s_tapdance_ska_bgmMidiInfo = {
     /* ROM Address */        &s_tapdance_ska_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         65,
+    /* Sound Bank */         INST_BANK_33,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -730,7 +730,7 @@ extern const u32 s_trex_bgm_mid;
 const struct MidiInfo s_trex_bgmMidiInfo = {
     /* ROM Address */        &s_trex_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         56,
+    /* Sound Bank */         INST_BANK_24,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -743,7 +743,7 @@ extern const u32 s_trexnew_bgm1_mid;
 const struct MidiInfo s_trexnew_bgm1MidiInfo = {
     /* ROM Address */        &s_trexnew_bgm1_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         67,
+    /* Sound Bank */         INST_BANK_35,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -756,7 +756,7 @@ extern const u32 s_trexnew_bgm2_mid;
 const struct MidiInfo s_trexnew_bgm2MidiInfo = {
     /* ROM Address */        &s_trexnew_bgm2_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         67,
+    /* Sound Bank */         INST_BANK_35,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -769,7 +769,7 @@ extern const u32 s_poly_bgm_mid;
 const struct MidiInfo s_poly_bgmMidiInfo = {
     /* ROM Address */        &s_poly_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         57,
+    /* Sound Bank */         INST_BANK_25,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -782,7 +782,7 @@ extern const u32 s_shuji_bgm1_mid;
 const struct MidiInfo s_shuji_bgm1MidiInfo = {
     /* ROM Address */        &s_shuji_bgm1_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         58,
+    /* Sound Bank */         INST_BANK_26,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -795,7 +795,7 @@ extern const u32 s_shuji_bgm2_mid;
 const struct MidiInfo s_shuji_bgm2MidiInfo = {
     /* ROM Address */        &s_shuji_bgm2_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         58,
+    /* Sound Bank */         INST_BANK_26,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -808,7 +808,7 @@ extern const u32 s_shuji_bgm3_mid;
 const struct MidiInfo s_shuji_bgm3MidiInfo = {
     /* ROM Address */        &s_shuji_bgm3_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         58,
+    /* Sound Bank */         INST_BANK_26,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -821,7 +821,7 @@ extern const u32 s_shuji_bgm_end_mid;
 const struct MidiInfo s_shuji_bgm_endMidiInfo = {
     /* ROM Address */        &s_shuji_bgm_end_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         58,
+    /* Sound Bank */         INST_BANK_26,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -834,7 +834,7 @@ extern const u32 s_puipui_bgm_mid;
 const struct MidiInfo s_puipui_bgmMidiInfo = {
     /* ROM Address */        &s_puipui_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         59,
+    /* Sound Bank */         INST_BANK_27,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -847,7 +847,7 @@ extern const u32 s_puipui_intro_bgm_mid;
 const struct MidiInfo s_puipui_intro_bgmMidiInfo = {
     /* ROM Address */        &s_puipui_intro_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         59,
+    /* Sound Bank */         INST_BANK_27,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -860,7 +860,7 @@ extern const u32 s_naniwa_bgm_mid;
 const struct MidiInfo s_naniwa_bgmMidiInfo = {
     /* ROM Address */        &s_naniwa_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         60,
+    /* Sound Bank */         INST_BANK_28,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -873,7 +873,7 @@ extern const u32 s_emanikanto_bgm_mid;
 const struct MidiInfo s_emanikanto_bgmMidiInfo = {
     /* ROM Address */        &s_emanikanto_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         61,
+    /* Sound Bank */         INST_BANK_29,
     /* Volume */             60,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -886,7 +886,7 @@ extern const u32 s_emanikanto_bgm_loop_mid;
 const struct MidiInfo s_emanikanto_bgm_loopMidiInfo = {
     /* ROM Address */        &s_emanikanto_bgm_loop_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         61,
+    /* Sound Bank */         INST_BANK_29,
     /* Volume */             60,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -899,7 +899,7 @@ extern const u32 s_manza_bgm_mid;
 const struct MidiInfo s_manza_bgmMidiInfo = {
     /* ROM Address */        &s_manza_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         62,
+    /* Sound Bank */         INST_BANK_30,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -912,7 +912,7 @@ extern const u32 s_hitmegeton1_bgm_mid;
 const struct MidiInfo s_hitmegeton1_bgmMidiInfo = {
     /* ROM Address */        &s_hitmegeton1_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         63,
+    /* Sound Bank */         INST_BANK_31,
     /* Volume */             50,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -925,7 +925,7 @@ extern const u32 s_hitmegeton2_bgm_mid;
 const struct MidiInfo s_hitmegeton2_bgmMidiInfo = {
     /* ROM Address */        &s_hitmegeton2_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         63,
+    /* Sound Bank */         INST_BANK_31,
     /* Volume */             50,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -938,7 +938,7 @@ extern const u32 s_bon_odori_bgm_mid;
 const struct MidiInfo s_bon_odori_bgmMidiInfo = {
     /* ROM Address */        &s_bon_odori_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         70,
+    /* Sound Bank */         INST_BANK_38,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -951,7 +951,7 @@ extern const u32 s_bon_dance_bgm_mid;
 const struct MidiInfo s_bon_dance_bgmMidiInfo = {
     /* ROM Address */        &s_bon_dance_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         71,
+    /* Sound Bank */         INST_BANK_39,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -964,7 +964,7 @@ extern const u32 s_4beat_bgm_mid;
 const struct MidiInfo s_4beat_bgmMidiInfo = {
     /* ROM Address */        &s_4beat_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         68,
+    /* Sound Bank */         INST_BANK_36,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -977,7 +977,7 @@ extern const u32 s_toss_bgm_mid;
 const struct MidiInfo s_toss_bgmMidiInfo = {
     /* ROM Address */        &s_toss_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         72,
+    /* Sound Bank */         INST_BANK_40,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -990,7 +990,7 @@ extern const u32 s_toss_bgm_end_mid;
 const struct MidiInfo s_toss_bgm_endMidiInfo = {
     /* ROM Address */        &s_toss_bgm_end_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         72,
+    /* Sound Bank */         INST_BANK_40,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -1003,7 +1003,7 @@ extern const u32 s_toss_bgm_loop_mid;
 const struct MidiInfo s_toss_bgm_loopMidiInfo = {
     /* ROM Address */        &s_toss_bgm_loop_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         72,
+    /* Sound Bank */         INST_BANK_40,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -1016,7 +1016,7 @@ extern const u32 s_title_bgm_mid;
 const struct MidiInfo s_title_bgmMidiInfo = {
     /* ROM Address */        &s_title_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         73,
+    /* Sound Bank */         INST_BANK_41,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -1029,7 +1029,7 @@ extern const u32 s_koihoney_bgm_mid;
 const struct MidiInfo s_koihoney_bgmMidiInfo = {
     /* ROM Address */        &s_koihoney_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         74,
+    /* Sound Bank */         INST_BANK_42,
     /* Volume */             100,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -1042,7 +1042,7 @@ extern const u32 s_wish_bgm_mid;
 const struct MidiInfo s_wish_bgmMidiInfo = {
     /* ROM Address */        &s_wish_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         75,
+    /* Sound Bank */         INST_BANK_43,
     /* Volume */             100,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -1055,7 +1055,7 @@ extern const u32 L8_pat_intro_mid;
 const struct MidiInfo L8_pat_introMidiInfo = {
     /* ROM Address */        &L8_pat_intro_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         77,
+    /* Sound Bank */         INST_BANK_45,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -1068,7 +1068,7 @@ extern const u32 L8_pat01_mid;
 const struct MidiInfo L8_pat01MidiInfo = {
     /* ROM Address */        &L8_pat01_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         77,
+    /* Sound Bank */         INST_BANK_45,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -1081,7 +1081,7 @@ extern const u32 L8_pat02_mid;
 const struct MidiInfo L8_pat02MidiInfo = {
     /* ROM Address */        &L8_pat02_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         77,
+    /* Sound Bank */         INST_BANK_45,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -1094,7 +1094,7 @@ extern const u32 L8_pat03_mid;
 const struct MidiInfo L8_pat03MidiInfo = {
     /* ROM Address */        &L8_pat03_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         77,
+    /* Sound Bank */         INST_BANK_45,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -1107,7 +1107,7 @@ extern const u32 L8_pat04_mid;
 const struct MidiInfo L8_pat04MidiInfo = {
     /* ROM Address */        &L8_pat04_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         77,
+    /* Sound Bank */         INST_BANK_45,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -1120,7 +1120,7 @@ extern const u32 L8_pat05_mid;
 const struct MidiInfo L8_pat05MidiInfo = {
     /* ROM Address */        &L8_pat05_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         77,
+    /* Sound Bank */         INST_BANK_45,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -1133,7 +1133,7 @@ extern const u32 L8_pat06_mid;
 const struct MidiInfo L8_pat06MidiInfo = {
     /* ROM Address */        &L8_pat06_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         77,
+    /* Sound Bank */         INST_BANK_45,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -1146,7 +1146,7 @@ extern const u32 L8_pat07_mid;
 const struct MidiInfo L8_pat07MidiInfo = {
     /* ROM Address */        &L8_pat07_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         77,
+    /* Sound Bank */         INST_BANK_45,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -1159,7 +1159,7 @@ extern const u32 L8_pat08_mid;
 const struct MidiInfo L8_pat08MidiInfo = {
     /* ROM Address */        &L8_pat08_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         77,
+    /* Sound Bank */         INST_BANK_45,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -1172,7 +1172,7 @@ extern const u32 L8_pat09_mid;
 const struct MidiInfo L8_pat09MidiInfo = {
     /* ROM Address */        &L8_pat09_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         77,
+    /* Sound Bank */         INST_BANK_45,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -1185,7 +1185,7 @@ extern const u32 L8_pat10_mid;
 const struct MidiInfo L8_pat10MidiInfo = {
     /* ROM Address */        &L8_pat10_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         77,
+    /* Sound Bank */         INST_BANK_45,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -1198,7 +1198,7 @@ extern const u32 L8_pat11_mid;
 const struct MidiInfo L8_pat11MidiInfo = {
     /* ROM Address */        &L8_pat11_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         77,
+    /* Sound Bank */         INST_BANK_45,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -1211,7 +1211,7 @@ extern const u32 L8_pat12_mid;
 const struct MidiInfo L8_pat12MidiInfo = {
     /* ROM Address */        &L8_pat12_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         77,
+    /* Sound Bank */         INST_BANK_45,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -1224,7 +1224,7 @@ extern const u32 L8_pat_end_mid;
 const struct MidiInfo L8_pat_endMidiInfo = {
     /* ROM Address */        &L8_pat_end_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         77,
+    /* Sound Bank */         INST_BANK_45,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -1237,7 +1237,7 @@ extern const u32 L8_pat_honki_mid;
 const struct MidiInfo L8_pat_honkiMidiInfo = {
     /* ROM Address */        &L8_pat_honki_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         77,
+    /* Sound Bank */         INST_BANK_45,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -1250,7 +1250,7 @@ extern const u32 s_menu_kettei0_mid;
 const struct MidiInfo s_menu_kettei0MidiInfo = {
     /* ROM Address */        &s_menu_kettei0_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -1263,7 +1263,7 @@ extern const u32 s_menu_kettei1_mid;
 const struct MidiInfo s_menu_kettei1MidiInfo = {
     /* ROM Address */        &s_menu_kettei1_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         54,
+    /* Sound Bank */         INST_BANK_22,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -1276,7 +1276,7 @@ extern const u32 s_menu_kettei2_mid;
 const struct MidiInfo s_menu_kettei2MidiInfo = {
     /* ROM Address */        &s_menu_kettei2_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -1289,7 +1289,7 @@ extern const u32 s_menu_kettei3_mid;
 const struct MidiInfo s_menu_kettei3MidiInfo = {
     /* ROM Address */        &s_menu_kettei3_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         54,
+    /* Sound Bank */         INST_BANK_22,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -1302,7 +1302,7 @@ extern const u32 s_menu_cancel1_mid;
 const struct MidiInfo s_menu_cancel1MidiInfo = {
     /* ROM Address */        &s_menu_cancel1_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -1315,7 +1315,7 @@ extern const u32 s_menu_cancel2_mid;
 const struct MidiInfo s_menu_cancel2MidiInfo = {
     /* ROM Address */        &s_menu_cancel2_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         22,
+    /* Sound Bank */         INST_BANK_5,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -1328,7 +1328,7 @@ extern const u32 s_menu_cancel3_mid;
 const struct MidiInfo s_menu_cancel3MidiInfo = {
     /* ROM Address */        &s_menu_cancel3_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -1341,7 +1341,7 @@ extern const u32 s_menu_cursor1_mid;
 const struct MidiInfo s_menu_cursor1MidiInfo = {
     /* ROM Address */        &s_menu_cursor1_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -1354,7 +1354,7 @@ extern const u32 s_menu_cursor2_mid;
 const struct MidiInfo s_menu_cursor2MidiInfo = {
     /* ROM Address */        &s_menu_cursor2_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -1367,7 +1367,7 @@ extern const u32 s_menu_error_mid;
 const struct MidiInfo s_menu_errorMidiInfo = {
     /* ROM Address */        &s_menu_error_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             90,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -1380,7 +1380,7 @@ extern const u32 s_kansei_mid;
 const struct MidiInfo s_kanseiMidiInfo = {
     /* ROM Address */        &s_kansei_mid,
     /* unk4f1 */             0x9,
-    /* Sound Bank */         28,
+    /* Sound Bank */         INST_BANK_11,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -1393,7 +1393,7 @@ extern const u32 s_kansei_solo_mid;
 const struct MidiInfo s_kansei_soloMidiInfo = {
     /* ROM Address */        &s_kansei_solo_mid,
     /* unk4f1 */             0x9,
-    /* Sound Bank */         28,
+    /* Sound Bank */         INST_BANK_11,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -1406,7 +1406,7 @@ extern const u32 s_warai_mid;
 const struct MidiInfo s_waraiMidiInfo = {
     /* ROM Address */        &s_warai_mid,
     /* unk4f1 */             0x9,
-    /* Sound Bank */         28,
+    /* Sound Bank */         INST_BANK_11,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -1419,7 +1419,7 @@ extern const u32 s_warai_little_mid;
 const struct MidiInfo s_warai_littleMidiInfo = {
     /* ROM Address */        &s_warai_little_mid,
     /* unk4f1 */             0x9,
-    /* Sound Bank */         28,
+    /* Sound Bank */         INST_BANK_11,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -1432,7 +1432,7 @@ extern const u32 s_warai_solo_mid;
 const struct MidiInfo s_warai_soloMidiInfo = {
     /* ROM Address */        &s_warai_solo_mid,
     /* unk4f1 */             0x9,
-    /* Sound Bank */         28,
+    /* Sound Bank */         INST_BANK_11,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -1445,7 +1445,7 @@ extern const u32 s_hakushu_solo_mid;
 const struct MidiInfo s_hakushu_soloMidiInfo = {
     /* ROM Address */        &s_hakushu_solo_mid,
     /* unk4f1 */             0xa,
-    /* Sound Bank */         28,
+    /* Sound Bank */         INST_BANK_11,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -1458,7 +1458,7 @@ extern const u32 s_BD1_mid;
 const struct MidiInfo s_BD1MidiInfo = {
     /* ROM Address */        &s_BD1_mid,
     /* unk4f1 */             0x8,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             125,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1471,7 +1471,7 @@ extern const u32 s_BD2_mid;
 const struct MidiInfo s_BD2MidiInfo = {
     /* ROM Address */        &s_BD2_mid,
     /* unk4f1 */             0x8,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             115,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1484,7 +1484,7 @@ extern const u32 s_BD3_mid;
 const struct MidiInfo s_BD3MidiInfo = {
     /* ROM Address */        &s_BD3_mid,
     /* unk4f1 */             0x8,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             80,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1497,7 +1497,7 @@ extern const u32 s_BD4_mid;
 const struct MidiInfo s_BD4MidiInfo = {
     /* ROM Address */        &s_BD4_mid,
     /* unk4f1 */             0x8,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             110,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1510,7 +1510,7 @@ extern const u32 s_BD5_mid;
 const struct MidiInfo s_BD5MidiInfo = {
     /* ROM Address */        &s_BD5_mid,
     /* unk4f1 */             0x8,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             110,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1523,7 +1523,7 @@ extern const u32 s_BD6_mid;
 const struct MidiInfo s_BD6MidiInfo = {
     /* ROM Address */        &s_BD6_mid,
     /* unk4f1 */             0x8,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1536,7 +1536,7 @@ extern const u32 s_BD7_mid;
 const struct MidiInfo s_BD7MidiInfo = {
     /* ROM Address */        &s_BD7_mid,
     /* unk4f1 */             0x8,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             110,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1549,7 +1549,7 @@ extern const u32 s_BD8_mid;
 const struct MidiInfo s_BD8MidiInfo = {
     /* ROM Address */        &s_BD8_mid,
     /* unk4f1 */             0x8,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1562,7 +1562,7 @@ extern const u32 s_BD9_mid;
 const struct MidiInfo s_BD9MidiInfo = {
     /* ROM Address */        &s_BD9_mid,
     /* unk4f1 */             0x8,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             127,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1575,7 +1575,7 @@ extern const u32 s_SD1_mid;
 const struct MidiInfo s_SD1MidiInfo = {
     /* ROM Address */        &s_SD1_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             110,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1588,7 +1588,7 @@ extern const u32 s_SD2_mid;
 const struct MidiInfo s_SD2MidiInfo = {
     /* ROM Address */        &s_SD2_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             110,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1601,7 +1601,7 @@ extern const u32 s_SD3_mid;
 const struct MidiInfo s_SD3MidiInfo = {
     /* ROM Address */        &s_SD3_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             90,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1614,7 +1614,7 @@ extern const u32 s_SD4_mid;
 const struct MidiInfo s_SD4MidiInfo = {
     /* ROM Address */        &s_SD4_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             120,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1627,7 +1627,7 @@ extern const u32 s_SD5_mid;
 const struct MidiInfo s_SD5MidiInfo = {
     /* ROM Address */        &s_SD5_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             110,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1640,7 +1640,7 @@ extern const u32 s_SD6_mid;
 const struct MidiInfo s_SD6MidiInfo = {
     /* ROM Address */        &s_SD6_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             120,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1653,7 +1653,7 @@ extern const u32 s_SD7_mid;
 const struct MidiInfo s_SD7MidiInfo = {
     /* ROM Address */        &s_SD7_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             90,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1666,7 +1666,7 @@ extern const u32 s_SD8_mid;
 const struct MidiInfo s_SD8MidiInfo = {
     /* ROM Address */        &s_SD8_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             85,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1679,7 +1679,7 @@ extern const u32 s_SD9_mid;
 const struct MidiInfo s_SD9MidiInfo = {
     /* ROM Address */        &s_SD9_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1692,7 +1692,7 @@ extern const u32 s_tom_H_mid;
 const struct MidiInfo s_tom_HMidiInfo = {
     /* ROM Address */        &s_tom_H_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             110,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1705,7 +1705,7 @@ extern const u32 s_tom_M_mid;
 const struct MidiInfo s_tom_MMidiInfo = {
     /* ROM Address */        &s_tom_M_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             110,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1718,7 +1718,7 @@ extern const u32 s_tom_L_mid;
 const struct MidiInfo s_tom_LMidiInfo = {
     /* ROM Address */        &s_tom_L_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             110,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1731,7 +1731,7 @@ extern const u32 s_close_HH_mid;
 const struct MidiInfo s_close_HHMidiInfo = {
     /* ROM Address */        &s_close_HH_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             115,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -1744,7 +1744,7 @@ extern const u32 s_open_HH_mid;
 const struct MidiInfo s_open_HHMidiInfo = {
     /* ROM Address */        &s_open_HH_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             115,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -1757,7 +1757,7 @@ extern const u32 s_CC1_mid;
 const struct MidiInfo s_CC1MidiInfo = {
     /* ROM Address */        &s_CC1_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             110,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1770,7 +1770,7 @@ extern const u32 s_CC2_mid;
 const struct MidiInfo s_CC2MidiInfo = {
     /* ROM Address */        &s_CC2_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             110,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1783,7 +1783,7 @@ extern const u32 s_CC3_mid;
 const struct MidiInfo s_CC3MidiInfo = {
     /* ROM Address */        &s_CC3_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             110,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1796,7 +1796,7 @@ extern const u32 s_CC4_mid;
 const struct MidiInfo s_CC4MidiInfo = {
     /* ROM Address */        &s_CC4_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             110,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1809,7 +1809,7 @@ extern const u32 s_RC_mid;
 const struct MidiInfo s_RCMidiInfo = {
     /* ROM Address */        &s_RC_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             110,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1822,7 +1822,7 @@ extern const u32 s_HC_mid;
 const struct MidiInfo s_HCMidiInfo = {
     /* ROM Address */        &s_HC_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         18,
+    /* Sound Bank */         INST_BANK_1,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -1835,7 +1835,7 @@ extern const u32 s_CC5_mid;
 const struct MidiInfo s_CC5MidiInfo = {
     /* ROM Address */        &s_CC5_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         18,
+    /* Sound Bank */         INST_BANK_1,
     /* Volume */             65,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1848,7 +1848,7 @@ extern const u32 s_CC6_mid;
 const struct MidiInfo s_CC6MidiInfo = {
     /* ROM Address */        &s_CC6_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             110,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1861,7 +1861,7 @@ extern const u32 s_KN_mid;
 const struct MidiInfo s_KNMidiInfo = {
     /* ROM Address */        &s_KN_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             120,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1874,7 +1874,7 @@ extern const u32 s_HG_mid;
 const struct MidiInfo s_HGMidiInfo = {
     /* ROM Address */        &s_HG_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             120,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -1887,7 +1887,7 @@ extern const u32 s_tran_jump_mid;
 const struct MidiInfo s_tran_jumpMidiInfo = {
     /* ROM Address */        &s_tran_jump_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         27,
+    /* Sound Bank */         INST_BANK_10,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -1900,7 +1900,7 @@ extern const u32 s_tran_henge_mid;
 const struct MidiInfo s_tran_hengeMidiInfo = {
     /* ROM Address */        &s_tran_henge_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         27,
+    /* Sound Bank */         INST_BANK_10,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -1913,7 +1913,7 @@ extern const u32 s_tran_seino_mid;
 const struct MidiInfo s_tran_seinoMidiInfo = {
     /* ROM Address */        &s_tran_seino_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         27,
+    /* Sound Bank */         INST_BANK_10,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -1926,7 +1926,7 @@ extern const u32 s_tran_hensin_mid;
 const struct MidiInfo s_tran_hensinMidiInfo = {
     /* ROM Address */        &s_tran_hensin_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         27,
+    /* Sound Bank */         INST_BANK_10,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -1939,7 +1939,7 @@ extern const u32 s_tran_jump_se_mid;
 const struct MidiInfo s_tran_jump_seMidiInfo = {
     /* ROM Address */        &s_tran_jump_se_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             60,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -1952,7 +1952,7 @@ extern const u32 s_toss_red_blue1_mid;
 const struct MidiInfo s_toss_red_blue1MidiInfo = {
     /* ROM Address */        &s_toss_red_blue1_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         26,
+    /* Sound Bank */         INST_BANK_9,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -1965,7 +1965,7 @@ extern const u32 s_toss_red_blue2_mid;
 const struct MidiInfo s_toss_red_blue2MidiInfo = {
     /* ROM Address */        &s_toss_red_blue2_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         26,
+    /* Sound Bank */         INST_BANK_9,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -1978,7 +1978,7 @@ extern const u32 s_toss_red_blue3_mid;
 const struct MidiInfo s_toss_red_blue3MidiInfo = {
     /* ROM Address */        &s_toss_red_blue3_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         26,
+    /* Sound Bank */         INST_BANK_9,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -1991,7 +1991,7 @@ extern const u32 s_toss_red_yelw1_mid;
 const struct MidiInfo s_toss_red_yelw1MidiInfo = {
     /* ROM Address */        &s_toss_red_yelw1_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         26,
+    /* Sound Bank */         INST_BANK_9,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2004,7 +2004,7 @@ extern const u32 s_toss_red_yelw2_mid;
 const struct MidiInfo s_toss_red_yelw2MidiInfo = {
     /* ROM Address */        &s_toss_red_yelw2_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         26,
+    /* Sound Bank */         INST_BANK_9,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2017,7 +2017,7 @@ extern const u32 s_toss_red_yelw3_mid;
 const struct MidiInfo s_toss_red_yelw3MidiInfo = {
     /* ROM Address */        &s_toss_red_yelw3_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         26,
+    /* Sound Bank */         INST_BANK_9,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2030,7 +2030,7 @@ extern const u32 s_toss_red_red_mid;
 const struct MidiInfo s_toss_red_redMidiInfo = {
     /* ROM Address */        &s_toss_red_red_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         26,
+    /* Sound Bank */         INST_BANK_9,
     /* Volume */             80,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2043,7 +2043,7 @@ extern const u32 s_toss_red_before_mid;
 const struct MidiInfo s_toss_red_beforeMidiInfo = {
     /* ROM Address */        &s_toss_red_before_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         26,
+    /* Sound Bank */         INST_BANK_9,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2056,7 +2056,7 @@ extern const u32 s_toss_red_break_mid;
 const struct MidiInfo s_toss_red_breakMidiInfo = {
     /* ROM Address */        &s_toss_red_break_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         26,
+    /* Sound Bank */         INST_BANK_9,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2069,7 +2069,7 @@ extern const u32 s_toss_blue_red1_mid;
 const struct MidiInfo s_toss_blue_red1MidiInfo = {
     /* ROM Address */        &s_toss_blue_red1_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         26,
+    /* Sound Bank */         INST_BANK_9,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2082,7 +2082,7 @@ extern const u32 s_toss_blue_red2_mid;
 const struct MidiInfo s_toss_blue_red2MidiInfo = {
     /* ROM Address */        &s_toss_blue_red2_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         26,
+    /* Sound Bank */         INST_BANK_9,
     /* Volume */             115,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2095,7 +2095,7 @@ extern const u32 s_toss_blue_red3_mid;
 const struct MidiInfo s_toss_blue_red3MidiInfo = {
     /* ROM Address */        &s_toss_blue_red3_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         26,
+    /* Sound Bank */         INST_BANK_9,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2108,7 +2108,7 @@ extern const u32 s_toss_blue_yelw1_mid;
 const struct MidiInfo s_toss_blue_yelw1MidiInfo = {
     /* ROM Address */        &s_toss_blue_yelw1_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         26,
+    /* Sound Bank */         INST_BANK_9,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2121,7 +2121,7 @@ extern const u32 s_toss_blue_yelw2_mid;
 const struct MidiInfo s_toss_blue_yelw2MidiInfo = {
     /* ROM Address */        &s_toss_blue_yelw2_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         26,
+    /* Sound Bank */         INST_BANK_9,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2134,7 +2134,7 @@ extern const u32 s_toss_blue_yelw3_mid;
 const struct MidiInfo s_toss_blue_yelw3MidiInfo = {
     /* ROM Address */        &s_toss_blue_yelw3_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         26,
+    /* Sound Bank */         INST_BANK_9,
     /* Volume */             115,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2147,7 +2147,7 @@ extern const u32 s_toss_blue_blue_mid;
 const struct MidiInfo s_toss_blue_blueMidiInfo = {
     /* ROM Address */        &s_toss_blue_blue_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         26,
+    /* Sound Bank */         INST_BANK_9,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2160,7 +2160,7 @@ extern const u32 s_toss_blue_before_mid;
 const struct MidiInfo s_toss_blue_beforeMidiInfo = {
     /* ROM Address */        &s_toss_blue_before_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         26,
+    /* Sound Bank */         INST_BANK_9,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2173,7 +2173,7 @@ extern const u32 s_toss_blue_break_mid;
 const struct MidiInfo s_toss_blue_breakMidiInfo = {
     /* ROM Address */        &s_toss_blue_break_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         26,
+    /* Sound Bank */         INST_BANK_9,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2186,7 +2186,7 @@ extern const u32 s_toss_yelw_red1_mid;
 const struct MidiInfo s_toss_yelw_red1MidiInfo = {
     /* ROM Address */        &s_toss_yelw_red1_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         26,
+    /* Sound Bank */         INST_BANK_9,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2199,7 +2199,7 @@ extern const u32 s_toss_yelw_red2_mid;
 const struct MidiInfo s_toss_yelw_red2MidiInfo = {
     /* ROM Address */        &s_toss_yelw_red2_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         26,
+    /* Sound Bank */         INST_BANK_9,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2212,7 +2212,7 @@ extern const u32 s_toss_yelw_red3_mid;
 const struct MidiInfo s_toss_yelw_red3MidiInfo = {
     /* ROM Address */        &s_toss_yelw_red3_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         26,
+    /* Sound Bank */         INST_BANK_9,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2225,7 +2225,7 @@ extern const u32 s_toss_yelw_blue1_mid;
 const struct MidiInfo s_toss_yelw_blue1MidiInfo = {
     /* ROM Address */        &s_toss_yelw_blue1_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         26,
+    /* Sound Bank */         INST_BANK_9,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2238,7 +2238,7 @@ extern const u32 s_toss_yelw_blue2_mid;
 const struct MidiInfo s_toss_yelw_blue2MidiInfo = {
     /* ROM Address */        &s_toss_yelw_blue2_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         26,
+    /* Sound Bank */         INST_BANK_9,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2251,7 +2251,7 @@ extern const u32 s_toss_yelw_blue3_mid;
 const struct MidiInfo s_toss_yelw_blue3MidiInfo = {
     /* ROM Address */        &s_toss_yelw_blue3_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         26,
+    /* Sound Bank */         INST_BANK_9,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2264,7 +2264,7 @@ extern const u32 s_toss_yelw_yelw_mid;
 const struct MidiInfo s_toss_yelw_yelwMidiInfo = {
     /* ROM Address */        &s_toss_yelw_yelw_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         26,
+    /* Sound Bank */         INST_BANK_9,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2277,7 +2277,7 @@ extern const u32 s_toss_yelw_before_mid;
 const struct MidiInfo s_toss_yelw_beforeMidiInfo = {
     /* ROM Address */        &s_toss_yelw_before_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         26,
+    /* Sound Bank */         INST_BANK_9,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2290,7 +2290,7 @@ extern const u32 s_toss_yelw_break_mid;
 const struct MidiInfo s_toss_yelw_breakMidiInfo = {
     /* ROM Address */        &s_toss_yelw_break_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         26,
+    /* Sound Bank */         INST_BANK_9,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2303,7 +2303,7 @@ extern const u32 s_toss_ball_red_mid;
 const struct MidiInfo s_toss_ball_redMidiInfo = {
     /* ROM Address */        &s_toss_ball_red_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2316,7 +2316,7 @@ extern const u32 s_toss_ball_blue_mid;
 const struct MidiInfo s_toss_ball_blueMidiInfo = {
     /* ROM Address */        &s_toss_ball_blue_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2329,7 +2329,7 @@ extern const u32 s_toss_ball_yelw_mid;
 const struct MidiInfo s_toss_ball_yelwMidiInfo = {
     /* ROM Address */        &s_toss_ball_yelw_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2342,7 +2342,7 @@ extern const u32 s_toss_ball_haretu_mid;
 const struct MidiInfo s_toss_ball_haretuMidiInfo = {
     /* ROM Address */        &s_toss_ball_haretu_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         26,
+    /* Sound Bank */         INST_BANK_9,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2355,7 +2355,7 @@ extern const u32 s_shuji_ho_mid;
 const struct MidiInfo s_shuji_hoMidiInfo = {
     /* ROM Address */        &s_shuji_ho_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         58,
+    /* Sound Bank */         INST_BANK_26,
     /* Volume */             80,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2368,7 +2368,7 @@ extern const u32 s_shuji_tame_mid;
 const struct MidiInfo s_shuji_tameMidiInfo = {
     /* ROM Address */        &s_shuji_tame_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         58,
+    /* Sound Bank */         INST_BANK_26,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2381,7 +2381,7 @@ extern const u32 s_iai_yarare_mid;
 const struct MidiInfo s_iai_yarareMidiInfo = {
     /* ROM Address */        &s_iai_yarare_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             90,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2394,7 +2394,7 @@ extern const u32 s_iai_miss_mid;
 const struct MidiInfo s_iai_missMidiInfo = {
     /* ROM Address */        &s_iai_miss_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         41,
+    /* Sound Bank */         INST_BANK_49,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2407,7 +2407,7 @@ extern const u32 s_mario1_mid;
 const struct MidiInfo s_mario1MidiInfo = {
     /* ROM Address */        &s_mario1_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2420,7 +2420,7 @@ extern const u32 s_mario2_mid;
 const struct MidiInfo s_mario2MidiInfo = {
     /* ROM Address */        &s_mario2_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2433,7 +2433,7 @@ extern const u32 s_mario1_2_mid;
 const struct MidiInfo s_mario1_2MidiInfo = {
     /* ROM Address */        &s_mario1_2_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2446,7 +2446,7 @@ extern const u32 s_mario2_4_mid;
 const struct MidiInfo s_mario2_4MidiInfo = {
     /* ROM Address */        &s_mario2_4_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2459,7 +2459,7 @@ extern const u32 s_mario_melo1_mid;
 const struct MidiInfo s_mario_melo1MidiInfo = {
     /* ROM Address */        &s_mario_melo1_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         28,
+    /* Sound Bank */         INST_BANK_11,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2472,7 +2472,7 @@ extern const u32 s_mario_melo2_mid;
 const struct MidiInfo s_mario_melo2MidiInfo = {
     /* ROM Address */        &s_mario_melo2_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         28,
+    /* Sound Bank */         INST_BANK_11,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2485,7 +2485,7 @@ extern const u32 s_sword_orya_mid;
 const struct MidiInfo s_sword_oryaMidiInfo = {
     /* ROM Address */        &s_sword_orya_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2498,7 +2498,7 @@ extern const u32 s_furi_mid;
 const struct MidiInfo s_furiMidiInfo = {
     /* ROM Address */        &s_furi_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             80,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2511,7 +2511,7 @@ extern const u32 s_sword_hi_mid;
 const struct MidiInfo s_sword_hiMidiInfo = {
     /* ROM Address */        &s_sword_hi_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             90,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2524,7 +2524,7 @@ extern const u32 s_sword_ho_mid;
 const struct MidiInfo s_sword_hoMidiInfo = {
     /* ROM Address */        &s_sword_ho_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             105,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2537,7 +2537,7 @@ extern const u32 s_iai_result_mid;
 const struct MidiInfo s_iai_resultMidiInfo = {
     /* ROM Address */        &s_iai_result_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             100,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -2550,7 +2550,7 @@ extern const u32 s_iai_bgm1_mid;
 const struct MidiInfo s_iai_bgm1MidiInfo = {
     /* ROM Address */        &s_iai_bgm1_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             100,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -2563,7 +2563,7 @@ extern const u32 s_iai_bgm2_mid;
 const struct MidiInfo s_iai_bgm2MidiInfo = {
     /* ROM Address */        &s_iai_bgm2_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             100,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -2576,7 +2576,7 @@ extern const u32 s_iai_bgm3_mid;
 const struct MidiInfo s_iai_bgm3MidiInfo = {
     /* ROM Address */        &s_iai_bgm3_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             100,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -2589,7 +2589,7 @@ extern const u32 s_iai_frase1a_mid;
 const struct MidiInfo s_iai_frase1aMidiInfo = {
     /* ROM Address */        &s_iai_frase1a_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2602,7 +2602,7 @@ extern const u32 s_iai_frase2a_mid;
 const struct MidiInfo s_iai_frase2aMidiInfo = {
     /* ROM Address */        &s_iai_frase2a_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2615,7 +2615,7 @@ extern const u32 s_iai_frase3a_mid;
 const struct MidiInfo s_iai_frase3aMidiInfo = {
     /* ROM Address */        &s_iai_frase3a_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2628,7 +2628,7 @@ extern const u32 s_iai_frase1b_mid;
 const struct MidiInfo s_iai_frase1bMidiInfo = {
     /* ROM Address */        &s_iai_frase1b_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2641,7 +2641,7 @@ extern const u32 s_iai_frase2b_mid;
 const struct MidiInfo s_iai_frase2bMidiInfo = {
     /* ROM Address */        &s_iai_frase2b_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2654,7 +2654,7 @@ extern const u32 s_iai_frase3b_mid;
 const struct MidiInfo s_iai_frase3bMidiInfo = {
     /* ROM Address */        &s_iai_frase3b_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2667,7 +2667,7 @@ extern const u32 s_ninja_wind_mid;
 const struct MidiInfo s_ninja_windMidiInfo = {
     /* ROM Address */        &s_ninja_wind_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         28,
+    /* Sound Bank */         INST_BANK_11,
     /* Volume */             60,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2680,7 +2680,7 @@ extern const u32 s_ninja_chakuti_mid;
 const struct MidiInfo s_ninja_chakutiMidiInfo = {
     /* ROM Address */        &s_ninja_chakuti_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2693,7 +2693,7 @@ extern const u32 s_ninja_kamae_mid;
 const struct MidiInfo s_ninja_kamaeMidiInfo = {
     /* ROM Address */        &s_ninja_kamae_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         28,
+    /* Sound Bank */         INST_BANK_11,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2706,7 +2706,7 @@ extern const u32 s_ninja_furu_mid;
 const struct MidiInfo s_ninja_furuMidiInfo = {
     /* ROM Address */        &s_ninja_furu_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             70,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2719,7 +2719,7 @@ extern const u32 s_ninja_kin_mid;
 const struct MidiInfo s_ninja_kinMidiInfo = {
     /* ROM Address */        &s_ninja_kin_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         28,
+    /* Sound Bank */         INST_BANK_11,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2732,7 +2732,7 @@ extern const u32 s_ninja_hit_mid;
 const struct MidiInfo s_ninja_hitMidiInfo = {
     /* ROM Address */        &s_ninja_hit_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2745,7 +2745,7 @@ extern const u32 s_ninja_yumi_mid;
 const struct MidiInfo s_ninja_yumiMidiInfo = {
     /* ROM Address */        &s_ninja_yumi_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2758,7 +2758,7 @@ extern const u32 s_ninja_kabe_mid;
 const struct MidiInfo s_ninja_kabeMidiInfo = {
     /* ROM Address */        &s_ninja_kabe_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         41,
+    /* Sound Bank */         INST_BANK_49,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2771,7 +2771,7 @@ extern const u32 s_ninja_bgm1_mid;
 const struct MidiInfo s_ninja_bgm1MidiInfo = {
     /* ROM Address */        &s_ninja_bgm1_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -2784,7 +2784,7 @@ extern const u32 s_ninja_bgm2_mid;
 const struct MidiInfo s_ninja_bgm2MidiInfo = {
     /* ROM Address */        &s_ninja_bgm2_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -2797,7 +2797,7 @@ extern const u32 s_rat_bgm1_mid;
 const struct MidiInfo s_rat_bgm1MidiInfo = {
     /* ROM Address */        &s_rat_bgm1_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             100,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -2810,7 +2810,7 @@ extern const u32 s_rat_bgm2_mid;
 const struct MidiInfo s_rat_bgm2MidiInfo = {
     /* ROM Address */        &s_rat_bgm2_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             100,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -2823,7 +2823,7 @@ extern const u32 s_rat_cat_mid;
 const struct MidiInfo s_rat_catMidiInfo = {
     /* ROM Address */        &s_rat_cat_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -2836,7 +2836,7 @@ extern const u32 s_rat_crush_R_mid;
 const struct MidiInfo s_rat_crush_RMidiInfo = {
     /* ROM Address */        &s_rat_crush_R_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -2849,7 +2849,7 @@ extern const u32 s_rat_crush_L_mid;
 const struct MidiInfo s_rat_crush_LMidiInfo = {
     /* ROM Address */        &s_rat_crush_L_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -2862,7 +2862,7 @@ extern const u32 s_rat_signal_mid;
 const struct MidiInfo s_rat_signalMidiInfo = {
     /* ROM Address */        &s_rat_signal_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             80,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -2875,7 +2875,7 @@ extern const u32 s_rat_dash_mid;
 const struct MidiInfo s_rat_dashMidiInfo = {
     /* ROM Address */        &s_rat_dash_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             80,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -2888,7 +2888,7 @@ extern const u32 s_rat_stop_mid;
 const struct MidiInfo s_rat_stopMidiInfo = {
     /* ROM Address */        &s_rat_stop_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             80,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -2901,7 +2901,7 @@ extern const u32 s_tebyoushi_pati_mid;
 const struct MidiInfo s_tebyoushi_patiMidiInfo = {
     /* ROM Address */        &s_tebyoushi_pati_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         24,
+    /* Sound Bank */         INST_BANK_7,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -2914,7 +2914,7 @@ extern const u32 s_bon_dondon1_mid;
 const struct MidiInfo s_bon_dondon1MidiInfo = {
     /* ROM Address */        &s_bon_dondon1_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         70,
+    /* Sound Bank */         INST_BANK_38,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -2927,7 +2927,7 @@ extern const u32 s_bon_dondon1_1_mid;
 const struct MidiInfo s_bon_dondon1_1MidiInfo = {
     /* ROM Address */        &s_bon_dondon1_1_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         70,
+    /* Sound Bank */         INST_BANK_38,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -2940,7 +2940,7 @@ extern const u32 s_bon_dondon1_2_mid;
 const struct MidiInfo s_bon_dondon1_2MidiInfo = {
     /* ROM Address */        &s_bon_dondon1_2_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         70,
+    /* Sound Bank */         INST_BANK_38,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -2953,7 +2953,7 @@ extern const u32 s_bon_dondon2_mid;
 const struct MidiInfo s_bon_dondon2MidiInfo = {
     /* ROM Address */        &s_bon_dondon2_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         70,
+    /* Sound Bank */         INST_BANK_38,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -2966,7 +2966,7 @@ extern const u32 s_hanabi_hyu_mid;
 const struct MidiInfo s_hanabi_hyuMidiInfo = {
     /* ROM Address */        &s_hanabi_hyu_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         24,
+    /* Sound Bank */         INST_BANK_7,
     /* Volume */             80,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -2979,7 +2979,7 @@ extern const u32 s_hanabi_don_mid;
 const struct MidiInfo s_hanabi_donMidiInfo = {
     /* ROM Address */        &s_hanabi_don_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         24,
+    /* Sound Bank */         INST_BANK_7,
     /* Volume */             120,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -2992,7 +2992,7 @@ extern const u32 s_hanabi_pon_mid;
 const struct MidiInfo s_hanabi_ponMidiInfo = {
     /* ROM Address */        &s_hanabi_pon_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         24,
+    /* Sound Bank */         INST_BANK_7,
     /* Volume */             80,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3005,7 +3005,7 @@ extern const u32 s_hanabi_utiage_mid;
 const struct MidiInfo s_hanabi_utiageMidiInfo = {
     /* ROM Address */        &s_hanabi_utiage_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         24,
+    /* Sound Bank */         INST_BANK_7,
     /* Volume */             120,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3018,7 +3018,7 @@ extern const u32 s_hanabi_utiage_v_mid;
 const struct MidiInfo s_hanabi_utiage_vMidiInfo = {
     /* ROM Address */        &s_hanabi_utiage_v_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         24,
+    /* Sound Bank */         INST_BANK_7,
     /* Volume */             75,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3031,7 +3031,7 @@ extern const u32 s_hanabi_bgm_mid;
 const struct MidiInfo s_hanabi_bgmMidiInfo = {
     /* ROM Address */        &s_hanabi_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -3044,7 +3044,7 @@ extern const u32 s_hanabi_1_mid;
 const struct MidiInfo s_hanabi_1MidiInfo = {
     /* ROM Address */        &s_hanabi_1_mid,
     /* unk4f1 */             0x8,
-    /* Sound Bank */         24,
+    /* Sound Bank */         INST_BANK_7,
     /* Volume */             80,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3057,7 +3057,7 @@ extern const u32 s_hanabi_2_mid;
 const struct MidiInfo s_hanabi_2MidiInfo = {
     /* ROM Address */        &s_hanabi_2_mid,
     /* unk4f1 */             0x8,
-    /* Sound Bank */         24,
+    /* Sound Bank */         INST_BANK_7,
     /* Volume */             80,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3070,7 +3070,7 @@ extern const u32 s_hanabi_3_mid;
 const struct MidiInfo s_hanabi_3MidiInfo = {
     /* ROM Address */        &s_hanabi_3_mid,
     /* unk4f1 */             0x8,
-    /* Sound Bank */         24,
+    /* Sound Bank */         INST_BANK_7,
     /* Volume */             80,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3083,7 +3083,7 @@ extern const u32 s_hanabi_hai_mid;
 const struct MidiInfo s_hanabi_haiMidiInfo = {
     /* ROM Address */        &s_hanabi_hai_mid,
     /* unk4f1 */             0x8,
-    /* Sound Bank */         24,
+    /* Sound Bank */         INST_BANK_7,
     /* Volume */             90,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3096,7 +3096,7 @@ extern const u32 s_hanabi_ah_mid;
 const struct MidiInfo s_hanabi_ahMidiInfo = {
     /* ROM Address */        &s_hanabi_ah_mid,
     /* unk4f1 */             0x8,
-    /* Sound Bank */         24,
+    /* Sound Bank */         INST_BANK_7,
     /* Volume */             70,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3109,7 +3109,7 @@ extern const u32 s_hanabi_wish1_mid;
 const struct MidiInfo s_hanabi_wish1MidiInfo = {
     /* ROM Address */        &s_hanabi_wish1_mid,
     /* unk4f1 */             0x8,
-    /* Sound Bank */         24,
+    /* Sound Bank */         INST_BANK_7,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3122,7 +3122,7 @@ extern const u32 s_hanabi_wish2_mid;
 const struct MidiInfo s_hanabi_wish2MidiInfo = {
     /* ROM Address */        &s_hanabi_wish2_mid,
     /* unk4f1 */             0x8,
-    /* Sound Bank */         24,
+    /* Sound Bank */         INST_BANK_7,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3135,7 +3135,7 @@ extern const u32 s_hanabi_wish3_mid;
 const struct MidiInfo s_hanabi_wish3MidiInfo = {
     /* ROM Address */        &s_hanabi_wish3_mid,
     /* unk4f1 */             0x8,
-    /* Sound Bank */         24,
+    /* Sound Bank */         INST_BANK_7,
     /* Volume */             110,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3148,7 +3148,7 @@ extern const u32 s_hanabi_wish4_mid;
 const struct MidiInfo s_hanabi_wish4MidiInfo = {
     /* ROM Address */        &s_hanabi_wish4_mid,
     /* unk4f1 */             0x8,
-    /* Sound Bank */         24,
+    /* Sound Bank */         INST_BANK_7,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3161,7 +3161,7 @@ extern const u32 s_intro_stick_mid;
 const struct MidiInfo s_intro_stickMidiInfo = {
     /* ROM Address */        &s_intro_stick_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         25,
+    /* Sound Bank */         INST_BANK_8,
     /* Volume */             110,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3174,7 +3174,7 @@ extern const u32 s_intro_a_mid;
 const struct MidiInfo s_intro_aMidiInfo = {
     /* ROM Address */        &s_intro_a_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         25,
+    /* Sound Bank */         INST_BANK_8,
     /* Volume */             60,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3187,7 +3187,7 @@ extern const u32 s_intro_one_mid;
 const struct MidiInfo s_intro_oneMidiInfo = {
     /* ROM Address */        &s_intro_one_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         25,
+    /* Sound Bank */         INST_BANK_8,
     /* Volume */             75,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3200,7 +3200,7 @@ extern const u32 s_intro_two_mid;
 const struct MidiInfo s_intro_twoMidiInfo = {
     /* ROM Address */        &s_intro_two_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         25,
+    /* Sound Bank */         INST_BANK_8,
     /* Volume */             127,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3213,7 +3213,7 @@ extern const u32 s_intro_three_mid;
 const struct MidiInfo s_intro_threeMidiInfo = {
     /* ROM Address */        &s_intro_three_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         25,
+    /* Sound Bank */         INST_BANK_8,
     /* Volume */             127,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3226,7 +3226,7 @@ extern const u32 s_intro_four_mid;
 const struct MidiInfo s_intro_fourMidiInfo = {
     /* ROM Address */        &s_intro_four_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         25,
+    /* Sound Bank */         INST_BANK_8,
     /* Volume */             127,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3239,7 +3239,7 @@ extern const u32 s_intro_uh_mid;
 const struct MidiInfo s_intro_uhMidiInfo = {
     /* ROM Address */        &s_intro_uh_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         25,
+    /* Sound Bank */         INST_BANK_8,
     /* Volume */             70,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3252,7 +3252,7 @@ extern const u32 s_intro_comeon_mid;
 const struct MidiInfo s_intro_comeonMidiInfo = {
     /* ROM Address */        &s_intro_comeon_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         25,
+    /* Sound Bank */         INST_BANK_8,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3265,7 +3265,7 @@ extern const u32 s_intro_pat1_mid;
 const struct MidiInfo s_intro_pat1MidiInfo = {
     /* ROM Address */        &s_intro_pat1_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -3278,7 +3278,7 @@ extern const u32 s_intro_pat2_mid;
 const struct MidiInfo s_intro_pat2MidiInfo = {
     /* ROM Address */        &s_intro_pat2_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             100,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -3291,7 +3291,7 @@ extern const u32 s_intro_pat3_mid;
 const struct MidiInfo s_intro_pat3MidiInfo = {
     /* ROM Address */        &s_intro_pat3_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -3304,7 +3304,7 @@ extern const u32 s_ghost_walk_mid;
 const struct MidiInfo s_ghost_walkMidiInfo = {
     /* ROM Address */        &s_ghost_walk_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             80,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3317,7 +3317,7 @@ extern const u32 s_ghost_just_hit_mid;
 const struct MidiInfo s_ghost_just_hitMidiInfo = {
     /* ROM Address */        &s_ghost_just_hit_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             120,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3330,7 +3330,7 @@ extern const u32 s_ghost_miss_hit_mid;
 const struct MidiInfo s_ghost_miss_hitMidiInfo = {
     /* ROM Address */        &s_ghost_miss_hit_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             110,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3343,7 +3343,7 @@ extern const u32 s_ghost_dash_mid;
 const struct MidiInfo s_ghost_dashMidiInfo = {
     /* ROM Address */        &s_ghost_dash_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             120,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3356,7 +3356,7 @@ extern const u32 s_ghost_warai_mid;
 const struct MidiInfo s_ghost_waraiMidiInfo = {
     /* ROM Address */        &s_ghost_warai_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3369,7 +3369,7 @@ extern const u32 s_ghost_gosha_mid;
 const struct MidiInfo s_ghost_goshaMidiInfo = {
     /* ROM Address */        &s_ghost_gosha_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             110,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3382,7 +3382,7 @@ extern const u32 s_ghost_rain_mid;
 const struct MidiInfo s_ghost_rainMidiInfo = {
     /* ROM Address */        &s_ghost_rain_mid,
     /* unk4f1 */             0x2,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             30,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3395,7 +3395,7 @@ extern const u32 s_space_ikeo_turn_mid;
 const struct MidiInfo s_space_ikeo_turnMidiInfo = {
     /* ROM Address */        &s_space_ikeo_turn_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         29,
+    /* Sound Bank */         INST_BANK_12,
     /* Volume */             115,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3408,7 +3408,7 @@ extern const u32 s_space_ikeo_right_mid;
 const struct MidiInfo s_space_ikeo_rightMidiInfo = {
     /* ROM Address */        &s_space_ikeo_right_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         29,
+    /* Sound Bank */         INST_BANK_12,
     /* Volume */             115,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3421,7 +3421,7 @@ extern const u32 s_space_ikeo_lets_mid;
 const struct MidiInfo s_space_ikeo_letsMidiInfo = {
     /* ROM Address */        &s_space_ikeo_lets_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         29,
+    /* Sound Bank */         INST_BANK_12,
     /* Volume */             127,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3434,7 +3434,7 @@ extern const u32 s_space_ikeo_sit_mid;
 const struct MidiInfo s_space_ikeo_sitMidiInfo = {
     /* ROM Address */        &s_space_ikeo_sit_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         29,
+    /* Sound Bank */         INST_BANK_12,
     /* Volume */             127,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3447,7 +3447,7 @@ extern const u32 s_space_ikeo_down_mid;
 const struct MidiInfo s_space_ikeo_downMidiInfo = {
     /* ROM Address */        &s_space_ikeo_down_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         29,
+    /* Sound Bank */         INST_BANK_12,
     /* Volume */             127,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3460,7 +3460,7 @@ extern const u32 s_space_ikeo_pa_mid;
 const struct MidiInfo s_space_ikeo_paMidiInfo = {
     /* ROM Address */        &s_space_ikeo_pa_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         29,
+    /* Sound Bank */         INST_BANK_12,
     /* Volume */             127,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3473,7 +3473,7 @@ extern const u32 s_space_ikeo_punch_mid;
 const struct MidiInfo s_space_ikeo_punchMidiInfo = {
     /* ROM Address */        &s_space_ikeo_punch_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         29,
+    /* Sound Bank */         INST_BANK_12,
     /* Volume */             127,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3486,7 +3486,7 @@ extern const u32 s_space_kou_turn_mid;
 const struct MidiInfo s_space_kou_turnMidiInfo = {
     /* ROM Address */        &s_space_kou_turn_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         29,
+    /* Sound Bank */         INST_BANK_12,
     /* Volume */             127,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3499,7 +3499,7 @@ extern const u32 s_space_kou_right_mid;
 const struct MidiInfo s_space_kou_rightMidiInfo = {
     /* ROM Address */        &s_space_kou_right_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         29,
+    /* Sound Bank */         INST_BANK_12,
     /* Volume */             127,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3512,7 +3512,7 @@ extern const u32 s_space_kou_lets_mid;
 const struct MidiInfo s_space_kou_letsMidiInfo = {
     /* ROM Address */        &s_space_kou_lets_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         29,
+    /* Sound Bank */         INST_BANK_12,
     /* Volume */             127,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3525,7 +3525,7 @@ extern const u32 s_space_kou_sit_mid;
 const struct MidiInfo s_space_kou_sitMidiInfo = {
     /* ROM Address */        &s_space_kou_sit_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         29,
+    /* Sound Bank */         INST_BANK_12,
     /* Volume */             127,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3538,7 +3538,7 @@ extern const u32 s_space_kou_down_mid;
 const struct MidiInfo s_space_kou_downMidiInfo = {
     /* ROM Address */        &s_space_kou_down_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         29,
+    /* Sound Bank */         INST_BANK_12,
     /* Volume */             127,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3551,7 +3551,7 @@ extern const u32 s_space_kou_pa_mid;
 const struct MidiInfo s_space_kou_paMidiInfo = {
     /* ROM Address */        &s_space_kou_pa_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         29,
+    /* Sound Bank */         INST_BANK_12,
     /* Volume */             110,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3564,7 +3564,7 @@ extern const u32 s_space_kou_punch_mid;
 const struct MidiInfo s_space_kou_punchMidiInfo = {
     /* ROM Address */        &s_space_kou_punch_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         29,
+    /* Sound Bank */         INST_BANK_12,
     /* Volume */             110,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3577,7 +3577,7 @@ extern const u32 s_space_miss_mid;
 const struct MidiInfo s_space_missMidiInfo = {
     /* ROM Address */        &s_space_miss_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3590,7 +3590,7 @@ extern const u32 s_space_ikeo_turn_swing_mid;
 const struct MidiInfo s_space_ikeo_turn_swingMidiInfo = {
     /* ROM Address */        &s_space_ikeo_turn_swing_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         29,
+    /* Sound Bank */         INST_BANK_12,
     /* Volume */             115,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3603,7 +3603,7 @@ extern const u32 s_space_kou_turn_swing_mid;
 const struct MidiInfo s_space_kou_turn_swingMidiInfo = {
     /* ROM Address */        &s_space_kou_turn_swing_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         29,
+    /* Sound Bank */         INST_BANK_12,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -3616,7 +3616,7 @@ extern const u32 s_guntai1_mid;
 const struct MidiInfo s_guntai1MidiInfo = {
     /* ROM Address */        &s_guntai1_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         21,
+    /* Sound Bank */         INST_BANK_4,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -3629,7 +3629,7 @@ extern const u32 s_guntai2_mid;
 const struct MidiInfo s_guntai2MidiInfo = {
     /* ROM Address */        &s_guntai2_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         21,
+    /* Sound Bank */         INST_BANK_4,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -3642,7 +3642,7 @@ extern const u32 s_guntai_foot1_mid;
 const struct MidiInfo s_guntai_foot1MidiInfo = {
     /* ROM Address */        &s_guntai_foot1_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         21,
+    /* Sound Bank */         INST_BANK_4,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -3655,7 +3655,7 @@ extern const u32 s_guntai_foot2_mid;
 const struct MidiInfo s_guntai_foot2MidiInfo = {
     /* ROM Address */        &s_guntai_foot2_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         21,
+    /* Sound Bank */         INST_BANK_4,
     /* Volume */             80,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -3668,7 +3668,7 @@ extern const u32 s_guntai_v_zentai1_mid;
 const struct MidiInfo s_guntai_v_zentai1MidiInfo = {
     /* ROM Address */        &s_guntai_v_zentai1_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         21,
+    /* Sound Bank */         INST_BANK_4,
     /* Volume */             115,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -3681,7 +3681,7 @@ extern const u32 s_guntai_v_zentai2_mid;
 const struct MidiInfo s_guntai_v_zentai2MidiInfo = {
     /* ROM Address */        &s_guntai_v_zentai2_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         21,
+    /* Sound Bank */         INST_BANK_4,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -3694,7 +3694,7 @@ extern const u32 s_guntai_v_susume_mid;
 const struct MidiInfo s_guntai_v_susumeMidiInfo = {
     /* ROM Address */        &s_guntai_v_susume_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         21,
+    /* Sound Bank */         INST_BANK_4,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -3707,7 +3707,7 @@ extern const u32 s_guntai_v_tomare_mid;
 const struct MidiInfo s_guntai_v_tomareMidiInfo = {
     /* ROM Address */        &s_guntai_v_tomare_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         21,
+    /* Sound Bank */         INST_BANK_4,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -3720,7 +3720,7 @@ extern const u32 s_guntai_v_migi_muke1_mid;
 const struct MidiInfo s_guntai_v_migi_muke1MidiInfo = {
     /* ROM Address */        &s_guntai_v_migi_muke1_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         21,
+    /* Sound Bank */         INST_BANK_4,
     /* Volume */             105,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -3733,7 +3733,7 @@ extern const u32 s_guntai_v_migi_muke2_mid;
 const struct MidiInfo s_guntai_v_migi_muke2MidiInfo = {
     /* ROM Address */        &s_guntai_v_migi_muke2_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         21,
+    /* Sound Bank */         INST_BANK_4,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -3746,7 +3746,7 @@ extern const u32 s_guntai_v_hidari_muke1_mid;
 const struct MidiInfo s_guntai_v_hidari_muke1MidiInfo = {
     /* ROM Address */        &s_guntai_v_hidari_muke1_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         21,
+    /* Sound Bank */         INST_BANK_4,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -3759,7 +3759,7 @@ extern const u32 s_guntai_v_hidari_muke2_mid;
 const struct MidiInfo s_guntai_v_hidari_muke2MidiInfo = {
     /* ROM Address */        &s_guntai_v_hidari_muke2_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         21,
+    /* Sound Bank */         INST_BANK_4,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -3772,7 +3772,7 @@ extern const u32 s_guntai_v_migi_mid;
 const struct MidiInfo s_guntai_v_migiMidiInfo = {
     /* ROM Address */        &s_guntai_v_migi_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         21,
+    /* Sound Bank */         INST_BANK_4,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -3785,7 +3785,7 @@ extern const u32 s_guntai_v_hidari_mid;
 const struct MidiInfo s_guntai_v_hidariMidiInfo = {
     /* ROM Address */        &s_guntai_v_hidari_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         21,
+    /* Sound Bank */         INST_BANK_4,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -3798,7 +3798,7 @@ extern const u32 s_guntai_v_yoh_mid;
 const struct MidiInfo s_guntai_v_yohMidiInfo = {
     /* ROM Address */        &s_guntai_v_yoh_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         21,
+    /* Sound Bank */         INST_BANK_4,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -3811,7 +3811,7 @@ extern const u32 s_guntai_v_es_mid;
 const struct MidiInfo s_guntai_v_esMidiInfo = {
     /* ROM Address */        &s_guntai_v_es_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         21,
+    /* Sound Bank */         INST_BANK_4,
     /* Volume */             115,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -3824,7 +3824,7 @@ extern const u32 s_guntai_v_ka_mid;
 const struct MidiInfo s_guntai_v_kaMidiInfo = {
     /* ROM Address */        &s_guntai_v_ka_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         21,
+    /* Sound Bank */         INST_BANK_4,
     /* Volume */             115,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -3837,7 +3837,7 @@ extern const u32 s_guntai_ikari_mid;
 const struct MidiInfo s_guntai_ikariMidiInfo = {
     /* ROM Address */        &s_guntai_ikari_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             50,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -3850,7 +3850,7 @@ extern const u32 s_block_gotin_mid;
 const struct MidiInfo s_block_gotinMidiInfo = {
     /* ROM Address */        &s_block_gotin_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         22,
+    /* Sound Bank */         INST_BANK_5,
     /* Volume */             60,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -3863,7 +3863,7 @@ extern const u32 s_block_hit_mid;
 const struct MidiInfo s_block_hitMidiInfo = {
     /* ROM Address */        &s_block_hit_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         22,
+    /* Sound Bank */         INST_BANK_5,
     /* Volume */             90,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -3876,7 +3876,7 @@ extern const u32 s_block_walk_mid;
 const struct MidiInfo s_block_walkMidiInfo = {
     /* ROM Address */        &s_block_walk_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         27,
+    /* Sound Bank */         INST_BANK_10,
     /* Volume */             30,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -3889,7 +3889,7 @@ extern const u32 s_kawasemi_bgm_mid;
 const struct MidiInfo s_kawasemi_bgmMidiInfo = {
     /* ROM Address */        &s_kawasemi_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         28,
+    /* Sound Bank */         INST_BANK_11,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -3902,7 +3902,7 @@ extern const u32 s_kawasemi_frase_mid;
 const struct MidiInfo s_kawasemi_fraseMidiInfo = {
     /* ROM Address */        &s_kawasemi_frase_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         28,
+    /* Sound Bank */         INST_BANK_11,
     /* Volume */             90,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -3915,7 +3915,7 @@ extern const u32 s_heat_v_jituhane_mid;
 const struct MidiInfo s_heat_v_jituhaneMidiInfo = {
     /* ROM Address */        &s_heat_v_jituhane_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         78,
+    /* Sound Bank */         INST_BANK_46,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -3928,7 +3928,7 @@ extern const u32 s_heat_v_watasine_mid;
 const struct MidiInfo s_heat_v_watasineMidiInfo = {
     /* ROM Address */        &s_heat_v_watasine_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         78,
+    /* Sound Bank */         INST_BANK_46,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -3941,7 +3941,7 @@ extern const u32 s_heat_v_watasitara_mid;
 const struct MidiInfo s_heat_v_watasitaraMidiInfo = {
     /* ROM Address */        &s_heat_v_watasitara_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         78,
+    /* Sound Bank */         INST_BANK_46,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -3954,7 +3954,7 @@ extern const u32 s_heat_v_anataga_mid;
 const struct MidiInfo s_heat_v_anatagaMidiInfo = {
     /* ROM Address */        &s_heat_v_anataga_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         78,
+    /* Sound Bank */         INST_BANK_46,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -3967,7 +3967,7 @@ extern const u32 s_heat_v_anatatara_mid;
 const struct MidiInfo s_heat_v_anatataraMidiInfo = {
     /* ROM Address */        &s_heat_v_anatatara_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         78,
+    /* Sound Bank */         INST_BANK_46,
     /* Volume */             117,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -3980,7 +3980,7 @@ extern const u32 s_heat_v_kimiga_mid;
 const struct MidiInfo s_heat_v_kimigaMidiInfo = {
     /* ROM Address */        &s_heat_v_kimiga_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         78,
+    /* Sound Bank */         INST_BANK_46,
     /* Volume */             117,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -3993,7 +3993,7 @@ extern const u32 s_heat_v_doji_mid;
 const struct MidiInfo s_heat_v_dojiMidiInfo = {
     /* ROM Address */        &s_heat_v_doji_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         78,
+    /* Sound Bank */         INST_BANK_46,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4006,7 +4006,7 @@ extern const u32 s_heat_v_sugoi_mid;
 const struct MidiInfo s_heat_v_sugoiMidiInfo = {
     /* ROM Address */        &s_heat_v_sugoi_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         78,
+    /* Sound Bank */         INST_BANK_46,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4019,7 +4019,7 @@ extern const u32 s_heat_v_koumietemo_mid;
 const struct MidiInfo s_heat_v_koumietemoMidiInfo = {
     /* ROM Address */        &s_heat_v_koumietemo_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         78,
+    /* Sound Bank */         INST_BANK_46,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4032,7 +4032,7 @@ extern const u32 s_heat_v_okubyo_mid;
 const struct MidiInfo s_heat_v_okubyoMidiInfo = {
     /* ROM Address */        &s_heat_v_okubyo_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         78,
+    /* Sound Bank */         INST_BANK_46,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4045,7 +4045,7 @@ extern const u32 s_heat_v_majime_mid;
 const struct MidiInfo s_heat_v_majimeMidiInfo = {
     /* ROM Address */        &s_heat_v_majime_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         78,
+    /* Sound Bank */         INST_BANK_46,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4058,7 +4058,7 @@ extern const u32 s_heat_v_kouitta_mid;
 const struct MidiInfo s_heat_v_kouittaMidiInfo = {
     /* ROM Address */        &s_heat_v_kouitta_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         78,
+    /* Sound Bank */         INST_BANK_46,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4071,7 +4071,7 @@ extern const u32 s_heat_v_demo_mid;
 const struct MidiInfo s_heat_v_demoMidiInfo = {
     /* ROM Address */        &s_heat_v_demo_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         78,
+    /* Sound Bank */         INST_BANK_46,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4084,7 +4084,7 @@ extern const u32 s_heat_v_yappari_mid;
 const struct MidiInfo s_heat_v_yappariMidiInfo = {
     /* ROM Address */        &s_heat_v_yappari_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         78,
+    /* Sound Bank */         INST_BANK_46,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4097,7 +4097,7 @@ extern const u32 s_heat_v_dakedo_mid;
 const struct MidiInfo s_heat_v_dakedoMidiInfo = {
     /* ROM Address */        &s_heat_v_dakedo_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         78,
+    /* Sound Bank */         INST_BANK_46,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4110,7 +4110,7 @@ extern const u32 s_heat_v_suki_mid;
 const struct MidiInfo s_heat_v_sukiMidiInfo = {
     /* ROM Address */        &s_heat_v_suki_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         78,
+    /* Sound Bank */         INST_BANK_46,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4123,7 +4123,7 @@ extern const u32 s_heat_v_kirai_mid;
 const struct MidiInfo s_heat_v_kiraiMidiInfo = {
     /* ROM Address */        &s_heat_v_kirai_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         78,
+    /* Sound Bank */         INST_BANK_46,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4136,7 +4136,7 @@ extern const u32 s_heat_v_seki_mid;
 const struct MidiInfo s_heat_v_sekiMidiInfo = {
     /* ROM Address */        &s_heat_v_seki_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         78,
+    /* Sound Bank */         INST_BANK_46,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4149,7 +4149,7 @@ extern const u32 s_heat_machine_bgm_mid;
 const struct MidiInfo s_heat_machine_bgmMidiInfo = {
     /* ROM Address */        &s_heat_machine_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         78,
+    /* Sound Bank */         INST_BANK_46,
     /* Volume */             40,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -4162,7 +4162,7 @@ extern const u32 s_metro_tin_mid;
 const struct MidiInfo s_metro_tinMidiInfo = {
     /* ROM Address */        &s_metro_tin_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         28,
+    /* Sound Bank */         INST_BANK_11,
     /* Volume */             80,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4175,7 +4175,7 @@ extern const u32 s_metro_count1_mid;
 const struct MidiInfo s_metro_count1MidiInfo = {
     /* ROM Address */        &s_metro_count1_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         31,
+    /* Sound Bank */         INST_BANK_14,
     /* Volume */             25,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4188,7 +4188,7 @@ extern const u32 s_metro_count2_mid;
 const struct MidiInfo s_metro_count2MidiInfo = {
     /* ROM Address */        &s_metro_count2_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         31,
+    /* Sound Bank */         INST_BANK_14,
     /* Volume */             25,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4201,7 +4201,7 @@ extern const u32 s_metro_hato_mid;
 const struct MidiInfo s_metro_hatoMidiInfo = {
     /* ROM Address */        &s_metro_hato_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         28,
+    /* Sound Bank */         INST_BANK_11,
     /* Volume */             40,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4214,7 +4214,7 @@ extern const u32 s_metro_hit_mid;
 const struct MidiInfo s_metro_hitMidiInfo = {
     /* ROM Address */        &s_metro_hit_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         28,
+    /* Sound Bank */         INST_BANK_11,
     /* Volume */             60,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4227,7 +4227,7 @@ extern const u32 s_batter_hit_mid;
 const struct MidiInfo s_batter_hitMidiInfo = {
     /* ROM Address */        &s_batter_hit_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         29,
+    /* Sound Bank */         INST_BANK_12,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4240,7 +4240,7 @@ extern const u32 s_batter_mit_mid;
 const struct MidiInfo s_batter_mitMidiInfo = {
     /* ROM Address */        &s_batter_mit_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         29,
+    /* Sound Bank */         INST_BANK_12,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4253,7 +4253,7 @@ extern const u32 s_keytoy_count1_mid;
 const struct MidiInfo s_keytoy_count1MidiInfo = {
     /* ROM Address */        &s_keytoy_count1_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         31,
+    /* Sound Bank */         INST_BANK_14,
     /* Volume */             35,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4266,7 +4266,7 @@ extern const u32 s_keytoy_count2_mid;
 const struct MidiInfo s_keytoy_count2MidiInfo = {
     /* ROM Address */        &s_keytoy_count2_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         31,
+    /* Sound Bank */         INST_BANK_14,
     /* Volume */             35,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4279,7 +4279,7 @@ extern const u32 s_mitubati_mid;
 const struct MidiInfo s_mitubatiMidiInfo = {
     /* ROM Address */        &s_mitubati_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -4292,7 +4292,7 @@ extern const u32 s_witch_candy_mid;
 const struct MidiInfo s_witch_candyMidiInfo = {
     /* ROM Address */        &s_witch_candy_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             75,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4305,7 +4305,7 @@ extern const u32 s_witch_furu_mid;
 const struct MidiInfo s_witch_furuMidiInfo = {
     /* ROM Address */        &s_witch_furu_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             40,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -4318,7 +4318,7 @@ extern const u32 s_witch_cake_mid;
 const struct MidiInfo s_witch_cakeMidiInfo = {
     /* ROM Address */        &s_witch_cake_mid,
     /* unk4f1 */             0xb,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             80,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4331,7 +4331,7 @@ extern const u32 s_witch_donats_mid;
 const struct MidiInfo s_witch_donatsMidiInfo = {
     /* ROM Address */        &s_witch_donats_mid,
     /* unk4f1 */             0xc,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             50,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4344,7 +4344,7 @@ extern const u32 s_rabbit_jet_mid;
 const struct MidiInfo s_rabbit_jetMidiInfo = {
     /* ROM Address */        &s_rabbit_jet_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             30,
     /* unk4f4 */             0x7d,
     /* unk4f5 */             0x0,
@@ -4357,7 +4357,7 @@ extern const u32 s_rabbit_break2_mid;
 const struct MidiInfo s_rabbit_break2MidiInfo = {
     /* ROM Address */        &s_rabbit_break2_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             110,
     /* unk4f4 */             0x7d,
     /* unk4f5 */             0x0,
@@ -4370,7 +4370,7 @@ extern const u32 s_rabbit_c7_brass_mid;
 const struct MidiInfo s_rabbit_c7_brassMidiInfo = {
     /* ROM Address */        &s_rabbit_c7_brass_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             90,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -4383,7 +4383,7 @@ extern const u32 s_rabbit_break_mid;
 const struct MidiInfo s_rabbit_breakMidiInfo = {
     /* ROM Address */        &s_rabbit_break_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             110,
     /* unk4f4 */             0x7d,
     /* unk4f5 */             0x0,
@@ -4396,7 +4396,7 @@ extern const u32 s_rabbit_HC_mid;
 const struct MidiInfo s_rabbit_HCMidiInfo = {
     /* ROM Address */        &s_rabbit_HC_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             120,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -4409,7 +4409,7 @@ extern const u32 s_rabbit_bgm_mid;
 const struct MidiInfo s_rabbit_bgmMidiInfo = {
     /* ROM Address */        &s_rabbit_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             90,
     /* unk4f4 */             0x46,
     /* unk4f5 */             0x0,
@@ -4422,7 +4422,7 @@ extern const u32 s_rabbit_c7_mid;
 const struct MidiInfo s_rabbit_c7MidiInfo = {
     /* ROM Address */        &s_rabbit_c7_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             90,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -4435,7 +4435,7 @@ extern const u32 s_rabbit_f7_mid;
 const struct MidiInfo s_rabbit_f7MidiInfo = {
     /* ROM Address */        &s_rabbit_f7_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             90,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -4448,7 +4448,7 @@ extern const u32 s_rabbit_g7f7_1_mid;
 const struct MidiInfo s_rabbit_g7f7_1MidiInfo = {
     /* ROM Address */        &s_rabbit_g7f7_1_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             90,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -4461,7 +4461,7 @@ extern const u32 s_rabbit_g7f7_2_mid;
 const struct MidiInfo s_rabbit_g7f7_2MidiInfo = {
     /* ROM Address */        &s_rabbit_g7f7_2_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             90,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -4474,7 +4474,7 @@ extern const u32 s_rabbit_c7g7_mid;
 const struct MidiInfo s_rabbit_c7g7MidiInfo = {
     /* ROM Address */        &s_rabbit_c7g7_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             90,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -4487,7 +4487,7 @@ extern const u32 s_rabbit_fill_1_mid;
 const struct MidiInfo s_rabbit_fill_1MidiInfo = {
     /* ROM Address */        &s_rabbit_fill_1_mid,
     /* unk4f1 */             0x2,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4500,7 +4500,7 @@ extern const u32 s_rabbit_fill_2_mid;
 const struct MidiInfo s_rabbit_fill_2MidiInfo = {
     /* ROM Address */        &s_rabbit_fill_2_mid,
     /* unk4f1 */             0x2,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4513,7 +4513,7 @@ extern const u32 s_rabbit_fill_3_mid;
 const struct MidiInfo s_rabbit_fill_3MidiInfo = {
     /* ROM Address */        &s_rabbit_fill_3_mid,
     /* unk4f1 */             0x2,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4526,7 +4526,7 @@ extern const u32 s_rabbit_fill_4_mid;
 const struct MidiInfo s_rabbit_fill_4MidiInfo = {
     /* ROM Address */        &s_rabbit_fill_4_mid,
     /* unk4f1 */             0x2,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4539,7 +4539,7 @@ extern const u32 s_rabbit_atama_mid;
 const struct MidiInfo s_rabbit_atamaMidiInfo = {
     /* ROM Address */        &s_rabbit_atama_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             127,
     /* unk4f4 */             0x78,
     /* unk4f5 */             0x0,
@@ -4552,7 +4552,7 @@ extern const u32 s_rabbit_moon_mid;
 const struct MidiInfo s_rabbit_moonMidiInfo = {
     /* ROM Address */        &s_rabbit_moon_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         27,
+    /* Sound Bank */         INST_BANK_10,
     /* Volume */             127,
     /* unk4f4 */             0x78,
     /* unk4f5 */             0x0,
@@ -4565,7 +4565,7 @@ extern const u32 s_tap_monky1_mid;
 const struct MidiInfo s_tap_monky1MidiInfo = {
     /* ROM Address */        &s_tap_monky1_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         22,
+    /* Sound Bank */         INST_BANK_5,
     /* Volume */             90,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4578,7 +4578,7 @@ extern const u32 s_tap_monky2_mid;
 const struct MidiInfo s_tap_monky2MidiInfo = {
     /* ROM Address */        &s_tap_monky2_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         22,
+    /* Sound Bank */         INST_BANK_5,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4591,7 +4591,7 @@ extern const u32 s_tap_monky3_1_mid;
 const struct MidiInfo s_tap_monky3_1MidiInfo = {
     /* ROM Address */        &s_tap_monky3_1_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         22,
+    /* Sound Bank */         INST_BANK_5,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4604,7 +4604,7 @@ extern const u32 s_tap_monky3_2_mid;
 const struct MidiInfo s_tap_monky3_2MidiInfo = {
     /* ROM Address */        &s_tap_monky3_2_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         22,
+    /* Sound Bank */         INST_BANK_5,
     /* Volume */             90,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4617,7 +4617,7 @@ extern const u32 s_tap_monky4_mid;
 const struct MidiInfo s_tap_monky4MidiInfo = {
     /* ROM Address */        &s_tap_monky4_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         22,
+    /* Sound Bank */         INST_BANK_5,
     /* Volume */             80,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4630,7 +4630,7 @@ extern const u32 s_tap_kick_monky_mid;
 const struct MidiInfo s_tap_kick_monkyMidiInfo = {
     /* ROM Address */        &s_tap_kick_monky_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4643,7 +4643,7 @@ extern const u32 s_tap_kick_lady_mid;
 const struct MidiInfo s_tap_kick_ladyMidiInfo = {
     /* ROM Address */        &s_tap_kick_lady_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4656,7 +4656,7 @@ extern const u32 s_uma_walk1_mid;
 const struct MidiInfo s_uma_walk1MidiInfo = {
     /* ROM Address */        &s_uma_walk1_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4669,7 +4669,7 @@ extern const u32 s_uma_walk2_mid;
 const struct MidiInfo s_uma_walk2MidiInfo = {
     /* ROM Address */        &s_uma_walk2_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             64,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4682,7 +4682,7 @@ extern const u32 s_uma_walk3_mid;
 const struct MidiInfo s_uma_walk3MidiInfo = {
     /* ROM Address */        &s_uma_walk3_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4695,7 +4695,7 @@ extern const u32 s_uma_walk4_mid;
 const struct MidiInfo s_uma_walk4MidiInfo = {
     /* ROM Address */        &s_uma_walk4_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             64,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4708,7 +4708,7 @@ extern const u32 s_uma_trot1_mid;
 const struct MidiInfo s_uma_trot1MidiInfo = {
     /* ROM Address */        &s_uma_trot1_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4721,7 +4721,7 @@ extern const u32 s_uma_trot2_mid;
 const struct MidiInfo s_uma_trot2MidiInfo = {
     /* ROM Address */        &s_uma_trot2_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             90,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4734,7 +4734,7 @@ extern const u32 s_uma_canter1_mid;
 const struct MidiInfo s_uma_canter1MidiInfo = {
     /* ROM Address */        &s_uma_canter1_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             64,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4747,7 +4747,7 @@ extern const u32 s_uma_canter2_mid;
 const struct MidiInfo s_uma_canter2MidiInfo = {
     /* ROM Address */        &s_uma_canter2_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4760,7 +4760,7 @@ extern const u32 s_uma_canter3_mid;
 const struct MidiInfo s_uma_canter3MidiInfo = {
     /* ROM Address */        &s_uma_canter3_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             64,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4773,7 +4773,7 @@ extern const u32 s_uma_galop1_mid;
 const struct MidiInfo s_uma_galop1MidiInfo = {
     /* ROM Address */        &s_uma_galop1_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4786,7 +4786,7 @@ extern const u32 s_uma_galop2_mid;
 const struct MidiInfo s_uma_galop2MidiInfo = {
     /* ROM Address */        &s_uma_galop2_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4799,7 +4799,7 @@ extern const u32 s_uma_galop3_mid;
 const struct MidiInfo s_uma_galop3MidiInfo = {
     /* ROM Address */        &s_uma_galop3_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4812,7 +4812,7 @@ extern const u32 s_uma_galop4_mid;
 const struct MidiInfo s_uma_galop4MidiInfo = {
     /* ROM Address */        &s_uma_galop4_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4825,7 +4825,7 @@ extern const u32 s_uma_hihin_mid;
 const struct MidiInfo s_uma_hihinMidiInfo = {
     /* ROM Address */        &s_uma_hihin_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             60,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4838,7 +4838,7 @@ extern const u32 s_uma_bulu_mid;
 const struct MidiInfo s_uma_buluMidiInfo = {
     /* ROM Address */        &s_uma_bulu_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             80,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4851,7 +4851,7 @@ extern const u32 s_uma_hi_muti_mid;
 const struct MidiInfo s_uma_hi_mutiMidiInfo = {
     /* ROM Address */        &s_uma_hi_muti_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             90,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4864,7 +4864,7 @@ extern const u32 s_uma_ng_mid;
 const struct MidiInfo s_uma_ngMidiInfo = {
     /* ROM Address */        &s_uma_ng_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             80,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4877,7 +4877,7 @@ extern const u32 s_uma_walk1_t_mid;
 const struct MidiInfo s_uma_walk1_tMidiInfo = {
     /* ROM Address */        &s_uma_walk1_t_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4890,7 +4890,7 @@ extern const u32 s_uma_walk2_t_mid;
 const struct MidiInfo s_uma_walk2_tMidiInfo = {
     /* ROM Address */        &s_uma_walk2_t_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             64,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4903,7 +4903,7 @@ extern const u32 s_uma_walk3_t_mid;
 const struct MidiInfo s_uma_walk3_tMidiInfo = {
     /* ROM Address */        &s_uma_walk3_t_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4916,7 +4916,7 @@ extern const u32 s_uma_walk4_t_mid;
 const struct MidiInfo s_uma_walk4_tMidiInfo = {
     /* ROM Address */        &s_uma_walk4_t_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             64,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4929,7 +4929,7 @@ extern const u32 s_uma_trot1_t_mid;
 const struct MidiInfo s_uma_trot1_tMidiInfo = {
     /* ROM Address */        &s_uma_trot1_t_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4942,7 +4942,7 @@ extern const u32 s_uma_trot2_t_mid;
 const struct MidiInfo s_uma_trot2_tMidiInfo = {
     /* ROM Address */        &s_uma_trot2_t_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             90,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4955,7 +4955,7 @@ extern const u32 s_uma_canter1_t_mid;
 const struct MidiInfo s_uma_canter1_tMidiInfo = {
     /* ROM Address */        &s_uma_canter1_t_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             64,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4968,7 +4968,7 @@ extern const u32 s_uma_canter2_t_mid;
 const struct MidiInfo s_uma_canter2_tMidiInfo = {
     /* ROM Address */        &s_uma_canter2_t_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4981,7 +4981,7 @@ extern const u32 s_uma_canter3_t_mid;
 const struct MidiInfo s_uma_canter3_tMidiInfo = {
     /* ROM Address */        &s_uma_canter3_t_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             64,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -4994,7 +4994,7 @@ extern const u32 s_uma_galop1_t_mid;
 const struct MidiInfo s_uma_galop1_tMidiInfo = {
     /* ROM Address */        &s_uma_galop1_t_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5007,7 +5007,7 @@ extern const u32 s_uma_galop2_t_mid;
 const struct MidiInfo s_uma_galop2_tMidiInfo = {
     /* ROM Address */        &s_uma_galop2_t_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5020,7 +5020,7 @@ extern const u32 s_uma_galop3_t_mid;
 const struct MidiInfo s_uma_galop3_tMidiInfo = {
     /* ROM Address */        &s_uma_galop3_t_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5033,7 +5033,7 @@ extern const u32 s_uma_galop4_t_mid;
 const struct MidiInfo s_uma_galop4_tMidiInfo = {
     /* ROM Address */        &s_uma_galop4_t_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5046,7 +5046,7 @@ extern const u32 s_uma_bgm1_mid;
 const struct MidiInfo s_uma_bgm1MidiInfo = {
     /* ROM Address */        &s_uma_bgm1_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5059,7 +5059,7 @@ extern const u32 s_uma_bgm2_mid;
 const struct MidiInfo s_uma_bgm2MidiInfo = {
     /* ROM Address */        &s_uma_bgm2_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             95,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5072,7 +5072,7 @@ extern const u32 s_uma_bgm3_mid;
 const struct MidiInfo s_uma_bgm3MidiInfo = {
     /* ROM Address */        &s_uma_bgm3_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5085,7 +5085,7 @@ extern const u32 s_uma_bgm4_mid;
 const struct MidiInfo s_uma_bgm4MidiInfo = {
     /* ROM Address */        &s_uma_bgm4_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         20,
+    /* Sound Bank */         INST_BANK_3,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5098,7 +5098,7 @@ extern const u32 s_karate_bgm_mid;
 const struct MidiInfo s_karate_bgmMidiInfo = {
     /* ROM Address */        &s_karate_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         18,
+    /* Sound Bank */         INST_BANK_1,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5111,7 +5111,7 @@ extern const u32 s_karate_fan_mid;
 const struct MidiInfo s_karate_fanMidiInfo = {
     /* ROM Address */        &s_karate_fan_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         18,
+    /* Sound Bank */         INST_BANK_1,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5124,7 +5124,7 @@ extern const u32 s_datumo_nuki_mid;
 const struct MidiInfo s_datumo_nukiMidiInfo = {
     /* ROM Address */        &s_datumo_nuki_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             115,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5137,7 +5137,7 @@ extern const u32 s_datumo_kegire_mid;
 const struct MidiInfo s_datumo_kegireMidiInfo = {
     /* ROM Address */        &s_datumo_kegire_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5150,7 +5150,7 @@ extern const u32 s_datumo_bgm_mid;
 const struct MidiInfo s_datumo_bgmMidiInfo = {
     /* ROM Address */        &s_datumo_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         27,
+    /* Sound Bank */         INST_BANK_10,
     /* Volume */             127,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5163,7 +5163,7 @@ extern const u32 s_rap_bgm_renshu_mid;
 const struct MidiInfo s_rap_bgm_renshuMidiInfo = {
     /* ROM Address */        &s_rap_bgm_renshu_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         32,
+    /* Sound Bank */         INST_BANK_15,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5176,7 +5176,7 @@ extern const u32 s_rap_bgm_mid;
 const struct MidiInfo s_rap_bgmMidiInfo = {
     /* ROM Address */        &s_rap_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         32,
+    /* Sound Bank */         INST_BANK_15,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5189,7 +5189,7 @@ extern const u32 s_rap_jazz_bgm_mid;
 const struct MidiInfo s_rap_jazz_bgmMidiInfo = {
     /* ROM Address */        &s_rap_jazz_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         32,
+    /* Sound Bank */         INST_BANK_15,
     /* Volume */             85,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5202,7 +5202,7 @@ extern const u32 s_rap_15ji_desuka_mid;
 const struct MidiInfo s_rap_15ji_desukaMidiInfo = {
     /* ROM Address */        &s_rap_15ji_desuka_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         32,
+    /* Sound Bank */         INST_BANK_15,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5215,7 +5215,7 @@ extern const u32 s_rap_oyatu_desuka_mid;
 const struct MidiInfo s_rap_oyatu_desukaMidiInfo = {
     /* ROM Address */        &s_rap_oyatu_desuka_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         32,
+    /* Sound Bank */         INST_BANK_15,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5228,7 +5228,7 @@ extern const u32 s_rap_honto_desuka_mid;
 const struct MidiInfo s_rap_honto_desukaMidiInfo = {
     /* ROM Address */        &s_rap_honto_desuka_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         32,
+    /* Sound Bank */         INST_BANK_15,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5241,7 +5241,7 @@ extern const u32 s_rap_wakari_desuka_mid;
 const struct MidiInfo s_rap_wakari_desukaMidiInfo = {
     /* ROM Address */        &s_rap_wakari_desuka_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         32,
+    /* Sound Bank */         INST_BANK_15,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5254,7 +5254,7 @@ extern const u32 s_rap_oisi_kamone_mid;
 const struct MidiInfo s_rap_oisi_kamoneMidiInfo = {
     /* ROM Address */        &s_rap_oisi_kamone_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         32,
+    /* Sound Bank */         INST_BANK_15,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5267,7 +5267,7 @@ extern const u32 s_rap_herusi_kamone_mid;
 const struct MidiInfo s_rap_herusi_kamoneMidiInfo = {
     /* ROM Address */        &s_rap_herusi_kamone_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         32,
+    /* Sound Bank */         INST_BANK_15,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5280,7 +5280,7 @@ extern const u32 s_rap_orenosei_kamone_mid;
 const struct MidiInfo s_rap_orenosei_kamoneMidiInfo = {
     /* ROM Address */        &s_rap_orenosei_kamone_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         32,
+    /* Sound Bank */         INST_BANK_15,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5293,7 +5293,7 @@ extern const u32 s_rap_soremoso_kamone_mid;
 const struct MidiInfo s_rap_soremoso_kamoneMidiInfo = {
     /* ROM Address */        &s_rap_soremoso_kamone_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         32,
+    /* Sound Bank */         INST_BANK_15,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5306,7 +5306,7 @@ extern const u32 s_rap_tanosi_kamone_mid;
 const struct MidiInfo s_rap_tanosi_kamoneMidiInfo = {
     /* ROM Address */        &s_rap_tanosi_kamone_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         32,
+    /* Sound Bank */         INST_BANK_15,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5319,7 +5319,7 @@ extern const u32 s_rap_oyatuha_saiko_mid;
 const struct MidiInfo s_rap_oyatuha_saikoMidiInfo = {
     /* ROM Address */        &s_rap_oyatuha_saiko_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         32,
+    /* Sound Bank */         INST_BANK_15,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5332,7 +5332,7 @@ extern const u32 s_rap_kibunha_saiko_mid;
 const struct MidiInfo s_rap_kibunha_saikoMidiInfo = {
     /* ROM Address */        &s_rap_kibunha_saiko_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         32,
+    /* Sound Bank */         INST_BANK_15,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5345,7 +5345,7 @@ extern const u32 s_rap_orette_saiko_mid;
 const struct MidiInfo s_rap_orette_saikoMidiInfo = {
     /* ROM Address */        &s_rap_orette_saiko_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         32,
+    /* Sound Bank */         INST_BANK_15,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5358,7 +5358,7 @@ extern const u32 s_rap_kimitte_saiko_mid;
 const struct MidiInfo s_rap_kimitte_saikoMidiInfo = {
     /* ROM Address */        &s_rap_kimitte_saiko_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         32,
+    /* Sound Bank */         INST_BANK_15,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5371,7 +5371,7 @@ extern const u32 s_rap_oyatuga_naiyo_mid;
 const struct MidiInfo s_rap_oyatuga_naiyoMidiInfo = {
     /* ROM Address */        &s_rap_oyatuga_naiyo_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         32,
+    /* Sound Bank */         INST_BANK_15,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5384,7 +5384,7 @@ extern const u32 s_rap_oresira_naiyo_mid;
 const struct MidiInfo s_rap_oresira_naiyoMidiInfo = {
     /* ROM Address */        &s_rap_oresira_naiyo_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         32,
+    /* Sound Bank */         INST_BANK_15,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5397,7 +5397,7 @@ extern const u32 s_rap_un_mid;
 const struct MidiInfo s_rap_unMidiInfo = {
     /* ROM Address */        &s_rap_un_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         32,
+    /* Sound Bank */         INST_BANK_15,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5410,7 +5410,7 @@ extern const u32 s_rap_uun_mid;
 const struct MidiInfo s_rap_uunMidiInfo = {
     /* ROM Address */        &s_rap_uun_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         32,
+    /* Sound Bank */         INST_BANK_15,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5423,7 +5423,7 @@ extern const u32 s_rap_yeah_mid;
 const struct MidiInfo s_rap_yeahMidiInfo = {
     /* ROM Address */        &s_rap_yeah_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         32,
+    /* Sound Bank */         INST_BANK_15,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5436,7 +5436,7 @@ extern const u32 s_sindan_manzai_mid;
 const struct MidiInfo s_sindan_manzaiMidiInfo = {
     /* ROM Address */        &s_sindan_manzai_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         78,
+    /* Sound Bank */         INST_BANK_46,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5449,7 +5449,7 @@ extern const u32 s_sindan_mail_mid;
 const struct MidiInfo s_sindan_mailMidiInfo = {
     /* ROM Address */        &s_sindan_mail_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         78,
+    /* Sound Bank */         INST_BANK_46,
     /* Volume */             40,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5462,7 +5462,7 @@ extern const u32 s_esa_pengin1_1_mid;
 const struct MidiInfo s_esa_pengin1_1MidiInfo = {
     /* ROM Address */        &s_esa_pengin1_1_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5475,7 +5475,7 @@ extern const u32 s_esa_pengin1_2_mid;
 const struct MidiInfo s_esa_pengin1_2MidiInfo = {
     /* ROM Address */        &s_esa_pengin1_2_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5488,7 +5488,7 @@ extern const u32 s_esa_pengin1_3_mid;
 const struct MidiInfo s_esa_pengin1_3MidiInfo = {
     /* ROM Address */        &s_esa_pengin1_3_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5501,7 +5501,7 @@ extern const u32 s_esa_pengin2_1_mid;
 const struct MidiInfo s_esa_pengin2_1MidiInfo = {
     /* ROM Address */        &s_esa_pengin2_1_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5514,7 +5514,7 @@ extern const u32 s_esa_pengin2_2_mid;
 const struct MidiInfo s_esa_pengin2_2MidiInfo = {
     /* ROM Address */        &s_esa_pengin2_2_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5527,7 +5527,7 @@ extern const u32 s_esa_pengin2_3_mid;
 const struct MidiInfo s_esa_pengin2_3MidiInfo = {
     /* ROM Address */        &s_esa_pengin2_3_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5540,7 +5540,7 @@ extern const u32 s_esa_pengin3_1_mid;
 const struct MidiInfo s_esa_pengin3_1MidiInfo = {
     /* ROM Address */        &s_esa_pengin3_1_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5553,7 +5553,7 @@ extern const u32 s_esa_pengin3_2_mid;
 const struct MidiInfo s_esa_pengin3_2MidiInfo = {
     /* ROM Address */        &s_esa_pengin3_2_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5566,7 +5566,7 @@ extern const u32 s_esa_pengin3_3_mid;
 const struct MidiInfo s_esa_pengin3_3MidiInfo = {
     /* ROM Address */        &s_esa_pengin3_3_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5579,7 +5579,7 @@ extern const u32 s_esa_catch_mid;
 const struct MidiInfo s_esa_catchMidiInfo = {
     /* ROM Address */        &s_esa_catch_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         24,
+    /* Sound Bank */         INST_BANK_7,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5592,7 +5592,7 @@ extern const u32 s_quiz_bgm_mid;
 const struct MidiInfo s_quiz_bgmMidiInfo = {
     /* ROM Address */        &s_quiz_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         55,
+    /* Sound Bank */         INST_BANK_23,
     /* Volume */             80,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -5605,7 +5605,7 @@ extern const u32 s_quiz_fan_good_mid;
 const struct MidiInfo s_quiz_fan_goodMidiInfo = {
     /* ROM Address */        &s_quiz_fan_good_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         52,
+    /* Sound Bank */         INST_BANK_20,
     /* Volume */             80,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -5618,7 +5618,7 @@ extern const u32 s_quiz_fan_bad_mid;
 const struct MidiInfo s_quiz_fan_badMidiInfo = {
     /* ROM Address */        &s_quiz_fan_bad_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         57,
+    /* Sound Bank */         INST_BANK_25,
     /* Volume */             80,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -5631,7 +5631,7 @@ extern const u32 s_virus_fork_mid;
 const struct MidiInfo s_virus_forkMidiInfo = {
     /* ROM Address */        &s_virus_fork_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             70,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5644,7 +5644,7 @@ extern const u32 s_virus_dash_mid;
 const struct MidiInfo s_virus_dashMidiInfo = {
     /* ROM Address */        &s_virus_dash_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             120,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -5657,7 +5657,7 @@ extern const u32 s_virus_miss_mid;
 const struct MidiInfo s_virus_missMidiInfo = {
     /* ROM Address */        &s_virus_miss_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         29,
+    /* Sound Bank */         INST_BANK_12,
     /* Volume */             60,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -5670,7 +5670,7 @@ extern const u32 s_virus_hit_mid;
 const struct MidiInfo s_virus_hitMidiInfo = {
     /* ROM Address */        &s_virus_hit_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         27,
+    /* Sound Bank */         INST_BANK_10,
     /* Volume */             90,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -5683,7 +5683,7 @@ extern const u32 s_virus_osii_mid;
 const struct MidiInfo s_virus_osiiMidiInfo = {
     /* ROM Address */        &s_virus_osii_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         27,
+    /* Sound Bank */         INST_BANK_10,
     /* Volume */             90,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -5696,7 +5696,7 @@ extern const u32 s_check_result_bgm_mid;
 const struct MidiInfo s_check_result_bgmMidiInfo = {
     /* ROM Address */        &s_check_result_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         18,
+    /* Sound Bank */         INST_BANK_1,
     /* Volume */             100,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5709,7 +5709,7 @@ extern const u32 s_lesson_sel_bgm_mid;
 const struct MidiInfo s_lesson_sel_bgmMidiInfo = {
     /* ROM Address */        &s_lesson_sel_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         78,
+    /* Sound Bank */         INST_BANK_46,
     /* Volume */             100,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5722,7 +5722,7 @@ extern const u32 s_toys_bgm_mid;
 const struct MidiInfo s_toys_bgmMidiInfo = {
     /* ROM Address */        &s_toys_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         78,
+    /* Sound Bank */         INST_BANK_46,
     /* Volume */             75,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5735,7 +5735,7 @@ extern const u32 s_rap_machine_bgm_mid;
 const struct MidiInfo s_rap_machine_bgmMidiInfo = {
     /* ROM Address */        &s_rap_machine_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5748,7 +5748,7 @@ extern const u32 s_mini_game_bgm_mid;
 const struct MidiInfo s_mini_game_bgmMidiInfo = {
     /* ROM Address */        &s_mini_game_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         31,
+    /* Sound Bank */         INST_BANK_14,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5761,7 +5761,7 @@ extern const u32 s_remix_all_bgm_mid;
 const struct MidiInfo s_remix_all_bgmMidiInfo = {
     /* ROM Address */        &s_remix_all_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         76,
+    /* Sound Bank */         INST_BANK_44,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5774,7 +5774,7 @@ extern const u32 s_sindan_sea_mid;
 const struct MidiInfo s_sindan_seaMidiInfo = {
     /* ROM Address */        &s_sindan_sea_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         61,
+    /* Sound Bank */         INST_BANK_29,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5787,7 +5787,7 @@ extern const u32 s_drum_lesson_bgm_mid;
 const struct MidiInfo s_drum_lesson_bgmMidiInfo = {
     /* ROM Address */        &s_drum_lesson_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         76,
+    /* Sound Bank */         INST_BANK_44,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5800,7 +5800,7 @@ extern const u32 s_counseling_bgm_mid;
 const struct MidiInfo s_counseling_bgmMidiInfo = {
     /* ROM Address */        &s_counseling_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         67,
+    /* Sound Bank */         INST_BANK_35,
     /* Volume */             110,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5813,7 +5813,7 @@ extern const u32 s_gameover_fan_mid;
 const struct MidiInfo s_gameover_fanMidiInfo = {
     /* ROM Address */        &s_gameover_fan_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         55,
+    /* Sound Bank */         INST_BANK_23,
     /* Volume */             100,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5826,7 +5826,7 @@ extern const u32 s_studio_bgm_mid;
 const struct MidiInfo s_studio_bgmMidiInfo = {
     /* ROM Address */        &s_studio_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         28,
+    /* Sound Bank */         INST_BANK_11,
     /* Volume */             20,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5839,7 +5839,7 @@ extern const u32 s_nyuka_fan_mid;
 const struct MidiInfo s_nyuka_fanMidiInfo = {
     /* ROM Address */        &s_nyuka_fan_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             60,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -5852,7 +5852,7 @@ extern const u32 s_siryo_bgm_mid;
 const struct MidiInfo s_siryo_bgmMidiInfo = {
     /* ROM Address */        &s_siryo_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         27,
+    /* Sound Bank */         INST_BANK_10,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5865,7 +5865,7 @@ extern const u32 s_dr_sam_bgm_mid;
 const struct MidiInfo s_dr_sam_bgmMidiInfo = {
     /* ROM Address */        &s_dr_sam_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         27,
+    /* Sound Bank */         INST_BANK_10,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5878,7 +5878,7 @@ extern const u32 s_renshu_bgm1_mid;
 const struct MidiInfo s_renshu_bgm1MidiInfo = {
     /* ROM Address */        &s_renshu_bgm1_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         59,
+    /* Sound Bank */         INST_BANK_27,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5891,7 +5891,7 @@ extern const u32 s_renshu_bgm2_mid;
 const struct MidiInfo s_renshu_bgm2MidiInfo = {
     /* ROM Address */        &s_renshu_bgm2_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         59,
+    /* Sound Bank */         INST_BANK_27,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5904,7 +5904,7 @@ extern const u32 s_renshu_bgm3_mid;
 const struct MidiInfo s_renshu_bgm3MidiInfo = {
     /* ROM Address */        &s_renshu_bgm3_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         59,
+    /* Sound Bank */         INST_BANK_27,
     /* Volume */             70,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5917,7 +5917,7 @@ extern const u32 s_kekka_bgm_good_mid;
 const struct MidiInfo s_kekka_bgm_goodMidiInfo = {
     /* ROM Address */        &s_kekka_bgm_good_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         27,
+    /* Sound Bank */         INST_BANK_10,
     /* Volume */             100,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5930,7 +5930,7 @@ extern const u32 s_kekka_bgm_common_mid;
 const struct MidiInfo s_kekka_bgm_commonMidiInfo = {
     /* ROM Address */        &s_kekka_bgm_common_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         64,
+    /* Sound Bank */         INST_BANK_32,
     /* Volume */             100,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5943,7 +5943,7 @@ extern const u32 s_kekka_bgm_bad_mid;
 const struct MidiInfo s_kekka_bgm_badMidiInfo = {
     /* ROM Address */        &s_kekka_bgm_bad_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         21,
+    /* Sound Bank */         INST_BANK_4,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -5956,7 +5956,7 @@ extern const u32 s_epilogue_fan1_mid;
 const struct MidiInfo s_epilogue_fan1MidiInfo = {
     /* ROM Address */        &s_epilogue_fan1_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         59,
+    /* Sound Bank */         INST_BANK_27,
     /* Volume */             80,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -5969,7 +5969,7 @@ extern const u32 s_epilogue_fan2_mid;
 const struct MidiInfo s_epilogue_fan2MidiInfo = {
     /* ROM Address */        &s_epilogue_fan2_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         59,
+    /* Sound Bank */         INST_BANK_27,
     /* Volume */             80,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -5982,7 +5982,7 @@ extern const u32 s_perfect_fan_mid;
 const struct MidiInfo s_perfect_fanMidiInfo = {
     /* ROM Address */        &s_perfect_fan_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             90,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -5995,7 +5995,7 @@ extern const u32 s_poly_rakka_mid;
 const struct MidiInfo s_poly_rakkaMidiInfo = {
     /* ROM Address */        &s_poly_rakka_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         41,
+    /* Sound Bank */         INST_BANK_49,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6008,7 +6008,7 @@ extern const u32 s_poly_shototu_mid;
 const struct MidiInfo s_poly_shototuMidiInfo = {
     /* ROM Address */        &s_poly_shototu_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         41,
+    /* Sound Bank */         INST_BANK_49,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6021,7 +6021,7 @@ extern const u32 s_block2_block_mid;
 const struct MidiInfo s_block2_blockMidiInfo = {
     /* ROM Address */        &s_block2_block_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             60,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -6034,7 +6034,7 @@ extern const u32 s_block2_fast_mid;
 const struct MidiInfo s_block2_fastMidiInfo = {
     /* ROM Address */        &s_block2_fast_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             60,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -6047,7 +6047,7 @@ extern const u32 s_uki_water1_mid;
 const struct MidiInfo s_uki_water1MidiInfo = {
     /* ROM Address */        &s_uki_water1_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         27,
+    /* Sound Bank */         INST_BANK_10,
     /* Volume */             70,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6060,7 +6060,7 @@ extern const u32 s_uki_water2_mid;
 const struct MidiInfo s_uki_water2MidiInfo = {
     /* ROM Address */        &s_uki_water2_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         27,
+    /* Sound Bank */         INST_BANK_10,
     /* Volume */             70,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6073,7 +6073,7 @@ extern const u32 s_uki_water3_mid;
 const struct MidiInfo s_uki_water3MidiInfo = {
     /* ROM Address */        &s_uki_water3_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         34,
+    /* Sound Bank */         INST_BANK_17,
     /* Volume */             70,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6086,7 +6086,7 @@ extern const u32 s_kuma_hit_mid;
 const struct MidiInfo s_kuma_hitMidiInfo = {
     /* ROM Address */        &s_kuma_hit_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6099,7 +6099,7 @@ extern const u32 s_kuma_miss_mid;
 const struct MidiInfo s_kuma_missMidiInfo = {
     /* ROM Address */        &s_kuma_miss_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             60,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -6112,7 +6112,7 @@ extern const u32 s_kuma_sakana_mid;
 const struct MidiInfo s_kuma_sakanaMidiInfo = {
     /* ROM Address */        &s_kuma_sakana_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             90,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -6125,7 +6125,7 @@ extern const u32 s_yuri_naki_mid;
 const struct MidiInfo s_yuri_nakiMidiInfo = {
     /* ROM Address */        &s_yuri_naki_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6138,7 +6138,7 @@ extern const u32 s_yuri_yurasi_mid;
 const struct MidiInfo s_yuri_yurasiMidiInfo = {
     /* ROM Address */        &s_yuri_yurasi_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         22,
+    /* Sound Bank */         INST_BANK_5,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6151,7 +6151,7 @@ extern const u32 s_4beat_open_mid;
 const struct MidiInfo s_4beat_openMidiInfo = {
     /* ROM Address */        &s_4beat_open_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         41,
+    /* Sound Bank */         INST_BANK_49,
     /* Volume */             50,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6164,7 +6164,7 @@ extern const u32 s_4beat_jiban_mid;
 const struct MidiInfo s_4beat_jibanMidiInfo = {
     /* ROM Address */        &s_4beat_jiban_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         31,
+    /* Sound Bank */         INST_BANK_14,
     /* Volume */             50,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6177,7 +6177,7 @@ extern const u32 s_rythm_bat_miss_mid;
 const struct MidiInfo s_rythm_bat_missMidiInfo = {
     /* ROM Address */        &s_rythm_bat_miss_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         31,
+    /* Sound Bank */         INST_BANK_14,
     /* Volume */             70,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6190,7 +6190,7 @@ extern const u32 s_dontan_count_mid;
 const struct MidiInfo s_dontan_countMidiInfo = {
     /* ROM Address */        &s_dontan_count_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         27,
+    /* Sound Bank */         INST_BANK_10,
     /* Volume */             70,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6203,7 +6203,7 @@ extern const u32 s_dontan_water_mid;
 const struct MidiInfo s_dontan_waterMidiInfo = {
     /* ROM Address */        &s_dontan_water_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         27,
+    /* Sound Bank */         INST_BANK_10,
     /* Volume */             70,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6216,7 +6216,7 @@ extern const u32 s_change_a_mid;
 const struct MidiInfo s_change_aMidiInfo = {
     /* ROM Address */        &s_change_a_mid,
     /* unk4f1 */             0x8,
-    /* Sound Bank */         31,
+    /* Sound Bank */         INST_BANK_14,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6229,7 +6229,7 @@ extern const u32 s_change_b_mid;
 const struct MidiInfo s_change_bMidiInfo = {
     /* ROM Address */        &s_change_b_mid,
     /* unk4f1 */             0x8,
-    /* Sound Bank */         31,
+    /* Sound Bank */         INST_BANK_14,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6242,7 +6242,7 @@ extern const u32 s_change_ball_mid;
 const struct MidiInfo s_change_ballMidiInfo = {
     /* ROM Address */        &s_change_ball_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         41,
+    /* Sound Bank */         INST_BANK_49,
     /* Volume */             80,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6255,7 +6255,7 @@ extern const u32 s_change_hit_a_mid;
 const struct MidiInfo s_change_hit_aMidiInfo = {
     /* ROM Address */        &s_change_hit_a_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         41,
+    /* Sound Bank */         INST_BANK_49,
     /* Volume */             80,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6268,7 +6268,7 @@ extern const u32 s_change_hit_b_mid;
 const struct MidiInfo s_change_hit_bMidiInfo = {
     /* ROM Address */        &s_change_hit_b_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         41,
+    /* Sound Bank */         INST_BANK_49,
     /* Volume */             90,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6281,7 +6281,7 @@ extern const u32 s_change_goal_mid;
 const struct MidiInfo s_change_goalMidiInfo = {
     /* ROM Address */        &s_change_goal_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         27,
+    /* Sound Bank */         INST_BANK_10,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -6294,7 +6294,7 @@ extern const u32 s_check_machine_mid;
 const struct MidiInfo s_check_machineMidiInfo = {
     /* ROM Address */        &s_check_machine_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         31,
+    /* Sound Bank */         INST_BANK_14,
     /* Volume */             90,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6307,7 +6307,7 @@ extern const u32 s_check_trick1_mid;
 const struct MidiInfo s_check_trick1MidiInfo = {
     /* ROM Address */        &s_check_trick1_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             90,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6320,7 +6320,7 @@ extern const u32 s_check_trick2_mid;
 const struct MidiInfo s_check_trick2MidiInfo = {
     /* ROM Address */        &s_check_trick2_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             90,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6333,7 +6333,7 @@ extern const u32 s_check_trick3_mid;
 const struct MidiInfo s_check_trick3MidiInfo = {
     /* ROM Address */        &s_check_trick3_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             90,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6346,7 +6346,7 @@ extern const u32 s_menu_se1_mid;
 const struct MidiInfo s_menu_se1MidiInfo = {
     /* ROM Address */        &s_menu_se1_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         31,
+    /* Sound Bank */         INST_BANK_14,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6359,7 +6359,7 @@ extern const u32 s_menu_se2_mid;
 const struct MidiInfo s_menu_se2MidiInfo = {
     /* ROM Address */        &s_menu_se2_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         31,
+    /* Sound Bank */         INST_BANK_14,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6372,7 +6372,7 @@ extern const u32 s_menu_se3_mid;
 const struct MidiInfo s_menu_se3MidiInfo = {
     /* ROM Address */        &s_menu_se3_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         31,
+    /* Sound Bank */         INST_BANK_14,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6385,7 +6385,7 @@ extern const u32 s_menu_se5_mid;
 const struct MidiInfo s_menu_se5MidiInfo = {
     /* ROM Address */        &s_menu_se5_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         31,
+    /* Sound Bank */         INST_BANK_14,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6398,7 +6398,7 @@ extern const u32 s_menu_se6_mid;
 const struct MidiInfo s_menu_se6MidiInfo = {
     /* ROM Address */        &s_menu_se6_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         31,
+    /* Sound Bank */         INST_BANK_14,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6411,7 +6411,7 @@ extern const u32 s_menu_se7_mid;
 const struct MidiInfo s_menu_se7MidiInfo = {
     /* ROM Address */        &s_menu_se7_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         51,
+    /* Sound Bank */         INST_BANK_19,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6424,7 +6424,7 @@ extern const u32 s_menu_se8_mid;
 const struct MidiInfo s_menu_se8MidiInfo = {
     /* ROM Address */        &s_menu_se8_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         31,
+    /* Sound Bank */         INST_BANK_14,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6437,7 +6437,7 @@ extern const u32 s_menu_se9_mid;
 const struct MidiInfo s_menu_se9MidiInfo = {
     /* ROM Address */        &s_menu_se9_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         31,
+    /* Sound Bank */         INST_BANK_14,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6450,7 +6450,7 @@ extern const u32 s_menu_se10_mid;
 const struct MidiInfo s_menu_se10MidiInfo = {
     /* ROM Address */        &s_menu_se10_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         41,
+    /* Sound Bank */         INST_BANK_49,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6463,7 +6463,7 @@ extern const u32 s_menu_se11_mid;
 const struct MidiInfo s_menu_se11MidiInfo = {
     /* ROM Address */        &s_menu_se11_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         31,
+    /* Sound Bank */         INST_BANK_14,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6476,7 +6476,7 @@ extern const u32 s_menu_se12_mid;
 const struct MidiInfo s_menu_se12MidiInfo = {
     /* ROM Address */        &s_menu_se12_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         31,
+    /* Sound Bank */         INST_BANK_14,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6489,7 +6489,7 @@ extern const u32 s_menu_se13_mid;
 const struct MidiInfo s_menu_se13MidiInfo = {
     /* ROM Address */        &s_menu_se13_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         31,
+    /* Sound Bank */         INST_BANK_14,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6502,7 +6502,7 @@ extern const u32 s_menu_se14_mid;
 const struct MidiInfo s_menu_se14MidiInfo = {
     /* ROM Address */        &s_menu_se14_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         31,
+    /* Sound Bank */         INST_BANK_14,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6515,7 +6515,7 @@ extern const u32 s_menu_se15_mid;
 const struct MidiInfo s_menu_se15MidiInfo = {
     /* ROM Address */        &s_menu_se15_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         41,
+    /* Sound Bank */         INST_BANK_49,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6528,7 +6528,7 @@ extern const u32 s_menu_se16_mid;
 const struct MidiInfo s_menu_se16MidiInfo = {
     /* ROM Address */        &s_menu_se16_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         31,
+    /* Sound Bank */         INST_BANK_14,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6541,7 +6541,7 @@ extern const u32 s_menu_se17_mid;
 const struct MidiInfo s_menu_se17MidiInfo = {
     /* ROM Address */        &s_menu_se17_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             80,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6554,7 +6554,7 @@ extern const u32 s_menu_woodblock_mid;
 const struct MidiInfo s_menu_woodblockMidiInfo = {
     /* ROM Address */        &s_menu_woodblock_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         27,
+    /* Sound Bank */         INST_BANK_10,
     /* Volume */             80,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6567,7 +6567,7 @@ extern const u32 s_menu_se19_mid;
 const struct MidiInfo s_menu_se19MidiInfo = {
     /* ROM Address */        &s_menu_se19_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         31,
+    /* Sound Bank */         INST_BANK_14,
     /* Volume */             110,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6580,7 +6580,7 @@ extern const u32 s_menu_se20_mid;
 const struct MidiInfo s_menu_se20MidiInfo = {
     /* ROM Address */        &s_menu_se20_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         27,
+    /* Sound Bank */         INST_BANK_10,
     /* Volume */             110,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6593,7 +6593,7 @@ extern const u32 s_menu_se22_mid;
 const struct MidiInfo s_menu_se22MidiInfo = {
     /* ROM Address */        &s_menu_se22_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         31,
+    /* Sound Bank */         INST_BANK_14,
     /* Volume */             110,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6606,7 +6606,7 @@ extern const u32 s_menu_se23_mid;
 const struct MidiInfo s_menu_se23MidiInfo = {
     /* ROM Address */        &s_menu_se23_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         31,
+    /* Sound Bank */         INST_BANK_14,
     /* Volume */             110,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6619,7 +6619,7 @@ extern const u32 s_menu_se24_mid;
 const struct MidiInfo s_menu_se24MidiInfo = {
     /* ROM Address */        &s_menu_se24_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         31,
+    /* Sound Bank */         INST_BANK_14,
     /* Volume */             110,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6632,7 +6632,7 @@ extern const u32 s_menu_se25_mid;
 const struct MidiInfo s_menu_se25MidiInfo = {
     /* ROM Address */        &s_menu_se25_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         31,
+    /* Sound Bank */         INST_BANK_14,
     /* Volume */             110,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -6645,7 +6645,7 @@ extern const u32 s_jingle_rat_mid;
 const struct MidiInfo s_jingle_ratMidiInfo = {
     /* ROM Address */        &s_jingle_rat_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -6658,7 +6658,7 @@ extern const u32 s_jingle_march_mid;
 const struct MidiInfo s_jingle_marchMidiInfo = {
     /* ROM Address */        &s_jingle_march_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         21,
+    /* Sound Bank */         INST_BANK_4,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -6671,7 +6671,7 @@ extern const u32 s_jingle_iai_mid;
 const struct MidiInfo s_jingle_iaiMidiInfo = {
     /* ROM Address */        &s_jingle_iai_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -6684,7 +6684,7 @@ extern const u32 s_jingle_ghost_mid;
 const struct MidiInfo s_jingle_ghostMidiInfo = {
     /* ROM Address */        &s_jingle_ghost_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         50,
+    /* Sound Bank */         INST_BANK_18,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -6697,7 +6697,7 @@ extern const u32 s_jingle_poli_mid;
 const struct MidiInfo s_jingle_poliMidiInfo = {
     /* ROM Address */        &s_jingle_poli_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -6710,7 +6710,7 @@ extern const u32 s_jingle_handclap_mid;
 const struct MidiInfo s_jingle_handclapMidiInfo = {
     /* ROM Address */        &s_jingle_handclap_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         54,
+    /* Sound Bank */         INST_BANK_22,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -6723,7 +6723,7 @@ extern const u32 s_jingle_tap_mid;
 const struct MidiInfo s_jingle_tapMidiInfo = {
     /* ROM Address */        &s_jingle_tap_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         55,
+    /* Sound Bank */         INST_BANK_23,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -6736,7 +6736,7 @@ extern const u32 s_jingle_baseball_mid;
 const struct MidiInfo s_jingle_baseballMidiInfo = {
     /* ROM Address */        &s_jingle_baseball_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         33,
+    /* Sound Bank */         INST_BANK_16,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -6749,7 +6749,7 @@ extern const u32 s_jingle_toss_mid;
 const struct MidiInfo s_jingle_tossMidiInfo = {
     /* ROM Address */        &s_jingle_toss_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         64,
+    /* Sound Bank */         INST_BANK_32,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -6762,7 +6762,7 @@ extern const u32 s_jingle_karate_mid;
 const struct MidiInfo s_jingle_karateMidiInfo = {
     /* ROM Address */        &s_jingle_karate_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         56,
+    /* Sound Bank */         INST_BANK_24,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -6775,7 +6775,7 @@ extern const u32 s_jingle_witch_mid;
 const struct MidiInfo s_jingle_witchMidiInfo = {
     /* ROM Address */        &s_jingle_witch_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             75,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -6788,7 +6788,7 @@ extern const u32 s_jingle_datumo_mid;
 const struct MidiInfo s_jingle_datumoMidiInfo = {
     /* ROM Address */        &s_jingle_datumo_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         27,
+    /* Sound Bank */         INST_BANK_10,
     /* Volume */             75,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -6801,7 +6801,7 @@ extern const u32 s_jingle_quiz_mid;
 const struct MidiInfo s_jingle_quizMidiInfo = {
     /* ROM Address */        &s_jingle_quiz_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         55,
+    /* Sound Bank */         INST_BANK_23,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -6814,7 +6814,7 @@ extern const u32 s_jingle_bon_mid;
 const struct MidiInfo s_jingle_bonMidiInfo = {
     /* ROM Address */        &s_jingle_bon_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         70,
+    /* Sound Bank */         INST_BANK_38,
     /* Volume */             90,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -6827,7 +6827,7 @@ extern const u32 s_jingle_rap_mid;
 const struct MidiInfo s_jingle_rapMidiInfo = {
     /* ROM Address */        &s_jingle_rap_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         32,
+    /* Sound Bank */         INST_BANK_15,
     /* Volume */             85,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -6840,7 +6840,7 @@ extern const u32 s_jingle_remix_mid;
 const struct MidiInfo s_jingle_remixMidiInfo = {
     /* ROM Address */        &s_jingle_remix_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         30,
+    /* Sound Bank */         INST_BANK_13,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -6853,7 +6853,7 @@ extern const u32 s_fanfare_drum1_mid;
 const struct MidiInfo s_fanfare_drum1MidiInfo = {
     /* ROM Address */        &s_fanfare_drum1_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         52,
+    /* Sound Bank */         INST_BANK_20,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -6866,7 +6866,7 @@ extern const u32 s_fanfare_drum2_mid;
 const struct MidiInfo s_fanfare_drum2MidiInfo = {
     /* ROM Address */        &s_fanfare_drum2_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -6879,7 +6879,7 @@ extern const u32 s_fanfare_drum3_mid;
 const struct MidiInfo s_fanfare_drum3MidiInfo = {
     /* ROM Address */        &s_fanfare_drum3_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             80,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -6892,7 +6892,7 @@ extern const u32 s_jingle_hi_level_mid;
 const struct MidiInfo s_jingle_hi_levelMidiInfo = {
     /* ROM Address */        &s_jingle_hi_level_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         27,
+    /* Sound Bank */         INST_BANK_10,
     /* Volume */             100,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -6905,7 +6905,7 @@ extern const u32 s_ending_bgm_mid;
 const struct MidiInfo s_ending_bgmMidiInfo = {
     /* ROM Address */        &s_ending_bgm_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         69,
+    /* Sound Bank */         INST_BANK_37,
     /* Volume */             100,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -6918,7 +6918,7 @@ extern const u32 s_iai_bgm_studio_mid;
 const struct MidiInfo s_iai_bgm_studioMidiInfo = {
     /* ROM Address */        &s_iai_bgm_studio_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         19,
+    /* Sound Bank */         INST_BANK_2,
     /* Volume */             100,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -6931,7 +6931,7 @@ extern const u32 s_rabbit_bgm_studio_mid;
 const struct MidiInfo s_rabbit_bgm_studioMidiInfo = {
     /* ROM Address */        &s_rabbit_bgm_studio_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             90,
     /* unk4f4 */             0x46,
     /* unk4f5 */             0x0,
@@ -6944,7 +6944,7 @@ extern const u32 s_rat_bgm_studio_mid;
 const struct MidiInfo s_rat_bgm_studioMidiInfo = {
     /* ROM Address */        &s_rat_bgm_studio_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         23,
+    /* Sound Bank */         INST_BANK_6,
     /* Volume */             100,
     /* unk4f4 */             0x32,
     /* unk4f5 */             0x0,
@@ -6957,7 +6957,7 @@ extern const u32 s_f_dummy_mid;
 const struct MidiInfo s_f_dummyMidiInfo = {
     /* ROM Address */        &s_f_dummy_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             100,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -6970,7 +6970,7 @@ extern const u32 s_f_dummy_vol0_mid;
 const struct MidiInfo s_f_dummy_vol0MidiInfo = {
     /* ROM Address */        &s_f_dummy_vol0_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             0,
     /* unk4f4 */             0x0,
     /* unk4f5 */             0x0,
@@ -6983,7 +6983,7 @@ extern const u32 s_f_result_bad_mid;
 const struct MidiInfo s_f_result_badMidiInfo = {
     /* ROM Address */        &s_f_result_bad_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             90,
     /* unk4f4 */             0x6e,
     /* unk4f5 */             0x0,
@@ -6996,7 +6996,7 @@ extern const u32 s_f_result_normal_mid;
 const struct MidiInfo s_f_result_normalMidiInfo = {
     /* ROM Address */        &s_f_result_normal_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             75,
     /* unk4f4 */             0x6e,
     /* unk4f5 */             0x0,
@@ -7009,7 +7009,7 @@ extern const u32 s_f_result_mes_step1_mid;
 const struct MidiInfo s_f_result_mes_step1MidiInfo = {
     /* ROM Address */        &s_f_result_mes_step1_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             65,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -7022,7 +7022,7 @@ extern const u32 s_f_result_mes_step2_mid;
 const struct MidiInfo s_f_result_mes_step2MidiInfo = {
     /* ROM Address */        &s_f_result_mes_step2_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             80,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -7035,7 +7035,7 @@ extern const u32 s_f_nyuuka_mid;
 const struct MidiInfo s_f_nyuukaMidiInfo = {
     /* ROM Address */        &s_f_nyuuka_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             90,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -7048,7 +7048,7 @@ extern const u32 s_f_campaign_notice_mid;
 const struct MidiInfo s_f_campaign_noticeMidiInfo = {
     /* ROM Address */        &s_f_campaign_notice_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             90,
     /* unk4f4 */             0x78,
     /* unk4f5 */             0x0,
@@ -7061,7 +7061,7 @@ extern const u32 s_f_open_game_mid;
 const struct MidiInfo s_f_open_gameMidiInfo = {
     /* ROM Address */        &s_f_open_game_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             50,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -7074,7 +7074,7 @@ extern const u32 s_f_clear_game_mid;
 const struct MidiInfo s_f_clear_gameMidiInfo = {
     /* ROM Address */        &s_f_clear_game_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             90,
     /* unk4f4 */             0x6e,
     /* unk4f5 */             0x0,
@@ -7087,7 +7087,7 @@ extern const u32 s_f_get_medal_mid;
 const struct MidiInfo s_f_get_medalMidiInfo = {
     /* ROM Address */        &s_f_get_medal_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             100,
     /* unk4f4 */             0x73,
     /* unk4f5 */             0x0,
@@ -7100,7 +7100,7 @@ extern const u32 s_f_point_roll_mid;
 const struct MidiInfo s_f_point_rollMidiInfo = {
     /* ROM Address */        &s_f_point_roll_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             60,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -7113,7 +7113,7 @@ extern const u32 s_f_point_stop_mid;
 const struct MidiInfo s_f_point_stopMidiInfo = {
     /* ROM Address */        &s_f_point_stop_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -7126,7 +7126,7 @@ extern const u32 s_f_appear_game_mid;
 const struct MidiInfo s_f_appear_gameMidiInfo = {
     /* ROM Address */        &s_f_appear_game_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             80,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -7139,7 +7139,7 @@ extern const u32 s_f_fail_perfect_mid;
 const struct MidiInfo s_f_fail_perfectMidiInfo = {
     /* ROM Address */        &s_f_fail_perfect_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             80,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -7152,7 +7152,7 @@ extern const u32 s_f_result_mes_add_mid;
 const struct MidiInfo s_f_result_mes_addMidiInfo = {
     /* ROM Address */        &s_f_result_mes_add_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             55,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -7165,7 +7165,7 @@ extern const u32 s_f_send_mes_mid;
 const struct MidiInfo s_f_send_mesMidiInfo = {
     /* ROM Address */        &s_f_send_mes_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             80,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -7178,7 +7178,7 @@ extern const u32 s_f_pause_on_mid;
 const struct MidiInfo s_f_pause_onMidiInfo = {
     /* ROM Address */        &s_f_pause_on_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             100,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -7191,7 +7191,7 @@ extern const u32 s_f_pause_cursor_mid;
 const struct MidiInfo s_f_pause_cursorMidiInfo = {
     /* ROM Address */        &s_f_pause_cursor_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             100,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -7204,7 +7204,7 @@ extern const u32 s_f_pause_continue_mid;
 const struct MidiInfo s_f_pause_continueMidiInfo = {
     /* ROM Address */        &s_f_pause_continue_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             100,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -7217,7 +7217,7 @@ extern const u32 s_f_pause_quit_mid;
 const struct MidiInfo s_f_pause_quitMidiInfo = {
     /* ROM Address */        &s_f_pause_quit_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             100,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -7230,7 +7230,7 @@ extern const u32 s_f_scratch_mid;
 const struct MidiInfo s_f_scratchMidiInfo = {
     /* ROM Address */        &s_f_scratch_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             80,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -7243,7 +7243,7 @@ extern const u32 s_f_env_train_mid;
 const struct MidiInfo s_f_env_trainMidiInfo = {
     /* ROM Address */        &s_f_env_train_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             90,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -7256,7 +7256,7 @@ extern const u32 s_f_env_cherry_mid;
 const struct MidiInfo s_f_env_cherryMidiInfo = {
     /* ROM Address */        &s_f_env_cherry_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             100,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -7269,7 +7269,7 @@ extern const u32 s_f_env_haiku_mid;
 const struct MidiInfo s_f_env_haikuMidiInfo = {
     /* ROM Address */        &s_f_env_haiku_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             75,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -7282,7 +7282,7 @@ extern const u32 s_f_env_class_room_mid;
 const struct MidiInfo s_f_env_class_roomMidiInfo = {
     /* ROM Address */        &s_f_env_class_room_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             90,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -7295,7 +7295,7 @@ extern const u32 s_f_env_paper_mid;
 const struct MidiInfo s_f_env_paperMidiInfo = {
     /* ROM Address */        &s_f_env_paper_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             90,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -7308,7 +7308,7 @@ extern const u32 s_f_env_paper_rev_mid;
 const struct MidiInfo s_f_env_paper_revMidiInfo = {
     /* ROM Address */        &s_f_env_paper_rev_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             90,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -7321,7 +7321,7 @@ extern const u32 s_f_cafe_send_mes_mid;
 const struct MidiInfo s_f_cafe_send_mesMidiInfo = {
     /* ROM Address */        &s_f_cafe_send_mes_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             100,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -7334,7 +7334,7 @@ extern const u32 s_f_drum_BD_1_mid;
 const struct MidiInfo s_f_drum_BD_1MidiInfo = {
     /* ROM Address */        &s_f_drum_BD_1_mid,
     /* unk4f1 */             0x2,
-    /* Sound Bank */         5,
+    /* Sound Bank */         INST_BANK_54,
     /* Volume */             100,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -7347,7 +7347,7 @@ extern const u32 s_f_drum_SD_1_mid;
 const struct MidiInfo s_f_drum_SD_1MidiInfo = {
     /* ROM Address */        &s_f_drum_SD_1_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         5,
+    /* Sound Bank */         INST_BANK_54,
     /* Volume */             100,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -7360,7 +7360,7 @@ extern const u32 s_f_drum_SD_Rim_Open_mid;
 const struct MidiInfo s_f_drum_SD_Rim_OpenMidiInfo = {
     /* ROM Address */        &s_f_drum_SD_Rim_Open_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         5,
+    /* Sound Bank */         INST_BANK_54,
     /* Volume */             100,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -7373,7 +7373,7 @@ extern const u32 s_f_drum_Sym_Crash_mid;
 const struct MidiInfo s_f_drum_Sym_CrashMidiInfo = {
     /* ROM Address */        &s_f_drum_Sym_Crash_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         5,
+    /* Sound Bank */         INST_BANK_54,
     /* Volume */             100,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -7386,7 +7386,7 @@ extern const u32 s_f_test_drum_BD_A_mid;
 const struct MidiInfo s_f_test_drum_BD_AMidiInfo = {
     /* ROM Address */        &s_f_test_drum_BD_A_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         17,
+    /* Sound Bank */         INST_BANK_55,
     /* Volume */             120,
     /* unk4f4 */             0x78,
     /* unk4f5 */             0x0,
@@ -7399,7 +7399,7 @@ extern const u32 s_f_test_drum_BD_B_mid;
 const struct MidiInfo s_f_test_drum_BD_BMidiInfo = {
     /* ROM Address */        &s_f_test_drum_BD_B_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         17,
+    /* Sound Bank */         INST_BANK_55,
     /* Volume */             120,
     /* unk4f4 */             0x78,
     /* unk4f5 */             0x0,
@@ -7412,7 +7412,7 @@ extern const u32 s_f_test_drum_SD_A_mid;
 const struct MidiInfo s_f_test_drum_SD_AMidiInfo = {
     /* ROM Address */        &s_f_test_drum_SD_A_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         17,
+    /* Sound Bank */         INST_BANK_55,
     /* Volume */             120,
     /* unk4f4 */             0x78,
     /* unk4f5 */             0x0,
@@ -7425,7 +7425,7 @@ extern const u32 s_f_test_drum_SD_B_mid;
 const struct MidiInfo s_f_test_drum_SD_BMidiInfo = {
     /* ROM Address */        &s_f_test_drum_SD_B_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         17,
+    /* Sound Bank */         INST_BANK_55,
     /* Volume */             120,
     /* unk4f4 */             0x78,
     /* unk4f5 */             0x0,
@@ -7438,7 +7438,7 @@ extern const u32 s_f_toss_miss1_mid;
 const struct MidiInfo s_f_toss_miss1MidiInfo = {
     /* ROM Address */        &s_f_toss_miss1_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             90,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -7451,7 +7451,7 @@ extern const u32 s_f_toss_miss2_mid;
 const struct MidiInfo s_f_toss_miss2MidiInfo = {
     /* ROM Address */        &s_f_toss_miss2_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             90,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -7464,7 +7464,7 @@ extern const u32 s_f_toss_miss3_mid;
 const struct MidiInfo s_f_toss_miss3MidiInfo = {
     /* ROM Address */        &s_f_toss_miss3_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             90,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -7477,7 +7477,7 @@ extern const u32 s_f_toss_ball_mid;
 const struct MidiInfo s_f_toss_ballMidiInfo = {
     /* ROM Address */        &s_f_toss_ball_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             90,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -7490,7 +7490,7 @@ extern const u32 s_f_toss_swing_mid;
 const struct MidiInfo s_f_toss_swingMidiInfo = {
     /* ROM Address */        &s_f_toss_swing_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             80,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -7503,7 +7503,7 @@ extern const u32 s_f_shuji_v_nuaa_mid;
 const struct MidiInfo s_f_shuji_v_nuaaMidiInfo = {
     /* ROM Address */        &s_f_shuji_v_nuaa_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             75,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -7516,7 +7516,7 @@ extern const u32 s_f_shuji_v_unuu_mid;
 const struct MidiInfo s_f_shuji_v_unuuMidiInfo = {
     /* ROM Address */        &s_f_shuji_v_unuu_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             75,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -7529,7 +7529,7 @@ extern const u32 s_f_shuji_v_ouch_mid;
 const struct MidiInfo s_f_shuji_v_ouchMidiInfo = {
     /* ROM Address */        &s_f_shuji_v_ouch_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             75,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -7542,7 +7542,7 @@ extern const u32 s_f_shuji_swing1_mid;
 const struct MidiInfo s_f_shuji_swing1MidiInfo = {
     /* ROM Address */        &s_f_shuji_swing1_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             90,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -7555,7 +7555,7 @@ extern const u32 s_f_shuji_swing2_mid;
 const struct MidiInfo s_f_shuji_swing2MidiInfo = {
     /* ROM Address */        &s_f_shuji_swing2_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             90,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -7568,7 +7568,7 @@ extern const u32 s_f_shuji_start_mid;
 const struct MidiInfo s_f_shuji_startMidiInfo = {
     /* ROM Address */        &s_f_shuji_start_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             90,
     /* unk4f4 */             0x5b,
     /* unk4f5 */             0x0,
@@ -7581,7 +7581,7 @@ extern const u32 s_f_shuji_v_ha1_mid;
 const struct MidiInfo s_f_shuji_v_ha1MidiInfo = {
     /* ROM Address */        &s_f_shuji_v_ha1_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             90,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -7594,7 +7594,7 @@ extern const u32 s_f_shuji_v_ha2_mid;
 const struct MidiInfo s_f_shuji_v_ha2MidiInfo = {
     /* ROM Address */        &s_f_shuji_v_ha2_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             65,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -7607,7 +7607,7 @@ extern const u32 s_f_shuji_v_ha3_mid;
 const struct MidiInfo s_f_shuji_v_ha3MidiInfo = {
     /* ROM Address */        &s_f_shuji_v_ha3_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             100,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -7620,7 +7620,7 @@ extern const u32 s_f_shuji_v_funuue_mid;
 const struct MidiInfo s_f_shuji_v_funuueMidiInfo = {
     /* ROM Address */        &s_f_shuji_v_funuue_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -7633,7 +7633,7 @@ extern const u32 s_f_shuji_v_nuahaha_mid;
 const struct MidiInfo s_f_shuji_v_nuahahaMidiInfo = {
     /* ROM Address */        &s_f_shuji_v_nuahaha_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             60,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -7646,7 +7646,7 @@ extern const u32 s_f_rat_goal_mid;
 const struct MidiInfo s_f_rat_goalMidiInfo = {
     /* ROM Address */        &s_f_rat_goal_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         102,
+    /* Sound Bank */         INST_BANK_58,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -7659,7 +7659,7 @@ extern const u32 s_f_rat_error_mid;
 const struct MidiInfo s_f_rat_errorMidiInfo = {
     /* ROM Address */        &s_f_rat_error_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         102,
+    /* Sound Bank */         INST_BANK_58,
     /* Volume */             70,
     /* unk4f4 */             0x65,
     /* unk4f5 */             0x0,
@@ -7672,7 +7672,7 @@ extern const u32 s_f_rat_slip_mid;
 const struct MidiInfo s_f_rat_slipMidiInfo = {
     /* ROM Address */        &s_f_rat_slip_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         102,
+    /* Sound Bank */         INST_BANK_58,
     /* Volume */             100,
     /* unk4f4 */             0x46,
     /* unk4f5 */             0x0,
@@ -7685,7 +7685,7 @@ extern const u32 s_f_hanabi_v_tamaya_mid;
 const struct MidiInfo s_f_hanabi_v_tamayaMidiInfo = {
     /* ROM Address */        &s_f_hanabi_v_tamaya_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         103,
+    /* Sound Bank */         INST_BANK_59,
     /* Volume */             70,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -7698,7 +7698,7 @@ extern const u32 s_f_hanabi_v_nuei_mid;
 const struct MidiInfo s_f_hanabi_v_nueiMidiInfo = {
     /* ROM Address */        &s_f_hanabi_v_nuei_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         103,
+    /* Sound Bank */         INST_BANK_59,
     /* Volume */             105,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -7711,7 +7711,7 @@ extern const u32 s_f_hanabi_kansei_mid;
 const struct MidiInfo s_f_hanabi_kanseiMidiInfo = {
     /* ROM Address */        &s_f_hanabi_kansei_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         103,
+    /* Sound Bank */         INST_BANK_59,
     /* Volume */             115,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -7724,7 +7724,7 @@ extern const u32 s_f_iai_cut_mid;
 const struct MidiInfo s_f_iai_cutMidiInfo = {
     /* ROM Address */        &s_f_iai_cut_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         104,
+    /* Sound Bank */         INST_BANK_60,
     /* Volume */             110,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -7737,7 +7737,7 @@ extern const u32 s_f_iai_cut2_mid;
 const struct MidiInfo s_f_iai_cut2MidiInfo = {
     /* ROM Address */        &s_f_iai_cut2_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         104,
+    /* Sound Bank */         INST_BANK_60,
     /* Volume */             115,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -7750,7 +7750,7 @@ extern const u32 s_f_iai_title_mid;
 const struct MidiInfo s_f_iai_titleMidiInfo = {
     /* ROM Address */        &s_f_iai_title_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         104,
+    /* Sound Bank */         INST_BANK_60,
     /* Volume */             115,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -7763,7 +7763,7 @@ extern const u32 s_f_virus_in_mid;
 const struct MidiInfo s_f_virus_inMidiInfo = {
     /* ROM Address */        &s_f_virus_in_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         104,
+    /* Sound Bank */         INST_BANK_60,
     /* Volume */             50,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -7776,7 +7776,7 @@ extern const u32 s_f_virus_uhihi_mid;
 const struct MidiInfo s_f_virus_uhihiMidiInfo = {
     /* ROM Address */        &s_f_virus_uhihi_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         104,
+    /* Sound Bank */         INST_BANK_60,
     /* Volume */             100,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -7789,7 +7789,7 @@ extern const u32 s_f_virus_hit_mid;
 const struct MidiInfo s_f_virus_hitMidiInfo = {
     /* ROM Address */        &s_f_virus_hit_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         104,
+    /* Sound Bank */         INST_BANK_60,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -7802,7 +7802,7 @@ extern const u32 s_f_virus_osii_mid;
 const struct MidiInfo s_f_virus_osiiMidiInfo = {
     /* ROM Address */        &s_f_virus_osii_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         104,
+    /* Sound Bank */         INST_BANK_60,
     /* Volume */             110,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -7815,7 +7815,7 @@ extern const u32 s_f_virus_face_fadeout_mid;
 const struct MidiInfo s_f_virus_face_fadeoutMidiInfo = {
     /* ROM Address */        &s_f_virus_face_fadeout_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         104,
+    /* Sound Bank */         INST_BANK_60,
     /* Volume */             70,
     /* unk4f4 */             0x55,
     /* unk4f5 */             0x0,
@@ -7828,7 +7828,7 @@ extern const u32 s_f_virus_note_land_mid;
 const struct MidiInfo s_f_virus_note_landMidiInfo = {
     /* ROM Address */        &s_f_virus_note_land_mid,
     /* unk4f1 */             0x8,
-    /* Sound Bank */         104,
+    /* Sound Bank */         INST_BANK_60,
     /* Volume */             100,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -7841,7 +7841,7 @@ extern const u32 s_f_hair_kegire_mid;
 const struct MidiInfo s_f_hair_kegireMidiInfo = {
     /* ROM Address */        &s_f_hair_kegire_mid,
     /* unk4f1 */             0x9,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             110,
     /* unk4f4 */             0x55,
     /* unk4f5 */             0x0,
@@ -7854,7 +7854,7 @@ extern const u32 s_f_hair_next_mid;
 const struct MidiInfo s_f_hair_nextMidiInfo = {
     /* ROM Address */        &s_f_hair_next_mid,
     /* unk4f1 */             0x8,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             60,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -7867,7 +7867,7 @@ extern const u32 s_f_hair_nuki_long_mid;
 const struct MidiInfo s_f_hair_nuki_longMidiInfo = {
     /* ROM Address */        &s_f_hair_nuki_long_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             90,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -7880,7 +7880,7 @@ extern const u32 s_f_hair_tuneru_mid;
 const struct MidiInfo s_f_hair_tuneruMidiInfo = {
     /* ROM Address */        &s_f_hair_tuneru_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             80,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -7893,7 +7893,7 @@ extern const u32 s_f_hair_appear_long_mid;
 const struct MidiInfo s_f_hair_appear_longMidiInfo = {
     /* ROM Address */        &s_f_hair_appear_long_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             80,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -7906,7 +7906,7 @@ extern const u32 s_f_poly_blast_mid;
 const struct MidiInfo s_f_poly_blastMidiInfo = {
     /* ROM Address */        &s_f_poly_blast_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             120,
     /* unk4f4 */             0x6e,
     /* unk4f5 */             0x0,
@@ -7919,7 +7919,7 @@ extern const u32 s_f_poly_withdraw_mid;
 const struct MidiInfo s_f_poly_withdrawMidiInfo = {
     /* ROM Address */        &s_f_poly_withdraw_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -7932,7 +7932,7 @@ extern const u32 s_f_poly_close_mid;
 const struct MidiInfo s_f_poly_closeMidiInfo = {
     /* ROM Address */        &s_f_poly_close_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             70,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -7945,7 +7945,7 @@ extern const u32 s_f_poly_appear_upside_mid;
 const struct MidiInfo s_f_poly_appear_upsideMidiInfo = {
     /* ROM Address */        &s_f_poly_appear_upside_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             100,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -7958,7 +7958,7 @@ extern const u32 s_f_poly_appear_downside_mid;
 const struct MidiInfo s_f_poly_appear_downsideMidiInfo = {
     /* ROM Address */        &s_f_poly_appear_downside_mid,
     /* unk4f1 */             0x2,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             100,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -7971,7 +7971,7 @@ extern const u32 s_f_poly_open_upside_mid;
 const struct MidiInfo s_f_poly_open_upsideMidiInfo = {
     /* ROM Address */        &s_f_poly_open_upside_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             120,
     /* unk4f4 */             0x78,
     /* unk4f5 */             0x0,
@@ -7984,7 +7984,7 @@ extern const u32 s_f_poly_open_downside_mid;
 const struct MidiInfo s_f_poly_open_downsideMidiInfo = {
     /* ROM Address */        &s_f_poly_open_downside_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             120,
     /* unk4f4 */             0x78,
     /* unk4f5 */             0x0,
@@ -7997,7 +7997,7 @@ extern const u32 s_f_boxing_punch_mid;
 const struct MidiInfo s_f_boxing_punchMidiInfo = {
     /* ROM Address */        &s_f_boxing_punch_mid,
     /* unk4f1 */             0x2,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             80,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -8010,7 +8010,7 @@ extern const u32 s_f_boxing_just_hati_mid;
 const struct MidiInfo s_f_boxing_just_hatiMidiInfo = {
     /* ROM Address */        &s_f_boxing_just_hati_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             110,
     /* unk4f4 */             0x78,
     /* unk4f5 */             0x0,
@@ -8023,7 +8023,7 @@ extern const u32 s_f_boxing_just_hati_nc_mid;
 const struct MidiInfo s_f_boxing_just_hati_ncMidiInfo = {
     /* ROM Address */        &s_f_boxing_just_hati_nc_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             110,
     /* unk4f4 */             0x78,
     /* unk4f5 */             0x0,
@@ -8036,7 +8036,7 @@ extern const u32 s_f_boxing_just_light_mid;
 const struct MidiInfo s_f_boxing_just_lightMidiInfo = {
     /* ROM Address */        &s_f_boxing_just_light_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             110,
     /* unk4f4 */             0x78,
     /* unk4f5 */             0x0,
@@ -8049,7 +8049,7 @@ extern const u32 s_f_boxing_just_light_nc_mid;
 const struct MidiInfo s_f_boxing_just_light_ncMidiInfo = {
     /* ROM Address */        &s_f_boxing_just_light_nc_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             110,
     /* unk4f4 */             0x78,
     /* unk4f5 */             0x0,
@@ -8062,7 +8062,7 @@ extern const u32 s_f_boxing_just_ball_mid;
 const struct MidiInfo s_f_boxing_just_ballMidiInfo = {
     /* ROM Address */        &s_f_boxing_just_ball_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             110,
     /* unk4f4 */             0x78,
     /* unk4f5 */             0x0,
@@ -8075,7 +8075,7 @@ extern const u32 s_f_boxing_just_ball_nc_mid;
 const struct MidiInfo s_f_boxing_just_ball_ncMidiInfo = {
     /* ROM Address */        &s_f_boxing_just_ball_nc_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             110,
     /* unk4f4 */             0x78,
     /* unk4f5 */             0x0,
@@ -8088,7 +8088,7 @@ extern const u32 s_f_boxing_just_rock_mid;
 const struct MidiInfo s_f_boxing_just_rockMidiInfo = {
     /* ROM Address */        &s_f_boxing_just_rock_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             127,
     /* unk4f4 */             0x78,
     /* unk4f5 */             0x0,
@@ -8101,7 +8101,7 @@ extern const u32 s_f_boxing_just_rock_nc_mid;
 const struct MidiInfo s_f_boxing_just_rock_ncMidiInfo = {
     /* ROM Address */        &s_f_boxing_just_rock_nc_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             127,
     /* unk4f4 */             0x78,
     /* unk4f5 */             0x0,
@@ -8114,7 +8114,7 @@ extern const u32 s_f_boxing_just_bomb_mid;
 const struct MidiInfo s_f_boxing_just_bombMidiInfo = {
     /* ROM Address */        &s_f_boxing_just_bomb_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             120,
     /* unk4f4 */             0x78,
     /* unk4f5 */             0x0,
@@ -8127,7 +8127,7 @@ extern const u32 s_f_boxing_normal_mid;
 const struct MidiInfo s_f_boxing_normalMidiInfo = {
     /* ROM Address */        &s_f_boxing_normal_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             95,
     /* unk4f4 */             0x78,
     /* unk4f5 */             0x0,
@@ -8140,7 +8140,7 @@ extern const u32 s_f_boxing_land_mid;
 const struct MidiInfo s_f_boxing_landMidiInfo = {
     /* ROM Address */        &s_f_boxing_land_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             90,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -8153,7 +8153,7 @@ extern const u32 s_f_boxing_fly_nml_mid;
 const struct MidiInfo s_f_boxing_fly_nmlMidiInfo = {
     /* ROM Address */        &s_f_boxing_fly_nml_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             80,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -8166,7 +8166,7 @@ extern const u32 s_f_boxing_v_nua_mid;
 const struct MidiInfo s_f_boxing_v_nuaMidiInfo = {
     /* ROM Address */        &s_f_boxing_v_nua_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             45,
     /* unk4f4 */             0x52,
     /* unk4f5 */             0x0,
@@ -8179,7 +8179,7 @@ extern const u32 s_f_boxing_hard_mid;
 const struct MidiInfo s_f_boxing_hardMidiInfo = {
     /* ROM Address */        &s_f_boxing_hard_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             100,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -8192,7 +8192,7 @@ extern const u32 s_f_boxing_score_reset_mid;
 const struct MidiInfo s_f_boxing_score_resetMidiInfo = {
     /* ROM Address */        &s_f_boxing_score_reset_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             75,
     /* unk4f4 */             0x78,
     /* unk4f5 */             0x0,
@@ -8205,7 +8205,7 @@ extern const u32 s_f_boxing_score_up_mid;
 const struct MidiInfo s_f_boxing_score_upMidiInfo = {
     /* ROM Address */        &s_f_boxing_score_up_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             75,
     /* unk4f4 */             0x78,
     /* unk4f5 */             0x0,
@@ -8218,7 +8218,7 @@ extern const u32 s_f_boxing_score_down_mid;
 const struct MidiInfo s_f_boxing_score_downMidiInfo = {
     /* ROM Address */        &s_f_boxing_score_down_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             70,
     /* unk4f4 */             0x78,
     /* unk4f5 */             0x0,
@@ -8231,7 +8231,7 @@ extern const u32 s_f_boxing_kansei_mid;
 const struct MidiInfo s_f_boxing_kanseiMidiInfo = {
     /* ROM Address */        &s_f_boxing_kansei_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             70,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -8244,7 +8244,7 @@ extern const u32 s_f_boxing_v_fresh_mid;
 const struct MidiInfo s_f_boxing_v_freshMidiInfo = {
     /* ROM Address */        &s_f_boxing_v_fresh_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             0,
     /* unk4f4 */             0x78,
     /* unk4f5 */             0x0,
@@ -8257,7 +8257,7 @@ extern const u32 s_f_boxing_title_hit_mid;
 const struct MidiInfo s_f_boxing_title_hitMidiInfo = {
     /* ROM Address */        &s_f_boxing_title_hit_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             90,
     /* unk4f4 */             0x78,
     /* unk4f5 */             0x0,
@@ -8270,7 +8270,7 @@ extern const u32 s_f_boxing_honki_mid;
 const struct MidiInfo s_f_boxing_honkiMidiInfo = {
     /* ROM Address */        &s_f_boxing_honki_mid,
     /* unk4f1 */             0x8,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             100,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -8283,7 +8283,7 @@ extern const u32 s_f_boxing_fly_ext_mid;
 const struct MidiInfo s_f_boxing_fly_extMidiInfo = {
     /* ROM Address */        &s_f_boxing_fly_ext_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             90,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -8296,7 +8296,7 @@ extern const u32 s_f_quiz_hit_ply_mid;
 const struct MidiInfo s_f_quiz_hit_plyMidiInfo = {
     /* ROM Address */        &s_f_quiz_hit_ply_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -8309,7 +8309,7 @@ extern const u32 s_f_quiz_hit_com_mid;
 const struct MidiInfo s_f_quiz_hit_comMidiInfo = {
     /* ROM Address */        &s_f_quiz_hit_com_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -8322,7 +8322,7 @@ extern const u32 s_f_quiz_blast_ply_mid;
 const struct MidiInfo s_f_quiz_blast_plyMidiInfo = {
     /* ROM Address */        &s_f_quiz_blast_ply_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -8335,7 +8335,7 @@ extern const u32 s_f_quiz_blast_com_mid;
 const struct MidiInfo s_f_quiz_blast_comMidiInfo = {
     /* ROM Address */        &s_f_quiz_blast_com_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -8348,7 +8348,7 @@ extern const u32 s_f_quiz_blast_plate_mid;
 const struct MidiInfo s_f_quiz_blast_plateMidiInfo = {
     /* ROM Address */        &s_f_quiz_blast_plate_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -8361,7 +8361,7 @@ extern const u32 s_f_quiz_miss_mid;
 const struct MidiInfo s_f_quiz_missMidiInfo = {
     /* ROM Address */        &s_f_quiz_miss_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             110,
     /* unk4f4 */             0x6e,
     /* unk4f5 */             0x0,
@@ -8374,7 +8374,7 @@ extern const u32 s_f_quiz_stop_mid;
 const struct MidiInfo s_f_quiz_stopMidiInfo = {
     /* ROM Address */        &s_f_quiz_stop_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             70,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -8387,7 +8387,7 @@ extern const u32 s_f_quiz_answer_mid;
 const struct MidiInfo s_f_quiz_answerMidiInfo = {
     /* ROM Address */        &s_f_quiz_answer_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -8400,7 +8400,7 @@ extern const u32 s_f_quiz_ok_mid;
 const struct MidiInfo s_f_quiz_okMidiInfo = {
     /* ROM Address */        &s_f_quiz_ok_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             127,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -8413,7 +8413,7 @@ extern const u32 s_f_ninja_kabe_mid;
 const struct MidiInfo s_f_ninja_kabeMidiInfo = {
     /* ROM Address */        &s_f_ninja_kabe_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -8426,7 +8426,7 @@ extern const u32 s_f_ninja_demo_mid;
 const struct MidiInfo s_f_ninja_demoMidiInfo = {
     /* ROM Address */        &s_f_ninja_demo_mid,
     /* unk4f1 */             0x0,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             90,
     /* unk4f4 */             0x0,
     /* unk4f5 */             0x0,
@@ -8439,7 +8439,7 @@ extern const u32 s_f_ninja_v_nanu_mid;
 const struct MidiInfo s_f_ninja_v_nanuMidiInfo = {
     /* ROM Address */        &s_f_ninja_v_nanu_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             90,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -8452,7 +8452,7 @@ extern const u32 s_f_rapW_v_YoOyatuDesuka_mid;
 const struct MidiInfo s_f_rapW_v_YoOyatuDesukaMidiInfo = {
     /* ROM Address */        &s_f_rapW_v_YoOyatuDesuka_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             103,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -8465,7 +8465,7 @@ extern const u32 s_f_rapW_v_Yo10JiDesuka_mid;
 const struct MidiInfo s_f_rapW_v_Yo10JiDesukaMidiInfo = {
     /* ROM Address */        &s_f_rapW_v_Yo10JiDesuka_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             103,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -8478,7 +8478,7 @@ extern const u32 s_f_rapW_v_Naishodesuka_mid;
 const struct MidiInfo s_f_rapW_v_NaishodesukaMidiInfo = {
     /* ROM Address */        &s_f_rapW_v_Naishodesuka_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             103,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -8491,7 +8491,7 @@ extern const u32 s_f_rapW_v_KarenoOyatudane_mid;
 const struct MidiInfo s_f_rapW_v_KarenoOyatudaneMidiInfo = {
     /* ROM Address */        &s_f_rapW_v_KarenoOyatudane_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             95,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -8504,7 +8504,7 @@ extern const u32 s_f_rapW_v_TabeteIikamone_mid;
 const struct MidiInfo s_f_rapW_v_TabeteIikamoneMidiInfo = {
     /* ROM Address */        &s_f_rapW_v_TabeteIikamone_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             95,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -8517,7 +8517,7 @@ extern const u32 s_f_rapW_v_AketeIikamone_mid;
 const struct MidiInfo s_f_rapW_v_AketeIikamoneMidiInfo = {
     /* ROM Address */        &s_f_rapW_v_AketeIikamone_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             95,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -8530,7 +8530,7 @@ extern const u32 s_f_rapW_v_OyatuwaSaiko_mid;
 const struct MidiInfo s_f_rapW_v_OyatuwaSaikoMidiInfo = {
     /* ROM Address */        &s_f_rapW_v_OyatuwaSaiko_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             103,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -8543,7 +8543,7 @@ extern const u32 s_f_rapW_v_KibunnwaSaiko_mid;
 const struct MidiInfo s_f_rapW_v_KibunnwaSaikoMidiInfo = {
     /* ROM Address */        &s_f_rapW_v_KibunnwaSaiko_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             103,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -8556,7 +8556,7 @@ extern const u32 s_f_rapW_v_AmakuteSaiko_mid;
 const struct MidiInfo s_f_rapW_v_AmakuteSaikoMidiInfo = {
     /* ROM Address */        &s_f_rapW_v_AmakuteSaiko_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             103,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -8569,7 +8569,7 @@ extern const u32 s_f_rapW_v_BetubaraSaiko_mid;
 const struct MidiInfo s_f_rapW_v_BetubaraSaikoMidiInfo = {
     /* ROM Address */        &s_f_rapW_v_BetubaraSaiko_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             103,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -8582,7 +8582,7 @@ extern const u32 s_f_rapW_v_KareniwaNaisho_mid;
 const struct MidiInfo s_f_rapW_v_KareniwaNaishoMidiInfo = {
     /* ROM Address */        &s_f_rapW_v_KareniwaNaisho_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             103,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -8595,7 +8595,7 @@ extern const u32 s_f_rapW_v_DarenimoNaisho_mid;
 const struct MidiInfo s_f_rapW_v_DarenimoNaishoMidiInfo = {
     /* ROM Address */        &s_f_rapW_v_DarenimoNaisho_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             103,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -8608,7 +8608,7 @@ extern const u32 s_f_rapW_v_Yeah_mid;
 const struct MidiInfo s_f_rapW_v_YeahMidiInfo = {
     /* ROM Address */        &s_f_rapW_v_Yeah_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             78,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -8621,7 +8621,7 @@ extern const u32 s_f_rapW_v_Un_mid;
 const struct MidiInfo s_f_rapW_v_UnMidiInfo = {
     /* ROM Address */        &s_f_rapW_v_Un_mid,
     /* unk4f1 */             0x8,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             78,
     /* unk4f4 */             0x69,
     /* unk4f5 */             0x0,
@@ -8634,7 +8634,7 @@ extern const u32 s_f_rapW_v_Uun_mid;
 const struct MidiInfo s_f_rapW_v_UunMidiInfo = {
     /* ROM Address */        &s_f_rapW_v_Uun_mid,
     /* unk4f1 */             0x8,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             78,
     /* unk4f4 */             0x69,
     /* unk4f5 */             0x0,
@@ -8647,7 +8647,7 @@ extern const u32 s_f_rapW_v_CheckIt_mid;
 const struct MidiInfo s_f_rapW_v_CheckItMidiInfo = {
     /* ROM Address */        &s_f_rapW_v_CheckIt_mid,
     /* unk4f1 */             0x1,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             46,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -8660,7 +8660,7 @@ extern const u32 s_f_rapW_v_OyatuwaSaiko_d_mid;
 const struct MidiInfo s_f_rapW_v_OyatuwaSaiko_dMidiInfo = {
     /* ROM Address */        &s_f_rapW_v_OyatuwaSaiko_d_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             103,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -8673,7 +8673,7 @@ extern const u32 s_f_rapW_v_KibunnwaSaiko_d_mid;
 const struct MidiInfo s_f_rapW_v_KibunnwaSaiko_dMidiInfo = {
     /* ROM Address */        &s_f_rapW_v_KibunnwaSaiko_d_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             103,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -8686,7 +8686,7 @@ extern const u32 s_f_rapW_v_AmakuteSaiko_d_mid;
 const struct MidiInfo s_f_rapW_v_AmakuteSaiko_dMidiInfo = {
     /* ROM Address */        &s_f_rapW_v_AmakuteSaiko_d_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             103,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -8699,7 +8699,7 @@ extern const u32 s_f_rapW_v_BetubaraSaiko_d_mid;
 const struct MidiInfo s_f_rapW_v_BetubaraSaiko_dMidiInfo = {
     /* ROM Address */        &s_f_rapW_v_BetubaraSaiko_d_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             103,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -8712,7 +8712,7 @@ extern const u32 s_f_batter_ball_land_mid;
 const struct MidiInfo s_f_batter_ball_landMidiInfo = {
     /* ROM Address */        &s_f_batter_ball_land_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             70,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -8725,7 +8725,7 @@ extern const u32 s_f_batter_ball_high_mid;
 const struct MidiInfo s_f_batter_ball_highMidiInfo = {
     /* ROM Address */        &s_f_batter_ball_high_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             90,
     /* unk4f4 */             0x78,
     /* unk4f5 */             0x0,
@@ -8738,7 +8738,7 @@ extern const u32 s_f_handclap_pi_G4_mid;
 const struct MidiInfo s_f_handclap_pi_G4MidiInfo = {
     /* ROM Address */        &s_f_handclap_pi_G4_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             55,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -8751,7 +8751,7 @@ extern const u32 s_f_handclap_pi_E5_mid;
 const struct MidiInfo s_f_handclap_pi_E5MidiInfo = {
     /* ROM Address */        &s_f_handclap_pi_E5_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             50,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -8764,7 +8764,7 @@ extern const u32 s_f_handclap_ready_mid;
 const struct MidiInfo s_f_handclap_readyMidiInfo = {
     /* ROM Address */        &s_f_handclap_ready_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             100,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -8777,7 +8777,7 @@ extern const u32 s_f_aim_just_hit_mid;
 const struct MidiInfo s_f_aim_just_hitMidiInfo = {
     /* ROM Address */        &s_f_aim_just_hit_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             120,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -8790,7 +8790,7 @@ extern const u32 s_f_aim_just_hit_voice_mid;
 const struct MidiInfo s_f_aim_just_hit_voiceMidiInfo = {
     /* ROM Address */        &s_f_aim_just_hit_voice_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             40,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -8803,7 +8803,7 @@ extern const u32 s_f_space_hit_mid;
 const struct MidiInfo s_f_space_hitMidiInfo = {
     /* ROM Address */        &s_f_space_hit_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             60,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -8816,7 +8816,7 @@ extern const u32 s_f_space_dancer_mid;
 const struct MidiInfo s_f_space_dancerMidiInfo = {
     /* ROM Address */        &s_f_space_dancer_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             120,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -8829,7 +8829,7 @@ extern const u32 s_f_space_dancer_swing_mid;
 const struct MidiInfo s_f_space_dancer_swingMidiInfo = {
     /* ROM Address */        &s_f_space_dancer_swing_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             80,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -8842,7 +8842,7 @@ extern const u32 s_f_space_dancer_sit_mid;
 const struct MidiInfo s_f_space_dancer_sitMidiInfo = {
     /* ROM Address */        &s_f_space_dancer_sit_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             80,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -8855,7 +8855,7 @@ extern const u32 s_f_space_dancer_pa_mid;
 const struct MidiInfo s_f_space_dancer_paMidiInfo = {
     /* ROM Address */        &s_f_space_dancer_pa_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             80,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -8868,7 +8868,7 @@ extern const u32 s_f_esa_jump_mid;
 const struct MidiInfo s_f_esa_jumpMidiInfo = {
     /* ROM Address */        &s_f_esa_jump_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             127,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -8881,7 +8881,7 @@ extern const u32 s_f_esa_splash_penguin_mid;
 const struct MidiInfo s_f_esa_splash_penguinMidiInfo = {
     /* ROM Address */        &s_f_esa_splash_penguin_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             127,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -8894,7 +8894,7 @@ extern const u32 s_f_esa_splash_ball_mid;
 const struct MidiInfo s_f_esa_splash_ballMidiInfo = {
     /* ROM Address */        &s_f_esa_splash_ball_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             110,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -8907,7 +8907,7 @@ extern const u32 s_f_rabbit_ready_mid;
 const struct MidiInfo s_f_rabbit_readyMidiInfo = {
     /* ROM Address */        &s_f_rabbit_ready_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             80,
     /* unk4f4 */             0x5b,
     /* unk4f5 */             0x0,
@@ -8920,7 +8920,7 @@ extern const u32 s_f_rabbit_miss_mid;
 const struct MidiInfo s_f_rabbit_missMidiInfo = {
     /* ROM Address */        &s_f_rabbit_miss_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             50,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -8933,7 +8933,7 @@ extern const u32 s_f_even_splash_mid;
 const struct MidiInfo s_f_even_splashMidiInfo = {
     /* ROM Address */        &s_f_even_splash_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             65,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -8946,7 +8946,7 @@ extern const u32 s_f_even_road_mid;
 const struct MidiInfo s_f_even_roadMidiInfo = {
     /* ROM Address */        &s_f_even_road_mid,
     /* unk4f1 */             0x2,
-    /* Sound Bank */         100,
+    /* Sound Bank */         INST_BANK_56,
     /* Volume */             65,
     /* unk4f4 */             0x50,
     /* unk4f5 */             0x0,
@@ -8959,7 +8959,7 @@ extern const u32 s_f_drumdr_miss_mid;
 const struct MidiInfo s_f_drumdr_missMidiInfo = {
     /* ROM Address */        &s_f_drumdr_miss_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             90,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -8972,7 +8972,7 @@ extern const u32 s_f_drumdr_ok_mid;
 const struct MidiInfo s_f_drumdr_okMidiInfo = {
     /* ROM Address */        &s_f_drumdr_ok_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             80,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -8985,7 +8985,7 @@ extern const u32 s_f_machine_click_mid;
 const struct MidiInfo s_f_machine_clickMidiInfo = {
     /* ROM Address */        &s_f_machine_click_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             40,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -8998,7 +8998,7 @@ extern const u32 s_f_tap_miss1_mid;
 const struct MidiInfo s_f_tap_miss1MidiInfo = {
     /* ROM Address */        &s_f_tap_miss1_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             70,
     /* unk4f4 */             0x78,
     /* unk4f5 */             0x0,
@@ -9011,7 +9011,7 @@ extern const u32 s_f_tap_miss2_mid;
 const struct MidiInfo s_f_tap_miss2MidiInfo = {
     /* ROM Address */        &s_f_tap_miss2_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             70,
     /* unk4f4 */             0x78,
     /* unk4f5 */             0x0,
@@ -9024,7 +9024,7 @@ extern const u32 s_f_tap_jump_ready_mid;
 const struct MidiInfo s_f_tap_jump_readyMidiInfo = {
     /* ROM Address */        &s_f_tap_jump_ready_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             0,
     /* unk4f4 */             0x0,
     /* unk4f5 */             0x0,
@@ -9037,7 +9037,7 @@ extern const u32 s_f_tap_tap_mid;
 const struct MidiInfo s_f_tap_tapMidiInfo = {
     /* ROM Address */        &s_f_tap_tap_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             100,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -9050,7 +9050,7 @@ extern const u32 s_f_tap_pig1_mid;
 const struct MidiInfo s_f_tap_pig1MidiInfo = {
     /* ROM Address */        &s_f_tap_pig1_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             70,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -9063,7 +9063,7 @@ extern const u32 s_f_tap_pig2_mid;
 const struct MidiInfo s_f_tap_pig2MidiInfo = {
     /* ROM Address */        &s_f_tap_pig2_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             70,
     /* unk4f4 */             0x5a,
     /* unk4f5 */             0x0,
@@ -9076,7 +9076,7 @@ extern const u32 s_f_conveyer_hit_mid;
 const struct MidiInfo s_f_conveyer_hitMidiInfo = {
     /* ROM Address */        &s_f_conveyer_hit_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             100,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -9089,7 +9089,7 @@ extern const u32 s_f_lesson_s_mid;
 const struct MidiInfo s_f_lesson_sMidiInfo = {
     /* ROM Address */        &s_f_lesson_s_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             120,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -9102,7 +9102,7 @@ extern const u32 s_f_lesson_a_mid;
 const struct MidiInfo s_f_lesson_aMidiInfo = {
     /* ROM Address */        &s_f_lesson_a_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             110,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -9115,7 +9115,7 @@ extern const u32 s_f_lesson_b_mid;
 const struct MidiInfo s_f_lesson_bMidiInfo = {
     /* ROM Address */        &s_f_lesson_b_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             110,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -9128,7 +9128,7 @@ extern const u32 s_f_lesson_c_mid;
 const struct MidiInfo s_f_lesson_cMidiInfo = {
     /* ROM Address */        &s_f_lesson_c_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             80,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -9141,7 +9141,7 @@ extern const u32 s_f_base_1note_mid;
 const struct MidiInfo s_f_base_1noteMidiInfo = {
     /* ROM Address */        &s_f_base_1note_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             55,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -9154,7 +9154,7 @@ extern const u32 s_f_drumtech_miss_mid;
 const struct MidiInfo s_f_drumtech_missMidiInfo = {
     /* ROM Address */        &s_f_drumtech_miss_mid,
     /* unk4f1 */             0x8,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             50,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -9167,7 +9167,7 @@ extern const u32 s_f_drumtech_fall_mid;
 const struct MidiInfo s_f_drumtech_fallMidiInfo = {
     /* ROM Address */        &s_f_drumtech_fall_mid,
     /* unk4f1 */             0x8,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             70,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -9180,7 +9180,7 @@ extern const u32 s_f_drumtech_damage_mid;
 const struct MidiInfo s_f_drumtech_damageMidiInfo = {
     /* ROM Address */        &s_f_drumtech_damage_mid,
     /* unk4f1 */             0x9,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             108,
     /* unk4f4 */             0x78,
     /* unk4f5 */             0x0,
@@ -9193,7 +9193,7 @@ extern const u32 s_f_neko1_mid;
 const struct MidiInfo s_f_neko1MidiInfo = {
     /* ROM Address */        &s_f_neko1_mid,
     /* unk4f1 */             0x3,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             55,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -9206,7 +9206,7 @@ extern const u32 s_f_neko2_mid;
 const struct MidiInfo s_f_neko2MidiInfo = {
     /* ROM Address */        &s_f_neko2_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             55,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -9219,7 +9219,7 @@ extern const u32 s_f_neko3_mid;
 const struct MidiInfo s_f_neko3MidiInfo = {
     /* ROM Address */        &s_f_neko3_mid,
     /* unk4f1 */             0x5,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             55,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -9232,7 +9232,7 @@ extern const u32 s_f_neko4_mid;
 const struct MidiInfo s_f_neko4MidiInfo = {
     /* ROM Address */        &s_f_neko4_mid,
     /* unk4f1 */             0x6,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             55,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -9245,7 +9245,7 @@ extern const u32 s_f_neko5_mid;
 const struct MidiInfo s_f_neko5MidiInfo = {
     /* ROM Address */        &s_f_neko5_mid,
     /* unk4f1 */             0x7,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             55,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -9258,7 +9258,7 @@ extern const u32 s_f_neko6_mid;
 const struct MidiInfo s_f_neko6MidiInfo = {
     /* ROM Address */        &s_f_neko6_mid,
     /* unk4f1 */             0x8,
-    /* Sound Bank */         105,
+    /* Sound Bank */         INST_BANK_61,
     /* Volume */             55,
     /* unk4f4 */             0x64,
     /* unk4f5 */             0x0,
@@ -9271,7 +9271,7 @@ extern const u32 s_f_marcher2_v_zentai_mid;
 const struct MidiInfo s_f_marcher2_v_zentaiMidiInfo = {
     /* ROM Address */        &s_f_marcher2_v_zentai_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             90,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -9284,7 +9284,7 @@ extern const u32 s_f_marcher2_v_susume_mid;
 const struct MidiInfo s_f_marcher2_v_susumeMidiInfo = {
     /* ROM Address */        &s_f_marcher2_v_susume_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             85,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -9297,7 +9297,7 @@ extern const u32 s_f_marcher2_v_tomare_mid;
 const struct MidiInfo s_f_marcher2_v_tomareMidiInfo = {
     /* ROM Address */        &s_f_marcher2_v_tomare_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             90,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -9310,7 +9310,7 @@ extern const u32 s_f_marcher2_v_migimukeL_mid;
 const struct MidiInfo s_f_marcher2_v_migimukeLMidiInfo = {
     /* ROM Address */        &s_f_marcher2_v_migimukeL_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             90,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -9323,7 +9323,7 @@ extern const u32 s_f_marcher2_v_migimukeS_mid;
 const struct MidiInfo s_f_marcher2_v_migimukeSMidiInfo = {
     /* ROM Address */        &s_f_marcher2_v_migimukeS_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             90,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -9336,7 +9336,7 @@ extern const u32 s_f_marcher2_v_migi_mid;
 const struct MidiInfo s_f_marcher2_v_migiMidiInfo = {
     /* ROM Address */        &s_f_marcher2_v_migi_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             90,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -9349,7 +9349,7 @@ extern const u32 s_f_marcher2_v_hidarimukeL_mid;
 const struct MidiInfo s_f_marcher2_v_hidarimukeLMidiInfo = {
     /* ROM Address */        &s_f_marcher2_v_hidarimukeL_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             90,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -9362,7 +9362,7 @@ extern const u32 s_f_marcher2_v_hidarimukeS_mid;
 const struct MidiInfo s_f_marcher2_v_hidarimukeSMidiInfo = {
     /* ROM Address */        &s_f_marcher2_v_hidarimukeS_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             90,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
@@ -9375,7 +9375,7 @@ extern const u32 s_f_marcher2_v_hidari_mid;
 const struct MidiInfo s_f_marcher2_v_hidariMidiInfo = {
     /* ROM Address */        &s_f_marcher2_v_hidari_mid,
     /* unk4f1 */             0x4,
-    /* Sound Bank */         101,
+    /* Sound Bank */         INST_BANK_57,
     /* Volume */             90,
     /* unk4f4 */             0x7f,
     /* unk4f5 */             0x0,
