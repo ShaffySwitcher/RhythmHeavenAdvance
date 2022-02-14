@@ -1,15 +1,3 @@
-struct MidiInfo {
-    const u32 *romAddress;
-    u32 unk4f1:5;
-    u32 soundBank:10;
-    u32 volume:7;
-    u32 unk4f4:8;
-    u32 unk4f5:2;
-    u32 unk8;
-    const u8 *midiName;
-    u32 iramChnlIndex;
-};
-
 extern const u32 Lesson1_mid;
 const struct MidiInfo Lesson1MidiInfo = {
     /* ROM Address */        &Lesson1_mid,
