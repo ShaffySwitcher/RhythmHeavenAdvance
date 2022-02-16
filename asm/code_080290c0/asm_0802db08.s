@@ -136,7 +136,7 @@ branch_0802dbe6: \n\
 /* 0802dbfa */ ADDS R0, R2, R4 @ Set R0 to R2 + R4 \n\
 /* 0802dbfc */ ADDS R0, R0, R5 @ Set R0 to R0 + R5 \n\
 /* 0802dbfe */ LDR R1, [R0] \n\
-/* 0802dc00 */ LDR R0, [PC, 0x4C] @ 0x0802dc50 \n\
+/* 0802dc00 */ LDR R0, =0x8fff \n\
 /* 0802dc02 */ CMP R1, R0 @ Check R1 - R0 \n\
 /* 0802dc04 */ BGT branch_0802dc28 \n\
  \n\
