@@ -23,17 +23,19 @@ branch_080431e0: \n\
 /* 080431e2 */ CMP R0, 0x4 @ Compare R0 and 0x4 \n\
 /* 080431e4 */ BHI branch_080432c8 \n\
 /* 080431e6 */ LSLS R0, R0, 0x2 \n\
-/* 080431e8 */ LDR R1, =0x080431f4 @ !PossiblePointer \n\
+/* 080431e8 */ LDR R1, =jtbl_080431f4 \n\
 /* 080431ea */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 080431ec */ LDR R0, [R0] \n\
 /* 080431ee */ MOV PC, R0 @ Set PC to R0 \n\
 \n\
 .ltorg \n\
-.word 0x080432c8 @ !Jumptable \n\
-.word 0x08043208 @ !Jumptable \n\
-.word 0x08043264 @ !Jumptable \n\
-.word 0x08043272 @ !Jumptable \n\
-.word 0x080432bc @ !Jumptable \n\
+jtbl_080431f4: \n\
+.word branch_080432c8 \n\
+.word jump_08043208 \n\
+.word jump_08043264 \n\
+.word jump_08043272 \n\
+.word jump_080432bc \n\
+jump_08043208: \n\
 /* 08043208 */ LDRB R0, [R6, 0x3] \n\
 /* 0804320a */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0804320c */ BEQ branch_08043220 \n\
@@ -72,12 +74,14 @@ branch_08043220: \n\
 /* 08043252 */ B branch_080432c8 \n\
 \n\
 .ltorg \n\
+jump_08043264: \n\
 /* 08043264 */ LDRB R0, [R6, 0x3] \n\
 /* 08043266 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08043268 */ BEQ branch_080432c8 \n\
 /* 0804326a */ MOVS R0, 0x3 @ Set R0 to 0x3 \n\
 /* 0804326c */ BL func_080432d8 \n\
 /* 08043270 */ B branch_080432c8 \n\
+jump_08043272: \n\
 /* 08043272 */ LDRB R0, [R6, 0x3] \n\
 /* 08043274 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08043276 */ BEQ branch_080432c8 \n\
@@ -111,6 +115,7 @@ branch_080432b4: \n\
 /* 080432b4 */ MOVS R0, 0x4 @ Set R0 to 0x4 \n\
 /* 080432b6 */ BL func_080432d8 \n\
 /* 080432ba */ B branch_080432c8 \n\
+jump_080432bc: \n\
 /* 080432bc */ LDRB R0, [R6, 0x3] \n\
 /* 080432be */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 080432c0 */ BEQ branch_080432c8 \n\

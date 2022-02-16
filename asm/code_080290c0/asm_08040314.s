@@ -35,18 +35,20 @@ branch_08040344: \n\
 /* 0804034a */ CMP R0, 0x5 @ Compare R0 and 0x5 \n\
 /* 0804034c */ BHI branch_0804041e \n\
 /* 0804034e */ LSLS R0, R0, 0x2 \n\
-/* 08040350 */ LDR R1, =0x08040360 @ !PossiblePointer \n\
+/* 08040350 */ LDR R1, =jtbl_08040360 \n\
 /* 08040352 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08040354 */ LDR R0, [R0] \n\
 /* 08040356 */ MOV PC, R0 @ Set PC to R0 \n\
 \n\
 .ltorg \n\
-.word 0x08040378 @ !Jumptable \n\
-.word 0x080403c4 @ !Jumptable \n\
-.word 0x08040378 @ !Jumptable \n\
-.word 0x080403c4 @ !Jumptable \n\
-.word 0x08040378 @ !Jumptable \n\
-.word 0x080403c4 @ !Jumptable \n\
+jtbl_08040360: \n\
+.word jump_08040378 \n\
+.word jump_080403c4 \n\
+.word jump_08040378 \n\
+.word jump_080403c4 \n\
+.word jump_08040378 \n\
+.word jump_080403c4 \n\
+jump_08040378: \n\
 /* 08040378 */ LDR R1, [R7] \n\
 /* 0804037a */ LSLS R3, R5, 0x2 \n\
 /* 0804037c */ ADDS R3, R3, R5 @ Set R3 to R3 + R5 \n\
@@ -82,6 +84,7 @@ branch_08040344: \n\
 /* 080403ba */ B branch_0804041e \n\
 \n\
 .ltorg \n\
+jump_080403c4: \n\
 /* 080403c4 */ LDR R1, [R7] \n\
 /* 080403c6 */ LSLS R4, R5, 0x2 \n\
 /* 080403c8 */ ADDS R4, R4, R5 @ Set R4 to R4 + R5 \n\

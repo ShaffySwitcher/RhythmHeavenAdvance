@@ -20,32 +20,37 @@ glabel func_080343b8 \n\
 /* 080343d4 */ CMP R7, 0x9 @ Compare R7 and 0x9 \n\
 /* 080343d6 */ BHI branch_080344be \n\
 /* 080343d8 */ LSLS R0, R7, 0x2 \n\
-/* 080343da */ LDR R1, =0x080343e8 @ !PossiblePointer \n\
+/* 080343da */ LDR R1, =jtbl_080343e8 \n\
 /* 080343dc */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 080343de */ LDR R0, [R0] \n\
 /* 080343e0 */ MOV PC, R0 @ Set PC to R0 \n\
 \n\
 .ltorg \n\
-.word 0x08034410 @ !Jumptable \n\
-.word 0x0803441e @ !Jumptable \n\
-.word 0x08034422 @ !Jumptable \n\
-.word 0x08034426 @ !Jumptable \n\
-.word 0x08034454 @ !Jumptable \n\
-.word 0x0803448a @ !Jumptable \n\
-.word 0x0803448e @ !Jumptable \n\
-.word 0x08034492 @ !Jumptable \n\
-.word 0x080344a2 @ !Jumptable \n\
-.word 0x080344b6 @ !Jumptable \n\
+jtbl_080343e8: \n\
+.word jump_08034410 \n\
+.word jump_0803441e \n\
+.word jump_08034422 \n\
+.word jump_08034426 \n\
+.word jump_08034454 \n\
+.word jump_0803448a \n\
+.word jump_0803448e \n\
+.word jump_08034492 \n\
+.word jump_080344a2 \n\
+.word jump_080344b6 \n\
+jump_08034410: \n\
 /* 08034410 */ MOVS R0, 0x5 @ Set R0 to 0x5 \n\
 /* 08034412 */ BL func_08034100 \n\
 /* 08034416 */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 08034418 */ MOVS R2, 0x7F @ Set R2 to 0x7F \n\
 /* 0803441a */ MOV R10, R2 @ Set R10 to R2 \n\
 /* 0803441c */ B branch_080344be \n\
+jump_0803441e: \n\
 /* 0803441e */ MOVS R0, 0x5 @ Set R0 to 0x5 \n\
 /* 08034420 */ B branch_080344b8 \n\
+jump_08034422: \n\
 /* 08034422 */ MOVS R0, 0x6 @ Set R0 to 0x6 \n\
 /* 08034424 */ B branch_080344b8 \n\
+jump_08034426: \n\
 /* 08034426 */ LDRH R0, [R5, 0x6] \n\
 /* 08034428 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0803442a */ BEQ branch_08034434 \n\
@@ -76,6 +81,7 @@ branch_0803444a: \n\
 branch_08034450: \n\
 /* 08034450 */ MOVS R0, 0xA @ Set R0 to 0xA \n\
 /* 08034452 */ B branch_08034482 \n\
+jump_08034454: \n\
 /* 08034454 */ LDRH R0, [R5, 0x6] \n\
 /* 08034456 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08034458 */ BEQ branch_08034462 \n\
@@ -110,10 +116,13 @@ branch_08034482: \n\
 /* 08034482 */ BL func_08034100 \n\
 /* 08034486 */ ADDS R6, R0, 0x0 @ Set R6 to R0 + 0x0 \n\
 /* 08034488 */ B branch_080344be \n\
+jump_0803448a: \n\
 /* 0803448a */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0803448c */ B branch_080344b8 \n\
+jump_0803448e: \n\
 /* 0803448e */ MOVS R0, 0x3 @ Set R0 to 0x3 \n\
 /* 08034490 */ B branch_080344b8 \n\
+jump_08034492: \n\
 /* 08034492 */ MOVS R0, 0x7 @ Set R0 to 0x7 \n\
 /* 08034494 */ BL func_08034100 \n\
 /* 08034498 */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
@@ -121,6 +130,7 @@ branch_08034482: \n\
 /* 0803449c */ MOV R9, R0 @ Set R9 to R0 \n\
 /* 0803449e */ MOV R8, R0 @ Set R8 to R0 \n\
 /* 080344a0 */ B branch_080344b0 \n\
+jump_080344a2: \n\
 /* 080344a2 */ MOVS R0, 0x8 @ Set R0 to 0x8 \n\
 /* 080344a4 */ BL func_08034100 \n\
 /* 080344a8 */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
@@ -132,6 +142,7 @@ branch_080344b0: \n\
 /* 080344b0 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 080344b2 */ STRB R0, [R5, 0x8] \n\
 /* 080344b4 */ B branch_080344be \n\
+jump_080344b6: \n\
 /* 080344b6 */ MOVS R0, 0xD @ Set R0 to 0xD \n\
  \n\
 branch_080344b8: \n\
