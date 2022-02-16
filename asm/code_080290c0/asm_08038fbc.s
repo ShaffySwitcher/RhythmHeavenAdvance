@@ -55,20 +55,22 @@ branch_08039016: \n\
 /* 08039018 */ CMP R0, 0x7 @ Compare R0 and 0x7 \n\
 /* 0803901a */ BHI branch_080390b6 \n\
 /* 0803901c */ LSLS R0, R0, 0x2 \n\
-/* 0803901e */ LDR R1, =0x08039030 @ !PossiblePointer \n\
+/* 0803901e */ LDR R1, =jtbl_08039030 \n\
 /* 08039020 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08039022 */ LDR R0, [R0] \n\
 /* 08039024 */ MOV PC, R0 @ Set PC to R0 \n\
 \n\
 .ltorg \n\
-.word 0x08039050 @ !Jumptable \n\
-.word 0x0803906a @ !Jumptable \n\
-.word 0x0803906a @ !Jumptable \n\
-.word 0x0803906a @ !Jumptable \n\
-.word 0x08039074 @ !Jumptable \n\
-.word 0x0803907e @ !Jumptable \n\
-.word 0x0803908a @ !Jumptable \n\
-.word 0x0803909e @ !Jumptable \n\
+jtbl_08039030: \n\
+.word jump_08039050 \n\
+.word jump_0803906a \n\
+.word jump_0803906a \n\
+.word jump_0803906a \n\
+.word jump_08039074 \n\
+.word jump_0803907e \n\
+.word jump_0803908a \n\
+.word jump_0803909e \n\
+jump_08039050: \n\
 /* 08039050 */ MOVS R0, 0xC0 @ Set R0 to 0xC0 \n\
 /* 08039052 */ LSLS R0, R0, 0x5 \n\
 /* 08039054 */ STR R0, [R5, 0x10] \n\
@@ -82,22 +84,26 @@ branch_08039016: \n\
 /* 08039064 */ LSLS R0, R0, 0x2 \n\
 /* 08039066 */ STRH R0, [R5, 0x14] \n\
 /* 08039068 */ B branch_080390b6 \n\
+jump_0803906a: \n\
 /* 0803906a */ MOVS R0, 0xC0 @ Set R0 to 0xC0 \n\
 /* 0803906c */ LSLS R0, R0, 0x5 \n\
 /* 0803906e */ STR R0, [R5, 0x10] \n\
 /* 08039070 */ MOVS R0, 0x50 @ Set R0 to 0x50 \n\
 /* 08039072 */ B branch_08039094 \n\
+jump_08039074: \n\
 /* 08039074 */ MOVS R0, 0xC0 @ Set R0 to 0xC0 \n\
 /* 08039076 */ LSLS R0, R0, 0x6 \n\
 /* 08039078 */ STR R0, [R5, 0x10] \n\
 /* 0803907a */ MOVS R0, 0xA0 @ Set R0 to 0xA0 \n\
 /* 0803907c */ B branch_08039094 \n\
+jump_0803907e: \n\
 /* 0803907e */ MOVS R0, 0xC0 @ Set R0 to 0xC0 \n\
 /* 08039080 */ LSLS R0, R0, 0x7 \n\
 /* 08039082 */ STR R0, [R5, 0x10] \n\
 /* 08039084 */ MOVS R0, 0xA0 @ Set R0 to 0xA0 \n\
 /* 08039086 */ LSLS R0, R0, 0x1 \n\
 /* 08039088 */ B branch_08039094 \n\
+jump_0803908a: \n\
 /* 0803908a */ MOVS R0, 0xC0 @ Set R0 to 0xC0 \n\
 /* 0803908c */ LSLS R0, R0, 0x8 \n\
 /* 0803908e */ STR R0, [R5, 0x10] \n\
@@ -109,6 +115,7 @@ branch_08039094: \n\
 /* 08039096 */ BL __divsi3 \n\
 /* 0803909a */ STRH R0, [R5, 0x14] \n\
 /* 0803909c */ B branch_080390b6 \n\
+jump_0803909e: \n\
 /* 0803909e */ MOVS R0, 0xC0 @ Set R0 to 0xC0 \n\
 /* 080390a0 */ LSLS R0, R0, 0x8 \n\
 /* 080390a2 */ STR R0, [R5, 0x10] \n\

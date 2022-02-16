@@ -12,7 +12,7 @@ static u16 D_03000092;
 
 void func_08000718(void) {
     u16 temp = 4;
-    u16 temp2 = -4;
+    u16 temp2 = 0x10000 - 4;
     u16 temp3 = UNKNOWN_SIZE / 4;
 	
     D_0300008c = temp;

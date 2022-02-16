@@ -34,26 +34,28 @@ branch_080438ee: \n\
  \n\
 branch_080438fa: \n\
 /* 080438fa */ LSLS R0, R0, 0x2 \n\
-/* 080438fc */ LDR R1, =0x0804390c @ !PossiblePointer \n\
+/* 080438fc */ LDR R1, =jtbl_0804390c \n\
 /* 080438fe */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08043900 */ LDR R0, [R0] \n\
 /* 08043902 */ MOV PC, R0 @ Set PC to R0 \n\
 \n\
 .ltorg \n\
-.word 0x08043944 @ !Jumptable \n\
-.word 0x0804396c @ !Jumptable \n\
-.word 0x08043970 @ !Jumptable \n\
-.word 0x08043a18 @ !Jumptable \n\
-.word 0x0804396c @ !Jumptable \n\
-.word 0x08043970 @ !Jumptable \n\
-.word 0x08043a18 @ !Jumptable \n\
-.word 0x0804396c @ !Jumptable \n\
-.word 0x08043970 @ !Jumptable \n\
-.word 0x08043a18 @ !Jumptable \n\
-.word 0x0804396c @ !Jumptable \n\
-.word 0x08043970 @ !Jumptable \n\
-.word 0x08043a18 @ !Jumptable \n\
-.word 0x080439a0 @ !Jumptable \n\
+jtbl_0804390c: \n\
+.word jump_08043944 \n\
+.word jump_0804396c \n\
+.word jump_08043970 \n\
+.word branch_08043a18 \n\
+.word jump_0804396c \n\
+.word jump_08043970 \n\
+.word branch_08043a18 \n\
+.word jump_0804396c \n\
+.word jump_08043970 \n\
+.word branch_08043a18 \n\
+.word jump_0804396c \n\
+.word jump_08043970 \n\
+.word branch_08043a18 \n\
+.word jump_080439a0 \n\
+jump_08043944: \n\
 /* 08043944 */ LDR R5, [R5, 0x8] \n\
 /* 08043946 */ MOVS R4, 0x80 @ Set R4 to 0x80 \n\
 /* 08043948 */ LSLS R4, R4, 0x1 \n\
@@ -71,8 +73,10 @@ branch_080438fa: \n\
 /* 08043964 */ BL func_0800fdf8 \n\
 /* 08043968 */ MOVS R0, 0x18 @ Set R0 to 0x18 \n\
 /* 0804396a */ B branch_08043992 \n\
+jump_0804396c: \n\
 /* 0804396c */ MOVS R0, 0x18 @ Set R0 to 0x18 \n\
 /* 0804396e */ B branch_08043992 \n\
+jump_08043970: \n\
 /* 08043970 */ LDRB R0, [R5] \n\
 /* 08043972 */ LSLS R0, R0, 0x1B \n\
 /* 08043974 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
@@ -98,6 +102,7 @@ branch_08043992: \n\
 /* 0804399a */ B branch_08043a06 \n\
 \n\
 .ltorg \n\
+jump_080439a0: \n\
 /* 080439a0 */ LDR R4, [R5, 0x8] \n\
 /* 080439a2 */ MOVS R0, 0x30 @ Set R0 to 0x30 \n\
 /* 080439a4 */ BL func_0800c3a4 \n\

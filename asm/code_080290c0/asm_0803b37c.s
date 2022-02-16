@@ -61,22 +61,25 @@ branch_0803b3e0: \n\
  \n\
 branch_0803b3e8: \n\
 /* 0803b3e8 */ LSLS R0, R0, 0x2 \n\
-/* 0803b3ea */ LDR R1, =0x0803b3fc @ !PossiblePointer \n\
+/* 0803b3ea */ LDR R1, =jtbl_0803b3fc \n\
 /* 0803b3ec */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 0803b3ee */ LDR R0, [R0] \n\
 /* 0803b3f0 */ MOV PC, R0 @ Set PC to R0 \n\
 \n\
 .ltorg \n\
-.word 0x0803b56e @ !Jumptable \n\
-.word 0x0803b418 @ !Jumptable \n\
-.word 0x0803b420 @ !Jumptable \n\
-.word 0x0803b56e @ !Jumptable \n\
-.word 0x0803b538 @ !Jumptable \n\
-.word 0x0803b56e @ !Jumptable \n\
-.word 0x0803b420 @ !Jumptable \n\
+jtbl_0803b3fc: \n\
+.word branch_0803b56e \n\
+.word jump_0803b418 \n\
+.word jump_0803b420 \n\
+.word branch_0803b56e \n\
+.word jump_0803b538 \n\
+.word branch_0803b56e \n\
+.word jump_0803b420 \n\
+jump_0803b418: \n\
 /* 0803b418 */ ADDS R0, R7, 0x0 @ Set R0 to R7 + 0x0 \n\
 /* 0803b41a */ BL func_0803b258 \n\
 /* 0803b41e */ B branch_0803b56e \n\
+jump_0803b420: \n\
 /* 0803b420 */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
 /* 0803b422 */ LDR R2, [R0] \n\
 /* 0803b424 */ ADDS R1, R2, 0x0 @ Set R1 to R2 + 0x0 \n\
@@ -201,6 +204,7 @@ branch_0803b4f4: \n\
 /* 0803b51e */ B branch_0803b56e \n\
 \n\
 .ltorg \n\
+jump_0803b538: \n\
 /* 0803b538 */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
 /* 0803b53a */ LDR R0, [R0] \n\
 /* 0803b53c */ ADDS R0, 0xD2 @ Add 0xD2 to R0 \n\
@@ -236,20 +240,22 @@ branch_0803b56e: \n\
  \n\
 branch_0803b576: \n\
 /* 0803b576 */ LSLS R0, R0, 0x2 \n\
-/* 0803b578 */ LDR R1, =0x0803b590 @ !PossiblePointer \n\
+/* 0803b578 */ LDR R1, =jtbl_0803b590 \n\
 /* 0803b57a */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 0803b57c */ LDR R0, [R0] \n\
 /* 0803b57e */ MOV PC, R0 @ Set PC to R0 \n\
 \n\
 .ltorg \n\
-.word 0x0803b5b0 @ !Jumptable \n\
-.word 0x0803b5fc @ !Jumptable \n\
-.word 0x0803b66c @ !Jumptable \n\
-.word 0x0803b67c @ !Jumptable \n\
-.word 0x0803b6c0 @ !Jumptable \n\
-.word 0x0803b6f8 @ !Jumptable \n\
-.word 0x0803b71c @ !Jumptable \n\
-.word 0x0803b738 @ !Jumptable \n\
+jtbl_0803b590: \n\
+.word jump_0803b5b0 \n\
+.word jump_0803b5fc \n\
+.word jump_0803b66c \n\
+.word jump_0803b67c \n\
+.word jump_0803b6c0 \n\
+.word jump_0803b6f8 \n\
+.word jump_0803b71c \n\
+.word branch_0803b738 \n\
+jump_0803b5b0: \n\
 /* 0803b5b0 */ BL func_0800c398 \n\
 /* 0803b5b4 */ LSLS R0, R0, 0x6 \n\
 /* 0803b5b6 */ MOVS R1, 0x18 @ Set R1 to 0x18 \n\
@@ -284,6 +290,7 @@ branch_0803b5d2: \n\
 /* 0803b5f0 */ B branch_0803b738 \n\
 \n\
 .ltorg \n\
+jump_0803b5fc: \n\
 /* 0803b5fc */ LDR R0, [R7, 0x8] \n\
 /* 0803b5fe */ BL func_0803b1ac \n\
 /* 0803b602 */ ADDS R3, R0, 0x0 @ Set R3 to R0 + 0x0 \n\
@@ -335,6 +342,7 @@ branch_0803b644: \n\
 /* 0803b660 */ B branch_0803b738 \n\
 \n\
 .ltorg \n\
+jump_0803b66c: \n\
 /* 0803b66c */ LDR R0, =0x03005380 @ !PossiblePointer \n\
 /* 0803b66e */ LDR R4, [R0] \n\
 /* 0803b670 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
@@ -342,6 +350,7 @@ branch_0803b644: \n\
 /* 0803b674 */ B branch_0803b700 \n\
 \n\
 .ltorg \n\
+jump_0803b67c: \n\
 /* 0803b67c */ BL func_0800c398 \n\
 /* 0803b680 */ LSLS R0, R0, 0x6 \n\
 /* 0803b682 */ MOVS R1, 0x18 @ Set R1 to 0x18 \n\
@@ -372,6 +381,7 @@ branch_0803b6ac: \n\
 /* 0803b6b4 */ B branch_0803b700 \n\
 \n\
 .ltorg \n\
+jump_0803b6c0: \n\
 /* 0803b6c0 */ BL func_0800c398 \n\
 /* 0803b6c4 */ LSLS R0, R0, 0x6 \n\
 /* 0803b6c6 */ MOVS R1, 0x30 @ Set R1 to 0x30 \n\
@@ -398,6 +408,7 @@ branch_0803b6e6: \n\
 /* 0803b6ee */ B branch_0803b700 \n\
 \n\
 .ltorg \n\
+jump_0803b6f8: \n\
 /* 0803b6f8 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
 /* 0803b6fa */ LDR R4, [R0] \n\
 /* 0803b6fc */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
@@ -415,6 +426,7 @@ branch_0803b700: \n\
 /* 0803b714 */ B branch_0803b738 \n\
 \n\
 .ltorg \n\
+jump_0803b71c: \n\
 /* 0803b71c */ LDR R0, =0x03005380 @ !PossiblePointer \n\
 /* 0803b71e */ LDR R4, [R0] \n\
 /* 0803b720 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\

@@ -21,7 +21,6 @@ branch_0800c6ec: \n\
 \n\
 .ltorg \n\
 \n\
-@JUMPTABLE \n\
 jtbl_0800c704: \n\
 .word jump_0800c808 \n\
 .word jump_0800c808 \n\
