@@ -11,7 +11,7 @@ glabel func_0802c5c8 \n\
 /* 0802c5d2 */ SUB SP, 0x28 \n\
 /* 0802c5d4 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0802c5d6 */ STR R0, [SP, 0x1C] \n\
-glabel func_0802c5d8 @ What \n\
+branch_0802c5d8: \n\
 /* 0802c5d8 */ LDR R5, =D_089e3b14 \n\
 /* 0802c5da */ LDR R0, =D_030055d0 \n\
 /* 0802c5dc */ LDR R2, [R0] \n\
@@ -40,7 +40,7 @@ glabel func_0802c5d8 @ What \n\
 /* 0802c60a */ MOV R9, R3 @ Set R9 to R3 \n\
 /* 0802c60c */ CMP R1, 0xB @ Compare R1 and 0xB \n\
 /* 0802c60e */ BLS branch_0802c614 \n\
-/* 0802c610 */ BL func_0802ce28 \n\
+/* 0802c610 */ BL branch_0802ce28 \n\
  \n\
 branch_0802c614: \n\
 /* 0802c614 */ LDR R0, =jtbl_0802c628 \n\
@@ -1048,7 +1048,7 @@ branch_0802ce28: \n\
 /* 0802ce48 */ STR R1, [SP, 0x1C] \n\
 /* 0802ce4a */ CMP R1, 0x7 @ Compare R1 and 0x7 \n\
 /* 0802ce4c */ BGT branch_0802ce52 \n\
-/* 0802ce4e */ BL func_0802c5d8 \n\
+/* 0802ce4e */ BL branch_0802c5d8 \n\
  \n\
 branch_0802ce52: \n\
 /* 0802ce52 */ ADD SP, 0x28 \n\

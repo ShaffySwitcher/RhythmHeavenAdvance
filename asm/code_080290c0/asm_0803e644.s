@@ -1,0 +1,63 @@
+asm(".syntax unified \n\
+\n\
+.balign 4, 0 \n\
+\n\
+glabel func_0803e644 \n\
+/* 0803e644 */ PUSH {LR} \n\
+/* 0803e646 */ MOVS R2, 0x1 @ Set R2 to 0x1 \n\
+/* 0803e648 */ NEGS R2, R2 @ Set R2 to -R2 \n\
+/* 0803e64a */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 0803e64c */ LDR R0, [R0] \n\
+/* 0803e64e */ LDRB R0, [R0, 0x10] \n\
+/* 0803e650 */ CMP R0, 0xD @ Compare R0 and 0xD \n\
+/* 0803e652 */ BHI branch_0803e6b6 \n\
+/* 0803e654 */ LSLS R0, R0, 0x2 \n\
+/* 0803e656 */ LDR R1, =0x0803e668 @ !PossiblePointer \n\
+/* 0803e658 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
+/* 0803e65a */ LDR R0, [R0] \n\
+/* 0803e65c */ MOV PC, R0 @ Set PC to R0 \n\
+\n\
+.ltorg \n\
+.word 0x0803e6a0 @ !Jumptable \n\
+.word 0x0803e6a4 @ !Jumptable \n\
+.word 0x0803e6a0 @ !Jumptable \n\
+.word 0x0803e6a4 @ !Jumptable \n\
+.word 0x0803e6a0 @ !Jumptable \n\
+.word 0x0803e6a4 @ !Jumptable \n\
+.word 0x0803e6ac @ !Jumptable \n\
+.word 0x0803e6a8 @ !Jumptable \n\
+.word 0x0803e6a8 @ !Jumptable \n\
+.word 0x0803e6b6 @ !Jumptable \n\
+.word 0x0803e6b6 @ !Jumptable \n\
+.word 0x0803e6b4 @ !Jumptable \n\
+.word 0x0803e6b6 @ !Jumptable \n\
+.word 0x0803e6b0 @ !Jumptable \n\
+/* 0803e6a0 */ MOVS R2, 0x4 @ Set R2 to 0x4 \n\
+/* 0803e6a2 */ B branch_0803e6ba \n\
+/* 0803e6a4 */ MOVS R2, 0x5 @ Set R2 to 0x5 \n\
+/* 0803e6a6 */ B branch_0803e6ba \n\
+/* 0803e6a8 */ MOVS R2, 0x6 @ Set R2 to 0x6 \n\
+/* 0803e6aa */ B branch_0803e6ba \n\
+/* 0803e6ac */ MOVS R2, 0x7 @ Set R2 to 0x7 \n\
+/* 0803e6ae */ B branch_0803e6ba \n\
+/* 0803e6b0 */ MOVS R2, 0xE @ Set R2 to 0xE \n\
+/* 0803e6b2 */ B branch_0803e6ba \n\
+/* 0803e6b4 */ MOVS R2, 0xC @ Set R2 to 0xC \n\
+ \n\
+branch_0803e6b6: \n\
+/* 0803e6b6 */ CMP R2, 0x0 @ Compare R2 and 0x0 \n\
+/* 0803e6b8 */ BLT branch_0803e6c6 \n\
+ \n\
+branch_0803e6ba: \n\
+/* 0803e6ba */ ADDS R0, R2, 0x0 @ Set R0 to R2 + 0x0 \n\
+/* 0803e6bc */ BL func_0803da40 \n\
+/* 0803e6c0 */ LDR R0, =0x08a9e6c4 @ !PossiblePointer \n\
+/* 0803e6c2 */ BL func_08002634 \n\
+ \n\
+branch_0803e6c6: \n\
+/* 0803e6c6 */ POP {R0} \n\
+/* 0803e6c8 */ BX R0 \n\
+\n\
+.ltorg \n\
+.balign 4, 0 \n\
+.syntax divided");
