@@ -6,7 +6,7 @@ glabel func_0803ee18 \n\
 /* 0803ee18 */ PUSH {R4, LR} \n\
 /* 0803ee1a */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0803ee1c */ LDR R3, =D_030055d0 \n\
-/* 0803ee1e */ LDR R4, =0x0000035a @ !PossiblePointer \n\
+/* 0803ee1e */ LDR R4, =0x35a \n\
  \n\
 branch_0803ee20: \n\
 /* 0803ee20 */ LDR R0, [R3] \n\

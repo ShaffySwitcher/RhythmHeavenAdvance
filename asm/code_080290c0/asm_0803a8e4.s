@@ -55,7 +55,7 @@ jump_0803a954: \n\
 /* 0803a95c */ LSRS R2, R0, 0x8 \n\
 /* 0803a95e */ CMP R2, 0x17 @ Compare R2 and 0x17 \n\
 /* 0803a960 */ BHI branch_0803a970 \n\
-/* 0803a962 */ LDR R0, =0x089e6834 @ !PossiblePointer \n\
+/* 0803a962 */ LDR R0, =D_089e6834 \n\
 /* 0803a964 */ B branch_0803a97c \n\
 \n\
 .ltorg \n\
@@ -65,7 +65,7 @@ branch_0803a970: \n\
 /* 0803a972 */ MOVS R1, 0x30 @ Set R1 to 0x30 \n\
 /* 0803a974 */ BL func_0804f150 \n\
 /* 0803a978 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 0803a97a */ LDR R0, =0x089e684c @ !PossiblePointer \n\
+/* 0803a97a */ LDR R0, =D_089e684c \n\
  \n\
 branch_0803a97c: \n\
 /* 0803a97c */ ADDS R0, R2, R0 @ Set R0 to R2 + R0 \n\

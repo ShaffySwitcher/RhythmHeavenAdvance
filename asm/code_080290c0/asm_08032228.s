@@ -38,7 +38,7 @@ glabel func_08032228 \n\
 /* 0803226c */ LDR R1, =D_03004b10 \n\
 /* 0803226e */ ADDS R2, R1, 0x0 @ Set R2 to R1 + 0x0 \n\
 /* 08032270 */ ADDS R2, 0x4C @ Add 0x4C to R2 \n\
-/* 08032272 */ LDR R0, =0x00003846 @ !PossiblePointer \n\
+/* 08032272 */ LDR R0, =0x3846 \n\
 /* 08032274 */ STRH R0, [R2] \n\
 /* 08032276 */ ADDS R1, 0x4E @ Add 0x4E to R1 \n\
 /* 08032278 */ MOVS R0, 0x80 @ Set R0 to 0x80 \n\

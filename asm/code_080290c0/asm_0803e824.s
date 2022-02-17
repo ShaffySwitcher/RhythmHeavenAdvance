@@ -12,7 +12,7 @@ glabel func_0803e824 \n\
 /* 0803e830 */ BNE branch_0803e86c \n\
 /* 0803e832 */ LDR R0, =D_03005380 \n\
 /* 0803e834 */ LDR R0, [R0] \n\
-/* 0803e836 */ LDR R1, =0x08927f2c @ !PossiblePointer \n\
+/* 0803e836 */ LDR R1, =D_08927f2c \n\
 /* 0803e838 */ MOVS R2, 0x38 @ Set R2 to 0x38 \n\
 /* 0803e83a */ STR R2, [SP] \n\
 /* 0803e83c */ MOVS R2, 0x98 @ Set R2 to 0x98 \n\
@@ -39,7 +39,7 @@ branch_0803e86c: \n\
 /* 0803e86c */ MOVS R0, 0xE7 @ Set R0 to 0xE7 \n\
 /* 0803e86e */ LSLS R0, R0, 0x2 \n\
 /* 0803e870 */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\
-/* 0803e872 */ LDR R0, =0x0000ffff @ !PossiblePointer \n\
+/* 0803e872 */ LDR R0, =0xffff \n\
  \n\
 branch_0803e874: \n\
 /* 0803e874 */ STRH R0, [R1] \n\

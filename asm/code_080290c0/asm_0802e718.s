@@ -9,7 +9,7 @@ glabel func_0802e718 \n\
 /* 0802e71e */ ANDS R0, R4 @ Set R0 to R0 & R4 \n\
 /* 0802e720 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0802e722 */ BEQ branch_0802e72a \n\
-/* 0802e724 */ LDR R0, =0x08a9d5d0 @ !PossiblePointer \n\
+/* 0802e724 */ LDR R0, =D_08a9d5d0 \n\
 /* 0802e726 */ BL func_08002634 \n\
  \n\
 branch_0802e72a: \n\
@@ -17,7 +17,7 @@ branch_0802e72a: \n\
 /* 0802e72c */ ANDS R0, R4 @ Set R0 to R0 & R4 \n\
 /* 0802e72e */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0802e730 */ BEQ branch_0802e738 \n\
-/* 0802e732 */ LDR R0, =0x08a9d5e4 @ !PossiblePointer \n\
+/* 0802e732 */ LDR R0, =D_08a9d5e4 \n\
 /* 0802e734 */ BL func_08002634 \n\
  \n\
 branch_0802e738: \n\

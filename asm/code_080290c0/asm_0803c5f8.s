@@ -21,7 +21,7 @@ glabel func_0803c5f8 \n\
 /* 0803c618 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 0803c61a */ STR R3, [SP, 0x8] \n\
 /* 0803c61c */ BL func_0804d8f8 \n\
-/* 0803c620 */ LDR R0, =0x08a9c0a4 @ !PossiblePointer \n\
+/* 0803c620 */ LDR R0, =D_08a9c0a4 \n\
 /* 0803c622 */ BL func_08002634 \n\
 /* 0803c626 */ ADD SP, 0xC \n\
 /* 0803c628 */ POP {R0} \n\

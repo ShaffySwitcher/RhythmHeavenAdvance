@@ -40,7 +40,7 @@ branch_08042ba8: \n\
 /* 08042bc8 */ STR R4, [SP, 0x8] \n\
 /* 08042bca */ STR R4, [SP, 0xC] \n\
 /* 08042bcc */ STR R4, [SP, 0x10] \n\
-/* 08042bce */ LDR R1, =0x08931fc4 @ !PossiblePointer \n\
+/* 08042bce */ LDR R1, =D_08931fc4 \n\
 /* 08042bd0 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08042bd2 */ MOVS R3, 0xD6 @ Set R3 to 0xD6 \n\
 /* 08042bd4 */ BL func_0804d160 \n\
@@ -62,7 +62,7 @@ branch_08042bec: \n\
 /* 08042bfa */ STR R1, [SP, 0x8] \n\
 /* 08042bfc */ STR R1, [SP, 0xC] \n\
 /* 08042bfe */ STR R1, [SP, 0x10] \n\
-/* 08042c00 */ LDR R1, =0x08931fd4 @ !PossiblePointer \n\
+/* 08042c00 */ LDR R1, =D_08931fd4 \n\
 /* 08042c02 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08042c04 */ MOVS R3, 0xD6 @ Set R3 to 0xD6 \n\
 /* 08042c06 */ BL func_0804d160 \n\
@@ -92,12 +92,12 @@ branch_08042c20: \n\
 /* 08042c30 */ STR R6, [SP, 0x8] \n\
 /* 08042c32 */ STR R6, [SP, 0xC] \n\
 /* 08042c34 */ STR R6, [SP, 0x10] \n\
-/* 08042c36 */ LDR R1, =0x08931f6c @ !PossiblePointer \n\
+/* 08042c36 */ LDR R1, =D_08931f6c \n\
 /* 08042c38 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08042c3a */ BL func_0804d160 \n\
 /* 08042c3e */ STRH R0, [R5] \n\
 /* 08042c40 */ ADDS R5, 0x2 @ Add 0x2 to R5 \n\
-/* 08042c42 */ LDR R2, =0xfffb0000 @ !PossiblePointer \n\
+/* 08042c42 */ LDR R2, =0xfffb0000 \n\
 /* 08042c44 */ ADDS R4, R4, R2 @ Set R4 to R4 + R2 \n\
 /* 08042c46 */ ADDS R7, 0x1 @ Add 0x1 to R7 \n\
 /* 08042c48 */ CMP R7, 0x3 @ Compare R7 and 0x3 \n\

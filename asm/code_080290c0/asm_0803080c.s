@@ -17,7 +17,7 @@ glabel func_0803080c \n\
 /* 08030822 */ BEQ branch_0803083c \n\
 /* 08030824 */ CMP R2, 0x3 @ Compare R2 and 0x3 \n\
 /* 08030826 */ BEQ branch_08030840 \n\
-/* 08030828 */ LDR R4, =0x0000ffff @ !PossiblePointer \n\
+/* 08030828 */ LDR R4, =0xffff \n\
 /* 0803082a */ B branch_08030842 \n\
 \n\
 .ltorg \n\
@@ -58,7 +58,7 @@ branch_08030842: \n\
 /* 08030868 */ LSLS R1, R0, 0x2 \n\
 /* 0803086a */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\
 /* 0803086c */ LSRS R1, R1, 0x3 \n\
-/* 0803086e */ LDR R0, =0x08a9bb68 @ !PossiblePointer \n\
+/* 0803086e */ LDR R0, =D_08a9bb68 \n\
 /* 08030870 */ MOVS R2, 0x80 @ Set R2 to 0x80 \n\
 /* 08030872 */ LSLS R2, R2, 0x2 \n\
 /* 08030874 */ BL func_08002698 \n\

@@ -11,7 +11,7 @@ glabel func_0802303c \n\
 /* 0802304e */ BL func_0802ab34 \n\
 /* 08023052 */ LDR R5, =D_030055d0 \n\
 /* 08023054 */ LDR R0, [R5] \n\
-/* 08023056 */ LDR R4, =0x00000414 @ !PossiblePointer \n\
+/* 08023056 */ LDR R4, =0x414 \n\
 /* 08023058 */ ADDS R0, R0, R4 @ Set R0 to R0 + R4 \n\
 /* 0802305a */ LDRB R0, [R0] \n\
 /* 0802305c */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\

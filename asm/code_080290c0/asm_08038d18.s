@@ -13,7 +13,7 @@ glabel func_08038d18 \n\
 /* 08038d28 */ LDR R0, [R0] \n\
 /* 08038d2a */ LSLS R4, R4, 0x10 \n\
 /* 08038d2c */ ASRS R4, R4, 0x10 \n\
-/* 08038d2e */ LDR R2, =0x088f8e30 @ !PossiblePointer \n\
+/* 08038d2e */ LDR R2, =D_088f8e30 \n\
 /* 08038d30 */ MOVS R1, 0x1 @ Set R1 to 0x1 \n\
 /* 08038d32 */ STR R1, [SP] \n\
 /* 08038d34 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\

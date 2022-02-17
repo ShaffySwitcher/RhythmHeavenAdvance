@@ -78,12 +78,12 @@ branch_0803c694: \n\
 branch_0803c6ce: \n\
 /* 0803c6ce */ LDR R2, =D_030055d0 \n\
 /* 0803c6d0 */ LDR R0, [R2] \n\
-/* 0803c6d2 */ LDR R1, =0x000002ce @ !PossiblePointer \n\
+/* 0803c6d2 */ LDR R1, =0x2ce \n\
 /* 0803c6d4 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 0803c6d6 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 0803c6d8 */ STRB R1, [R0] \n\
 /* 0803c6da */ LDR R0, [R2] \n\
-/* 0803c6dc */ LDR R2, =0x000002cf @ !PossiblePointer \n\
+/* 0803c6dc */ LDR R2, =0x2cf \n\
 /* 0803c6de */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 0803c6e0 */ STRB R1, [R0] \n\
 /* 0803c6e2 */ ADD SP, 0xC \n\

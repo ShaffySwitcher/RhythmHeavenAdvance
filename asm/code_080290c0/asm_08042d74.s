@@ -22,7 +22,7 @@ branch_08042d82: \n\
 /* 08042d90 */ ADDS R1, R3, R0 @ Set R1 to R3 + R0 \n\
 /* 08042d92 */ MOVS R0, 0xFF @ Set R0 to 0xFF \n\
 /* 08042d94 */ STRB R0, [R1] \n\
-/* 08042d96 */ LDR R2, =0x00000101 @ !PossiblePointer \n\
+/* 08042d96 */ LDR R2, =0x101 \n\
 /* 08042d98 */ ADDS R1, R3, R2 @ Set R1 to R3 + R2 \n\
 /* 08042d9a */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 08042d9c */ STRB R0, [R1] \n\
@@ -42,7 +42,7 @@ branch_08042d82: \n\
 /* 08042db8 */ ADDS R4, 0x1 @ Add 0x1 to R4 \n\
 /* 08042dba */ ADDS R0, R3, R4 @ Set R0 to R3 + R4 \n\
 /* 08042dbc */ STRB R1, [R0] \n\
-/* 08042dbe */ LDR R1, =0x00000107 @ !PossiblePointer \n\
+/* 08042dbe */ LDR R1, =0x107 \n\
 /* 08042dc0 */ ADDS R0, R3, R1 @ Set R0 to R3 + R1 \n\
 /* 08042dc2 */ STRB R2, [R0] \n\
 /* 08042dc4 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\

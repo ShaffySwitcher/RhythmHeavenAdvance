@@ -69,7 +69,7 @@ branch_0803255a: \n\
 /* 08032582 */ BL func_08001980 \n\
 /* 08032586 */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 08032588 */ BL func_0800c1a8 \n\
-/* 0803258c */ LDR R2, =0x0805a5d4 @ !PossiblePointer \n\
+/* 0803258c */ LDR R2, =D_0805a5d4 \n\
 /* 0803258e */ MOV R3, R10 @ Set R3 to R10 \n\
 /* 08032590 */ LSLS R3, R3, 0x1 \n\
 /* 08032592 */ MOV R9, R3 @ Set R9 to R3 \n\
@@ -166,7 +166,7 @@ branch_0803264e: \n\
 /* 08032652 */ BL func_08001980 \n\
 /* 08032656 */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 08032658 */ BL func_0800c1a8 \n\
-/* 0803265c */ LDR R1, =0x0805a5d4 @ !PossiblePointer \n\
+/* 0803265c */ LDR R1, =D_0805a5d4 \n\
 /* 0803265e */ MOV R9, R1 @ Set R9 to R1 \n\
 /* 08032660 */ ADD R5, R10 @ Add R10 to R5 \n\
 /* 08032662 */ LSLS R5, R5, 0x2 \n\

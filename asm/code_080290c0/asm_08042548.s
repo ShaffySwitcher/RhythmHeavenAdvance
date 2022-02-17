@@ -10,7 +10,7 @@ glabel func_08042548 \n\
 /* 08042550 */ PUSH {R5-R7} \n\
 /* 08042552 */ LDR R4, =D_030055d0 \n\
 /* 08042554 */ LDR R2, [R4] \n\
-/* 08042556 */ LDR R1, =0x000002e9 @ !PossiblePointer \n\
+/* 08042556 */ LDR R1, =0x2e9 \n\
 /* 08042558 */ ADDS R0, R2, R1 @ Set R0 to R2 + R1 \n\
 /* 0804255a */ LDRB R0, [R0] \n\
 /* 0804255c */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
@@ -22,7 +22,7 @@ branch_08042562: \n\
 /* 08042564 */ ADDS R1, 0x7 @ Add 0x7 to R1 \n\
 /* 08042566 */ ADDS R0, R2, R1 @ Set R0 to R2 + R1 \n\
 /* 08042568 */ LDRH R1, [R0] \n\
-/* 0804256a */ LDR R0, =0x0000013f @ !PossiblePointer \n\
+/* 0804256a */ LDR R0, =0x13f \n\
 /* 0804256c */ CMP R1, R0 @ Check R1 - R0 \n\
 /* 0804256e */ BLS branch_08042572 \n\
 /* 08042570 */ MOVS R6, 0x1 @ Set R6 to 0x1 \n\
@@ -106,7 +106,7 @@ branch_080425d6: \n\
 /* 08042618 */ MOVS R6, 0xAA @ Set R6 to 0xAA \n\
 /* 0804261a */ LSLS R0, R0, 0x10 \n\
 /* 0804261c */ LSRS R0, R0, 0x10 \n\
-/* 0804261e */ LDR R2, =0x00000352 @ !PossiblePointer \n\
+/* 0804261e */ LDR R2, =0x352 \n\
 /* 08042620 */ ADDS R5, R0, R2 @ Set R5 to R0 + R2 \n\
 /* 08042622 */ MOVS R1, 0xAA @ Set R1 to 0xAA \n\
 /* 08042624 */ NEGS R1, R1 @ Set R1 to -R1 \n\
@@ -120,7 +120,7 @@ branch_080425d6: \n\
 /* 08042634 */ BL __divsi3 \n\
 /* 08042638 */ ADDS R4, R0, R4 @ Set R4 to R0 + R4 \n\
 /* 0804263a */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
-/* 0804263c */ LDR R1, =0xfffffd58 @ !PossiblePointer \n\
+/* 0804263c */ LDR R1, =0xfffffd58 \n\
 /* 0804263e */ ADDS R2, R5, 0x0 @ Set R2 to R5 + 0x0 \n\
 /* 08042640 */ BL func_080087d4 \n\
 /* 08042644 */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
@@ -154,7 +154,7 @@ branch_0804267a: \n\
 /* 0804267c */ BL func_08001980 \n\
 /* 08042680 */ LSLS R0, R0, 0x10 \n\
 /* 08042682 */ LSRS R0, R0, 0x10 \n\
-/* 08042684 */ LDR R1, =0x00000352 @ !PossiblePointer \n\
+/* 08042684 */ LDR R1, =0x352 \n\
 /* 08042686 */ ADDS R5, R0, R1 @ Set R5 to R0 + R1 \n\
 /* 08042688 */ LSLS R0, R7, 0x2 \n\
 /* 0804268a */ ADDS R0, R0, R7 @ Set R0 to R0 + R7 \n\
@@ -162,10 +162,10 @@ branch_0804267a: \n\
 /* 0804268e */ MOVS R1, 0xC0 @ Set R1 to 0xC0 \n\
 /* 08042690 */ LSLS R1, R1, 0x1 \n\
 /* 08042692 */ BL __divsi3 \n\
-/* 08042696 */ LDR R2, =0xfffffe02 @ !PossiblePointer \n\
+/* 08042696 */ LDR R2, =0xfffffe02 \n\
 /* 08042698 */ ADDS R4, R0, R2 @ Set R4 to R0 + R2 \n\
 /* 0804269a */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
-/* 0804269c */ LDR R1, =0xfffffd58 @ !PossiblePointer \n\
+/* 0804269c */ LDR R1, =0xfffffd58 \n\
 /* 0804269e */ ADDS R2, R5, 0x0 @ Set R2 to R5 + 0x0 \n\
 /* 080426a0 */ BL func_080087d4 \n\
 /* 080426a4 */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
@@ -199,7 +199,7 @@ branch_080426ca: \n\
 /* 080426dc */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 080426de */ MOVS R2, 0x5 @ Set R2 to 0x5 \n\
 /* 080426e0 */ BL func_080087d4 \n\
-/* 080426e4 */ LDR R1, =0x00007fff @ !PossiblePointer \n\
+/* 080426e4 */ LDR R1, =0x7fff \n\
 /* 080426e6 */ MOVS R2, 0x40 @ Set R2 to 0x40 \n\
 /* 080426e8 */ BL func_08040eb0 \n\
  \n\

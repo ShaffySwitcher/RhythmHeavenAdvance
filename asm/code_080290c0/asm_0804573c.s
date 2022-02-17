@@ -25,7 +25,7 @@ branch_08045746: \n\
 /* 0804575e */ STR R1, [SP, 0x8] \n\
 /* 08045760 */ STR R1, [SP, 0xC] \n\
 /* 08045762 */ STR R1, [SP, 0x10] \n\
-/* 08045764 */ LDR R1, =0x088adba4 @ !PossiblePointer \n\
+/* 08045764 */ LDR R1, =D_088adba4 \n\
 /* 08045766 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08045768 */ MOVS R3, 0x96 @ Set R3 to 0x96 \n\
 /* 0804576a */ LSLS R3, R3, 0x1 \n\

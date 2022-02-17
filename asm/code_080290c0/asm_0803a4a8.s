@@ -15,7 +15,7 @@ glabel func_0803a4a8 \n\
 /* 0803a4ba */ MOVS R2, 0xF0 @ Set R2 to 0xF0 \n\
 /* 0803a4bc */ LSLS R2, R2, 0x7 \n\
 /* 0803a4be */ ADDS R5, R1, R2 @ Set R5 to R1 + R2 \n\
-/* 0803a4c0 */ LDR R1, =0x089e66bc @ !PossiblePointer \n\
+/* 0803a4c0 */ LDR R1, =D_089e66bc \n\
 /* 0803a4c2 */ LSRS R0, R0, 0x16 \n\
 /* 0803a4c4 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 0803a4c6 */ LDR R0, [R0] \n\

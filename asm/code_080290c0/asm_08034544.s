@@ -19,7 +19,7 @@ glabel func_08034544 \n\
 /* 0803455e */ MOV R9, R1 @ Set R9 to R1 \n\
  \n\
 branch_08034560: \n\
-/* 08034560 */ LDR R0, =0xfffffeff @ !PossiblePointer \n\
+/* 08034560 */ LDR R0, =0xfffffeff \n\
 /* 08034562 */ ANDS R4, R0 @ Set R4 to R4 & R0 \n\
 /* 08034564 */ MOVS R7, 0x0 @ Set R7 to 0x0 \n\
 /* 08034566 */ CMP R7, R9 @ Compare R7 and R9 \n\

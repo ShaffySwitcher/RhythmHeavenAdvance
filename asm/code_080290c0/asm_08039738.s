@@ -13,10 +13,10 @@ glabel func_08039738 \n\
 /* 08039748 */ ASRS R2, R2, 0x18 \n\
 /* 0803974a */ LDR R5, =D_03005380 \n\
 /* 0803974c */ LDR R0, [R5] \n\
-/* 0803974e */ LDR R1, =0x088f8eb8 @ !PossiblePointer \n\
+/* 0803974e */ LDR R1, =D_088f8eb8 \n\
 /* 08039750 */ MOVS R3, 0x40 @ Set R3 to 0x40 \n\
 /* 08039752 */ STR R3, [SP] \n\
-/* 08039754 */ LDR R3, =0x00004002 @ !PossiblePointer \n\
+/* 08039754 */ LDR R3, =0x4002 \n\
 /* 08039756 */ STR R3, [SP, 0x4] \n\
 /* 08039758 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 0803975a */ STR R3, [SP, 0x8] \n\

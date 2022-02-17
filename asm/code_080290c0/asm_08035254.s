@@ -16,10 +16,10 @@ glabel func_08035254 \n\
 /* 08035270 */ BL func_08034b14 \n\
 /* 08035274 */ LDR R0, =D_03005380 \n\
 /* 08035276 */ LDR R0, [R0] \n\
-/* 08035278 */ LDR R1, =0x088f3e38 @ !PossiblePointer \n\
+/* 08035278 */ LDR R1, =D_088f3e38 \n\
 /* 0803527a */ MOVS R2, 0x1E @ Set R2 to 0x1E \n\
 /* 0803527c */ STR R2, [SP] \n\
-/* 0803527e */ LDR R2, =0x00004864 @ !PossiblePointer \n\
+/* 0803527e */ LDR R2, =0x4864 \n\
 /* 08035280 */ STR R2, [SP, 0x4] \n\
 /* 08035282 */ MOVS R2, 0x1 @ Set R2 to 0x1 \n\
 /* 08035284 */ STR R2, [SP, 0x8] \n\

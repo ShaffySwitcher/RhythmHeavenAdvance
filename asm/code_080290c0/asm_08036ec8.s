@@ -16,7 +16,7 @@ glabel func_08036ec8 \n\
 /* 08036edc */ NEGS R2, R1 @ Set R2 to -R1 \n\
  \n\
 branch_08036ede: \n\
-/* 08036ede */ LDR R0, =0x000001ff @ !PossiblePointer \n\
+/* 08036ede */ LDR R0, =0x1ff \n\
 /* 08036ee0 */ CMP R2, R0 @ Check R2 - R0 \n\
 /* 08036ee2 */ BGT branch_08036ef0 \n\
 /* 08036ee4 */ STR R4, [R3, 0xC] \n\

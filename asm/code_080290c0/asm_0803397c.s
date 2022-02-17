@@ -24,7 +24,7 @@ glabel func_0803397c \n\
 /* 080339a0 */ ADDS R2, 0x92 @ Add 0x92 to R2 \n\
 /* 080339a2 */ STRH R0, [R2] \n\
 /* 080339a4 */ ADDS R1, 0x94 @ Add 0x94 to R1 \n\
-/* 080339a6 */ LDR R0, =0x0000ffff @ !PossiblePointer \n\
+/* 080339a6 */ LDR R0, =0xffff \n\
 /* 080339a8 */ STRH R0, [R1] \n\
 /* 080339aa */ POP {R4} \n\
 /* 080339ac */ POP {R0} \n\

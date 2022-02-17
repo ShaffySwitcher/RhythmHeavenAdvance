@@ -9,7 +9,7 @@ glabel func_08042b58 \n\
 /* 08042b5e */ LDRB R0, [R1] \n\
 /* 08042b60 */ CMP R0, 0x1 @ Compare R0 and 0x1 \n\
 /* 08042b62 */ BNE branch_08042b7a \n\
-/* 08042b64 */ LDR R0, =0x0000026f @ !PossiblePointer \n\
+/* 08042b64 */ LDR R0, =0x26f \n\
 /* 08042b66 */ ADDS R2, R1, R0 @ Set R2 to R1 + R0 \n\
 /* 08042b68 */ MOVS R3, 0x9C @ Set R3 to 0x9C \n\
 /* 08042b6a */ LSLS R3, R3, 0x2 \n\

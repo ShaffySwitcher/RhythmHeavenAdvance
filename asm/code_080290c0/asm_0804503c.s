@@ -20,7 +20,7 @@ glabel func_0804503c \n\
  \n\
 branch_0804505a: \n\
 /* 0804505a */ LDR R0, [R5] \n\
-/* 0804505c */ LDR R1, =0x08932cbc @ !PossiblePointer \n\
+/* 0804505c */ LDR R1, =D_08932cbc \n\
 /* 0804505e */ MOVS R2, 0x7F @ Set R2 to 0x7F \n\
 /* 08045060 */ STR R2, [SP] \n\
 /* 08045062 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
@@ -58,7 +58,7 @@ branch_0804509e: \n\
 /* 080450a2 */ LSLS R1, R1, 0x1 \n\
 /* 080450a4 */ ADDS R0, R2, R1 @ Set R0 to R2 + R1 \n\
 /* 080450a6 */ LDR R0, [R0] \n\
-/* 080450a8 */ LDR R1, =0x08932ea4 @ !PossiblePointer \n\
+/* 080450a8 */ LDR R1, =D_08932ea4 \n\
 /* 080450aa */ ADDS R2, R2, R4 @ Set R2 to R2 + R4 \n\
 /* 080450ac */ LDRB R2, [R2] \n\
 /* 080450ae */ STR R3, [SP] \n\

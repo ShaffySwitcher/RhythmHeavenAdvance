@@ -39,7 +39,7 @@ glabel func_0803e580 \n\
 /* 0803e5c6 */ BL func_0800c3a4 \n\
 /* 0803e5ca */ LDR R1, [R5] \n\
 /* 0803e5cc */ STRH R0, [R1, 0xA] \n\
-/* 0803e5ce */ LDR R0, =0x08a9e688 @ !PossiblePointer \n\
+/* 0803e5ce */ LDR R0, =D_08a9e688 \n\
 /* 0803e5d0 */ BL func_08002634 \n\
 /* 0803e5d4 */ B branch_0803e61a \n\
 \n\
@@ -67,7 +67,7 @@ branch_0803e5e4: \n\
 /* 0803e60c */ BL func_0800c3a4 \n\
 /* 0803e610 */ LDR R1, [R5] \n\
 /* 0803e612 */ STRH R0, [R1, 0xA] \n\
-/* 0803e614 */ LDR R0, =0x08a9e69c @ !PossiblePointer \n\
+/* 0803e614 */ LDR R0, =D_08a9e69c \n\
 /* 0803e616 */ BL func_08002634 \n\
  \n\
 branch_0803e61a: \n\

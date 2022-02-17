@@ -24,11 +24,11 @@ glabel func_080436e4 \n\
 /* 08043708 */ ANDS R1, R0 @ Set R1 to R1 & R0 \n\
 /* 0804370a */ LSLS R1, R1, 0x6 \n\
 /* 0804370c */ LDRH R2, [R5] \n\
-/* 0804370e */ LDR R0, =0xfffff83f @ !PossiblePointer \n\
+/* 0804370e */ LDR R0, =0xfffff83f \n\
 /* 08043710 */ ANDS R0, R2 @ Set R0 to R0 & R2 \n\
 /* 08043712 */ ORRS R0, R1 @ Set R0 to R0 | R1 \n\
 /* 08043714 */ STRH R0, [R5] \n\
-/* 08043716 */ LDR R1, =0x00000129 @ !PossiblePointer \n\
+/* 08043716 */ LDR R1, =0x129 \n\
 /* 08043718 */ ADDS R0, R3, R1 @ Set R0 to R3 + R1 \n\
 /* 0804371a */ LDRB R0, [R0] \n\
 /* 0804371c */ STRB R0, [R5, 0x4] \n\
@@ -38,7 +38,7 @@ glabel func_080436e4 \n\
 /* 08043724 */ ADDS R1, R5, 0x0 @ Set R1 to R5 + 0x0 \n\
 /* 08043726 */ ADDS R1, 0x2E @ Add 0x2E to R1 \n\
 /* 08043728 */ STRB R0, [R1] \n\
-/* 0804372a */ LDR R1, =0x0000012d @ !PossiblePointer \n\
+/* 0804372a */ LDR R1, =0x12d \n\
 /* 0804372c */ ADDS R0, R3, R1 @ Set R0 to R3 + R1 \n\
 /* 0804372e */ LDRB R0, [R0] \n\
 /* 08043730 */ ADDS R1, R5, 0x0 @ Set R1 to R5 + 0x0 \n\
@@ -50,7 +50,7 @@ glabel func_080436e4 \n\
 /* 0804373c */ LSLS R1, R0, 0x2 \n\
 /* 0804373e */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\
 /* 08043740 */ LSLS R1, R1, 0x2 \n\
-/* 08043742 */ LDR R0, =0x089e9164 @ !PossiblePointer \n\
+/* 08043742 */ LDR R0, =D_089e9164 \n\
 /* 08043744 */ ADDS R4, R1, R0 @ Set R4 to R1 + R0 \n\
 /* 08043746 */ MOVS R3, 0x10 @ Set R3 to 0x10 \n\
 /* 08043748 */ LDRSH R0, [R4, R3] \n\
@@ -179,7 +179,7 @@ jtbl_0804382c: \n\
 jump_08043864: \n\
 /* 08043864 */ CMP R7, 0x0 @ Compare R7 and 0x0 \n\
 /* 08043866 */ BNE branch_080438b6 \n\
-/* 08043868 */ LDR R0, =0x08a9df30 @ !PossiblePointer \n\
+/* 08043868 */ LDR R0, =D_08a9df30 \n\
 /* 0804386a */ BL func_08002634 \n\
 /* 0804386e */ B branch_080438b6 \n\
 \n\
@@ -187,7 +187,7 @@ jump_08043864: \n\
 jump_08043874: \n\
 /* 08043874 */ CMP R7, 0x0 @ Compare R7 and 0x0 \n\
 /* 08043876 */ BNE branch_080438b6 \n\
-/* 08043878 */ LDR R0, =0x08a9d260 @ !PossiblePointer \n\
+/* 08043878 */ LDR R0, =D_08a9d260 \n\
 /* 0804387a */ BL func_08002634 \n\
 /* 0804387e */ B branch_080438b6 \n\
 \n\
@@ -215,7 +215,7 @@ jump_080438a2: \n\
 jump_080438ac: \n\
 /* 080438ac */ CMP R7, 0x0 @ Compare R7 and 0x0 \n\
 /* 080438ae */ BNE branch_080438b6 \n\
-/* 080438b0 */ LDR R0, =0x08a9df1c @ !PossiblePointer \n\
+/* 080438b0 */ LDR R0, =D_08a9df1c \n\
 /* 080438b2 */ BL func_08002634 \n\
  \n\
 branch_080438b6: \n\

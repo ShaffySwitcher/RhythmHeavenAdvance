@@ -11,7 +11,7 @@ glabel func_08042ea8 \n\
 /* 08042eb2 */ LSLS R4, R4, 0x1 \n\
 /* 08042eb4 */ ADDS R1, R3, R4 @ Set R1 to R3 + R4 \n\
 /* 08042eb6 */ STRB R2, [R1] \n\
-/* 08042eb8 */ LDR R2, =0x00000129 @ !PossiblePointer \n\
+/* 08042eb8 */ LDR R2, =0x129 \n\
 /* 08042eba */ ADDS R1, R3, R2 @ Set R1 to R3 + R2 \n\
 /* 08042ebc */ STRB R0, [R1] \n\
 /* 08042ebe */ POP {R4} \n\

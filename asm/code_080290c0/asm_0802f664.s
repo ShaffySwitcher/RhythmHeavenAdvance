@@ -81,7 +81,7 @@ branch_0802f6c4: \n\
 /* 0802f6f0 */ BL func_0804d6cc \n\
 /* 0802f6f4 */ LSLS R0, R0, 0x18 \n\
 /* 0802f6f6 */ ASRS R0, R0, 0x18 \n\
-/* 0802f6f8 */ LDR R2, =0x0805a41c @ !PossiblePointer \n\
+/* 0802f6f8 */ LDR R2, =D_0805a41c \n\
 /* 0802f6fa */ MOV R3, R9 @ Set R3 to R9 \n\
 /* 0802f6fc */ LDR R1, [R3] \n\
 /* 0802f6fe */ ADDS R3, R1, R4 @ Set R3 to R1 + R4 \n\
