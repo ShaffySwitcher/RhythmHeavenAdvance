@@ -29,7 +29,7 @@ glabel func_08012090 \n\
 /* 080120c2 */ STRH R0, [R1, 0x1A] \n\
  \n\
 branch_080120c4: \n\
-/* 080120c4 */ LDR R0, =s_menu_cursor1MidiInfo \n\
+/* 080120c4 */ LDR R0, =s_menu_cursor1_seqData \n\
 /* 080120c6 */ BL func_08002634 \n\
 /* 080120ca */ ADD SP, 0xC \n\
 /* 080120cc */ POP {R4, R5} \n\

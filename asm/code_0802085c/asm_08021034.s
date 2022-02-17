@@ -26,7 +26,7 @@ glabel func_08021034 \n\
 /* 08021062 */ LDRH R0, [R1] \n\
 /* 08021064 */ ADDS R0, 0x1 @ Add 0x1 to R0 \n\
 /* 08021066 */ STRH R0, [R1] \n\
-/* 08021068 */ LDR R0, =s_HCMidiInfo \n\
+/* 08021068 */ LDR R0, =s_HC_seqData \n\
 /* 0802106a */ BL func_08002634 \n\
 /* 0802106e */ POP {R4} \n\
 /* 08021070 */ POP {R0} \n\

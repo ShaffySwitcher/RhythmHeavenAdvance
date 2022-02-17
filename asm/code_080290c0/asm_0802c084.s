@@ -23,7 +23,7 @@ glabel func_0802c084 \n\
 /* 0802c0ac */ LSLS R2, R2, 0x2 \n\
 /* 0802c0ae */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
 /* 0802c0b0 */ STR R0, [R1] \n\
-/* 0802c0b2 */ LDR R0, =s_block_hitMidiInfo \n\
+/* 0802c0b2 */ LDR R0, =s_block_hit_seqData \n\
 /* 0802c0b4 */ BL func_08002634 \n\
  \n\
 branch_0802c0b8: \n\

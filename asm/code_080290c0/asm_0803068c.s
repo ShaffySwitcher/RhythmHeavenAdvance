@@ -74,7 +74,7 @@ glabel func_0803068c \n\
 /* 08030724 */ MOV R0, R10 @ Set R0 to R10 \n\
 /* 08030726 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08030728 */ BNE branch_08030730 \n\
-/* 0803072a */ LDR R0, =s_f_handclap_readyMidiInfo \n\
+/* 0803072a */ LDR R0, =s_f_handclap_ready_seqData \n\
 /* 0803072c */ BL func_08002634 \n\
  \n\
 branch_08030730: \n\

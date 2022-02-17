@@ -79,7 +79,7 @@ glabel func_080320c8 \n\
 /* 08032168 */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\
 /* 0803216a */ ADDS R1, R4, 0x0 @ Set R1 to R4 + 0x0 \n\
 /* 0803216c */ BL func_0804dcb8 \n\
-/* 08032170 */ LDR R0, =s_iai_yarareMidiInfo \n\
+/* 08032170 */ LDR R0, =s_iai_yarare_seqData \n\
 /* 08032172 */ BL func_08002634 \n\
 /* 08032176 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 08032178 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\

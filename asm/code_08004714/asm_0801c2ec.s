@@ -141,7 +141,7 @@ branch_0801c3da: \n\
 /* 0801c428 */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\
 /* 0801c42a */ STRB R5, [R1] \n\
 /* 0801c42c */ BL func_0801aa04 \n\
-/* 0801c430 */ LDR R0, =s_studio_bgmMidiInfo \n\
+/* 0801c430 */ LDR R0, =s_studio_bgm_seqData \n\
 /* 0801c432 */ BL func_08002634 \n\
 /* 0801c436 */ MOV R2, R8 @ Set R2 to R8 \n\
 /* 0801c438 */ LDR R1, [R2] \n\

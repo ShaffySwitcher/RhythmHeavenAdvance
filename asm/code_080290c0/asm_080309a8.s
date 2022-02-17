@@ -23,7 +23,7 @@ glabel func_080309a8 \n\
 /* 080309cc */ STR R3, [SP, 0x8] \n\
 /* 080309ce */ MOVS R3, 0x2 @ Set R3 to 0x2 \n\
 /* 080309d0 */ BL func_0804d8f8 \n\
-/* 080309d4 */ LDR R0, =s_tebyoushi_patiMidiInfo \n\
+/* 080309d4 */ LDR R0, =s_tebyoushi_pati_seqData \n\
 /* 080309d6 */ BL func_08002634 \n\
 /* 080309da */ BL func_0800bc40 \n\
 /* 080309de */ ADD SP, 0xC \n\

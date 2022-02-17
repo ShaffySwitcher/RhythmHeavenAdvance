@@ -91,7 +91,7 @@ branch_08043f18: \n\
 /* 08043f1a */ MOVS R1, 0x3 @ Set R1 to 0x3 \n\
 /* 08043f1c */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08043f1e */ BL func_08017928 \n\
-/* 08043f22 */ LDR R0, =s_virus_forkMidiInfo \n\
+/* 08043f22 */ LDR R0, =s_virus_fork_seqData \n\
 /* 08043f24 */ BL func_08002634 \n\
 /* 08043f28 */ ADD SP, 0x1C \n\
 /* 08043f2a */ POP {R4-R6} \n\

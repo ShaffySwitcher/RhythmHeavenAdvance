@@ -65,7 +65,7 @@ struct InstrumentSubbankMultiKey {
 
 typedef const struct InstrumentHeader *InstrumentBank[];
 
-struct MidiInfo {
+struct SequenceData {
     const u32 *romAddress;
     u32 unk4f1:5;
     u32 soundBank:10;
@@ -73,7 +73,7 @@ struct MidiInfo {
     u32 unk4f4:8;
     u32 unk4f5:2;
     u32 unk8;
-    const u8 *midiName;
+    const char *seqName;
     u32 iramChnlIndex;
 };
 

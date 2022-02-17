@@ -115,7 +115,7 @@ branch_0803796c: \n\
 /* 080379a2 */ STR R2, [SP, 0x10] \n\
 /* 080379a4 */ MOVS R3, 0x90 @ Set R3 to 0x90 \n\
 /* 080379a6 */ BL func_0804d160 \n\
-/* 080379aa */ LDR R1, =s_f_quiz_blast_plyMidiInfo \n\
+/* 080379aa */ LDR R1, =s_f_quiz_blast_ply_seqData \n\
 /* 080379ac */ B branch_08037a40 \n\
 \n\
 .ltorg \n\
@@ -149,7 +149,7 @@ branch_080379c4: \n\
 /* 080379fa */ STR R2, [SP, 0x10] \n\
 /* 080379fc */ MOVS R3, 0x58 @ Set R3 to 0x58 \n\
 /* 080379fe */ BL func_0804d160 \n\
-/* 08037a02 */ LDR R1, =s_f_quiz_blast_comMidiInfo \n\
+/* 08037a02 */ LDR R1, =s_f_quiz_blast_com_seqData \n\
 /* 08037a04 */ B branch_08037a40 \n\
 \n\
 .ltorg \n\
@@ -171,7 +171,7 @@ branch_08037a1c: \n\
 /* 08037a36 */ STR R2, [SP, 0x10] \n\
 /* 08037a38 */ MOVS R3, 0x78 @ Set R3 to 0x78 \n\
 /* 08037a3a */ BL func_0804d160 \n\
-/* 08037a3e */ LDR R1, =s_f_quiz_blast_plateMidiInfo \n\
+/* 08037a3e */ LDR R1, =s_f_quiz_blast_plate_seqData \n\
  \n\
 branch_08037a40: \n\
 /* 08037a40 */ MOVS R0, 0x5 @ Set R0 to 0x5 \n\

@@ -13,7 +13,7 @@ glabel func_080317c8 \n\
 /* 080317d6 */ LDRSH R0, [R0, R1] \n\
 /* 080317d8 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 080317da */ BNE branch_080317e2 \n\
-/* 080317dc */ LDR R0, =s_furiMidiInfo \n\
+/* 080317dc */ LDR R0, =s_furi_seqData \n\
 /* 080317de */ BL func_08002634 \n\
  \n\
 branch_080317e2: \n\

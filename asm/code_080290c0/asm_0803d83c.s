@@ -69,7 +69,7 @@ branch_0803d874: \n\
 /* 0803d8be */ ADDS R1, R5, 0x0 @ Set R1 to R5 + 0x0 \n\
 /* 0803d8c0 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0803d8c2 */ BL func_0800856c \n\
-/* 0803d8c6 */ LDR R0, =s_tebyoushi_patiMidiInfo \n\
+/* 0803d8c6 */ LDR R0, =s_tebyoushi_pati_seqData \n\
 /* 0803d8c8 */ BL func_08002634 \n\
 /* 0803d8cc */ LDR R1, [R6] \n\
 /* 0803d8ce */ ADDS R0, R1, 0x0 @ Set R0 to R1 + 0x0 \n\
@@ -80,7 +80,7 @@ branch_0803d874: \n\
 /* 0803d8d8 */ LDRH R0, [R1, 0x36] \n\
 /* 0803d8da */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0803d8dc */ BNE branch_0803d8f2 \n\
-/* 0803d8de */ LDR R0, =s_warai_soloMidiInfo \n\
+/* 0803d8de */ LDR R0, =s_warai_solo_seqData \n\
 /* 0803d8e0 */ MOVS R1, 0x40 @ Set R1 to 0x40 \n\
 /* 0803d8e2 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0803d8e4 */ BL func_08002698 \n\

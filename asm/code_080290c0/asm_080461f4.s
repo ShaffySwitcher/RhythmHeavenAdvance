@@ -21,7 +21,7 @@ glabel func_080461f4 \n\
 /* 08046212 */ STR R2, [SP, 0x10] \n\
 /* 08046214 */ MOVS R3, 0x78 @ Set R3 to 0x78 \n\
 /* 08046216 */ BL func_0804d160 \n\
-/* 0804621a */ LDR R0, =s_sword_hiMidiInfo \n\
+/* 0804621a */ LDR R0, =s_sword_hi_seqData \n\
 /* 0804621c */ BL func_08002634 \n\
 /* 08046220 */ ADD SP, 0x14 \n\
 /* 08046222 */ POP {R0} \n\

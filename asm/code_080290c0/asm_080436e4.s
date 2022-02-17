@@ -179,7 +179,7 @@ jtbl_0804382c: \n\
 jump_08043864: \n\
 /* 08043864 */ CMP R7, 0x0 @ Compare R7 and 0x0 \n\
 /* 08043866 */ BNE branch_080438b6 \n\
-/* 08043868 */ LDR R0, =s_f_virus_uhihiMidiInfo \n\
+/* 08043868 */ LDR R0, =s_f_virus_uhihi_seqData \n\
 /* 0804386a */ BL func_08002634 \n\
 /* 0804386e */ B branch_080438b6 \n\
 \n\
@@ -187,7 +187,7 @@ jump_08043864: \n\
 jump_08043874: \n\
 /* 08043874 */ CMP R7, 0x0 @ Compare R7 and 0x0 \n\
 /* 08043876 */ BNE branch_080438b6 \n\
-/* 08043878 */ LDR R0, =s_virus_dashMidiInfo \n\
+/* 08043878 */ LDR R0, =s_virus_dash_seqData \n\
 /* 0804387a */ BL func_08002634 \n\
 /* 0804387e */ B branch_080438b6 \n\
 \n\
@@ -215,7 +215,7 @@ jump_080438a2: \n\
 jump_080438ac: \n\
 /* 080438ac */ CMP R7, 0x0 @ Compare R7 and 0x0 \n\
 /* 080438ae */ BNE branch_080438b6 \n\
-/* 080438b0 */ LDR R0, =s_f_virus_inMidiInfo \n\
+/* 080438b0 */ LDR R0, =s_f_virus_in_seqData \n\
 /* 080438b2 */ BL func_08002634 \n\
  \n\
 branch_080438b6: \n\

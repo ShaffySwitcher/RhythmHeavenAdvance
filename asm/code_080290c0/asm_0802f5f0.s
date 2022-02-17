@@ -21,22 +21,22 @@ jtbl_0802f604: \n\
 .word jump_0802f640 \n\
 \n\
 jump_0802f618: \n\
-/* 0802f618 */ LDR R1, =s_intro_comeonMidiInfo \n\
+/* 0802f618 */ LDR R1, =s_intro_comeon_seqData \n\
 /* 0802f61a */ B branch_0802f632 \n\
 \n\
 .ltorg \n\
 jump_0802f620: \n\
-/* 0802f620 */ LDR R1, =s_intro_oneMidiInfo \n\
+/* 0802f620 */ LDR R1, =s_intro_one_seqData \n\
 /* 0802f622 */ B branch_0802f632 \n\
 \n\
 .ltorg \n\
 jump_0802f628: \n\
-/* 0802f628 */ LDR R1, =s_intro_twoMidiInfo \n\
+/* 0802f628 */ LDR R1, =s_intro_two_seqData \n\
 /* 0802f62a */ B branch_0802f632 \n\
 \n\
 .ltorg \n\
 jump_0802f630: \n\
-/* 0802f630 */ LDR R1, =s_intro_threeMidiInfo \n\
+/* 0802f630 */ LDR R1, =s_intro_three_seqData \n\
  \n\
 branch_0802f632: \n\
 /* 0802f632 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
@@ -45,7 +45,7 @@ branch_0802f632: \n\
 \n\
 .ltorg \n\
 jump_0802f640: \n\
-/* 0802f640 */ LDR R0, =s_f_hanabi_v_nueiMidiInfo \n\
+/* 0802f640 */ LDR R0, =s_f_hanabi_v_nuei_seqData \n\
 /* 0802f642 */ BL func_08002634 \n\
  \n\
 branch_0802f646: \n\

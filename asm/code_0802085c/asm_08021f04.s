@@ -111,7 +111,7 @@ branch_08021fc0: \n\
 /* 08021fd4 */ STR R4, [SP, 0x8] \n\
 /* 08021fd6 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 08021fd8 */ BL func_0804d8f8 \n\
-/* 08021fdc */ LDR R0, =s_f_boxing_v_nuaMidiInfo \n\
+/* 08021fdc */ LDR R0, =s_f_boxing_v_nua_seqData \n\
 /* 08021fde */ BL func_08002634 \n\
  \n\
 branch_08021fe2: \n\

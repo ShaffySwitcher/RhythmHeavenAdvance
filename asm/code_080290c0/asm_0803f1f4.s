@@ -141,7 +141,7 @@ branch_0803f28c: \n\
 /* 0803f304 */ LDRSH R1, [R1, R2] \n\
 /* 0803f306 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0803f308 */ BL func_0804cebc \n\
-/* 0803f30c */ LDR R0, =s_f_toss_ballMidiInfo \n\
+/* 0803f30c */ LDR R0, =s_f_toss_ball_seqData \n\
 /* 0803f30e */ BL func_08002634 \n\
 /* 0803f312 */ LDR R0, =D_089e86b8 \n\
 /* 0803f314 */ LDR R3, [SP, 0xC] \n\

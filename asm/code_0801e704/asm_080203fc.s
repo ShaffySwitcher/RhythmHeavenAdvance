@@ -9,7 +9,7 @@ glabel func_080203fc \n\
 /* 08020402 */ LDR R3, [R5, 0x8] \n\
 /* 08020404 */ CMP R2, R3 @ Check R2 - R3 \n\
 /* 08020406 */ BLS branch_0802045c \n\
-/* 08020408 */ LDR R0, =s_f_batter_ball_landMidiInfo \n\
+/* 08020408 */ LDR R0, =s_f_batter_ball_land_seqData \n\
 /* 0802040a */ BL func_08002634 \n\
 /* 0802040e */ LDR R4, =D_030055d0 \n\
 /* 08020410 */ LDR R0, [R4] \n\

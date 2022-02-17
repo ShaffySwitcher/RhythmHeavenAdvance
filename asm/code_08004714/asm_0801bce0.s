@@ -86,7 +86,7 @@ branch_0801bd56: \n\
 /* 0801bd70 */ BEQ branch_0801bd9c \n\
 /* 0801bd72 */ LDR R1, =D_0805942c \n\
 /* 0801bd74 */ LDR R2, =(func_0801bbd4 + 1) \n\
-/* 0801bd76 */ LDR R4, =s_menu_kettei2MidiInfo \n\
+/* 0801bd76 */ LDR R4, =s_menu_kettei2_seqData \n\
 /* 0801bd78 */ STR R4, [SP] \n\
 /* 0801bd7a */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0801bd7c */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
@@ -118,12 +118,12 @@ branch_0801bd9c: \n\
 /* 0801bdbe */ BEQ branch_0801bdf0 \n\
 /* 0801bdc0 */ LDR R1, =D_0805945c \n\
 /* 0801bdc2 */ LDR R2, =(func_0801bbe8 + 1) \n\
-/* 0801bdc4 */ LDR R0, =s_menu_se24MidiInfo \n\
+/* 0801bdc4 */ LDR R0, =s_menu_se24_seqData \n\
 /* 0801bdc6 */ STR R0, [SP] \n\
 /* 0801bdc8 */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 0801bdca */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 0801bdcc */ BL func_0801ac38 \n\
-/* 0801bdd0 */ LDR R1, =s_menu_kettei2MidiInfo \n\
+/* 0801bdd0 */ LDR R1, =s_menu_kettei2_seqData \n\
 /* 0801bdd2 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0801bdd4 */ BL func_0800267c \n\
 /* 0801bdd8 */ B branch_0801bdfc \n\
@@ -132,7 +132,7 @@ branch_0801bd9c: \n\
  \n\
 branch_0801bdf0: \n\
 /* 0801bdf0 */ BL func_0801bb60 \n\
-/* 0801bdf4 */ LDR R1, =s_menu_se24MidiInfo \n\
+/* 0801bdf4 */ LDR R1, =s_menu_se24_seqData \n\
 /* 0801bdf6 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0801bdf8 */ BL func_0800267c \n\
  \n\
@@ -153,7 +153,7 @@ branch_0801bdfc: \n\
 /* 0801be18 */ LDRB R0, [R0] \n\
 /* 0801be1a */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0801be1c */ BNE branch_0801be60 \n\
-/* 0801be1e */ LDR R1, =s_menu_kettei2MidiInfo \n\
+/* 0801be1e */ LDR R1, =s_menu_kettei2_seqData \n\
 /* 0801be20 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0801be22 */ BL func_0800267c \n\
 /* 0801be26 */ LDR R0, [R4] \n\
@@ -179,12 +179,12 @@ branch_0801bdfc: \n\
 .ltorg \n\
  \n\
 branch_0801be60: \n\
-/* 0801be60 */ LDR R1, =s_menu_kettei2MidiInfo \n\
+/* 0801be60 */ LDR R1, =s_menu_kettei2_seqData \n\
 /* 0801be62 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0801be64 */ BL func_0800267c \n\
 /* 0801be68 */ LDR R1, =D_080594a0 \n\
 /* 0801be6a */ LDR R2, =(func_0801bc0c + 1) \n\
-/* 0801be6c */ LDR R0, =s_menu_se13MidiInfo \n\
+/* 0801be6c */ LDR R0, =s_menu_se13_seqData \n\
 /* 0801be6e */ STR R0, [SP] \n\
 /* 0801be70 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0801be72 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
@@ -200,7 +200,7 @@ branch_0801be78: \n\
 /* 0801be84 */ BL func_0800b118 \n\
 /* 0801be88 */ CMP R0, 0x2 @ Compare R0 and 0x2 \n\
 /* 0801be8a */ BNE branch_0801bef0 \n\
-/* 0801be8c */ LDR R1, =s_menu_kettei2MidiInfo \n\
+/* 0801be8c */ LDR R1, =s_menu_kettei2_seqData \n\
 /* 0801be8e */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0801be90 */ BL func_0800267c \n\
 /* 0801be94 */ LDR R0, [R5] \n\
@@ -299,19 +299,19 @@ branch_0801bf2c: \n\
 /* 0801bf52 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 0801bf54 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0801bf56 */ BEQ branch_0801bf84 \n\
-/* 0801bf58 */ LDR R1, =s_menu_cancel3MidiInfo \n\
+/* 0801bf58 */ LDR R1, =s_menu_cancel3_seqData \n\
 /* 0801bf5a */ B branch_0801bf8e \n\
 \n\
 .ltorg \n\
  \n\
 branch_0801bf84: \n\
-/* 0801bf84 */ LDR R1, =s_menu_kettei2MidiInfo \n\
+/* 0801bf84 */ LDR R1, =s_menu_kettei2_seqData \n\
 /* 0801bf86 */ B branch_0801bf8e \n\
 \n\
 .ltorg \n\
  \n\
 branch_0801bf8c: \n\
-/* 0801bf8c */ LDR R1, =s_menu_errorMidiInfo \n\
+/* 0801bf8c */ LDR R1, =s_menu_error_seqData \n\
  \n\
 branch_0801bf8e: \n\
 /* 0801bf8e */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
@@ -321,7 +321,7 @@ branch_0801bf8e: \n\
 .ltorg \n\
  \n\
 branch_0801bf9c: \n\
-/* 0801bf9c */ LDR R1, =s_menu_cancel3MidiInfo \n\
+/* 0801bf9c */ LDR R1, =s_menu_cancel3_seqData \n\
 /* 0801bf9e */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0801bfa0 */ BL func_0800267c \n\
 /* 0801bfa4 */ BL func_0801c7c0 \n\
@@ -340,7 +340,7 @@ branch_0801bf9c: \n\
 /* 0801bfc2 */ BL func_0800b3c8 \n\
 /* 0801bfc6 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0801bfc8 */ BL func_0801c6b8 \n\
-/* 0801bfcc */ LDR R0, =s_studio_bgmMidiInfo \n\
+/* 0801bfcc */ LDR R0, =s_studio_bgm_seqData \n\
 /* 0801bfce */ BL func_08002634 \n\
 /* 0801bfd2 */ LDR R1, [R4] \n\
 /* 0801bfd4 */ MOVS R3, 0x97 @ Set R3 to 0x97 \n\

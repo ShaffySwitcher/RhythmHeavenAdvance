@@ -1671,34 +1671,34 @@
 /* 0805aae8 */ .word 0x00000082
 /* 0805aaec */ .word 0x00000098
 
-/* 0805aaf0 */ .word s_heat_v_anatagaMidiInfo
-/* 0805aaf4 */ .word s_heat_v_anatataraMidiInfo
-/* 0805aaf8 */ .word s_heat_v_kimigaMidiInfo
+/* 0805aaf0 */ .word s_heat_v_anataga_seqData
+/* 0805aaf4 */ .word s_heat_v_anatatara_seqData
+/* 0805aaf8 */ .word s_heat_v_kimiga_seqData
 /* 0805aafc */ .word 0x00000000
 
-/* 0805ab00 */ .word s_heat_v_jituhaneMidiInfo
-/* 0805ab04 */ .word s_heat_v_watasineMidiInfo
-/* 0805ab08 */ .word s_heat_v_watasitaraMidiInfo
+/* 0805ab00 */ .word s_heat_v_jituhane_seqData
+/* 0805ab04 */ .word s_heat_v_watasine_seqData
+/* 0805ab08 */ .word s_heat_v_watasitara_seqData
 /* 0805ab0c */ .word 0x00000000
 
-/* 0805ab10 */ .word s_heat_v_okubyoMidiInfo
-/* 0805ab14 */ .word s_heat_v_majimeMidiInfo
-/* 0805ab18 */ .word s_heat_v_kouittaMidiInfo
+/* 0805ab10 */ .word s_heat_v_okubyo_seqData
+/* 0805ab14 */ .word s_heat_v_majime_seqData
+/* 0805ab18 */ .word s_heat_v_kouitta_seqData
 /* 0805ab1c */ .word 0x00000000
 
-/* 0805ab20 */ .word s_heat_v_dojiMidiInfo
-/* 0805ab24 */ .word s_heat_v_sugoiMidiInfo
-/* 0805ab28 */ .word s_heat_v_koumietemoMidiInfo
+/* 0805ab20 */ .word s_heat_v_doji_seqData
+/* 0805ab24 */ .word s_heat_v_sugoi_seqData
+/* 0805ab28 */ .word s_heat_v_koumietemo_seqData
 /* 0805ab2c */ .word 0x00000000
 
-/* 0805ab30 */ .word s_heat_v_demoMidiInfo
-/* 0805ab34 */ .word s_heat_v_yappariMidiInfo
-/* 0805ab38 */ .word s_heat_v_dakedoMidiInfo
+/* 0805ab30 */ .word s_heat_v_demo_seqData
+/* 0805ab34 */ .word s_heat_v_yappari_seqData
+/* 0805ab38 */ .word s_heat_v_dakedo_seqData
 /* 0805ab3c */ .word 0x00000000
 
-/* 0805ab40 */ .word s_heat_v_sukiMidiInfo
-/* 0805ab44 */ .word s_heat_v_kiraiMidiInfo
-/* 0805ab48 */ .word s_heat_v_sekiMidiInfo
+/* 0805ab40 */ .word s_heat_v_suki_seqData
+/* 0805ab44 */ .word s_heat_v_kirai_seqData
+/* 0805ab48 */ .word s_heat_v_seki_seqData
 /* 0805ab4c */ .word 0x00000000
 
 /* 0805ab50 */ 

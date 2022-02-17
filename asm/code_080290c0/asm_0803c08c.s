@@ -48,7 +48,7 @@ glabel func_0803c08c \n\
 /* 0803c0e4 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 0803c0e6 */ STR R3, [SP, 0x8] \n\
 /* 0803c0e8 */ BL func_0804d8f8 \n\
-/* 0803c0ec */ LDR R1, =s_ninja_yumiMidiInfo \n\
+/* 0803c0ec */ LDR R1, =s_ninja_yumi_seqData \n\
 /* 0803c0ee */ MOVS R0, 0x4 @ Set R0 to 0x4 \n\
 /* 0803c0f0 */ BL func_0800267c \n\
 /* 0803c0f4 */ ADDS R5, R0, 0x0 @ Set R5 to R0 + 0x0 \n\

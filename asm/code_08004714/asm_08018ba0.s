@@ -19,7 +19,7 @@ glabel func_08018ba0 \n\
 /* 08018bbe */ LDR R1, [R0] \n\
 /* 08018bc0 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 08018bc2 */ STR R0, [R1, 0x8] \n\
-/* 08018bc4 */ LDR R0, =s_menu_se20MidiInfo \n\
+/* 08018bc4 */ LDR R0, =s_menu_se20_seqData \n\
 /* 08018bc6 */ MOVS R1, 0x80 @ Set R1 to 0x80 \n\
 /* 08018bc8 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08018bca */ BL func_08002698 \n\

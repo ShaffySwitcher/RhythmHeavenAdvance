@@ -89,7 +89,7 @@ jump_08043970: \n\
 /* 08043984 */ MOVS R1, 0x10 @ Set R1 to 0x10 \n\
 /* 08043986 */ ORRS R0, R1 @ Set R0 to R0 | R1 \n\
 /* 08043988 */ STRB R0, [R5] \n\
-/* 0804398a */ LDR R0, =s_virus_dashMidiInfo \n\
+/* 0804398a */ LDR R0, =s_virus_dash_seqData \n\
 /* 0804398c */ BL func_08002634 \n\
  \n\
 branch_08043990: \n\
@@ -147,7 +147,7 @@ branch_080439ee: \n\
 /* 080439fa */ ADDS R0, R7, R0 @ Set R0 to R7 + R0 \n\
 /* 080439fc */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 080439fe */ STRB R1, [R0] \n\
-/* 08043a00 */ LDR R0, =s_virus_missMidiInfo \n\
+/* 08043a00 */ LDR R0, =s_virus_miss_seqData \n\
 /* 08043a02 */ BL func_08002634 \n\
  \n\
 branch_08043a06: \n\

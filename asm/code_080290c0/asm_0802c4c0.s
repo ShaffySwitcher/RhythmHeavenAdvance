@@ -15,19 +15,19 @@ glabel func_0802c4c0 \n\
 branch_0802c4d0: \n\
 /* 0802c4d0 */ CMP R0, 0x4 @ Compare R0 and 0x4 \n\
 /* 0802c4d2 */ BGT branch_0802c4ea \n\
-/* 0802c4d4 */ LDR R0, =s_esa_pengin3_1MidiInfo \n\
+/* 0802c4d4 */ LDR R0, =s_esa_pengin3_1_seqData \n\
 /* 0802c4d6 */ B branch_0802c4e6 \n\
 \n\
 .ltorg \n\
  \n\
 branch_0802c4dc: \n\
-/* 0802c4dc */ LDR R0, =s_esa_pengin1_1MidiInfo \n\
+/* 0802c4dc */ LDR R0, =s_esa_pengin1_1_seqData \n\
 /* 0802c4de */ B branch_0802c4e6 \n\
 \n\
 .ltorg \n\
  \n\
 branch_0802c4e4: \n\
-/* 0802c4e4 */ LDR R0, =s_esa_pengin2_1MidiInfo \n\
+/* 0802c4e4 */ LDR R0, =s_esa_pengin2_1_seqData \n\
  \n\
 branch_0802c4e6: \n\
 /* 0802c4e6 */ BL func_08002634 \n\

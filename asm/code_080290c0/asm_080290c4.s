@@ -9,7 +9,7 @@ glabel func_080290c4 \n\
 /* 080290ca */ LDR R1, =0x000003cd \n\
 /* 080290cc */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 080290ce */ LDRB R4, [R0] \n\
-/* 080290d0 */ LDR R0, =s_menu_cancel2MidiInfo \n\
+/* 080290d0 */ LDR R0, =s_menu_cancel2_seqData \n\
 /* 080290d2 */ BL func_08002634 \n\
 /* 080290d6 */ LDR R0, [R5] \n\
 /* 080290d8 */ LDR R2, =0x000003ce \n\

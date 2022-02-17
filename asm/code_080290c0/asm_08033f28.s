@@ -25,7 +25,7 @@ glabel func_08033f28 \n\
 /* 08033f50 */ ORRS R2, R5 @ Set R2 to R2 | R5 \n\
 /* 08033f52 */ LSRS R2, R2, 0x1F \n\
 /* 08033f54 */ BL func_0804cebc \n\
-/* 08033f58 */ LDR R0, =s_f_machine_clickMidiInfo \n\
+/* 08033f58 */ LDR R0, =s_f_machine_click_seqData \n\
 /* 08033f5a */ MOVS R2, 0x80 @ Set R2 to 0x80 \n\
 /* 08033f5c */ LSLS R2, R2, 0x4 \n\
 /* 08033f5e */ CMP R5, 0x0 @ Compare R5 and 0x0 \n\

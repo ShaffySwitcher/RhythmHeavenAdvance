@@ -37,7 +37,7 @@ branch_0802e0a6: \n\
 /* 0802e0b6 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0802e0b8 */ BGE branch_0802e0d0 \n\
 /* 0802e0ba */ BL func_0802dfa4 \n\
-/* 0802e0be */ LDR R0, =s_change_goalMidiInfo \n\
+/* 0802e0be */ LDR R0, =s_change_goal_seqData \n\
 /* 0802e0c0 */ BL func_08002634 \n\
 /* 0802e0c4 */ B branch_0802e200 \n\
 \n\

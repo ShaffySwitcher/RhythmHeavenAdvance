@@ -5,27 +5,27 @@ asm(".syntax unified \n\
 glabel func_08044074 \n\
 /* 08044074 */ PUSH {R4-R6, LR} \n\
 /* 08044076 */ ADDS R6, R0, 0x0 @ Set R6 to R0 + 0x0 \n\
-/* 08044078 */ LDR R0, =s_rap_15ji_desukaMidiInfo \n\
+/* 08044078 */ LDR R0, =s_rap_15ji_desuka_seqData \n\
 /* 0804407a */ BL func_0800274c \n\
-/* 0804407e */ LDR R0, =s_rap_oyatu_desukaMidiInfo \n\
+/* 0804407e */ LDR R0, =s_rap_oyatu_desuka_seqData \n\
 /* 08044080 */ BL func_0800274c \n\
-/* 08044084 */ LDR R0, =s_rap_wakari_desukaMidiInfo \n\
+/* 08044084 */ LDR R0, =s_rap_wakari_desuka_seqData \n\
 /* 08044086 */ BL func_0800274c \n\
-/* 0804408a */ LDR R0, =s_rap_oisi_kamoneMidiInfo \n\
+/* 0804408a */ LDR R0, =s_rap_oisi_kamone_seqData \n\
 /* 0804408c */ BL func_0800274c \n\
-/* 08044090 */ LDR R0, =s_rap_herusi_kamoneMidiInfo \n\
+/* 08044090 */ LDR R0, =s_rap_herusi_kamone_seqData \n\
 /* 08044092 */ BL func_0800274c \n\
-/* 08044096 */ LDR R0, =s_rap_soremoso_kamoneMidiInfo \n\
+/* 08044096 */ LDR R0, =s_rap_soremoso_kamone_seqData \n\
 /* 08044098 */ BL func_0800274c \n\
-/* 0804409c */ LDR R0, =s_rap_tanosi_kamoneMidiInfo \n\
+/* 0804409c */ LDR R0, =s_rap_tanosi_kamone_seqData \n\
 /* 0804409e */ BL func_0800274c \n\
-/* 080440a2 */ LDR R0, =s_rap_oyatuha_saikoMidiInfo \n\
+/* 080440a2 */ LDR R0, =s_rap_oyatuha_saiko_seqData \n\
 /* 080440a4 */ BL func_0800274c \n\
-/* 080440a8 */ LDR R0, =s_rap_kibunha_saikoMidiInfo \n\
+/* 080440a8 */ LDR R0, =s_rap_kibunha_saiko_seqData \n\
 /* 080440aa */ BL func_0800274c \n\
-/* 080440ae */ LDR R0, =s_rap_orette_saikoMidiInfo \n\
+/* 080440ae */ LDR R0, =s_rap_orette_saiko_seqData \n\
 /* 080440b0 */ BL func_0800274c \n\
-/* 080440b4 */ LDR R0, =s_rap_kimitte_saikoMidiInfo \n\
+/* 080440b4 */ LDR R0, =s_rap_kimitte_saiko_seqData \n\
 /* 080440b6 */ BL func_0800274c \n\
 /* 080440ba */ LDR R4, =D_030055d0 \n\
 /* 080440bc */ LDR R0, [R4] \n\
@@ -84,7 +84,7 @@ branch_08044158: \n\
 /* 0804415c */ LDRB R5, [R0] \n\
 /* 0804415e */ CMP R5, 0x0 @ Compare R5 and 0x0 \n\
 /* 08044160 */ BEQ branch_08044188 \n\
-/* 08044162 */ LDR R0, =s_rap_machine_bgmMidiInfo \n\
+/* 08044162 */ LDR R0, =s_rap_machine_bgm_seqData \n\
 /* 08044164 */ BL func_080447f4 \n\
 /* 08044168 */ LDR R0, =D_030053c0 \n\
 /* 0804416a */ MOVS R2, 0xC9 @ Set R2 to 0xC9 \n\
@@ -100,7 +100,7 @@ branch_08044158: \n\
 .ltorg \n\
  \n\
 branch_08044188: \n\
-/* 08044188 */ LDR R0, =s_rap_bgmMidiInfo \n\
+/* 08044188 */ LDR R0, =s_rap_bgm_seqData \n\
 /* 0804418a */ BL func_080447f4 \n\
 /* 0804418e */ LDR R0, =D_030053c0 \n\
 /* 08044190 */ MOVS R2, 0xC9 @ Set R2 to 0xC9 \n\

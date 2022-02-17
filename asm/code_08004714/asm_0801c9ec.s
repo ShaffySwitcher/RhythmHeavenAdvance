@@ -4,7 +4,7 @@ asm(".syntax unified \n\
 \n\
 glabel func_0801c9ec \n\
 /* 0801c9ec */ PUSH {LR} \n\
-/* 0801c9ee */ LDR R1, =Lesson1MidiInfo \n\
+/* 0801c9ee */ LDR R1, =Lesson1_seqData \n\
 /* 0801c9f0 */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 0801c9f2 */ BL func_0800267c \n\
 /* 0801c9f6 */ LDR R1, =0x117 \n\

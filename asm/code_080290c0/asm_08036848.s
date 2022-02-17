@@ -52,7 +52,7 @@ branch_0803687e: \n\
 /* 080368a8 */ LSLS R0, R0, 0x1F \n\
 /* 080368aa */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 080368ac */ BNE branch_080368b4 \n\
-/* 080368ae */ LDR R0, =s_poly_shototuMidiInfo \n\
+/* 080368ae */ LDR R0, =s_poly_shototu_seqData \n\
 /* 080368b0 */ BL func_08002634 \n\
  \n\
 branch_080368b4: \n\
