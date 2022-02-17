@@ -72,7 +72,7 @@ branch_08034730: \n\
 /* 0803476a */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0803476c */ MOVS R3, 0x1E @ Set R3 to 0x1E \n\
 /* 0803476e */ BL func_0804d160 \n\
-/* 08034772 */ LDR R0, =s_guntai_ikariMidiInfo \n\
+/* 08034772 */ LDR R0, =s_guntai_ikari_seqData \n\
 /* 08034774 */ BL func_08002634 \n\
 /* 08034778 */ B branch_080347aa \n\
 \n\

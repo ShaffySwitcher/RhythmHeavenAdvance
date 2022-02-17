@@ -27,7 +27,7 @@ glabel func_08044c04 \n\
 /* 08044c2e */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08044c30 */ MOVS R3, 0x1 @ Set R3 to 0x1 \n\
 /* 08044c32 */ BL func_08010064 \n\
-/* 08044c36 */ LDR R0, =s_witch_furuMidiInfo \n\
+/* 08044c36 */ LDR R0, =s_witch_furu_seqData \n\
 /* 08044c38 */ BL func_08002634 \n\
  \n\
 branch_08044c3c: \n\

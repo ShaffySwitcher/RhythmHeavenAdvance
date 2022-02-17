@@ -41,7 +41,7 @@ branch_080333f8: \n\
 /* 08033430 */ MOVS R0, 0x80 @ Set R0 to 0x80 \n\
 /* 08033432 */ LSLS R0, R0, 0x2 \n\
 /* 08033434 */ BL func_080331c0 \n\
-/* 08033438 */ LDR R0, =s_furiMidiInfo \n\
+/* 08033438 */ LDR R0, =s_furi_seqData \n\
 /* 0803343a */ BL func_08002634 \n\
 /* 0803343e */ B branch_0803345c \n\
 \n\

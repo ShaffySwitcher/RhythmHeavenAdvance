@@ -6,7 +6,7 @@ glabel func_08020fe8 \n\
 /* 08020fe8 */ PUSH {LR} \n\
 /* 08020fea */ LDRB R0, [R1] \n\
 /* 08020fec */ BL func_080207ec \n\
-/* 08020ff0 */ LDR R0, =s_tebyoushi_patiMidiInfo \n\
+/* 08020ff0 */ LDR R0, =s_tebyoushi_pati_seqData \n\
 /* 08020ff2 */ BL func_08002634 \n\
 /* 08020ff6 */ LDR R0, =D_030055d0 \n\
 /* 08020ff8 */ LDR R0, [R0] \n\

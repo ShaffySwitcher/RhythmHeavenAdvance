@@ -13,7 +13,7 @@ def get_json_data():
     
 def write_sfx_entry(fileLines, sfxEntry):
     global jsonFile
-    wavPath = os.path.join(os.path.join(os.path.dirname(jsonFile),"sfx"),sfxEntry["sample"])
+    wavPath = os.path.join(os.path.join(os.path.dirname(jsonFile),"samples"),sfxEntry["sample"])
     wavFile = wave.open(wavPath)
     
     pitch = sfxEntry["pitch"]

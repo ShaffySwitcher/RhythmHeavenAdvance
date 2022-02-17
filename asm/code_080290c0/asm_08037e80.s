@@ -38,7 +38,7 @@ glabel func_08037e80 \n\
 /* 08037ec4 */ NEGS R1, R1 @ Set R1 to -R1 \n\
 /* 08037ec6 */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 08037ec8 */ BL func_080378d8 \n\
-/* 08037ecc */ LDR R0, =s_f_quiz_hit_plyMidiInfo \n\
+/* 08037ecc */ LDR R0, =s_f_quiz_hit_ply_seqData \n\
 /* 08037ece */ BL func_08002634 \n\
  \n\
 branch_08037ed2: \n\
@@ -66,7 +66,7 @@ branch_08037ed2: \n\
 /* 08037f00 */ NEGS R1, R1 @ Set R1 to -R1 \n\
 /* 08037f02 */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 08037f04 */ BL func_080378d8 \n\
-/* 08037f08 */ LDR R0, =s_f_quiz_hit_plyMidiInfo \n\
+/* 08037f08 */ LDR R0, =s_f_quiz_hit_ply_seqData \n\
 /* 08037f0a */ BL func_08002634 \n\
  \n\
 branch_08037f0e: \n\

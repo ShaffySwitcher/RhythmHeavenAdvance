@@ -63,7 +63,7 @@ branch_0803019a: \n\
 /* 080301aa */ BNE branch_080301b2 \n\
  \n\
 branch_080301ac: \n\
-/* 080301ac */ LDR R0, =s_f_hanabi_kanseiMidiInfo \n\
+/* 080301ac */ LDR R0, =s_f_hanabi_kansei_seqData \n\
 /* 080301ae */ BL func_08002634 \n\
  \n\
 branch_080301b2: \n\

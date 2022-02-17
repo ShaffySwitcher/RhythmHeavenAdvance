@@ -382,7 +382,7 @@ branch_08043cf2: \n\
 /* 08043d56 */ MOVS R1, 0x20 @ Set R1 to 0x20 \n\
 /* 08043d58 */ ORRS R0, R1 @ Set R0 to R0 | R1 \n\
 /* 08043d5a */ STRB R0, [R3] \n\
-/* 08043d5c */ LDR R1, =s_block_hitMidiInfo \n\
+/* 08043d5c */ LDR R1, =s_block_hit_seqData \n\
 /* 08043d5e */ MOVS R0, 0x4 @ Set R0 to 0x4 \n\
 /* 08043d60 */ BL func_0800267c \n\
 /* 08043d64 */ B branch_08043d84 \n\

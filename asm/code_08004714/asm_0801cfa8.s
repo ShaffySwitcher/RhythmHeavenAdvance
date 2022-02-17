@@ -33,7 +33,7 @@ branch_0801cfde: \n\
 /* 0801cfe6 */ LDR R1, [R4] \n\
 /* 0801cfe8 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0801cfea */ STR R0, [R1] \n\
-/* 0801cfec */ LDR R0, =s_nyuka_fanMidiInfo \n\
+/* 0801cfec */ LDR R0, =s_nyuka_fan_seqData \n\
 /* 0801cfee */ MOVS R1, 0xA0 @ Set R1 to 0xA0 \n\
 /* 0801cff0 */ LSLS R1, R1, 0x1 \n\
 /* 0801cff2 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\

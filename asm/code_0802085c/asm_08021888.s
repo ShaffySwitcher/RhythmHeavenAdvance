@@ -55,7 +55,7 @@ branch_080218bc: \n\
 /* 080218ec */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 080218ee */ STRB R0, [R1] \n\
 /* 080218f0 */ BL func_080220c4 \n\
-/* 080218f4 */ LDR R0, =s_f_boxing_landMidiInfo \n\
+/* 080218f4 */ LDR R0, =s_f_boxing_land_seqData \n\
 /* 080218f6 */ BL func_08002634 \n\
 /* 080218fa */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 080218fc */ B branch_0802196a \n\

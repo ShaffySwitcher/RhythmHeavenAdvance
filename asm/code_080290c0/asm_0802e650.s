@@ -58,14 +58,14 @@ branch_0802e6b4: \n\
 /* 0802e6ba */ ANDS R0, R7 @ Set R0 to R0 & R7 \n\
 /* 0802e6bc */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0802e6be */ BEQ branch_0802e6cc \n\
-/* 0802e6c0 */ LDR R0, =s_change_hit_aMidiInfo \n\
+/* 0802e6c0 */ LDR R0, =s_change_hit_a_seqData \n\
 /* 0802e6c2 */ BL func_08002634 \n\
 /* 0802e6c6 */ B branch_0802e6d2 \n\
 \n\
 .ltorg \n\
  \n\
 branch_0802e6cc: \n\
-/* 0802e6cc */ LDR R0, =s_change_hit_bMidiInfo \n\
+/* 0802e6cc */ LDR R0, =s_change_hit_b_seqData \n\
 /* 0802e6ce */ BL func_08002634 \n\
  \n\
 branch_0802e6d2: \n\

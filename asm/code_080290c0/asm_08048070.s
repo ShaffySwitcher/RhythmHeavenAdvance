@@ -7,7 +7,7 @@ glabel func_08048070 \n\
 /* 08048072 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
 /* 08048074 */ CMP R2, 0x0 @ Compare R2 and 0x0 \n\
 /* 08048076 */ BEQ branch_08048088 \n\
-/* 08048078 */ LDR R1, =s_intro_stickMidiInfo \n\
+/* 08048078 */ LDR R1, =s_intro_stick_seqData \n\
 /* 0804807a */ MOVS R0, 0x8 @ Set R0 to 0x8 \n\
 /* 0804807c */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 0804807e */ BL func_080026c4 \n\
@@ -16,7 +16,7 @@ glabel func_08048070 \n\
 .ltorg \n\
  \n\
 branch_08048088: \n\
-/* 08048088 */ LDR R1, =s_intro_stickMidiInfo \n\
+/* 08048088 */ LDR R1, =s_intro_stick_seqData \n\
 /* 0804808a */ MOVS R0, 0x8 @ Set R0 to 0x8 \n\
 /* 0804808c */ BL func_0800267c \n\
  \n\

@@ -6,7 +6,7 @@ glabel func_08043d98 \n\
 /* 08043d98 */ PUSH {LR} \n\
 /* 08043d9a */ ADDS R0, R1, 0x0 @ Set R0 to R1 + 0x0 \n\
 /* 08043d9c */ LDR R1, =D_08931aa4 \n\
-/* 08043d9e */ LDR R2, =s_f_virus_hitMidiInfo \n\
+/* 08043d9e */ LDR R2, =s_f_virus_hit_seqData \n\
 /* 08043da0 */ BL func_08043a38 \n\
 /* 08043da4 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08043da6 */ BEQ branch_08043dec \n\

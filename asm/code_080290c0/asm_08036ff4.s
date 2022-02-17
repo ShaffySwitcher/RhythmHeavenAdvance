@@ -23,7 +23,7 @@ glabel func_08036ff4 \n\
 /* 08037018 */ BL func_080005e0 \n\
 /* 0803701c */ BL func_08000584 \n\
 /* 08037020 */ BL func_08017514 \n\
-/* 08037024 */ LDR R0, =s_menu_cancel3MidiInfo \n\
+/* 08037024 */ LDR R0, =s_menu_cancel3_seqData \n\
 /* 08037026 */ BL func_08002634 \n\
  \n\
 branch_0803702a: \n\

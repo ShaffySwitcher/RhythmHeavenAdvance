@@ -79,7 +79,7 @@ glabel func_0801ee98 \n\
 /* 0801ef3a */ LDRSH R1, [R1, R2] \n\
 /* 0801ef3c */ ADDS R2, R6, 0x0 @ Set R2 to R6 + 0x0 \n\
 /* 0801ef3e */ BL func_0804d614 \n\
-/* 0801ef42 */ LDR R0, =s_ghost_walkMidiInfo \n\
+/* 0801ef42 */ LDR R0, =s_ghost_walk_seqData \n\
 /* 0801ef44 */ MOV R2, R9 @ Set R2 to R9 \n\
 /* 0801ef46 */ LDR R1, [R2] \n\
 /* 0801ef48 */ ADDS R1, 0x80 @ Add 0x80 to R1 \n\

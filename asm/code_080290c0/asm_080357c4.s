@@ -16,7 +16,7 @@ glabel func_080357c4 \n\
 /* 080357d8 */ BL func_0804cebc \n\
 /* 080357dc */ CMP R4, 0x0 @ Compare R4 and 0x0 \n\
 /* 080357de */ BEQ branch_080357e6 \n\
-/* 080357e0 */ LDR R0, =s_metro_count1MidiInfo \n\
+/* 080357e0 */ LDR R0, =s_metro_count1_seqData \n\
 /* 080357e2 */ BL func_08002634 \n\
  \n\
 branch_080357e6: \n\
@@ -38,14 +38,14 @@ branch_080357e6: \n\
 /* 08035806 */ BEQ branch_08035824 \n\
 /* 08035808 */ CMP R0, 0x3 @ Compare R0 and 0x3 \n\
 /* 0803580a */ BHI branch_0803582a \n\
-/* 0803580c */ LDR R0, =s_metro_count2MidiInfo \n\
+/* 0803580c */ LDR R0, =s_metro_count2_seqData \n\
 /* 0803580e */ BL func_08002634 \n\
 /* 08035812 */ B branch_0803582a \n\
 \n\
 .ltorg \n\
  \n\
 branch_08035824: \n\
-/* 08035824 */ LDR R0, =s_metro_tinMidiInfo \n\
+/* 08035824 */ LDR R0, =s_metro_tin_seqData \n\
 /* 08035826 */ BL func_08002634 \n\
  \n\
 branch_0803582a: \n\

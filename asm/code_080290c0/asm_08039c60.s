@@ -29,7 +29,7 @@ glabel func_08039c60 \n\
 /* 08039c92 */ BL func_0800c3a4 \n\
 /* 08039c96 */ LDR R1, [R5] \n\
 /* 08039c98 */ STRH R0, [R1, 0x10] \n\
-/* 08039c9a */ LDR R0, =s_RCMidiInfo \n\
+/* 08039c9a */ LDR R0, =s_RC_seqData \n\
 /* 08039c9c */ BL func_08002634 \n\
  \n\
 branch_08039ca0: \n\

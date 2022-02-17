@@ -162,7 +162,7 @@ branch_0802a0d2: \n\
 /* 0802a124 */ MOVS R1, 0x5 @ Set R1 to 0x5 \n\
 /* 0802a126 */ ORRS R0, R1 @ Set R0 to R0 | R1 \n\
 /* 0802a128 */ STRB R0, [R6] \n\
-/* 0802a12a */ LDR R0, =s_f_drumtech_damageMidiInfo \n\
+/* 0802a12a */ LDR R0, =s_f_drumtech_damage_seqData \n\
 /* 0802a12c */ BL func_08002634 \n\
  \n\
 branch_0802a130: \n\

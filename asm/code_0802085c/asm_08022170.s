@@ -33,7 +33,7 @@ glabel func_08022170 \n\
 /* 080221a8 */ LDR R0, =D_089df37c \n\
 /* 080221aa */ STR R0, [R1, 0x1C] \n\
 /* 080221ac */ BL func_080221cc \n\
-/* 080221b0 */ LDR R0, =s_f_boxing_score_downMidiInfo \n\
+/* 080221b0 */ LDR R0, =s_f_boxing_score_down_seqData \n\
 /* 080221b2 */ BL func_08002634 \n\
  \n\
 branch_080221b6: \n\

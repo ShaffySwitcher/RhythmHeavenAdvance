@@ -71,7 +71,7 @@ branch_0803b990: \n\
 /* 0803b9a0 */ STR R4, [SP, 0x8] \n\
 /* 0803b9a2 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 0803b9a4 */ BL func_0804d8f8 \n\
-/* 0803b9a8 */ LDR R0, =s_f_rat_slipMidiInfo \n\
+/* 0803b9a8 */ LDR R0, =s_f_rat_slip_seqData \n\
 /* 0803b9aa */ BL func_08002634 \n\
 /* 0803b9ae */ B branch_0803b9ec \n\
 \n\

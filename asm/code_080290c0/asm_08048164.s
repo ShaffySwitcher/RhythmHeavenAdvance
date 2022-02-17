@@ -4,7 +4,7 @@ asm(".syntax unified \n\
 \n\
 glabel func_08048164 \n\
 /* 08048164 */ PUSH {R4, LR} \n\
-/* 08048166 */ LDR R4, =s_studio_bgmMidiInfo \n\
+/* 08048166 */ LDR R4, =s_studio_bgm_seqData \n\
 /* 08048168 */ MOVS R0, 0x30 @ Set R0 to 0x30 \n\
 /* 0804816a */ BL func_0800c3a4 \n\
 /* 0804816e */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\

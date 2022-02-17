@@ -42,7 +42,7 @@ glabel func_080336a0 \n\
 /* 080336ec */ ADDS R0, 0xE @ Add 0xE to R0 \n\
 /* 080336ee */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 080336f0 */ STRH R4, [R0] \n\
-/* 080336f2 */ LDR R0, =s_f_shuji_v_funuueMidiInfo \n\
+/* 080336f2 */ LDR R0, =s_f_shuji_v_funuue_seqData \n\
 /* 080336f4 */ BL func_0800274c \n\
 /* 080336f8 */ CMP R6, 0x0 @ Compare R6 and 0x0 \n\
 /* 080336fa */ BEQ branch_08033724 \n\

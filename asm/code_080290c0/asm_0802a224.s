@@ -26,7 +26,7 @@ glabel func_0802a224 \n\
 /* 0802a24e */ STRH R0, [R4, 0x10] \n\
 /* 0802a250 */ STR R1, [R4, 0x14] \n\
 /* 0802a252 */ STR R1, [R4, 0x18] \n\
-/* 0802a254 */ LDR R0, =s_f_drumtech_fallMidiInfo \n\
+/* 0802a254 */ LDR R0, =s_f_drumtech_fall_seqData \n\
 /* 0802a256 */ BL func_08002634 \n\
 /* 0802a25a */ POP {R4} \n\
 /* 0802a25c */ POP {R0} \n\

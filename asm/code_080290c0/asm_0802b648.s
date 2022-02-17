@@ -57,7 +57,7 @@ branch_0802b6aa: \n\
 /* 0802b6b4 */ BL func_0804ddb0 \n\
 /* 0802b6b8 */ CMP R0, 0xF3 @ Compare R0 and 0xF3 \n\
 /* 0802b6ba */ BGT branch_0802b6f0 \n\
-/* 0802b6bc */ LDR R1, =s_4beat_jibanMidiInfo \n\
+/* 0802b6bc */ LDR R1, =s_4beat_jiban_seqData \n\
 /* 0802b6be */ MOVS R0, 0x7 @ Set R0 to 0x7 \n\
 /* 0802b6c0 */ BL func_0800267c \n\
 /* 0802b6c4 */ B branch_0802b6f0 \n\

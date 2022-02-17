@@ -90,7 +90,7 @@ branch_08013cae: \n\
 /* 08013cfe */ BL func_080140a4 \n\
  \n\
 branch_08013d02: \n\
-/* 08013d02 */ LDR R0, =s_menu_cursor1MidiInfo \n\
+/* 08013d02 */ LDR R0, =s_menu_cursor1_seqData \n\
 /* 08013d04 */ BL func_08002634 \n\
  \n\
 branch_08013d08: \n\

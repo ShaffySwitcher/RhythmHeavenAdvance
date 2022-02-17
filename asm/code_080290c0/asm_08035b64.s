@@ -27,9 +27,9 @@ glabel func_08035b64 \n\
 /* 08035b94 */ LSLS R2, R2, 0x18 \n\
 /* 08035b96 */ ASRS R2, R2, 0x18 \n\
 /* 08035b98 */ BL func_0804cebc \n\
-/* 08035b9c */ LDR R0, =s_metro_hitMidiInfo \n\
+/* 08035b9c */ LDR R0, =s_metro_hit_seqData \n\
 /* 08035b9e */ BL func_08002634 \n\
-/* 08035ba2 */ LDR R0, =s_metro_hatoMidiInfo \n\
+/* 08035ba2 */ LDR R0, =s_metro_hato_seqData \n\
 /* 08035ba4 */ BL func_08002634 \n\
 /* 08035ba8 */ POP {R4-R6} \n\
 /* 08035baa */ POP {R0} \n\

@@ -60,9 +60,9 @@ glabel func_08039b4c \n\
 /* 08039bc4 */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
 /* 08039bc6 */ LDR R0, [R1] \n\
 /* 08039bc8 */ BL func_08002634 \n\
-/* 08039bcc */ LDR R0, =s_SD1MidiInfo \n\
+/* 08039bcc */ LDR R0, =s_SD1_seqData \n\
 /* 08039bce */ BL func_08002634 \n\
-/* 08039bd2 */ LDR R0, =s_CC4MidiInfo \n\
+/* 08039bd2 */ LDR R0, =s_CC4_seqData \n\
 /* 08039bd4 */ BL func_08002634 \n\
 /* 08039bd8 */ ADD SP, 0x14 \n\
 /* 08039bda */ POP {R3, R4} \n\

@@ -62,7 +62,7 @@ branch_08012656: \n\
 /* 08012666 */ LDRSB R0, [R6, R0] \n\
 /* 08012668 */ CMP R5, R0 @ Check R5 - R0 \n\
 /* 0801266a */ BEQ branch_080126e0 \n\
-/* 0801266c */ LDR R0, =s_menu_cursor2MidiInfo \n\
+/* 0801266c */ LDR R0, =s_menu_cursor2_seqData \n\
 /* 0801266e */ BL func_08002634 \n\
 /* 08012672 */ LDR R4, =D_03005380 \n\
 /* 08012674 */ LDR R0, [R4] \n\
@@ -193,7 +193,7 @@ branch_080127a0: \n\
 /* 080127a8 */ LDR R1, [R0] \n\
 /* 080127aa */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 080127ac */ STR R0, [R1, 0x8] \n\
-/* 080127ae */ LDR R0, =s_menu_kettei1MidiInfo \n\
+/* 080127ae */ LDR R0, =s_menu_kettei1_seqData \n\
 /* 080127b0 */ BL func_08002634 \n\
  \n\
 branch_080127b4: \n\

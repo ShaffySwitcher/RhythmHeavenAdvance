@@ -70,7 +70,7 @@ branch_0803850e: \n\
 /* 0803852a */ BNE branch_08038538 \n\
  \n\
 branch_0803852c: \n\
-/* 0803852c */ LDR R0, =s_f_rabbit_missMidiInfo \n\
+/* 0803852c */ LDR R0, =s_f_rabbit_miss_seqData \n\
 /* 0803852e */ B branch_08038542 \n\
 \n\
 .ltorg \n\
@@ -82,7 +82,7 @@ branch_08038538: \n\
 /* 0803853e */ BNE branch_0803855c \n\
  \n\
 branch_08038540: \n\
-/* 08038540 */ LDR R0, =s_witch_donatsMidiInfo \n\
+/* 08038540 */ LDR R0, =s_witch_donats_seqData \n\
  \n\
 branch_08038542: \n\
 /* 08038542 */ BL func_08002634 \n\
@@ -97,7 +97,7 @@ branch_08038542: \n\
 .ltorg \n\
  \n\
 branch_0803855c: \n\
-/* 0803855c */ LDR R0, =s_rabbit_HCMidiInfo \n\
+/* 0803855c */ LDR R0, =s_rabbit_HC_seqData \n\
 /* 0803855e */ BL func_08002634 \n\
 /* 08038562 */ LDR R0, [R5] \n\
 /* 08038564 */ ADDS R0, 0xF6 @ Add 0xF6 to R0 \n\

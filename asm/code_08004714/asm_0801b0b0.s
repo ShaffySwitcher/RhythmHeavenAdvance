@@ -6,7 +6,7 @@ glabel func_0801b0b0 \n\
 /* 0801b0b0 */ PUSH {R4, R5, LR} \n\
 /* 0801b0b2 */ ADDS R5, R1, 0x0 @ Set R5 to R1 + 0x0 \n\
 /* 0801b0b4 */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
-/* 0801b0b6 */ LDR R1, =s_menu_cursor1MidiInfo \n\
+/* 0801b0b6 */ LDR R1, =s_menu_cursor1_seqData \n\
 /* 0801b0b8 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0801b0ba */ BL func_0800267c \n\
 /* 0801b0be */ LDR R0, =D_030046a4 \n\

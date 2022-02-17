@@ -83,7 +83,7 @@ branch_0801d762: \n\
 /* 0801d79c */ BL func_080006b0 \n\
 /* 0801d7a0 */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\
 /* 0801d7a2 */ BL func_0801d6c4 \n\
-/* 0801d7a6 */ LDR R0, =s_menu_kettei2MidiInfo \n\
+/* 0801d7a6 */ LDR R0, =s_menu_kettei2_seqData \n\
 /* 0801d7a8 */ BL func_08002634 \n\
 /* 0801d7ac */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0801d7ae */ BL func_0800bd04 \n\
@@ -93,7 +93,7 @@ branch_0801d762: \n\
 .ltorg \n\
  \n\
 branch_0801d7c0: \n\
-/* 0801d7c0 */ LDR R0, =s_menu_errorMidiInfo \n\
+/* 0801d7c0 */ LDR R0, =s_menu_error_seqData \n\
 /* 0801d7c2 */ BL func_08002634 \n\
 /* 0801d7c6 */ B branch_0801d800 \n\
 \n\
@@ -118,7 +118,7 @@ branch_0801d7dc: \n\
 .ltorg \n\
  \n\
 branch_0801d7ec: \n\
-/* 0801d7ec */ LDR R0, =s_menu_cancel3MidiInfo \n\
+/* 0801d7ec */ LDR R0, =s_menu_cancel3_seqData \n\
 /* 0801d7ee */ BL func_08002634 \n\
 /* 0801d7f2 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0801d7f4 */ BL func_0800bd04 \n\

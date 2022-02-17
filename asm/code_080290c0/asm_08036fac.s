@@ -25,7 +25,7 @@ glabel func_08036fac \n\
 /* 08036fd2 */ BL func_08017758 \n\
 /* 08036fd6 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 08036fd8 */ BL func_0800bd04 \n\
-/* 08036fdc */ LDR R0, =s_menu_kettei2MidiInfo \n\
+/* 08036fdc */ LDR R0, =s_menu_kettei2_seqData \n\
 /* 08036fde */ BL func_08002634 \n\
  \n\
 branch_08036fe2: \n\

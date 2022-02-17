@@ -9,7 +9,7 @@ glabel func_080220c4 \n\
 /* 080220ca */ LDRB R0, [R0, 0x16] \n\
 /* 080220cc */ CMP R0, 0x2 @ Compare R0 and 0x2 \n\
 /* 080220ce */ BLS branch_080220d6 \n\
-/* 080220d0 */ LDR R0, =s_f_boxing_score_resetMidiInfo \n\
+/* 080220d0 */ LDR R0, =s_f_boxing_score_reset_seqData \n\
 /* 080220d2 */ BL func_08002634 \n\
  \n\
 branch_080220d6: \n\

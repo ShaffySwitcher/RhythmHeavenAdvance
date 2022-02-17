@@ -21,7 +21,7 @@ glabel func_0803843c \n\
 /* 0803845a */ BNE branch_08038468 \n\
  \n\
 branch_0803845c: \n\
-/* 0803845c */ LDR R0, =s_f_rabbit_missMidiInfo \n\
+/* 0803845c */ LDR R0, =s_f_rabbit_miss_seqData \n\
 /* 0803845e */ B branch_08038472 \n\
 \n\
 .ltorg \n\
@@ -33,7 +33,7 @@ branch_08038468: \n\
 /* 0803846e */ BNE branch_08038484 \n\
  \n\
 branch_08038470: \n\
-/* 08038470 */ LDR R0, =s_witch_donatsMidiInfo \n\
+/* 08038470 */ LDR R0, =s_witch_donats_seqData \n\
  \n\
 branch_08038472: \n\
 /* 08038472 */ BL func_08002634 \n\
@@ -45,7 +45,7 @@ branch_08038472: \n\
 .ltorg \n\
  \n\
 branch_08038484: \n\
-/* 08038484 */ LDR R0, =s_BD4MidiInfo \n\
+/* 08038484 */ LDR R0, =s_BD4_seqData \n\
 /* 08038486 */ MOVS R1, 0xC0 @ Set R1 to 0xC0 \n\
 /* 08038488 */ LSLS R1, R1, 0x1 \n\
 /* 0803848a */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
