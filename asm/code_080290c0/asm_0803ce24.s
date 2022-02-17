@@ -5,7 +5,7 @@ asm(".syntax unified \n\
 glabel func_0803ce24 \n\
 /* 0803ce24 */ PUSH {R4-R7, LR} \n\
 /* 0803ce26 */ SUB SP, 0xC \n\
-/* 0803ce28 */ LDR R7, =0x030055d0 @ !PossiblePointer \n\
+/* 0803ce28 */ LDR R7, =D_030055d0 \n\
 /* 0803ce2a */ LDR R0, [R7] \n\
 /* 0803ce2c */ LDRB R6, [R0, 0x6] \n\
 /* 0803ce2e */ CMP R6, 0x0 @ Compare R6 and 0x0 \n\
@@ -20,7 +20,7 @@ branch_0803ce3c: \n\
 /* 0803ce3c */ MOVS R0, 0x11 @ Set R0 to 0x11 \n\
 /* 0803ce3e */ BL func_0803bd88 \n\
 /* 0803ce42 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 0803ce44 */ LDR R4, =0x03005380 @ !PossiblePointer \n\
+/* 0803ce44 */ LDR R4, =D_03005380 \n\
 /* 0803ce46 */ LDR R0, [R4] \n\
 /* 0803ce48 */ LDR R1, [R7] \n\
 /* 0803ce4a */ MOVS R3, 0x4 @ Set R3 to 0x4 \n\
@@ -56,7 +56,7 @@ branch_0803ce8c: \n\
 /* 0803ce8c */ MOVS R0, 0x12 @ Set R0 to 0x12 \n\
 /* 0803ce8e */ BL func_0803bd88 \n\
 /* 0803ce92 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 0803ce94 */ LDR R4, =0x03005380 @ !PossiblePointer \n\
+/* 0803ce94 */ LDR R4, =D_03005380 \n\
 /* 0803ce96 */ LDR R0, [R4] \n\
 /* 0803ce98 */ LDR R1, [R7] \n\
 /* 0803ce9a */ MOVS R3, 0x4 @ Set R3 to 0x4 \n\
@@ -86,11 +86,11 @@ branch_0803ce8c: \n\
 /* 0803ced0 */ BL func_0803c710 \n\
  \n\
 branch_0803ced4: \n\
-/* 0803ced4 */ LDR R0, =0x08a9c0cc @ !PossiblePointer \n\
+/* 0803ced4 */ LDR R0, =D_08a9c0cc \n\
 /* 0803ced6 */ BL func_08002634 \n\
-/* 0803ceda */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 0803ceda */ LDR R0, =D_030055d0 \n\
 /* 0803cedc */ LDR R1, [R0] \n\
-/* 0803cede */ LDR R0, =0x000002ce @ !PossiblePointer \n\
+/* 0803cede */ LDR R0, =0x2ce \n\
 /* 0803cee0 */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\
 /* 0803cee2 */ LDRB R0, [R1] \n\
 /* 0803cee4 */ ADDS R0, 0x1 @ Add 0x1 to R0 \n\

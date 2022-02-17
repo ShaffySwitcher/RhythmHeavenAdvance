@@ -9,9 +9,9 @@ glabel func_0804358c \n\
 /* 08043596 */ BL func_08042e80 \n\
 /* 0804359a */ BL func_08043534 \n\
 /* 0804359e */ BL func_08042934 \n\
-/* 080435a2 */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 080435a2 */ LDR R0, =D_030055d0 \n\
 /* 080435a4 */ LDR R1, [R0] \n\
-/* 080435a6 */ LDR R2, =0x00000202 @ !PossiblePointer \n\
+/* 080435a6 */ LDR R2, =0x202 \n\
 /* 080435a8 */ ADDS R0, R1, R2 @ Set R0 to R1 + R2 \n\
 /* 080435aa */ LDRB R0, [R0] \n\
 /* 080435ac */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
@@ -29,7 +29,7 @@ glabel func_0804358c \n\
 .ltorg \n\
  \n\
 branch_080435cc: \n\
-/* 080435cc */ LDR R0, =0x03004afc @ !PossiblePointer \n\
+/* 080435cc */ LDR R0, =D_03004afc \n\
 /* 080435ce */ LDRH R1, [R0] \n\
 /* 080435d0 */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 080435d2 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\

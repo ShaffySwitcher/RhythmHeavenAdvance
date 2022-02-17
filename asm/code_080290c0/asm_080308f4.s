@@ -6,13 +6,13 @@ glabel func_080308f4 \n\
 /* 080308f4 */ PUSH {R4-R7, LR} \n\
 /* 080308f6 */ SUB SP, 0xC \n\
 /* 080308f8 */ ADDS R4, R1, 0x0 @ Set R4 to R1 + 0x0 \n\
-/* 080308fa */ LDR R6, =0x030055d0 @ !PossiblePointer \n\
+/* 080308fa */ LDR R6, =D_030055d0 \n\
 /* 080308fc */ LDR R0, [R6] \n\
 /* 080308fe */ ADDS R5, R0, 0x4 @ Set R5 to R0 + 0x4 \n\
 /* 08030900 */ MOVS R0, 0x4 @ Set R0 to 0x4 \n\
 /* 08030902 */ BL func_08030384 \n\
 /* 08030906 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 08030908 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 08030908 */ LDR R0, =D_03005380 \n\
 /* 0803090a */ LDR R0, [R0] \n\
 /* 0803090c */ MOVS R3, 0x6 @ Set R3 to 0x6 \n\
 /* 0803090e */ LDRSH R1, [R5, R3] \n\
@@ -23,7 +23,7 @@ glabel func_080308f4 \n\
 /* 08030918 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 0803091a */ STR R3, [SP, 0x8] \n\
 /* 0803091c */ BL func_0804d8f8 \n\
-/* 08030920 */ LDR R0, =0x08a9bb68 @ !PossiblePointer \n\
+/* 08030920 */ LDR R0, =D_08a9bb68 \n\
 /* 08030922 */ MOVS R1, 0x80 @ Set R1 to 0x80 \n\
 /* 08030924 */ LSLS R1, R1, 0x1 \n\
 /* 08030926 */ MOVS R2, 0x80 @ Set R2 to 0x80 \n\
@@ -46,10 +46,10 @@ branch_0803093e: \n\
 /* 08030946 */ BL func_0800c3b8 \n\
 /* 0803094a */ LSLS R0, R0, 0x10 \n\
 /* 0803094c */ LSRS R0, R0, 0x10 \n\
-/* 0803094e */ LDR R5, =0x00007fff @ !PossiblePointer \n\
-/* 08030950 */ LDR R1, =0x088e9ff8 @ !PossiblePointer \n\
+/* 0803094e */ LDR R5, =0x7fff \n\
+/* 08030950 */ LDR R1, =D_088e9ff8 \n\
 /* 08030952 */ STR R1, [SP] \n\
-/* 08030954 */ LDR R4, =0x03004b64 @ !PossiblePointer \n\
+/* 08030954 */ LDR R4, =D_03004b64 \n\
 /* 08030956 */ STR R4, [SP, 0x4] \n\
 /* 08030958 */ MOVS R1, 0xA @ Set R1 to 0xA \n\
 /* 0803095a */ MOVS R2, 0x8 @ Set R2 to 0x8 \n\
@@ -58,7 +58,7 @@ branch_0803093e: \n\
 /* 08030962 */ BL func_0800c3b8 \n\
 /* 08030966 */ LSLS R0, R0, 0x10 \n\
 /* 08030968 */ LSRS R0, R0, 0x10 \n\
-/* 0803096a */ LDR R1, =0x088e9f98 @ !PossiblePointer \n\
+/* 0803096a */ LDR R1, =D_088e9f98 \n\
 /* 0803096c */ STR R1, [SP] \n\
 /* 0803096e */ MOVS R1, 0x80 @ Set R1 to 0x80 \n\
 /* 08030970 */ LSLS R1, R1, 0x2 \n\

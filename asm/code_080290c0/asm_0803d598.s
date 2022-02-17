@@ -7,7 +7,7 @@ glabel func_0803d598 \n\
 /* 0803d59a */ BL func_0803d388 \n\
 /* 0803d59e */ BL func_0803d478 \n\
 /* 0803d5a2 */ BL func_0803d4f0 \n\
-/* 0803d5a6 */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 0803d5a6 */ LDR R0, =D_030055d0 \n\
 /* 0803d5a8 */ LDR R1, [R0] \n\
 /* 0803d5aa */ LDRH R0, [R1, 0x36] \n\
 /* 0803d5ac */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\

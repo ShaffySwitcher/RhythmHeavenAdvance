@@ -5,7 +5,7 @@ asm(".syntax unified \n\
 glabel func_0803e530 \n\
 /* 0803e530 */ PUSH {LR} \n\
 /* 0803e532 */ BL func_0803e644 \n\
-/* 0803e536 */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 0803e536 */ LDR R0, =D_030055d0 \n\
 /* 0803e538 */ LDR R0, [R0] \n\
 /* 0803e53a */ MOVS R1, 0xE5 @ Set R1 to 0xE5 \n\
 /* 0803e53c */ LSLS R1, R1, 0x2 \n\

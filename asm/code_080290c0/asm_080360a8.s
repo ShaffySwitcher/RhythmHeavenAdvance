@@ -10,7 +10,7 @@ glabel func_080360a8 \n\
 /* 080360b0 */ STR R1, [R2] \n\
 /* 080360b2 */ STR R1, [R4] \n\
 /* 080360b4 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 080360b6 */ LDR R6, =0x030055d0 @ !PossiblePointer \n\
+/* 080360b6 */ LDR R6, =D_030055d0 \n\
 /* 080360b8 */ LSLS R0, R0, 0x7 \n\
 /* 080360ba */ ADDS R5, R0, 0x4 @ Set R5 to R0 + 0x4 \n\
 /* 080360bc */ B branch_080360c6 \n\

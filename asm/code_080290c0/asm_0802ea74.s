@@ -7,7 +7,7 @@ glabel func_0802ea74 \n\
 /* 0802ea76 */ MOV R7, R8 @ Set R7 to R8 \n\
 /* 0802ea78 */ PUSH {R7} \n\
 /* 0802ea7a */ MOV R8, R0 @ Set R8 to R0 \n\
-/* 0802ea7c */ LDR R7, =0x030055d0 @ !PossiblePointer \n\
+/* 0802ea7c */ LDR R7, =D_030055d0 \n\
 /* 0802ea7e */ LDR R4, [R7] \n\
 /* 0802ea80 */ ADDS R6, R4, 0x4 @ Set R6 to R4 + 0x4 \n\
 /* 0802ea82 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\

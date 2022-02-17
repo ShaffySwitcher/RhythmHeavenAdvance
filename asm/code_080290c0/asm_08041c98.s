@@ -8,7 +8,7 @@ glabel func_08041c98 \n\
 /* 08041c9c */ MOV R6, R8 @ Set R6 to R8 \n\
 /* 08041c9e */ PUSH {R6, R7} \n\
 /* 08041ca0 */ SUB SP, 0xC \n\
-/* 08041ca2 */ LDR R5, =0x030055d0 @ !PossiblePointer \n\
+/* 08041ca2 */ LDR R5, =D_030055d0 \n\
 /* 08041ca4 */ LDR R0, [R5] \n\
 /* 08041ca6 */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
 /* 08041ca8 */ MOVS R1, 0x1 @ Set R1 to 0x1 \n\
@@ -19,7 +19,7 @@ glabel func_08041c98 \n\
 /* 08041cb2 */ STRB R4, [R0, 0x8] \n\
 /* 08041cb4 */ LDR R0, [R5] \n\
 /* 08041cb6 */ STRB R4, [R0, 0x7] \n\
-/* 08041cb8 */ LDR R3, =0x03005380 @ !PossiblePointer \n\
+/* 08041cb8 */ LDR R3, =D_03005380 \n\
 /* 08041cba */ MOV R8, R3 @ Set R8 to R3 \n\
 /* 08041cbc */ LDR R0, [R3] \n\
 /* 08041cbe */ LDR R2, [R5] \n\

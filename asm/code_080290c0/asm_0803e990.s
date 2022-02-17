@@ -3,10 +3,10 @@ asm(".syntax unified \n\
 .balign 4, 0 \n\
 \n\
 glabel func_0803e990 \n\
-/* 0803e990 */ LDR R1, =0x089e8300 @ !PossiblePointer \n\
+/* 0803e990 */ LDR R1, =D_089e8300 \n\
 /* 0803e992 */ LSLS R0, R0, 0x2 \n\
 /* 0803e994 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
-/* 0803e996 */ LDR R1, =0x030055d0 @ !PossiblePointer \n\
+/* 0803e996 */ LDR R1, =D_030055d0 \n\
 /* 0803e998 */ LDR R1, [R1] \n\
 /* 0803e99a */ LDRB R1, [R1] \n\
 /* 0803e99c */ LDR R0, [R0] \n\

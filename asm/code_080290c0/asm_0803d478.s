@@ -3,7 +3,7 @@ asm(".syntax unified \n\
 .balign 4, 0 \n\
 \n\
 glabel func_0803d478 \n\
-/* 0803d478 */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 0803d478 */ LDR R0, =D_030055d0 \n\
 /* 0803d47a */ LDR R3, [R0] \n\
 /* 0803d47c */ ADDS R0, R3, 0x0 @ Set R0 to R3 + 0x0 \n\
 /* 0803d47e */ ADDS R0, 0x28 @ Add 0x28 to R0 \n\
@@ -20,7 +20,7 @@ glabel func_0803d478 \n\
 /* 0803d494 */ LDR R0, [R3, 0x24] \n\
 /* 0803d496 */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 0803d498 */ STR R0, [R3, 0x24] \n\
-/* 0803d49a */ LDR R2, =0x03004b10 @ !PossiblePointer \n\
+/* 0803d49a */ LDR R2, =D_03004b10 \n\
 /* 0803d49c */ ASRS R1, R1, 0x2 \n\
 /* 0803d49e */ STRH R1, [R2, 0x10] \n\
 /* 0803d4a0 */ LDR R0, [R3, 0x24] \n\

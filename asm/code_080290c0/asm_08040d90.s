@@ -7,10 +7,10 @@ glabel func_08040d90 \n\
 /* 08040d92 */ BL func_0800c3b8 \n\
 /* 08040d96 */ LSLS R0, R0, 0x10 \n\
 /* 08040d98 */ LSRS R0, R0, 0x10 \n\
-/* 08040d9a */ LDR R2, =0x089e8d9c @ !PossiblePointer \n\
-/* 08040d9c */ LDR R1, =0x030055d0 @ !PossiblePointer \n\
+/* 08040d9a */ LDR R2, =D_089e8d9c \n\
+/* 08040d9c */ LDR R1, =D_030055d0 \n\
 /* 08040d9e */ LDR R1, [R1] \n\
-/* 08040da0 */ LDR R3, =0x000002ff @ !PossiblePointer \n\
+/* 08040da0 */ LDR R3, =0x2ff \n\
 /* 08040da2 */ ADDS R1, R1, R3 @ Set R1 to R1 + R3 \n\
 /* 08040da4 */ LDRB R1, [R1] \n\
 /* 08040da6 */ LSLS R1, R1, 0x18 \n\
@@ -22,7 +22,7 @@ glabel func_08040d90 \n\
 /* 08040db2 */ MOVS R2, 0x80 @ Set R2 to 0x80 \n\
 /* 08040db4 */ LSLS R2, R2, 0x6 \n\
 /* 08040db6 */ BL func_08002ee0 \n\
-/* 08040dba */ LDR R1, =0x08040d11 @ !PossiblePointer \n\
+/* 08040dba */ LDR R1, =(func_08040d10 + 1) \n\
 /* 08040dbc */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08040dbe */ BL func_08005d38 \n\
 /* 08040dc2 */ POP {R0} \n\

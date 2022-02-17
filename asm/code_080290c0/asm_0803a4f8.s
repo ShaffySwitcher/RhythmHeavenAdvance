@@ -8,9 +8,9 @@ glabel func_0803a4f8 \n\
 /* 0803a4fc */ ADDS R4, R1, 0x0 @ Set R4 to R1 + 0x0 \n\
 /* 0803a4fe */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 0803a500 */ STRB R2, [R4, 0x2] \n\
-/* 0803a502 */ LDR R5, =0x03005380 @ !PossiblePointer \n\
+/* 0803a502 */ LDR R5, =D_03005380 \n\
 /* 0803a504 */ LDR R0, [R5] \n\
-/* 0803a506 */ LDR R1, =0x088fe48c @ !PossiblePointer \n\
+/* 0803a506 */ LDR R1, =D_088fe48c \n\
 /* 0803a508 */ MOVS R2, 0x7E @ Set R2 to 0x7E \n\
 /* 0803a50a */ STR R2, [SP] \n\
 /* 0803a50c */ MOVS R2, 0xA @ Set R2 to 0xA \n\
@@ -32,7 +32,7 @@ glabel func_0803a4f8 \n\
 /* 0803a530 */ LSLS R2, R2, 0x8 \n\
 /* 0803a532 */ ASRS R2, R2, 0x10 \n\
 /* 0803a534 */ BL func_0804d614 \n\
-/* 0803a538 */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 0803a538 */ LDR R0, =D_030055d0 \n\
 /* 0803a53a */ LDR R0, [R0] \n\
 /* 0803a53c */ LDRB R0, [R0, 0x10] \n\
 /* 0803a53e */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\

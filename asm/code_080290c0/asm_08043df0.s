@@ -6,13 +6,13 @@ glabel func_08043df0 \n\
 /* 08043df0 */ PUSH {R4, LR} \n\
 /* 08043df2 */ ADDS R4, R1, 0x0 @ Set R4 to R1 + 0x0 \n\
 /* 08043df4 */ BL func_08018054 \n\
-/* 08043df8 */ LDR R1, =0x08931bec @ !PossiblePointer \n\
+/* 08043df8 */ LDR R1, =D_08931bec \n\
 /* 08043dfa */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08043dfc */ BGE branch_08043e00 \n\
-/* 08043dfe */ LDR R1, =0x08931bbc @ !PossiblePointer \n\
+/* 08043dfe */ LDR R1, =D_08931bbc \n\
  \n\
 branch_08043e00: \n\
-/* 08043e00 */ LDR R2, =0x08a9df58 @ !PossiblePointer \n\
+/* 08043e00 */ LDR R2, =D_08a9df58 \n\
 /* 08043e02 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 08043e04 */ BL func_08043a38 \n\
 /* 08043e08 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\

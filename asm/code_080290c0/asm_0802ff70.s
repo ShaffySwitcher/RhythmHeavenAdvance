@@ -31,7 +31,7 @@ branch_0802ff94: \n\
 /* 0802ff96 */ LDR R0, [R4, 0x10] \n\
 /* 0802ff98 */ ADDS R2, R2, R0 @ Set R2 to R2 + R0 \n\
 /* 0802ff9a */ STR R2, [R4, 0x8] \n\
-/* 0802ff9c */ LDR R7, =0x03005380 @ !PossiblePointer \n\
+/* 0802ff9c */ LDR R7, =D_03005380 \n\
 /* 0802ff9e */ LDR R0, [R7] \n\
 /* 0802ffa0 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 0802ffa2 */ LDRSH R1, [R4, R3] \n\
@@ -89,7 +89,7 @@ branch_08030004: \n\
 /* 08030006 */ LDR R0, [R4, 0x10] \n\
 /* 08030008 */ ADDS R2, R2, R0 @ Set R2 to R2 + R0 \n\
 /* 0803000a */ STR R2, [R4, 0x8] \n\
-/* 0803000c */ LDR R7, =0x03005380 @ !PossiblePointer \n\
+/* 0803000c */ LDR R7, =D_03005380 \n\
 /* 0803000e */ LDR R0, [R7] \n\
 /* 08030010 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 08030012 */ LDRSH R1, [R4, R3] \n\
@@ -185,7 +185,7 @@ branch_080300a4: \n\
 /* 080300b8 */ STR R3, [R4, 0x8] \n\
 /* 080300ba */ ADDS R0, 0x40 @ Add 0x40 to R0 \n\
 /* 080300bc */ STR R0, [R4, 0x10] \n\
-/* 080300be */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 080300be */ LDR R0, =D_03005380 \n\
 /* 080300c0 */ LDR R0, [R0] \n\
 /* 080300c2 */ MOVS R5, 0x0 @ Set R5 to 0x0 \n\
 /* 080300c4 */ LDRSH R1, [R4, R5] \n\

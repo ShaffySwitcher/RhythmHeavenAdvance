@@ -6,9 +6,9 @@ glabel func_080357c4 \n\
 /* 080357c4 */ PUSH {R4-R7, LR} \n\
 /* 080357c6 */ SUB SP, 0x4 \n\
 /* 080357c8 */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
-/* 080357ca */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 080357ca */ LDR R0, =D_03005380 \n\
 /* 080357cc */ LDR R0, [R0] \n\
-/* 080357ce */ LDR R5, =0x030055d0 @ !PossiblePointer \n\
+/* 080357ce */ LDR R5, =D_030055d0 \n\
 /* 080357d0 */ LDR R1, [R5] \n\
 /* 080357d2 */ MOVS R2, 0xE @ Set R2 to 0xE \n\
 /* 080357d4 */ LDRSH R1, [R1, R2] \n\
@@ -16,7 +16,7 @@ glabel func_080357c4 \n\
 /* 080357d8 */ BL func_0804cebc \n\
 /* 080357dc */ CMP R4, 0x0 @ Compare R4 and 0x0 \n\
 /* 080357de */ BEQ branch_080357e6 \n\
-/* 080357e0 */ LDR R0, =0x08a9c98c @ !PossiblePointer \n\
+/* 080357e0 */ LDR R0, =D_08a9c98c \n\
 /* 080357e2 */ BL func_08002634 \n\
  \n\
 branch_080357e6: \n\
@@ -38,18 +38,18 @@ branch_080357e6: \n\
 /* 08035806 */ BEQ branch_08035824 \n\
 /* 08035808 */ CMP R0, 0x3 @ Compare R0 and 0x3 \n\
 /* 0803580a */ BHI branch_0803582a \n\
-/* 0803580c */ LDR R0, =0x08a9c9a0 @ !PossiblePointer \n\
+/* 0803580c */ LDR R0, =D_08a9c9a0 \n\
 /* 0803580e */ BL func_08002634 \n\
 /* 08035812 */ B branch_0803582a \n\
 \n\
 .ltorg \n\
  \n\
 branch_08035824: \n\
-/* 08035824 */ LDR R0, =0x08a9c978 @ !PossiblePointer \n\
+/* 08035824 */ LDR R0, =D_08a9c978 \n\
 /* 08035826 */ BL func_08002634 \n\
  \n\
 branch_0803582a: \n\
-/* 0803582a */ LDR R6, =0x030055d0 @ !PossiblePointer \n\
+/* 0803582a */ LDR R6, =D_030055d0 \n\
 /* 0803582c */ LDR R1, [R6] \n\
 /* 0803582e */ LDRB R0, [R1, 0xC] \n\
 /* 08035830 */ ADDS R5, R0, 0x1 @ Set R5 to R0 + 0x1 \n\
@@ -80,7 +80,7 @@ branch_0803585c: \n\
 /* 08035864 */ LSRS R0, R0, 0x10 \n\
 /* 08035866 */ LSLS R4, R4, 0x10 \n\
 /* 08035868 */ ASRS R4, R4, 0x10 \n\
-/* 0803586a */ LDR R2, =0x089e5890 @ !PossiblePointer \n\
+/* 0803586a */ LDR R2, =D_089e5890 \n\
 /* 0803586c */ B branch_08035884 \n\
 \n\
 .ltorg \n\
@@ -92,7 +92,7 @@ branch_08035874: \n\
 /* 0803587c */ LSRS R0, R0, 0x10 \n\
 /* 0803587e */ LSLS R4, R4, 0x10 \n\
 /* 08035880 */ ASRS R4, R4, 0x10 \n\
-/* 08035882 */ LDR R2, =0x089e58a0 @ !PossiblePointer \n\
+/* 08035882 */ LDR R2, =D_089e58a0 \n\
  \n\
 branch_08035884: \n\
 /* 08035884 */ LSLS R1, R5, 0x3 \n\

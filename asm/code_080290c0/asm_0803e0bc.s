@@ -18,7 +18,7 @@ glabel func_0803e0bc \n\
 /* 0803e0da */ ADDS R1, R5, 0x0 @ Set R1 to R5 + 0x0 \n\
 /* 0803e0dc */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0803e0de */ BL func_0800856c \n\
-/* 0803e0e2 */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 0803e0e2 */ LDR R0, =D_030055d0 \n\
 /* 0803e0e4 */ LDR R1, [R0] \n\
 /* 0803e0e6 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0803e0e8 */ STRB R0, [R1, 0x1E] \n\

@@ -9,7 +9,7 @@ glabel func_08033cac \n\
 /* 08033cb2 */ MOV R5, R8 @ Set R5 to R8 \n\
 /* 08033cb4 */ PUSH {R5-R7} \n\
 /* 08033cb6 */ SUB SP, 0x14 \n\
-/* 08033cb8 */ LDR R1, =0x030055d0 @ !PossiblePointer \n\
+/* 08033cb8 */ LDR R1, =D_030055d0 \n\
 /* 08033cba */ MOV R10, R1 @ Set R10 to R1 \n\
 /* 08033cbc */ LDR R1, [R1] \n\
 /* 08033cbe */ STR R0, [R1] \n\
@@ -29,7 +29,7 @@ glabel func_08033cac \n\
 /* 08033ce0 */ STR R1, [SP] \n\
 /* 08033ce2 */ MOVS R0, 0x1C @ Set R0 to 0x1C \n\
 /* 08033ce4 */ STR R0, [SP, 0x4] \n\
-/* 08033ce6 */ LDR R0, =0x00008002 @ !PossiblePointer \n\
+/* 08033ce6 */ LDR R0, =0x8002 \n\
 /* 08033ce8 */ STR R0, [SP, 0x8] \n\
 /* 08033cea */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 08033cec */ MOVS R1, 0x1 @ Set R1 to 0x1 \n\
@@ -62,11 +62,11 @@ glabel func_08033cac \n\
 /* 08033d2c */ BL func_0800acd8 \n\
 /* 08033d30 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 08033d32 */ BL func_08018630 \n\
-/* 08033d36 */ LDR R0, =0x000048c8 @ !PossiblePointer \n\
+/* 08033d36 */ LDR R0, =0x48c8 \n\
 /* 08033d38 */ BL func_08018870 \n\
-/* 08033d3c */ LDR R5, =0x03005380 @ !PossiblePointer \n\
+/* 08033d3c */ LDR R5, =D_03005380 \n\
 /* 08033d3e */ LDR R0, [R5] \n\
-/* 08033d40 */ LDR R1, =0x088effe0 @ !PossiblePointer \n\
+/* 08033d40 */ LDR R1, =D_088effe0 \n\
 /* 08033d42 */ MOVS R2, 0x64 @ Set R2 to 0x64 \n\
 /* 08033d44 */ STR R2, [SP] \n\
 /* 08033d46 */ MOVS R6, 0x90 @ Set R6 to 0x90 \n\
@@ -86,11 +86,11 @@ glabel func_08033cac \n\
 /* 08033d64 */ MOVS R7, 0x0 @ Set R7 to 0x0 \n\
 /* 08033d66 */ STRH R0, [R1, 0x4] \n\
 /* 08033d68 */ LDR R0, [R5] \n\
-/* 08033d6a */ LDR R1, =0x088eff98 @ !PossiblePointer \n\
+/* 08033d6a */ LDR R1, =D_088eff98 \n\
 /* 08033d6c */ MOVS R2, 0x3C @ Set R2 to 0x3C \n\
 /* 08033d6e */ MOV R8, R2 @ Set R8 to R2 \n\
 /* 08033d70 */ STR R2, [SP] \n\
-/* 08033d72 */ LDR R2, =0x00004864 @ !PossiblePointer \n\
+/* 08033d72 */ LDR R2, =0x4864 \n\
 /* 08033d74 */ STR R2, [SP, 0x4] \n\
 /* 08033d76 */ MOVS R2, 0x1 @ Set R2 to 0x1 \n\
 /* 08033d78 */ STR R2, [SP, 0x8] \n\
@@ -106,7 +106,7 @@ glabel func_08033cac \n\
 /* 08033d8e */ STRH R0, [R1, 0x6] \n\
 /* 08033d90 */ STRB R7, [R1, 0x8] \n\
 /* 08033d92 */ LDR R0, [R5] \n\
-/* 08033d94 */ LDR R1, =0x088f0128 @ !PossiblePointer \n\
+/* 08033d94 */ LDR R1, =D_088f0128 \n\
 /* 08033d96 */ MOV R2, R8 @ Set R2 to R8 \n\
 /* 08033d98 */ STR R2, [SP] \n\
 /* 08033d9a */ STR R6, [SP, 0x4] \n\

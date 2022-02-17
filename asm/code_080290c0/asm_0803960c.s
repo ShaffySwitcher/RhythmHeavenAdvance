@@ -21,7 +21,7 @@ glabel func_0803960c \n\
 /* 0803962e */ LDR R3, =0x0000400a @ !PossiblePointer \n\
  \n\
 branch_08039630: \n\
-/* 08039630 */ LDR R4, =0x03005380 @ !PossiblePointer \n\
+/* 08039630 */ LDR R4, =D_03005380 \n\
 /* 08039632 */ LDR R0, [R4] \n\
 /* 08039634 */ LDR R1, =0x088f8ed0 @ !PossiblePointer \n\
 /* 08039636 */ MOVS R2, 0x40 @ Set R2 to 0x40 \n\

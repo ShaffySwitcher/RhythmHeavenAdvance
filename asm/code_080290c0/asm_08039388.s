@@ -4,7 +4,7 @@ asm(".syntax unified \n\
 \n\
 glabel func_08039388 \n\
 /* 08039388 */ PUSH {R4-R7, LR} \n\
-/* 0803938a */ LDR R7, =0x030055d0 @ !PossiblePointer \n\
+/* 0803938a */ LDR R7, =D_030055d0 \n\
 /* 0803938c */ LDR R6, [R7] \n\
 /* 0803938e */ ADDS R5, R6, 0x4 @ Set R5 to R6 + 0x4 \n\
 /* 08039390 */ BL func_0800c398 \n\
@@ -21,9 +21,9 @@ glabel func_08039388 \n\
 /* 080393ac */ ASRS R0, R0, 0x8 \n\
 /* 080393ae */ CMP R0, 0x77 @ Compare R0 and 0x77 \n\
 /* 080393b0 */ BLE branch_080393de \n\
-/* 080393b2 */ LDR R0, =0x08a9cbd0 @ !PossiblePointer \n\
+/* 080393b2 */ LDR R0, =D_08a9cbd0 \n\
 /* 080393b4 */ BL func_08002634 \n\
-/* 080393b8 */ LDR R4, =0x03005380 @ !PossiblePointer \n\
+/* 080393b8 */ LDR R4, =D_03005380 \n\
 /* 080393ba */ LDR R0, [R4] \n\
 /* 080393bc */ MOVS R2, 0x4 @ Set R2 to 0x4 \n\
 /* 080393be */ LDRSH R1, [R6, R2] \n\
@@ -42,7 +42,7 @@ glabel func_08039388 \n\
 /* 080393dc */ STRB R0, [R5, 0x2] \n\
  \n\
 branch_080393de: \n\
-/* 080393de */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 080393de */ LDR R0, =D_03005380 \n\
 /* 080393e0 */ LDR R0, [R0] \n\
 /* 080393e2 */ MOVS R2, 0x4 @ Set R2 to 0x4 \n\
 /* 080393e4 */ LDRSH R1, [R6, R2] \n\

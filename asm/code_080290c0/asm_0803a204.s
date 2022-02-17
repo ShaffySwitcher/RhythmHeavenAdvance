@@ -10,7 +10,7 @@ glabel func_0803a204 \n\
 /* 0803a20e */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
 /* 0803a210 */ LDR R2, =0x03005550 @ !PossiblePointer \n\
 /* 0803a212 */ LDRH R3, [R2] \n\
-/* 0803a214 */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 0803a214 */ LDR R0, =D_030055d0 \n\
 /* 0803a216 */ LDR R0, [R0] \n\
 /* 0803a218 */ LDR R0, [R0, 0x70] \n\
 /* 0803a21a */ STR R0, [SP] \n\
