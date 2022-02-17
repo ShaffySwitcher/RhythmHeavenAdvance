@@ -50,7 +50,7 @@ branch_08021ed0: \n\
 /* 08021ee6 */ BL func_0804d8f8 \n\
  \n\
 branch_08021eea: \n\
-/* 08021eea */ LDR R0, =D_08a9e084 \n\
+/* 08021eea */ LDR R0, =s_f_boxing_punchMidiInfo \n\
 /* 08021eec */ BL func_08002634 \n\
 /* 08021ef0 */ ADD SP, 0xC \n\
 /* 08021ef2 */ POP {R4} \n\

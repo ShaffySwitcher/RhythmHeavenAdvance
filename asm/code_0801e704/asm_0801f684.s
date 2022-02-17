@@ -27,7 +27,7 @@ glabel func_0801f684 \n\
 .ltorg \n\
  \n\
 branch_0801f6b4: \n\
-/* 0801f6b4 */ LDR R0, =D_08a9c4c8 \n\
+/* 0801f6b4 */ LDR R0, =s_ghost_rainMidiInfo \n\
 /* 0801f6b6 */ BL func_08002634 \n\
 /* 0801f6ba */ LDR R1, =D_030055d0 \n\
 /* 0801f6bc */ LDR R1, [R1] \n\

@@ -25,7 +25,7 @@ branch_080385bc: \n\
 /* 080385be */ ANDS R0, R5 @ Set R0 to R0 & R5 \n\
 /* 080385c0 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 080385c2 */ BNE branch_080385dc \n\
-/* 080385c4 */ LDR R0, =D_08a9b988 \n\
+/* 080385c4 */ LDR R0, =s_BD5MidiInfo \n\
 /* 080385c6 */ MOVS R1, 0xC0 @ Set R1 to 0xC0 \n\
 /* 080385c8 */ LSLS R1, R1, 0x1 \n\
 /* 080385ca */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
@@ -35,7 +35,7 @@ branch_080385bc: \n\
 .ltorg \n\
  \n\
 branch_080385dc: \n\
-/* 080385dc */ LDR R0, =D_08a9ba3c \n\
+/* 080385dc */ LDR R0, =s_SD5MidiInfo \n\
 /* 080385de */ MOVS R1, 0xC0 @ Set R1 to 0xC0 \n\
 /* 080385e0 */ LSLS R1, R1, 0x1 \n\
 /* 080385e2 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\

@@ -27,7 +27,7 @@ glabel func_0803cb0c \n\
 /* 0803cb3a */ LDR R2, =0x2d2 \n\
 /* 0803cb3c */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
 /* 0803cb3e */ STRH R0, [R1] \n\
-/* 0803cb40 */ LDR R0, =D_08a9e304 \n\
+/* 0803cb40 */ LDR R0, =s_f_ninja_kabeMidiInfo \n\
 /* 0803cb42 */ BL func_08002634 \n\
 /* 0803cb46 */ ADD SP, 0x14 \n\
 /* 0803cb48 */ POP {R0} \n\

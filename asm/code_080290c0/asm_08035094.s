@@ -77,7 +77,7 @@ branch_080350c8: \n\
 /* 08035114 */ LDRSH R1, [R5, R2] \n\
 /* 08035116 */ MOVS R2, 0x3 @ Set R2 to 0x3 \n\
 /* 08035118 */ BL func_0804cebc \n\
-/* 0803511c */ LDR R0, =D_08a9ddb4 \n\
+/* 0803511c */ LDR R0, =s_f_shuji_v_ouchMidiInfo \n\
 /* 0803511e */ BL func_08002634 \n\
 /* 08035122 */ MOVS R0, 0xC @ Set R0 to 0xC \n\
 /* 08035124 */ BL func_0800c3a4 \n\

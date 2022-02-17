@@ -47,7 +47,7 @@ branch_0803fba8: \n\
 /* 0803fbc2 */ BL func_0803ee58 \n\
  \n\
 branch_0803fbc6: \n\
-/* 0803fbc6 */ LDR R0, =D_08a9dd78 \n\
+/* 0803fbc6 */ LDR R0, =s_f_toss_swingMidiInfo \n\
 /* 0803fbc8 */ BL func_08002634 \n\
 /* 0803fbcc */ POP {R4} \n\
 /* 0803fbce */ POP {R0} \n\

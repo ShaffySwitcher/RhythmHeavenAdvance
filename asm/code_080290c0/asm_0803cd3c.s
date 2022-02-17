@@ -87,7 +87,7 @@ branch_0803cdde: \n\
 /* 0803cdde */ BL func_0803c8c4 \n\
 /* 0803cde2 */ MOVS R0, 0x3 @ Set R0 to 0x3 \n\
 /* 0803cde4 */ BL func_0803c710 \n\
-/* 0803cde8 */ LDR R0, =D_08a9c0e0 \n\
+/* 0803cde8 */ LDR R0, =s_ninja_hitMidiInfo \n\
 /* 0803cdea */ BL func_08002634 \n\
 /* 0803cdee */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 0803cdf0 */ MOV R0, R8 @ Set R0 to R8 \n\

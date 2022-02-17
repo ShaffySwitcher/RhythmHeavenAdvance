@@ -290,7 +290,7 @@ branch_0802fe7c: \n\
 /* 0802feba */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0802febc */ BL func_0804d160 \n\
 /* 0802fec0 */ STRH R0, [R6] \n\
-/* 0802fec2 */ LDR R0, =D_08a9c248 \n\
+/* 0802fec2 */ LDR R0, =s_hanabi_hyuMidiInfo \n\
 /* 0802fec4 */ BL func_08002634 \n\
 /* 0802fec8 */ B branch_0802ff58 \n\
 \n\
@@ -355,7 +355,7 @@ branch_0802ff10: \n\
 /* 0802ff4a */ STR R2, [SP, 0x10] \n\
 /* 0802ff4c */ BL func_0804d160 \n\
 /* 0802ff50 */ STRH R0, [R6] \n\
-/* 0802ff52 */ LDR R0, =D_08a9dea4 \n\
+/* 0802ff52 */ LDR R0, =s_f_hanabi_v_tamayaMidiInfo \n\
 /* 0802ff54 */ BL func_08002634 \n\
  \n\
 branch_0802ff58: \n\

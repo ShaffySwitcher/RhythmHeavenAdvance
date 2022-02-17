@@ -162,7 +162,7 @@ branch_08015778: \n\
 /* 08015788 */ BL func_0804cebc \n\
  \n\
 branch_0801578c: \n\
-/* 0801578c */ LDR R0, =D_08a9db34 \n\
+/* 0801578c */ LDR R0, =s_f_point_stopMidiInfo \n\
 /* 0801578e */ BL func_08002634 \n\
 /* 08015792 */ B branch_080158b8 \n\
 \n\
@@ -223,7 +223,7 @@ branch_080157ee: \n\
 /* 08015806 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 08015808 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0801580a */ BNE branch_080158b8 \n\
-/* 0801580c */ LDR R0, =D_08a9db20 \n\
+/* 0801580c */ LDR R0, =s_f_point_rollMidiInfo \n\
 /* 0801580e */ MOV R1, R8 @ Set R1 to R8 \n\
 /* 08015810 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08015812 */ BL func_08002698 \n\

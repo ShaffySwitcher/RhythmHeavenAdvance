@@ -20,7 +20,7 @@ glabel func_08012e24 \n\
 /* 08012e40 */ BEQ branch_08012ea2 \n\
 /* 08012e42 */ CMP R0, 0x1E @ Compare R0 and 0x1E \n\
 /* 08012e44 */ BNE branch_08012e4c \n\
-/* 08012e46 */ LDR R0, =D_08a9dad0 \n\
+/* 08012e46 */ LDR R0, =s_f_campaign_noticeMidiInfo \n\
 /* 08012e48 */ BL func_08002634 \n\
  \n\
 branch_08012e4c: \n\
@@ -180,7 +180,7 @@ branch_08012f18: \n\
 /* 08012f80 */ NEGS R0, R0 @ Set R0 to -R0 \n\
 /* 08012f82 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 08012f84 */ STRB R0, [R2, 0x8] \n\
-/* 08012f86 */ LDR R0, =D_08a9b820 \n\
+/* 08012f86 */ LDR R0, =s_menu_kettei2MidiInfo \n\
 /* 08012f88 */ BL func_08002634 \n\
 /* 08012f8c */ MOVS R4, 0x80 @ Set R4 to 0x80 \n\
 /* 08012f8e */ LSLS R4, R4, 0x1 \n\

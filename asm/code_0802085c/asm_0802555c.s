@@ -31,13 +31,13 @@ jtbl_0802558c: \n\
 .word jump_080255dc \n\
 \n\
 jump_080255a0: \n\
-/* 080255a0 */ LDR R1, =D_08a9b924 \n\
+/* 080255a0 */ LDR R1, =s_hakushu_soloMidiInfo \n\
 /* 080255a2 */ B branch_080255aa \n\
 \n\
 .ltorg \n\
 \n\
 jump_080255a8: \n\
-/* 080255a8 */ LDR R1, =D_08a9b8fc \n\
+/* 080255a8 */ LDR R1, =s_warai_littleMidiInfo \n\
  \n\
 branch_080255aa: \n\
 /* 080255aa */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
@@ -52,7 +52,7 @@ branch_080255aa: \n\
 .ltorg \n\
 \n\
 jump_080255c4: \n\
-/* 080255c4 */ LDR R1, =D_08a9b8d4 \n\
+/* 080255c4 */ LDR R1, =s_kansei_soloMidiInfo \n\
 /* 080255c6 */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 080255c8 */ MOVS R2, 0x50 @ Set R2 to 0x50 \n\
 /* 080255ca */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
@@ -64,7 +64,7 @@ jump_080255c4: \n\
 .ltorg \n\
 \n\
 jump_080255dc: \n\
-/* 080255dc */ LDR R1, =D_08a9b8c0 \n\
+/* 080255dc */ LDR R1, =s_kanseiMidiInfo \n\
 /* 080255de */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 080255e0 */ MOVS R2, 0x60 @ Set R2 to 0x60 \n\
 /* 080255e2 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\

@@ -45,7 +45,7 @@ glabel func_08036758 \n\
 /* 080367ae */ NEGS R1, R1 @ Set R1 to -R1 \n\
 /* 080367b0 */ ANDS R1, R0 @ Set R1 to R1 & R0 \n\
 /* 080367b2 */ STRB R1, [R6] \n\
-/* 080367b4 */ LDR R0, =D_08a9d47c \n\
+/* 080367b4 */ LDR R0, =s_poly_rakkaMidiInfo \n\
 /* 080367b6 */ BL func_08002634 \n\
  \n\
 branch_080367ba: \n\

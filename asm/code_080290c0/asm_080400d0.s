@@ -67,7 +67,7 @@ branch_08040106: \n\
 /* 08040144 */ STR R5, [SP, 0x8] \n\
 /* 08040146 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 08040148 */ BL func_0804d8f8 \n\
-/* 0804014c */ LDR R1, =D_08a9bc1c \n\
+/* 0804014c */ LDR R1, =s_tran_jump_seMidiInfo \n\
 /* 0804014e */ MOVS R0, 0x3 @ Set R0 to 0x3 \n\
 /* 08040150 */ BL func_0800267c \n\
 /* 08040154 */ ADD SP, 0xC \n\

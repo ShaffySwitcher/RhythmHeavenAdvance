@@ -112,7 +112,7 @@ branch_0803b33a: \n\
 /* 0803b340 */ MOVS R1, 0x80 @ Set R1 to 0x80 \n\
 /* 0803b342 */ LSLS R1, R1, 0x5 \n\
 /* 0803b344 */ STRH R1, [R0] \n\
-/* 0803b346 */ LDR R0, =D_08a9c180 \n\
+/* 0803b346 */ LDR R0, =s_rat_crush_RMidiInfo \n\
 /* 0803b348 */ BL func_08002634 \n\
 /* 0803b34c */ LDR R0, [R4] \n\
 /* 0803b34e */ MOVS R3, 0x8F @ Set R3 to 0x8F \n\

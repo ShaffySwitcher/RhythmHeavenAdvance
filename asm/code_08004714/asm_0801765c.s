@@ -36,7 +36,7 @@ glabel func_0801765c \n\
 /* 08017698 */ STR R3, [SP, 0x8] \n\
 /* 0801769a */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 0801769c */ BL func_0804d8f8 \n\
-/* 080176a0 */ LDR R0, =D_08a9db5c \n\
+/* 080176a0 */ LDR R0, =s_f_fail_perfectMidiInfo \n\
 /* 080176a2 */ BL func_08002634 \n\
 /* 080176a6 */ LDR R0, [R6] \n\
 /* 080176a8 */ ADDS R0, R0, R5 @ Set R0 to R0 + R5 \n\

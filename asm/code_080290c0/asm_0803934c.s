@@ -25,7 +25,7 @@ branch_0803935c: \n\
 /* 08039370 */ BL func_08038fbc \n\
  \n\
 branch_08039374: \n\
-/* 08039374 */ LDR R0, =D_08a9e5fc \n\
+/* 08039374 */ LDR R0, =s_f_rabbit_readyMidiInfo \n\
 /* 08039376 */ BL func_08002634 \n\
 /* 0803937a */ POP {R0} \n\
 /* 0803937c */ BX R0 \n\

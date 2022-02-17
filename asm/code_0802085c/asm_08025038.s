@@ -9,7 +9,7 @@ glabel func_08025038 \n\
 /* 0802503e */ MOV R5, R8 @ Set R5 to R8 \n\
 /* 08025040 */ PUSH {R5-R7} \n\
 /* 08025042 */ SUB SP, 0x4 \n\
-/* 08025044 */ LDR R1, =D_08a9d9cc \n\
+/* 08025044 */ LDR R1, =s_fanfare_drum3MidiInfo \n\
 /* 08025046 */ MOV R9, R1 @ Set R9 to R1 \n\
 /* 08025048 */ LDR R2, =D_030055d0 \n\
 /* 0802504a */ LDR R1, [R2] \n\
@@ -212,7 +212,7 @@ branch_08025188: \n\
 /* 0802518e */ ADDS R0, R0, R3 @ Set R0 to R0 + R3 \n\
 /* 08025190 */ LDR R1, =D_0805a058 \n\
 /* 08025192 */ STR R1, [R0] \n\
-/* 08025194 */ LDR R0, =D_08a9d9a4 \n\
+/* 08025194 */ LDR R0, =s_fanfare_drum1MidiInfo \n\
 /* 08025196 */ MOV R9, R0 @ Set R9 to R0 \n\
 /* 08025198 */ B branch_080251b4 \n\
 \n\
@@ -225,7 +225,7 @@ branch_080251a4: \n\
 /* 080251aa */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 080251ac */ LDR R1, =D_0805a06c \n\
 /* 080251ae */ STR R1, [R0] \n\
-/* 080251b0 */ LDR R3, =D_08a9d9b8 \n\
+/* 080251b0 */ LDR R3, =s_fanfare_drum2MidiInfo \n\
 /* 080251b2 */ MOV R9, R3 @ Set R9 to R3 \n\
  \n\
 branch_080251b4: \n\

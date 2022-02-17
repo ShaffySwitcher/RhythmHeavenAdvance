@@ -187,7 +187,7 @@ branch_0803b4f4: \n\
 /* 0803b4f8 */ ADDS R0, 0x60 @ Add 0x60 to R0 \n\
 /* 0803b4fa */ MOVS R1, 0x3 @ Set R1 to 0x3 \n\
 /* 0803b4fc */ STRB R1, [R0] \n\
-/* 0803b4fe */ LDR R0, =D_08a9c194 \n\
+/* 0803b4fe */ LDR R0, =s_rat_crush_LMidiInfo \n\
 /* 0803b500 */ BL func_08002634 \n\
 /* 0803b504 */ LDR R2, =D_030055d0 \n\
 /* 0803b506 */ LDR R0, [R2] \n\

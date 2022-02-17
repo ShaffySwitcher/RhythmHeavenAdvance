@@ -64,7 +64,7 @@ glabel func_0802a154 \n\
 /* 0802a1ce */ MOVS R1, 0x1 @ Set R1 to 0x1 \n\
 /* 0802a1d0 */ ORRS R0, R1 @ Set R0 to R0 | R1 \n\
 /* 0802a1d2 */ STRB R0, [R2, 0x1] \n\
-/* 0802a1d4 */ LDR R0, =D_08a9e778 \n\
+/* 0802a1d4 */ LDR R0, =s_f_drumtech_missMidiInfo \n\
 /* 0802a1d6 */ BL func_08002634 \n\
 /* 0802a1da */ LDR R0, [R7] \n\
 /* 0802a1dc */ MOVS R1, 0xAA @ Set R1 to 0xAA \n\

@@ -108,7 +108,7 @@ branch_0801a7b2: \n\
 /* 0801a7d0 */ ADDS R1, R2, R0 @ Set R1 to R2 + R0 \n\
 /* 0801a7d2 */ MOVS R0, 0xA0 @ Set R0 to 0xA0 \n\
 /* 0801a7d4 */ STRH R0, [R1] \n\
-/* 0801a7d6 */ LDR R0, =D_08a9dc60 \n\
+/* 0801a7d6 */ LDR R0, =s_f_env_paper_revMidiInfo \n\
 /* 0801a7d8 */ BL func_08002634 \n\
 /* 0801a7dc */ B branch_0801a83a \n\
 \n\
@@ -132,7 +132,7 @@ branch_0801a7ec: \n\
 /* 0801a808 */ ADDS R1, R2, R0 @ Set R1 to R2 + R0 \n\
 /* 0801a80a */ LDR R0, =0xff60 \n\
 /* 0801a80c */ STRH R0, [R1] \n\
-/* 0801a80e */ LDR R0, =D_08a9dc4c \n\
+/* 0801a80e */ LDR R0, =s_f_env_paperMidiInfo \n\
 /* 0801a810 */ BL func_08002634 \n\
 /* 0801a814 */ B branch_0801a83a \n\
 \n\
@@ -145,7 +145,7 @@ branch_0801a824: \n\
 /* 0801a82c */ LDR R1, [R0] \n\
 /* 0801a82e */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0801a830 */ STR R0, [R1, 0x4] \n\
-/* 0801a832 */ LDR R1, =D_08a9b85c \n\
+/* 0801a832 */ LDR R1, =s_menu_cancel2MidiInfo \n\
 /* 0801a834 */ MOVS R0, 0x6 @ Set R0 to 0x6 \n\
 /* 0801a836 */ BL func_0800267c \n\
  \n\

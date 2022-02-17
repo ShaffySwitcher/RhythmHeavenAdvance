@@ -67,7 +67,7 @@ branch_080187ac: \n\
 /* 080187dc */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 080187de */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 080187e0 */ BL func_080185d0 \n\
-/* 080187e4 */ LDR R0, =D_08a9db84 \n\
+/* 080187e4 */ LDR R0, =s_f_send_mesMidiInfo \n\
 /* 080187e6 */ BL func_08002634 \n\
 /* 080187ea */ LDR R1, [R4] \n\
 /* 080187ec */ LDR R2, =0x49e \n\

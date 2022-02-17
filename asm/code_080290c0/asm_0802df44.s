@@ -24,7 +24,7 @@ glabel func_0802df44 \n\
 /* 0802df6c */ LDRB R0, [R0] \n\
 /* 0802df6e */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0802df70 */ BNE branch_0802df84 \n\
-/* 0802df72 */ LDR R0, =D_08a9d5f8 \n\
+/* 0802df72 */ LDR R0, =s_change_ballMidiInfo \n\
 /* 0802df74 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0802df76 */ BL func_08002698 \n\
 /* 0802df7a */ LDR R0, [R4] \n\

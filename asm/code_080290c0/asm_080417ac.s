@@ -51,7 +51,7 @@ branch_08041802: \n\
 /* 08041806 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 08041808 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 0804180a */ STRB R1, [R0] \n\
-/* 0804180c */ LDR R0, =D_08a9cd74 \n\
+/* 0804180c */ LDR R0, =s_uma_hihinMidiInfo \n\
 /* 0804180e */ BL func_08002634 \n\
 /* 08041812 */ LDR R0, [R6] \n\
 /* 08041814 */ ADDS R2, R0, R7 @ Set R2 to R0 + R7 \n\

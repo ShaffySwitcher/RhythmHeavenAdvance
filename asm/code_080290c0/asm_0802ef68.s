@@ -138,9 +138,9 @@ branch_0802f012: \n\
 /* 0802f07a */ MOVS R0, 0xF1 @ Set R0 to 0xF1 \n\
 /* 0802f07c */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 0802f07e */ BL func_08017338 \n\
-/* 0802f082 */ LDR R0, =D_08a9dfd0 \n\
+/* 0802f082 */ LDR R0, =s_f_hair_tuneruMidiInfo \n\
 /* 0802f084 */ BL func_0800274c \n\
-/* 0802f088 */ LDR R0, =D_08a9dfbc \n\
+/* 0802f088 */ LDR R0, =s_f_hair_nuki_longMidiInfo \n\
 /* 0802f08a */ BL func_08002634 \n\
 /* 0802f08e */ LDR R3, =D_030055d0 \n\
 /* 0802f090 */ LDR R1, [R3] \n\
@@ -199,9 +199,9 @@ branch_0802f0c4: \n\
 /* 0802f102 */ MOVS R0, 0xF1 @ Set R0 to 0xF1 \n\
 /* 0802f104 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 0802f106 */ BL func_08017338 \n\
-/* 0802f10a */ LDR R0, =D_08a9dfd0 \n\
+/* 0802f10a */ LDR R0, =s_f_hair_tuneruMidiInfo \n\
 /* 0802f10c */ BL func_0800274c \n\
-/* 0802f110 */ LDR R0, =D_08a9ca7c  \n\
+/* 0802f110 */ LDR R0, =s_witch_donatsMidiInfo  \n\
 /* 0802f112 */ BL func_08002634 \n\
 /* 0802f116 */ BL func_0800bc40 \n\
 /* 0802f11a */ LDR R0, =D_030055d0 \n\

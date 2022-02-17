@@ -62,7 +62,7 @@ branch_0803633c: \n\
 /* 0803634e */ ADDS R0, R0, R6 @ Set R0 to R0 + R6 \n\
 /* 08036350 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 08036352 */ STRB R1, [R0] \n\
-/* 08036354 */ LDR R0, =D_08a9e020 \n\
+/* 08036354 */ LDR R0, =s_f_poly_closeMidiInfo \n\
 /* 08036356 */ BL func_08002634 \n\
 /* 0803635a */ ADDS R0, R6, 0x0 @ Set R0 to R6 + 0x0 \n\
 /* 0803635c */ ADD R1, SP, 0xC \n\
