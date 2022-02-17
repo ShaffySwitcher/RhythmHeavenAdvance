@@ -107,17 +107,17 @@ branch_0802f012: \n\
 /* 0802f034 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0802f036 */ STRH R0, [R1, 0x12] \n\
 /* 0802f038 */ LDR R0, [R5, 0x4] \n\
-/* 0802f03a */ LDR R1, =0x088e88f8 @ !PossiblePointer \n\
+/* 0802f03a */ LDR R1, =D_088e88f8 \n\
 /* 0802f03c */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 0802f03e */ STR R3, [SP] \n\
 /* 0802f040 */ STR R3, [SP, 0x4] \n\
 /* 0802f042 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0802f044 */ BL func_08010064 \n\
 /* 0802f048 */ LDR R0, [R5, 0x4] \n\
-/* 0802f04a */ LDR R1, =0xfffffe00 @ !PossiblePointer \n\
+/* 0802f04a */ LDR R1, =0xfffffe00 \n\
 /* 0802f04c */ BL func_0800fe94 \n\
 /* 0802f050 */ LDR R0, [R6, 0x4] \n\
-/* 0802f052 */ LDR R1, =0x088e87a8 @ !PossiblePointer \n\
+/* 0802f052 */ LDR R1, =D_088e87a8 \n\
 /* 0802f054 */ MOVS R2, 0x7F @ Set R2 to 0x7F \n\
 /* 0802f056 */ STR R2, [SP] \n\
 /* 0802f058 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
@@ -176,7 +176,7 @@ branch_0802f0c4: \n\
 /* 0802f0cc */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0802f0ce */ BL func_08017928 \n\
 /* 0802f0d2 */ LDR R0, [R5, 0x4] \n\
-/* 0802f0d4 */ LDR R1, =0x088e89a8 @ !PossiblePointer \n\
+/* 0802f0d4 */ LDR R1, =D_088e89a8 \n\
 /* 0802f0d6 */ MOVS R2, 0x7F @ Set R2 to 0x7F \n\
 /* 0802f0d8 */ STR R2, [SP] \n\
 /* 0802f0da */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
@@ -185,7 +185,7 @@ branch_0802f0c4: \n\
 /* 0802f0e0 */ MOVS R3, 0x1 @ Set R3 to 0x1 \n\
 /* 0802f0e2 */ BL func_08010064 \n\
 /* 0802f0e6 */ LDR R0, [R5, 0x4] \n\
-/* 0802f0e8 */ LDR R1, =0xfffffe00 @ !PossiblePointer \n\
+/* 0802f0e8 */ LDR R1, =0xfffffe00 \n\
 /* 0802f0ea */ BL func_0800fe94 \n\
 /* 0802f0ee */ LDR R0, [R7] \n\
 /* 0802f0f0 */ MOVS R1, 0x1 @ Set R1 to 0x1 \n\
@@ -201,7 +201,7 @@ branch_0802f0c4: \n\
 /* 0802f106 */ BL func_08017338 \n\
 /* 0802f10a */ LDR R0, =D_08a9dfd0 \n\
 /* 0802f10c */ BL func_0800274c \n\
-/* 0802f110 */ LDR R0, =0x08a9ca7c @ !PossiblePointer \n\
+/* 0802f110 */ LDR R0, =D_08a9ca7c  \n\
 /* 0802f112 */ BL func_08002634 \n\
 /* 0802f116 */ BL func_0800bc40 \n\
 /* 0802f11a */ LDR R0, =D_030055d0 \n\

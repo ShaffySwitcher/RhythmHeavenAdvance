@@ -9,8 +9,8 @@ glabel func_08034dd0 \n\
 /* 08034dd6 */ LDR R6, [R0] \n\
 /* 08034dd8 */ ADDS R5, R6, 0x0 @ Set R5 to R6 + 0x0 \n\
 /* 08034dda */ ADDS R5, 0x10 @ Add 0x10 to R5 \n\
-/* 08034ddc */ LDR R0, =0x088f3b58 @ !PossiblePointer \n\
-/* 08034dde */ LDR R1, =0x0000480a @ !PossiblePointer \n\
+/* 08034ddc */ LDR R0, =D_088f3b58 \n\
+/* 08034dde */ LDR R1, =0x480a \n\
 /* 08034de0 */ STR R1, [SP] \n\
 /* 08034de2 */ MOVS R1, 0x80 @ Set R1 to 0x80 \n\
 /* 08034de4 */ LSLS R1, R1, 0x1 \n\

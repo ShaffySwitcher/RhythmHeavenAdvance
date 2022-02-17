@@ -15,15 +15,15 @@ glabel func_0803960c \n\
 /* 08039620 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 08039622 */ BL func_08001980 \n\
 /* 08039626 */ LSLS R0, R0, 0x10 \n\
-/* 08039628 */ LDR R3, =0x0000800a @ !PossiblePointer \n\
+/* 08039628 */ LDR R3, =0x800a \n\
 /* 0803962a */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0803962c */ BEQ branch_08039630 \n\
-/* 0803962e */ LDR R3, =0x0000400a @ !PossiblePointer \n\
+/* 0803962e */ LDR R3, =0x400a \n\
  \n\
 branch_08039630: \n\
 /* 08039630 */ LDR R4, =D_03005380 \n\
 /* 08039632 */ LDR R0, [R4] \n\
-/* 08039634 */ LDR R1, =0x088f8ed0 @ !PossiblePointer \n\
+/* 08039634 */ LDR R1, =D_088f8ed0 \n\
 /* 08039636 */ MOVS R2, 0x40 @ Set R2 to 0x40 \n\
 /* 08039638 */ STR R2, [SP] \n\
 /* 0803963a */ STR R3, [SP, 0x4] \n\

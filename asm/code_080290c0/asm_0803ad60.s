@@ -149,18 +149,18 @@ branch_0803ae6c: \n\
 /* 0803ae7a */ ADDS R6, R0, 0x0 @ Set R6 to R0 + 0x0 \n\
 /* 0803ae7c */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 0803ae7e */ BEQ branch_0803aebc \n\
-/* 0803ae80 */ LDR R2, =0x08936cac @ !PossiblePointer \n\
+/* 0803ae80 */ LDR R2, =D_08936cac \n\
 /* 0803ae82 */ ADDS R0, R1, 0x0 @ Set R0 to R1 + 0x0 \n\
 /* 0803ae84 */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 0803ae86 */ BGE branch_0803ae8c \n\
-/* 0803ae88 */ LDR R3, =0x000007ff @ !PossiblePointer \n\
+/* 0803ae88 */ LDR R3, =0x7ff \n\
 /* 0803ae8a */ ADDS R0, R1, R3 @ Set R0 to R1 + R3 \n\
  \n\
 branch_0803ae8c: \n\
 /* 0803ae8c */ ASRS R0, R0, 0xB \n\
 /* 0803ae8e */ LSLS R0, R0, 0xB \n\
 /* 0803ae90 */ SUBS R0, R1, R0 @ Set R0 to R1 - R0 \n\
-/* 0803ae92 */ LDR R3, =0x000007ff @ !PossiblePointer \n\
+/* 0803ae92 */ LDR R3, =0x7ff \n\
 /* 0803ae94 */ ADDS R1, R3, 0x0 @ Set R1 to R3 + 0x0 \n\
 /* 0803ae96 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 0803ae98 */ LSLS R0, R0, 0x1 \n\

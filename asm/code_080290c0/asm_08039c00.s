@@ -25,13 +25,13 @@ glabel func_08039c00 \n\
 /* 08039c2a */ BL func_0800c3a4 \n\
 /* 08039c2e */ LDR R1, [R4] \n\
 /* 08039c30 */ STRH R0, [R1, 0x10] \n\
-/* 08039c32 */ LDR R2, =0x089e652c @ !PossiblePointer \n\
+/* 08039c32 */ LDR R2, =D_089e652c \n\
 /* 08039c34 */ LDRB R0, [R1] \n\
 /* 08039c36 */ LSLS R0, R0, 0x3 \n\
 /* 08039c38 */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 08039c3a */ LDR R0, [R0] \n\
 /* 08039c3c */ BL func_08002634 \n\
-/* 08039c40 */ LDR R0, =0x08a9bab4 @ !PossiblePointer \n\
+/* 08039c40 */ LDR R0, =D_08a9bab4 \n\
 /* 08039c42 */ BL func_08002634 \n\
 /* 08039c46 */ ADD SP, 0xC \n\
 /* 08039c48 */ POP {R4} \n\

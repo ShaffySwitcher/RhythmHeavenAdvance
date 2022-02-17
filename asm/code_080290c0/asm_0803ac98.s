@@ -12,7 +12,7 @@ glabel func_0803ac98 \n\
 /* 0803aca4 */ LDR R4, [R2] \n\
 /* 0803aca6 */ CMP R4, 0x0 @ Compare R4 and 0x0 \n\
 /* 0803aca8 */ BNE branch_0803acac \n\
-/* 0803acaa */ LDR R4, =0x08a9c1a8 @ !PossiblePointer \n\
+/* 0803acaa */ LDR R4, =D_08a9c1a8 \n\
  \n\
 branch_0803acac: \n\
 /* 0803acac */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\

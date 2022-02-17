@@ -11,7 +11,7 @@ glabel func_080409cc \n\
 /* 080409d8 */ CMP R0, 0x1 @ Compare R0 and 0x1 \n\
 /* 080409da */ BNE branch_08040a08 \n\
 /* 080409dc */ LDR R1, [R1, 0x44] \n\
-/* 080409de */ LDR R0, =0x00009fff @ !PossiblePointer \n\
+/* 080409de */ LDR R0, =0x9fff \n\
 /* 080409e0 */ CMP R1, R0 @ Check R1 - R0 \n\
 /* 080409e2 */ BGT branch_08040a08 \n\
 /* 080409e4 */ MOVS R0, 0xC0 @ Set R0 to 0xC0 \n\

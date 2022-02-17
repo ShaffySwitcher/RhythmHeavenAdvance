@@ -89,7 +89,7 @@ jump_08043970: \n\
 /* 08043984 */ MOVS R1, 0x10 @ Set R1 to 0x10 \n\
 /* 08043986 */ ORRS R0, R1 @ Set R0 to R0 | R1 \n\
 /* 08043988 */ STRB R0, [R5] \n\
-/* 0804398a */ LDR R0, =0x08a9d260 @ !PossiblePointer \n\
+/* 0804398a */ LDR R0, =D_08a9d260 \n\
 /* 0804398c */ BL func_08002634 \n\
  \n\
 branch_08043990: \n\
@@ -130,7 +130,7 @@ jump_080439a0: \n\
 /* 080439d8 */ STRB R0, [R5] \n\
 /* 080439da */ LDR R0, =D_030055d0 \n\
 /* 080439dc */ LDR R0, [R0] \n\
-/* 080439de */ LDR R1, =0x00000202 @ !PossiblePointer \n\
+/* 080439de */ LDR R1, =0x202 \n\
 /* 080439e0 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 080439e2 */ LDRB R0, [R0] \n\
 /* 080439e4 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
@@ -147,7 +147,7 @@ branch_080439ee: \n\
 /* 080439fa */ ADDS R0, R7, R0 @ Set R0 to R7 + R0 \n\
 /* 080439fc */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 080439fe */ STRB R1, [R0] \n\
-/* 08043a00 */ LDR R0, =0x08a9d274 @ !PossiblePointer \n\
+/* 08043a00 */ LDR R0, =D_08a9d274 \n\
 /* 08043a02 */ BL func_08002634 \n\
  \n\
 branch_08043a06: \n\

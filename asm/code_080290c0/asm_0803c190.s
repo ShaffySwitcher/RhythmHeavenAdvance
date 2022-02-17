@@ -45,7 +45,7 @@ glabel func_0803c190 \n\
 /* 0803c1e8 */ ADDS R1, R2, R3 @ Set R1 to R2 + R3 \n\
 /* 0803c1ea */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 0803c1ec */ LDRSH R1, [R1, R3] \n\
-/* 0803c1ee */ LDR R3, =0x000002ee @ !PossiblePointer \n\
+/* 0803c1ee */ LDR R3, =0x2ee \n\
 /* 0803c1f0 */ ADDS R2, R2, R3 @ Set R2 to R2 + R3 \n\
 /* 0803c1f2 */ LDRB R2, [R2] \n\
 /* 0803c1f4 */ BL func_0804d770 \n\

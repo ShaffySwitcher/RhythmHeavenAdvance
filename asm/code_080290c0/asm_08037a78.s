@@ -84,7 +84,7 @@ jump_08037b1c: \n\
 /* 08037b20 */ LDR R0, [R0] \n\
 /* 08037b22 */ MOVS R2, 0x4 @ Set R2 to 0x4 \n\
 /* 08037b24 */ LDRSH R1, [R7, R2] \n\
-/* 08037b26 */ LDR R2, =0x089e5d9c @ !PossiblePointer \n\
+/* 08037b26 */ LDR R2, =D_089e5d9c \n\
 /* 08037b28 */ LSLS R5, R4, 0x2 \n\
 /* 08037b2a */ ADDS R2, R5, R2 @ Set R2 to R5 + R2 \n\
 /* 08037b2c */ LDR R2, [R2] \n\

@@ -26,7 +26,7 @@ glabel func_0803c8c4 \n\
 /* 0803c8f0 */ SUBS R4, R0, R4 @ Set R4 to R0 - R4 \n\
 /* 0803c8f2 */ MOVS R0, 0x63 @ Set R0 to 0x63 \n\
 /* 0803c8f4 */ BL func_08001980 \n\
-/* 0803c8f8 */ LDR R1, =0x0000ffe0 @ !PossiblePointer \n\
+/* 0803c8f8 */ LDR R1, =0xffe0 \n\
 /* 0803c8fa */ ADDS R2, R1, 0x0 @ Set R2 to R1 + 0x0 \n\
 /* 0803c8fc */ SUBS R2, R2, R0 @ Set R2 to R2 - R0 \n\
 /* 0803c8fe */ LSLS R2, R2, 0x10 \n\

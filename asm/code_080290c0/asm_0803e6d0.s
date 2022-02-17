@@ -14,9 +14,9 @@ glabel func_0803e6d0 \n\
  \n\
 branch_0803e6e0: \n\
 /* 0803e6e0 */ BL func_0803e644 \n\
-/* 0803e6e4 */ LDR R0, =0x08a9e6c4 @ !PossiblePointer \n\
+/* 0803e6e4 */ LDR R0, =D_08a9e6c4 \n\
 /* 0803e6e6 */ BL func_0800274c \n\
-/* 0803e6ea */ LDR R0, =0x08a9c1e4 @ !PossiblePointer \n\
+/* 0803e6ea */ LDR R0, =D_08a9c1e4 \n\
 /* 0803e6ec */ BL func_08002634 \n\
  \n\
 branch_0803e6f0: \n\

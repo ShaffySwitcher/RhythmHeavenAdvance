@@ -8,7 +8,7 @@ glabel func_0803f1bc \n\
 /* 0803f1c0 */ LDR R0, [R0] \n\
 /* 0803f1c2 */ LDR R4, =D_030055d0 \n\
 /* 0803f1c4 */ LDR R1, [R4] \n\
-/* 0803f1c6 */ LDR R2, =0x00000366 @ !PossiblePointer \n\
+/* 0803f1c6 */ LDR R2, =0x366 \n\
 /* 0803f1c8 */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
 /* 0803f1ca */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0803f1cc */ LDRSH R1, [R1, R2] \n\

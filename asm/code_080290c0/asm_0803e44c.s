@@ -15,7 +15,7 @@ glabel func_0803e44c \n\
 /* 0803e45e */ SUBS R0, 0x1 @ Subtract 0x1 from R0 \n\
 /* 0803e460 */ STRB R0, [R1] \n\
 /* 0803e462 */ LDR R2, =D_03004b10 \n\
-/* 0803e464 */ LDR R1, =0x089e8068 @ !PossiblePointer \n\
+/* 0803e464 */ LDR R1, =D_089e8068 \n\
 /* 0803e466 */ LDR R0, [R3] \n\
 /* 0803e468 */ MOVS R3, 0xE5 @ Set R3 to 0xE5 \n\
 /* 0803e46a */ LSLS R3, R3, 0x2 \n\

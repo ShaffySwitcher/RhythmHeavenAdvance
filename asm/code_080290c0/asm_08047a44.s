@@ -22,7 +22,7 @@ glabel func_08047a44 \n\
 /* 08047a68 */ BL func_0800e0a0 \n\
 /* 08047a6c */ LDR R0, =D_03005380 \n\
 /* 08047a6e */ LDR R0, [R0] \n\
-/* 08047a70 */ LDR R1, =0x088b8388 @ !PossiblePointer \n\
+/* 08047a70 */ LDR R1, =D_088b8388 \n\
 /* 08047a72 */ MOVS R2, 0x78 @ Set R2 to 0x78 \n\
 /* 08047a74 */ STR R2, [SP] \n\
 /* 08047a76 */ STR R4, [SP, 0x4] \n\

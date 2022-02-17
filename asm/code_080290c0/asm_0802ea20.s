@@ -12,7 +12,7 @@ branch_0802ea28: \n\
 /* 0802ea28 */ LDR R0, [R7] \n\
 /* 0802ea2a */ ADDS R4, R0, R5 @ Set R4 to R0 + R5 \n\
 /* 0802ea2c */ LDR R2, [R4, 0x4] \n\
-/* 0802ea2e */ LDR R0, =0x0000c7ff @ !PossiblePointer \n\
+/* 0802ea2e */ LDR R0, =0xc7ff \n\
 /* 0802ea30 */ CMP R2, R0 @ Check R2 - R0 \n\
 /* 0802ea32 */ BGT branch_0802ea5e \n\
 /* 0802ea34 */ LDR R1, [R4, 0x8] \n\

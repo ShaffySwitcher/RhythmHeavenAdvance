@@ -35,10 +35,10 @@ branch_080396a6: \n\
 branch_080396d0: \n\
 /* 080396d0 */ LDR R2, [R5, 0x4] \n\
 /* 080396d2 */ ASRS R1, R2, 0x8 \n\
-/* 080396d4 */ LDR R0, =0x0000010f @ !PossiblePointer \n\
+/* 080396d4 */ LDR R0, =0x10f \n\
 /* 080396d6 */ CMP R1, R0 @ Check R1 - R0 \n\
 /* 080396d8 */ BLE branch_080396f4 \n\
-/* 080396da */ LDR R1, =0xfffed000 @ !PossiblePointer \n\
+/* 080396da */ LDR R1, =0xfffed000 \n\
 /* 080396dc */ ADDS R0, R2, R1 @ Set R0 to R2 + R1 \n\
 /* 080396de */ STR R0, [R5, 0x4] \n\
 /* 080396e0 */ MOVS R0, 0xF0 @ Set R0 to 0xF0 \n\

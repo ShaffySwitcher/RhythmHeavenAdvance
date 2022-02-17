@@ -42,7 +42,7 @@ branch_080350c8: \n\
 /* 080350ca */ LDR R0, [R0] \n\
 /* 080350cc */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 080350ce */ LDRSH R1, [R5, R2] \n\
-/* 080350d0 */ LDR R3, =0x089e56b8 @ !PossiblePointer \n\
+/* 080350d0 */ LDR R3, =D_089e56b8 \n\
 /* 080350d2 */ LDRB R2, [R5, 0x8] \n\
 /* 080350d4 */ LSLS R2, R2, 0x2 \n\
 /* 080350d6 */ ADDS R2, R2, R3 @ Set R2 to R2 + R3 \n\
@@ -77,7 +77,7 @@ branch_080350c8: \n\
 /* 08035114 */ LDRSH R1, [R5, R2] \n\
 /* 08035116 */ MOVS R2, 0x3 @ Set R2 to 0x3 \n\
 /* 08035118 */ BL func_0804cebc \n\
-/* 0803511c */ LDR R0, =0x08a9ddb4 @ !PossiblePointer \n\
+/* 0803511c */ LDR R0, =D_08a9ddb4 \n\
 /* 0803511e */ BL func_08002634 \n\
 /* 08035122 */ MOVS R0, 0xC @ Set R0 to 0xC \n\
 /* 08035124 */ BL func_0800c3a4 \n\

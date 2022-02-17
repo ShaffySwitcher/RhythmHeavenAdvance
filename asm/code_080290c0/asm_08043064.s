@@ -40,7 +40,7 @@ branch_080430ac: \n\
 /* 080430b0 */ BEQ branch_080430ca \n\
 /* 080430b2 */ SUBS R0, 0x1 @ Subtract 0x1 from R0 \n\
 /* 080430b4 */ STRH R0, [R4, 0x16] \n\
-/* 080430b6 */ LDR R0, =0x0000ff7f @ !PossiblePointer \n\
+/* 080430b6 */ LDR R0, =0xff7f \n\
 /* 080430b8 */ ANDS R5, R0 @ Set R5 to R5 & R0 \n\
 /* 080430ba */ LDR R0, [R4, 0x8] \n\
 /* 080430bc */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
@@ -55,7 +55,7 @@ branch_080430ca: \n\
 /* 080430ce */ BEQ branch_080430e8 \n\
 /* 080430d0 */ SUBS R0, 0x1 @ Subtract 0x1 from R0 \n\
 /* 080430d2 */ STRH R0, [R4, 0x18] \n\
-/* 080430d4 */ LDR R0, =0x0000ffdf @ !PossiblePointer \n\
+/* 080430d4 */ LDR R0, =0xffdf \n\
 /* 080430d6 */ ANDS R5, R0 @ Set R5 to R5 & R0 \n\
 /* 080430d8 */ LDR R0, [R4, 0xC] \n\
 /* 080430da */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
@@ -70,7 +70,7 @@ branch_080430e8: \n\
 /* 080430ec */ BEQ branch_08043106 \n\
 /* 080430ee */ SUBS R0, 0x1 @ Subtract 0x1 from R0 \n\
 /* 080430f0 */ STRH R0, [R4, 0x1A] \n\
-/* 080430f2 */ LDR R0, =0x0000ffef @ !PossiblePointer \n\
+/* 080430f2 */ LDR R0, =0xffef \n\
 /* 080430f4 */ ANDS R5, R0 @ Set R5 to R5 & R0 \n\
 /* 080430f6 */ LDR R0, [R4, 0x10] \n\
 /* 080430f8 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\

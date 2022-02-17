@@ -40,14 +40,14 @@ branch_0803235a: \n\
 /* 0803236c */ LDRSH R0, [R0, R4] \n\
 /* 0803236e */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08032370 */ BEQ branch_0803237c \n\
-/* 08032372 */ LDR R3, =0xfffffe00 @ !PossiblePointer \n\
+/* 08032372 */ LDR R3, =0xfffffe00 \n\
 /* 08032374 */ ADDS R0, R1, R3 @ Set R0 to R1 + R3 \n\
 /* 08032376 */ B branch_08032380 \n\
 \n\
 .ltorg \n\
  \n\
 branch_0803237c: \n\
-/* 0803237c */ LDR R4, =0xfffff800 @ !PossiblePointer \n\
+/* 0803237c */ LDR R4, =0xfffff800 \n\
 /* 0803237e */ ADDS R0, R1, R4 @ Set R0 to R1 + R4 \n\
  \n\
 branch_08032380: \n\
@@ -72,7 +72,7 @@ branch_08032394: \n\
 /* 080323a0 */ NEGS R1, R1 @ Set R1 to -R1 \n\
 /* 080323a2 */ CMP R0, R1 @ Check R0 - R1 \n\
 /* 080323a4 */ BGT branch_080323aa \n\
-/* 080323a6 */ LDR R0, =0xffff1000 @ !PossiblePointer \n\
+/* 080323a6 */ LDR R0, =0xffff1000 \n\
 /* 080323a8 */ STR R0, [R2] \n\
  \n\
 branch_080323aa: \n\

@@ -7,7 +7,7 @@ glabel func_080443c0 \n\
 /* 080443c2 */ SUB SP, 0x4 \n\
 /* 080443c4 */ LDR R7, =D_030055d0 \n\
 /* 080443c6 */ LDR R1, [R7] \n\
-/* 080443c8 */ LDR R2, =0x0000035f @ !PossiblePointer \n\
+/* 080443c8 */ LDR R2, =0x35f \n\
 /* 080443ca */ ADDS R0, R1, R2 @ Set R0 to R1 + R2 \n\
 /* 080443cc */ LDRB R6, [R0] \n\
 /* 080443ce */ CMP R6, 0x0 @ Compare R6 and 0x0 \n\
@@ -37,7 +37,7 @@ glabel func_080443c0 \n\
 /* 08044400 */ BL func_0804cebc \n\
 /* 08044404 */ BL func_0802b064 \n\
 /* 08044408 */ LDR R0, [R7] \n\
-/* 0804440a */ LDR R1, =0x00000362 @ !PossiblePointer \n\
+/* 0804440a */ LDR R1, =0x362 \n\
 /* 0804440c */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 0804440e */ STRB R6, [R0] \n\
 /* 08044410 */ BL func_08044810 \n\

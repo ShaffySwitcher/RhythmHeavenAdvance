@@ -13,7 +13,7 @@ glabel func_0803e960 \n\
 /* 0803e96e */ LDRSH R0, [R0, R2] \n\
 /* 0803e970 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0803e972 */ BLT branch_0803e982 \n\
-/* 0803e974 */ LDR R0, =0x0000039e @ !PossiblePointer \n\
+/* 0803e974 */ LDR R0, =0x39e \n\
 /* 0803e976 */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\
 /* 0803e978 */ LDRH R0, [R1] \n\
 /* 0803e97a */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\

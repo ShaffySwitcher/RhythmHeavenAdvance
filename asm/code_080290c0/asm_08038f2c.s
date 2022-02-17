@@ -24,10 +24,10 @@ glabel func_08038f2c \n\
 /* 08038f50 */ LDR R0, =D_03005380 \n\
 /* 08038f52 */ MOV R8, R0 @ Set R8 to R0 \n\
 /* 08038f54 */ LDR R0, [R0] \n\
-/* 08038f56 */ LDR R1, =0x088f8d08 @ !PossiblePointer \n\
+/* 08038f56 */ LDR R1, =D_088f8d08 \n\
 /* 08038f58 */ MOVS R2, 0x80 @ Set R2 to 0x80 \n\
 /* 08038f5a */ STR R2, [SP] \n\
-/* 08038f5c */ LDR R2, =0x00008005 @ !PossiblePointer \n\
+/* 08038f5c */ LDR R2, =0x8005 \n\
 /* 08038f5e */ STR R2, [SP, 0x4] \n\
 /* 08038f60 */ STR R5, [SP, 0x8] \n\
 /* 08038f62 */ STR R3, [SP, 0xC] \n\

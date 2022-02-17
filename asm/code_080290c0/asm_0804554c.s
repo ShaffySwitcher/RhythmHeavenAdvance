@@ -10,9 +10,9 @@ glabel func_0804554c \n\
 /* 08045558 */ BL func_0800c3b8 \n\
 /* 0804555c */ LSLS R0, R0, 0x10 \n\
 /* 0804555e */ LSRS R0, R0, 0x10 \n\
-/* 08045560 */ LDR R1, =0x089ea650 @ !PossiblePointer \n\
+/* 08045560 */ LDR R1, =D_089ea650 \n\
 /* 08045562 */ BL func_080087b4 \n\
-/* 08045566 */ LDR R1, =0x0804551d @ !PossiblePointer \n\
+/* 08045566 */ LDR R1, =(func_0804551c + 1) \n\
 /* 08045568 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0804556a */ BL func_08005d38 \n\
 /* 0804556e */ POP {R0} \n\

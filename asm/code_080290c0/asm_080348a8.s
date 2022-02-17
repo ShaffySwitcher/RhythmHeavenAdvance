@@ -30,10 +30,10 @@ branch_080348d2: \n\
 /* 080348d2 */ ADDS R0, R2, 0x0 @ Set R0 to R2 + 0x0 \n\
 /* 080348d4 */ ADDS R0, 0x38 @ Add 0x38 to R0 \n\
 /* 080348d6 */ LDRB R0, [R0] \n\
-/* 080348d8 */ LDR R1, =0x08a9c658 @ !PossiblePointer \n\
+/* 080348d8 */ LDR R1, =D_08a9c658 \n\
 /* 080348da */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 080348dc */ BEQ branch_080348e0 \n\
-/* 080348de */ LDR R1, =0x08a9c66c @ !PossiblePointer \n\
+/* 080348de */ LDR R1, =D_08a9c66c \n\
  \n\
 branch_080348e0: \n\
 /* 080348e0 */ ADDS R0, R1, 0x0 @ Set R0 to R1 + 0x0 \n\
@@ -58,10 +58,10 @@ branch_08034900: \n\
 /* 08034906 */ ADDS R0, R2, 0x0 @ Set R0 to R2 + 0x0 \n\
 /* 08034908 */ ADDS R0, 0x38 @ Add 0x38 to R0 \n\
 /* 0803490a */ LDRB R0, [R0] \n\
-/* 0803490c */ LDR R1, =0x08a9c658 @ !PossiblePointer \n\
+/* 0803490c */ LDR R1, =D_08a9c658 \n\
 /* 0803490e */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08034910 */ BEQ branch_08034914 \n\
-/* 08034912 */ LDR R1, =0x08a9c66c @ !PossiblePointer \n\
+/* 08034912 */ LDR R1, =D_08a9c66c \n\
  \n\
 branch_08034914: \n\
 /* 08034914 */ ADDS R0, R1, 0x0 @ Set R0 to R1 + 0x0 \n\

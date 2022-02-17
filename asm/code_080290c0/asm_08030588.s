@@ -77,7 +77,7 @@ glabel func_08030588 \n\
 /* 08030632 */ LDR R0, [R5] \n\
 /* 08030634 */ MOVS R2, 0x36 @ Set R2 to 0x36 \n\
 /* 08030636 */ STR R2, [SP] \n\
-/* 08030638 */ LDR R2, =0x000047f6 @ !PossiblePointer \n\
+/* 08030638 */ LDR R2, =0x47f6 \n\
 /* 0803063a */ STR R2, [SP, 0x4] \n\
 /* 0803063c */ STR R6, [SP, 0x8] \n\
 /* 0803063e */ MOV R3, R9 @ Set R3 to R9 \n\

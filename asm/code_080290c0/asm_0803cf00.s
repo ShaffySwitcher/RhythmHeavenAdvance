@@ -26,10 +26,10 @@ glabel func_0803cf00 \n\
 /* 0803cf2c */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 0803cf2e */ STR R3, [SP, 0x8] \n\
 /* 0803cf30 */ BL func_0804d8f8 \n\
-/* 0803cf34 */ LDR R0, =0x08a9e304 @ !PossiblePointer \n\
+/* 0803cf34 */ LDR R0, =D_08a9e304 \n\
 /* 0803cf36 */ BL func_08002634 \n\
 /* 0803cf3a */ LDR R1, [R4] \n\
-/* 0803cf3c */ LDR R0, =0x000002cf @ !PossiblePointer \n\
+/* 0803cf3c */ LDR R0, =0x2cf \n\
 /* 0803cf3e */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\
 /* 0803cf40 */ LDRB R0, [R1] \n\
 /* 0803cf42 */ ADDS R0, 0x1 @ Add 0x1 to R0 \n\
