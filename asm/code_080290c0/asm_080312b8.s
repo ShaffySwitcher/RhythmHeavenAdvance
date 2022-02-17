@@ -204,7 +204,7 @@ branch_08031430: \n\
 /* 08031450 */ LDRH R0, [R0] \n\
 /* 08031452 */ CMP R0, 0x2 @ Compare R0 and 0x2 \n\
 /* 08031454 */ BHI branch_08031470 \n\
-/* 08031456 */ LDR R1, =D_08a9bfa0 \n\
+/* 08031456 */ LDR R1, =s_sword_hoMidiInfo \n\
 /* 08031458 */ B branch_0803147e \n\
 \n\
 .ltorg \n\
@@ -212,13 +212,13 @@ branch_08031430: \n\
 branch_08031470: \n\
 /* 08031470 */ CMP R0, 0x4 @ Compare R0 and 0x4 \n\
 /* 08031472 */ BHI branch_0803147c \n\
-/* 08031474 */ LDR R1, =D_08a9bf8c \n\
+/* 08031474 */ LDR R1, =s_sword_hiMidiInfo \n\
 /* 08031476 */ B branch_0803147e \n\
 \n\
 .ltorg \n\
  \n\
 branch_0803147c: \n\
-/* 0803147c */ LDR R1, =D_08a9bf64 \n\
+/* 0803147c */ LDR R1, =s_sword_oryaMidiInfo \n\
  \n\
 branch_0803147e: \n\
 /* 0803147e */ MOVS R0, 0x4 @ Set R0 to 0x4 \n\
@@ -260,7 +260,7 @@ branch_080314cc: \n\
 /* 080314d6 */ LDRH R0, [R0] \n\
 /* 080314d8 */ CMP R0, 0x2 @ Compare R0 and 0x2 \n\
 /* 080314da */ BHI branch_080314e8 \n\
-/* 080314dc */ LDR R1, =D_08a9bfa0 \n\
+/* 080314dc */ LDR R1, =s_sword_hoMidiInfo \n\
 /* 080314de */ B branch_080314f6 \n\
 \n\
 .ltorg \n\
@@ -268,13 +268,13 @@ branch_080314cc: \n\
 branch_080314e8: \n\
 /* 080314e8 */ CMP R0, 0x4 @ Compare R0 and 0x4 \n\
 /* 080314ea */ BHI branch_080314f4 \n\
-/* 080314ec */ LDR R1, =D_08a9bf8c \n\
+/* 080314ec */ LDR R1, =s_sword_hiMidiInfo \n\
 /* 080314ee */ B branch_080314f6 \n\
 \n\
 .ltorg \n\
  \n\
 branch_080314f4: \n\
-/* 080314f4 */ LDR R1, =D_08a9bf64 \n\
+/* 080314f4 */ LDR R1, =s_sword_oryaMidiInfo \n\
  \n\
 branch_080314f6: \n\
 /* 080314f6 */ MOVS R0, 0x4 @ Set R0 to 0x4 \n\

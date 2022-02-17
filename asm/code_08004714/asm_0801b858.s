@@ -84,7 +84,7 @@ branch_0801b8cc: \n\
 /* 0801b8e6 */ LDRB R0, [R4] \n\
 /* 0801b8e8 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0801b8ea */ BNE branch_0801b900 \n\
-/* 0801b8ec */ LDR R1, =D_08a9b8ac \n\
+/* 0801b8ec */ LDR R1, =s_menu_errorMidiInfo \n\
 /* 0801b8ee */ B branch_0801b966 \n\
 \n\
 .ltorg \n\
@@ -125,19 +125,19 @@ branch_0801b934: \n\
 /* 0801b938 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 0801b93a */ LDR R1, [R0] \n\
 /* 0801b93c */ LDR R2, =(func_0801b834 + 1) \n\
-/* 0801b93e */ LDR R0, =D_08a9d83c \n\
+/* 0801b93e */ LDR R0, =s_menu_se24MidiInfo \n\
 /* 0801b940 */ STR R0, [SP] \n\
 /* 0801b942 */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 0801b944 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 0801b946 */ BL func_0801ac38 \n\
-/* 0801b94a */ LDR R1, =D_08a9b820 \n\
+/* 0801b94a */ LDR R1, =s_menu_kettei2MidiInfo \n\
 /* 0801b94c */ B branch_0801b966 \n\
 \n\
 .ltorg \n\
  \n\
 branch_0801b960: \n\
 /* 0801b960 */ BL func_0801b7b8 \n\
-/* 0801b964 */ LDR R1, =D_08a9d83c \n\
+/* 0801b964 */ LDR R1, =s_menu_se24MidiInfo \n\
  \n\
 branch_0801b966: \n\
 /* 0801b966 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
@@ -147,7 +147,7 @@ branch_0801b966: \n\
 .ltorg \n\
  \n\
 branch_0801b974: \n\
-/* 0801b974 */ LDR R1, =D_08a9b870 \n\
+/* 0801b974 */ LDR R1, =s_menu_cancel3MidiInfo \n\
 /* 0801b976 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0801b978 */ BL func_0800267c \n\
 /* 0801b97c */ LDR R4, =D_030046a4 \n\

@@ -31,7 +31,7 @@ glabel func_08039c00 \n\
 /* 08039c38 */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 08039c3a */ LDR R0, [R0] \n\
 /* 08039c3c */ BL func_08002634 \n\
-/* 08039c40 */ LDR R0, =D_08a9bab4 \n\
+/* 08039c40 */ LDR R0, =s_tom_MMidiInfo \n\
 /* 08039c42 */ BL func_08002634 \n\
 /* 08039c46 */ ADD SP, 0xC \n\
 /* 08039c48 */ POP {R4} \n\

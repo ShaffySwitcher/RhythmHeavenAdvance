@@ -24,7 +24,7 @@ glabel func_0802e5fc \n\
 /* 0802e622 */ LDRB R0, [R6, 0x3] \n\
 /* 0802e624 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0802e626 */ BNE branch_0802e62e \n\
-/* 0802e628 */ LDR R0, =D_08a9e624 \n\
+/* 0802e628 */ LDR R0, =s_f_even_splashMidiInfo \n\
 /* 0802e62a */ BL func_08002634 \n\
  \n\
 branch_0802e62e: \n\

@@ -14,7 +14,7 @@ glabel func_08034f18 \n\
 /* 08034f28 */ LDRB R5, [R0] \n\
 /* 08034f2a */ CMP R5, 0x0 @ Compare R5 and 0x0 \n\
 /* 08034f2c */ BNE branch_08034f56 \n\
-/* 08034f2e */ LDR R0, =D_08a9c9c8 \n\
+/* 08034f2e */ LDR R0, =s_metro_hitMidiInfo \n\
 /* 08034f30 */ BL func_08002634 \n\
 /* 08034f34 */ STR R5, [R4, 0x14] \n\
 /* 08034f36 */ ADDS R0, R7, 0x0 @ Set R0 to R7 + 0x0 \n\

@@ -81,7 +81,7 @@ branch_0803cff2: \n\
 /* 0803cff8 */ STRB R5, [R0, 0x6] \n\
  \n\
 branch_0803cffa: \n\
-/* 0803cffa */ LDR R0, =D_08a9c0b8 \n\
+/* 0803cffa */ LDR R0, =s_ninja_furuMidiInfo \n\
 /* 0803cffc */ BL func_08002634 \n\
 /* 0803d000 */ ADD SP, 0xC \n\
 /* 0803d002 */ POP {R4-R7} \n\

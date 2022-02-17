@@ -66,7 +66,7 @@ branch_08036698: \n\
 /* 080366a4 */ LSLS R0, R0, 0x1F \n\
 /* 080366a6 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 080366a8 */ BNE branch_080366b0 \n\
-/* 080366aa */ LDR R0, =D_08a9d490 \n\
+/* 080366aa */ LDR R0, =s_poly_shototuMidiInfo \n\
 /* 080366ac */ BL func_08002634 \n\
  \n\
 branch_080366b0: \n\

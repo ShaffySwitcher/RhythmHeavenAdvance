@@ -63,7 +63,7 @@ jump_0802291c: \n\
 /* 08022958 */ BNE branch_0802297c \n\
 /* 0802295a */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\
 /* 0802295c */ BL func_08022894 \n\
-/* 08022960 */ LDR R0, =D_08a9c450 \n\
+/* 08022960 */ LDR R0, =s_ghost_walkMidiInfo \n\
 /* 08022962 */ BL func_08002634 \n\
 /* 08022966 */ B branch_080229b0 \n\
 \n\

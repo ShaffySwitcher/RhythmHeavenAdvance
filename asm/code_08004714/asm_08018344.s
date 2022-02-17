@@ -48,7 +48,7 @@ glabel func_08018344 \n\
 /* 0801839e */ MOVS R2, 0x1 @ Set R2 to 0x1 \n\
 /* 080183a0 */ BL func_0804d770 \n\
 /* 080183a4 */ BL func_080182b8 \n\
-/* 080183a8 */ LDR R0, =D_08a9db98 \n\
+/* 080183a8 */ LDR R0, =s_f_pause_onMidiInfo \n\
 /* 080183aa */ BL func_08002634 \n\
 /* 080183ae */ ADD SP, 0xC \n\
 /* 080183b0 */ POP {R4-R6} \n\

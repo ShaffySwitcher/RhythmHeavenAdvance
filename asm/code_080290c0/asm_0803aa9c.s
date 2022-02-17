@@ -81,7 +81,7 @@ branch_0803ab00: \n\
 /* 0803ab34 */ LDR R1, [R0] \n\
 /* 0803ab36 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0803ab38 */ STRB R0, [R1, 0x1C] \n\
-/* 0803ab3a */ LDR R0, =D_08a9de68 \n\
+/* 0803ab3a */ LDR R0, =s_f_rat_goalMidiInfo \n\
 /* 0803ab3c */ BL func_08002634 \n\
  \n\
 branch_0803ab40: \n\

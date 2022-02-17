@@ -59,7 +59,7 @@ branch_0803629e: \n\
 /* 080362b4 */ ADDS R0, R0, R4 @ Set R0 to R0 + R4 \n\
 /* 080362b6 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 080362b8 */ STRB R1, [R0] \n\
-/* 080362ba */ LDR R0, =D_08a9e00c \n\
+/* 080362ba */ LDR R0, =s_f_poly_withdrawMidiInfo \n\
 /* 080362bc */ BL func_08002634 \n\
 /* 080362c0 */ MOVS R1, 0x1 @ Set R1 to 0x1 \n\
 /* 080362c2 */ NEGS R1, R1 @ Set R1 to -R1 \n\

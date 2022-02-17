@@ -223,14 +223,14 @@ branch_08013efc: \n\
 /* 08013f08 */ LDR R1, [R0] \n\
 /* 08013f0a */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 08013f0c */ STR R0, [R1, 0x4] \n\
-/* 08013f0e */ LDR R0, =D_08a9b80c \n\
+/* 08013f0e */ LDR R0, =s_menu_kettei1MidiInfo \n\
 /* 08013f10 */ BL func_08002634 \n\
 /* 08013f14 */ B branch_08013f7e \n\
 \n\
 .ltorg \n\
  \n\
 branch_08013f24: \n\
-/* 08013f24 */ LDR R0, =D_08a9b8ac \n\
+/* 08013f24 */ LDR R0, =s_menu_errorMidiInfo \n\
 /* 08013f26 */ BL func_08002634 \n\
 /* 08013f2a */ B branch_08013f7e \n\
 \n\
@@ -269,7 +269,7 @@ branch_08013f30: \n\
 /* 08013f70 */ BL func_0800bd04 \n\
 /* 08013f74 */ LDR R0, [R4] \n\
 /* 08013f76 */ STR R5, [R0, 0x4] \n\
-/* 08013f78 */ LDR R0, =D_08a9b870 \n\
+/* 08013f78 */ LDR R0, =s_menu_cancel3MidiInfo \n\
 /* 08013f7a */ BL func_08002634 \n\
  \n\
 branch_08013f7e: \n\

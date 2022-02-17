@@ -23,7 +23,7 @@ glabel func_0804299c \n\
 /* 080429c4 */ ADDS R0, R0, R4 @ Set R0 to R0 + R4 \n\
 /* 080429c6 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 080429c8 */ LDRSH R2, [R0, R1] \n\
-/* 080429ca */ LDR R0, =D_08a9df80 \n\
+/* 080429ca */ LDR R0, =s_f_virus_note_landMidiInfo \n\
 /* 080429cc */ MOVS R1, 0x80 @ Set R1 to 0x80 \n\
 /* 080429ce */ BL func_08002698 \n\
 /* 080429d2 */ POP {R4} \n\

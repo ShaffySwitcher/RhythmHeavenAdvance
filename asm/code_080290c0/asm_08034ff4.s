@@ -10,7 +10,7 @@ glabel func_08034ff4 \n\
 /* 08034ffc */ LDR R0, =D_030055d0 \n\
 /* 08034ffe */ LDR R6, [R0] \n\
 /* 08035000 */ ADDS R7, R6, 0x4 @ Set R7 to R6 + 0x4 \n\
-/* 08035002 */ LDR R0, =D_08a9cc48 \n\
+/* 08035002 */ LDR R0, =s_tap_kick_monkyMidiInfo \n\
 /* 08035004 */ BL func_08002634 \n\
 /* 08035008 */ LDRB R5, [R7, 0x4] \n\
 /* 0803500a */ CMP R5, 0x1 @ Compare R5 and 0x1 \n\

@@ -164,7 +164,7 @@ branch_08016708: \n\
  \n\
 branch_0801675c: \n\
 /* 0801675c */ BL func_0800aa4c \n\
-/* 08016760 */ LDR R0, =D_08a9b898 \n\
+/* 08016760 */ LDR R0, =s_menu_cursor2MidiInfo \n\
 /* 08016762 */ BL func_08002634 \n\
 /* 08016766 */ B branch_08016846 \n\
 \n\
@@ -236,7 +236,7 @@ branch_080167dc: \n\
 /* 08016812 */ STRB R0, [R1] \n\
  \n\
 branch_08016814: \n\
-/* 08016814 */ LDR R0, =D_08a9b820 \n\
+/* 08016814 */ LDR R0, =s_menu_kettei2MidiInfo \n\
 /* 08016816 */ BL func_08002634 \n\
 /* 0801681a */ B branch_08016846 \n\
 \n\
@@ -255,7 +255,7 @@ branch_08016824: \n\
 /* 08016838 */ BL func_0800bd04 \n\
 /* 0801683c */ LDR R0, [R4] \n\
 /* 0801683e */ STR R5, [R0, 0x10] \n\
-/* 08016840 */ LDR R0, =D_08a9b870 \n\
+/* 08016840 */ LDR R0, =s_menu_cancel3MidiInfo \n\
 /* 08016842 */ BL func_08002634 \n\
  \n\
 branch_08016846: \n\

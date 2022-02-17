@@ -120,7 +120,7 @@ branch_08021ade: \n\
 .ltorg \n\
  \n\
 branch_08021b3c: \n\
-/* 08021b3c */ LDR R0, =D_08a9e19c \n\
+/* 08021b3c */ LDR R0, =s_f_boxing_hardMidiInfo \n\
 /* 08021b3e */ BL func_08002634 \n\
  \n\
 branch_08021b42: \n\
@@ -199,7 +199,7 @@ branch_08021b90: \n\
 /* 08021bda */ LDR R5, [SP, 0x18] \n\
 /* 08021bdc */ CMP R5, 0x0 @ Compare R5 and 0x0 \n\
 /* 08021bde */ BNE branch_08021be8 \n\
-/* 08021be0 */ LDR R1, =D_08a9e14c \n\
+/* 08021be0 */ LDR R1, =s_f_boxing_normalMidiInfo \n\
 /* 08021be2 */ LDR R0, [SP, 0x14] \n\
 /* 08021be4 */ BL func_0801808c \n\
  \n\
@@ -279,7 +279,7 @@ branch_08021c98: \n\
 /* 08021c9a */ BL func_0800c3a4 \n\
 /* 08021c9e */ MOV R5, R8 @ Set R5 to R8 \n\
 /* 08021ca0 */ STRH R0, [R5, 0xA] \n\
-/* 08021ca2 */ LDR R0, =D_08a9e1ec \n\
+/* 08021ca2 */ LDR R0, =s_f_boxing_kanseiMidiInfo \n\
 /* 08021ca4 */ BL func_08002634 \n\
 /* 08021ca8 */ B branch_08021cba \n\
 \n\

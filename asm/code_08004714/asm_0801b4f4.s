@@ -83,7 +83,7 @@ branch_0801b56e: \n\
 /* 0801b58a */ CMP R1, R0 @ Check R1 - R0 \n\
 /* 0801b58c */ BEQ branch_0801b5e4 \n\
 /* 0801b58e */ BL func_0801b4b4 \n\
-/* 0801b592 */ LDR R1, =D_08a9b820 \n\
+/* 0801b592 */ LDR R1, =s_menu_kettei2MidiInfo \n\
 /* 0801b594 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0801b596 */ BL func_0800267c \n\
 /* 0801b59a */ LDR R0, =D_03005380 \n\
@@ -112,7 +112,7 @@ branch_0801b56e: \n\
 .ltorg \n\
  \n\
 branch_0801b5e4: \n\
-/* 0801b5e4 */ LDR R1, =D_08a9b870 \n\
+/* 0801b5e4 */ LDR R1, =s_menu_cancel3MidiInfo \n\
 /* 0801b5e6 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0801b5e8 */ BL func_0800267c \n\
 /* 0801b5ec */ LDR R0, =D_03005380 \n\

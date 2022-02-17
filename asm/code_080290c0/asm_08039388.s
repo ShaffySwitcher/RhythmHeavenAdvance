@@ -21,7 +21,7 @@ glabel func_08039388 \n\
 /* 080393ac */ ASRS R0, R0, 0x8 \n\
 /* 080393ae */ CMP R0, 0x77 @ Compare R0 and 0x77 \n\
 /* 080393b0 */ BLE branch_080393de \n\
-/* 080393b2 */ LDR R0, =D_08a9cbd0 \n\
+/* 080393b2 */ LDR R0, =s_rabbit_moonMidiInfo \n\
 /* 080393b4 */ BL func_08002634 \n\
 /* 080393b8 */ LDR R4, =D_03005380 \n\
 /* 080393ba */ LDR R0, [R4] \n\

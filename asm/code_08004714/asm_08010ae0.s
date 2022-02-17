@@ -93,7 +93,7 @@ branch_08010b6a: \n\
 /* 08010b8a */ LDRSH R1, [R1, R2] \n\
 /* 08010b8c */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08010b8e */ BL func_0804d770 \n\
-/* 08010b92 */ LDR R0, =D_08a9dc74 \n\
+/* 08010b92 */ LDR R0, =s_f_cafe_send_mesMidiInfo \n\
 /* 08010b94 */ BL func_08002634 \n\
 /* 08010b98 */ LDR R1, [R4] \n\
 /* 08010b9a */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\

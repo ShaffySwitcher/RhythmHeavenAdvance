@@ -75,7 +75,7 @@ branch_08018e0e: \n\
 /* 08018e20 */ BCC branch_08018e0e \n\
  \n\
 branch_08018e22: \n\
-/* 08018e22 */ LDR R0, =D_08a9db70 \n\
+/* 08018e22 */ LDR R0, =s_f_result_mes_addMidiInfo \n\
 /* 08018e24 */ BL func_08002634 \n\
 /* 08018e28 */ LDR R0, =D_03005380 \n\
 /* 08018e2a */ LDR R0, [R0] \n\

@@ -23,7 +23,7 @@ glabel func_08030a10 \n\
 /* 08030a34 */ STR R3, [SP, 0x8] \n\
 /* 08030a36 */ MOVS R3, 0x2 @ Set R3 to 0x2 \n\
 /* 08030a38 */ BL func_0804d8f8 \n\
-/* 08030a3c */ LDR R0, =D_08a9ca7c \n\
+/* 08030a3c */ LDR R0, =s_witch_donatsMidiInfo \n\
 /* 08030a3e */ BL func_08002634 \n\
 /* 08030a42 */ STRB R5, [R4, 0x8] \n\
 /* 08030a44 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\

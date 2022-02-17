@@ -78,7 +78,7 @@ branch_0801fae0: \n\
 /* 0801faf6 */ BL func_0804d160 \n\
  \n\
 branch_0801fafa: \n\
-/* 0801fafa */ LDR R0, =D_08a9c478 \n\
+/* 0801fafa */ LDR R0, =s_ghost_miss_hitMidiInfo \n\
 /* 0801fafc */ BL func_08002634 \n\
 /* 0801fb00 */ ADD SP, 0x14 \n\
 /* 0801fb02 */ POP {R3} \n\

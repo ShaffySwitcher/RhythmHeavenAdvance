@@ -58,7 +58,7 @@ branch_08030842: \n\
 /* 08030868 */ LSLS R1, R0, 0x2 \n\
 /* 0803086a */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\
 /* 0803086c */ LSRS R1, R1, 0x3 \n\
-/* 0803086e */ LDR R0, =D_08a9bb68 \n\
+/* 0803086e */ LDR R0, =s_HCMidiInfo \n\
 /* 08030870 */ MOVS R2, 0x80 @ Set R2 to 0x80 \n\
 /* 08030872 */ LSLS R2, R2, 0x2 \n\
 /* 08030874 */ BL func_08002698 \n\

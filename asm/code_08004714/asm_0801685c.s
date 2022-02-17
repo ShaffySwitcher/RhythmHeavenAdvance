@@ -16,7 +16,7 @@ branch_08016868: \n\
 /* 0801686e */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 08016870 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08016872 */ BEQ branch_080168bc \n\
-/* 08016874 */ LDR R0, =D_08a9b85c \n\
+/* 08016874 */ LDR R0, =s_menu_cancel2MidiInfo \n\
 /* 08016876 */ BL func_08002634 \n\
 /* 0801687a */ LDR R5, =D_03005380 \n\
 /* 0801687c */ LDR R0, [R5] \n\
@@ -63,7 +63,7 @@ branch_080168bc: \n\
 /* 080168e0 */ LDR R0, [R5] \n\
 /* 080168e2 */ STR R4, [R0, 0x10] \n\
 /* 080168e4 */ STRB R4, [R0] \n\
-/* 080168e6 */ LDR R0, =D_08a9b820 \n\
+/* 080168e6 */ LDR R0, =s_menu_kettei2MidiInfo \n\
 /* 080168e8 */ BL func_08002634 \n\
 /* 080168ec */ B branch_0801699e \n\
 \n\
@@ -86,7 +86,7 @@ branch_080168fc: \n\
 /* 0801691a */ LDR R0, [R0, 0x20] \n\
 /* 0801691c */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 0801691e */ BL func_0800a7fc \n\
-/* 08016922 */ LDR R0, =D_08a9b85c \n\
+/* 08016922 */ LDR R0, =s_menu_cancel2MidiInfo \n\
 /* 08016924 */ BL func_08002634 \n\
 /* 08016928 */ LDR R1, [R5] \n\
 /* 0801692a */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
@@ -116,7 +116,7 @@ branch_0801692e: \n\
 /* 08016958 */ LDRSH R1, [R1, R2] \n\
 /* 0801695a */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0801695c */ BL func_0804cebc \n\
-/* 08016960 */ LDR R0, =D_08a9b884 \n\
+/* 08016960 */ LDR R0, =s_menu_cursor1MidiInfo \n\
 /* 08016962 */ BL func_08002634 \n\
  \n\
 branch_08016966: \n\
@@ -143,7 +143,7 @@ branch_08016966: \n\
 /* 08016990 */ LDRSH R1, [R1, R2] \n\
 /* 08016992 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08016994 */ BL func_0804cebc \n\
-/* 08016998 */ LDR R0, =D_08a9b884 \n\
+/* 08016998 */ LDR R0, =s_menu_cursor1MidiInfo \n\
 /* 0801699a */ BL func_08002634 \n\
  \n\
 branch_0801699e: \n\

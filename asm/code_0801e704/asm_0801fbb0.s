@@ -48,7 +48,7 @@ glabel func_0801fbb0 \n\
 /* 0801fc08 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0801fc0a */ MOVS R3, 0x46 @ Set R3 to 0x46 \n\
 /* 0801fc0c */ BL func_0804d160 \n\
-/* 0801fc10 */ LDR R0, =D_08a9c4b4 \n\
+/* 0801fc10 */ LDR R0, =s_ghost_goshaMidiInfo \n\
 /* 0801fc12 */ BL func_08002634 \n\
  \n\
 branch_0801fc16: \n\

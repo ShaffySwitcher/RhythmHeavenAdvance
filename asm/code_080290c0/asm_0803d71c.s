@@ -75,19 +75,19 @@ glabel func_0803d71c \n\
 /* 0803d7b8 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0803d7ba */ BL func_0803d6c0 \n\
 /* 0803d7be */ BL func_0800bc40 \n\
-/* 0803d7c2 */ LDR R0, =D_08a9c57c \n\
+/* 0803d7c2 */ LDR R0, =s_space_kou_rightMidiInfo \n\
 /* 0803d7c4 */ BL func_0800274c \n\
-/* 0803d7c8 */ LDR R0, =D_08a9c5b8 \n\
+/* 0803d7c8 */ LDR R0, =s_space_kou_downMidiInfo \n\
 /* 0803d7ca */ BL func_0800274c \n\
-/* 0803d7ce */ LDR R0, =D_08a9c5e0 \n\
+/* 0803d7ce */ LDR R0, =s_space_kou_punchMidiInfo \n\
 /* 0803d7d0 */ BL func_0800274c \n\
-/* 0803d7d4 */ LDR R0, =D_08a9c4f0 \n\
+/* 0803d7d4 */ LDR R0, =s_space_ikeo_rightMidiInfo \n\
 /* 0803d7d6 */ BL func_0800274c \n\
-/* 0803d7da */ LDR R0, =D_08a9c52c \n\
+/* 0803d7da */ LDR R0, =s_space_ikeo_downMidiInfo \n\
 /* 0803d7dc */ BL func_0800274c \n\
-/* 0803d7e0 */ LDR R0, =D_08a9c554 \n\
+/* 0803d7e0 */ LDR R0, =s_space_ikeo_punchMidiInfo \n\
 /* 0803d7e2 */ BL func_0800274c \n\
-/* 0803d7e6 */ LDR R0, =D_08a9ca7c \n\
+/* 0803d7e6 */ LDR R0, =s_witch_donatsMidiInfo \n\
 /* 0803d7e8 */ BL func_08002634 \n\
 /* 0803d7ec */ ADD SP, 0x14 \n\
 /* 0803d7ee */ POP {R3-R5} \n\

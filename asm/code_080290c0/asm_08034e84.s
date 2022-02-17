@@ -13,7 +13,7 @@ glabel func_08034e84 \n\
 /* 08034e94 */ LDRSH R1, [R1, R2] \n\
 /* 08034e96 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08034e98 */ BL func_0804cebc \n\
-/* 08034e9c */ LDR R0, =D_08a9c98c \n\
+/* 08034e9c */ LDR R0, =s_metro_count1MidiInfo \n\
 /* 08034e9e */ BL func_08002634 \n\
 /* 08034ea2 */ POP {R0} \n\
 /* 08034ea4 */ BX R0 \n\

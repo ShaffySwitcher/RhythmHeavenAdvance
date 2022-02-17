@@ -138,7 +138,7 @@ branch_080448f4: \n\
 /* 08044928 */ BL func_080028d8 \n\
  \n\
 branch_0804492c: \n\
-/* 0804492c */ LDR R0, =D_08a9b85c \n\
+/* 0804492c */ LDR R0, =s_menu_cancel2MidiInfo \n\
 /* 0804492e */ BL func_08002634 \n\
  \n\
 branch_08044932: \n\

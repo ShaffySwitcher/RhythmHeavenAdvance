@@ -131,9 +131,9 @@ branch_0801f936: \n\
 /* 0801f9ea */ STR R5, [SP, 0x8] \n\
 /* 0801f9ec */ MOVS R3, 0x3 @ Set R3 to 0x3 \n\
 /* 0801f9ee */ BL func_0804d8f8 \n\
-/* 0801f9f2 */ LDR R0, =D_08a9e534 \n\
+/* 0801f9f2 */ LDR R0, =s_f_aim_just_hitMidiInfo \n\
 /* 0801f9f4 */ BL func_08002634 \n\
-/* 0801f9f8 */ LDR R0, =D_08a9e548 \n\
+/* 0801f9f8 */ LDR R0, =s_f_aim_just_hit_voiceMidiInfo \n\
 /* 0801f9fa */ BL func_08002634 \n\
 /* 0801f9fe */ LDR R0, [R6] \n\
 /* 0801fa00 */ LDR R1, =D_088a1258 \n\

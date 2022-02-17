@@ -37,7 +37,7 @@ branch_080183dc: \n\
 /* 08018402 */ STR R4, [SP, 0x8] \n\
 /* 08018404 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 08018406 */ BL func_0804d8f8 \n\
-/* 0801840a */ LDR R0, =D_08a9dbac \n\
+/* 0801840a */ LDR R0, =s_f_pause_cursorMidiInfo \n\
 /* 0801840c */ BL func_08002634 \n\
  \n\
 branch_08018410: \n\
@@ -62,7 +62,7 @@ branch_08018410: \n\
 /* 08018434 */ STR R4, [SP, 0x8] \n\
 /* 08018436 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 08018438 */ BL func_0804d8f8 \n\
-/* 0801843c */ LDR R0, =D_08a9dbac \n\
+/* 0801843c */ LDR R0, =s_f_pause_cursorMidiInfo \n\
 /* 0801843e */ BL func_08002634 \n\
  \n\
 branch_08018442: \n\
@@ -98,7 +98,7 @@ branch_08018442: \n\
 branch_0801847e: \n\
 /* 0801847e */ ADDS R0, 0x90 @ Add 0x90 to R0 \n\
 /* 08018480 */ STRB R6, [R0] \n\
-/* 08018482 */ LDR R0, =D_08a9dbc0 \n\
+/* 08018482 */ LDR R0, =s_f_pause_continueMidiInfo \n\
 /* 08018484 */ BL func_08002634 \n\
 /* 08018488 */ B branch_08018518 \n\
 \n\

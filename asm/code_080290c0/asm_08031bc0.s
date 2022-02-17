@@ -30,25 +30,25 @@ branch_08031bd6: \n\
 /* 08031bee */ LDRB R0, [R0] \n\
 /* 08031bf0 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08031bf2 */ BNE branch_08031c14 \n\
-/* 08031bf4 */ LDR R4, =D_08a9c004 \n\
+/* 08031bf4 */ LDR R4, =s_iai_frase1aMidiInfo \n\
 /* 08031bf6 */ CMP R5, 0x1 @ Compare R5 and 0x1 \n\
 /* 08031bf8 */ BLS branch_08031c22 \n\
-/* 08031bfa */ LDR R4, =D_08a9c02c \n\
+/* 08031bfa */ LDR R4, =s_iai_frase3aMidiInfo \n\
 /* 08031bfc */ CMP R5, 0x3 @ Compare R5 and 0x3 \n\
 /* 08031bfe */ BHI branch_08031c22 \n\
-/* 08031c00 */ LDR R4, =D_08a9c018 \n\
+/* 08031c00 */ LDR R4, =s_iai_frase2aMidiInfo \n\
 /* 08031c02 */ B branch_08031c22 \n\
 \n\
 .ltorg \n\
  \n\
 branch_08031c14: \n\
-/* 08031c14 */ LDR R4, =D_08a9c040 \n\
+/* 08031c14 */ LDR R4, =s_iai_frase1bMidiInfo \n\
 /* 08031c16 */ CMP R5, 0x1 @ Compare R5 and 0x1 \n\
 /* 08031c18 */ BLS branch_08031c22 \n\
-/* 08031c1a */ LDR R4, =D_08a9c068 \n\
+/* 08031c1a */ LDR R4, =s_iai_frase3bMidiInfo \n\
 /* 08031c1c */ CMP R5, 0x3 @ Compare R5 and 0x3 \n\
 /* 08031c1e */ BHI branch_08031c22 \n\
-/* 08031c20 */ LDR R4, =D_08a9c054 \n\
+/* 08031c20 */ LDR R4, =s_iai_frase2bMidiInfo \n\
  \n\
 branch_08031c22: \n\
 /* 08031c22 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\

@@ -122,7 +122,7 @@ branch_080369e8: \n\
 /* 08036a74 */ MOVS R1, 0x2 @ Set R1 to 0x2 \n\
 /* 08036a76 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08036a78 */ BL func_08017928 \n\
-/* 08036a7c */ LDR R0, =D_08a9dff8 \n\
+/* 08036a7c */ LDR R0, =s_f_poly_blastMidiInfo \n\
 /* 08036a7e */ BL func_08002634 \n\
  \n\
 branch_08036a82: \n\

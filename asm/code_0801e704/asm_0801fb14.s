@@ -45,7 +45,7 @@ glabel func_0801fb14 \n\
 /* 0801fb68 */ LSLS R4, R4, 0x10 \n\
 /* 0801fb6a */ LSRS R4, R4, 0x10 \n\
 /* 0801fb6c */ LDR R5, =(func_08002634 + 1) \n\
-/* 0801fb6e */ LDR R6, =D_08a9c4a0 \n\
+/* 0801fb6e */ LDR R6, =s_ghost_waraiMidiInfo \n\
 /* 0801fb70 */ MOVS R0, 0xC @ Set R0 to 0xC \n\
 /* 0801fb72 */ BL func_0800c3a4 \n\
 /* 0801fb76 */ ADDS R3, R0, 0x0 @ Set R3 to R0 + 0x0 \n\
@@ -55,7 +55,7 @@ glabel func_0801fb14 \n\
 /* 0801fb7e */ BL func_0800856c \n\
  \n\
 branch_0801fb82: \n\
-/* 0801fb82 */ LDR R0, =D_08a9c48c \n\
+/* 0801fb82 */ LDR R0, =s_ghost_dashMidiInfo \n\
 /* 0801fb84 */ BL func_08002634 \n\
 /* 0801fb88 */ ADD SP, 0x14 \n\
 /* 0801fb8a */ POP {R3} \n\

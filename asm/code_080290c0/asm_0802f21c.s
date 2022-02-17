@@ -46,9 +46,9 @@ branch_0802f238: \n\
 /* 0802f274 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0802f276 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 0802f278 */ BL func_08017338 \n\
-/* 0802f27c */ LDR R0, =D_08a9dfbc \n\
+/* 0802f27c */ LDR R0, =s_f_hair_nuki_longMidiInfo \n\
 /* 0802f27e */ BL func_0800274c \n\
-/* 0802f282 */ LDR R0, =D_08a9dfd0 \n\
+/* 0802f282 */ LDR R0, =s_f_hair_tuneruMidiInfo \n\
 /* 0802f284 */ BL func_08002634 \n\
 /* 0802f288 */ ADD SP, 0x8 \n\
 /* 0802f28a */ POP {R4-R6} \n\

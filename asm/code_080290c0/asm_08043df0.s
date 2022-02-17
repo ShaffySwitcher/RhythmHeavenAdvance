@@ -12,7 +12,7 @@ glabel func_08043df0 \n\
 /* 08043dfe */ LDR R1, =D_08931bbc \n\
  \n\
 branch_08043e00: \n\
-/* 08043e00 */ LDR R2, =D_08a9df58 \n\
+/* 08043e00 */ LDR R2, =s_f_virus_osiiMidiInfo \n\
 /* 08043e02 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 08043e04 */ BL func_08043a38 \n\
 /* 08043e08 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\

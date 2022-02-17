@@ -91,7 +91,7 @@ branch_08029ad0: \n\
 /* 08029ad8 */ LDR R3, =0x0000040c \n\
 /* 08029ada */ ADDS R0, R0, R3 @ Set R0 to R0 + R3 \n\
 /* 08029adc */ STRB R4, [R0] \n\
-/* 08029ade */ LDR R0, =D_08a9b884 \n\
+/* 08029ade */ LDR R0, =s_menu_cursor1MidiInfo \n\
 /* 08029ae0 */ BL func_08002634 \n\
 /* 08029ae4 */ B branch_08029b72 \n\
 \n\
@@ -110,7 +110,7 @@ branch_08029afc: \n\
 /* 08029b0e */ LDRB R0, [R0] \n\
 /* 08029b10 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08029b12 */ BNE branch_08029b2c \n\
-/* 08029b14 */ LDR R0, =D_08a9b820 \n\
+/* 08029b14 */ LDR R0, =s_menu_kettei2MidiInfo \n\
 /* 08029b16 */ BL func_08002634 \n\
 /* 08029b1a */ BL func_08029988 \n\
 /* 08029b1e */ B branch_08029b32 \n\
@@ -118,7 +118,7 @@ branch_08029afc: \n\
 .ltorg \n\
  \n\
 branch_08029b2c: \n\
-/* 08029b2c */ LDR R0, =D_08a9b870 \n\
+/* 08029b2c */ LDR R0, =s_menu_cancel3MidiInfo \n\
 /* 08029b2e */ BL func_08002634 \n\
  \n\
 branch_08029b32: \n\

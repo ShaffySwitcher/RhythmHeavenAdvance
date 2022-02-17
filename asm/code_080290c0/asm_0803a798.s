@@ -99,7 +99,7 @@ jump_0803a838: \n\
 \n\
 .ltorg \n\
 jump_0803a86c: \n\
-/* 0803a86c */ LDR R0, =D_08a9c16c \n\
+/* 0803a86c */ LDR R0, =s_rat_catMidiInfo \n\
 /* 0803a86e */ BL func_08002634 \n\
 /* 0803a872 */ LDR R5, =D_03005380 \n\
 /* 0803a874 */ LDR R0, [R5] \n\

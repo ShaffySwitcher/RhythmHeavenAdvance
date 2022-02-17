@@ -86,7 +86,7 @@ branch_0803ce8c: \n\
 /* 0803ced0 */ BL func_0803c710 \n\
  \n\
 branch_0803ced4: \n\
-/* 0803ced4 */ LDR R0, =D_08a9c0cc \n\
+/* 0803ced4 */ LDR R0, =s_ninja_kinMidiInfo \n\
 /* 0803ced6 */ BL func_08002634 \n\
 /* 0803ceda */ LDR R0, =D_030055d0 \n\
 /* 0803cedc */ LDR R1, [R0] \n\

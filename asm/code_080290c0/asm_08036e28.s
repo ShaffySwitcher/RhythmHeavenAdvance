@@ -19,7 +19,7 @@ glabel func_08036e28 \n\
 /* 08036e42 */ CMP R4, 0x0 @ Compare R4 and 0x0 \n\
 /* 08036e44 */ BEQ branch_08036e4e \n\
 /* 08036e46 */ SUBS R4, 0x1 @ Subtract 0x1 from R4 \n\
-/* 08036e48 */ LDR R0, =D_08a9ca18 \n\
+/* 08036e48 */ LDR R0, =s_keytoy_count2MidiInfo \n\
 /* 08036e4a */ BL func_08002634 \n\
  \n\
 branch_08036e4e: \n\
@@ -32,7 +32,7 @@ branch_08036e4e: \n\
 /* 08036e5a */ CMP R4, 0x1 @ Compare R4 and 0x1 \n\
 /* 08036e5c */ BHI branch_08036e66 \n\
 /* 08036e5e */ ADDS R4, 0x1 @ Add 0x1 to R4 \n\
-/* 08036e60 */ LDR R0, =D_08a9ca04 \n\
+/* 08036e60 */ LDR R0, =s_keytoy_count1MidiInfo \n\
 /* 08036e62 */ BL func_08002634 \n\
  \n\
 branch_08036e66: \n\

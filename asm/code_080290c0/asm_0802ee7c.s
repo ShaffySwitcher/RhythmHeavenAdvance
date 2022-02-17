@@ -78,7 +78,7 @@ branch_0802eea4: \n\
 /* 0802ef12 */ STRH R0, [R1] \n\
 /* 0802ef14 */ CMP R5, 0x0 @ Compare R5 and 0x0 \n\
 /* 0802ef16 */ BNE branch_0802ef40 \n\
-/* 0802ef18 */ LDR R0, =D_08a9c270 \n\
+/* 0802ef18 */ LDR R0, =s_hanabi_ponMidiInfo \n\
 /* 0802ef1a */ MOVS R1, 0xD0 @ Set R1 to 0xD0 \n\
 /* 0802ef1c */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0802ef1e */ BL func_08002698 \n\
@@ -87,7 +87,7 @@ branch_0802eea4: \n\
 .ltorg \n\
  \n\
 branch_0802ef40: \n\
-/* 0802ef40 */ LDR R0, =D_08a9dfe4 \n\
+/* 0802ef40 */ LDR R0, =s_f_hair_appear_longMidiInfo \n\
 /* 0802ef42 */ BL func_08002634 \n\
  \n\
 branch_0802ef46: \n\
