@@ -5,32 +5,32 @@ asm(".syntax unified \n\
 glabel func_0803193c \n\
 /* 0803193c */ PUSH {R4, R5, LR} \n\
 /* 0803193e */ SUB SP, 0x4 \n\
-/* 08031940 */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 08031940 */ LDR R0, =D_030055d0 \n\
 /* 08031942 */ LDR R1, [R0] \n\
 /* 08031944 */ LDRB R0, [R1, 0x4] \n\
 /* 08031946 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08031948 */ BEQ branch_08031992 \n\
-/* 0803194a */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0803194a */ LDR R0, =D_03005380 \n\
 /* 0803194c */ LDR R0, [R0] \n\
 /* 0803194e */ MOVS R2, 0xC @ Set R2 to 0xC \n\
 /* 08031950 */ LDRSH R1, [R1, R2] \n\
 /* 08031952 */ MOVS R2, 0x7 @ Set R2 to 0x7 \n\
 /* 08031954 */ BL func_0804ddb0 \n\
 /* 08031958 */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
-/* 0803195a */ LDR R0, =0x088eb82c @ !PossiblePointer \n\
+/* 0803195a */ LDR R0, =D_088eb82c \n\
 /* 0803195c */ CMP R1, R0 @ Check R1 - R0 \n\
 /* 0803195e */ BEQ branch_0803196c \n\
-/* 08031960 */ LDR R0, =0x088eb804 @ !PossiblePointer \n\
+/* 08031960 */ LDR R0, =D_088eb804 \n\
 /* 08031962 */ CMP R1, R0 @ Check R1 - R0 \n\
 /* 08031964 */ BEQ branch_0803196c \n\
-/* 08031966 */ LDR R0, =0x088eb854 @ !PossiblePointer \n\
+/* 08031966 */ LDR R0, =D_088eb854 \n\
 /* 08031968 */ CMP R1, R0 @ Check R1 - R0 \n\
 /* 0803196a */ BNE branch_08031992 \n\
  \n\
 branch_0803196c: \n\
-/* 0803196c */ LDR R5, =0x03005380 @ !PossiblePointer \n\
+/* 0803196c */ LDR R5, =D_03005380 \n\
 /* 0803196e */ LDR R0, [R5] \n\
-/* 08031970 */ LDR R4, =0x030055d0 @ !PossiblePointer \n\
+/* 08031970 */ LDR R4, =D_030055d0 \n\
 /* 08031972 */ LDR R1, [R4] \n\
 /* 08031974 */ MOVS R2, 0xC @ Set R2 to 0xC \n\
 /* 08031976 */ LDRSH R1, [R1, R2] \n\

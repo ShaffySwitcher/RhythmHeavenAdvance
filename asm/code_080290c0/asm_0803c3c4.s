@@ -9,9 +9,9 @@ glabel func_0803c3c4 \n\
 /* 0803c3cc */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
  \n\
 branch_0803c3ce: \n\
-/* 0803c3ce */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0803c3ce */ LDR R0, =D_03005380 \n\
 /* 0803c3d0 */ LDR R0, [R0] \n\
-/* 0803c3d2 */ LDR R1, =0x030055d0 @ !PossiblePointer \n\
+/* 0803c3d2 */ LDR R1, =D_030055d0 \n\
 /* 0803c3d4 */ LDR R1, [R1] \n\
 /* 0803c3d6 */ LSLS R2, R4, 0x1 \n\
 /* 0803c3d8 */ MOVS R3, 0xB7 @ Set R3 to 0xB7 \n\

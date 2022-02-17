@@ -11,9 +11,9 @@ glabel func_08039a44 \n\
 /* 08039a4e */ LDRB R0, [R0] \n\
 /* 08039a50 */ BL func_080398b4 \n\
 /* 08039a54 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 08039a56 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 08039a56 */ LDR R0, =D_03005380 \n\
 /* 08039a58 */ LDR R0, [R0] \n\
-/* 08039a5a */ LDR R5, =0x030055d0 @ !PossiblePointer \n\
+/* 08039a5a */ LDR R5, =D_030055d0 \n\
 /* 08039a5c */ LDR R1, [R5] \n\
 /* 08039a5e */ MOVS R3, 0x8 @ Set R3 to 0x8 \n\
 /* 08039a60 */ LDRSH R1, [R1, R3] \n\

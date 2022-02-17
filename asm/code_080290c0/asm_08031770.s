@@ -5,17 +5,17 @@ asm(".syntax unified \n\
 glabel func_08031770 \n\
 /* 08031770 */ PUSH {R4, R5, LR} \n\
 /* 08031772 */ SUB SP, 0xC \n\
-/* 08031774 */ LDR R1, =0x030055d0 @ !PossiblePointer \n\
+/* 08031774 */ LDR R1, =D_030055d0 \n\
 /* 08031776 */ LDR R2, [R1] \n\
 /* 08031778 */ MOVS R1, 0xEC @ Set R1 to 0xEC \n\
 /* 0803177a */ LSLS R1, R1, 0x1 \n\
 /* 0803177c */ ADDS R3, R2, R1 @ Set R3 to R2 + R1 \n\
 /* 0803177e */ STRH R0, [R3] \n\
-/* 08031780 */ LDR R1, =0x03005380 @ !PossiblePointer \n\
+/* 08031780 */ LDR R1, =D_03005380 \n\
 /* 08031782 */ LDR R1, [R1] \n\
 /* 08031784 */ MOVS R5, 0xC @ Set R5 to 0xC \n\
 /* 08031786 */ LDRSH R4, [R2, R5] \n\
-/* 08031788 */ LDR R2, =0x089e48c8 @ !PossiblePointer \n\
+/* 08031788 */ LDR R2, =D_089e48c8 \n\
 /* 0803178a */ LSLS R0, R0, 0x10 \n\
 /* 0803178c */ LSRS R0, R0, 0x10 \n\
 /* 0803178e */ CMP R0, 0x2 @ Compare R0 and 0x2 \n\

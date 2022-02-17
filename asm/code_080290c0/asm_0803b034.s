@@ -10,7 +10,7 @@ glabel func_0803b034 \n\
 /* 0803b03c */ PUSH {R5-R7} \n\
 /* 0803b03e */ SUB SP, 0xC \n\
 /* 0803b040 */ ADDS R5, R0, 0x0 @ Set R5 to R0 + 0x0 \n\
-/* 0803b042 */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 0803b042 */ LDR R0, =D_030055d0 \n\
 /* 0803b044 */ LDR R1, [R0] \n\
 /* 0803b046 */ ADDS R4, R1, 0x0 @ Set R4 to R1 + 0x0 \n\
 /* 0803b048 */ ADDS R4, 0x3C @ Add 0x3C to R4 \n\
@@ -63,7 +63,7 @@ branch_0803b08c: \n\
 branch_0803b092: \n\
 /* 0803b092 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 0803b094 */ MOV R10, R3 @ Set R10 to R3 \n\
-/* 0803b096 */ LDR R7, =0x03005380 @ !PossiblePointer \n\
+/* 0803b096 */ LDR R7, =D_03005380 \n\
 /* 0803b098 */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 0803b09a */ MOV R9, R0 @ Set R9 to R0 \n\
 /* 0803b09c */ MOVS R6, 0x0 @ Set R6 to 0x0 \n\

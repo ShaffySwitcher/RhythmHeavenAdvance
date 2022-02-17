@@ -9,7 +9,7 @@ glabel func_08032a64 \n\
 /* 08032a6a */ PUSH {R6, R7} \n\
 /* 08032a6c */ SUB SP, 0xC \n\
 /* 08032a6e */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 08032a70 */ LDR R5, =0x030055d0 @ !PossiblePointer \n\
+/* 08032a70 */ LDR R5, =D_030055d0 \n\
 /* 08032a72 */ LDR R0, [R5] \n\
 /* 08032a74 */ MOVS R1, 0xD8 @ Set R1 to 0xD8 \n\
 /* 08032a76 */ LSLS R1, R1, 0x1 \n\
@@ -51,7 +51,7 @@ branch_08032ab2: \n\
 /* 08032ab4 */ ADDS R7, R2, 0x1 @ Set R7 to R2 + 0x1 \n\
  \n\
 branch_08032ab6: \n\
-/* 08032ab6 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 08032ab6 */ LDR R0, =D_03005380 \n\
 /* 08032ab8 */ LDR R0, [R0] \n\
 /* 08032aba */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08032abc */ LDRSH R1, [R4, R2] \n\
@@ -82,7 +82,7 @@ branch_08032af0: \n\
 /* 08032af0 */ MOVS R0, 0x30 @ Set R0 to 0x30 \n\
 /* 08032af2 */ BL func_0800c3a4 \n\
 /* 08032af6 */ LDR R1, [R5] \n\
-/* 08032af8 */ LDR R3, =0x00000215 @ !PossiblePointer \n\
+/* 08032af8 */ LDR R3, =0x215 \n\
 /* 08032afa */ ADDS R1, R1, R3 @ Set R1 to R1 + R3 \n\
 /* 08032afc */ STRB R0, [R1] \n\
 /* 08032afe */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
@@ -96,7 +96,7 @@ branch_08032b06: \n\
 /* 08032b0a */ LSLS R6, R2, 0x2 \n\
  \n\
 branch_08032b0c: \n\
-/* 08032b0c */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 08032b0c */ LDR R0, =D_03005380 \n\
 /* 08032b0e */ LDR R0, [R0] \n\
 /* 08032b10 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08032b12 */ LDRSH R1, [R4, R2] \n\
@@ -139,7 +139,7 @@ branch_08032b5c: \n\
 /* 08032b60 */ LSLS R6, R2, 0x2 \n\
  \n\
 branch_08032b62: \n\
-/* 08032b62 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 08032b62 */ LDR R0, =D_03005380 \n\
 /* 08032b64 */ LDR R0, [R0] \n\
 /* 08032b66 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08032b68 */ LDRSH R1, [R4, R2] \n\
@@ -183,7 +183,7 @@ branch_08032bae: \n\
 /* 08032bb2 */ LSLS R6, R2, 0x2 \n\
  \n\
 branch_08032bb4: \n\
-/* 08032bb4 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 08032bb4 */ LDR R0, =D_03005380 \n\
 /* 08032bb6 */ LDR R0, [R0] \n\
 /* 08032bb8 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08032bba */ LDRSH R1, [R4, R2] \n\

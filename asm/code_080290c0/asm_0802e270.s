@@ -11,11 +11,11 @@ glabel func_0802e270 \n\
 /* 0802e27a */ ADDS R5, R1, 0x0 @ Set R5 to R1 + 0x0 \n\
 /* 0802e27c */ MOV R8, R2 @ Set R8 to R2 \n\
 /* 0802e27e */ MOV R9, R3 @ Set R9 to R3 \n\
-/* 0802e280 */ LDR R3, =0x08936cac @ !PossiblePointer \n\
+/* 0802e280 */ LDR R3, =D_08936cac \n\
 /* 0802e282 */ MOVS R6, 0x80 @ Set R6 to 0x80 \n\
 /* 0802e284 */ LSLS R6, R6, 0x2 \n\
 /* 0802e286 */ ADDS R0, R4, R6 @ Set R0 to R4 + R6 \n\
-/* 0802e288 */ LDR R2, =0x000007ff @ !PossiblePointer \n\
+/* 0802e288 */ LDR R2, =0x7ff  \n\
 /* 0802e28a */ ANDS R0, R2 @ Set R0 to R0 & R2 \n\
 /* 0802e28c */ LSLS R0, R0, 0x1 \n\
 /* 0802e28e */ ADDS R0, R0, R3 @ Set R0 to R0 + R3 \n\

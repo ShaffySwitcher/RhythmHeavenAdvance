@@ -6,7 +6,7 @@ glabel func_0803d388 \n\
 /* 0803d388 */ PUSH {R4, R5, LR} \n\
 /* 0803d38a */ SUB SP, 0xC \n\
 /* 0803d38c */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 0803d38e */ LDR R5, =0x030055d0 @ !PossiblePointer \n\
+/* 0803d38e */ LDR R5, =D_030055d0 \n\
 /* 0803d390 */ ADDS R3, R5, 0x0 @ Set R3 to R5 + 0x0 \n\
  \n\
 branch_0803d392: \n\
@@ -45,7 +45,7 @@ branch_0803d3b6: \n\
 /* 0803d3ca */ MOVS R0, 0x3 @ Set R0 to 0x3 \n\
 /* 0803d3cc */ BL func_0803d018 \n\
 /* 0803d3d0 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 0803d3d2 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0803d3d2 */ LDR R0, =D_03005380 \n\
 /* 0803d3d4 */ LDR R0, [R0] \n\
 /* 0803d3d6 */ LDR R1, [R5] \n\
 /* 0803d3d8 */ MOVS R3, 0x16 @ Set R3 to 0x16 \n\

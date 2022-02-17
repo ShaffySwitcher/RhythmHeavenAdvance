@@ -7,9 +7,9 @@ glabel func_08033644 \n\
 /* 08033646 */ BL func_08033370 \n\
 /* 0803364a */ BL func_08032d34 \n\
 /* 0803364e */ BL func_080328b8 \n\
-/* 08033652 */ LDR R6, =0x03005380 @ !PossiblePointer \n\
+/* 08033652 */ LDR R6, =D_03005380 \n\
 /* 08033654 */ LDR R0, [R6] \n\
-/* 08033656 */ LDR R5, =0x030055d0 @ !PossiblePointer \n\
+/* 08033656 */ LDR R5, =D_030055d0 \n\
 /* 08033658 */ LDR R1, [R5] \n\
 /* 0803365a */ MOVS R2, 0x36 @ Set R2 to 0x36 \n\
 /* 0803365c */ LDRSH R1, [R1, R2] \n\

@@ -12,7 +12,7 @@ glabel func_08043d98 \n\
 /* 08043da6 */ BEQ branch_08043dec \n\
 /* 08043da8 */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 08043daa */ BL func_080435e8 \n\
-/* 08043dae */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 08043dae */ LDR R0, =D_030055d0 \n\
 /* 08043db0 */ LDR R0, [R0] \n\
 /* 08043db2 */ LDR R1, =0x000001f1 @ !PossiblePointer \n\
 /* 08043db4 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\

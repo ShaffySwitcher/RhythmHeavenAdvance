@@ -10,7 +10,7 @@ glabel func_0802ec60 \n\
 /* 0802ec6c */ LSLS R0, R0, 0x10 \n\
 /* 0802ec6e */ LSRS R0, R0, 0x10 \n\
 /* 0802ec70 */ LDR R2, =0x089e3ff4 @ !PossiblePointer \n\
-/* 0802ec72 */ LDR R1, =0x030055d0 @ !PossiblePointer \n\
+/* 0802ec72 */ LDR R1, =D_030055d0 \n\
 /* 0802ec74 */ LDR R1, [R1] \n\
 /* 0802ec76 */ LDRB R1, [R1] \n\
 /* 0802ec78 */ LSLS R1, R1, 0x2 \n\

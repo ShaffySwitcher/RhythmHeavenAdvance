@@ -13,7 +13,7 @@ glabel func_08047630 \n\
 /* 0804763e */ B branch_0804765e \n\
  \n\
 branch_08047640: \n\
-/* 08047640 */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 08047640 */ LDR R0, =D_030055d0 \n\
 /* 08047642 */ LDR R0, [R0] \n\
 /* 08047644 */ LDRH R1, [R0, 0x2] \n\
 /* 08047646 */ B branch_0804765e \n\
@@ -21,7 +21,7 @@ branch_08047640: \n\
 .ltorg \n\
  \n\
 branch_0804764c: \n\
-/* 0804764c */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 0804764c */ LDR R0, =D_030055d0 \n\
 /* 0804764e */ LDR R0, [R0] \n\
 /* 08047650 */ LDRH R1, [R0, 0x4] \n\
 /* 08047652 */ B branch_0804765e \n\
@@ -29,12 +29,12 @@ branch_0804764c: \n\
 .ltorg \n\
  \n\
 branch_08047658: \n\
-/* 08047658 */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 08047658 */ LDR R0, =D_030055d0 \n\
 /* 0804765a */ LDR R0, [R0] \n\
 /* 0804765c */ LDRH R1, [R0, 0x6] \n\
  \n\
 branch_0804765e: \n\
-/* 0804765e */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0804765e */ LDR R0, =D_03005380 \n\
 /* 08047660 */ LDR R0, [R0] \n\
 /* 08047662 */ LSLS R1, R1, 0x10 \n\
 /* 08047664 */ ASRS R1, R1, 0x10 \n\

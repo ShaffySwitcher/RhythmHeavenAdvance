@@ -12,7 +12,7 @@ glabel func_08038fbc \n\
 /* 08038fc8 */ LSLS R1, R1, 0x18 \n\
 /* 08038fca */ LSRS R1, R1, 0x18 \n\
 /* 08038fcc */ MOV R8, R1 @ Set R8 to R1 \n\
-/* 08038fce */ LDR R4, =0x030055d0 @ !PossiblePointer \n\
+/* 08038fce */ LDR R4, =D_030055d0 \n\
 /* 08038fd0 */ LDR R0, [R4] \n\
 /* 08038fd2 */ ADDS R5, R0, 0x4 @ Set R5 to R0 + 0x4 \n\
 /* 08038fd4 */ STRB R7, [R5, 0x2] \n\
@@ -133,7 +133,7 @@ branch_080390b6: \n\
 /* 080390b6 */ MOV R3, R8 @ Set R3 to R8 \n\
 /* 080390b8 */ CMP R3, 0x0 @ Compare R3 and 0x0 \n\
 /* 080390ba */ BEQ branch_080390f4 \n\
-/* 080390bc */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 080390bc */ LDR R0, =D_03005380 \n\
 /* 080390be */ LDR R0, [R0] \n\
 /* 080390c0 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 080390c2 */ LDRSH R1, [R5, R2] \n\
@@ -159,7 +159,7 @@ branch_080390b6: \n\
 .ltorg \n\
  \n\
 branch_080390f4: \n\
-/* 080390f4 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 080390f4 */ LDR R0, =D_03005380 \n\
 /* 080390f6 */ LDR R0, [R0] \n\
 /* 080390f8 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 080390fa */ LDRSH R1, [R5, R3] \n\

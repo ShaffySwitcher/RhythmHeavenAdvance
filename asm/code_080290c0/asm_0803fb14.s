@@ -4,9 +4,9 @@ asm(".syntax unified \n\
 \n\
 glabel func_0803fb14 \n\
 /* 0803fb14 */ PUSH {R4, LR} \n\
-/* 0803fb16 */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 0803fb16 */ LDR R0, =D_030055d0 \n\
 /* 0803fb18 */ LDR R2, [R0] \n\
-/* 0803fb1a */ LDR R0, =0x0000036a @ !PossiblePointer \n\
+/* 0803fb1a */ LDR R0, =0x36a \n\
 /* 0803fb1c */ ADDS R4, R2, R0 @ Set R4 to R2 + R0 \n\
 /* 0803fb1e */ MOVS R1, 0xDB @ Set R1 to 0xDB \n\
 /* 0803fb20 */ LSLS R1, R1, 0x2 \n\
@@ -15,7 +15,7 @@ glabel func_0803fb14 \n\
 /* 0803fb26 */ LDRH R3, [R4] \n\
 /* 0803fb28 */ ADDS R0, R0, R3 @ Set R0 to R0 + R3 \n\
 /* 0803fb2a */ STRH R0, [R4] \n\
-/* 0803fb2c */ LDR R0, =0x0000036e @ !PossiblePointer \n\
+/* 0803fb2c */ LDR R0, =0x36e \n\
 /* 0803fb2e */ ADDS R3, R2, R0 @ Set R3 to R2 + R0 \n\
 /* 0803fb30 */ LDRH R1, [R3] \n\
 /* 0803fb32 */ MOVS R0, 0xDC @ Set R0 to 0xDC \n\

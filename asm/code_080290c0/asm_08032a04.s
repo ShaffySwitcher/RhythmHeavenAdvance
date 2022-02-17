@@ -4,7 +4,7 @@ asm(".syntax unified \n\
 \n\
 glabel func_08032a04 \n\
 /* 08032a04 */ PUSH {R4-R7, LR} \n\
-/* 08032a06 */ LDR R1, =0x030055d0 @ !PossiblePointer \n\
+/* 08032a06 */ LDR R1, =D_030055d0 \n\
 /* 08032a08 */ LDR R1, [R1] \n\
 /* 08032a0a */ MOVS R2, 0xD8 @ Set R2 to 0xD8 \n\
 /* 08032a0c */ LSLS R2, R2, 0x1 \n\
@@ -17,7 +17,7 @@ branch_08032a16: \n\
 /* 08032a16 */ LDR R2, [R4, 0x4] \n\
 /* 08032a18 */ ADDS R2, R2, R7 @ Set R2 to R2 + R7 \n\
 /* 08032a1a */ STR R2, [R4, 0x4] \n\
-/* 08032a1c */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 08032a1c */ LDR R0, =D_03005380 \n\
 /* 08032a1e */ LDR R0, [R0] \n\
 /* 08032a20 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 08032a22 */ LDRSH R1, [R4, R3] \n\
@@ -35,7 +35,7 @@ branch_08032a38: \n\
 /* 08032a38 */ LDR R2, [R4, 0x4] \n\
 /* 08032a3a */ SUBS R2, R2, R6 @ Set R2 to R2 - R6 \n\
 /* 08032a3c */ STR R2, [R4, 0x4] \n\
-/* 08032a3e */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 08032a3e */ LDR R0, =D_03005380 \n\
 /* 08032a40 */ LDR R0, [R0] \n\
 /* 08032a42 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 08032a44 */ LDRSH R1, [R4, R3] \n\

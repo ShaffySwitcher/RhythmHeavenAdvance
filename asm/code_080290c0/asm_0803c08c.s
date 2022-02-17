@@ -10,9 +10,9 @@ glabel func_0803c08c \n\
 /* 0803c094 */ PUSH {R5-R7} \n\
 /* 0803c096 */ SUB SP, 0xC \n\
 /* 0803c098 */ ADDS R7, R0, 0x0 @ Set R7 to R0 + 0x0 \n\
-/* 0803c09a */ LDR R6, =0x030055d0 @ !PossiblePointer \n\
+/* 0803c09a */ LDR R6, =D_030055d0 \n\
 /* 0803c09c */ LDR R1, [R6] \n\
-/* 0803c09e */ LDR R2, =0x000002da @ !PossiblePointer \n\
+/* 0803c09e */ LDR R2, =0x2da \n\
 /* 0803c0a0 */ ADDS R0, R1, R2 @ Set R0 to R1 + R2 \n\
 /* 0803c0a2 */ MOVS R3, 0xB6 @ Set R3 to 0xB6 \n\
 /* 0803c0a4 */ LSLS R3, R3, 0x2 \n\
@@ -28,7 +28,7 @@ glabel func_0803c08c \n\
 /* 0803c0ba */ MOVS R0, 0xC @ Set R0 to 0xC \n\
 /* 0803c0bc */ BL func_0803bd88 \n\
 /* 0803c0c0 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 0803c0c2 */ LDR R4, =0x03005380 @ !PossiblePointer \n\
+/* 0803c0c2 */ LDR R4, =D_03005380 \n\
 /* 0803c0c4 */ LDR R0, [R4] \n\
 /* 0803c0c6 */ LDR R1, [R6] \n\
 /* 0803c0c8 */ LSLS R3, R5, 0x1 \n\
@@ -48,7 +48,7 @@ glabel func_0803c08c \n\
 /* 0803c0e4 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 0803c0e6 */ STR R3, [SP, 0x8] \n\
 /* 0803c0e8 */ BL func_0804d8f8 \n\
-/* 0803c0ec */ LDR R1, =0x08a9c0f4 @ !PossiblePointer \n\
+/* 0803c0ec */ LDR R1, =D_08a9c0f4 \n\
 /* 0803c0ee */ MOVS R0, 0x4 @ Set R0 to 0x4 \n\
 /* 0803c0f0 */ BL func_0800267c \n\
 /* 0803c0f4 */ ADDS R5, R0, 0x0 @ Set R5 to R0 + 0x0 \n\
@@ -70,7 +70,7 @@ glabel func_0803c08c \n\
 /* 0803c116 */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\
 /* 0803c118 */ BL func_080028a8 \n\
 /* 0803c11c */ LDR R1, [R6] \n\
-/* 0803c11e */ LDR R0, =0x000002da @ !PossiblePointer \n\
+/* 0803c11e */ LDR R0, =0x2da \n\
 /* 0803c120 */ ADDS R2, R1, R0 @ Set R2 to R1 + R0 \n\
 /* 0803c122 */ LDRH R0, [R2] \n\
 /* 0803c124 */ ADDS R0, 0x1 @ Add 0x1 to R0 \n\
@@ -93,7 +93,7 @@ glabel func_0803c08c \n\
 /* 0803c148 */ MOVS R0, 0x5 @ Set R0 to 0x5 \n\
 /* 0803c14a */ BL func_0803bd88 \n\
 /* 0803c14e */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 0803c150 */ LDR R1, =0x03005380 @ !PossiblePointer \n\
+/* 0803c150 */ LDR R1, =D_03005380 \n\
 /* 0803c152 */ LDR R0, [R1] \n\
 /* 0803c154 */ LDR R1, [R6] \n\
 /* 0803c156 */ LSLS R3, R5, 0x1 \n\

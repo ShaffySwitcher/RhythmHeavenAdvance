@@ -10,7 +10,7 @@ glabel func_0804573c \n\
 /* 08045744 */ LSLS R7, R7, 0xF \n\
  \n\
 branch_08045746: \n\
-/* 08045746 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 08045746 */ LDR R0, =D_03005380 \n\
 /* 08045748 */ LDR R0, [R0] \n\
 /* 0804574a */ MOVS R1, 0x78 @ Set R1 to 0x78 \n\
 /* 0804574c */ STR R1, [SP] \n\

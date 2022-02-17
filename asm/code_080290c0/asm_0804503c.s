@@ -30,7 +30,7 @@ branch_0804505a: \n\
 /* 0804506c */ LDR R0, [R5] \n\
 /* 0804506e */ ADDS R1, R4, 0x0 @ Set R1 to R4 + 0x0 \n\
 /* 08045070 */ BL func_0800ff44 \n\
-/* 08045074 */ LDR R2, =0x030055d0 @ !PossiblePointer \n\
+/* 08045074 */ LDR R2, =D_030055d0 \n\
 /* 08045076 */ LDR R1, [R2] \n\
 /* 08045078 */ MOVS R3, 0xD9 @ Set R3 to 0xD9 \n\
 /* 0804507a */ LSLS R3, R3, 0x1 \n\

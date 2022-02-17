@@ -8,12 +8,12 @@ glabel func_080319b4 \n\
 /* 080319b8 */ PUSH {R6} \n\
 /* 080319ba */ SUB SP, 0x14 \n\
 /* 080319bc */ ADDS R5, R0, 0x0 @ Set R5 to R0 + 0x0 \n\
-/* 080319be */ LDR R6, =0x03005380 @ !PossiblePointer \n\
+/* 080319be */ LDR R6, =D_03005380 \n\
 /* 080319c0 */ LDR R0, [R6] \n\
-/* 080319c2 */ LDR R1, =0x088eba54 @ !PossiblePointer \n\
+/* 080319c2 */ LDR R1, =D_088eba54 \n\
 /* 080319c4 */ MOVS R2, 0x42 @ Set R2 to 0x42 \n\
 /* 080319c6 */ STR R2, [SP] \n\
-/* 080319c8 */ LDR R2, =0x0000800a @ !PossiblePointer \n\
+/* 080319c8 */ LDR R2, =0x800a \n\
 /* 080319ca */ STR R2, [SP, 0x4] \n\
 /* 080319cc */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
 /* 080319ce */ STR R4, [SP, 0x8] \n\
@@ -26,10 +26,10 @@ glabel func_080319b4 \n\
 /* 080319de */ MOV R8, R1 @ Set R8 to R1 \n\
 /* 080319e0 */ STRH R0, [R5] \n\
 /* 080319e2 */ LDR R0, [R6] \n\
-/* 080319e4 */ LDR R1, =0x088eba44 @ !PossiblePointer \n\
+/* 080319e4 */ LDR R1, =D_088eba44 \n\
 /* 080319e6 */ MOVS R2, 0x40 @ Set R2 to 0x40 \n\
 /* 080319e8 */ STR R2, [SP] \n\
-/* 080319ea */ LDR R2, =0x00008014 @ !PossiblePointer \n\
+/* 080319ea */ LDR R2, =0x8014 \n\
 /* 080319ec */ STR R2, [SP, 0x4] \n\
 /* 080319ee */ STR R4, [SP, 0x8] \n\
 /* 080319f0 */ STR R4, [SP, 0xC] \n\

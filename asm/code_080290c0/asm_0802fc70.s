@@ -10,7 +10,7 @@ glabel func_0802fc70 \n\
 /* 0802fc78 */ STRB R2, [R6, 0x1E] \n\
 /* 0802fc7a */ STRB R0, [R6, 0x1D] \n\
 /* 0802fc7c */ STRB R0, [R6, 0x1F] \n\
-/* 0802fc7e */ LDR R1, =0x030055d0 @ !PossiblePointer \n\
+/* 0802fc7e */ LDR R1, =D_030055d0 \n\
 /* 0802fc80 */ LDR R3, [R1] \n\
 /* 0802fc82 */ MOVS R2, 0x91 @ Set R2 to 0x91 \n\
 /* 0802fc84 */ LSLS R2, R2, 0x4 \n\
@@ -227,7 +227,7 @@ branch_0802fe26: \n\
 /* 0802fe3e */ SUBS R0, R0, R4 @ Set R0 to R0 - R4 \n\
 /* 0802fe40 */ BL __divsi3 \n\
 /* 0802fe44 */ STR R0, [R6, 0x10] \n\
-/* 0802fe46 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0802fe46 */ LDR R0, =D_03005380 \n\
 /* 0802fe48 */ LDR R0, [R0] \n\
 /* 0802fe4a */ LDR R1, =0x088e93ec @ !PossiblePointer \n\
 /* 0802fe4c */ LDR R3, [R6, 0x4] \n\
@@ -265,7 +265,7 @@ branch_0802fe7c: \n\
 /* 0802fe96 */ SUBS R0, R0, R4 @ Set R0 to R0 - R4 \n\
 /* 0802fe98 */ BL __divsi3 \n\
 /* 0802fe9c */ STR R0, [R6, 0x10] \n\
-/* 0802fe9e */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0802fe9e */ LDR R0, =D_03005380 \n\
 /* 0802fea0 */ LDR R0, [R0] \n\
 /* 0802fea2 */ LDR R1, =0x088e940c @ !PossiblePointer \n\
 /* 0802fea4 */ LDR R3, [R6, 0x4] \n\
@@ -330,7 +330,7 @@ branch_0802ff10: \n\
 /* 0802ff28 */ LSLS R0, R5, 0x6 \n\
 /* 0802ff2a */ SUBS R2, R2, R0 @ Set R2 to R2 - R0 \n\
 /* 0802ff2c */ STR R2, [R6, 0x8] \n\
-/* 0802ff2e */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0802ff2e */ LDR R0, =D_03005380 \n\
 /* 0802ff30 */ LDR R0, [R0] \n\
 /* 0802ff32 */ LDR R1, =0x088e90ac @ !PossiblePointer \n\
 /* 0802ff34 */ LDR R3, [R6, 0x4] \n\

@@ -13,9 +13,9 @@ glabel func_080334ec \n\
 /* 080334fa */ B branch_08033544 \n\
  \n\
 branch_080334fc: \n\
-/* 080334fc */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 080334fc */ LDR R0, =D_03005380 \n\
 /* 080334fe */ LDR R0, [R0] \n\
-/* 08033500 */ LDR R1, =0x030055d0 @ !PossiblePointer \n\
+/* 08033500 */ LDR R1, =D_030055d0 \n\
 /* 08033502 */ LDR R1, [R1] \n\
 /* 08033504 */ MOVS R2, 0x36 @ Set R2 to 0x36 \n\
 /* 08033506 */ LDRSH R1, [R1, R2] \n\
@@ -32,9 +32,9 @@ branch_080334fc: \n\
 .ltorg \n\
  \n\
 branch_08033528: \n\
-/* 08033528 */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 08033528 */ LDR R0, =D_03005380 \n\
 /* 0803352a */ LDR R0, [R0] \n\
-/* 0803352c */ LDR R1, =0x030055d0 @ !PossiblePointer \n\
+/* 0803352c */ LDR R1, =D_030055d0 \n\
 /* 0803352e */ LDR R1, [R1] \n\
 /* 08033530 */ MOVS R2, 0x36 @ Set R2 to 0x36 \n\
 /* 08033532 */ LDRSH R1, [R1, R2] \n\

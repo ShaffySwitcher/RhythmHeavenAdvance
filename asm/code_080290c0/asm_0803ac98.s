@@ -5,7 +5,7 @@ asm(".syntax unified \n\
 glabel func_0803ac98 \n\
 /* 0803ac98 */ PUSH {R4-R7, LR} \n\
 /* 0803ac9a */ ADDS R5, R0, 0x0 @ Set R5 to R0 + 0x0 \n\
-/* 0803ac9c */ LDR R6, =0x030055d0 @ !PossiblePointer \n\
+/* 0803ac9c */ LDR R6, =D_030055d0 \n\
 /* 0803ac9e */ LDR R1, [R6] \n\
 /* 0803aca0 */ ADDS R2, R1, 0x0 @ Set R2 to R1 + 0x0 \n\
 /* 0803aca2 */ ADDS R2, 0xE8 @ Add 0xE8 to R2 \n\
@@ -22,7 +22,7 @@ branch_0803acac: \n\
 /* 0803acb4 */ BEQ branch_0803ad40 \n\
 /* 0803acb6 */ CMP R5, 0x0 @ Compare R5 and 0x0 \n\
 /* 0803acb8 */ BNE branch_0803acf4 \n\
-/* 0803acba */ LDR R7, =0x03005380 @ !PossiblePointer \n\
+/* 0803acba */ LDR R7, =D_03005380 \n\
 /* 0803acbc */ LDR R0, [R7] \n\
 /* 0803acbe */ ADDS R1, 0xDC @ Add 0xDC to R1 \n\
 /* 0803acc0 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
@@ -49,7 +49,7 @@ branch_0803acac: \n\
 branch_0803acf4: \n\
 /* 0803acf4 */ CMP R5, 0x3 @ Compare R5 and 0x3 \n\
 /* 0803acf6 */ BHI branch_0803ad14 \n\
-/* 0803acf8 */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 0803acf8 */ LDR R0, =D_030055d0 \n\
 /* 0803acfa */ LDR R0, [R0] \n\
 /* 0803acfc */ ADDS R0, 0xDE @ Add 0xDE to R0 \n\
 /* 0803acfe */ MOVS R1, 0x2 @ Set R1 to 0x2 \n\
@@ -67,7 +67,7 @@ branch_0803ad06: \n\
 branch_0803ad14: \n\
 /* 0803ad14 */ CMP R5, 0x4 @ Compare R5 and 0x4 \n\
 /* 0803ad16 */ BNE branch_0803ad2a \n\
-/* 0803ad18 */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 0803ad18 */ LDR R0, =D_030055d0 \n\
 /* 0803ad1a */ LDR R1, [R0] \n\
 /* 0803ad1c */ ADDS R2, R1, 0x0 @ Set R2 to R1 + 0x0 \n\
 /* 0803ad1e */ ADDS R2, 0xE2 @ Add 0xE2 to R2 \n\
@@ -78,9 +78,9 @@ branch_0803ad14: \n\
 /* 0803ad28 */ STRB R0, [R1] \n\
  \n\
 branch_0803ad2a: \n\
-/* 0803ad2a */ LDR R0, =0x03005380 @ !PossiblePointer \n\
+/* 0803ad2a */ LDR R0, =D_03005380 \n\
 /* 0803ad2c */ LDR R0, [R0] \n\
-/* 0803ad2e */ LDR R1, =0x030055d0 @ !PossiblePointer \n\
+/* 0803ad2e */ LDR R1, =D_030055d0 \n\
 /* 0803ad30 */ LDR R1, [R1] \n\
 /* 0803ad32 */ ADDS R1, 0xDC @ Add 0xDC to R1 \n\
 /* 0803ad34 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\

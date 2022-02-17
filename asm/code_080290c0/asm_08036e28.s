@@ -4,13 +4,13 @@ asm(".syntax unified \n\
 \n\
 glabel func_08036e28 \n\
 /* 08036e28 */ PUSH {R4, R5, LR} \n\
-/* 08036e2a */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 08036e2a */ LDR R0, =D_030055d0 \n\
 /* 08036e2c */ LDR R1, [R0] \n\
 /* 08036e2e */ LDRB R0, [R1, 0x9] \n\
 /* 08036e30 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08036e32 */ BEQ branch_08036eac \n\
 /* 08036e34 */ LDRB R4, [R1, 0x8] \n\
-/* 08036e36 */ LDR R0, =0x03004afc @ !PossiblePointer \n\
+/* 08036e36 */ LDR R0, =D_03004afc \n\
 /* 08036e38 */ LDRH R1, [R0] \n\
 /* 08036e3a */ MOVS R0, 0x40 @ Set R0 to 0x40 \n\
 /* 08036e3c */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
@@ -23,7 +23,7 @@ glabel func_08036e28 \n\
 /* 08036e4a */ BL func_08002634 \n\
  \n\
 branch_08036e4e: \n\
-/* 08036e4e */ LDR R0, =0x03004afc @ !PossiblePointer \n\
+/* 08036e4e */ LDR R0, =D_03004afc \n\
 /* 08036e50 */ LDRH R1, [R0] \n\
 /* 08036e52 */ MOVS R0, 0x80 @ Set R0 to 0x80 \n\
 /* 08036e54 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
@@ -36,7 +36,7 @@ branch_08036e4e: \n\
 /* 08036e62 */ BL func_08002634 \n\
  \n\
 branch_08036e66: \n\
-/* 08036e66 */ LDR R5, =0x030055d0 @ !PossiblePointer \n\
+/* 08036e66 */ LDR R5, =D_030055d0 \n\
 /* 08036e68 */ LDR R1, [R5] \n\
 /* 08036e6a */ LDRB R0, [R1, 0x8] \n\
 /* 08036e6c */ CMP R0, R4 @ Check R0 - R4 \n\
@@ -49,7 +49,7 @@ branch_08036e66: \n\
 /* 08036e7c */ STR R0, [R1, 0x10] \n\
 /* 08036e7e */ MOVS R0, 0x28 @ Set R0 to 0x28 \n\
 /* 08036e80 */ STRH R0, [R1, 0xA] \n\
-/* 08036e82 */ LDR R4, =0x03005380 @ !PossiblePointer \n\
+/* 08036e82 */ LDR R4, =D_03005380 \n\
 /* 08036e84 */ LDR R0, [R4] \n\
 /* 08036e86 */ MOVS R2, 0x1A @ Set R2 to 0x1A \n\
 /* 08036e88 */ LDRSH R1, [R1, R2] \n\

@@ -11,7 +11,7 @@ glabel func_08044e78 \n\
 /* 08044e82 */ SUB SP, 0x20 \n\
 /* 08044e84 */ STR R0, [SP, 0x1C] \n\
 /* 08044e86 */ MOV R9, R1 @ Set R9 to R1 \n\
-/* 08044e88 */ LDR R0, =0x030055d0 @ !PossiblePointer \n\
+/* 08044e88 */ LDR R0, =D_030055d0 \n\
 /* 08044e8a */ MOV R8, R0 @ Set R8 to R0 \n\
 /* 08044e8c */ LDR R5, [R0] \n\
 /* 08044e8e */ MOVS R1, 0xD2 @ Set R1 to 0xD2 \n\
