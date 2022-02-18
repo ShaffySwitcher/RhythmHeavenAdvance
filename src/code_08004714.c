@@ -2625,3 +2625,5 @@ void func_080179f4(s32 arg1) { // universal cue?
 #include "asm/code_08004714/asm_0801e4e0.s"
 
 #include "asm/code_08004714/asm_0801e4f4.s"
+
+#include "asm/code_08004714/asm_0801e704.s"
