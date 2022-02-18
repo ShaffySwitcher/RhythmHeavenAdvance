@@ -3,8 +3,6 @@
 
 asm(".include \"include/gba.inc\"");//Temporary
 
-#define UNKNOWN_SIZE 0x3B04 // Recurring amount, related to size of some kind of data structure
-
 static u16 D_0300008c;
 static u16 D_0300008e;
 static u16 D_03000090;
