@@ -24,8 +24,8 @@ SECTIONS {
         build/src/code_08003b28.c.o(.text*);
         build/src/code_08004714.c.o(.text*);
         build/src/code_0801e704.c.o(.text*);
-        build/src/code_0802085c.c.o(.text*);
-        build/src/code_080290c0.c.o(.text*);
+        build/src/scenes.c.o(.text*);
+		build/src/code_08047e50.c.o(.text*);
         build/bin/bindata_080482e0.bin.o(.rodata*);
         *libgcc.a:_call_via_rX.o(.text*);
         build/bin/bindata_0804eb28.bin.o(.rodata*);

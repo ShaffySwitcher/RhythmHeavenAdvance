@@ -1,8 +1,6 @@
 #ifndef GUARD_CODE_08000718_H
 #define GUARD_CODE_08000718_H
 
-#include "global.h"
-
 extern s32 *D_030046a8;
 
 typedef void (struct_030064c8_func)(s32 *, s32 *, s32);
