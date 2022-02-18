@@ -3,6 +3,18 @@
 
 asm(".include \"include/gba.inc\"");//Temporary
 
+#include "src/scenes/sneaky_spirits.inc.c"
+
+#include "src/scenes/spaceball.inc.c"
+
+#include "src/scenes/bon_odori.inc.c"
+
+#include "src/scenes/karate_man.inc.c"
+
+#include "src/scenes/mannequin_factory.inc.c"
+
+#include "src/scenes/staff_credit.inc.c"
+
 #include "src/scenes/drumming_lessons.inc.c"
 
 #include "src/scenes/night_walk.inc.c"
