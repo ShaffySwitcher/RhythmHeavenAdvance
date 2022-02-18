@@ -1,5 +1,5 @@
-#ifndef GUARD_CODE_08000718_H
-#define GUARD_CODE_08000718_H
+#ifndef GUARD_MEMORY_H
+#define GUARD_MEMORY_H
 
 extern s32 *D_030046a8;
 

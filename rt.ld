@@ -7,22 +7,25 @@ SECTIONS {
 	
 	. = 0x03000000;
 	.bss . : SUBALIGN(4) {
-		build/src/code_080001f4.c.o(.bss*);
-        build/src/code_08000718.c.o(.bss*);
+		build/src/main.c.o(.bss*);
+        build/src/memory.c.o(.bss*);
 	}
 	
 	. = 0x08000000;
     .cartrom . : AT(__romPos) SUBALIGN(4) {
         build/asm/rom_header.s.o(.text*);
         build/asm/boot.s.o(.text*);
-        build/src/code_080001f4.c.o(.text*);
-        build/src/code_08000718.c.o(.text*);
+        build/src/main.c.o(.text*);
+        build/src/memory.c.o(.text*);
         build/bin/bindata_08000a00.bin.o(.rodata*); /* Seems to be ARM assembly */
         build/src/code_08001360.c.o(.text*);
-        build/src/code_08001fe0.c.o(.text*);
-        build/src/code_08002f68.c.o(.text*);
-        build/src/code_08003b28.c.o(.text*);
-        build/src/code_08004714.c.o(.text*);
+        build/src/code_08003980.c.o(.text*);
+		build/src/code_080068f8.c.o(.text*);
+		build/src/code_08008b00.c.o(.text*);
+		build/src/code_0800b3c8.c.o(.text*);
+		build/src/code_08010490.c.o(.text*);
+		build/src/code_08011ec0.c.o(.text*);
+		build/src/code_08016e18.c.o(.text*);
 		build/src/results.c.o(.text*);
 		build/src/code_0801a384.c.o(.text*);
         build/src/code_0801d860.c.o(.text*);

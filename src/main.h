@@ -1,5 +1,5 @@
-#ifndef GUARD_CODE_080001F4_H
-#define GUARD_CODE_080001F4_H
+#ifndef GUARD_MAIN_H
+#define GUARD_MAIN_H
 
 typedef s32 (*struct_03000000_func)(void *);
 
