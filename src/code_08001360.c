@@ -5,34 +5,6 @@ asm(".include \"include/gba.inc\"");//Temporary
 
 // Can be better split
 
-extern u16 D_030000b4;
-extern u16 D_03000098;
-
-typedef u32 (*D_0300009c_func)(void);
-
-extern D_0300009c_func D_0300009c;
-
-extern u16 D_03004ac0;
-extern s16 D_03004afc;
-extern s16 D_030053b8;
-extern s16 D_03004b00;
-extern u16 D_030000a0;
-extern u16 D_030000a2;
-extern s8 D_030000a8;
-extern u16 D_030000ac;
-
-extern u16 D_030046b8;
-extern u16 D_03005378;
-extern u16 D_0300537c;
-extern u16 D_030046b4;
-extern u16 D_030000a4;
-extern u16 D_030000a6;
-extern u8 D_030000a9;
-
-extern u32 D_030053b4;
-extern u32 D_03005374;
-
-
 void func_08001360(void) {
     func_08003f28();
     D_03000098 = 0;
@@ -40,7 +12,7 @@ void func_08001360(void) {
     return;
 }
 
-void func_08001380() {
+void func_08001380(void) {
     func_08006e00();
     func_08003f50();
     if (D_0300009c != 0) {
@@ -49,7 +21,6 @@ void func_08001380() {
     D_03000098 = 1;
     return;
 }
-
 
 void func_080013a8(void) {
     volatile u32 temp;
@@ -111,7 +82,7 @@ u32 func_08001828(void) {
     return D_030053b4;
 }
 
-u8 func_0800184c() {
+u8 func_0800184c(void) {
     return D_030053b4 >= D_03005374;
 }
 
@@ -138,8 +109,8 @@ u32 func_08001980(u16 arg1) {   // Random
 
 #include "asm/code_08001360/asm_080019e4.s"
 
-void func_08001a24() {
-    return;
+void func_08001a24_stub(void) {
+
 }
 
 #include "asm/code_08001360/asm_08001a28.s"

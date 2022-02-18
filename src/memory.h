@@ -1,6 +1,8 @@
 #ifndef GUARD_MEMORY_H
 #define GUARD_MEMORY_H
 
+#define UNKNOWN_SIZE 0x3B04 // Recurring amount, related to size of some kind of data structure
+
 extern s32 *D_030046a8;
 
 typedef void (struct_030064c8_func)(s32 *, s32 *, s32);
