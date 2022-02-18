@@ -1,8 +1,6 @@
 #ifndef GUARD_CODE_08001360_H
 #define GUARD_CODE_08001360_H
 
-#include "global.h"
-
 struct struct_08001f94 {
     u8 unk0;
     u8 unk1;
