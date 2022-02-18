@@ -1,4 +1,0 @@
-#ifndef GUARD_CODE_08002F68_H
-#define GUARD_CODE_08002F68_H
-
-#endif

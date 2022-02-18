@@ -1,5 +1,5 @@
 #include "global.h"
-#include "code_080001f4.h"
+#include "main.h"
 
 asm(".include \"include/gba.inc\"");//Temporary
 
