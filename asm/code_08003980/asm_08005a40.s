@@ -26,7 +26,7 @@ branch_08005a64: \n\
 /* 08005a64 */ LDR R0, [R4, 0xC] \n\
 /* 08005a66 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08005a68 */ BEQ branch_08005a6e \n\
-/* 08005a6a */ BL func_08006694 \n\
+/* 08005a6a */ BL mem_heap_dealloc \n\
  \n\
 branch_08005a6e: \n\
 /* 08005a6e */ LDRB R0, [R4] \n\

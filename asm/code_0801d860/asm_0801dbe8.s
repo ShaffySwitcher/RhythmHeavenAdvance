@@ -17,7 +17,7 @@ glabel func_0801dbe8 \n\
 /* 0801dbfe */ LSRS R5, R5, 0x10 \n\
 /* 0801dc00 */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\
 /* 0801dc02 */ MOVS R1, 0x34 @ Set R1 to 0x34 \n\
-/* 0801dc04 */ BL func_08006590 \n\
+/* 0801dc04 */ BL mem_heap_alloc_id \n\
 /* 0801dc08 */ ADDS R7, R0, 0x0 @ Set R7 to R0 + 0x0 \n\
 /* 0801dc0a */ LDR R1, =D_089de670 \n\
 /* 0801dc0c */ LSLS R2, R6, 0x18 \n\
@@ -39,13 +39,13 @@ glabel func_0801dbe8 \n\
 /* 0801dc2e */ MOVS R1, 0x80 @ Set R1 to 0x80 \n\
 /* 0801dc30 */ LSLS R1, R1, 0x3 \n\
 /* 0801dc32 */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\
-/* 0801dc34 */ BL func_08006590 \n\
+/* 0801dc34 */ BL mem_heap_alloc_id \n\
 /* 0801dc38 */ STR R0, [R7, 0x8] \n\
 /* 0801dc3a */ STRB R4, [R7, 0x4] \n\
 /* 0801dc3c */ MOVS R1, 0x80 @ Set R1 to 0x80 \n\
 /* 0801dc3e */ LSLS R1, R1, 0x5 \n\
 /* 0801dc40 */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\
-/* 0801dc42 */ BL func_08006590 \n\
+/* 0801dc42 */ BL mem_heap_alloc_id \n\
 /* 0801dc46 */ STR R0, [R7, 0x14] \n\
 /* 0801dc48 */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 0801dc4a */ NEGS R0, R0 @ Set R0 to -R0 \n\

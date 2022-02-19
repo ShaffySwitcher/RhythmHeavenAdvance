@@ -21,7 +21,7 @@ glabel func_0800b0d4 \n\
  \n\
 branch_0800b0f6: \n\
 /* 0800b0f6 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
-/* 0800b0f8 */ BL func_08006694 \n\
+/* 0800b0f8 */ BL mem_heap_dealloc \n\
  \n\
 branch_0800b0fc: \n\
 /* 0800b0fc */ POP {R4} \n\

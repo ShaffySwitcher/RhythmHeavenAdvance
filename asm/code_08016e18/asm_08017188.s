@@ -30,7 +30,7 @@ branch_080171b8: \n\
 /* 080171ba */ LDR R0, [R0, 0x14] \n\
 /* 080171bc */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 080171be */ BEQ branch_080171c4 \n\
-/* 080171c0 */ BL func_08006694 \n\
+/* 080171c0 */ BL mem_heap_dealloc \n\
  \n\
 branch_080171c4: \n\
 /* 080171c4 */ LDR R0, =D_03005380 \n\
@@ -50,7 +50,7 @@ branch_080171c4: \n\
 /* 080171ec */ BL func_0800c3b8 \n\
 /* 080171f0 */ LSLS R0, R0, 0x10 \n\
 /* 080171f2 */ LSRS R0, R0, 0x10 \n\
-/* 080171f4 */ BL func_080066f8 \n\
+/* 080171f4 */ BL mem_heap_dealloc_with_id \n\
 /* 080171f8 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 080171fa */ BL func_08018630 \n\
  \n\
@@ -82,7 +82,7 @@ branch_080171fe: \n\
 /* 0801723e */ LDR R0, [R6] \n\
 /* 08017240 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08017242 */ BEQ branch_08017270 \n\
-/* 08017244 */ BL func_08006580 \n\
+/* 08017244 */ BL mem_heap_alloc \n\
 /* 08017248 */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
 /* 0801724a */ LDR R0, [R4] \n\
 /* 0801724c */ STR R1, [R0, 0x14] \n\

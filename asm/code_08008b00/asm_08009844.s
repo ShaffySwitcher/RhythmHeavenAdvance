@@ -16,7 +16,7 @@ glabel func_08009844 \n\
 /* 0800985a */ LDR R4, =D_03001218 \n\
 /* 0800985c */ MOVS R0, 0xA0 @ Set R0 to 0xA0 \n\
 /* 0800985e */ LSLS R0, R0, 0x4 \n\
-/* 08009860 */ BL func_08006580 \n\
+/* 08009860 */ BL mem_heap_alloc \n\
 /* 08009864 */ STR R0, [R4] \n\
 /* 08009866 */ LDR R1, =D_0300121c \n\
 /* 08009868 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\

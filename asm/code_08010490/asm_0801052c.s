@@ -14,7 +14,7 @@ glabel func_0801052c \n\
 /* 0801053e */ LSRS R0, R0, 0x10 \n\
 /* 08010540 */ MOVS R1, 0x80 @ Set R1 to 0x80 \n\
 /* 08010542 */ LSLS R1, R1, 0x1 \n\
-/* 08010544 */ BL func_08006590 \n\
+/* 08010544 */ BL mem_heap_alloc_id \n\
 /* 08010548 */ ADDS R7, R0, 0x0 @ Set R7 to R0 + 0x0 \n\
 /* 0801054a */ BL func_0800061c \n\
 /* 0801054e */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\

@@ -7,7 +7,7 @@ glabel func_08015940 \n\
 /* 08015942 */ SUB SP, 0x4 \n\
 /* 08015944 */ ADDS R5, R0, 0x0 @ Set R5 to R0 + 0x0 \n\
 /* 08015946 */ MOVS R0, 0x10 @ Set R0 to 0x10 \n\
-/* 08015948 */ BL func_08006580 \n\
+/* 08015948 */ BL mem_heap_alloc \n\
 /* 0801594c */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 0801594e */ LDR R1, [R5, 0x4] \n\
 /* 08015950 */ STR R1, [R4, 0x4] \n\

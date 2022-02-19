@@ -11,7 +11,7 @@ glabel func_08006bb4 \n\
 /* 08006bbe */ BNE branch_08006bfc \n\
 /* 08006bc0 */ LDR R5, [R6, 0x18] \n\
 /* 08006bc2 */ MOVS R0, 0x10 @ Set R0 to 0x10 \n\
-/* 08006bc4 */ BL func_08006580 \n\
+/* 08006bc4 */ BL mem_heap_alloc \n\
 /* 08006bc8 */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 08006bca */ STR R6, [R4] \n\
 /* 08006bcc */ LDRB R0, [R5] \n\

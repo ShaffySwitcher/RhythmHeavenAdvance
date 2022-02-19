@@ -10,7 +10,7 @@ glabel func_0800765c \n\
 /* 08007664 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08007666 */ BLT branch_080076e0 \n\
 /* 08007668 */ MOVS R0, 0x1C @ Set R0 to 0x1C \n\
-/* 0800766a */ BL func_08006580 \n\
+/* 0800766a */ BL mem_heap_alloc \n\
 /* 0800766e */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 08007670 */ LDRH R0, [R5] \n\
 /* 08007672 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\

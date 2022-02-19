@@ -23,7 +23,7 @@ glabel func_08004eac \n\
 /* 08004ece */ LSLS R1, R1, 0x1 \n\
 /* 08004ed0 */ ADDS R1, 0x30 @ Add 0x30 to R1 \n\
 /* 08004ed2 */ LDRH R0, [R0] \n\
-/* 08004ed4 */ BL func_08006590 \n\
+/* 08004ed4 */ BL mem_heap_alloc_id \n\
 /* 08004ed8 */ STR R0, [SP, 0x4] \n\
 /* 08004eda */ ADDS R6, R0, 0x0 @ Set R6 to R0 + 0x0 \n\
 /* 08004edc */ ADDS R6, 0x30 @ Add 0x30 to R6 \n\

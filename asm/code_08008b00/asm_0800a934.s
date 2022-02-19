@@ -62,7 +62,7 @@ branch_0800a99c: \n\
 /* 0800a9a2 */ LDR R0, [R0] \n\
 /* 0800a9a4 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0800a9a6 */ BEQ branch_0800a9ac \n\
-/* 0800a9a8 */ BL func_08006694 \n\
+/* 0800a9a8 */ BL mem_heap_dealloc \n\
  \n\
 branch_0800a9ac: \n\
 /* 0800a9ac */ LDR R0, [R5, 0x1C] \n\

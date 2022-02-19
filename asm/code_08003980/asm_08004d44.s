@@ -49,7 +49,7 @@ branch_08004d8c: \n\
 /* 08004d8e */ CMP R6, R0 @ Check R6 - R0 \n\
 /* 08004d90 */ BCC branch_08004d56 \n\
 /* 08004d92 */ MOV R0, R12 @ Set R0 to R12 \n\
-/* 08004d94 */ BL func_08006694 \n\
+/* 08004d94 */ BL mem_heap_dealloc \n\
  \n\
 branch_08004d98: \n\
 /* 08004d98 */ POP {R4-R7} \n\

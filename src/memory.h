@@ -1,7 +1,7 @@
 #ifndef GUARD_MEMORY_H
 #define GUARD_MEMORY_H
 
-#define UNKNOWN_SIZE 0x3B04 // Recurring amount, related to size of some kind of data structure
+#define SAVE_BUFFER_SIZE 0x3B04 // might need renaming
 
 extern s32 *D_030046a8;
 
@@ -13,11 +13,11 @@ extern s32 *D_08935fb8;
 extern s32 D_08935fbc;
 extern s32 D_08935fc4;
 
-extern void func_08000718(void);
-extern void *func_0800074c(void);
-extern void *func_08000760(void);
-extern void *func_08000774(void);
-extern u32 func_08000788(void);
+extern void init_ewram(void);
+extern void *get_save_buffer_start(void);
+extern void *get_save_buffer_end(void);
+extern void *get_memory_heap_start(void);
+extern u32 get_memory_heap_length(void);
 extern s32 func_08000794(s32 *, u32);
 extern void func_08000804(void);
 extern void func_0800081c(void);

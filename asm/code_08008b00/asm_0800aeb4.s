@@ -19,7 +19,7 @@ glabel func_0800aeb4 \n\
 /* 0800aece */ LSRS R4, R4, 0x10 \n\
 /* 0800aed0 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 0800aed2 */ MOVS R1, 0x50 @ Set R1 to 0x50 \n\
-/* 0800aed4 */ BL func_08006590 \n\
+/* 0800aed4 */ BL mem_heap_alloc_id \n\
 /* 0800aed8 */ ADDS R7, R0, 0x0 @ Set R7 to R0 + 0x0 \n\
 /* 0800aeda */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 0800aedc */ MOV R8, R1 @ Set R8 to R1 \n\

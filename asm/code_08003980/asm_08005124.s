@@ -22,7 +22,7 @@ glabel func_08005124 \n\
 /* 08005144 */ MOVS R1, 0x10 @ Set R1 to 0x10 \n\
 /* 08005146 */ STR R2, [SP] \n\
 /* 08005148 */ STR R3, [SP, 0x4] \n\
-/* 0800514a */ BL func_08006590 \n\
+/* 0800514a */ BL mem_heap_alloc_id \n\
 /* 0800514e */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 08005150 */ MOV R0, R8 @ Set R0 to R8 \n\
 /* 08005152 */ STR R0, [R4] \n\
@@ -33,12 +33,12 @@ glabel func_08005124 \n\
 /* 0800515c */ STRB R5, [R4, 0x7] \n\
 /* 0800515e */ LSLS R1, R5, 0x5 \n\
 /* 08005160 */ ADDS R0, R6, 0x0 @ Set R0 to R6 + 0x0 \n\
-/* 08005162 */ BL func_08006590 \n\
+/* 08005162 */ BL mem_heap_alloc_id \n\
 /* 08005166 */ STR R0, [R4, 0x8] \n\
 /* 08005168 */ LSLS R5, R5, 0x4 \n\
 /* 0800516a */ ADDS R0, R6, 0x0 @ Set R0 to R6 + 0x0 \n\
 /* 0800516c */ ADDS R1, R5, 0x0 @ Set R1 to R5 + 0x0 \n\
-/* 0800516e */ BL func_08006590 \n\
+/* 0800516e */ BL mem_heap_alloc_id \n\
 /* 08005172 */ STR R0, [R4, 0xC] \n\
 /* 08005174 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 08005176 */ BL func_080051c4 \n\

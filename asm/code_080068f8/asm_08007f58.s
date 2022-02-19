@@ -6,7 +6,7 @@ glabel func_08007f58 \n\
 /* 08007f58 */ PUSH {R4, R5, LR} \n\
 /* 08007f5a */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 08007f5c */ MOVS R0, 0x8 @ Set R0 to 0x8 \n\
-/* 08007f5e */ BL func_08006580 \n\
+/* 08007f5e */ BL mem_heap_alloc \n\
 /* 08007f62 */ ADDS R5, R0, 0x0 @ Set R5 to R0 + 0x0 \n\
 /* 08007f64 */ LDRH R2, [R4] \n\
 /* 08007f66 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\

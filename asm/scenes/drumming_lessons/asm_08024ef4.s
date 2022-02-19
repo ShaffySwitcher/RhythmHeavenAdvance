@@ -17,7 +17,7 @@ glabel func_08024ef4 \n\
 /* 08024f0a */ LDR R0, [R0] \n\
 /* 08024f0c */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08024f0e */ BEQ branch_08024f1e \n\
-/* 08024f10 */ BL func_08006694 \n\
+/* 08024f10 */ BL mem_heap_dealloc \n\
 /* 08024f14 */ LDR R0, [R5] \n\
 /* 08024f16 */ ADDS R1, R7, 0x0 @ Set R1 to R7 + 0x0 \n\
 /* 08024f18 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
@@ -40,7 +40,7 @@ branch_08024f1e: \n\
 /* 08024f38 */ LSLS R0, R0, 0x10 \n\
 /* 08024f3a */ LSRS R0, R0, 0x10 \n\
 /* 08024f3c */ LDR R1, [R4, 0x18] \n\
-/* 08024f3e */ BL func_08006590 \n\
+/* 08024f3e */ BL mem_heap_alloc_id \n\
 /* 08024f42 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
 /* 08024f44 */ LDR R0, [R5] \n\
 /* 08024f46 */ ADDS R0, R0, R7 @ Set R0 to R0 + R7 \n\

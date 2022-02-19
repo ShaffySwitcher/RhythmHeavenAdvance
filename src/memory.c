@@ -3,39 +3,42 @@
 
 asm(".include \"include/gba.inc\"");//Temporary
 
-static u16 D_0300008c;
-static u16 D_0300008e;
-static u16 D_03000090;
-static u16 D_03000092;
+static u16 sEWRAMSaveBufferStart;
+static u16 sEWRAMSaveBufferEnd;
+static u16 sEWRAMMemoryHeapStart;
+static u16 sEWRAMMemoryHeapLength;
 static s32 unused_03000094; // unknown
 
-void func_08000718(void) {
-    u16 temp = 4;
-    u16 temp2 = 0x10000 - 4;
-    u16 temp3 = UNKNOWN_SIZE / 4;
+// Initiate the size and positions of the save buffer and memory heap.
+void init_ewram(void) {
+    u16 ewramStart = 4;
+    u16 ewramEnd = 0x10000 - 4;
+    u16 saveBufferLength = SAVE_BUFFER_SIZE / 4;
+	u16 saveEnd, heapLength;
 	
-    D_0300008c = temp;
-    temp += temp3;
-    temp2 -= temp3;
-    D_0300008e = temp;
-    D_03000090 = temp;
-    D_03000092 = temp2;
+    sEWRAMSaveBufferStart = ewramStart;
+    saveEnd = ewramStart + saveBufferLength;
+	heapLength = ewramEnd - saveBufferLength;
+    sEWRAMSaveBufferEnd = saveEnd;
+	
+    sEWRAMMemoryHeapStart = saveEnd;
+    sEWRAMMemoryHeapLength = heapLength;
 }
 
-void *func_0800074c(void) {
-	return (void *)(ExternWorkRAMBase + D_0300008c*4);
+void *get_save_buffer_start(void) {
+	return (void *)(ExternWorkRAMBase + sEWRAMSaveBufferStart*4);
 }
 
-void *func_08000760(void) {
-	return (void *)(ExternWorkRAMBase + D_0300008e*4);
+void *get_save_buffer_end(void) {
+	return (void *)(ExternWorkRAMBase + sEWRAMSaveBufferEnd*4);
 }
 
-void *func_08000774(void) {
-	return (void *)(ExternWorkRAMBase + D_03000090*4);
+void *get_memory_heap_start(void) {
+	return (void *)(ExternWorkRAMBase + sEWRAMMemoryHeapStart*4);
 }
 
-u32 func_08000788(void) {
-	return D_03000092*4;
+u32 get_memory_heap_length(void) {
+	return sEWRAMMemoryHeapLength*4;
 }
 
 s32 func_08000794(s32 *arg1, u32 arg2) {
@@ -79,14 +82,14 @@ void func_08000804(void) {
     func_0804c96c();
 	
     temp = &D_030046a8;
-    *temp = func_0800074c();
+    *temp = get_save_buffer_start();
 }
 
 void func_0800081c(void) {
     s32 *temp = D_030046a8;
-    func_080018e0(0,temp,UNKNOWN_SIZE,0x20,0x100);
+    func_080018e0(0,temp,SAVE_BUFFER_SIZE,0x20,0x100);
     func_0804f270(temp, &D_08935fbc);
-    temp[1] = UNKNOWN_SIZE;
+    temp[1] = SAVE_BUFFER_SIZE;
     temp[2] = 0;
     temp[3] = 0x26040000;
     func_080102f4();
@@ -95,13 +98,13 @@ void func_0800081c(void) {
 s32 func_08000868(s32 *arg1) {
     s32 *temp = D_030046a8;
 	
-    D_030064c8(arg1, temp, UNKNOWN_SIZE);
+    D_030064c8(arg1, temp, SAVE_BUFFER_SIZE);
 	
     if (func_0800820c(temp, &D_08935fbc, 0x4) != 0) {
         return 1;
     }
 	
-    if (func_08000794(D_030046a8, UNKNOWN_SIZE) - temp[2] != temp[2]) {
+    if (func_08000794(D_030046a8, SAVE_BUFFER_SIZE) - temp[2] != temp[2]) {
         return 2;
     }
 	
@@ -120,9 +123,9 @@ void func_080008e4(s32 *arg1) {
     s32 *temp = D_030046a8;
 
     temp[2] = 0;
-    temp[2] = func_08000794(D_030046a8, UNKNOWN_SIZE);
+    temp[2] = func_08000794(D_030046a8, SAVE_BUFFER_SIZE);
 	
-    func_0804c8b0(D_030046a8,arg1,UNKNOWN_SIZE);
+    func_0804c8b0(D_030046a8,arg1,SAVE_BUFFER_SIZE);
 }
 
 // types here are probably weird, some kind of offset calculator
@@ -135,7 +138,7 @@ void func_08000928(s32 *arg1) {
     s32 temp2 = func_0800091c(temp); // isnt this literally always 0
 
     temp[2] = 0;
-    temp[2] = func_08000794(D_030046a8,UNKNOWN_SIZE);
+    temp[2] = func_08000794(D_030046a8,SAVE_BUFFER_SIZE);
 
     func_0804c8b0((u32)D_030046a8 + temp2,(u32)arg1 + temp2,0x10);
 }

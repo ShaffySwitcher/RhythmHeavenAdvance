@@ -1,8 +1,6 @@
 #ifndef GUARD_CODE_08003980_H
 #define GUARD_CODE_08003980_H
 
-typedef s32 (*functype_03000e98)(u32 *, s32, s32);
-
 struct struct_03004ad0 {
     u32 unk0;
     u32 *unk4;
@@ -11,7 +9,7 @@ struct struct_03004ad0 {
     u32 unk10;
 };
 
-extern void *D_0800112c;
+extern void *mem_heap_alloc_block_rom;
 extern void *D_0800116c;
 extern struct struct_03004ad0 D_03004ad0;
 
@@ -142,13 +140,13 @@ extern struct struct_03004ad0 D_03004ad0;
 // extern ? func_08006364(?);
 // extern ? func_0800637c(?);
 // extern ? func_08006448(?);
-extern void func_0800650c(u32 *, u32);
-extern void *func_08006580(u32);
-extern void *func_08006590(u16, u32);
-extern void func_08006628(u32, s32);
-extern void func_08006694(void *);
-extern void func_080066f8(u16);
-extern void func_08006750(void);
+extern void mem_heap_init(u32 *, u32);
+extern void *mem_heap_alloc(u32);
+extern void *mem_heap_alloc_id(u16, u32);
+extern void mem_heap_dealloc_block(u32, s32);
+extern void mem_heap_dealloc(void *);
+extern void mem_heap_dealloc_with_id(u16);
+extern void mem_heap_get_allocated_space(void);
 // extern ? func_0800679c(?);
 // extern ? func_080067a4(?);
 

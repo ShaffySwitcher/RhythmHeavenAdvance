@@ -8,7 +8,7 @@ glabel func_0800459c \n\
 /* 080045a0 */ STR R1, [R4, 0x14] \n\
 /* 080045a2 */ LDRH R0, [R4] \n\
 /* 080045a4 */ ADDS R1, R2, 0x0 @ Set R1 to R2 + 0x0 \n\
-/* 080045a6 */ BL func_08006590 \n\
+/* 080045a6 */ BL mem_heap_alloc_id \n\
 /* 080045aa */ STR R0, [R4, 0x18] \n\
 /* 080045ac */ POP {R4} \n\
 /* 080045ae */ POP {R0} \n\

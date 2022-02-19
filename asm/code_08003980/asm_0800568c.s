@@ -168,7 +168,7 @@ branch_08005796: \n\
 /* 080057a6 */ BL func_08004eac \n\
 /* 080057aa */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 080057ac */ ADDS R0, R6, 0x0 @ Set R0 to R6 + 0x0 \n\
-/* 080057ae */ BL func_08006694 \n\
+/* 080057ae */ BL mem_heap_dealloc \n\
 /* 080057b2 */ ADDS R6, R4, 0x0 @ Set R6 to R4 + 0x0 \n\
  \n\
 branch_080057b4: \n\

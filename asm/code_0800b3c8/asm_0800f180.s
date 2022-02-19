@@ -48,13 +48,13 @@ branch_0800f1ba: \n\
  \n\
 branch_0800f1ce: \n\
 /* 0800f1ce */ LDR R0, [R5, 0x8] \n\
-/* 0800f1d0 */ BL func_08006694 \n\
+/* 0800f1d0 */ BL mem_heap_dealloc \n\
 /* 0800f1d4 */ LDR R0, [R5, 0x50] \n\
-/* 0800f1d6 */ BL func_08006694 \n\
+/* 0800f1d6 */ BL mem_heap_dealloc \n\
 /* 0800f1da */ LDR R0, [R5, 0x74] \n\
-/* 0800f1dc */ BL func_08006694 \n\
+/* 0800f1dc */ BL mem_heap_dealloc \n\
 /* 0800f1e0 */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\
-/* 0800f1e2 */ BL func_08006694 \n\
+/* 0800f1e2 */ BL mem_heap_dealloc \n\
 /* 0800f1e6 */ POP {R4-R7} \n\
 /* 0800f1e8 */ POP {R0} \n\
 /* 0800f1ea */ BX R0 \n\

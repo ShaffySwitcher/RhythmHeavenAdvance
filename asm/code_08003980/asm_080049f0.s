@@ -34,7 +34,7 @@ branch_08004a1c: \n\
 /* 08004a28 */ ADDS R1, 0x12 @ Add 0x12 to R1 \n\
 /* 08004a2a */ MOV R2, R8 @ Set R2 to R8 \n\
 /* 08004a2c */ LDRH R0, [R2] \n\
-/* 08004a2e */ BL func_08006590 \n\
+/* 08004a2e */ BL mem_heap_alloc_id \n\
 /* 08004a32 */ MOV R9, R0 @ Set R9 to R0 \n\
 /* 08004a34 */ ADDS R0, 0x10 @ Add 0x10 to R0 \n\
 /* 08004a36 */ STR R0, [SP, 0x8] \n\

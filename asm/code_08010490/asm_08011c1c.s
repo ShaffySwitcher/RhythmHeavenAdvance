@@ -58,7 +58,7 @@ branch_08011c72: \n\
 /* 08011c7a */ BLS branch_08011c56 \n\
 /* 08011c7c */ LSRS R0, R5, 0x10 \n\
 /* 08011c7e */ MOVS R1, 0x1C @ Set R1 to 0x1C \n\
-/* 08011c80 */ BL func_08006590 \n\
+/* 08011c80 */ BL mem_heap_alloc_id \n\
 /* 08011c84 */ ADDS R5, R0, 0x0 @ Set R5 to R0 + 0x0 \n\
 /* 08011c86 */ LDR R4, =D_03005380 \n\
 /* 08011c88 */ LDR R0, [R4] \n\

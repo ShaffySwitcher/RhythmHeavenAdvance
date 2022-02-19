@@ -162,21 +162,21 @@ void func_08001a24_stub(void) {
 
 u32 func_08001f34(struct struct_08001f94 *arg1) {
     u32 temp;
-    temp = func_08006580(0x18);
+    temp = mem_heap_alloc(0x18);
     func_08001bf8(temp, arg1->unk0, arg1->unk1, arg1->unk4, arg1->unk8, 0, arg1->unkC);
     return temp;
 }
 
 u32 func_08001f64(struct struct_08001f94 *arg1) {
     u32 temp;
-    temp = func_08006580(0x18);
+    temp = mem_heap_alloc(0x18);
     func_08001c64(temp, arg1->unk0, arg1->unk1, arg1->unk4, arg1->unk8, 0, arg1->unkC);
     return temp;
 }
 
 u32 func_08001f94(struct struct_08001f94 *arg1) {
     u32 temp;
-    temp = func_08006580(0x18);
+    temp = mem_heap_alloc(0x18);
     func_08001cd8(temp, arg1->unk0, arg1->unk1, arg1->unk4, arg1->unk8, 0, arg1->unkC);
     return temp;
 }

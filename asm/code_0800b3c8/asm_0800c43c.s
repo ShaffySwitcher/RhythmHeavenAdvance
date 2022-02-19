@@ -9,7 +9,7 @@ glabel func_0800c43c \n\
 /* 0800c444 */ LSLS R0, R0, 0x10 \n\
 /* 0800c446 */ LSRS R0, R0, 0x10 \n\
 /* 0800c448 */ ADDS R1, R4, 0x0 @ Set R1 to R4 + 0x0 \n\
-/* 0800c44a */ BL func_08006590 \n\
+/* 0800c44a */ BL mem_heap_alloc_id \n\
 /* 0800c44e */ POP {R4} \n\
 /* 0800c450 */ POP {R1} \n\
 /* 0800c452 */ BX R1 \n\

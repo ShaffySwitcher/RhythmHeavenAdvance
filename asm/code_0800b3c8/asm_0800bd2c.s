@@ -76,7 +76,7 @@ branch_0800bda8: \n\
 /* 0800bdb6 */ ADDS R0, R6, 0x0 @ Set R0 to R6 + 0x0 \n\
 /* 0800bdb8 */ BL func_0800222c \n\
 /* 0800bdbc */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
-/* 0800bdbe */ BL func_080066f8 \n\
+/* 0800bdbe */ BL mem_heap_dealloc_with_id \n\
 /* 0800bdc2 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 0800bdc4 */ BL func_08005de4 \n\
 /* 0800bdc8 */ LDRB R0, [R5] \n\
