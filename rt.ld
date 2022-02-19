@@ -9,6 +9,8 @@ SECTIONS {
 	.bss . : SUBALIGN(4) {
 		build/src/main.c.o(.bss*);
         build/src/memory.c.o(.bss*);
+		build/src/code_08001360.c.o(.bss*);
+		build/src/code_08003980.c.o(.bss*);
 	}
 	
 	. = 0x08000000;

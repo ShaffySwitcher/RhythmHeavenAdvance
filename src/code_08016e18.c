@@ -1,5 +1,6 @@
 #include "global.h"
 #include "code_08016e18.h"
+#include "code_08003980.h"
 
 // Main gameplay stuff
 
@@ -51,7 +52,7 @@ s32 func_08017348(s32 arg1, s32 arg2) { // bobbing?
 }
 
 void func_08017380(s32 arg1) { // gfx command 1
-    D_030046a4->unk54.unkC = arg1;
+    D_030046a4->unk60 = arg1;
 }
 
 s32 func_0801738c(struct struct_030046a4_sub *arg1, s32 arg2) { // gfx command 2
@@ -62,7 +63,7 @@ s32 func_0801738c(struct struct_030046a4_sub *arg1, s32 arg2) { // gfx command 2
     }
 
     if ((D_030046a4->unk10.asPoint->unk18 != NULL) && (D_030046a4->unk10.asPoint->unk18[arg2] != NULL)) {
-        returnVal = D_030046a4->unk10.asPoint->unk18[arg2](D_030046a4->unk54.unkC);
+        returnVal = D_030046a4->unk10.asPoint->unk18[arg2](D_030046a4->unk60);
     }
 
     return returnVal;
@@ -150,16 +151,15 @@ s32 func_0801738c(struct struct_030046a4_sub *arg1, s32 arg2) { // gfx command 2
 
 void func_080179f4(s32 arg1) { // universal cue?
     struct struct_030046a4_sub2 *temp;
-    struct struct_030046a4 *temp2;
-    struct struct_030046a4 *temp4;
+    struct struct_080179f4 *temp2, *temp4;
 
-    if ((D_030046a4->unk54.unk8.asU8[0] == 0) || ((temp = D_030046a4->unk1C[arg1]) == NULL)) {
+    if ((D_030046a4->unk5C == 0) || ((temp = D_030046a4->unk1C[arg1]) == NULL)) {
         return;
     }
 
-    temp2 = (struct struct_030046a4 *)func_08006580(0x6C); //! temp cast until prototype exists
+    temp2 = func_08006580(0x6C);
     if (temp->unkC != 0) {
-        temp2->unk64 = (struct struct_030046a4 *)func_08006580(temp->unkC); //! temp cast until prototype exists
+        temp2->unk64 = func_08006580(temp->unkC);
     } else {
         temp2->unk64 = NULL;
     }
@@ -179,21 +179,21 @@ void func_080179f4(s32 arg1) { // universal cue?
         temp2->unk4E = func_0800c3a4(temp->unk4);
     }
 
-    temp2->unk54.unk0.asPoint = ((D_030046a4->unk68.unk0.asPoint != 0) ? D_030046a4->unk68.unk0.asPoint : temp->unk2C.unk0.asPoint);
-    temp2->unk54.unk4 = ((D_030046a4->unk68.unk4 != 0) ? D_030046a4->unk68.unk4 : temp->unk2C.unk4);
-    temp2->unk54.unk8.asPoint = ((D_030046a4->unk68.unk8.asPoint != 0) ? D_030046a4->unk68.unk8.asPoint : temp->unk2C.unk8.asPoint);
-    temp2->unk54.unkC = ((D_030046a4->unk68.unkC != 0) ? D_030046a4->unk68.unkC : temp->unk2C.unkC);
+    temp2->unk54.unk0 = ((D_030046a4->unk68.unk0 != NULL) ? D_030046a4->unk68.unk0 : temp->unk2C.unk0);
+    temp2->unk54.unk4 = ((D_030046a4->unk68.unk4 != NULL) ? D_030046a4->unk68.unk4 : temp->unk2C.unk4);
+    temp2->unk54.unk8 = ((D_030046a4->unk68.unk8 != NULL) ? D_030046a4->unk68.unk8 : temp->unk2C.unk8);
+    temp2->unk54.unkC = ((D_030046a4->unk68.unkC != NULL) ? D_030046a4->unk68.unkC : temp->unk2C.unkC);
 
-    temp2->unk68.unk0.asU8[0] = D_030046a4->unk7A;
+    temp2->unk68 = D_030046a4->unk7A;
 
-    D_030046a4->unk68.unk0.asPoint = NULL;
+    D_030046a4->unk68.unk0 = NULL;
     D_030046a4->unk68.unk4 = NULL;
-    D_030046a4->unk68.unk8.asPoint = NULL;
-    D_030046a4->unk68.unkC = 0;
+    D_030046a4->unk68.unk8 = NULL;
+    D_030046a4->unk68.unkC = NULL;
 
     temp4 = D_030046a4->unk18;
     
-    temp2->unk0 = 0;
+    temp2->unk0 = NULL;
     temp2->unk4 = temp4;
 
     if (temp4 != NULL) {
@@ -202,18 +202,18 @@ void func_080179f4(s32 arg1) { // universal cue?
 
     D_030046a4->unk18 = temp2;
 
-    D_030046a4->unk54.unk8.asU8[1] = 0;
+    D_030046a4->unk5D = 0;
 
-    if (temp->unk10 != 0) {
+    if (temp->unk10 != NULL) {
         temp->unk10(temp2,temp2->unk64,temp->unk14);
     }
 
-    if (D_030046a4->unk54.unk8.asU8[1] != 0) {
+    if (D_030046a4->unk5D != 0) {
         D_030046a4->unk18 = temp4;
         temp4->unk0 = NULL;
         func_08006694(temp2);
     } else {
-        D_030046a4->unk54.unk4 = temp2;
+        D_030046a4->unk58 = temp2;
         func_08016e54(temp2->unk54.unk0);
     }
 }

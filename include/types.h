@@ -8,20 +8,34 @@ struct struct_030046a4_sub { // might be a list
     struct_030046a4_func *unk18;
 };
 
-struct struct_030046a4;
-typedef void (*struct_030046a4_sub_func)(struct struct_030046a4 *,struct struct_030046a4 *,s32);
-
 typedef union {
         u8 asU8[4];
         struct struct_030046a4_sub *asPoint;
     } struct_030046a4_union;
 	
 struct struct_030046a4_sub3 {
-	struct_030046a4_union unk0;
-    struct struct_030046a4 *unk4;
-    struct_030046a4_union unk8;
-    s32 unkC;
+	void *unk0; // ???
+    void *unk4; // ???
+    void *unk8; // ???
+    void *unkC; // ???
 };
+
+struct struct_080179f4 {
+	struct struct_080179f4 *unk0;
+	struct struct_080179f4 *unk4;
+	s32 unk8; // ???
+	u8 pad0C[0x3C];
+	s8 unk48;
+	u8 pad49[3];
+	u16 unk4C;
+	u16 unk4E;
+	u8 pad50[4];
+	struct struct_030046a4_sub3 unk54;
+	s32 *unk64;
+	u8 unk68;
+};
+
+typedef void (*struct_030046a4_sub_func)(struct struct_080179f4 *,s32 *,s32);
 
 struct struct_030046a4_sub2 {
     u8 pad00[0x4];
@@ -35,26 +49,24 @@ struct struct_030046a4_sub2 {
 };
 
 struct struct_030046a4 {
-    struct struct_030046a4 *unk0;
-    struct struct_030046a4 *unk4;
-    s32 unk8;
-    s16 unkC;
-    s16 unkE;
-    struct_030046a4_union unk10;
-    u8 pad14[4];
-    struct struct_030046a4 *unk18;
-    struct struct_030046a4_sub2 *unk1C[11]; // size unknown
-	s8 unk48;
-    u8 pad49[3];
-    u16 unk4C;
-    u16 unk4E;
-	u8 pad50[4];
-	struct struct_030046a4_sub3 unk54;
-    struct struct_030046a4 *unk64;
+	u8 pad00[0xC];
+	s16 unkC;
+	s16 unkE;
+	struct_030046a4_union unk10;
+	u8 pad14[4];
+	struct struct_080179f4 *unk18;
+	struct struct_030046a4_sub2 *unk1C[12]; // ???
+	struct_030046a4_func *unk4C;
+	u8 pad50[8];
+	struct struct_080179f4 *unk58;
+	u8 unk5C;
+	u8 unk5D;
+	s32 unk60;
+    u8 pad64[4];
     struct struct_030046a4_sub3 unk68;
-    u8 pad78[0x2];
-    u8 unk7A;
-    u8 pad7B[0xB];
+	u8 pad78[2];
+	u8 unk7A;
+	u8 pad7B[0xB];
     u16 unk86;
 };
 

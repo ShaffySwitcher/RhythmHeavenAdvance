@@ -5,6 +5,27 @@ asm(".include \"include/gba.inc\"");//Temporary
 
 // Can be better split
 
+static u16 D_03000098;
+static D_0300009c_func D_0300009c;
+static u16 D_030000a0;
+static u16 D_030000a2;
+static u16 D_030000a4;
+static u16 D_030000a6;
+static s8 D_030000a8;
+static u8 D_030000a9;
+static s16 D_030000aa; // unknown type
+static u16 D_030000ac;
+static s32 D_030000b0; // unknown type
+static u16 D_030000b4;
+static s32 D_030000b8[32]; // unknown type
+static s32 D_03000138[64]; // unknown type
+static s32 D_03000238[64]; // unknown type
+static s32 D_03000338[2]; // unknown type
+static s32 D_03000340[8]; // unknown type
+static s32 D_03000360[2]; // unknown type
+static s32 D_03000368[32]; // unknown type
+static s32 D_030003e8[120]; // unknown type
+
 void func_08001360(void) {
     func_08003f28();
     D_03000098 = 0;
@@ -15,7 +36,7 @@ void func_08001360(void) {
 void func_08001380(void) {
     func_08006e00();
     func_08003f50();
-    if (D_0300009c != 0) {
+    if (D_0300009c != NULL) {
         D_0300009c();
     }
     D_03000098 = 1;
@@ -25,7 +46,9 @@ void func_08001380(void) {
 void func_080013a8(void) {
     volatile u32 temp;
     if (!(REG_DISPCNT & 0x80)) {
-        while (!D_03000098) temp = *((u32*)GameROMBase + (u16)func_08001964());
+        while (!D_03000098) {
+			temp = *((u32*)GameROMBase + (u16)func_08001964());
+		}
     }
     D_03000098 = 0;
 }

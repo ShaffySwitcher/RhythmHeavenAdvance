@@ -1,5 +1,7 @@
 #include "global.h"
 #include "main.h"
+#include "memory.h"
+#include "code_08003980.h"
 
 asm(".include \"include/gba.inc\"");//Temporary
 
@@ -165,7 +167,7 @@ void func_08000490(void) {
 		D_03000080 = 0;
 		
 		if (D_03000000->unk18 != 0) {
-			temp = (struct struct_030046a4 *)func_08006580(D_03000000->unk18); //! temp cast until prototype exists
+			temp = func_08006580(D_03000000->unk18);
             D_030046a4 = temp;
 		}
 		
