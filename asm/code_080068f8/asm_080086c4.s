@@ -29,7 +29,7 @@ branch_080086da: \n\
  \n\
 branch_080086e6: \n\
 /* 080086e6 */ MOVS R0, 0x18 @ Set R0 to 0x18 \n\
-/* 080086e8 */ BL func_08006580 \n\
+/* 080086e8 */ BL mem_heap_alloc \n\
 /* 080086ec */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 080086ee */ STR R5, [R4] \n\
 /* 080086f0 */ LDR R1, =D_0300536c \n\
@@ -39,7 +39,7 @@ branch_080086e6: \n\
 /* 080086f8 */ LDR R0, [R5] \n\
 /* 080086fa */ LDRH R0, [R0, 0x4] \n\
 /* 080086fc */ LSLS R0, R0, 0x1 \n\
-/* 080086fe */ BL func_08006580 \n\
+/* 080086fe */ BL mem_heap_alloc \n\
 /* 08008702 */ STR R0, [R4, 0x4] \n\
 /* 08008704 */ LDR R0, [R5, 0x4] \n\
 /* 08008706 */ STR R0, [R4, 0x8] \n\

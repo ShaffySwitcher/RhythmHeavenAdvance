@@ -13,13 +13,13 @@ glabel func_08006328 \n\
 /* 08006336 */ LSRS R4, R4, 0x10 \n\
 /* 08006338 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 0800633a */ MOVS R1, 0x8 @ Set R1 to 0x8 \n\
-/* 0800633c */ BL func_08006590 \n\
+/* 0800633c */ BL mem_heap_alloc_id \n\
 /* 08006340 */ ADDS R5, R0, 0x0 @ Set R5 to R0 + 0x0 \n\
 /* 08006342 */ MOV R1, R8 @ Set R1 to R8 \n\
 /* 08006344 */ MULS R1, R6 @ Multiply R1 by R6 \n\
 /* 08006346 */ LSLS R1, R1, 0x1 \n\
 /* 08006348 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
-/* 0800634a */ BL func_08006590 \n\
+/* 0800634a */ BL mem_heap_alloc_id \n\
 /* 0800634e */ STR R0, [R5] \n\
 /* 08006350 */ STRH R6, [R5, 0x4] \n\
 /* 08006352 */ MOV R0, R8 @ Set R0 to R8 \n\

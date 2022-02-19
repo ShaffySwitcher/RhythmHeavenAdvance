@@ -30,9 +30,9 @@ branch_0800867c: \n\
  \n\
 branch_08008680: \n\
 /* 08008680 */ LDR R0, [R4, 0x4] \n\
-/* 08008682 */ BL func_08006694 \n\
+/* 08008682 */ BL mem_heap_dealloc \n\
 /* 08008686 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
-/* 08008688 */ BL func_08006694 \n\
+/* 08008688 */ BL mem_heap_dealloc \n\
 /* 0800868c */ B branch_08008696 \n\
  \n\
 branch_0800868e: \n\

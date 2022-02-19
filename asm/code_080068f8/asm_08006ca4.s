@@ -12,7 +12,7 @@ glabel func_08006ca4 \n\
 /* 08006cb0 */ BNE branch_08006cdc \n\
 /* 08006cb2 */ LDR R4, [R5, 0x18] \n\
 /* 08006cb4 */ MOVS R0, 0x10 @ Set R0 to 0x10 \n\
-/* 08006cb6 */ BL func_08006580 \n\
+/* 08006cb6 */ BL mem_heap_alloc \n\
 /* 08006cba */ STR R5, [R0] \n\
 /* 08006cbc */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 08006cbe */ STRH R1, [R0, 0x8] \n\

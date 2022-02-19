@@ -38,9 +38,9 @@ branch_0800697c: \n\
 /* 08006982 */ LDR R0, [R5, 0x14] \n\
 /* 08006984 */ BL func_08006364 \n\
 /* 08006988 */ LDR R0, [R5, 0x10] \n\
-/* 0800698a */ BL func_08006694 \n\
+/* 0800698a */ BL mem_heap_dealloc \n\
 /* 0800698e */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\
-/* 08006990 */ BL func_08006694 \n\
+/* 08006990 */ BL mem_heap_dealloc \n\
 /* 08006994 */ POP {R4, R5} \n\
 /* 08006996 */ POP {R0} \n\
 /* 08006998 */ BX R0 \n\

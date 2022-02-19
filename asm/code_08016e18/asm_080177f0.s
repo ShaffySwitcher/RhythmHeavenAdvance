@@ -22,7 +22,7 @@ branch_08017810: \n\
 /* 08017812 */ LDR R0, [R0, 0x14] \n\
 /* 08017814 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08017816 */ BEQ branch_0801781c \n\
-/* 08017818 */ BL func_08006694 \n\
+/* 08017818 */ BL mem_heap_dealloc \n\
  \n\
 branch_0801781c: \n\
 /* 0801781c */ LDR R1, [R5] \n\

@@ -22,7 +22,7 @@ branch_0801d99a: \n\
 /* 0801d9b0 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 0801d9b2 */ BL func_08005de4 \n\
 /* 0801d9b6 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
-/* 0801d9b8 */ BL func_080066f8 \n\
+/* 0801d9b8 */ BL mem_heap_dealloc_with_id \n\
 /* 0801d9bc */ CMP R5, 0x1 @ Compare R5 and 0x1 \n\
 /* 0801d9be */ BLS branch_0801d99a \n\
 /* 0801d9c0 */ POP {R4, R5} \n\

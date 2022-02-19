@@ -35,11 +35,11 @@ glabel func_080067a4 \n\
 /* 080067de */ STR R2, [SP, 0x18] \n\
 /* 080067e0 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 080067e2 */ MOVS R1, 0x30 @ Set R1 to 0x30 \n\
-/* 080067e4 */ BL func_08006590 \n\
+/* 080067e4 */ BL mem_heap_alloc_id \n\
 /* 080067e8 */ ADDS R7, R0, 0x0 @ Set R7 to R0 + 0x0 \n\
 /* 080067ea */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 080067ec */ MOVS R1, 0x14 @ Set R1 to 0x14 \n\
-/* 080067ee */ BL func_08006590 \n\
+/* 080067ee */ BL mem_heap_alloc_id \n\
 /* 080067f2 */ STR R0, [R7, 0x10] \n\
 /* 080067f4 */ MOV R3, R9 @ Set R3 to R9 \n\
 /* 080067f6 */ LDRB R1, [R3] \n\

@@ -12,9 +12,9 @@ glabel func_08008628 \n\
 branch_08008632: \n\
 /* 08008632 */ LDR R4, [R5, 0x14] \n\
 /* 08008634 */ LDR R0, [R5, 0x4] \n\
-/* 08008636 */ BL func_08006694 \n\
+/* 08008636 */ BL mem_heap_dealloc \n\
 /* 0800863a */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\
-/* 0800863c */ BL func_08006694 \n\
+/* 0800863c */ BL mem_heap_dealloc \n\
 /* 08008640 */ ADDS R5, R4, 0x0 @ Set R5 to R4 + 0x0 \n\
 /* 08008642 */ CMP R5, 0x0 @ Compare R5 and 0x0 \n\
 /* 08008644 */ BNE branch_08008632 \n\

@@ -89,11 +89,11 @@ branch_08009e6a: \n\
 /* 08009e76 */ LSRS R4, R4, 0x10 \n\
 /* 08009e78 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 08009e7a */ MOVS R1, 0x2 @ Set R1 to 0x2 \n\
-/* 08009e7c */ BL func_08006590 \n\
+/* 08009e7c */ BL mem_heap_alloc_id \n\
 /* 08009e80 */ ADDS R5, R0, 0x0 @ Set R5 to R0 + 0x0 \n\
 /* 08009e82 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 08009e84 */ MOVS R1, 0x10 @ Set R1 to 0x10 \n\
-/* 08009e86 */ BL func_08006590 \n\
+/* 08009e86 */ BL mem_heap_alloc_id \n\
 /* 08009e8a */ ADDS R3, R0, 0x0 @ Set R3 to R0 + 0x0 \n\
 /* 08009e8c */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 08009e8e */ STRH R7, [R5] \n\
@@ -113,11 +113,11 @@ branch_08009ea0: \n\
 /* 08009ea6 */ LSLS R1, R1, 0x1 \n\
 /* 08009ea8 */ ADDS R1, 0x2 @ Add 0x2 to R1 \n\
 /* 08009eaa */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
-/* 08009eac */ BL func_08006590 \n\
+/* 08009eac */ BL mem_heap_alloc_id \n\
 /* 08009eb0 */ ADDS R5, R0, 0x0 @ Set R5 to R0 + 0x0 \n\
 /* 08009eb2 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 08009eb4 */ MOVS R1, 0x10 @ Set R1 to 0x10 \n\
-/* 08009eb6 */ BL func_08006590 \n\
+/* 08009eb6 */ BL mem_heap_alloc_id \n\
 /* 08009eba */ ADDS R3, R0, 0x0 @ Set R3 to R0 + 0x0 \n\
 /* 08009ebc */ STR R5, [R3] \n\
 /* 08009ebe */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\

@@ -30,7 +30,7 @@ glabel func_08019bec \n\
 /* 08019c1c */ STR R0, [SP, 0x1C] \n\
 /* 08019c1e */ MOVS R0, 0x80 @ Set R0 to 0x80 \n\
 /* 08019c20 */ LSLS R0, R0, 0x1 \n\
-/* 08019c22 */ BL func_08006580 \n\
+/* 08019c22 */ BL mem_heap_alloc \n\
 /* 08019c26 */ ADDS R5, R0, 0x0 @ Set R5 to R0 + 0x0 \n\
 /* 08019c28 */ B branch_08019d30 \n\
 \n\
@@ -181,7 +181,7 @@ branch_08019d30: \n\
  \n\
 branch_08019d3a: \n\
 /* 08019d3a */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\
-/* 08019d3c */ BL func_08006694 \n\
+/* 08019d3c */ BL mem_heap_dealloc \n\
 /* 08019d40 */ LDR R0, =D_030046a4 \n\
 /* 08019d42 */ LDR R0, [R0] \n\
 /* 08019d44 */ MOV R2, R10 @ Set R2 to R10 \n\

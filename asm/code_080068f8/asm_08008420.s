@@ -6,7 +6,7 @@ glabel func_08008420 \n\
 /* 08008420 */ PUSH {R4, LR} \n\
 /* 08008422 */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 08008424 */ MOVS R0, 0x14 @ Set R0 to 0x14 \n\
-/* 08008426 */ BL func_08006580 \n\
+/* 08008426 */ BL mem_heap_alloc \n\
 /* 0800842a */ LDR R2, [R4, 0x8] \n\
 /* 0800842c */ ADDS R2, 0x3 @ Add 0x3 to R2 \n\
 /* 0800842e */ LSRS R2, R2, 0x2 \n\

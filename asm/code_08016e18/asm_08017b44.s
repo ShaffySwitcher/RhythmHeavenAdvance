@@ -15,7 +15,7 @@ branch_08017b54: \n\
 /* 08017b54 */ LDR R0, [R4, 0x64] \n\
 /* 08017b56 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08017b58 */ BEQ branch_08017b5e \n\
-/* 08017b5a */ BL func_08006694 \n\
+/* 08017b5a */ BL mem_heap_dealloc \n\
  \n\
 branch_08017b5e: \n\
 /* 08017b5e */ LDR R2, [R4] \n\
@@ -37,7 +37,7 @@ branch_08017b70: \n\
  \n\
 branch_08017b76: \n\
 /* 08017b76 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
-/* 08017b78 */ BL func_08006694 \n\
+/* 08017b78 */ BL mem_heap_dealloc \n\
 /* 08017b7c */ POP {R4} \n\
 /* 08017b7e */ POP {R0} \n\
 /* 08017b80 */ BX R0 \n\

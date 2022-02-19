@@ -33,7 +33,7 @@ void func_08000224(void) {
 	func_0800b564();
 	func_08007b4c();
 	func_08002f68();
-	func_0800650c(func_08000774(), func_08000788());
+	mem_heap_init(get_memory_heap_start(), get_memory_heap_length());
 	func_08005a0c();
 	func_08003e64();
 	func_08003f28();
@@ -84,7 +84,7 @@ void func_080002c4(void) {
 	
 	D_03004498 = 0;
 	
-	func_08000718();
+	init_ewram();
 	func_08000224();
 	func_0801e100();
 	func_0804c778();
@@ -142,7 +142,7 @@ void func_08000490(void) {
 				D_03000000->unk10(D_03000000->unk14);
 			}
 			if (D_030046a4 != NULL) {
-				func_08006694(D_030046a4);
+				mem_heap_dealloc(D_030046a4);
 			}
 			
 			D_030046a4 = NULL;
@@ -167,7 +167,7 @@ void func_08000490(void) {
 		D_03000080 = 0;
 		
 		if (D_03000000->unk18 != 0) {
-			temp = func_08006580(D_03000000->unk18);
+			temp = mem_heap_alloc(D_03000000->unk18);
             D_030046a4 = temp;
 		}
 		

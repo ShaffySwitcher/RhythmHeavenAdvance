@@ -163,7 +163,7 @@
 .set D_08000b2c, 0x08000b2c
 .set D_08000cfc, 0x08000cfc
 .set D_08000f08, 0x08000f08
-.set D_0800112c, 0x0800112c
+.set mem_heap_alloc_block_rom, 0x0800112c
 .set D_0800116c, 0x0800116c
 .set D_08001240, 0x08001240
 .set D_080012bc, 0x080012bc

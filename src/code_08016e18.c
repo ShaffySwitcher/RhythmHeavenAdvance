@@ -157,9 +157,9 @@ void func_080179f4(s32 arg1) { // universal cue?
         return;
     }
 
-    temp2 = func_08006580(0x6C);
+    temp2 = mem_heap_alloc(sizeof(struct struct_080179f4));
     if (temp->unkC != 0) {
-        temp2->unk64 = func_08006580(temp->unkC);
+        temp2->unk64 = mem_heap_alloc(temp->unkC);
     } else {
         temp2->unk64 = NULL;
     }
@@ -211,7 +211,7 @@ void func_080179f4(s32 arg1) { // universal cue?
     if (D_030046a4->unk5D != 0) {
         D_030046a4->unk18 = temp4;
         temp4->unk0 = NULL;
-        func_08006694(temp2);
+        mem_heap_dealloc(temp2);
     } else {
         D_030046a4->unk58 = temp2;
         func_08016e54(temp2->unk54.unk0);

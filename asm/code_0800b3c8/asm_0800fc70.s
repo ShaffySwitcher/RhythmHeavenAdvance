@@ -20,7 +20,7 @@ glabel func_0800fc70 \n\
  \n\
 branch_0800fc90: \n\
 /* 0800fc90 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
-/* 0800fc92 */ BL func_08006694 \n\
+/* 0800fc92 */ BL mem_heap_dealloc \n\
  \n\
 branch_0800fc96: \n\
 /* 0800fc96 */ POP {R4} \n\

@@ -4,10 +4,10 @@ asm(".syntax unified \n\
 \n\
 glabel func_080073b8 \n\
 /* 080073b8 */ PUSH {LR} \n\
-/* 080073ba */ LDR R0, =(func_08006580 + 1) \n\
-/* 080073bc */ LDR R1, =(func_08006694 + 1) \n\
+/* 080073ba */ LDR R0, =(mem_heap_alloc + 1) \n\
+/* 080073bc */ LDR R1, =(mem_heap_dealloc + 1) \n\
 /* 080073be */ BL func_0804ca80 \n\
-/* 080073c2 */ LDR R0, =(func_08006590 + 1) \n\
+/* 080073c2 */ LDR R0, =(mem_heap_alloc_id + 1) \n\
 /* 080073c4 */ BL func_0804ca94 \n\
 /* 080073c8 */ LDR R1, =D_03004f64 \n\
 /* 080073ca */ MOVS R0, 0x80 @ Set R0 to 0x80 \n\

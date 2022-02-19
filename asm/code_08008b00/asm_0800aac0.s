@@ -83,7 +83,7 @@ branch_0800ab3e: \n\
 /* 0800ab5c */ LDR R0, [R0] \n\
 /* 0800ab5e */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0800ab60 */ BEQ branch_0800ab66 \n\
-/* 0800ab62 */ BL func_08006694 \n\
+/* 0800ab62 */ BL mem_heap_dealloc \n\
  \n\
 branch_0800ab66: \n\
 /* 0800ab66 */ MOV R2, R8 @ Set R2 to R8 \n\
@@ -95,7 +95,7 @@ branch_0800ab66: \n\
 /* 0800ab74 */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
 /* 0800ab76 */ ADDS R1, 0x1 @ Add 0x1 to R1 \n\
 /* 0800ab78 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
-/* 0800ab7a */ BL func_08006590 \n\
+/* 0800ab7a */ BL mem_heap_alloc_id \n\
 /* 0800ab7e */ LDR R1, [R6, 0x1C] \n\
 /* 0800ab80 */ ADDS R1, R5, R1 @ Set R1 to R5 + R1 \n\
 /* 0800ab82 */ STR R0, [R1] \n\

@@ -206,7 +206,7 @@ branch_0801c3da: \n\
 /* 0801c4b8 */ LSRS R0, R0, 0x10 \n\
 /* 0801c4ba */ MOVS R1, 0xE0 @ Set R1 to 0xE0 \n\
 /* 0801c4bc */ LSLS R1, R1, 0x6 \n\
-/* 0801c4be */ BL func_08006590 \n\
+/* 0801c4be */ BL mem_heap_alloc_id \n\
 /* 0801c4c2 */ MOV R2, R8 @ Set R2 to R8 \n\
 /* 0801c4c4 */ LDR R1, [R2] \n\
 /* 0801c4c6 */ LDR R3, =0x494 \n\

@@ -15,7 +15,7 @@ glabel func_0800a204 \n\
 /* 0800a216 */ LSRS R4, R4, 0x10 \n\
 /* 0800a218 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 0800a21a */ MOVS R1, 0x58 @ Set R1 to 0x58 \n\
-/* 0800a21c */ BL func_08006590 \n\
+/* 0800a21c */ BL mem_heap_alloc_id \n\
 /* 0800a220 */ ADDS R6, R0, 0x0 @ Set R6 to R0 + 0x0 \n\
 /* 0800a222 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0800a224 */ STRH R4, [R6] \n\
@@ -24,23 +24,23 @@ glabel func_0800a204 \n\
 /* 0800a22a */ LSLS R5, R7, 0x1 \n\
 /* 0800a22c */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 0800a22e */ ADDS R1, R5, 0x0 @ Set R1 to R5 + 0x0 \n\
-/* 0800a230 */ BL func_08006590 \n\
+/* 0800a230 */ BL mem_heap_alloc_id \n\
 /* 0800a234 */ STR R0, [R6, 0x10] \n\
 /* 0800a236 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 0800a238 */ ADDS R1, R5, 0x0 @ Set R1 to R5 + 0x0 \n\
-/* 0800a23a */ BL func_08006590 \n\
+/* 0800a23a */ BL mem_heap_alloc_id \n\
 /* 0800a23e */ STR R0, [R6, 0x14] \n\
 /* 0800a240 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 0800a242 */ ADDS R1, R7, 0x0 @ Set R1 to R7 + 0x0 \n\
-/* 0800a244 */ BL func_08006590 \n\
+/* 0800a244 */ BL mem_heap_alloc_id \n\
 /* 0800a248 */ STR R0, [R6, 0x18] \n\
 /* 0800a24a */ LSLS R1, R7, 0x2 \n\
 /* 0800a24c */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
-/* 0800a24e */ BL func_08006590 \n\
+/* 0800a24e */ BL mem_heap_alloc_id \n\
 /* 0800a252 */ STR R0, [R6, 0x1C] \n\
 /* 0800a254 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 0800a256 */ ADDS R1, R5, 0x0 @ Set R1 to R5 + 0x0 \n\
-/* 0800a258 */ BL func_08006590 \n\
+/* 0800a258 */ BL mem_heap_alloc_id \n\
 /* 0800a25c */ STR R0, [R6, 0x20] \n\
 /* 0800a25e */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0800a260 */ CMP R2, R7 @ Check R2 - R7 \n\

@@ -211,7 +211,7 @@ branch_0800bb62: \n\
 /* 0800bb7c */ MOV R0, R8 @ Set R0 to R8 \n\
 /* 0800bb7e */ BL func_0800222c \n\
 /* 0800bb82 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
-/* 0800bb84 */ BL func_080066f8 \n\
+/* 0800bb84 */ BL mem_heap_dealloc_with_id \n\
 /* 0800bb88 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 0800bb8a */ BL func_08005de4 \n\
  \n\
