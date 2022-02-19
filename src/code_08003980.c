@@ -5,6 +5,27 @@ asm(".include \"include/gba.inc\"");//Temporary
 
 // Can be better split
 
+static s32 D_030005c8[96]; // unknown type
+static s32 D_03000748[6]; // unknown type
+static s32 D_03000760[80]; // unknown type
+static s16 D_030008a0; // unknown type
+static s16 D_030008a2; // unknown type
+static s16 D_030008a4; // unknown type
+static s16 D_030008a6; // unknown type
+static s16 D_030008a8; // unknown type
+static s16 D_030008aa; // unknown type
+static s8 D_030008ac; // unknown type
+static s8 D_030008ad; // unknown type
+static s32 D_030008b0[2]; // unknown type
+static s32 D_030008b8[16]; // unknown type
+static s32 D_030008f8[2]; // unknown type
+static s32 D_03000900[2]; // unknown type
+static s32 D_03000908[336]; // unknown type
+static s32 D_03000e48[20]; // functype_03000e98
+static functype_03000e98 D_03000e98;
+static u32 *D_03000e9c;
+static u32 D_03000ea0;
+
 #include "asm/code_08003980/asm_08003980.s"
 
 #include "asm/code_08003980/asm_080039a8.s"
@@ -280,12 +301,12 @@ void func_0800650c(u32 *arg0, u32 arg1) {
     D_03000e98 = (functype_03000e98)&D_03000e48;
 }
 
-struct struct_030046a4 *func_08006580(u32 arg0) {
+void *func_08006580(u32 arg0) {
 	return func_08006590(0, arg0);
 }
 
 // is this return type correct? it could possibly be a void*
-struct struct_030046a4 *func_08006590(u16 arg0, u32 arg1) {
+void *func_08006590(u16 arg0, u32 arg1) {
     u32 temp0 = (arg1+3)/4 + 1;
     s32 temp1 = D_03000e98(D_03000e9c, D_03000ea0, temp0);
     s32 temp2, temp3;
@@ -303,11 +324,11 @@ struct struct_030046a4 *func_08006590(u16 arg0, u32 arg1) {
         D_03000e9c[temp3] = (temp2 - temp0) << 16;
     }
 
-    if ((temp3 << 2) > D_03004ad0.unk10) {
-        D_03004ad0.unk10 = (temp3 << 2);
+    if ((temp3 * 4) > D_03004ad0.unk10) {
+        D_03004ad0.unk10 = (temp3 * 4);
     }
 
-    return (struct struct_030046a4 *)(&(D_03000e9c[temp1]) + 1);
+    return &(D_03000e9c[temp1]) + 1;
 }
 
 void func_08006628(u32 arg0, s32 arg1) {
@@ -330,7 +351,8 @@ void func_08006628(u32 arg0, s32 arg1) {
     }
 }
 
-void func_08006694(struct struct_030046a4 *arg0) {
+// could be generic arg type
+void func_08006694(void *arg0) {
     s32 temp0,temp1,temp2;
 
     if ((u32)arg0 & 0x3) {

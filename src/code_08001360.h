@@ -3,28 +3,15 @@
 
 typedef u32 (*D_0300009c_func)(void);
 
-
-extern u16 D_030000b4;
-extern u16 D_03000098;
-
-extern D_0300009c_func D_0300009c;
-
 extern u16 D_03004ac0;
 extern s16 D_03004afc;
 extern s16 D_030053b8;
 extern s16 D_03004b00;
-extern u16 D_030000a0;
-extern u16 D_030000a2;
-extern s8 D_030000a8;
-extern u16 D_030000ac;
 
 extern u16 D_030046b8;
 extern u16 D_03005378;
 extern u16 D_0300537c;
 extern u16 D_030046b4;
-extern u16 D_030000a4;
-extern u16 D_030000a6;
-extern u8 D_030000a9;
 
 extern u32 D_030053b4;
 extern u32 D_03005374;

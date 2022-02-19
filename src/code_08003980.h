@@ -11,11 +11,6 @@ struct struct_03004ad0 {
     u32 unk10;
 };
 
-void *D_03000e48; // functype_03000e98
-functype_03000e98 D_03000e98;
-u32 *D_03000e9c;
-u32 D_03000ea0;
-
 extern void *D_0800112c;
 extern void *D_0800116c;
 extern struct struct_03004ad0 D_03004ad0;
@@ -148,10 +143,10 @@ extern struct struct_03004ad0 D_03004ad0;
 // extern ? func_0800637c(?);
 // extern ? func_08006448(?);
 extern void func_0800650c(u32 *, u32);
-extern struct struct_030046a4 *func_08006580(u32);
-extern struct struct_030046a4 *func_08006590(u16, u32);
+extern void *func_08006580(u32);
+extern void *func_08006590(u16, u32);
 extern void func_08006628(u32, s32);
-extern void func_08006694(struct struct_030046a4 *);
+extern void func_08006694(void *);
 extern void func_080066f8(u16);
 extern void func_08006750(void);
 // extern ? func_0800679c(?);

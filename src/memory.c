@@ -7,6 +7,7 @@ static u16 D_0300008c;
 static u16 D_0300008e;
 static u16 D_03000090;
 static u16 D_03000092;
+static s32 unused_03000094; // unknown
 
 void func_08000718(void) {
     u16 temp = 4;
