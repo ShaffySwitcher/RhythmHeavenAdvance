@@ -2,7 +2,7 @@ asm(".syntax unified \n\
 \n\
 .balign 4, 0 \n\
 \n\
-glabel func_0803ad60 \n\
+thumb_func_start func_0803ad60 \n\
 /* 0803ad60 */ PUSH {R4-R7, LR} \n\
 /* 0803ad62 */ MOVS R7, 0x0 @ Set R7 to 0x0 \n\
 /* 0803ad64 */ LDR R0, =D_030055d0 \n\
@@ -149,7 +149,7 @@ branch_0803ae6c: \n\
 /* 0803ae7a */ ADDS R6, R0, 0x0 @ Set R6 to R0 + 0x0 \n\
 /* 0803ae7c */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 0803ae7e */ BEQ branch_0803aebc \n\
-/* 0803ae80 */ LDR R2, =D_08936cac \n\
+/* 0803ae80 */ LDR R2, =gSineTable \n\
 /* 0803ae82 */ ADDS R0, R1, 0x0 @ Set R0 to R1 + 0x0 \n\
 /* 0803ae84 */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 0803ae86 */ BGE branch_0803ae8c \n\

@@ -11,6 +11,20 @@ SECTIONS {
         build/src/memory.c.o(.bss*);
 		build/src/code_08001360.c.o(.bss*);
 		build/src/code_08003980.c.o(.bss*);
+		build/src/code_080068f8.c.o(.bss*);
+		build/src/code_08007468.c.o(.bss*);
+		build/src/code_08008b00.c.o(.bss*);
+		build/src/code_080092cc.c.o(.bss*);
+		build/src/code_0800b3c8.c.o(.bss*);
+		build/src/code_0800b778.c.o(.bss*);
+		build/src/code_08010490.c.o(.bss*);
+		build/src/code_08011ec0.c.o(.bss*);
+		build/src/code_08016e18.c.o(.bss*);
+		build/src/results.c.o(.bss*);
+		build/src/code_0801a384.c.o(.bss*);
+		build/src/code_0801d860.c.o(.bss*);
+		build/src/scenes.c.o(.bss*);
+		build/src/code_08047e50.c.o(.bss*);
 	}
 	
 	. = 0x08000000;
@@ -23,8 +37,11 @@ SECTIONS {
         build/src/code_08001360.c.o(.text*);
         build/src/code_08003980.c.o(.text*);
 		build/src/code_080068f8.c.o(.text*);
+		build/src/code_08007468.c.o(.text*);
 		build/src/code_08008b00.c.o(.text*);
+		build/src/code_080092cc.c.o(.text*);
 		build/src/code_0800b3c8.c.o(.text*);
+		build/src/code_0800b778.c.o(.text*);
 		build/src/code_08010490.c.o(.text*);
 		build/src/code_08011ec0.c.o(.text*);
 		build/src/code_08016e18.c.o(.text*);
@@ -46,9 +63,11 @@ SECTIONS {
         *libc.a:memcpy.o(.text*);
         *libc.a:strcpy.o(.text*);
         *libc.a:strlen.o(.text*);
-        build/data/data_0804f300.s.o(.text*);
-        build/data/data_08054950.s.o(.text*);
-        build/data/data_08058f58.s.o(.text*);
+		
+		build/asm/boot.s.o(.rodata*);
+        build/data/data_0804f338.s.o(.rodata*);
+        build/data/data_08054950.s.o(.rodata*);
+        build/data/data_08058f58.s.o(.rodata*);
         
         build/audio/samples/sfx_001.pcm.o(.rodata*);
         build/audio/samples/sfx_002.pcm.o(.rodata*);
