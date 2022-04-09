@@ -2,7 +2,7 @@ asm(".syntax unified \n\
 \n\
 .balign 4, 0 \n\
 \n\
-glabel func_0802e8ac \n\
+thumb_func_start func_0802e8ac \n\
 /* 0802e8ac */ PUSH {R4, R5, LR} \n\
 /* 0802e8ae */ SUB SP, 0xC \n\
 /* 0802e8b0 */ LDR R0, =D_030055d0 \n\
@@ -55,7 +55,7 @@ glabel func_0802e8ac \n\
 branch_0802e91c: \n\
 /* 0802e91c */ LSLS R0, R0, 0xA \n\
 /* 0802e91e */ BL __udivsi3 \n\
-/* 0802e922 */ LDR R2, =D_08936cac \n\
+/* 0802e922 */ LDR R2, =gSineTable \n\
 /* 0802e924 */ MOVS R3, 0x80 @ Set R3 to 0x80 \n\
 /* 0802e926 */ LSLS R3, R3, 0x2 \n\
 /* 0802e928 */ ADDS R0, R0, R3 @ Set R0 to R0 + R3 \n\

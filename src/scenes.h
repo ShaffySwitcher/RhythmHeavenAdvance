@@ -1,5 +1,4 @@
-#ifndef GUARD_SCENES_H
-#define GUARD_SCENES_H
+#pragma once
 
 // Sneaky Spirits
 
@@ -146,9 +145,9 @@ extern void func_08021a0c(void);
 // extern ? func_08021a60(?);
 extern void func_08021d38(u32, struct struct_030055d0_sub *);
 extern void func_08021dcc(void);
-extern void func_08021dd8(struct KarateManInfo *);
-extern void func_08021e40(struct KarateManInfo *);
-extern void func_08021e58(struct KarateManInfo *);
+extern void func_08021dd8(struct KarateManInfoSubstruct *);
+extern void func_08021e40(struct KarateManInfoSubstruct *);
+extern void func_08021e58(struct KarateManInfoSubstruct *);
 extern void func_08021e88(void);
 // extern ? func_08021f04(?);
 extern void func_08022010(u32);
@@ -2053,5 +2052,3 @@ extern void func_080450e8(u32 arg0);                                        // [
 // extern ? func_08047e1c(?);
 // extern ? func_08047e20(?);
 // extern ? func_08047e24(?);
-
-#endif

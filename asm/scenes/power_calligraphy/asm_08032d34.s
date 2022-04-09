@@ -2,7 +2,7 @@ asm(".syntax unified \n\
 \n\
 .balign 4, 0 \n\
 \n\
-glabel func_08032d34 \n\
+thumb_func_start func_08032d34 \n\
 /* 08032d34 */ PUSH {R4-R7, LR} \n\
 /* 08032d36 */ MOV R7, R10 @ Set R7 to R10 \n\
 /* 08032d38 */ MOV R6, R9 @ Set R6 to R9 \n\
@@ -131,7 +131,7 @@ branch_08032e20: \n\
 /* 08032e34 */ LDR R0, =0x7ff \n\
 /* 08032e36 */ ANDS R4, R0 @ Set R4 to R4 & R0 \n\
 /* 08032e38 */ LSLS R0, R4, 0x1 \n\
-/* 08032e3a */ LDR R2, =D_08936cac \n\
+/* 08032e3a */ LDR R2, =gSineTable \n\
 /* 08032e3c */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 08032e3e */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 08032e40 */ LDRSH R0, [R0, R3] \n\
@@ -146,7 +146,7 @@ branch_08032e20: \n\
 /* 08032e52 */ LDR R1, =0x7ff \n\
 /* 08032e54 */ ANDS R0, R1 @ Set R0 to R0 & R1 \n\
 /* 08032e56 */ LSLS R0, R0, 0x1 \n\
-/* 08032e58 */ LDR R3, =D_08936cac \n\
+/* 08032e58 */ LDR R3, =gSineTable \n\
 /* 08032e5a */ ADDS R0, R0, R3 @ Set R0 to R0 + R3 \n\
 /* 08032e5c */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 08032e5e */ LDRSH R0, [R0, R1] \n\
