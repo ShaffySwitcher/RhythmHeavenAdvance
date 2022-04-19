@@ -63,7 +63,8 @@ struct struct_080179f4_sub1 {
     u32 null18;
     u32 null1C;
     u32 null20;
-    u32 null24;
+    u16 null24;
+    u8  unk26;
     s16 unk28;
     u16 null2A;
     u16 unk2C;
@@ -102,7 +103,8 @@ struct struct_030046a4_sub2 {
 };
 
 struct struct_030046a4 {
-	u8 pad00[0xC];
+	u8 pad00[0xA];
+    s16 unkA;
 	s16 unkC;
 	s16 unkE;
 	struct_030046a4_union unk10;
@@ -117,11 +119,54 @@ struct struct_030046a4 {
 	s32 unk60;
     u8 pad64[4];
     struct struct_030046a4_sub3 unk68;
-	u8 pad78[2];
+	u8 pad78;
+    s8 unk79;
 	u8 unk7A;
 	u8 pad7B[0xB];
     u16 unk86;
 };
+
+
+// Null = "Data Not Used YET"
+struct struct_030053c0 {
+    u32 null0;
+    u32 unk4;      // [D_030053c4] ??
+    u32 null8;
+    u16 unkC;      // [D_030053cc] ??
+    u16 nullE;
+    u32 null10;
+    u32 unk14;     // [D_030053d4] ??
+    u32 null18;
+    u32 null1C;
+    u32 null20[4];
+    u32 null30[4];
+    u32 null40[4];
+    u32 null50[4];
+    u32 null60[4];
+    u32 null70[4];
+    u32 null80[4];
+    u32 null90[4];
+    u32 nullA0[4];
+    u32 nullB0[4];
+    u32 nullC0[4];
+    u32 nullD0[4];
+    u32 nullE0[4];
+    u32 nullF0[4];
+    u32 null100[4];
+    u32 null110[4];
+    u32 null120[4];
+    u32 null130[4];
+    u32 null140[4];
+    u32 null150[4];
+    u32 null160[4];
+    u32 null170[4];
+    u32 null180[4];
+    u16 unk190;    // [D_03005550] BeatScript: Music Volume
+    u16 unk192;    // [D_03005552] BeatScript: Music Channel Selection Volume
+    u16 unk194;    // [D_03005554] BeatScript: Music Channel Selection
+    u16 unk196;    // [D_03005556] BeatScript: Music Pitch
+};
+
 
 struct struct_030055d0_sub {
     u8 unk0:4;
@@ -139,6 +184,7 @@ struct struct_030055d0_sub {
     u8 pad28[5];
     u8 unk2D;
 };
+
 
 struct KarateManInfoSubstruct {
 	u8 unk4:4;
@@ -171,6 +217,7 @@ struct KarateManInfo {
     u8 unk36;
 };
 
+
 struct RapMenInfo {
     u8 unk0;
     u32 *unk4;
@@ -182,6 +229,7 @@ struct RapMenInfo {
     u16 unk12;
     u8 unk14;
 };
+
 
 struct WizardsWaltzSparkle {
     struct ScaledEntity *entity; // Entity:  unk0
@@ -228,6 +276,7 @@ struct WizardsWaltzInfo {
     u8  flowerCount;    // Counter: unk1B1
     u8  isTutorial;     // Flag:    unk1B2
 };
+
 
 struct RhythmTweezersTweezers {
     struct ScaledEntity *entity; // Entity:  Tweezers
@@ -277,8 +326,34 @@ struct RhythmTweezersInfo {
 };
 
 
+struct SneakySpiritsInfo {
+    u32 *unk0;          // Pointer: ??? (Related to Tutorial Text)
+    u8  version;        // Value:   Version
+    u8  rainSlow;       // Flag:    Slow-Motion Rain
+    s16 rainDrops[30];      // Entity:  Raindrops
+    u16 rainDropNext;       // Counter: Next Raindrop to Update
+    s16 rainSplashes[20];   // Entity:  Rain Splashes
+    u16 rainSplashNext;     // Counter: Next Rain Splash to Update
+    s16 tree;           // Entity:  Tree
+    s16 bow;            // Entity:  Bow
+    u8  arrowReady;     // Flag:    Bow Has Arrow
+    s16 door;           // Entity:  Door
+    s16 backWall;       // Entity:  Back Wall
+    s16 ghostWalk;      // Entity:  Sneaky Spirit (Moving)
+    u16 unk7A;          // Value:   7 (used for determining horizontal position; only assigned in startup)
+    s16 ghostMask;      // Entity:  Wall Mask (used to hide the Sneaky Spirit when moving low)
+    s16 ghostHit;       // Entity:  Sneaky Spirit (Hit)
+    u16 ghostHeight;    // Value:   Sneaky Spirit Height of Next Motion { Default = 0x100 }
+    u32 *rainChannel;   // Pointer: IRAM Sound Channel Playing Rain/Wind SFX
+    s16 text;           // Entity:  Tutorial Text
+    u8  slowMotionHit;  // Flag:    Slow-Motion Effect On Hit
+    u8  freezeRain;     // Flag:    Freeze Slow-Motion Rain
+    s16 tutorialGhost;  // Entity:  Sneaky Spirit (Tutorial Example)
+};
+
+
 struct PrologueInfo {
-    u8  ver;        // Value: Version
+    u8  ver;        // Value:  Version
     s16 entity2;    // Entity: Object 0
     s16 entity4;    // Entity: Object 1
     s16 entity6;    // Entity: Object 2
@@ -291,11 +366,13 @@ struct struct_030055d0 {
         struct RapMenInfo rapMen;
         struct WizardsWaltzInfo wizardsWaltz;
         struct RhythmTweezersInfo rhythmTweezers;
+        struct SneakySpiritsInfo sneakySpirits;
         struct PrologueInfo prologues;
     } gameInfo;
 };
 
 extern struct struct_030046a4 *D_030046a4;
 extern s32 D_03005380;
+extern struct struct_030053c0 D_030053c0;
 extern struct struct_030055d0 *D_030055d0;
 extern s16 gSineTable[];
