@@ -6,7 +6,7 @@
 // For readability. !TODO - CHANGE/REMOVE
 #define gKarateManInfo D_030055d0->gameInfo.karateMan
 
-extern s16 D_03004afc;
+extern u16 D_03004afc;
 
 // !TODO
 extern void func_0804cebc(s32, s16, s8);
