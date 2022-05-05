@@ -64,3 +64,11 @@
 // extern ? func_08011c1c(?);
 // extern ? func_08011d8c(?);
 // extern ? func_08011e74(?);
+
+typedef struct {
+	u8 unk0;
+	u8 unk1[10];
+	u8 unkB;
+	u16 unkC[10];
+	u32 unk20;
+} struct_08011a18;
