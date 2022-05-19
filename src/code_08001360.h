@@ -42,7 +42,7 @@ extern u8 func_0800184c(void);
 // extern ? func_080018e0(?);
 extern void func_08001958(u32);
 extern u16 func_08001964(void);
-//extern u16 func_08001980(u16); // prototype causes matching issues in func_08008e10
+extern u16 func_08001980(u16);
 // extern ? func_080019a4(?);
 // extern ? func_080019e4(?);
 extern void func_08001a24_stub(void);
@@ -87,7 +87,7 @@ extern u8 func_08001fc4(u8 *);
 // extern ? func_080025d8(?);
 // extern ? func_080025fc(?);
 // extern ? func_08002630(?);
-// extern ? func_08002634(?);
+extern u32 *func_08002634();
 // extern ? func_0800267c(?);
 // extern ? func_08002698(?);
 // extern ? func_080026c4(?);
