@@ -3,8 +3,8 @@
 extern const struct SequenceData s_tebyoushi_pati_seqData;
 extern const struct SequenceData s_HC_seqData;
 
-extern u32 *D_089deed4[];  // This is an index of pointers to palettes.
-extern u32 *D_089deecc[];  // This is also an index of pointers to palettes (more like sub-palettes).
+extern u32 *D_089deed4[];  // Index of pointers to palettes.
+extern u32 *D_089deecc[];  // Another index of pointers to palettes (more like sub-palettes).
 
 extern u16 D_089ded00[8];  // Seemingly numbers of ticks for animations.
 extern u8* D_089dece0[];   // Contains Donpan animation indexes. (Subarrays are the same animation but for different donpans)
@@ -18,20 +18,19 @@ u32* func_080206a0(u32 arg0) {
     return D_089dec38[arg0][gBonOdoriInfo.unk0];
 }
 
-void func_080206c0() {
+void func_080206c0(void) {
     u32* anim;
-    u32 temp4;
     u32 i;
-    s32 xpos = 0x28;
-    s16 temp_3 = 0x78;
-    u16 temp_2 = 0x4800;
+    s32 xPos = 0x28;
+    s16 temp = 0x78;
+    u16 temp1 = 0x4800;
     
     for (i = 0; i < 4; i++) {
         
         anim = func_0802075c(0, i);
-        gBonOdoriInfo.unk44[i] = func_0804d160(D_03005380, anim, 0x7f, xpos, temp_3, temp_2, 1, 0x7f, 0);;
+        gBonOdoriInfo.unk44[i] = func_0804d160(D_03005380, anim, 0x7f, xPos, temp, temp1, 1, 0x7f, 0);;
         gBonOdoriInfo.unk4C[i] = 0;
-        xpos += 0x35;
+        xPos += 0x35;
     }
 
     gBonOdoriInfo.unk54 = 0;
@@ -67,13 +66,13 @@ void func_080207f8(u32 arg0) {
 
 void func_0802080c(u32 arg0) {
     u32 i;
-    for (i=0; i<3; i++) {
+    for (i = 0; i < 3; i++) {
         gBonOdoriInfo.unk4C[i] = func_0800c3a4(arg0);
     }
     
 }
 
-void func_08020834() {
+void func_08020834(void) {
     u32 i;
     for (i = 0; i < 4; i++) {
         if (gBonOdoriInfo.unk4C[i]) {
@@ -83,13 +82,13 @@ void func_08020834() {
     }
 }
 
-void func_0802085c() {
+void func_0802085c(void) {
     func_0800c604(0);
     func_08017578();
     D_03004b10.unk54[0xc2] = 0x7C00;
 }
 
-void func_08020880() {
+void func_08020880(void) {
     u32 data;
 
     func_0800c604(0);
@@ -97,7 +96,7 @@ void func_08020880() {
     func_08005d38(data, func_0802085c, 0);
 }
 
-void func_080208c0() {
+void func_080208c0(void) {
     u32 data;
     func_0800c604(0);
     data = func_080087b4(func_0800c3b8(), &D_089ded10);
@@ -137,8 +136,7 @@ void func_080208ec(u32 arg0) {
     gBonOdoriInfo.unk864 = 0;
 }
 
-void func_08020a48() {
-    
+void func_08020a48(void) {
 }
 
 #include "asm/scenes/bon_odori/asm_08020a4c.s" // Decomp attempt at https://decomp.me/scratch/lhu93
@@ -202,22 +200,22 @@ void func_08020da0(u32 arg0) {
     func_08001fe0(func_0800c3b8(), func_0800c3a4(arg0), 7, gBonOdoriInfo.unk5C, &gBonOdoriInfo.unk460, D_03004b10.unk254);
 }
 
-void func_08020e1c() {
+void func_08020e1c(void) {
     func_080018e0(0, &D_03004b10.unk54, 0xe0, 0x10, 0x200);
     func_080018e0(0, &D_03004b10.unk254, 0xe0, 0x10, 0x200);
 }
 
-void func_08020e50() {
+void func_08020e50(void) {
     func_0800186c(gBonOdoriInfo.unk58, &D_03004b10.unk54, 0xe0, 0x10, 0x200);
     func_0800186c(gBonOdoriInfo.unk5C, &D_03004b10.unk254, 0xe0, 0x10, 0x200);
 }
 
-void func_08020e90() {
+void func_08020e90(void) {
     func_0800186c(&gBonOdoriInfo.unk60, &D_03004b10.unk54, 0xe0, 0x10, 0x200);
     func_0800186c(&gBonOdoriInfo.unk460, &D_03004b10.unk254, 0xe0, 0x10, 0x200);
 }
 
-void func_08020ed4() {
+void func_08020ed4(void) {
     gBonOdoriInfo.unk860 = 0;
 }
 
@@ -246,7 +244,7 @@ void func_08020ee8(void) {
     }
 }
 
-void func_08020f48() {
+void func_08020f48(void) {
     if (gBonOdoriInfo.unk864 != 0) {
         gBonOdoriInfo.unk864 -= 1;
         if (gBonOdoriInfo.unk864 == 0) {
@@ -259,18 +257,18 @@ void func_08020f48() {
     }
 }
 
-void func_08020f8c() {
+void func_08020f8c(void) {
     func_0800e128();
 }
 
 // Cue call handler
-void func_08020f98(u32 unused_arg0, struct struct_080179f4_sub* arg1, u32 arg2) {
+void func_08020f98(u32 arg0, struct struct_080179f4_sub *arg1, u32 arg2) {
     arg1->unk0.u8[0] = arg2;
     gBonOdoriInfo.unk862 = arg2;
 }
 
 // Cue update
-u8 func_08020fb0(u32 unused_arg0, struct struct_080179f4_sub* unused_arg1, u32 arg2) {
+u8 func_08020fb0(u32 arg0, struct struct_080179f4_sub *arg1, u32 arg2) {
     u32 temp = func_0800c3a4(0x30);
     if (arg2 > temp) {
         return 1;
@@ -280,31 +278,30 @@ u8 func_08020fb0(u32 unused_arg0, struct struct_080179f4_sub* unused_arg1, u32 a
 }
 
 // Cue end
-void func_08020fcc(u32 unused_arg0, struct struct_080179f4_sub* unused_arg1) {
-
+void func_08020fcc(u32 arg0, struct struct_080179f4_sub *arg1) {
 }
 
 // Successful cue hit
-void func_08020fd0(u32 unused_arg0, struct struct_080179f4_sub* arg1) {
+void func_08020fd0(u32 arg0, struct struct_080179f4_sub *arg1) {
     func_080207ec(arg1->unk0.u8[0]);
     func_08002634(&s_HC_seqData);
 }
 
 // "Barely/near" hit
-void func_08020fe8(u32 unused_arg0, struct struct_080179f4_sub* arg1) {
+void func_08020fe8(u32 arg0, struct struct_080179f4_sub *arg1) {
     func_080207ec(arg1->unk0.u8[0]);
     func_08002634(&s_tebyoushi_pati_seqData);
     gBonOdoriInfo.unk42 = TRUE;
 }
 
 // Cue miss
-void func_0802100c(u32 unused_arg0, struct struct_080179f4_sub* unused_arg1) {
+void func_0802100c(u32 arg0, struct struct_080179f4_sub *arg1) {
     gBonOdoriInfo.unk860 += 1;
     func_0800bc40();
     gBonOdoriInfo.unk42 = TRUE;
 }
 
-void func_08021034() {
+void func_08021034(void) {
     gBonOdoriInfo.unk864 = func_0800c3a4(6);
     func_08017338(0, 0);
     func_080207ec(gBonOdoriInfo.unk862);
@@ -312,9 +309,10 @@ void func_08021034() {
     func_08002634(&s_HC_seqData);
 }
 
-void func_08021084() {
+void func_08021084(void) {
     u32 i;
     u32* temp;
+
     for (i = 0; i < 4; i++) {
         if (gBonOdoriInfo.unk4C[i] != 0) {
             continue;
@@ -340,10 +338,8 @@ void func_08021084() {
 }
 
 
-void func_08021188() {
-
+void func_08021188(void) {
 }
 
-void func_0802118c() {
-
+void func_0802118c(void) {
 }
