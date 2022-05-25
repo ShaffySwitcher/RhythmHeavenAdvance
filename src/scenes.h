@@ -73,20 +73,20 @@ extern void func_0801fc40(void);    // [func_0801fc40] GRAPHICAL Func_01 - Unkno
 // Bon Odori
 
 extern u32* func_080206a0(u32);
-extern void func_080206c0();
-extern u32* func_0802075c(u32 animation, u32 donpan);  // Returns donpan animation
-extern void func_08020778(u32 animation, u32 donpan); // Potentially sets donpan animation?
+extern void func_080206c0(void);
+extern u32* func_0802075c(u32, u32);  // Returns donpan animation
+extern void func_08020778(u32, u32); // Potentially sets donpan animation?
 extern void func_080207d0(u32);
 extern void func_080207ec(u32);
 extern void func_080207f8(u32);
 extern void func_0802080c(u32);
-extern void func_08020834();
-extern void func_0802085c();
-extern void func_08020880();
-extern void func_080208c0();
+extern void func_08020834(void);
+extern void func_0802085c(void);
+extern void func_08020880(void);
+extern void func_080208c0(void);
 extern void func_080208ec(u32);
-extern void func_08020a48();
-extern void func_08020a4c(u32 arg0, s32 arg1, u32 arg2);
+extern void func_08020a48(void);
+extern void func_08020a4c(u32, s32, u32);
 extern void func_08020be4(u8);
 extern void func_08020bf4(s32);
 extern void func_08020c0c(s32);
@@ -96,23 +96,23 @@ extern void func_08020c4c(u32);
 extern void func_08020c8c(u32);
 extern void func_08020d20(u32);
 extern void func_08020da0(u32);
-extern void func_08020e1c();
-extern void func_08020e50();
-extern void func_08020e90();
-extern void func_08020ed4();
-extern void func_08020ee8();
-extern void func_08020f48();
-extern void func_08020f8c();
-extern void func_08020f98(u32, struct struct_080179f4_sub*, u32);
-extern u8 func_08020fb0(u32, struct struct_080179f4_sub*, u32);
-extern void func_08020fcc(u32, struct struct_080179f4_sub*);
-extern void func_08020fd0(u32, struct struct_080179f4_sub*);
-extern void func_08020fe8(u32, struct struct_080179f4_sub*);
-extern void func_0802100c();
-extern void func_08021034();
-extern void func_08021084();
-extern void func_08021188();
-extern void func_0802118c();
+extern void func_08020e1c(void);
+extern void func_08020e50(void);
+extern void func_08020e90(void);
+extern void func_08020ed4(void);
+extern void func_08020ee8(void);
+extern void func_08020f48(void);
+extern void func_08020f8c(void);
+extern void func_08020f98(u32, struct struct_080179f4_sub *, u32);
+extern u8 func_08020fb0(u32, struct struct_080179f4_sub *, u32);
+extern void func_08020fcc(u32, struct struct_080179f4_sub *);
+extern void func_08020fd0(u32, struct struct_080179f4_sub *);
+extern void func_08020fe8(u32, struct struct_080179f4_sub *);
+extern void func_0802100c(u32, struct struct_080179f4_sub *);
+extern void func_08021034(void);
+extern void func_08021084(void);
+extern void func_08021188(void);
+extern void func_0802118c(void);
 
 // Karate Man
 
