@@ -1,6 +1,5 @@
-#include "global.h"
-#include "code_08003980.h"
 #include "code_0800b778.h"
+#include "code_08003980.h"
 #include "src/lib_0804c870.h"
 
 // Could use better split
@@ -130,7 +129,7 @@ u32 func_0800c1a8(void) {
 
 // Parse beat values.
 u32 func_0800c3a4(u32 arg0) {
-    func_08007b80(arg0 << 8, D_030053c0.unk14);
+    fast_divsi3(arg0 << 8, D_030053c0.unk14);
 }
 
 u32 func_0800c3b8() {

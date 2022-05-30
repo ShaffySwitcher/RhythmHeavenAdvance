@@ -1,4 +1,3 @@
-#include "global.h"
 #include "code_08003980.h"
 
 asm(".include \"include/gba.inc\"");//Temporary
@@ -158,8 +157,10 @@ static s32 D_03000908[336]; // unknown type
 
 #include "asm/code_08003980/asm_08004d44.s"
 
+// D_08936b54 function 1
 #include "asm/code_08003980/asm_08004da0.s"
 
+// D_08936b54 function 2
 #include "asm/code_08003980/asm_08004dc0.s"
 
 #include "asm/code_08003980/asm_08004e60.s"
@@ -192,8 +193,10 @@ static s32 D_03000908[336]; // unknown type
 
 #include "asm/code_08003980/asm_08005424.s"
 
+// D_08936b64 function 1
 #include "asm/code_08003980/asm_080054b0.s"
 
+// D_08936b64 function 2
 #include "asm/code_08003980/asm_080054f0.s"
 
 #include "asm/code_08003980/asm_080055fc.s"
@@ -206,8 +209,10 @@ static s32 D_03000908[336]; // unknown type
 
 #include "asm/code_08003980/asm_0800584c.s"
 
+// D_08936b74 function 1
 #include "asm/code_08003980/asm_08005858.s"
 
+// D_08936b74 function 2
 #include "asm/code_08003980/asm_08005878.s"
 
 #include "asm/code_08003980/asm_080058b0.s"

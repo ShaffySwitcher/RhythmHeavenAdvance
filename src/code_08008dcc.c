@@ -1,4 +1,3 @@
-#include "global.h"
 #include "code_08008dcc.h"
 
 //#include "code_08001360.h" // Header was probably not included: u16 func_08001980(u16) read as s32(s32)
@@ -96,7 +95,7 @@ s32 func_08008eec(s32 arg0[], u32 arg1) {
 }
 
 s32 func_08008f04(u32 arg0, u32 arg1, u32 arg2, u32 arg3) {
-    return func_08007b80((arg1 - arg0) * arg2, arg3) + arg0;
+    return fast_divsi3((arg1 - arg0) * arg2, arg3) + arg0;
 }
 
 s32 func_08008f1c(void) {
