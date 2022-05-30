@@ -352,11 +352,11 @@ void func_08021818(struct KarateManCue *cue) {
     temp1 -= (temp * temp1 * temp) >> 0x10;
     temp2 = 0x35 - temp1;
 
-    temp3 = func_08007b80(0x2400, temparg) + 120;    // Object's X Position
-    temp4 = func_08007b80(temp2 << 8, temparg) + 80; // Object's Y Position
+    temp3 = fast_divsi3(0x2400, temparg) + 120;    // Object's X Position
+    temp4 = fast_divsi3(temp2 << 8, temparg) + 80; // Object's Y Position
     cue->unkC = temp3 << 8;
     cue->unk10 = temp4 << 8;
-    cue->unk14 = func_08007b80(0x3500, temparg) + 80;
+    cue->unk14 = fast_divsi3(0x3500, temparg) + 80;
     cue->unk2A = Div(0x10000, temparg);  // Calculate Scale
 }
 
