@@ -445,14 +445,15 @@ u8 *func_080081a8(u8 *arg1, u8 *arg2) {
 
 #include "asm/code_08007468/asm_080087b4.s"
 
-s32 func_080087d4(s32 arg0, s32 arg1, s32 arg2) {
-    if (arg0 < arg1) {
-        return arg1;
+// [func_080087d4] MATH UTIL - Clamp Signed Integer
+s32 func_080087d4(s32 var, s32 min, s32 max) {
+    if (var < min) {
+        return min;
     }
-    if (arg0 > arg2) {
-        return arg2;
+    if (var > max) {
+        return max;
     }
-    return arg0;
+    return var;
 }
 
 #include "asm/code_08007468/asm_080087e8.s"
@@ -493,12 +494,12 @@ void func_08008b00(u32 unused_arg0, u32 unused_arg1, s16 arg2, s24_8 arg3, s24_8
     ret_sp14 = fast_divsi3(160 * 256, arg8);
     ret_sp8 = fast_divsi3(ret_r5 * 240, 160);
 
-    temp_r7 = INT_TO_FIXED(-ret_r5) / 2;
+    temp_r7 = INT_TO_FIXED(-ret_r5) >> 1;
 
     ret_spc = fast_divsi3(INT_TO_FIXED(ret_r5), 160);
     temp_r7 += fast_divsi3(ret_r5 * arg7, 160);
     arg3 += fast_divsi3(ret_r5 * arg6, 160);
-    ret_sp10 = fast_divsi3(INT_TO_FIXED(ret_r5), 160);  
+    ret_sp10 = fast_divsi3(INT_TO_FIXED(ret_r5), 160);
 
     temp_sp18 = ret_sp14 * temp_sp0;
 
