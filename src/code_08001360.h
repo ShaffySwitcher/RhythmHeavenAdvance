@@ -64,7 +64,7 @@ extern u32 func_08001f34(struct struct_08001f94 *);
 extern u32 func_08001f64(struct struct_08001f94 *);
 extern u32 func_08001f94(struct struct_08001f94 *);
 extern u8 func_08001fc4(u8 *);
-extern void func_08001fe0(u16, u8, u32, u32*, u32*, u16*);
+extern void func_08001fe0(u16, u8, u32, u16*, u16*, u16*);
 // extern ? func_08002018(?);
 // extern ? func_08002050(?);
 // extern ? func_08002088(?);
@@ -73,10 +73,10 @@ extern void func_08001fe0(u16, u8, u32, u32*, u32*, u16*);
 // extern ? func_08002194(?);
 // extern ? func_080021b8(?);
 // extern ? func_0800222c(?);
-// extern ? func_08002260(?);
+extern void func_08002260(s16, u32); // ROTATION/SCALING PARAMETER GROUP - Update Horizontal & Vertical Flip (and probably more)
 // extern ? func_08002280(?);
-// extern ? func_080022bc(?);
-// extern ? func_080022d8(?);
+extern void func_080022bc(s16); // ROTATION/SCALING PARAMETER GROUP - ?? (Reduced Angle Precision)
+extern void func_080022d8(s16); // ROTATION/SCALING PARAMETER GROUP - ?? (Fine Angle Precision)
 // extern ? func_080022f4(?);
 // extern ? func_08002310(?);
 // extern ? func_0800232c(?);
