@@ -1,4 +1,4 @@
-#include "src/engines/fireworks.h"
+#include "engines/fireworks.h"
 
 #include "src/code_08001360.h"
 #include "src/code_08003980.h"
@@ -43,7 +43,7 @@ void func_0802f3f4(void) {
 // [func_0802f420] MAIN - Init
 void func_0802f420(u32 ver) {
     u8 i;
-    u32 *textAnim;
+    struct Animation *textAnim;
     u32 temp;
 
     gFireworksInfo.version = ver;
@@ -608,7 +608,7 @@ void func_08030298(void) {
 
 // [func_0803029c] COMMON Func_01 - Display Text
 void func_0803029c(char *text) {
-    u32 *textAnim;
+    struct Animation *textAnim;
 
     if (text == NULL) {
         func_0804d770(D_03005380, gFireworksInfo.textSprite, 0);
