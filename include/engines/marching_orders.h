@@ -3,6 +3,8 @@
 #include "global.h"
 #include "engines.h"
 
+#include "games/marching_orders/graphics/marching_orders_graphics.h"
+
 // Engine Types:
 struct MarchingOrdersInfo {
     /* add fields here */
@@ -13,7 +15,7 @@ struct MarchingOrdersCue {
 };
 
 struct MarchingSfxData {
-    const struct SequenceData *sound;
+    struct SequenceData *sound;
     u16 volume;
     s16 pitch;
 };
@@ -61,29 +63,20 @@ enum MarchingOrdersSoundEffectsEnum {
 };
 
 
-// OAM Animations:
-
-
-// Palettes:
-
-
-// Sound Effects:
-
-
 // Engine Data:
 extern const char D_0805a670[];
 
 
 // Engine Definition Data:
-extern const struct Animation *const *const marching_anim_table[];
-extern const struct CompressedGraphics *const marching_buffered_textures[];
-extern const struct GraphicsTable *const marching_gfx_tables[];
-extern const struct Vector2 D_089e5368[][4];
-extern const struct MarchingSfxData marching_sfx_table[][12];
+extern struct Animation **marching_anim_table[];
+extern struct CompressedGraphics *marching_buffered_textures[];
+extern struct GraphicsTable *marching_gfx_tables[];
+extern struct Vector2 D_089e5368[][4];
+extern struct MarchingSfxData marching_sfx_table[][12];
 
 
 // Functions:
-extern const struct Animation *func_08034100(u32 anim); // Get Animation
+extern struct Animation *func_08034100(u32 anim); // Get Animation
 extern void marching_init_gfx3(void); // Graphics Init. 3
 extern void marching_init_gfx2(void); // Graphics Init. 2
 extern void marching_init_gfx1(void); // Graphics Init. 1

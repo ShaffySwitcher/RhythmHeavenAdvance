@@ -3,6 +3,8 @@
 #include "global.h"
 #include "engines.h"
 
+#include "games/wizards_waltz/graphics/wizards_waltz_graphics.h"
+
 // Engine Types:
 struct WizardsWaltzEntity {
     struct AffineSprite *sprite;
@@ -36,39 +38,9 @@ struct WizardsWaltzCue {
 };
 
 
-// Engine Macros/Enums:
-
-
-// OAM Animations:
-extern const struct Animation anim_wizard_fly[];
-extern const struct Animation anim_wizard_cast_spell[];
-extern const struct Animation anim_wizard_sparkle[];
-extern const struct Animation anim_wizards_waltz_sprout_eaten[];
-extern const struct Animation anim_wizards_waltz_sprout_grow[];
-extern const struct Animation anim_wizards_waltz_sprout_appear[];
-extern const struct Animation anim_wizards_waltz_girl_idle[];
-extern const struct Animation anim_wizards_waltz_girl_happy[];
-extern const struct Animation anim_wizards_waltz_girl_upset[];
-extern const struct Animation anim_wizards_waltz_shadow[];
-extern const struct Animation anim_wizards_waltz_sprout_appear_tutorial[];
-
-
-// Palettes:
-
-
-// Sound Effects:
-extern const struct SequenceData s_witch_furu_seqData;
-extern const struct SequenceData s_witch_candy_seqData;
-extern const struct SequenceData s_witch_cake_seqData;
-extern const struct SequenceData s_witch_donats_seqData;
-
-
-// Engine Data:
-
-
 // Engine Definition Data:
-extern const struct CompressedGraphics *const wizards_waltz_buffered_textures[];
-extern const struct GraphicsTable gfx_table_wizards_waltz[];
+extern struct CompressedGraphics *wizards_waltz_buffered_textures[];
+extern struct GraphicsTable gfx_table_wizards_waltz[];
 
 
 // Functions:
@@ -90,4 +62,4 @@ extern void wizards_waltz_cue_miss(struct Cue *, struct WizardsWaltzCue *); // C
 extern void wizards_waltz_input_event(u32 pressed, u32 released); // Input Event
 extern void wizards_waltz_common_beat_animation(void); // Common Event 0 (Beat Animation, Unimplemented)
 extern void wizards_waltz_common_display_text(void); // Common Event 1 (Display Text, Unimplemented)
-extern void wizards_waltz_common_init_tutorial(const struct Scene *); // Common Event 2 (Init. Tutorial)
+extern void wizards_waltz_common_init_tutorial(struct Scene *); // Common Event 2 (Init. Tutorial)

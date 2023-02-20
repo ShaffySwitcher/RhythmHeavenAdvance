@@ -7,7 +7,7 @@
 #include "src/lib_0804ca80.h"
 
 // For readability.
-#define gPrologueInfo ((struct ProloguePolyrhythmInfo *)D_030055d0)
+#define gPrologueInfo ((struct PolyrhythmPrologueInfo *)D_030055d0)
 
 
   //  //  //  PROLOGUE: POLYRHYTHM  //  //  //
@@ -25,7 +25,7 @@ void func_0804643c(void) {
     u32 task;
 
     func_0800c604(0);
-    task = func_08002ee0(get_current_mem_id(), prologue_polyrhythm_gfx_table, 0x2000);
+    task = func_08002ee0(get_current_mem_id(), polyrhythm_prologue_gfx_table, 0x2000);
     run_func_after_task(task, func_0804642c, 0);
 }
 
@@ -36,20 +36,20 @@ void func_0804646c(void) {
 
     func_0800c604(0);
     func_08006d80();
-    task = func_080087b4(get_current_mem_id(), prologue_polyrhythm_buffered_textures);
+    task = func_080087b4(get_current_mem_id(), polyrhythm_prologue_buffered_textures);
     run_func_after_task(task, func_0804643c, 0);
 }
 
 
 // [func_0804649c] MAIN - Init
-void func_0804649c(u32 ver) {
+void polyrhythm_prologue_engine_start(u32 ver) {
     gPrologueInfo->ver = ver;
 
     func_0804646c();
     scene_show_obj_layer();
     scene_set_bg_layer_display(BG_LAYER_1, TRUE, 0, 0, 0, 29, 1);
 
-    gPrologueInfo->textSprite = func_0804d160(D_03005380, anim_prologue_polyrhythm_title, 0, 112, 144, 0, 0, 0x7f, 0);
+    gPrologueInfo->textSprite = func_0804d160(D_03005380, anim_polyrhythm_prologue_title, 0, 112, 144, 0, 0, 0x7f, 0);
 }
 
 
@@ -59,12 +59,12 @@ void func_080464f8(void) {
 
 
 // [func_080464fc] MAIN - Update
-void func_080464fc(void) {
+void polyrhythm_prologue_engine_update(void) {
 }
 
 
 // [func_08046500] MAIN - Close
-void func_08046500(void) {
+void polyrhythm_prologue_engine_stop(void) {
 }
 
 

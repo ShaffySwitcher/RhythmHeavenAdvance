@@ -6,7 +6,7 @@
 #include "src/text_printer.h"
 #include "src/code_0800b3c8.h"
 #include "src/code_0800b778.h"
-#include "scenes/gameplay.h"
+#include "src/scenes/gameplay.h"
 #include "src/lib_0804ca80.h"
 
 // For readability.
@@ -148,7 +148,7 @@ void karate_tutorial_wait_for_input(void) {
 
 
 // COMMON Func_03 - Set Tutorial Destination Scene
-void karate_common_init_tutorial(const struct Scene *scene) {
+void karate_common_init_tutorial(struct Scene *scene) {
     if (scene != NULL) {
         gameplay_enable_tutorial(TRUE);
         gameplay_set_skip_destination(scene);
@@ -405,7 +405,7 @@ void karate_stop_serious_mode(void) {
 void karate_cue_hit(struct Cue *cue, struct KarateManCue *data) {
     struct KarateManInfo *karateManStruct = gKarateManInfo;
     struct KarateJoe *joe = &karateManStruct->joe;
-    const struct Animation *anim;
+    struct Animation *anim;
     u32 bgFace;
     u32 isBgFaceVer;
     u32 isHigh;

@@ -1,5 +1,5 @@
 #include "global.h"
-#include "scenes/gameplay.h"
+#include "gameplay.h"
 #include "src/code_08001360.h"
 #include "src/code_08003980.h"
 #include "src/task_pool.h"
@@ -22,17 +22,17 @@ enum PauseMenuOptionsEnum {
 };
 
 
-extern const struct Scene D_089cfd60; // Perfect Certificate Scene
-extern const struct BeatScript D_089cfda4[]; // Generic Fade-Out Sequence
-extern const struct Scene D_089d77e4; // Results Scene (Level-type)
-extern const struct Scene D_089d7c18; // Results Scene (Epilogue)
-extern const struct Scene D_089ddbcc; // Debug Menu Scene
+extern struct Scene D_089cfd60; // Perfect Certificate Scene
+extern const struct Beatscript D_089cfda4[]; // Generic Fade-Out Sequence
+extern struct Scene D_089d77e4; // Results Scene (Level-type)
+extern struct Scene D_089d7c18; // Results Scene (Epilogue)
+extern struct Scene D_089ddbcc; // Debug Menu Scene
 
 
 /* MAIN GAMEPLAY SCENE */
 
 
-static const struct Scene *D_03001328; // ?
+static struct Scene *D_03001328; // ?
 
 
 // [func_08016e04] Set Sound Effect Original Tempo
@@ -54,25 +54,25 @@ struct SoundPlayer *gameplay_align_soundplayer_to_tempo(struct SoundPlayer *play
 
 
 // [func_08016e54] Play Sound
-struct SoundPlayer *gameplay_play_sound(const struct SequenceData *sfx) {
+struct SoundPlayer *gameplay_play_sound(struct SequenceData *sfx) {
     return gameplay_align_soundplayer_to_tempo(play_sound(sfx));
 }
 
 
 // [func_08016e64] Play Sound
-struct SoundPlayer *gameplay_play_sound_in_player(u32 player, const struct SequenceData *sfx) {
+struct SoundPlayer *gameplay_play_sound_in_player(u32 player, struct SequenceData *sfx) {
     return gameplay_align_soundplayer_to_tempo(play_sound_in_player(player, sfx));
 }
 
 
 // [func_08016e74] Play Sound
-struct SoundPlayer *gameplay_play_sound_w_pitch_volume(const struct SequenceData *sfx, u32 volume, u32 pitch) {
+struct SoundPlayer *gameplay_play_sound_w_pitch_volume(struct SequenceData *sfx, u32 volume, u32 pitch) {
     return gameplay_align_soundplayer_to_tempo(play_sound_w_pitch_volume(sfx, volume, pitch));
 }
 
 
 // [func_08016e84] Play Sound
-struct SoundPlayer *gameplay_play_sound_in_player_w_pitch_volume(u32 player, const struct SequenceData *sfx, u32 volume, s32 pitch) {
+struct SoundPlayer *gameplay_play_sound_in_player_w_pitch_volume(u32 player, struct SequenceData *sfx, u32 volume, s32 pitch) {
     return gameplay_align_soundplayer_to_tempo(play_sound_in_player_w_pitch_volume(player, sfx, volume, pitch));
 }
 
@@ -295,25 +295,25 @@ void gameplay_assess_irrelevant_inputs(u32 arg) {
 
 
 // [func_080173dc] Set Next Cue Spawn SFX
-void gameplay_set_next_cue_spawn_sfx(const struct SequenceData *sfx) {
+void gameplay_set_next_cue_spawn_sfx(struct SequenceData *sfx) {
     gGameplayInfo->nextCueSpawnSfx = sfx;
 }
 
 
 // [func_080173e8] Set Next Cue Hit SFX
-void gameplay_set_next_cue_hit_sfx(const struct SequenceData *sfx) {
+void gameplay_set_next_cue_hit_sfx(struct SequenceData *sfx) {
     gGameplayInfo->nextCueHitSfx = sfx;
 }
 
 
 // [func_080173f4] Set Next Cue Barely SFX
-void gameplay_set_next_cue_barely_sfx(const struct SequenceData *sfx) {
+void gameplay_set_next_cue_barely_sfx(struct SequenceData *sfx) {
     gGameplayInfo->nextCueBarelySfx = sfx;
 }
 
 
 // [func_08017400] Set Next Cue Miss SFX
-void gameplay_set_next_cue_miss_sfx(const struct SequenceData *sfx) {
+void gameplay_set_next_cue_miss_sfx(struct SequenceData *sfx) {
     gGameplayInfo->nextCueMissSfx = sfx;
 }
 
@@ -336,7 +336,7 @@ void gameplay_enable_tutorial(u32 isTutorial) {
 
 
 // [func_08017458] Set skipDestination
-void gameplay_set_skip_destination(const struct Scene *scene) {
+void gameplay_set_skip_destination(struct Scene *scene) {
     gGameplayInfo->skipDestination = scene;
 }
 
@@ -348,7 +348,7 @@ void gameplay_set_skip_button(u32 buttons) {
 
 
 // [func_0801747c] Set Skip Destination
-void gameplay_set_tutorial(const struct Scene *scene) {
+void gameplay_set_tutorial(struct Scene *scene) {
     if (scene != NULL) {
         gameplay_enable_tutorial(TRUE);
         gameplay_set_skip_destination(scene);
@@ -513,7 +513,7 @@ void gameplay_set_mercy_count(u32 total) {
 
 // [func_080177f0] Scene Stop
 void gameplay_stop_scene(s32 unused) {
-    const struct Scene *tempScene;
+    struct Scene *tempScene;
 
     func_0804e0c4(D_03005380, 0x10);
     gameplay_reset_cues(); // Reset Cues
@@ -970,49 +970,49 @@ void gameplay_enable_cue_input_overlap(u32 allow) {
 
 
 // [func_08018088] Set Cue Spawn SFX
-void gameplay_set_cue_spawn_sfx(struct Cue *cue, const struct SequenceData *sfx) {
+void gameplay_set_cue_spawn_sfx(struct Cue *cue, struct SequenceData *sfx) {
     cue->spawnSfx = sfx;
 }
 
 
 // [func_0801808c] Set Cue Hit SFX
-void gameplay_set_cue_hit_sfx(struct Cue *cue, const struct SequenceData *sfx) {
+void gameplay_set_cue_hit_sfx(struct Cue *cue, struct SequenceData *sfx) {
     cue->hitSfx = sfx;
 }
 
 
 // [func_08018090] Set Cue Barely SFX
-void gameplay_set_cue_barely_sfx(struct Cue *cue, const struct SequenceData *sfx) {
+void gameplay_set_cue_barely_sfx(struct Cue *cue, struct SequenceData *sfx) {
     cue->barelySfx = sfx;
 }
 
 
 // [func_08018094] Set Cue Miss SFX
-void gameplay_set_cue_miss_sfx(struct Cue *cue, const struct SequenceData *sfx) {
+void gameplay_set_cue_miss_sfx(struct Cue *cue, struct SequenceData *sfx) {
     cue->missSfx = sfx;
 }
 
 
 // [func_08018098] Get Cue Spawn SFX
-const struct SequenceData *gameplay_get_cue_spawn_sfx(struct Cue *cue) {
+struct SequenceData *gameplay_get_cue_spawn_sfx(struct Cue *cue) {
     return cue->spawnSfx;
 }
 
 
 // [func_0801809c] Get Cue Hit SFX
-const struct SequenceData *gameplay_get_cue_hit_sfx(struct Cue *cue) {
+struct SequenceData *gameplay_get_cue_hit_sfx(struct Cue *cue) {
     return cue->hitSfx;
 }
 
 
 // [func_080180a0] Get Cue Barely SFX
-const struct SequenceData *gameplay_get_cue_barely_sfx(struct Cue *cue) {
+struct SequenceData *gameplay_get_cue_barely_sfx(struct Cue *cue) {
     return cue->barelySfx;
 }
 
 
 // [func_080180a4] Get Cue Miss SFX
-const struct SequenceData *gameplay_get_cue_miss_sfx(struct Cue *cue) {
+struct SequenceData *gameplay_get_cue_miss_sfx(struct Cue *cue) {
     return cue->missSfx;
 }
 
@@ -1090,7 +1090,7 @@ void gameplay_get_previous_cue_info(struct Cue *cue, struct Cue **prev, void **i
 
 
 // [func_080182ac] Set D_03001328
-void gameplay_pause_menu_set_quit_destination(const struct Scene *scene) {
+void gameplay_pause_menu_set_quit_destination(struct Scene *scene) {
     D_03001328 = scene;
 };
 

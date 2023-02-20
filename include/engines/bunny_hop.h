@@ -3,6 +3,8 @@
 #include "global.h"
 #include "engines.h"
 
+#include "games/bunny_hop/graphics/bunny_hop_graphics.h"
+
 // Engine Types:
 struct BunnyHopInfo {
     /* add fields here */
@@ -13,29 +15,17 @@ struct BunnyHopCue {
 };
 
 
-// Engine Macros/Enums:
-
-
-// OAM Animations:
-
-
-// Palettes:
-
-
-// Sound Effects:
-
-
 // Engine Data:
 extern const char D_0805a8ac[];
 
 
 // Engine Definition Data:
-extern const struct CompressedGraphics *const bunny_hop_buffered_textures[];
-extern const struct GraphicsTable *const bunny_hop_gfx_tables[];
-extern const struct SequenceData *const bunny_hop_bgm_harmony_parts[];
-extern const struct SequenceData *const bunny_hop_bgm_drum_fills[];
-extern const Palette *const bunny_hop_palettes[];
-extern const struct Animation *const bunny_hop_platform_anim[];
+extern struct CompressedGraphics *bunny_hop_buffered_textures[];
+extern struct GraphicsTable *bunny_hop_gfx_tables[];
+extern struct SequenceData *bunny_hop_bgm_harmony_parts[];
+extern struct SequenceData *bunny_hop_bgm_drum_fills[];
+extern Palette *bunny_hop_palettes[];
+extern struct Animation *bunny_hop_platform_anim[];
 
 
 // Functions:
@@ -66,7 +56,7 @@ extern void bunny_hop_cue_miss(struct Cue *, struct BunnyHopCue *); // Cue - Mis
 extern void bunny_hop_input_event(u32 pressed, u32 released); // Input Event
 extern void bunny_hop_common_beat_animation(void); // Common Event 0 (Beat Animation, Unimplemented)
 extern void bunny_hop_common_display_text(void); // Common Event 1 (Display Text, Unimplemented)
-extern void bunny_hop_common_init_tutorial(const struct Scene *); // Common Event 2 (Init. Tutorial)
+extern void bunny_hop_common_init_tutorial(struct Scene *); // Common Event 2 (Init. Tutorial)
 // extern ? func_080388d8(?);
 extern void func_0803899c(); // Engine Event 01 (?)
 // extern ? func_08038a84(?);

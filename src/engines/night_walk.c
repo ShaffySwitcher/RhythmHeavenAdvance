@@ -5,7 +5,7 @@
 #include "src/code_08007468.h"
 #include "src/text_printer.h"
 #include "src/code_0800b778.h"
-#include "scenes/gameplay.h"
+#include "src/scenes/gameplay.h"
 #include "src/lib_0804ca80.h"
 
 asm(".include \"include/gba.inc\""); // Temporary
@@ -297,7 +297,7 @@ s32 night_walk_scroll_stars(void) {
 
 
 // End of Star Size-Up
-void night_walk_finish_star_expansion(s32 arg0, s16 sprite, const struct Animation *anim) {
+void night_walk_finish_star_expansion(s32 arg0, s16 sprite, struct Animation *anim) {
     s32 frame;
 
     func_0804d8f8(D_03005380, sprite, anim, 0, 1, 0, 0);
@@ -589,7 +589,7 @@ void play_drumtech_kit_no_anim(const struct DrumTechKit *drumKit, u32 inputs) {
 
 // Update DrumTech Open/Close Hi-Hat
 void update_drumtech_open_hihat(const struct DrumTechKit *drumKit, u16 inputs, u16 released) {
-    const struct SequenceData *const *sounds = D_089e2ef8;
+    struct SequenceData *const *sounds = D_089e2ef8;
     s16 hiHatSprite = D_03001568->hiHatSprite;
 
     if (inputs & DPAD_UP) {
@@ -669,7 +669,7 @@ void set_drumtech_hihat_gfx(s16 hiHatSprite) {
 
 
 // Set DrumTech Pedal Hi-Hat Graphics
-void set_drumtech_pedal_hihat_gfx(s16 pedalHiHatSprite, s16 rightLegSprite, const struct Animation *useKick, const struct Animation *useHiHat) {
+void set_drumtech_pedal_hihat_gfx(s16 pedalHiHatSprite, s16 rightLegSprite, struct Animation *useKick, struct Animation *useHiHat) {
     D_03001568->pedalHiHatSprite = pedalHiHatSprite;
     D_03001568->rightLegSprite = rightLegSprite;
     D_03001568->useKickPedalAnim = useKick;
@@ -793,7 +793,7 @@ void night_walk_engine_event_stub(void) {
 
 
 // Engine Event 0x03 (Set Ending Script)
-void night_walk_set_ending_script(const struct BeatScript *endScript) {
+void night_walk_set_ending_script(const struct Beatscript *endScript) {
     gNightWalkInfo->endScript = endScript;
 }
 

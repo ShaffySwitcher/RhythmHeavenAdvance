@@ -3,6 +3,8 @@
 #include "global.h"
 #include "engines.h"
 
+#include "games/rap_men/graphics/rap_men_graphics.h"
+
 // Engine Types:
 struct RapMenInfo {
     u8 version;
@@ -55,41 +57,22 @@ enum RappingAnimationsEnum {
 };
 
 
-// OAM Animations:
-
-
-// Palettes:
-
-
-// Sound Effects:
-extern const struct SequenceData s_rap_un_seqData;
-extern const struct SequenceData s_rap_uun_seqData;
-extern const struct SequenceData s_f_rapW_v_Un_seqData;
-extern const struct SequenceData s_f_rapW_v_Uun_seqData;
-extern const struct SequenceData s_intro_two_seqData;
-extern const struct SequenceData s_f_rapW_v_CheckIt_seqData;
-extern const struct SequenceData s_RC_seqData;
-extern const struct SequenceData s_tom_M_seqData;
-extern const struct SequenceData s_SD1_seqData;
-extern const struct SequenceData s_CC4_seqData;
-
-
 // Engine Data:
 extern const char D_0805a8b0[]; // Empty Default Text
 
 
 // Engine Definition Data:
-extern const struct Animation *const *const rap_men_anim_table[]; // Animation Index (index of pairs of animation pointers; 0 = Rap Men; 1 = Rap Women)
-extern const struct CompressedGraphics *const rap_men_buffered_textures[]; // Buffered Textures List
-extern const struct GraphicsTable *const rap_men_gfx_tables[]; // Graphics Table Index
-extern const u8 rapping_anim_map[];
-extern const u8 rapping_anim_durations[];
-extern const struct SequenceData *const rap_men_cue_hit_sfx[2][2];
-extern const struct SequenceData *const rap_men_cue_miss_sfx[2];
+extern struct Animation **rap_men_anim_table[]; // Animation Index (index of pairs of animation pointers; 0 = Rap Men; 1 = Rap Women)
+extern struct CompressedGraphics *rap_men_buffered_textures[]; // Buffered Textures List
+extern struct GraphicsTable *rap_men_gfx_tables[]; // Graphics Table Index
+extern u8 rapping_anim_map[];
+extern u8 rapping_anim_durations[];
+extern struct SequenceData *rap_men_cue_hit_sfx[2][2];
+extern struct SequenceData *rap_men_cue_miss_sfx[2];
 
 
 // Functions:
-extern const struct Animation *rap_men_get_anim(u32); // Get Animation
+extern struct Animation *rap_men_get_anim(u32); // Get Animation
 extern void rap_men_init_gfx3(void); // Graphics Init. 3
 extern void rap_men_init_gfx2(void); // Graphics Init. 2
 extern void rap_men_init_gfx1(void); // Graphics Init. 1

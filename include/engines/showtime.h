@@ -3,6 +3,7 @@
 #include "global.h"
 #include "engines.h"
 
+#include "games/showtime/graphics/showtime_graphics.h"
 
 struct ShowtimeInfo {
     struct TextObject1 *unk0;
@@ -51,29 +52,8 @@ struct ShowtimeCue {
 // Engine Macros/Enums:
 enum ShowtimeVersionsEnum {
     SHOWTIME_VER_0,
-    SHOWTIME_VER_REMIX3
+    SHOWTIME_VER_REMIX_3
 };
-
-
-// OAM Animations:
-extern const struct Animation anim_showtime_block_pink[];
-extern const struct Animation anim_showtime_block[];
-extern const struct Animation anim_showtime_penguin_beat[];
-extern const struct Animation anim_showtime_big_penguin_beat[];
-extern const struct Animation anim_showtime_penguin_jump_prepare[];
-extern const struct Animation anim_showtime_big_penguin_jump_prepare[];
-extern const struct Animation anim_showtime_penguin_jump[];
-extern const struct Animation anim_showtime_big_penguin_jump[];
-extern const struct Animation anim_showtime_penguin_slide[];
-extern const struct Animation anim_showtime_big_penguin_slide[];
-
-
-// Palettes:
-
-
-// Sound Effects:
-extern const struct SequenceData s_block_hit_seqData;
-extern const struct SequenceData s_f_esa_jump_seqData;
 
 
 // Engine Data:
@@ -81,13 +61,13 @@ extern const char D_0805a3cc[];
 
 
 // Engine Definition Data:
-extern const struct CompressedGraphics *const showtime_buffered_textures[]; // Buffered Textures List
-extern const struct GraphicsTable *const showtime_gfx_tables[]; // Graphics Table Index
-extern const struct Animation *const showtime_penguin_beat_anim[];
-extern const struct Animation *const showtime_penguin_jump_prepare_anim[];
-extern const struct Animation *const showtime_penguin_jump_anim[];
-extern const struct Animation *const showtime_penguin_slide_anim[];
-extern const u32 D_089e3b14[][5];
+extern struct CompressedGraphics *showtime_buffered_textures[]; // Buffered Textures List
+extern struct GraphicsTable *showtime_gfx_tables[]; // Graphics Table Index
+extern struct Animation *showtime_penguin_beat_anim[];
+extern struct Animation *showtime_penguin_jump_prepare_anim[];
+extern struct Animation *showtime_penguin_jump_anim[];
+extern struct Animation *showtime_penguin_slide_anim[];
+extern u32 D_089e3b14[][5];
 
 
 // Functions:

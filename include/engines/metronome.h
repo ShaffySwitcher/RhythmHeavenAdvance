@@ -3,6 +3,8 @@
 #include "global.h"
 #include "engines.h"
 
+#include "games/metronome/graphics/metronome_graphics.h"
+
 // Engine Types:
 struct MetronomeInfo {
     /* add fields here */
@@ -20,18 +22,6 @@ struct MetronomeUnknownMovementData {
 };
 
 
-// Engine Macros/Enums:
-
-
-// OAM Animations:
-
-
-// Palettes:
-
-
-// Sound Effects:
-
-
 // Engine Data:
 extern const char D_0805a694[];
 extern const char D_0805a6c0[];
@@ -39,10 +29,10 @@ extern const char D_0805a6c8[];
 
 
 // Engine Definition Data:
-extern const struct CompressedGraphics *const metronome_buffered_textures[];
-extern const struct GraphicsTable metronome_gfx_table[];
-extern const struct MetronomeUnknownMovementData D_089e5890[];
-extern const struct MetronomeUnknownMovementData D_089e58a0[];
+extern struct CompressedGraphics *metronome_buffered_textures[];
+extern struct GraphicsTable metronome_gfx_table[];
+extern struct MetronomeUnknownMovementData D_089e5890[];
+extern struct MetronomeUnknownMovementData D_089e58a0[];
 
 
 // Functions:
@@ -68,4 +58,4 @@ extern void metronome_cue_miss(struct Cue *, struct MetronomeCue *); // Cue - Mi
 extern void metronome_input_event(u32 pressed, u32 released); // Input Event
 extern void metronome_common_beat_animation(void); // Common Event 0 (Beat Animation, Unimplemented)
 extern void metronome_common_display_text(u32); // Common Event 1 (Display Text)
-extern void metronome_common_init_tutorial(const struct Scene *); // Common Event 2 (Init. Tutorial)
+extern void metronome_common_init_tutorial(struct Scene *); // Common Event 2 (Init. Tutorial)

@@ -3,6 +3,8 @@
 #include "global.h"
 #include "engines.h"
 
+#include "games/mannequin_factory/graphics/mannequin_factory_graphics.h"
+
 // Engine Types:
 struct MannequinFactoryInfo {
 };
@@ -11,27 +13,12 @@ struct MannequinFactoryCue {
 };
 
 
-// Engine Macros/Enums:
-
-
-// OAM Animations:
-
-
-// Palettes:
-
-
-// Sound Effects:
-
-
-// Engine Data:
-
-
 // Engine Definition Data:
-extern const struct Animation *const mannequin_finish_anim[];
-extern const u16 mannequin_input_buttons[];
-extern const struct CompressedGraphics *const mannequin_buffered_textures[];
-extern const struct GraphicsTable mannequin_gfx_table[];
-extern const struct SequenceData *const D_089df404[];
+extern struct Animation *mannequin_finish_anim[];
+extern u16 mannequin_input_buttons[];
+extern struct CompressedGraphics *mannequin_buffered_textures[];
+extern struct GraphicsTable mannequin_gfx_table[];
+extern struct SequenceData *D_089df404[];
 
 
 // Functions:

@@ -7,7 +7,7 @@
 #include "src/lib_0804ca80.h"
 
 // For readability.
-#define gPrologueInfo ((struct PrologueBunnyHopInfo *)D_030055d0)
+#define gPrologueInfo ((struct BunnyHopPrologueInfo *)D_030055d0)
 
 
   //  //  //  PROLOGUE: BUNNY HOP  //  //  //
@@ -25,7 +25,7 @@ void func_08046e18(void) {
     u32 task;
 
     func_0800c604(0);
-    task = func_08002ee0(get_current_mem_id(), prologue_bunny_hop_gfx_table, 0x2000);
+    task = func_08002ee0(get_current_mem_id(), bunny_hop_prologue_gfx_table, 0x2000);
     run_func_after_task(task, func_08046e08, 0);
 }
 
@@ -36,21 +36,21 @@ void func_08046e48(void) {
 
     func_0800c604(0);
     func_08006d80();
-    task = func_080087b4(get_current_mem_id(), prologue_bunny_hop_buffered_textures);
+    task = func_080087b4(get_current_mem_id(), bunny_hop_prologue_buffered_textures);
     run_func_after_task(task, func_08046e18, 0);
 }
 
 
 // [func_08046e78] MAIN - Init
-void func_08046e78(u32 ver) {
+void bunny_hop_prologue_engine_start(u32 ver) {
     gPrologueInfo->ver = ver;
 
     func_08046e48();
     scene_show_obj_layer();
     scene_set_bg_layer_display(BG_LAYER_1, TRUE, 0, 0, 0, 29, 1);
 
-    gPrologueInfo->textSprite = func_0804d160(D_03005380, anim_prologue_bunny_hop_title, 0, 22, 162, 0, 0, 0x7f, 0);
-    gPrologueInfo->rabbitsSprite = func_0804d160(D_03005380, anim_prologue_bunny_hop_rabbits, 0, 114, 120, 0, 0, 0x7f, 0);
+    gPrologueInfo->textSprite = func_0804d160(D_03005380, anim_bunny_hop_prologue_title, 0, 22, 162, 0, 0, 0x7f, 0);
+    gPrologueInfo->rabbitsSprite = func_0804d160(D_03005380, anim_bunny_hop_prologue_rabbits, 0, 114, 120, 0, 0, 0x7f, 0);
 }
 
 
@@ -60,12 +60,12 @@ void func_08046f00(void) {
 
 
 // [func_08046f04] MAIN - Update
-void func_08046f04(void) {
+void bunny_hop_prologue_engine_update(void) {
 }
 
 
 // [func_08046f08] MAIN - Close
-void func_08046f08(void) {
+void bunny_hop_prologue_engine_stop(void) {
 }
 
 

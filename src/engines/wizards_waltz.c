@@ -212,7 +212,7 @@ void wizards_waltz_cue_spawn(struct Cue *cue, struct WizardsWaltzCue *info, u32 
     s32 xPos;
     s32 scale;
     struct AffineSprite *sprite;
-    const struct Animation *anim;
+    struct Animation *anim;
     u32 z;
     u32 doubleSize;
 
@@ -325,7 +325,7 @@ void wizards_waltz_common_display_text(void) {
 
 
 // Common Event 2 (Init. Tutorial)
-void wizards_waltz_common_init_tutorial(const struct Scene *skipDest) {
+void wizards_waltz_common_init_tutorial(struct Scene *skipDest) {
     if (skipDest != NULL) {
         gameplay_enable_tutorial(TRUE);
         gameplay_set_skip_destination(skipDest);

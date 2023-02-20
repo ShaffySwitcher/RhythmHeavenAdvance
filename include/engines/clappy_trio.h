@@ -3,6 +3,8 @@
 #include "global.h"
 #include "engines.h"
 
+#include "games/clappy_trio/graphics/clappy_trio_graphics.h"
+
 // Engine Types:
 struct ClappyTrioInfo {
     /* add fields here */
@@ -31,26 +33,14 @@ enum ClappyTrioAnimationsEnum {
 };
 
 
-// OAM Animations:
-
-
-// Palettes:
-
-
-// Sound Effects:
-
-
-// Engine Data:
-
-
 // Engine Definition Data:
-extern const struct Animation *const *const clappy_trio_anim_table[];
-extern const struct CompressedGraphics *const clappy_trio_buffered_textures[];
-extern const struct GraphicsTable *const clappy_trio_gfx_tables[];
+extern struct Animation **clappy_trio_anim_table[];
+extern struct CompressedGraphics *clappy_trio_buffered_textures[];
+extern struct GraphicsTable *clappy_trio_gfx_tables[];
 
 
 // Functions:
-extern const struct Animation *clappy_trio_get_anim(u32 anim); // Get Animation
+extern struct Animation *clappy_trio_get_anim(u32 anim); // Get Animation
 // extern ? func_080303a4(?);
 // extern ? func_0803050c(?);
 // extern ? func_0803051c(?);
@@ -73,4 +63,4 @@ extern void clappy_trio_input_event(u32 pressed, u32 released); // Input Event
 extern void clappy_trio_common_beat_animation(void); // Common Event 0 (Beat Animation)
 extern void clappy_trio_common_display_text(const char *); // Common Event 1 (Display Text)
 extern void func_08030bf0(); // Engine Event 05 (Hide Text Box)
-extern void clappy_trio_common_init_tutorial(const struct Scene *); // Common Event 2 (Init. Tutorial)
+extern void clappy_trio_common_init_tutorial(struct Scene *); // Common Event 2 (Init. Tutorial)
