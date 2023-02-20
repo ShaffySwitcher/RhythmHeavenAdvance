@@ -3,7 +3,9 @@
 #include "global.h"
 #include "engines.h"
 #include "engines/night_walk.h"
-#include "scenes/studio.h"
+#include "src/scenes/studio.h"
+
+#include "games/drum_studio/graphics/drum_studio_graphics.h"
 
 // Engine Types:
 struct StudioDrummer {
@@ -121,7 +123,7 @@ typedef void (*DrumPlayFunc)(void);
 #define CALL_DRUM_PLAY_FUNC(func) ((DrumPlayFunc)(((u32)func)|1))()
 
 struct DrumStudioMonitorData {
-    const Palette *palette;
+    Palette *palette;
     const struct GraphicsTable *gfxTable;
     s24_8 bg2VelX;
     s24_8 bg2VelY;
@@ -130,16 +132,16 @@ struct DrumStudioMonitorData {
 };
 
 struct DrumLessonPattern {
-    const struct BeatScript *beat1;
-    const struct BeatScript *beat2;
-    const struct SequenceData *audienceSfx;
+    const struct Beatscript *beat1;
+    const struct Beatscript *beat2;
+    struct SequenceData *audienceSfx;
     const char *dialogue;
 };
 
 struct DrumTeacherExpression {
-    const struct Animation *head;
-    const struct Animation *rightArm;
-    const struct Animation *leftArm;
+    struct Animation *head;
+    struct Animation *rightArm;
+    struct Animation *leftArm;
 };
 
 
@@ -161,88 +163,6 @@ enum DrumLessonsRanksEnum {
 };
 
 
-// OAM Animations:
-extern const struct Animation anim_drum_student_kit_snare[];
-extern const struct Animation anim_drum_student_kit_bass[];
-extern const struct Animation anim_drum_student_kit_tom[];
-extern const struct Animation anim_drum_student_kit_hihat[];
-extern const struct Animation anim_drum_student_kit_pedal_hihat[];
-extern const struct Animation anim_drum_student_kit_pedal_r[];
-extern const struct Animation anim_drum_student_kit_pedal_l[];
-extern const struct Animation anim_drum_student_kit_splash[];
-extern const struct Animation anim_drum_student_kit_crash[];
-extern const struct Animation anim_drum_student_head[];
-extern const struct Animation anim_drum_student_happy[];
-extern const struct Animation anim_drum_student_body[];
-extern const struct Animation anim_drum_student_use_pedal_r[];
-extern const struct Animation anim_drum_student_use_pedal_l[];
-extern const struct Animation anim_drum_student_use_pedal_hihat[];
-extern const struct Animation anim_drum_student_use_snare_l[];
-extern const struct Animation anim_drum_student_use_snare_r[];
-extern const struct Animation anim_drum_student_kit_seat[];
-extern const struct Animation anim_drum_student_coffee_steam[];
-extern const struct Animation anim_drum_studio_song_title_bubble[];
-extern const struct Animation anim_drum_studio_save_option_y[];
-extern const struct Animation anim_drum_studio_memory_warning[];
-extern const struct Animation anim_drum_teacher_kit_snare[];
-extern const struct Animation anim_drum_teacher_kit_bass[];
-extern const struct Animation anim_drum_teacher_kit_tom[];
-extern const struct Animation anim_drum_teacher_kit_hihat[];
-extern const struct Animation anim_drum_teacher_kit_pedal_r[];
-extern const struct Animation anim_drum_teacher_kit_pedal_l[];
-extern const struct Animation anim_drum_teacher_kit_splash[];
-extern const struct Animation anim_drum_teacher_kit_crash[];
-extern const struct Animation anim_drum_teacher_head[];
-extern const struct Animation anim_drum_teacher_body[];
-extern const struct Animation anim_drum_teacher_use_pedal_r[];
-extern const struct Animation anim_drum_teacher_use_pedal_l[];
-extern const struct Animation anim_drum_teacher_use_snare_l[];
-extern const struct Animation anim_drum_teacher_use_snare_r[];
-extern const struct Animation anim_drum_teacher_kit_seat[];
-extern const struct Animation anim_drum_teacher_watching[];
-extern const struct Animation anim_drum_teacher_finish_pattern_face[];
-extern const struct Animation anim_drum_teacher_finish_pattern_arm[];
-extern const struct Animation anim_drum_teacher_fail_pattern_face[];
-extern const struct Animation anim_drum_teacher_fail_pattern_arm_r[];
-extern const struct Animation anim_drum_teacher_fail_pattern_arm_l[];
-extern const struct Animation anim_drum_teacher_finish_lesson_face[];
-extern const struct Animation anim_drum_teacher_finish_lesson_arm[];
-extern const struct Animation anim_drum_lessons_accuracy_light1[];
-extern const struct Animation anim_drum_lessons_accuracy_light2[];
-extern const struct Animation anim_drum_lessons_accuracy_light3[];
-extern const struct Animation anim_drum_lessons_accuracy_light4[];
-extern const struct Animation anim_drum_lessons_accuracy_light5[];
-extern const struct Animation anim_drum_lessons_accuracy_light6[];
-extern const struct Animation anim_drum_lessons_accuracy_light7[];
-extern const struct Animation anim_drum_lessons_text_adv_icon[];
-extern const struct Animation anim_drum_lessons_rank_s[];
-extern const struct Animation anim_drum_lessons_slow_icon[];
-extern const struct Animation anim_drum_lessons_rank_c[];
-extern const struct Animation anim_drum_lessons_rank_b[];
-extern const struct Animation anim_drum_lessons_rank_a[];
-extern const struct Animation anim_drum_lessons_rank_s[];
-extern const struct Animation anim_drum_studio_save_option_y[];
-extern const struct Animation anim_drum_studio_save_option_n[];
-
-
-// Palettes:
-extern const Palette drum_lessons_bg_screen_pal[];
-extern const Palette drum_lessons_obj_pal[];
-extern const Palette drum_lessons_bg_pal[];
-
-
-// Sound Effects:
-extern const struct SequenceData s_menu_cancel2_seqData;
-extern const struct SequenceData s_f_send_mes_seqData;
-extern const struct SequenceData s_f_lesson_c_seqData;
-extern const struct SequenceData s_f_lesson_b_seqData;
-extern const struct SequenceData s_f_lesson_a_seqData;
-extern const struct SequenceData s_f_lesson_s_seqData;
-extern const struct SequenceData s_menu_cursor1_seqData;
-extern const struct SequenceData s_menu_kettei2_seqData;
-extern const struct SequenceData s_menu_cancel3_seqData;
-
-
 // Engine Data:
 extern const char D_0805a074[];
 extern const char D_0805a088[];
@@ -257,27 +177,27 @@ extern const char D_0805a3a0[];
 
 
 // Engine Definition Data:
-extern const struct DrumTeacherExpression drum_teacher_expressions_anim[];
-extern const DrumPlayFunc D_089e16b0[];
-extern const struct DrumTechKit *const drum_teacher_kits[]; // Drum Samurai's Kit?
-extern const struct Animation *const drum_lessons_accuracy_light_anim[]; // Accuracy Meter Lights 1-7
-extern const struct Vector2 drum_lessons_accuracy_light_positions[]; // Accuracy Meter Light Positions
-extern const struct Animation *const drum_lessons_rank_anim[];
-extern const char *const drum_lessons_rank_text[];
-extern const struct SequenceData *const drum_lessons_rank_sfx[];
-extern const struct DrumStudioMonitorData D_089e17a0[];
-extern const DrumPlayFunc D_089e2988[];
-extern const struct DrumTechKit *const drum_studio_kits[];
-extern const struct CompressedGraphics *const drum_studio_buffered_textures[];
-extern const struct GraphicsTable drum_studio_gfx_table[];
-extern const struct GraphicsTable drum_lessons_gfx_table[];
-extern const struct BeatScript D_089e2ad4[];
-extern const struct BeatScript D_089e2b04[];
-extern const struct Vector2 D_089e2b58[];
-extern const struct Vector2 D_089e2b78[];
-extern const struct SpritePlaybackData D_089e2b98[];
-extern const u16 D_089e2ba8[];
-extern const struct GameEngine D_089e2ea0;
+extern struct DrumTeacherExpression drum_teacher_expressions_anim[];
+extern DrumPlayFunc D_089e16b0[];
+extern struct DrumTechKit *drum_teacher_kits[]; // Drum Samurai's Kit?
+extern struct Animation *drum_lessons_accuracy_light_anim[]; // Accuracy Meter Lights 1-7
+extern struct Vector2 drum_lessons_accuracy_light_positions[]; // Accuracy Meter Light Positions
+extern struct Animation *drum_lessons_rank_anim[];
+extern const char *drum_lessons_rank_text[];
+extern struct SequenceData *drum_lessons_rank_sfx[];
+extern struct DrumStudioMonitorData D_089e17a0[];
+extern DrumPlayFunc D_089e2988[];
+extern struct DrumTechKit *drum_studio_kits[];
+extern struct CompressedGraphics *drum_studio_buffered_textures[];
+extern struct GraphicsTable drum_studio_gfx_table[];
+extern struct GraphicsTable drum_lessons_gfx_table[];
+extern struct Beatscript D_089e2ad4[];
+extern struct Beatscript D_089e2b04[];
+extern struct Vector2 D_089e2b58[];
+extern struct Vector2 D_089e2b78[];
+extern struct SpritePlaybackData D_089e2b98[];
+extern u16 D_089e2ba8[];
+extern struct GameEngine drum_studio_engine;
 
 
 // Functions - Drum Lessons:
@@ -327,7 +247,7 @@ extern void drum_lessons_get_score(void); // DRUM LESSON - Engine Event 0x14 (Ca
 // extern ? func_080281c4(?);
 // extern ? func_080281e8(void); // DRUM LESSON - Engine Event 0x18 (?) []
 // extern ? func_080281fc(?); // DRUM LESSON - Engine Event 0x19 (?)
-extern void drum_studio_start_monitor2(const Palette *palette); // Change BG Monitor Palette
+extern void drum_studio_start_monitor2(Palette *palette); // Change BG Monitor Palette
 extern void drum_studio_start_monitor1(void); // Start BG Monitor Display
 extern void drum_studio_event_start_monitor(u32 unused); // DRUM LESSON - Engine Event 0x03 (Start BG Monitor Display)
 extern void drum_studio_stop_monitor2(void); // Stop BG Monitor Display
@@ -358,7 +278,7 @@ extern void drum_studio_select_button_exit(void); // SELECT_BUTTON Pressed Event
 // extern ? func_080291bc(?);
 extern void drum_studio_update_song_title(void); // Update Song Title
 // extern ? func_080292e0(?);
-const struct BeatScript *drum_studio_init_script(void); // DRUM LESSON - Engine Event 0x00 (Init. Studio Script & Recording)
+const struct Beatscript *drum_studio_init_script(void); // DRUM LESSON - Engine Event 0x00 (Init. Studio Script & Recording)
 extern s32 func_080295d4(void); // DRUM LESSON - Engine Event 0x01 (?)
 extern void drum_studio_align_drummer_sprites(struct StudioDrummer *drummer, const struct Vector2 *vecOfs); // Align Drummer Parts to Body
 extern void func_0802972c(void); // Update something

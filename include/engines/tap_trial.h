@@ -3,6 +3,8 @@
 #include "global.h"
 #include "engines.h"
 
+#include "games/tap_trial/graphics/tap_trial_graphics.h"
+
 // Engine Types:
 struct TapTrialInfo {
     /* add fields here */
@@ -20,7 +22,7 @@ struct TapTrialAction {
     s8 playbackArg3;
     u16 playbackArg4;
     u8 duration;
-    const struct SequenceData *sfx;
+    struct SequenceData *sfx;
     u16 sfxVolume;
     s16 sfxPitch;
 };
@@ -29,10 +31,10 @@ struct TapTrialAction {
 // Engine Macros/Enums:
 enum TapTrialVersionsEnum {
     ENGINE_VER_TAP_TRIAL,
-    ENGINE_VER_TAP_REMIX8,
-    ENGINE_VER_TAP_REMIX7,
+    ENGINE_VER_TAP_REMIX_8,
+    ENGINE_VER_TAP_REMIX_7,
     ENGINE_VER_TAP_TRIAL_2,
-    ENGINE_VER_TAP_REMIX5
+    ENGINE_VER_TAP_REMIX_5
 };
 
 enum TapTrialAnimationsEnum {
@@ -71,47 +73,22 @@ enum TapTrialAnimationsEnum {
 };
 
 
-// OAM Animations:
-
-
-// Palettes:
-
-
-// Sound Effects:
-extern const struct SequenceData s_f_dummy_vol0_seqData;
-extern const struct SequenceData s_tap_kick_lady_seqData;
-extern const struct SequenceData s_tap_monky1_seqData;
-extern const struct SequenceData s_tap_monky2_seqData;
-extern const struct SequenceData s_tap_kick_monky_seqData;
-extern const struct SequenceData s_tap_monky3_1_seqData;
-extern const struct SequenceData s_f_tap_jump_ready_seqData;
-extern const struct SequenceData s_tap_monky4_seqData;
-extern const struct SequenceData s_tap_monky3_2_seqData;
-extern const struct SequenceData s_f_tap_pig1_seqData;
-extern const struct SequenceData s_f_tap_pig2_seqData;
-
-
 // Engine Data:
 extern const char D_0805a8bc[];
-extern const char D_0805a8c0[];
-extern const char D_0805a8d0[];
-extern const char D_0805a8e0[];
-extern const char D_0805a8f0[];
-extern const char D_0805a900[];
 
 
 // Engine Definition Data:
-extern const struct Animation *const *const tap_trial_anim_table[];
-extern const struct TapTrialAction *const tap_trial_girl_action_table[];
-extern const struct TapTrialAction *const tap_trial_monkey_action_table[];
-extern const struct CompressedGraphics *const tap_trial_buffered_textures[];
-extern const struct GraphicsTable *const tap_trial_gfx_tables[];
-extern const char *const D_089e8054[];
-extern const s8 D_089e8068[];
+extern struct Animation **tap_trial_anim_table[];
+extern struct TapTrialAction *tap_trial_girl_action_table[];
+extern struct TapTrialAction *tap_trial_monkey_action_table[];
+extern struct CompressedGraphics *tap_trial_buffered_textures[];
+extern struct GraphicsTable *tap_trial_gfx_tables[];
+extern const char *D_089e8054[];
+extern s8 D_089e8068[];
 
 
 // Functions:
-extern const struct Animation *tap_trial_get_anim(u32 anim); // Get Animation
+extern struct Animation *tap_trial_get_anim(u32 anim); // Get Animation
 extern void tap_trial_play_girl_action(u32 action); // Play Girl Action
 extern void tap_trial_play_monkey_action(u32 action); // Engine Event 0x00 (Play Monkey Action)
 extern void tap_trial_init_gfx3(void); // Graphics Init. 3

@@ -17,7 +17,7 @@ static s32 D_03001310[2]; // unknown type
 /* Main Game Handler */
 
 
-// BeatScript Engine Init.
+// Beatscript Engine Init.
 void start_beatscript_scene(u32 memID) {
     u32 i;
 
@@ -55,7 +55,7 @@ void start_beatscript_scene(u32 memID) {
 
 // Set SubScenes
 void set_beatscript_subscenes(const struct SubScene **subScenes) {
-    struct BeatScriptThread *thread;
+    struct BeatscriptThread *thread;
     u32 i;
 
     D_030053c0.paused = FALSE;
@@ -113,9 +113,9 @@ void update_paused_beatscript_scene(void) {
 }
 
 
-// BeatScript Engine Update
+// Beatscript Engine Update
 void update_active_beatscript_scene(void) {
-    struct BeatScriptThread *thread;
+    struct BeatscriptThread *thread;
     const struct SubScene *subScene;
     void (*subSceneFunc)();
     u32 isId1;
@@ -197,7 +197,7 @@ void update_active_beatscript_scene(void) {
 }
 
 
-// Check if No BeatScript Threads Are Active
+// Check if No Beatscript Threads Are Active
 s32 beatscript_scene_is_inactive(void) {
     u32 i;
 
@@ -274,15 +274,15 @@ void pause_beatscript_scene(u32 pause) {
 }
 
 
-// Check if BeatScript Handler Is Paused
+// Check if Beatscript Handler Is Paused
 u32 beatscript_scene_is_paused(void) {
     return D_030053c0.paused;
 }
 
 
-// BeatScript Engine Force Quit
+// Beatscript Engine Force Quit
 void stop_beatscript_scene(void) {
-    struct BeatScriptThread *thread;
+    struct BeatscriptThread *thread;
     const struct SubScene *subScene;
     u32 i, i2;
 
@@ -368,7 +368,7 @@ void func_0800bebc(u32 arg) {
 
 
 // Play Music
-u32 scene_change_music(const struct SequenceData *music, u32 override, s32 soundPlayer) {
+u32 scene_change_music(struct SequenceData *music, u32 override, s32 soundPlayer) {
     if ((D_030053c0.musicPlayer != NULL) && override) {
         stop_soundplayer(D_030053c0.musicPlayer);
     }
@@ -390,31 +390,31 @@ u32 scene_change_music(const struct SequenceData *music, u32 override, s32 sound
 
 
 // Play Music (Override Existing)
-void scene_set_music(const struct SequenceData *music) {
+void scene_set_music(struct SequenceData *music) {
     scene_change_music(music, TRUE, -1);
 }
 
 
 // Play Music (No Override)
-void scene_play_music(const struct SequenceData *music) {
+void scene_play_music(struct SequenceData *music) {
     scene_change_music(music, FALSE, -1);
 }
 
 
 // Play Music in Given SoundPlayer (Override)
-void scene_set_music_with_soundplayer(const struct SequenceData *music, s32 soundPlayer) {
+void scene_set_music_with_soundplayer(struct SequenceData *music, s32 soundPlayer) {
     scene_change_music(music, TRUE, soundPlayer);
 }
 
 
 // Play Music in Given SoundPlayer (No Override)
-void scene_play_music_with_soundplayer(const struct SequenceData *music, s32 soundPlayer) {
+void scene_play_music_with_soundplayer(struct SequenceData *music, s32 soundPlayer) {
     scene_change_music(music, FALSE, soundPlayer);
 }
 
 
 // Play Music (override, use predefined SoundPlayer ID)
-void scene_play_music_ignore_lfo(const struct SequenceData *music) {
+void scene_play_music_ignore_lfo(struct SequenceData *music) {
     struct SoundPlayer *player;
 
     player = get_soundplayer_by_sound(music);

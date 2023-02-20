@@ -3,6 +3,8 @@
 #include "global.h"
 #include "engines.h"
 
+#include "games/samurai_slice/graphics/samurai_slice_graphics.h"
+
 // Engine Types:
 struct SamuraiSliceInfo {
     /* add fields here */
@@ -13,7 +15,7 @@ struct SamuraiSliceCue {
 };
 
 struct SamuraiSlice_0805a5d4 {
-    const struct Animation *anim;
+    struct Animation *anim;
     u32 unk4;
     u32 unk8;
 };
@@ -26,42 +28,18 @@ enum SamuraiSliceVersionsEnum {
 };
 
 
-// OAM Animations:
-extern const struct Animation anim_samurai_beat_1[];
-extern const struct Animation anim_samurai_beat_2[];
-extern const struct Animation anim_samurai_beat_3[];
-extern const struct Animation anim_samurai_slice_1[];
-extern const struct Animation anim_samurai_slice_2[];
-extern const struct Animation anim_samurai_slice_3[];
-extern const struct Animation anim_small_demon_hop[];
-extern const struct Animation anim_med_demon_hop[];
-extern const struct Animation anim_winged_demon_fly[];
-extern const struct Animation anim_propeller_demon_hover[];
-extern const struct Animation anim_large_demon_walk[];
-
-
-// Palettes:
-
-
-// Sound Effects:
-extern const struct SequenceData s_kuma_sakana_seqData;
-extern const struct SequenceData s_f_iai_cut_seqData;
-extern const struct SequenceData s_iai_miss_seqData;
-extern const struct SequenceData s_f_iai_cut2_seqData;
-
-
 // Engine Data:
 extern const char D_0805a5d0[];
 extern const struct SamuraiSlice_0805a5d4 D_0805a5d4[];
 
 
 // Engine Definition Data:
-extern const struct CompressedGraphics *const samurai_slice_buffered_textures[];
-extern const struct GraphicsTable samurai_slice_gfx_table[];
-extern const struct Animation *const samurai_slicing_anim[];
-extern const struct Animation *const samurai_beat_anim[];
-extern const struct Animation *const D_089e4928[];
-extern const struct Animation *const D_089e4940[];
+extern struct CompressedGraphics *samurai_slice_buffered_textures[];
+extern struct GraphicsTable samurai_slice_gfx_table[];
+extern struct Animation *samurai_slicing_anim[];
+extern struct Animation *samurai_beat_anim[];
+extern struct Animation *D_089e4928[];
+extern struct Animation *D_089e4940[];
 
 
 // Functions:

@@ -3,6 +3,8 @@
 #include "global.h"
 #include "engines.h"
 
+#include "games/rhythm_tweezers/graphics/rhythm_tweezers_graphics.h"
+
 // Engine Types:
 struct RhythmTweezersInfo {
     u8 version; // Value:   Version { 0..2 = Rhythm Tweezers; 3..5 = Rhythm Tweezers 2 }
@@ -82,42 +84,11 @@ enum RhythmTweezersVegetableTypesEnum {
 #define RT_VEGETABLE_BG_MAP_R *(u32 *)(VRAMBase + 0xF800) // VRAM BG Map for vegetable textures (right).
 
 
-// OAM Animations:
-extern const struct Animation anim_veg_face_onion[];
-extern const struct Animation anim_veg_face_turnip[];
-extern const struct Animation anim_veg_face_potato[];
-extern const struct Animation anim_rhythm_tweezers_short_hair[];    // Animation: hair_appear_short
-extern const struct Animation anim_tweezers_pluck_hit[];    // Animation: "tweezer_pluck"
-extern const struct Animation anim_tweezers_pluck_barely[];    // Animation: "tweezer_pluck_barely"
-extern const struct Animation anim_tweezers_pluck_miss[];    // Animation: "tweezer_pluck_miss"
-extern const struct Animation anim_rhythm_tweezers_falling_hair[];    // Animation: "hair_fall"
-extern const struct Animation anim_rhythm_tweezers_hair_stubble[];    // Animation: "hair_stubble"
-extern const struct Animation anim_rhythm_tweezers_tutorial_text[];    // Animation: "tutorial_text" (unused)
-extern const struct Animation anim_rhythm_tweezers_long_hair[];    // Animation: hair_appear_long
-extern const struct Animation anim_tweezers_pull[];    // Animation: "hair_long_pull"
-
-
-// Palettes:
-
-
-// Sound Effects:
-extern const struct SequenceData s_f_hair_next_seqData;         // SFX: Cash Register
-extern const struct SequenceData s_f_hair_nuki_long_seqData;    // SFX: ???
-extern const struct SequenceData s_f_hair_tuneru_seqData;       // SFX: ???
-extern const struct SequenceData s_hanabi_pon_seqData;          // SFX: Hair Appear (Short)
-extern const struct SequenceData s_f_hair_appear_long_seqData;  // SFX: Hair Appear (Long)
-extern const struct SequenceData s_datumo_nuki_seqData;
-extern const struct SequenceData s_f_hair_kegire_seqData;
-extern const struct SequenceData s_witch_furu_seqData;
-
-
-// Engine Data:
-
-
 // Engine Definition Data:
-extern const struct CompressedGraphics *const rhythm_tweezers_veg_bg_maps[]; // Array of BG Map pointers for vegetable textures
-extern const struct CompressedGraphics *const rhythm_tweezers_buffered_textures[]; // Buffered Textures List
-extern const struct GraphicsTable *const rhythm_tweezers_gfx_tables[]; // Graphics Table
+extern struct CompressedGraphics *rhythm_tweezers_veg_bg_maps[]; // Array of BG Map pointers for vegetable textures
+extern struct CompressedGraphics *rhythm_tweezers_buffered_textures[]; // Buffered Textures List
+extern struct GraphicsTable *rhythm_tweezers_gfx_tables[]; // Graphics Table
+extern struct Animation *rhythm_tweezers_veg_face_anim[]; // Array of animation pointers for vegetable faces
 
 
 // Functions:

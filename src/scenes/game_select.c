@@ -1,5 +1,5 @@
 #include "global.h"
-#include "scenes/game_select.h"
+#include "game_select.h"
 #include "src/memory.h"
 #include "src/code_08001360.h"
 #include "src/code_08003980.h"
@@ -7,8 +7,8 @@
 #include "src/code_08007468.h"
 #include "src/text_printer.h"
 #include "src/code_0800b778.h"
-#include "scenes/reading.h"
-#include "scenes/studio.h"
+#include "reading.h"
+#include "studio.h"
 #include "src/lib_0804ca80.h"
 
 asm(".include \"include/gba.inc\"");//Temporary
@@ -23,10 +23,10 @@ static u8 D_0300131f; // unused
 static s8 D_03001320; // ?
 static s32 D_03001324; // ?
 
-extern const struct Scene D_089d77e4; // Results (Level-Type)
-extern const struct Scene D_089d7c18; // Results (Epilogue..?)
-extern const struct Scene D_089d7964; // Results (Score-Type)
-extern const struct Scene D_089cdf08; // Game Select
+extern struct Scene D_089d77e4; // Results (Level-Type)
+extern struct Scene D_089d7c18; // Results (Epilogue..?)
+extern struct Scene D_089d7964; // Results (Score-Type)
+extern struct Scene D_089cdf08; // Game Select
 
 
 /* GAME SELECT */

@@ -3,6 +3,8 @@
 #include "global.h"
 #include "engines.h"
 
+#include "games/fireworks/graphics/fireworks_graphics.h"
+
 // Engine Types:
 struct FireworksInfo {
     u8  version;        // Version Number
@@ -72,7 +74,7 @@ enum FireworksPatternsEnum {
     FIREWORKS_PATTERN_SP_CIRCLE,    // Centre;  Special - Circle
     FIREWORKS_PATTERN_SP_SPIRAL,    // Centre;  Special - Spiral
     FIREWORKS_PATTERN_SP_SMILE,     // Centre;  Special - Smile
-    FIREWORKS_PATTERN_SP_TSUNKU,    // Centre;  Special - â™‚ (unused)
+    FIREWORKS_PATTERN_SP_TSUNKU,    // Centre;  Special - â™? (unused)
     FIREWORKS_PATTERN_TAIKO_BOMBER, // Hawfinch Taiko Bomber
 };
 
@@ -105,41 +107,6 @@ enum FireworksSoundsEnum {
 };
 
 
-// OAM Animations:
-extern const struct Animation anim_fireworks_rocket4[];
-extern const struct Animation anim_fireworks_rocket_explode[];
-extern const struct Animation anim_fireworks_particle_red[];
-extern const struct Animation anim_fireworks_particle_green[];
-extern const struct Animation anim_fireworks_particle_blue[];
-extern const struct Animation anim_fireworks_bomb[];
-extern const struct Animation anim_fireworks_bomb_explode[];
-extern const struct Animation anim_fireworks_particle_tri_rgb[];
-extern const struct Animation anim_fireworks_skip_tutorial_icon[];
-extern const struct Animation anim_fireworks_rocket3[];
-extern const struct Animation anim_fireworks_rocket2[];
-extern const struct Animation anim_fireworks_rocket1[];
-
-
-// Palettes:
-
-
-// Sound Effects:
-extern const struct SequenceData s_intro_comeon_seqData;
-extern const struct SequenceData s_intro_one_seqData;
-extern const struct SequenceData s_intro_two_seqData;
-extern const struct SequenceData s_intro_three_seqData;
-extern const struct SequenceData s_f_hanabi_v_nuei_seqData;
-extern const struct SequenceData s_hanabi_hyu_seqData;
-extern const struct SequenceData s_f_hanabi_v_tamaya_seqData;
-extern const struct SequenceData s_hanabi_ah_seqData;
-extern const struct SequenceData s_f_hanabi_kansei_seqData;
-extern const struct SequenceData s_hanabi_utiage_seqData;
-extern const struct SequenceData s_hanabi_utiage_v_seqData;
-extern const struct SequenceData s_witch_donats_seqData;
-extern const struct SequenceData s_hanabi_don_seqData;
-extern const struct SequenceData s_hanabi_pon_seqData;
-
-
 // Engine Data:
 extern const char D_0805a3d0[];
 extern const struct FireworksPatternColours fireworks_particle_combinations[];
@@ -149,9 +116,9 @@ extern const s32 fireworks_1_pattern_sequence[];
 
 
 // Engine Definition Data:
-extern const struct CompressedGraphics *const fireworks_buffered_textures[]; // Buffered Textures List
-extern const struct GraphicsTable *const fireworks_gfx_tables[]; // Graphics Table Index
-extern const u16 fireworks_cue_durations[]; // Cue Expiration Times
+extern struct CompressedGraphics *fireworks_buffered_textures[]; // Buffered Textures List
+extern struct GraphicsTable *fireworks_gfx_tables[]; // Graphics Table Index
+extern u16 fireworks_cue_durations[]; // Cue Expiration Times
 
 
 // Functions:
@@ -175,4 +142,4 @@ extern void fireworks_cue_miss(struct Cue *, struct FireworksCue *); // Cue - Mi
 extern void fireworks_input_event(u32 pressed, u32 released); // Input Event
 extern void fireworks_common_beat_animation(void); // Common Event 0 (Beat Animation, Unimplemented)
 extern void fireworks_common_display_text(char *); // Common Event 1 (Display Text)
-extern void fireworks_common_init_tutorial(const struct Scene *); // Common Event 2 (Init. Tutorial)
+extern void fireworks_common_init_tutorial(struct Scene *); // Common Event 2 (Init. Tutorial)

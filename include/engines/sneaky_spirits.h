@@ -3,6 +3,8 @@
 #include "global.h"
 #include "engines.h"
 
+#include "games/sneaky_spirits/graphics/sneaky_spirits_graphics.h"
+
 // Engine Types:
 struct SneakySpiritsInfo {
     struct TextObject1 *unk0;  // Pointer: Font? (Related to Tutorial Text)
@@ -52,48 +54,13 @@ enum SneakySpiritsVersionsEnum {
 };
 
 
-// OAM Animations:
-extern const struct Animation anim_sneaky_spirits_bow[]; // Animation: "bow_draw"
-extern const struct Animation anim_sneaky_spirit_hit[]; // Animation: "ghost_hit"
-extern const struct Animation anim_sneaky_spirits_back_wall[]; // Animation: "door_back_wall"
-extern const struct Animation anim_sneaky_spirits_door[]; // Animation: "door_open"
-extern const struct Animation anim_sneaky_spirit_taunt[]; // Animation: "ghost_miss_taunt"
-extern const struct Animation anim_sneaky_spirits_arrow_miss[]; // Animation: "arrow_miss"
-extern const struct Animation anim_sneaky_spirit_scared_early[]; // Animation: "ghost_barely_scared"
-extern const struct Animation anim_sneaky_spirits_tree[]; // Animation: "tree"
-extern const struct Animation anim_sneaky_spirit_walk[]; // Animation: "ghost_walk"
-extern const struct Animation anim_sneaky_spirit_dash[]; // Animation: "ghost_miss_dash"
-extern const struct Animation anim_sneaky_spirits_rain[]; // Animation: "rain_fall"
-extern const struct Animation anim_sneaky_spirits_splash[]; // Animation: "rain_splash"
-extern const struct Animation anim_sneaky_spirits_rain_slow[]; // Animation: "rain_fall_slow"
-extern const struct Animation anim_sneaky_spirits_bow_shoot[]; // Animation: "bow_shoot"
-extern const struct Animation anim_sneaky_spirits_wall_mask[]; // Animation: "ghost_mask" (might be masking)
-extern const struct Animation anim_sneaky_spirit_scared_late[]; // Animation: "ghost_barely_run"
-extern const struct Animation anim_sneaky_spirit_hit_effect[]; // Animation: "arrow_hit"
-extern const struct Animation anim_sneaky_spirit_tutorial[]; // Animation: "ghost_dash_tutorial"
-
-
-// Palettes:
-
-
-// Sound Effects:
-extern const struct SequenceData s_ghost_rain_seqData;           // Sound: Wind/Rain
-extern const struct SequenceData s_ghost_gosha_seqData;          // Sound: Arrow Missed
-extern const struct SequenceData s_ghost_walk_seqData;           // Sound: Ghost Moving
-extern const struct SequenceData s_f_aim_just_hit_seqData;       // Sound: Ghost Hit
-extern const struct SequenceData s_f_aim_just_hit_voice_seqData; // Sound: Ghost Hit Voice
-extern const struct SequenceData s_ghost_miss_hit_seqData;       // Sound: Ghost Barely
-extern const struct SequenceData s_ghost_dash_seqData;           // Sound: Ghost Miss
-extern const struct SequenceData s_ghost_warai_seqData;          // Sound: Ghost Miss Voice
-
-
 // Engine Data:
-extern char D_08059f90[];   // Empty Default Text
+extern const char D_08059f90[];   // Empty Default Text
 
 
 // Engine Definition Data:
-extern const struct CompressedGraphics *const sneaky_spirits_buffered_textures[]; // Buffered Textures List
-extern const struct GraphicsTable *const sneaky_spirits_gfx_tables[]; // Graphics Table
+extern struct CompressedGraphics *sneaky_spirits_buffered_textures[]; // Buffered Textures List
+extern struct GraphicsTable *sneaky_spirits_gfx_tables[]; // Graphics Table
 
 
 // Functions:

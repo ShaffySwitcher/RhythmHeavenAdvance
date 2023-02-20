@@ -1,5 +1,5 @@
 #include "global.h"
-#include "scenes/results.h"
+#include "results.h"
 #include "cues.h"
 #include "src/main.h"
 #include "src/memory.h"
@@ -10,7 +10,7 @@
 #include "src/text_printer.h"
 #include "src/code_0800b778.h"
 #include "src/code_080102d0.h"
-#include "scenes/game_select.h"
+#include "game_select.h"
 #include "src/lib_0804ca80.h"
 
 asm(".include \"include/gba.inc\"");//Temporary
@@ -182,7 +182,7 @@ void func_08018cc8(void) {
 
 // [func_08018d68] LEVEL Play Music (Script Function)
 void func_08018d68(void) {
-    const struct SequenceData *music = D_089d7694[gResultsInfo->finalResultLevel];
+    struct SequenceData *music = D_089d7694[gResultsInfo->finalResultLevel];
 
     scene_set_music(music);
     set_beatscript_tempo(get_music_base_tempo(music));
@@ -704,7 +704,7 @@ void func_08019d9c(void) {
 void func_08019ee0(void) {
     struct InputScoreTracker *tracker = D_089d7980->cueInputTrackers;
     const struct MarkingCriteria **markingData = D_089d7980->markingData;
-    const struct Scene *scene;
+    struct Scene *scene;
     struct Animation *textAnim;
     s16 textSprite;
     u32 totalCriteriaFailed, averageCriteriaSucceeded;

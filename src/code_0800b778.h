@@ -4,11 +4,11 @@
 
 /* Main Game Handler */
 
-extern void start_beatscript_scene(u32 memID); // BeatScript Init.
+extern void start_beatscript_scene(u32 memID); // Beatscript Init.
 extern void set_beatscript_subscenes(const struct SubScene **subScenes); // Set SubScenes
 extern void update_paused_beatscript_scene(void); // ? (called each loop after the pause menu has been opened at least once)
-extern void update_active_beatscript_scene(void); // BeatScript Update
-extern s32 beatscript_scene_is_inactive(void); // Check if No BeatScript Threads Are Active
+extern void update_active_beatscript_scene(void); // Beatscript Update
+extern s32 beatscript_scene_is_inactive(void); // Check if No Beatscript Threads Are Active
 extern void beatscript_enable_loops(void); // Enable Loops
 extern void func_0800bc58(void); // Delayed Loop Exit Task Function
 extern void beatscript_exit_loop_after_delay(u32 duration); // Exit Loop After Delay
@@ -17,20 +17,20 @@ extern void beatscript_force_exit_loop(void); // Exit Loop (If Within a Loop)
 extern void beatscript_disable_loops(void); // Force Stop Loop
 extern void beatscript_force_exit_loop_next_update(void); // Exit Loop on Next Update
 extern void pause_beatscript_scene(u32); // Pause Script
-extern u32 beatscript_scene_is_paused(void); // Check if BeatScript Handler Is Paused
-extern void stop_beatscript_scene(void); // BeatScript Engine Force Quit
+extern u32 beatscript_scene_is_paused(void); // Check if Beatscript Handler Is Paused
+extern void stop_beatscript_scene(void); // Beatscript Engine Force Quit
 extern void set_beatscript_tempo(u16 tempo); // Set Script Tempo
 extern void update_beatscript_tempo(void); // Update Script Tempo (retain unk1_b7)
 extern void set_beatscript_speed(u16 speed); // Set Script Speed (Q8.8)
 extern void func_0800be9c(void); // Stub
 extern void func_0800bea0(u32 arg); // Set unk0_b7
 extern void func_0800bebc(u32 arg); // Set unk1C
-extern u32  scene_change_music(const struct SequenceData *, u32 override, s32 soundPlayer); // Play Music
-extern void scene_set_music(const struct SequenceData *); // Play Music (Override)
-extern void scene_play_music(const struct SequenceData *); // Play Music (No Override)
-extern void scene_set_music_with_soundplayer(const struct SequenceData *, s32 soundPlayer); // Play Music in Given SoundPlayer (Override)
-extern void scene_play_music_with_soundplayer(const struct SequenceData *, s32 soundPlayer); // Play Music in Given SoundPlayer (No Override)
-extern void scene_play_music_ignore_lfo(const struct SequenceData *); // Play Music (override, use predefined SoundPlayer ID)
+extern u32  scene_change_music(struct SequenceData *, u32 override, s32 soundPlayer); // Play Music
+extern void scene_set_music(struct SequenceData *); // Play Music (Override)
+extern void scene_play_music(struct SequenceData *); // Play Music (No Override)
+extern void scene_set_music_with_soundplayer(struct SequenceData *, s32 soundPlayer); // Play Music in Given SoundPlayer (Override)
+extern void scene_play_music_with_soundplayer(struct SequenceData *, s32 soundPlayer); // Play Music in Given SoundPlayer (No Override)
+extern void scene_play_music_ignore_lfo(struct SequenceData *); // Play Music (override, use predefined SoundPlayer ID)
 extern void scene_stop_music(void); // Stop Music
 extern void scene_fade_in_music(u16 duration); // Fade-In Music
 extern void scene_fade_out_music(u16 duration); // Fade-Out Music

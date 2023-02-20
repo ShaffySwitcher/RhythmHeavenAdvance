@@ -3,6 +3,7 @@
 #include "global.h"
 #include "engines.h"
 
+#include "games/bon_odori/graphics/bon_odori_graphics.h"
 
 // Engine Types:
 struct BonOdoriText {
@@ -91,35 +92,21 @@ enum BonOdoriDonpanAnimationsEnum {
 };
 
 
-// OAM Animations:
-
-
-// Palettes:
-
-
-// Sound Effects:
-extern const struct SequenceData s_tebyoushi_pati_seqData;
-extern const struct SequenceData s_HC_seqData;
-
-
-// Engine Data:
-
-
 // Engine Definition Data:
-extern const struct Animation *const *const bon_odori_anim_table[34]; // Pointers to animation arrays, with each one consisting of two animations.
-extern const u8 *const bon_odori_donpan_anim_id_table[]; // Contains Donpan animation indexes. (Sub-arrays are the same animation but for different donpans)
-extern const u16 bon_odori_anim_durations[8]; // Seemingly numbers of ticks for animations.
-extern const struct CompressedGraphics *const bon_odori_buffered_textures[]; // Buffered Textures List
-extern const struct GraphicsTable *const bon_odori_gfx_tables[]; // Graphics Table Index
-extern const u16 *const bon_odori_bg_palettes[]; // Pointers to BG Palettes
-extern const u16 *const bon_odori_obj_palettes[]; // Pointers to OBJ Palettes
-extern const u16 bon_odori_text_x_offsets[]; // Lyrics Horizontal Positions (by Text Alignment)
+extern struct Animation **bon_odori_anim_table[34]; // Pointers to animation arrays, with each one consisting of two animations.
+extern u8 *bon_odori_donpan_anim_id_table[]; // Contains Donpan animation indexes. (Sub-arrays are the same animation but for different donpans)
+extern u16 bon_odori_anim_durations[8]; // Seemingly numbers of ticks for animations.
+extern struct CompressedGraphics *bon_odori_buffered_textures[]; // Buffered Textures List
+extern struct GraphicsTable *bon_odori_gfx_tables[]; // Graphics Table Index
+extern const u16 *bon_odori_bg_palettes[]; // Pointers to BG Palettes
+extern const u16 *bon_odori_obj_palettes[]; // Pointers to OBJ Palettes
+extern u16 bon_odori_text_x_offsets[]; // Lyrics Horizontal Positions (by Text Alignment)
 
 
 // Functions:
-extern const struct Animation *bon_odori_get_anim(u32);             // [func_080206a0] Get OBJ Animation
+extern struct Animation *bon_odori_get_anim(u32);             // [func_080206a0] Get OBJ Animation
 extern void bon_odori_init_donpans(void);                           // [func_080206c0] Init. Donpans
-extern const struct Animation *bon_odori_get_donpan_anim(u32, u32); // [func_0802075c] Get Donpan Animation
+extern struct Animation *bon_odori_get_donpan_anim(u32, u32); // [func_0802075c] Get Donpan Animation
 extern void bon_odori_set_donpan_anim(u32, u32);                    // [func_08020778] Set Donpan Animation
 extern void bon_odori_set_cpu_donpan_anim(u32);                     // [func_080207d0] ENGINE Func_0B - Set Animation (CPU Donpans)
 extern void bon_odori_set_player_anim(u32);                         // [func_080207ec] ENGINE Func_0C - Set Animation (Player)
@@ -157,4 +144,4 @@ extern void bon_odori_cue_miss(struct Cue *, struct BonOdoriCue *);             
 extern void bon_odori_input_event(u32, u32);                        // [func_08021034] MAIN - Input Event
 extern void bon_odori_common_beat_animation(u32);                   // [func_08021084] COMMON Func_00 - Beat Animation
 extern void bon_odori_common_display_text(u32);                     // [func_08021188] COMMON Func_01 - STUB
-extern void bon_odori_common_init_tutorial(const struct Scene *);   // [func_0802118c] COMMON Func_02 - STUB
+extern void bon_odori_common_init_tutorial(struct Scene *);   // [func_0802118c] COMMON Func_02 - STUB

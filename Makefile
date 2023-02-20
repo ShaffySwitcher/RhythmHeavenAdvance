@@ -3,7 +3,15 @@
 #---------------------------------------------------------------------------------
 
 ifeq ($(strip $(DEVKITARM)),)
-$(error "Please set DEVKITARM in your environment. export DEVKITARM=<path to>devkitARM")
+    $(error "Please set DEVKITARM in your environment. export DEVKITARM=<path to>devkitARM")
+endif
+
+ifeq (,$(wildcard baserom.gba))
+    $(error No ROM provided. Please place an unmodified ROM named "baserom.gba" in the root folder)
+endif
+
+ifneq ($(shell sha1sum -t baserom.gba), 67f8adacff79c15d028fffd90de3a77d9ad0602d  baserom.gba)
+    $(error Provided ROM is not correct)
 endif
 
 CPP := $(CC) -E
@@ -11,7 +19,6 @@ CPPFLAGS := -I tools/agbcc -I tools/agbcc/include -I . -iquote include -nostdinc
 
 include $(DEVKITARM)/base_rules
 
-#include $(DEVKITARM)/gba_rules
 CROSS := arm-none-eabi-
 OBJCOPY := $(CROSS)objcopy
 LD := $(CROSS)gcc
@@ -25,146 +32,92 @@ ifeq (VERBOSE, 1)
 	V=
 endif
 
+# Colors
+NO_COL  := \033[0m
+GREEN   := \033[0;32m
+BLUE    := \033[0;34m
+YELLOW  := \033[0;33m
+
+# Generic print function for make rules
+define print
+  $(V)echo "$(GREEN)$(1) $(YELLOW)$(2)$(GREEN) -> $(BLUE)$(3)$(NO_COL)"
+endef
+
 #---------------------------------------------------------------------------------
-# TARGET is the name of the output
-# BUILD is the directory where object files & intermediate files will be placed
-# SOURCES is a list of directories containing source code
-# INCLUDES is a list of directories containing extra header files
-# DATA is a list of directories containing binary data
-# GRAPHICS is a list of directories containing files to be processed by grit
-#
-# All directories are specified relative to the project directory where
-# the makefile is found
-#
-#---------------------------------------------------------------------------------
+
 TARGET		   := rhythmtengoku
 BUILD		   := build
-SOURCES		   := src
-SCENES         := $(SOURCES)/scenes
-ENGINES        := $(SOURCES)/engines
-PROLOGUES      := $(SOURCES)/prologues
-LEVELS         := $(SOURCES)/levels
+SOURCES		   := src $(shell find src -type d)
 ASM            := asm
 INCLUDES	   := include
 TEXT           := text
-ENGINE_TEXT    := $(TEXT)/engines
-LEVEL_TEXT     := $(TEXT)/levels
+BIN		       := bin
 DATA		   := data
 SCENE_DATA     := $(shell find $(DATA)/scenes -type d)
-ENGINE_DATA    := $(shell find $(DATA)/engines -type d)
-PROLOGUE_DATA  := $(shell find $(DATA)/prologues -type d)
 LEVEL_DATA     := $(DATA)/levels
-BIN		       := bin
+GAMES          := games
+GAME_DATA	   := $(shell find $(GAMES) -type d)
+GRAPHICS       := $(shell find graphics -type d) $(shell find $(GAMES) -type d -name "graphics")
 AUDIO		   := audio
 MUSIC		   := $(AUDIO)/sequences
 SFX            := $(AUDIO)/samples
-GRAPHICS       := $(shell find graphics -type d)
-BUILD_DIRS     := $(BUILD) $(BUILD)/$(BIN) $(BUILD)/$(TEXT) $(BUILD)/$(ENGINE_TEXT) $(BUILD)/$(LEVEL_TEXT) \
-                  $(BUILD)/$(DATA) $(foreach dir,$(SCENE_DATA),$(BUILD)/$(dir)) $(foreach dir,$(ENGINE_DATA),$(BUILD)/$(dir)) \
-                  $(foreach dir,$(PROLOGUE_DATA),$(BUILD)/$(dir)) $(BUILD)/$(LEVEL_DATA) \
-                  $(BUILD)/$(ASM) $(BUILD)/$(SOURCES) $(BUILD)/$(SCENES) $(BUILD)/$(ENGINES) $(BUILD)/$(PROLOGUES) $(BUILD)/$(LEVELS) \
-                  $(BUILD)/$(MUSIC) $(BUILD)/$(SFX) $(foreach dir,$(GRAPHICS),$(BUILD)/$(dir))
+
+C_DIRS		   := $(SOURCES) $(AUDIO) $(GRAPHICS) $(TEXT) $(DATA) $(SCENE_DATA) $(LEVEL_DATA) $(GAME_DATA)
+C_DIRS         := $(sort $(C_DIRS)) # remove duplicates
+
+ASM_DIRS       := $(ASM) $(DATA) $(SCENE_DATA) $(LEVEL_DATA) $(TEXT)
+BS_DIRS        := $(GAME_DATA)
+
+ALL_DIRS       := $(BIN) $(ASM_DIRS) $(C_DIRS) $(MUSIC) $(SFX)
+ALL_DIRS       := $(sort $(ALL_DIRS)) # remove duplicates
+BUILD_DIRS     := $(BUILD) $(addprefix $(BUILD)/,$(ALL_DIRS))
+
 LD_SCRIPT      := rt.ld
 UNDEFINED_SYMS := undefined_syms.ld
 
 #---------------------------------------------------------------------------------
-# options for code generation
-#---------------------------------------------------------------------------------
-#ARCH	:=	-mthumb -mthumb-interwork
-#
-#CFLAGS	:=	-g -Wall -O2\
-#		-mcpu=arm7tdmi -mtune=arm7tdmi\
-#		$(ARCH)
-#
-#CFLAGS	+=	$(INCLUDE)
-#
-#CXXFLAGS	:=	$(CFLAGS) -fno-rtti -fno-exceptions
-#
-#ASFLAGS	:=	-g $(ARCH)
-#LDFLAGS	=	-g $(ARCH) -Wl,-Map,$(notdir $*.map)
-
-#---------------------------------------------------------------------------------
-# any extra libraries we wish to link with the project
-#---------------------------------------------------------------------------------
-#LIBS	:= -lmm -lgba
-
-
-#---------------------------------------------------------------------------------
-# list of directories containing libraries, this must be the top level containing
-# include and lib
-#---------------------------------------------------------------------------------
-# LIBDIRS	:=	$(LIBGBA)
-
-#---------------------------------------------------------------------------------
-# no real need to edit anything past this point unless you need to add additional
-# rules for different file extensions
-#---------------------------------------------------------------------------------
-
-
-#ifneq ($(BUILD),$(notdir $(CURDIR)))
-#---------------------------------------------------------------------------------
 
 export OUTPUT	:=	$(BUILD)/$(TARGET)
 
-CFILES		:=	$(foreach dir,$(AUDIO),$(wildcard $(dir)/*.c)) $(foreach dir,$(GRAPHICS),$(wildcard $(dir)/*.c)) \
-				$(foreach dir,$(TEXT),$(wildcard $(dir)/*.c)) $(foreach dir,$(ENGINE_TEXT),$(wildcard $(dir)/*.c)) $(foreach dir,$(LEVEL_TEXT),$(wildcard $(dir)/*.c)) \
-				$(foreach dir,$(DATA),$(wildcard $(dir)/*.c)) $(foreach dir,$(SCENE_DATA),$(wildcard $(dir)/*.c)) $(foreach dir,$(ENGINE_DATA),$(wildcard $(dir)/*.c)) \
-				$(foreach dir,$(PROLOGUE_DATA),$(wildcard $(dir)/*.c)) $(foreach dir,$(LEVEL_DATA),$(wildcard $(dir)/*.c)) \
-				$(foreach dir,$(SOURCES),$(wildcard $(dir)/*.c)) $(foreach dir,$(SCENES),$(wildcard $(dir)/*.c)) \
-				$(foreach dir,$(ENGINES),$(wildcard $(dir)/*.c)) $(foreach dir,$(PROLOGUES),$(wildcard $(dir)/*.c)) \
-				$(foreach dir,$(LEVELS),$(wildcard $(dir)/*.c))
-
-CPPFILES	:=	$(foreach dir,$(SOURCES),$(wildcard $(dir)/*.cpp)) $(foreach dir,$(SCENES),$(wildcard $(dir)/*.cpp)) $(foreach dir,$(ENGINES),$(wildcard $(dir)/*.cpp)) $(foreach dir,$(PROLOGUES),$(wildcard $(dir)/*.cpp))
-SFILES		:=	$(foreach dir,$(ASM),$(wildcard $(dir)/*.s)) $(foreach dir,$(DATA),$(wildcard $(dir)/*.s)) \
-				$(foreach dir,$(SCENE_DATA),$(wildcard $(dir)/*.s)) $(foreach dir,$(ENGINE_DATA),$(wildcard $(dir)/*.s)) \
-				$(foreach dir,$(PROLOGUE_DATA),$(wildcard $(dir)/*.s)) $(foreach dir,$(LEVEL_DATA),$(wildcard $(dir)/*.s)) \
-				$(foreach dir,$(TEXT),$(wildcard $(dir)/*.s)) $(foreach dir,$(ENGINE_TEXT),$(wildcard $(dir)/*.s)) $(foreach dir,$(LEVEL_TEXT),$(wildcard $(dir)/*.s))
+CFILES		:=	$(foreach dir,$(C_DIRS),$(wildcard $(dir)/*.c))
+SFILES		:=	$(foreach dir,$(ASM_DIRS),$(wildcard $(dir)/*.s)) $(foreach dir,$(BS_DIRS),$(wildcard $(dir)/*.bs))
 BINFILES	:=	$(foreach dir,$(BIN),$(wildcard $(dir)/*.bin)) $(foreach dir,$(MUSIC),$(wildcard $(dir)/*.mid)) $(foreach dir,$(GRAPHICS),$(wildcard $(dir)/*.bin))
 WAVFILES    :=  $(foreach dir,$(SFX),$(wildcard $(dir)/*.wav))
 JSONFILES   :=  $(foreach dir,$(AUDIO),$(wildcard $(dir)/*.json))
 
 CFILES := $(filter-out %.inc.c, $(CFILES))
 
-export OFILES_JSON := $(addprefix $(BUILD)/,$(JSONFILES:.json=.json.c.o))
+OFILES_JSON := $(addprefix $(BUILD)/,$(JSONFILES:.json=.json.c.o))
+OFILES_BIN := $(addprefix $(BUILD)/,$(addsuffix .o,$(BINFILES))) $(addprefix $(BUILD)/,$(WAVFILES:.wav=.pcm.o))
+OFILES_SOURCES := $(addprefix $(BUILD)/,$(addsuffix .o,$(SFILES))) $(addprefix $(BUILD)/,$(addsuffix .o,$(CFILES)))
 
-export OFILES_BIN := $(addprefix $(BUILD)/,$(addsuffix .o,$(BINFILES))) $(addprefix $(BUILD)/,$(WAVFILES:.wav=.pcm.o))
+OFILES := $(OFILES_BIN) $(OFILES_SOURCES) $(OFILES_JSON)
 
-export OFILES_SOURCES := $(addprefix $(BUILD)/,$(addsuffix .o,$(SFILES))) $(addprefix $(BUILD)/,$(addsuffix .o,$(CFILES)))
-
-export OFILES := $(OFILES_BIN) $(OFILES_SOURCES) $(OFILES_JSON)
-
-export INCLUDE	:=	-I $(foreach dir,$(INCLUDES),$(wildcard $(dir)/*.h)) \
-					-I $(foreach dir,$(LIBDIRS),-I $(dir)/include) \
-					-I $(CURDIR)/$(BUILD)
-
-#export LIBPATHS	:=	$(foreach dir,$(LIBDIRS),-L$(dir)/lib)
-
-ifeq (,$(wildcard baserom.gba))
-    $(error No ROM provided. Please place an unmodified ROM named "baserom.gba" in the root folder)
-endif
-
-ifneq ($(shell sha1sum -t baserom.gba), 67f8adacff79c15d028fffd90de3a77d9ad0602d  baserom.gba)
-    $(error Provided ROM is not correct)
-endif
-
-.PHONY: default clean rebuild
-.SECONDARY:
+INCLUDE	:=	-I $(foreach dir,$(INCLUDES),$(wildcard $(dir)/*.h)) \
+			-I $(foreach dir,$(LIBDIRS),-I $(dir)/include) \
+			-I $(CURDIR)/$(BUILD)
 
 #---------------------------------------------------------------------------------
+.PHONY: default clean distclean rebuild
+.SECONDARY:
+#---------------------------------------------------------------------------------
+
 default: $(OUTPUT).gba
 	$(V)diff baserom.gba $(OUTPUT).gba && (echo "$(TARGET).gba: OK") || (echo "The build succeeded, but did not match the official ROM.")
 
 #---------------------------------------------------------------------------------
+
 clean:
 	$(V)echo clean ...
 	$(V)rm -fr $(filter-out build/audio, $(wildcard build/*))
 	$(V)rm -fr $(filter-out build/audio/samples build/audio/sequences, $(wildcard build/audio/*))
     
-fullclean:
+distclean:
 	$(V)echo full clean ...
 	$(V)rm -fr $(BUILD)
 
 #---------------------------------------------------------------------------------
+
 rebuild: clean default
 
 #---------------------------------------------------------------------------------
@@ -175,7 +128,7 @@ rebuild: clean default
 #---------------------------------------------------------------------------------
 
 $(BUILD_DIRS):
-	$(V)echo "Creating /$@"
+	$(V)echo "$(GREEN)Creating build directory: $(YELLOW)$@$(NO_COL)"
 	$(V)mkdir -p $@
 
 $(OUTPUT).gba	:	$(OUTPUT).elf
@@ -184,29 +137,27 @@ $(OUTPUT).gba	:	$(OUTPUT).elf
 
 $(OUTPUT).elf	:	$(OFILES)
 	$(V)echo "Building ROM..."
-	$(V)$(LD) $(OFILES) tools/agbcc/lib/libgcc.a tools/agbcc/lib/libc.a -T $(LD_SCRIPT) -T $(UNDEFINED_SYMS) -Wl,-Map $(@:.elf=.map) -nostartfiles -o $@
+	$(V)$(LD) $(OFILES) tools/agbcc/lib/libgcc.a tools/agbcc/lib/libc.a -T $(LD_SCRIPT) -T $(UNDEFINED_SYMS) -Wl,--no-warn-rwx-segments,-Map $(@:.elf=.map) -nostartfiles -o $@
 
 
 # Binary data
 $(BUILD)/%.bin.o	$(BUILD)/%.bin.h :	%.bin | $(BUILD_DIRS)
-	$(V)echo "Copying $< to $<.o"
+	$(call print,Copying binary file:,$<,$@)
 	$(V)bin2s -a 4 -H $(BUILD)/$<.h $< | $(AS) -o $(BUILD)/$<.o
 
 # MIDI files
 $(BUILD)/%.mid.o	$(BUILD)/%.mid.h :	%.mid | $(BUILD_DIRS)
-	$(V)echo "Copying $<"
+	$(call print,Copying MIDI file:,$<,$@)
 	$(V)bin2s -a 4 -H $(BUILD)/$<.h $< | $(AS) -o $(BUILD)/$<.o
 
 # WAV files
-$(BUILD)/%.pcm.o	$(BUILD)/%.pcm.h :	$(BUILD)/%.pcm | $(BUILD_DIRS)
-	$(V)bin2s -a 4 -H $<.h $< | $(AS) -o $<.o
-
-$(BUILD)/%.pcm : %.wav | $(BUILD_DIRS)
-	$(V)echo "Converting $< to raw PCM audio"
-	$(V)ffmpeg -y -loglevel quiet -i $< -f s8 $@
+$(BUILD)/%.pcm.o	$(BUILD)/%.pcm.h : %.wav | $(BUILD_DIRS)
+	$(call print,Converting WAV file to raw PCM audio:,$<,$@)
+	$(V)ffmpeg -y -loglevel quiet -i $< -f s8 $(basename $@)
+	$(V)bin2s -a 4 -H $(basename $@).h $(basename $@) | $(AS) -o $@
     
 define build_c_file
-	$(V)echo "Compiling $< to $@"
+	$(call print,Compiling:,$<,$@)
 	$(V)$(CPP) -MMD -MF $(BUILD)/$*.d -MT $@ $(CPPFLAGS) $< -o $(BUILD)/$*.i
 	$(V)$(CC1) $(CFLAGS) $(BUILD)/$*.i -o $(BUILD)/$*.s
 	$(V)printf ".text\n\t.align\t2, 0\n" >> $(BUILD)/$*.s
@@ -215,7 +166,7 @@ endef
 
 # Autogenerated C files
 $(BUILD)/%.json.c : %.json $(WAVFILES) | $(BUILD_DIRS)
-	$(V)echo "Generating data table $@ from JSON data $<"
+	$(call print,Generating data table from JSON:,$<,$@)
 	$(V)python3 tools/sample_parser.py $< $@
 
 $(OFILES_JSON): $(BUILD)/%.c.o : $(BUILD)/%.c | $(BUILD_DIRS)
@@ -227,11 +178,15 @@ $(BUILD)/%.c.o : %.c | $(BUILD_DIRS)
 
 # ASM files
 $(BUILD)/%.s.o : %.s | $(BUILD_DIRS)
-	$(V)echo "Assembling $< to $(basename $<).o"
+	$(call print,Assembling:,$<,$@)
+	$(V)$(AS) -MD $(BUILD)/$*.d -march=armv4t -o $@ $<
+
+# Beatscript
+$(BUILD)/%.bs.o : %.bs | $(BUILD_DIRS)
+	$(call print,Assembling Beatscript:,$<,$@)
 	$(V)$(AS) -MD $(BUILD)/$*.d -march=armv4t -o $@ $<
 
 -include $(addprefix $(BUILD)/,$(CFILES:.c=.d))
-#---------------------------------------------------------------------------------------
 
 #---------------------------------------------------------------------------------------
 

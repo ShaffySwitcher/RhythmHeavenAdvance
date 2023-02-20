@@ -1,8 +1,8 @@
 // Might need some more splitting
 
 #include "engines/drum_studio.h"
-#include "scenes/gameplay.h"
-#include "scenes/data.h"
+#include "src/scenes/gameplay.h"
+#include "src/scenes/data.h"
 #include "src/memory.h"
 #include "src/code_08001360.h"
 #include "src/task_pool.h"
@@ -28,7 +28,7 @@ enum SaveReplayOptionsEnum {
     REPLAY_SAVE_OPTION_NO
 };
 
-extern const struct Scene D_089d85b4; // Studio Scene
+extern struct Scene D_089d85b4; // Studio Scene
 
 
 /* DRUM LESSONS */
@@ -110,9 +110,9 @@ void func_080271d4(u32 drumKitID, u32 unused1, u16 button, u32 unused3) {
 // Engine Event 12 (Set Drum Samurai Expression)
 void drum_lessons_set_teacher_expression(u32 expression) {
     struct StudioDrummer *teacher = &gDrumLessonsInfo->teacher;
-    const struct Animation *headAnim;
-    const struct Animation *rightArmAnim;
-    const struct Animation *leftArmAnim;
+    struct Animation *headAnim;
+    struct Animation *rightArmAnim;
+    struct Animation *leftArmAnim;
 
     if (!gDrumLessonsInfo->unk3C1) {
         return;
@@ -438,7 +438,7 @@ void drum_lessons_get_score(void) {
 
 
 // Change BG Monitor Palette
-void drum_studio_start_monitor2(const Palette *palette) {
+void drum_studio_start_monitor2(Palette *palette) {
     func_0800c604(0);
     scene_show_bg_layer(BG_LAYER_2);
     scene_show_bg_layer(BG_LAYER_3);
@@ -480,7 +480,7 @@ void drum_studio_stop_monitor2(void) {
 
 // Revert BG Monitor Palette
 void drum_studio_stop_monitor1(void) {
-    const Palette *palette;
+    Palette *palette;
     s32 task;
 
     if (gDrumLessonsInfo->unk3F0 < 0) {
@@ -603,7 +603,7 @@ void drum_studio_init_gfx3(void) {
 
 // Graphics Init. 2
 void drum_studio_init_gfx2(void) {
-    const struct GraphicsTable *gfxTable = drum_studio_gfx_table;
+    struct GraphicsTable *gfxTable = drum_studio_gfx_table;
     s32 task;
 
     func_0800c604(0);
@@ -816,7 +816,7 @@ void drum_studio_update_song_title(void) {
 
 
 // Engine Event 00 (Init. Studio Script & Recording)
-const struct BeatScript *drum_studio_init_script(void) {
+const struct Beatscript *drum_studio_init_script(void) {
     struct DrumReplayData *replayData;
     u32 r7;
     u32 availableSpace;

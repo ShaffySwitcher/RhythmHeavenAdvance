@@ -7,7 +7,7 @@
 #include "src/lib_0804ca80.h"
 
 // For readability.
-#define gPrologueInfo ((struct PrologueNinjaBodyguardInfo *)D_030055d0)
+#define gPrologueInfo ((struct NinjaBodyguardPrologueInfo *)D_030055d0)
 
 
   //  //  //  PROLOGUE: NINJA BODYGUARD  //  //  //
@@ -25,7 +25,7 @@ void func_080472cc(void) {
     u32 task;
 
     func_0800c604(0);
-    task = func_08002ee0(get_current_mem_id(), prologue_ninja_gfx_table, 0x2000);
+    task = func_08002ee0(get_current_mem_id(), ninja_bodyguard_prologue_gfx_table, 0x2000);
     run_func_after_task(task, func_080472bc, 0);
 }
 
@@ -36,20 +36,20 @@ void func_080472fc(void) {
 
     func_0800c604(0);
     func_08006d80();
-    task = func_080087b4(get_current_mem_id(), prologue_ninja_buffered_textures);
+    task = func_080087b4(get_current_mem_id(), ninja_bodyguard_prologue_buffered_textures);
     run_func_after_task(task, func_080472cc, 0);
 }
 
 
 // [func_0804732c] MAIN - Init
-void func_0804732c(u32 ver) {
+void ninja_bodyguard_prologue_engine_start(u32 ver) {
     gPrologueInfo->ver = ver;
 
     func_080472fc();
     scene_show_obj_layer();
     scene_set_bg_layer_display(BG_LAYER_1, TRUE, 0, 0, 0, 29, 1);
 
-    gPrologueInfo->textSprite = func_0804d160(D_03005380, anim_prologue_ninja_title, 0, 120, 130, 0, 0, 0x7f, 0);
+    gPrologueInfo->textSprite = func_0804d160(D_03005380, anim_ninja_bodyguard_prologue_title, 0, 120, 130, 0, 0, 0x7f, 0);
     func_0804dcb8(D_03005380, gPrologueInfo->textSprite, INT_TO_FIXED(1.5));
 }
 
@@ -60,12 +60,12 @@ void func_08047398(void) {
 
 
 // [func_0804739c] MAIN - Update
-void func_0804739c(void) {
+void ninja_bodyguard_prologue_engine_update(void) {
 }
 
 
 // [func_080473a0] MAIN - Close
-void func_080473a0(void) {
+void ninja_bodyguard_prologue_engine_stop(void) {
 }
 
 

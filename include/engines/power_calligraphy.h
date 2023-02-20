@@ -3,6 +3,8 @@
 #include "global.h"
 #include "engines.h"
 
+#include "games/power_calligraphy/graphics/power_calligraphy_graphics.h"
+
 // Engine Types:
 struct PowerCalligraphyInfo {
     /* add fields here */
@@ -33,27 +35,6 @@ enum PowerCalligraphyInputsEnum {
     CALLIGRAPHY_INPUT_COMMA1,
     CALLIGRAPHY_INPUT_FACE1,
 };
-
-
-// OAM Animations:
-
-
-// Palettes:
-
-
-// Sound Effects:
-extern const struct SequenceData s_sword_orya_seqData;
-extern const struct SequenceData s_sword_hi_seqData;
-extern const struct SequenceData s_f_shuji_v_nuaa_seqData;
-extern const struct SequenceData s_f_shuji_v_unuu_seqData;
-extern const struct SequenceData s_f_shuji_v_ouch_seqData;
-extern const struct SequenceData s_f_shuji_v_nuahaha_seqData;
-
-
-// Engine Data:
-
-
-// Engine Definition Data:
 
 
 // Functions:
@@ -93,4 +74,4 @@ extern void calligraphy_cue_miss(struct Cue *, struct PowerCalligraphyCue *); //
 extern void calligraphy_input_event(u32 pressed, u32 released); // Input Event
 extern void calligraphy_common_beat_animation(void); // Common Event 0 (Beat Animation, Unimplemented)
 extern void calligraphy_common_display_text(const char *); // Common Event 1 (Display Text)
-extern void calligraphy_common_init_tutorial(const struct Scene *); // Common Event 2 (Init. Tutorial)
+extern void calligraphy_common_init_tutorial(struct Scene *); // Common Event 2 (Init. Tutorial)

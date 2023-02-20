@@ -3,6 +3,8 @@
 #include "global.h"
 #include "engines.h"
 
+#include "games/quiz_show/graphics/quiz_show_graphics.h"
+
 // Engine Types:
 struct QuizShowInfo {
     /* add fields here */
@@ -13,8 +15,8 @@ struct QuizShowCue {
 };
 
 struct QuizShowScriptTable {
-    const struct BeatScript *scriptA;
-    const struct BeatScript *scriptB;
+    const struct Beatscript *scriptA;
+    const struct Beatscript *scriptB;
     const struct QuizShowScriptTable *const *scriptTable;
 };
 
@@ -36,28 +38,16 @@ enum QuizShowHostArmsEnum {
 };
 
 
-// OAM Animations:
-
-
-// Palettes:
-
-
-// Sound Effects:
-
-
-// Engine Data:
-
-
 // Engine Definition Data:
-extern const struct Animation *const quiz_arm_r_anim[];
-extern const struct Animation *const quiz_arm_l_anim[];
-extern const struct Animation *const quiz_face_neutral_anim[];
-extern const struct Animation *const quiz_face_success_anim[];
-extern const struct Animation *const quiz_face_failure_anim[];
-extern const struct Animation *const quiz_host_button_press_anim[];
-extern const struct Animation *const quiz_ex_host_face_anim[];
-extern const struct Animation *const quiz_ex_player_face_anim[];
-extern const struct GameEngine D_089e5ec0;
+extern struct Animation *quiz_arm_r_anim[];
+extern struct Animation *quiz_arm_l_anim[];
+extern struct Animation *quiz_face_neutral_anim[];
+extern struct Animation *quiz_face_success_anim[];
+extern struct Animation *quiz_face_failure_anim[];
+extern struct Animation *quiz_host_button_press_anim[];
+extern struct Animation *quiz_ex_host_face_anim[];
+extern struct Animation *quiz_ex_player_face_anim[];
+extern struct GameEngine quiz_show_engine;
 
 
 // Functions:
@@ -101,4 +91,4 @@ extern void quiz_cue_miss(struct Cue *, struct QuizShowCue *); // Cue - Miss
 extern void quiz_input_event(u32 pressed, u32 released); // Input Event
 extern void quiz_common_beat_animation(void); // Common Event 0 (Beat Animation, Unimplemented)
 extern void quiz_common_display_text(void); // Common Event 1 (Display Text, Unimplemented)
-extern void quiz_common_init_tutorial(const struct Scene *); // Common Event 2 (Init. Tutorial)
+extern void quiz_common_init_tutorial(struct Scene *); // Common Event 2 (Init. Tutorial)

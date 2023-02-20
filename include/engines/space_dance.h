@@ -3,6 +3,8 @@
 #include "global.h"
 #include "engines.h"
 
+#include "games/space_dance/graphics/space_dance_graphics.h"
+
 // Engine Types:
 struct SpaceDanceInfo {
     /* add fields here */
@@ -17,7 +19,7 @@ struct SpaceDanceCue {
 enum SpaceDanceVersionsEnum {
     ENGINE_VER_SPACE_DANCE,
     ENGINE_VER_COSMIC_DANCE,
-    ENGINE_VER_SPACE_DANCE_REMIX3
+    ENGINE_VER_SPACE_DANCE_REMIX_3
 };
 
 enum SpaceDanceAnimationsEnum {
@@ -75,32 +77,23 @@ enum SpaceGrampsAnimationsEnum {
 };
 
 
-// OAM Animations:
-
-
-// Palettes:
-
-
-// Sound Effects:
-
-
 // Engine Data:
 extern const char D_0805a8b8[];
 
 
 // Engine Definition Data:
-extern const struct Animation *const *const space_dance_anim_table[];
-extern const struct CompressedGraphics *const space_dance_buffered_textures[];
-extern const struct GraphicsTable *const space_dance_gfx_tables[];
-extern const u8 space_dancer_anim_map[];
-extern const u8 space_gramps_anim_map[];
-extern const struct SequenceData *const space_dancer_sounds[];
-extern const u8 space_dance_cue_anim_map[];
-extern const s16 D_089e6ebc[];
+extern struct Animation **space_dance_anim_table[];
+extern struct CompressedGraphics *space_dance_buffered_textures[];
+extern struct GraphicsTable *space_dance_gfx_tables[];
+extern u8 space_dancer_anim_map[];
+extern u8 space_gramps_anim_map[];
+extern struct SequenceData *space_dancer_sounds[];
+extern u8 space_dance_cue_anim_map[];
+extern s16 D_089e6ebc[];
 
 
 // Functions:
-extern const struct Animation *space_dance_get_anim(u32 anim); // Get Animation
+extern struct Animation *space_dance_get_anim(u32 anim); // Get Animation
 extern void space_dance_init_gfx3(void); // Graphics Init. 3
 extern void space_dance_init_gfx2(void); // Graphics Init. 2
 extern void space_dance_init_gfx1(void); // Graphics Init. 1
