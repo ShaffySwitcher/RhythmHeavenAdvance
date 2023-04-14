@@ -1,64 +1,64 @@
-extern struct Scene D_089cfed0;
-extern struct Scene D_089d0728;
-extern struct Scene D_089d0188;
-extern struct Scene D_089d634c;
-extern struct Scene D_089d0358;
-extern struct Scene D_089d044c;
-extern struct Scene D_089d0540;
-extern struct Scene D_089d0634;
-extern struct Scene D_089d081c;
-extern struct Scene D_089d09ec;
-extern struct Scene D_089d0ae0;
-extern struct Scene D_089d0da4;
-extern struct Scene D_089d0f74;
-extern struct Scene D_089d1068;
-extern struct Scene D_089d1238;
-extern struct Scene D_089d132c;
-extern struct Scene D_089d14fc;
-extern struct Scene D_089d15f0;
-extern struct Scene D_089d18cc;
-extern struct Scene D_089d19c0;
-extern struct Scene D_089d1c6c;
-extern struct Scene D_089d6258;
-extern struct Scene D_089d21dc;
-extern struct Scene D_089d23ac;
-extern struct Scene D_089d24a0;
-extern struct Scene D_089d2858;
-extern struct Scene D_089d2a34;
-extern struct Scene D_089d2dd4;
-extern struct Scene D_089d2dd4;
-extern struct Scene D_089d3268;
-extern struct Scene D_089d3174;
-extern struct Scene D_089d2c04;
-extern struct Scene D_089d35fc;
-extern struct Scene D_089d3c48;
-extern struct Scene D_089d3e18;
-extern struct Scene D_089d68f8;
-extern struct Scene D_089d40d0;
-extern struct Scene D_089d6440;
-extern struct Scene D_089d42a0;
-extern struct Scene D_089d6088;
-extern struct Scene D_089d7314;
-extern struct Scene D_089d2764;
-extern struct Scene D_089d6628;
-extern struct Scene D_089d7038;
-extern struct Scene D_089d671c;
-extern struct Scene D_089d7220;
-extern struct Scene D_089d7408;
-extern struct Scene D_089d712c;
-extern struct Scene D_089d74fc;
+extern struct Scene scene_karate_man;
+extern struct Scene scene_karate_man_2;
+extern struct Scene scene_clappy_trio;
+extern struct Scene scene_snappy_trio;
+extern struct Scene scene_polyrhythm;
+extern struct Scene scene_polyrhythm_2;
+extern struct Scene scene_night_walk;
+extern struct Scene scene_night_walk_2;
+extern struct Scene scene_rhythm_tweezers;
+extern struct Scene scene_rhythm_tweezers_2;
+extern struct Scene scene_sick_beats;
+extern struct Scene scene_bouncy_road;
+extern struct Scene scene_bouncy_road_2;
+extern struct Scene scene_ninja_bodyguard;
+extern struct Scene scene_ninja_reincarnate;
+extern struct Scene scene_sneaky_spirits;
+extern struct Scene scene_sneaky_spirits_2;
+extern struct Scene scene_samurai_slice;
+extern struct Scene scene_spaceball;
+extern struct Scene scene_spaceball_2;
+extern struct Scene scene_tap_trial;
+extern struct Scene scene_tap_trial_2;
+extern struct Scene scene_marching_orders;
+extern struct Scene scene_marching_orders_2;
+extern struct Scene scene_wizards_waltz;
+extern struct Scene scene_bunny_hop;
+extern struct Scene scene_fireworks;
+extern struct Scene scene_power_calligraphy;
+extern struct Scene scene_power_calligraphy;
+extern struct Scene scene_toss_boys;
+extern struct Scene scene_toss_boys_2;
+extern struct Scene scene_rat_race;
+extern struct Scene scene_tram_pauline;
+extern struct Scene scene_showtime;
+extern struct Scene scene_space_dance;
+extern struct Scene scene_cosmic_dance;
+extern struct Scene scene_rap_men;
+extern struct Scene scene_rap_women;
+extern struct Scene scene_quiz_show;
+extern struct Scene scene_bon_odori;
+extern struct Scene scene_bon_dance;
+extern struct Scene scene_remix_1;
+extern struct Scene scene_remix_2;
+extern struct Scene scene_remix_3;
+extern struct Scene scene_remix_4;
+extern struct Scene scene_remix_5;
+extern struct Scene scene_remix_6;
+extern struct Scene scene_remix_7;
+extern struct Scene scene_remix_8;
 extern struct Scene scene_cafe;
 extern struct Scene scene_toys_menu;
 extern struct Scene scene_endless_menu;
 extern struct Scene scene_lessons_menu;
-extern struct Scene D_089d6e5c;
-extern struct Scene D_089d6f44;
+extern struct Scene scene_staff_credit;
+extern struct Scene scene_concert_hall;
 
 
 // Level Entries Table
 struct LevelData level_data_table[TOTAL_LEVELS] = {
     /* KARATE_MAN */ {
-        /* Entry Scene   */ &D_089cfed0,
+        /* Entry Scene   */ &scene_karate_man,
         /* Level Name    */ "カラテ家",
         /* Level Desc.   */ "とんでくるモノを\n"
                             "Aボタンでパンチ！\n"
@@ -74,7 +74,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* KARATE_MAN_2 */ {
-        /* Entry Scene   */ &D_089d0728,
+        /* Entry Scene   */ &scene_karate_man_2,
         /* Level Name    */ "カラテ家 ２",
         /* Level Desc.   */ "とんでくるモノを\n"
                             "Aボタンでパンチ！\n"
@@ -90,7 +90,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* CLAPPY_TRIO */ {
-        /* Entry Scene   */ &D_089d0188,
+        /* Entry Scene   */ &scene_clappy_trio,
         /* Level Name    */ "パチパチ三人衆",
         /* Level Desc.   */ "順番に拍手をするヨ！\n"
                             "あなたは３番目。\n"
@@ -105,7 +105,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* SNAPPY_TRIO */ {
-        /* Entry Scene   */ &D_089d634c,
+        /* Entry Scene   */ &scene_snappy_trio,
         /* Level Name    */ "バリバリ三人衆",
         /* Level Desc.   */ "ラフだった彼らが\n"
                             "バリっとスーツを\n"
@@ -121,7 +121,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* POLYRHYTHM */ {
-        /* Entry Scene   */ &D_089d0358,
+        /* Entry Scene   */ &scene_polyrhythm,
         /* Level Name    */ "ポリリズム",
         /* Level Desc.   */ "十\字ボタンとＡボタンの同時押しをマスターだ！けっこうカンタンだ。たぶん…",
         /* Level Icon    */ 3,
@@ -134,7 +134,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* POLYRHYTHM_2 */ {
-        /* Entry Scene   */ &D_089d044c,
+        /* Entry Scene   */ &scene_polyrhythm_2,
         /* Level Name    */ "ポリリズム ２",
         /* Level Desc.   */ "これぞ左右独立！\n"
                             "テンポよく こなして\n"
@@ -150,7 +150,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* NIGHT_WALK */ {
-        /* Entry Scene   */ &D_089d0540,
+        /* Entry Scene   */ &scene_night_walk,
         /* Level Name    */ "ナイトウォーク",
         /* Level Desc.   */ "音楽にあわせて\n"
                             "ジャンプしてネ！\n"
@@ -166,7 +166,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* NIGHT_WALK_2 */ {
-        /* Entry Scene   */ &D_089d0634,
+        /* Entry Scene   */ &scene_night_walk_2,
         /* Level Name    */ "ナイトウォーク ２",
         /* Level Desc.   */ "音楽にあわせて\n"
                             "ジャンプしてネ！\n"
@@ -182,7 +182,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* RHYTHM_TWEEZERS */ {
-        /* Entry Scene   */ &D_089d081c,
+        /* Entry Scene   */ &scene_rhythm_tweezers,
         /* Level Name    */ "リズム脱毛",
         /* Level Desc.   */ "どんどん生えてくる\n"
                             "うっとうしい「毛」！\n"
@@ -198,7 +198,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* RHYTHM_TWEEZERS_2 */ {
-        /* Entry Scene   */ &D_089d09ec,
+        /* Entry Scene   */ &scene_rhythm_tweezers_2,
         /* Level Name    */ "リズム脱毛 ２",
         /* Level Desc.   */ "またしても生えてくる\n"
                             "うっとうしい「毛」！\n"
@@ -214,7 +214,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* SICK_BEATS */ {
-        /* Entry Scene   */ &D_089d0ae0,
+        /* Entry Scene   */ &scene_sick_beats,
         /* Level Name    */ "バイキン はかせ",
         /* Level Desc.   */ "助手からの知らせ\n"
                             "「大変です！\n"
@@ -230,7 +230,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* BOUNCY_ROAD */ {
-        /* Entry Scene   */ &D_089d0da4,
+        /* Entry Scene   */ &scene_bouncy_road,
         /* Level Name    */ "ホッピングロード",
         /* Level Desc.   */ "とんでくる丸い玉。\n"
                             "あれはイイやつです。\n"
@@ -245,7 +245,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* BOUNCY_ROAD_2 */ {
-        /* Entry Scene   */ &D_089d0f74,
+        /* Entry Scene   */ &scene_bouncy_road_2,
         /* Level Name    */ "ホッピングロード２",
         /* Level Desc.   */ "とんでくる丸い玉。\n"
                             "ほんとにイイやつ\n"
@@ -261,7 +261,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* NINJA_BODYGUARD */ {
-        /* Entry Scene   */ &D_089d1068,
+        /* Entry Scene   */ &scene_ninja_bodyguard,
         /* Level Name    */ "忍者",
         /* Level Desc.   */ "敵襲(てきしゅう)だ！\n"
                             "十\字ボタンとAボタンで応戦(おうせん)だ！\n"
@@ -276,7 +276,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* NINJA_REINCARNATE */ {
-        /* Entry Scene   */ &D_089d1238,
+        /* Entry Scene   */ &scene_ninja_reincarnate,
         /* Level Name    */ "忍者の子孫",
         /* Level Desc.   */ "オレのじいちゃんの\n"
                             "じいちゃんの\n"
@@ -292,7 +292,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* SNEAKY_SPIRITS */ {
-        /* Entry Scene   */ &D_089d132c,
+        /* Entry Scene   */ &scene_sneaky_spirits,
         /* Level Name    */ "しろいおばけ",
         /* Level Desc.   */ "白いヤツが こちらを\n"
                             "バカにしている！\n"
@@ -308,7 +308,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* SNEAKY_SPIRITS_2 */ {
-        /* Entry Scene   */ &D_089d14fc,
+        /* Entry Scene   */ &scene_sneaky_spirits_2,
         /* Level Name    */ "しろいおばけ ２",
         /* Level Desc.   */ "白いヤツが こちらを\n"
                             "ナメきっている！\n"
@@ -324,7 +324,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* SAMURAI_SLICE */ {
-        /* Entry Scene   */ &D_089d15f0,
+        /* Entry Scene   */ &scene_samurai_slice,
         /* Level Name    */ "ゐあひ斬り",
         /* Level Desc.   */ "そこのけ そこのけ\n"
                             "奴らが通る。\n"
@@ -340,7 +340,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* SPACEBALL */ {
-        /* Entry Scene   */ &D_089d18cc,
+        /* Entry Scene   */ &scene_spaceball,
         /* Level Name    */ "エアーバッター",
         /* Level Desc.   */ "ズームをきにするな！\n"
                             "心でボールを打て！\n"
@@ -356,7 +356,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* SPACEBALL_2 */ {
-        /* Entry Scene   */ &D_089d19c0,
+        /* Entry Scene   */ &scene_spaceball_2,
         /* Level Name    */ "エアーバッター ２",
         /* Level Desc.   */ "ズームをきにするな！\n"
                             "心でボールを打て！\n"
@@ -372,7 +372,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* TAP_TRIAL */ {
-        /* Entry Scene   */ &D_089d1c6c,
+        /* Entry Scene   */ &scene_tap_trial,
         /* Level Name    */ "タップダンズ",
         /* Level Desc.   */ "あなたは女の子。\n"
                             "となりのサルたちに\n"
@@ -388,7 +388,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* TAP_TRIAL_2 */ {
-        /* Entry Scene   */ &D_089d6258,
+        /* Entry Scene   */ &scene_tap_trial_2,
         /* Level Name    */ "スーパータップ",
         /* Level Desc.   */ "サルがパワーアップ！\n"
                             "あなたは かれらに\n"
@@ -404,7 +404,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* MARCHING_ORDERS */ {
-        /* Entry Scene   */ &D_089d21dc,
+        /* Entry Scene   */ &scene_marching_orders,
         /* Level Name    */ "マーチャ",
         /* Level Desc.   */ "行進をするのだ。\n"
                             "かってな行動はチームをダメにする！\n"
@@ -419,7 +419,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* MARCHING_ORDERS_2 */ {
-        /* Entry Scene   */ &D_089d23ac,
+        /* Entry Scene   */ &scene_marching_orders_2,
         /* Level Name    */ "マーチャ ２",
         /* Level Desc.   */ "行進をするのだ。\n"
                             "こんどのは ちょっと\n"
@@ -435,7 +435,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* WIZARDS_WALTZ */ {
-        /* Entry Scene   */ &D_089d24a0,
+        /* Entry Scene   */ &scene_wizards_waltz,
         /* Level Name    */ "まほうつかい",
         /* Level Desc.   */ "あなたはまほう使い。\n"
                             "さみしがりやの\n"
@@ -451,7 +451,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* BUNNY_HOP */ {
-        /* Entry Scene   */ &D_089d2858,
+        /* Entry Scene   */ &scene_bunny_hop,
         /* Level Name    */ "ウサギとび",
         /* Level Desc.   */ "ジャンプが得意な\n"
                             "白いウサギさん。\n"
@@ -467,7 +467,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* FIREWORKS */ {
-        /* Entry Scene   */ &D_089d2a34,
+        /* Entry Scene   */ &scene_fireworks,
         /* Level Name    */ "花火",
         /* Level Desc.   */ "夏といえばさ、\n"
                             "やっぱ花火かな？\n"
@@ -483,7 +483,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* POWER_CALLIGRAPHY */ {
-        /* Entry Scene   */ &D_089d2dd4,
+        /* Entry Scene   */ &scene_power_calligraphy,
         /* Level Name    */ "リズムお習字",
         /* Level Desc.   */ "筆を使って日本語を\n"
                             "書きます。\n"
@@ -499,7 +499,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* POWER_CALLIGRAPHY_2 */ {
-        /* Entry Scene   */ &D_089d2dd4,
+        /* Entry Scene   */ &scene_power_calligraphy,
         /* Level Name    */ "リズムお習字 ２",
         /* Level Desc.   */ "筆を使って日本語を\n"
                             "書きます。\n"
@@ -515,7 +515,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* TOSS_BOYS */ {
-        /* Entry Scene   */ &D_089d3268,
+        /* Entry Scene   */ &scene_toss_boys,
         /* Level Name    */ "トスボーイズ",
         /* Level Desc.   */ "なかよし３人組、\n"
                             "声をかけあいながら\n"
@@ -531,7 +531,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* TOSS_BOYS_2 */ {
-        /* Entry Scene   */ &D_089d3174,
+        /* Entry Scene   */ &scene_toss_boys_2,
         /* Level Name    */ "トスボーイズ ２",
         /* Level Desc.   */ "なかよし３人組、\n"
                             "声をかけあいながら\n"
@@ -547,7 +547,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* RAT_RACE */ {
-        /* Entry Scene   */ &D_089d2c04,
+        /* Entry Scene   */ &scene_rat_race,
         /* Level Name    */ "こっそり ラット",
         /* Level Desc.   */ "あなたはネズミ。\n"
                             "大スキなチーズを\n"
@@ -563,7 +563,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* TRAM_PAULINE */ {
-        /* Entry Scene   */ &D_089d35fc,
+        /* Entry Scene   */ &scene_tram_pauline,
         /* Level Name    */ "トランとポリン",
         /* Level Desc.   */ "こぎつねトラン、\n"
                             "そしてポリンの\n"
@@ -578,7 +578,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* SHOWTIME */ {
-        /* Entry Scene   */ &D_089d3c48,
+        /* Entry Scene   */ &scene_showtime,
         /* Level Name    */ "ショータイム",
         /* Level Desc.   */ "ペンギン君たちの\n"
                             "ショータイムが\n"
@@ -594,7 +594,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* SPACE_DANCE */ {
-        /* Entry Scene   */ &D_089d3e18,
+        /* Entry Scene   */ &scene_space_dance,
         /* Level Name    */ "スペースダンス",
         /* Level Desc.   */ "ここは無重力の宇宙。\n"
                             "でも、 おどろうヨ！\n"
@@ -609,7 +609,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* COSMIC_DANCE */ {
-        /* Entry Scene   */ &D_089d68f8,
+        /* Entry Scene   */ &scene_cosmic_dance,
         /* Level Name    */ "コスモダンス",
         /* Level Desc.   */ "宇宙を代表\する\n"
                             "ダンサーたち！\n"
@@ -625,7 +625,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* RAP_MEN */ {
-        /* Entry Scene   */ &D_089d40d0,
+        /* Entry Scene   */ &scene_rap_men,
         /* Level Name    */ "ラップメン",
         /* Level Desc.   */ "クールなふたり組が\n"
                             "やってきた！\n"
@@ -641,7 +641,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* RAP_WOMEN */ {
-        /* Entry Scene   */ &D_089d6440,
+        /* Entry Scene   */ &scene_rap_women,
         /* Level Name    */ "ラップウイメン",
         /* Level Desc.   */ "あのラップメンに\n"
                             "ライバルが登場だ！\n"
@@ -657,7 +657,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* QUIZ_SHOW */ {
-        /* Entry Scene   */ &D_089d42a0,
+        /* Entry Scene   */ &scene_quiz_show,
         /* Level Name    */ "クイズ",
         /* Level Desc.   */ "司会者の、\n"
                             "「たたいた回数」を\n"
@@ -673,7 +673,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* BON_ODORI */ {
-        /* Entry Scene   */ &D_089d6088,
+        /* Entry Scene   */ &scene_bon_odori,
         /* Level Name    */ "ザ☆ぼんおどり",
         /* Level Desc.   */ "ぼんおどりの\n"
                             "うたに あわせて\n"
@@ -689,7 +689,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* BON_DANCE */ {
-        /* Entry Scene   */ &D_089d7314,
+        /* Entry Scene   */ &scene_bon_dance,
         /* Level Name    */ "ボンダンス",
         /* Level Desc.   */ "これが いまどきの\n"
                             "ぼんおどり！\n"
@@ -705,7 +705,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* REMIX_1 */ {
-        /* Entry Scene   */ &D_089d2764,
+        /* Entry Scene   */ &scene_remix_1,
         /* Level Name    */ "リミックス １",
         /* Level Desc.   */ "キミの実力を\n"
                             "試してみてみる？\n"
@@ -721,7 +721,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* REMIX_2 */ {
-        /* Entry Scene   */ &D_089d6628,
+        /* Entry Scene   */ &scene_remix_2,
         /* Level Name    */ "リミックス ２",
         /* Level Desc.   */ "キミの実力を\n"
                             "試してみてみる？\n"
@@ -737,7 +737,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* REMIX_3 */ {
-        /* Entry Scene   */ &D_089d7038,
+        /* Entry Scene   */ &scene_remix_3,
         /* Level Name    */ "リミックス ３",
         /* Level Desc.   */ "キミの実力を\n"
                             "試してみてみる？\n"
@@ -753,7 +753,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* REMIX_4 */ {
-        /* Entry Scene   */ &D_089d671c,
+        /* Entry Scene   */ &scene_remix_4,
         /* Level Name    */ "リミックス ４",
         /* Level Desc.   */ "キミの実力を\n"
                             "試してみてみる？\n"
@@ -769,7 +769,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* REMIX_5 */ {
-        /* Entry Scene   */ &D_089d7220,
+        /* Entry Scene   */ &scene_remix_5,
         /* Level Name    */ "リミックス ５",
         /* Level Desc.   */ "キミの実力を\n"
                             "試してみてみる？\n"
@@ -785,7 +785,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* REMIX_6 */ {
-        /* Entry Scene   */ &D_089d7408,
+        /* Entry Scene   */ &scene_remix_6,
         /* Level Name    */ "リミックス ６",
         /* Level Desc.   */ "キミの実力を\n"
                             "試してみてみる？\n"
@@ -801,7 +801,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* REMIX_7 */ {
-        /* Entry Scene   */ &D_089d712c,
+        /* Entry Scene   */ &scene_remix_7,
         /* Level Name    */ "リミックス ７",
         /* Level Desc.   */ "キミの実力を\n"
                             "試してみてみる？\n"
@@ -817,7 +817,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* REMIX_8 */ {
-        /* Entry Scene   */ &D_089d74fc,
+        /* Entry Scene   */ &scene_remix_8,
         /* Level Name    */ "リミックス ８",
         /* Level Desc.   */ "キミの実力を\n"
                             "試してみてみる？\n"
@@ -897,7 +897,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* STAFF_CREDIT */ {
-        /* Entry Scene   */ &D_089d6e5c,
+        /* Entry Scene   */ &scene_staff_credit,
         /* Level Name    */ "スタッフ",
         /* Level Desc.   */ "もし よかったら\n"
                             "見てみてネ。\n"
@@ -913,7 +913,7 @@ struct LevelData level_data_table[TOTAL_LEVELS] = {
         }
     },
     /* LIVE_MENU */ {
-        /* Entry Scene   */ &D_089d6f44,
+        /* Entry Scene   */ &scene_concert_hall,
         /* Level Name    */ "ライブ",
         /* Level Desc.   */ "ライブに出演だ！\n"
                             "キミのリズム感は\n"

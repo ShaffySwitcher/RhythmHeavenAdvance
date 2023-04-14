@@ -94,7 +94,7 @@ void gameplay_init_gfx1(void) {
 
 
 // [func_08016ec4] Scene Start
-void gameplay_start_scene(s32 unused) {
+void gameplay_start_scene(void) {
     func_08002e78(gameplay_common_gfx_table);
     func_08007324(FALSE);
     func_080073f0();
@@ -139,12 +139,12 @@ void gameplay_start_scene(s32 unused) {
 
 
 // [func_08016ffc] Scene Update Frozen
-void gameplay_update_paused_scene(s32 unused) {
+void gameplay_update_paused_scene(void) {
 }
 
 
 // [func_08017000] Scene Update
-void gameplay_update_scene(s32 unused) {
+void gameplay_update_scene(void) {
     u32 pressed, released, buttonsOnly;
 
     if (gGameplayInfo->skippingTutorial) return;
@@ -515,7 +515,7 @@ void gameplay_set_mercy_count(u32 total) {
 
 
 // [func_080177f0] Scene Stop
-void gameplay_stop_scene(s32 unused) {
+void gameplay_stop_scene(void) {
     const struct Scene *tempScene;
 
     func_0804e0c4(D_03005380, 0x10);
