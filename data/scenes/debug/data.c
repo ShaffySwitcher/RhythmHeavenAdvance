@@ -6,21 +6,21 @@
   /* DEBUG MENU - MISC. DATA */
 
 
-extern const struct Scene D_089d6f44;
+extern const struct Scene scene_concert_hall;
 extern const struct Scene D_089d6c8c;
 extern const struct Scene D_089d6ba4;
 extern const struct Scene D_089d69e0;
 extern const struct Scene D_089d6804;
-extern const struct Scene D_089d74fc;
-extern const struct Scene D_089d712c;
-extern const struct Scene D_089d7408;
-extern const struct Scene D_089d7220;
-extern const struct Scene D_089d671c;
-extern const struct Scene D_089d7038;
-extern const struct Scene D_089d6628;
-extern const struct Scene D_089d2764;
-extern const struct Scene D_089d6088;
-extern const struct Scene D_089d7314;
+extern const struct Scene scene_remix_8;
+extern const struct Scene scene_remix_7;
+extern const struct Scene scene_remix_6;
+extern const struct Scene scene_remix_5;
+extern const struct Scene scene_remix_4;
+extern const struct Scene scene_remix_3;
+extern const struct Scene scene_remix_2;
+extern const struct Scene scene_remix_1;
+extern const struct Scene scene_bon_odori;
+extern const struct Scene scene_bon_dance;
 extern const struct Scene D_089d5dc4;
 extern const struct Scene D_089d5eac;
 extern const struct Scene D_089d5f94;
@@ -49,53 +49,53 @@ extern const struct Scene D_089d454c;
 extern const struct Scene D_089d4634;
 extern const struct Scene D_089d4804;
 extern const struct Scene D_089d80d0;
-extern const struct Scene D_089d42a0;
-extern const struct Scene D_089d40d0;
-extern const struct Scene D_089d6440;
+extern const struct Scene scene_quiz_show;
+extern const struct Scene scene_rap_men;
+extern const struct Scene scene_rap_women;
 extern const struct Scene D_089d6534;
-extern const struct Scene D_089d3e18;
-extern const struct Scene D_089d68f8;
-extern const struct Scene D_089d3c48;
+extern const struct Scene scene_space_dance;
+extern const struct Scene scene_cosmic_dance;
+extern const struct Scene scene_showtime;
 extern const struct Scene D_089cdad8;
 extern const struct Scene D_089d3a6c;
 extern const struct Scene D_089d3984;
-extern const struct Scene D_089d35fc;
-extern const struct Scene D_089d3268;
-extern const struct Scene D_089d3174;
+extern const struct Scene scene_tram_pauline;
+extern const struct Scene scene_toss_boys;
+extern const struct Scene scene_toss_boys_2;
 extern const struct Scene D_089d2f98;
-extern const struct Scene D_089d2dd4;
-extern const struct Scene D_089d2c04;
+extern const struct Scene scene_power_calligraphy;
+extern const struct Scene scene_rat_race;
 extern const struct Scene D_089de05c;
-extern const struct Scene D_089d2a34;
+extern const struct Scene scene_fireworks;
 extern const struct Scene D_089d2940;
-extern const struct Scene D_089d2858;
+extern const struct Scene scene_bunny_hop;
 extern const struct Scene D_089d2670;
-extern const struct Scene D_089d24a0;
-extern const struct Scene D_089d21dc;
-extern const struct Scene D_089d23ac;
+extern const struct Scene scene_wizards_waltz;
+extern const struct Scene scene_marching_orders;
+extern const struct Scene scene_marching_orders_2;
 extern const struct Scene D_089d1f18;
-extern const struct Scene D_089d1c6c;
-extern const struct Scene D_089d6258;
-extern const struct Scene D_089d15f0;
-extern const struct Scene D_089d18cc;
-extern const struct Scene D_089d19c0;
-extern const struct Scene D_089d132c;
-extern const struct Scene D_089d14fc;
-extern const struct Scene D_089d1068;
-extern const struct Scene D_089d1238;
-extern const struct Scene D_089d0da4;
-extern const struct Scene D_089d0f74;
-extern const struct Scene D_089d0ae0;
-extern const struct Scene D_089d081c;
-extern const struct Scene D_089d09ec;
-extern const struct Scene D_089d0540;
-extern const struct Scene D_089d0634;
-extern const struct Scene D_089d0358;
-extern const struct Scene D_089d044c;
-extern const struct Scene D_089d0188;
-extern const struct Scene D_089d634c;
-extern const struct Scene D_089cfed0;
-extern const struct Scene D_089d0728;
+extern const struct Scene scene_tap_trial;
+extern const struct Scene scene_tap_trial_2;
+extern const struct Scene scene_samurai_slice;
+extern const struct Scene scene_spaceball;
+extern const struct Scene scene_spaceball_2;
+extern const struct Scene scene_sneaky_spirits;
+extern const struct Scene scene_sneaky_spirits_2;
+extern const struct Scene scene_ninja_bodyguard;
+extern const struct Scene scene_ninja_reincarnate;
+extern const struct Scene scene_bouncy_road;
+extern const struct Scene scene_bouncy_road_2;
+extern const struct Scene scene_sick_beats;
+extern const struct Scene scene_rhythm_tweezers;
+extern const struct Scene scene_rhythm_tweezers_2;
+extern const struct Scene scene_night_walk;
+extern const struct Scene scene_night_walk_2;
+extern const struct Scene scene_polyrhythm;
+extern const struct Scene scene_polyrhythm_2;
+extern const struct Scene scene_clappy_trio;
+extern const struct Scene scene_snappy_trio;
+extern const struct Scene scene_karate_man;
+extern const struct Scene scene_karate_man_2;
 extern const struct Scene scene_riq_title;
 extern const struct Scene scene_main_menu;
 extern const struct Scene scene_game_select;
@@ -113,7 +113,7 @@ extern const struct Scene scene_endless_menu;
 extern const struct Scene scene_lessons_menu;
 extern const struct Scene scene_toys_menu;
 extern const struct Scene D_089d6d74;
-extern const struct Scene D_089d6e5c;
+extern const struct Scene scene_staff_credit;
 extern const struct Scene scene_data_clear;
 
 
@@ -132,7 +132,7 @@ const char D_08059684[] = "１／１";
 // [D_089ddbe8] Debug Menu Table
 struct DebugMenuEntry debug_menu_entry_table[] = {
     /* LIVE */ {
-        /* Scene */ &D_089d6f44,
+        /* Scene */ &scene_concert_hall,
         /* Label */ "ライブ"
     },
     /* Sick Beats Endless */ {
@@ -152,43 +152,43 @@ struct DebugMenuEntry debug_menu_entry_table[] = {
         /* Label */ "ウラおとこ"
     },
     /* Remix 8 */ {
-        /* Scene */ &D_089d74fc,
+        /* Scene */ &scene_remix_8,
         /* Label */ "リミックス　８"
     },
     /* Remix 7 */ {
-        /* Scene */ &D_089d712c,
+        /* Scene */ &scene_remix_7,
         /* Label */ "リミックス　７"
     },
     /* Remix 6 */ {
-        /* Scene */ &D_089d7408,
+        /* Scene */ &scene_remix_6,
         /* Label */ "リミックス　６"
     },
     /* Remix 5 */ {
-        /* Scene */ &D_089d7220,
+        /* Scene */ &scene_remix_5,
         /* Label */ "リミックス　５"
     },
     /* Remix 4 */ {
-        /* Scene */ &D_089d671c,
+        /* Scene */ &scene_remix_4,
         /* Label */ "リミックス　４"
     },
     /* Remix 3 */ {
-        /* Scene */ &D_089d7038,
+        /* Scene */ &scene_remix_3,
         /* Label */ "リミックス　３"
     },
     /* Remix 2 */ {
-        /* Scene */ &D_089d6628,
+        /* Scene */ &scene_remix_2,
         /* Label */ "リミックス　２"
     },
     /* Remix 1 */ {
-        /* Scene */ &D_089d2764,
+        /* Scene */ &scene_remix_1,
         /* Label */ "リミックス　１"
     },
     /* The Bon Odori */ {
-        /* Scene */ &D_089d6088,
+        /* Scene */ &scene_bon_odori,
         /* Label */ "ぼんおどり"
     },
     /* Bon Dance */ {
-        /* Scene */ &D_089d7314,
+        /* Scene */ &scene_bon_dance,
         /* Label */ "ボンダンス"
     },
     /* Rhythm Toys (Cat Machine) */ {
@@ -304,15 +304,15 @@ struct DebugMenuEntry debug_menu_entry_table[] = {
         /* Label */ "テキスト"
     },
     /* Quiz Show */ {
-        /* Scene */ &D_089d42a0,
+        /* Scene */ &scene_quiz_show,
         /* Label */ "クイズ"
     },
     /* Rap Men */ {
-        /* Scene */ &D_089d40d0,
+        /* Scene */ &scene_rap_men,
         /* Label */ "ラップメン"
     },
     /* Rap Women (by YONE) */ {
-        /* Scene */ &D_089d6440,
+        /* Scene */ &scene_rap_women,
         /* Label */ "ラップ　ウィメン（ｂｙ　ＹＯＮＥ）"
     },
     /* Rap Women (by KAZU) */ {
@@ -320,15 +320,15 @@ struct DebugMenuEntry debug_menu_entry_table[] = {
         /* Label */ "ラップ　ウィメン（ｂｙ　ＫＡＺＵ）"
     },
     /* Space Dance */ {
-        /* Scene */ &D_089d3e18,
+        /* Scene */ &scene_space_dance,
         /* Label */ "スペースダンス"
     },
     /* Cosmic Dance */ {
-        /* Scene */ &D_089d68f8,
+        /* Scene */ &scene_cosmic_dance,
         /* Label */ "コスモダンス"
     },
     /* Showtime */ {
-        /* Scene */ &D_089d3c48,
+        /* Scene */ &scene_showtime,
         /* Label */ "ショータイム"
     },
     /* RIQ Data Check */ {
@@ -344,15 +344,15 @@ struct DebugMenuEntry debug_menu_entry_table[] = {
         /* Label */ "オープニング　（Ａ　Ｔｙｐｅ）"
     },
     /* Tram & Pauline */ {
-        /* Scene */ &D_089d35fc,
+        /* Scene */ &scene_tram_pauline,
         /* Label */ "トランとポリン"
     },
     /* Toss Boys */ {
-        /* Scene */ &D_089d3268,
+        /* Scene */ &scene_toss_boys,
         /* Label */ "トスボーイズ"
     },
     /* Toss Boys 2 */ {
-        /* Scene */ &D_089d3174,
+        /* Scene */ &scene_toss_boys_2,
         /* Label */ "トスボーイズ　２"
     },
     /* Drum Girls LIVE */ {
@@ -360,11 +360,11 @@ struct DebugMenuEntry debug_menu_entry_table[] = {
         /* Label */ "ドラムガールズ"
     },
     /* Power Calligraphy */ {
-        /* Scene */ &D_089d2dd4,
+        /* Scene */ &scene_power_calligraphy,
         /* Label */ "リズム　おしゅうじ"
     },
     /* Rat Race */ {
-        /* Scene */ &D_089d2c04,
+        /* Scene */ &scene_rat_race,
         /* Label */ "こっそりラット"
     },
     /* Flash Memory Test */ {
@@ -372,7 +372,7 @@ struct DebugMenuEntry debug_menu_entry_table[] = {
         /* Label */ "フラッシュメモリテスト"
     },
     /* Fireworks */ {
-        /* Scene */ &D_089d2a34,
+        /* Scene */ &scene_fireworks,
         /* Label */ "ハナビ"
     },
     /* Metronome */ {
@@ -380,7 +380,7 @@ struct DebugMenuEntry debug_menu_entry_table[] = {
         /* Label */ "メトロノーム"
     },
     /* Bunny Hop */ {
-        /* Scene */ &D_089d2858,
+        /* Scene */ &scene_bunny_hop,
         /* Label */ "ウサギとび"
     },
     /* Dance Lesson 1 */ {
@@ -388,15 +388,15 @@ struct DebugMenuEntry debug_menu_entry_table[] = {
         /* Label */ "ダンスレッスン　１"
     },
     /* Wizard's Waltz */ {
-        /* Scene */ &D_089d24a0,
+        /* Scene */ &scene_wizards_waltz,
         /* Label */ "まほうつかい"
     },
     /* Marching Orders */ {
-        /* Scene */ &D_089d21dc,
+        /* Scene */ &scene_marching_orders,
         /* Label */ "マーチャ"
     },
     /* Marching Orders 2 */ {
-        /* Scene */ &D_089d23ac,
+        /* Scene */ &scene_marching_orders_2,
         /* Label */ "マーチャ　２"
     },
     /* Horse Machine */ {
@@ -404,91 +404,91 @@ struct DebugMenuEntry debug_menu_entry_table[] = {
         /* Label */ "うま（スピード）"
     },
     /* Tap Trial */ {
-        /* Scene */ &D_089d1c6c,
+        /* Scene */ &scene_tap_trial,
         /* Label */ "タップダンズ"
     },
     /* Tap Trial 2 */ {
-        /* Scene */ &D_089d6258,
+        /* Scene */ &scene_tap_trial_2,
         /* Label */ "スーパータップ"
     },
     /* Samurai Slice */ {
-        /* Scene */ &D_089d15f0,
+        /* Scene */ &scene_samurai_slice,
         /* Label */ "いあいぎり"
     },
     /* Spaceball */ {
-        /* Scene */ &D_089d18cc,
+        /* Scene */ &scene_spaceball,
         /* Label */ "エアーバッター"
     },
     /* Spaceball 2 */ {
-        /* Scene */ &D_089d19c0,
+        /* Scene */ &scene_spaceball_2,
         /* Label */ "エアーバッター２"
     },
     /* Sneaky Spirits */ {
-        /* Scene */ &D_089d132c,
+        /* Scene */ &scene_sneaky_spirits,
         /* Label */ "しろいおばけ"
     },
     /* Sneaky Spirits 2 */ {
-        /* Scene */ &D_089d14fc,
+        /* Scene */ &scene_sneaky_spirits_2,
         /* Label */ "しろいおばけ　２"
     },
     /* Ninja Bodyguard */ {
-        /* Scene */ &D_089d1068,
+        /* Scene */ &scene_ninja_bodyguard,
         /* Label */ "ニンジャ"
     },
     /* Ninja Bodyguard 2 */ {
-        /* Scene */ &D_089d1238,
+        /* Scene */ &scene_ninja_reincarnate,
         /* Label */ "ニンジャ　２"
     },
     /* Bouncy Road */ {
-        /* Scene */ &D_089d0da4,
+        /* Scene */ &scene_bouncy_road,
         /* Label */ "ホッピングロード"
     },
     /* Bouncy Road 2 */ {
-        /* Scene */ &D_089d0f74,
+        /* Scene */ &scene_bouncy_road_2,
         /* Label */ "ホッピングロード　２"
     },
     /* Sick Beats */ {
-        /* Scene */ &D_089d0ae0,
+        /* Scene */ &scene_sick_beats,
         /* Label */ "バイキン　はかせ"
     },
     /* Rhythm Tweezers */ {
-        /* Scene */ &D_089d081c,
+        /* Scene */ &scene_rhythm_tweezers,
         /* Label */ "リズムだつもう"
     },
     /* Rhythm Tweezers 2 */ {
-        /* Scene */ &D_089d09ec,
+        /* Scene */ &scene_rhythm_tweezers_2,
         /* Label */ "リズムだつもう　２"
     },
     /* Night Walk */ {
-        /* Scene */ &D_089d0540,
+        /* Scene */ &scene_night_walk,
         /* Label */ "ナイト　ウォーク"
     },
     /* Night Walk 2 */ {
-        /* Scene */ &D_089d0634,
+        /* Scene */ &scene_night_walk_2,
         /* Label */ "ナイト　ウォーク　２"
     },
     /* Polyrhythm */ {
-        /* Scene */ &D_089d0358,
+        /* Scene */ &scene_polyrhythm,
         /* Label */ "ポリリズム"
     },
     /* Polyrhythm 2 */ {
-        /* Scene */ &D_089d044c,
+        /* Scene */ &scene_polyrhythm_2,
         /* Label */ "ポリリズム　２"
     },
     /* The Clappy Trio */ {
-        /* Scene */ &D_089d0188,
+        /* Scene */ &scene_clappy_trio,
         /* Label */ "パチパチ３にんしゅう"
     },
     /* The Snappy Trio */ {
-        /* Scene */ &D_089d634c,
+        /* Scene */ &scene_snappy_trio,
         /* Label */ "バリバリ３にんしゅう"
     },
     /* Karate Man */ {
-        /* Scene */ &D_089cfed0,
+        /* Scene */ &scene_karate_man,
         /* Label */ "カラテカ"
     },
     /* Karate Man 2 */ {
-        /* Scene */ &D_089d0728,
+        /* Scene */ &scene_karate_man_2,
         /* Label */ "カラテカ　２"
     },
     /* R-IQ (Title Screen) */ {
@@ -564,7 +564,7 @@ struct DebugMenuEntry debug_menu_entry_table[] = {
         /* Label */ "エンディング（クリアご）"
     },
     /* Ending (from Game Select) */ {
-        /* Scene */ &D_089d6e5c,
+        /* Scene */ &scene_staff_credit,
         /* Label */ "エンディング（おまけから）"
     },
     /* Data Clear */ {

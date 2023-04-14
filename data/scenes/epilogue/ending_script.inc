@@ -1,5 +1,5 @@
 .include "include/gba.inc"
-.include "include/beatscript_ext.inc"
+.include "include/beatscript.inc"
 
 
 /* Epilogue Scene - Ending Script */

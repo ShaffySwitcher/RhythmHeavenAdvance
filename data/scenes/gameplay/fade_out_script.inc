@@ -1,5 +1,5 @@
 .include "include/gba.inc"
-.include "include/beatscript_ext.inc"
+.include "include/beatscript.inc"
 
 
 /* Gameplay Scene - Generic Fade-Out Script */
