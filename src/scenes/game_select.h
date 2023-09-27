@@ -2,9 +2,16 @@
 
 #include "global.h"
 #include "scenes.h"
-#include "levels.h"
 
-// Scene Macros/Enums:
+
+// VALUES
+enum GameSelectStatesEnum {
+    /* 00 */ GS_STATE_LOADING,
+    /* 01 */ GS_STATE_UNLOCKING_LEVELS,
+    /* 02 */ GS_STATE_MAIN,
+    /* 03 */ GS_STATE_DISPLAYING_CAMPAIGN
+};
+
 enum CampaignBordersEnum {
     /* 00 */ CAMPAIGN_BORDER_0_FLOWERS,
     /* 01 */ CAMPAIGN_BORDER_3_FLOWERS,
@@ -39,11 +46,15 @@ enum LevelIconOverlaysEnum {
 };
 
 
-// Scene Types:
+// MACROS
+#define gGameSelect ((struct GameSelectSceneData *)gCurrentSceneData)
+
+
+// TYPES
 struct GameSelectSceneData {
     /* [0x000] Scene */
     u8 sceneState;
-    u32 scriptIsReady;
+    u32 inputsEnabled;
     u32 loadingSceneGfx:1;
     u32 hideStageTitle:1;
     u32 unused8:30;
@@ -151,7 +162,7 @@ struct GameSelectSceneData {
         char text[0x100];
         u8 unused452;
         u8 totalAvailable;
-        u8 indexes[TOTAL_RHYTHM_GAMES];
+        u8 indexes[48];
     } campaignNotice;
     u8 unused484[100];
 
@@ -218,22 +229,7 @@ struct LevelIconAnimatorTask {
 };
 
 
-// Sound Effects:
-extern struct SequenceData s_f_campaign_notice_seqData;
-extern struct SequenceData s_menu_kettei2_seqData;
-extern struct SequenceData s_menu_kettei1_seqData;
-extern struct SequenceData s_menu_error_seqData;
-extern struct SequenceData s_menu_cancel3_seqData;
-extern struct SequenceData s_menu_cursor1_seqData;
-extern struct SequenceData s_f_point_stop_seqData;
-extern struct SequenceData s_f_point_roll_seqData;
-extern struct SequenceData s_f_appear_game_seqData;
-extern struct SequenceData s_f_open_game_seqData;
-extern struct SequenceData s_f_clear_game_seqData;
-extern struct SequenceData s_f_get_medal_seqData;
-
-
-// Scene Data:
+// DATA
 extern struct CampaignGiftData campaign_gifts_table[];
 extern struct Animation *campaign_icon_borders[];
 extern struct LevelData level_data_table[];
@@ -250,12 +246,11 @@ extern u8 *level_icon_overlays_map[];
 extern struct TaskMethods level_icon_overlay_animator_task;
 
 
-// Functions - BGM
+// FUNCTIONS
 extern void disable_game_select_2_bgm(void);
 extern void enable_game_select_2_bgm(void);
 extern void play_game_select_bgm(void);
 
-// Functions - Perfect Campaign
 extern void clear_current_campaign(void);
 extern void set_current_campaign(s32 id);
 extern s32 get_current_campaign(void);
@@ -274,7 +269,6 @@ extern const char *get_level_name_from_campaign(s32 id);
 extern s32 get_campaign_from_grid_xy(s32 x, s32 y);
 extern s32 get_campaign_from_level_id(s32 id);
 
-// Functions - Grid
 extern s32 get_level_id_from_grid_xy(s32 x, s32 y);
 extern struct LevelData *get_level_data_from_id(s32 id);
 extern s32 get_level_state_from_id(s32 id);
@@ -285,21 +279,19 @@ extern void init_game_select_grid_gfx(void);
 extern void get_pixel_xy_from_grid_xy(s32 x, s32 y, s16 *xReq, s16 *yReq);
 extern void save_level_state_from_grid_xy(s32 x, s32 y, s32 state);
 
-// Functions - BG Color Changer
 extern void game_select_init_color_mod(void);
 extern void game_select_update_color_mod(struct ColorChanger *changer);
 extern void game_select_update_bg_colors(void);
 
-// Functions - Scene
-extern void game_select_init_static_var(void); // Init. Static Variables
-extern void game_select_scene_init_gfx4(void); // Graphics Init. 4
-extern void game_select_scene_init_gfx3(void); // Graphics Init. 3
-extern void game_select_scene_init_gfx2(void); // Graphics Init. 2
-extern void game_select_scene_init_gfx1(void); // Graphics Init. 1
-extern void game_select_scene_start(void *sceneParam, s32 startParam); // Scene Start
+extern void game_select_scene_init_memory(void);
+extern void game_select_scene_init_gfx4(void);
+extern void game_select_scene_init_gfx3(void);
+extern void game_select_scene_init_gfx2(void);
+extern void game_select_scene_init_gfx1(void);
+extern void game_select_scene_start(void *sVar, s32 dArg);
 extern void game_select_disable_credits_after_epilogue(void);
 extern u32 game_select_roll_credits_after_epilogue(void);
-extern void game_select_scene_paused(void *sceneParam, s32 pausedParam); // Scene Update (Paused)
+extern void game_select_scene_paused(void *sVar, s32 dArg);
 extern void game_select_scroll_grid_pane(s32 x, s32 y, s24_8 rate);
 extern void game_select_scroll_info_pane(s32 x, s32 y, s24_8 rate);
 extern void game_select_update_bg_scroll(void);
@@ -315,8 +307,8 @@ extern void game_select_update_stage_title_pos(void);
 extern void game_select_set_stage_title(s32 x);
 extern void game_select_update_stage_title(void);
 extern void game_select_link_sprite_xy_to_bg(s16 sprite);
-extern void game_select_scene_update(void *sceneParam, s32 updateParam); // Scene Update (Active)
-extern u32 game_select_scene_script_is_ready(void); // Communicate with Script
+extern void game_select_scene_update(void *sVar, s32 dArg);
+extern u32 game_select_scene_inputs_enabled(void);
 extern void game_select_set_unused_static_var(u32 arg0, u32 arg1);
 extern u32 game_select_get_total_levels(void);
 extern const char *game_select_get_level_name(s32 id);
@@ -350,9 +342,8 @@ extern u32 game_select_calculate_flow_old(void);
 extern u32 game_select_update_scores(void);
 extern void game_select_init_flow_pane(void);
 extern void game_select_update_flow_pane(void);
-extern void game_select_scene_stop(void *sceneParam, s32 stopParam); // Scene Stop
+extern void game_select_scene_stop(void *sVar, s32 dArg);
 
-// Functions - VRAM
 extern void game_select_init_stub(void);
 extern void game_select_init_icon_overlays(void);
 extern void game_select_update_stub(void);

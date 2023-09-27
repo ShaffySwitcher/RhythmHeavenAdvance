@@ -1,7 +1,7 @@
 OUTPUT_ARCH(arm)
 
 /* Results Score Handler */
-D_03001338 = 0x03001338;
+sScoreHandler = 0x03001338;
 
 /* Sound Library */
 D_03001570 = 0x03001570;
@@ -16,11 +16,67 @@ D_030015a4 = 0x030015a4;
 D_030015a6 = 0x030015a6;
 D_030015a7 = 0x030015a7;
 
+/* Sound Channels */
+D_030015ac = 0x030015ac;
+D_030015e4 = 0x030015e4;
+D_0300161c = 0x0300161c;
+D_03001654 = 0x03001654;
+D_0300168c = 0x0300168c;
+D_030016c4 = 0x030016c4;
+D_030016fc = 0x030016fc;
+D_03001734 = 0x03001734;
+D_0300176c = 0x0300176c;
+D_030017a4 = 0x030017a4;
+D_030017dc = 0x030017dc;
+D_03001814 = 0x03001814;
+D_0300184c = 0x0300184c;
+
 /* DirectSound Space */
 D_03001888 = 0x03001888;
 D_030024c8 = 0x030024c8;
 D_030028c8 = 0x030028c8;
 D_03002a48 = 0x03002a48;
+
+/* MIDI Reader Space */
+D_03002bc8 = 0x03002bc8;
+D_03002da8 = 0x03002da8;
+D_03002dd0 = 0x03002dd0;
+D_03002f78 = 0x03002f78;
+D_030030f8 = 0x030030f8;
+D_03003120 = 0x03003120;
+D_03003270 = 0x03003270;
+D_030033f0 = 0x030033f0;
+D_03003418 = 0x03003418;
+D_03003568 = 0x03003568;
+D_03003608 = 0x03003608;
+D_03003630 = 0x03003630;
+D_030036c0 = 0x030036c0;
+D_03003760 = 0x03003760;
+D_03003788 = 0x03003788;
+D_03003818 = 0x03003818;
+D_030038b8 = 0x030038b8;
+D_030038e0 = 0x030038e0;
+D_03003970 = 0x03003970;
+D_03003a10 = 0x03003a10;
+D_03003a38 = 0x03003a38;
+D_03003ac8 = 0x03003ac8;
+D_03003b68 = 0x03003b68;
+D_03003b90 = 0x03003b90;
+D_03003c20 = 0x03003c20;
+D_03003cc0 = 0x03003cc0;
+D_03003ce8 = 0x03003ce8;
+D_03003d78 = 0x03003d78;
+D_03003e18 = 0x03003e18;
+D_03003e40 = 0x03003e40;
+D_03003ed0 = 0x03003ed0;
+D_03003f70 = 0x03003f70;
+D_03003f98 = 0x03003f98;
+D_03004028 = 0x03004028;
+D_030040c8 = 0x030040c8;
+D_030040f0 = 0x030040f0;
+D_03004180 = 0x03004180;
+D_03004220 = 0x03004220;
+D_03004248 = 0x03004248;
 
 /* SRAM Library */
 verify_sram_fast_code = 0x030042d8;
@@ -56,7 +112,7 @@ D_030046b8 = 0x030046b8;
 D_030046c0 = 0x030046c0;
 D_03004ac0 = 0x03004ac0;
 D_03004ad0 = 0x03004ad0;
-D_03004ae4 = 0x03004ae4;
+math_sqrt = 0x03004ae4;
 sSceneTextCurrentStringId = 0x03004ae8;
 D_03004aec = 0x03004aec;
 D_03004af0 = 0x03004af0;
@@ -81,7 +137,7 @@ D_0300558c = 0x0300558c;
 
 /* Rhythm Tengoku Global */
 D_03005590 = 0x03005590;
-D_030055a0 = 0x030055a0;
+gSessionInfo = 0x030055a0;
 gCurrentEngineData = 0x030055d0;
 D_030055d4 = 0x030055d4;
 sMainMenuButton = 0x030055d8;
@@ -143,23 +199,8 @@ D_030064d4 = 0x030064d4;
 
 
 /* ROM START */
-/* Karate Man BG Face Map */
-D_08936650 = 0x08936650;
 
-/* Scene Data - Cafe */
-scene_cafe = 0x089cda0c;
-/* Scene Data - Data Check */
-D_089cdad8 = 0x089cdad8;
-/* Scene Data - Rhythm Data Room */
-scene_data_room = 0x089cdc24;
-/* Scene Data - Main Menu */
-scene_main_menu = 0x089cde20;
-/* Scene Data - Game Select */
-scene_game_select = 0x089cdf08;
-/* Scene Data - Options Menu */
-scene_options_menu = 0x089cfc1c;
-/* Scene Data - Perfect Campaign Certificate */
-scene_perfect = 0x089cfd60;
+
 /* Scene Data - Main Gameplay */
 D_089d1b78 = 0x089d1b78;
 D_089d2670 = 0x089d2670;
@@ -177,83 +218,6 @@ D_089d49d4 = 0x089d49d4;
 D_089d4ba4 = 0x089d4ba4;
 D_089d6534 = 0x089d6534;
 D_089d6d74 = 0x089d6d74;
-/* Scene Data - Results (Debug-Type) */
-scene_results_ver_debug = 0x089d7634;
-/* Scene Data - Results (Rank-Type) */
-scene_results_ver_rank = 0x089d77e4;
-/* Scene Data - Results (Score-Type) */
-scene_results_ver_score = 0x089d7964;
-/* Scene Data - Epilogue */
-scene_epilogue = 0x089d7c18;
-/* Scene Data - Reading Material */
-D_089d80d0 = 0x089d80d0;
-/* Scene Data - Studio */
-D_089d84ac = 0x089d84ac;
-D_089d8518 = 0x089d8518;
-D_089d853c = 0x089d853c;
-scene_studio = 0x089d85b4;
-D_089d85d0 = 0x089d85d0;
-D_089d8768 = 0x089d8768;
-D_089d88e8 = 0x089d88e8;
-D_089d8a44 = 0x089d8a44;
-D_089d8c24 = 0x089d8c24;
-D_089d8df8 = 0x089d8df8;
-D_089d8f3c = 0x089d8f3c;
-D_089d8ffc = 0x089d8ffc;
-D_089d9128 = 0x089d9128;
-D_089d9320 = 0x089d9320;
-D_089d9440 = 0x089d9440;
-D_089d96b0 = 0x089d96b0;
-D_089d980c = 0x089d980c;
-D_089d995c = 0x089d995c;
-D_089d9ab8 = 0x089d9ab8;
-D_089d9c44 = 0x089d9c44;
-D_089d9d64 = 0x089d9d64;
-D_089d9f08 = 0x089d9f08;
-D_089da22c = 0x089da22c;
-D_089da4fc = 0x089da4fc;
-D_089da7d8 = 0x089da7d8;
-D_089da964 = 0x089da964;
-D_089daa9c = 0x089daa9c;
-D_089dac28 = 0x089dac28;
-D_089dad6c = 0x089dad6c;
-D_089daea4 = 0x089daea4;
-D_089db0a8 = 0x089db0a8;
-D_089db1c8 = 0x089db1c8;
-D_089db2e8 = 0x089db2e8;
-D_089db45c = 0x089db45c;
-D_089db804 = 0x089db804;
-D_089dba50 = 0x089dba50;
-D_089dbc00 = 0x089dbc00;
-D_089dbd14 = 0x089dbd14;
-D_089dbe28 = 0x089dbe28;
-D_089dbf84 = 0x089dbf84;
-D_089dbfa8 = 0x089dbfa8;
-D_089dc134 = 0x089dc134;
-D_089dc314 = 0x089dc314;
-D_089dc518 = 0x089dc518;
-D_089dc6a4 = 0x089dc6a4;
-D_089dc7f4 = 0x089dc7f4;
-D_089dc98c = 0x089dc98c;
-D_089dcaf4 = 0x089dcaf4;
-D_089dcda0 = 0x089dcda0;
-/* Scene Data - Title Screen */
-D_089dcff0 = 0x089dcff0;
-scene_riq_title = 0x089dd47c;
-/* Scene Data - Medal Corner Menus */
-scene_toys_menu = 0x089dd86c;
-scene_endless_menu = 0x089dd8ac;
-scene_lessons_menu = 0x089dd8ec;
-/* Scene Data - Scene Handler */
-D_089dd97c = 0x089dd97c;
-/* Scene Data - Warning Screen */
-scene_warning = 0x089dda4c;
-/* Scene Data - Debug (Menu) */
-scene_debug_menu = 0x089ddbcc;
-/* Scene Data - Debug (Flash Memory Test) */
-D_089de05c = 0x089de05c;
-/* Scene Data - Debug (Data Clear) */
-scene_data_clear = 0x089de0c8;
 
 /* Rhythm Game Scripts */
 D_089ef90c = 0x089ef90c;
@@ -813,7 +777,17 @@ D_08cbefe4 = 0x08cbefe4;
 D_08cbf0e8 = 0x08cbf0e8;
 D_08cc0c30 = 0x08cc0c30;
 D_08cc0cf0 = 0x08cc0cf0;
+
+/* Cafe BG Maps */
 D_08cc1158 = 0x08cc1158;
+D_08cc15c4 = 0x08cc15c4;
+D_08cc1a30 = 0x08cc1a30;
+D_08cc1e9c = 0x08cc1e9c;
+D_08cc2308 = 0x08cc2308;
+D_08cc2790 = 0x08cc2790;
+D_08cc2c18 = 0x08cc2c18;
+D_08cc30a0 = 0x08cc30a0;
+
 D_08cc3b7c = 0x08cc3b7c;
 D_08cc4670 = 0x08cc4670;
 D_08cc4a00 = 0x08cc4a00;

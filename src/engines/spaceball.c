@@ -5,7 +5,7 @@
 #include "src/affine_sprite.h"
 #include "src/lib_0804ca80.h"
 
-extern s32 (*D_03004ae4)(s32);
+extern s32 (*math_sqrt)(s32);
 extern s32 (*fast_udivsi3)(s32, s32);
 
 // For readability.
@@ -260,7 +260,7 @@ void spaceball_loop_exit_condition(void) {
 void spaceball_set_camera_zoom(u32 controls) {
     s32 target = (s32) controls >> 0x10;
     u32 time = controls & 0xffff;
-    func_0800c4b0(2, beats_to_ticks(time), &gSpaceball->zoom, gSpaceball->zoom, target);
+    scene_start_integer_interp(2, ticks_to_frames(time), &gSpaceball->zoom, gSpaceball->zoom, target);
 }
 
 
@@ -314,8 +314,8 @@ void spaceball_cue_spawn(struct Cue *cue, struct SpaceballCue *cueInfo, u32 arcT
     cueInfo->sprite = create_affine_sprite(spaceball_anim_table_ball[gSpaceball->spaceballType], 0, 70, 120, 0x479c, INT_TO_FIXED(1), cueInfo->rotation, 1, 0, 0, TRUE);
 
     temp = cueInfo->unk1C - 48;
-    div = D_03004ae4(INT_TO_FIXED(1.0) * INT_TO_FIXED(temp) / cueInfo->unk1C);
-    time = beats_to_ticks(arcTime);
+    div = math_sqrt(INT_TO_FIXED(1.0) * INT_TO_FIXED(temp) / cueInfo->unk1C);
+    time = ticks_to_frames(arcTime);
     cueInfo->endTime = 2 * INT_TO_FIXED(time) / (div + INT_TO_FIXED(1.0));
 
     spaceball_update_entity(cueInfo->sprite, -50, 40, cueInfo->z);
@@ -411,7 +411,7 @@ void spaceball_cue_hit(struct Cue *cue, struct SpaceballCue *cueInfo, u32 presse
 
     affine_sprite_set_playback(batter->sprite, 1, 0x7f, 0);
     affine_sprite_set_anim_frame(batter->sprite, 1);
-    batter->swingTimer = beats_to_ticks(0x0A);
+    batter->swingTimer = ticks_to_frames(0x0A);
     cueInfo->rotationSpeed = 8;
     cueInfo->state = SPACEBALL_CUE_STATE_HIT;
 }
@@ -423,7 +423,7 @@ void spaceball_cue_barely(struct Cue *cue, struct SpaceballCue *cueInfo, u32 pre
 
     affine_sprite_set_playback(batter->sprite, 1, 0x7f, 0);
     affine_sprite_set_anim_frame(batter->sprite, 1);
-    batter->swingTimer = beats_to_ticks(0x0A);
+    batter->swingTimer = ticks_to_frames(0x0A);
     cueInfo->xSpeed = (gameplay_get_last_hit_offset() < 0) ? -3 : 3;
     cueInfo->rotationSpeed = -8;
     cueInfo->y = INT_TO_FIXED(cueInfo->y);
@@ -445,7 +445,7 @@ void spaceball_input_event(u32 pressed, u32 released) {
 
     affine_sprite_set_playback(batter->sprite, 1, 0x7f, 0);
     affine_sprite_set_anim_frame(batter->sprite, 1);
-    batter->swingTimer = beats_to_ticks(0x0A);
+    batter->swingTimer = ticks_to_frames(0x0A);
     gameplay_set_input_buttons(0, 0);
 }
 

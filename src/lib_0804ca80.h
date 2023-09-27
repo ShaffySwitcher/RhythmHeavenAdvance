@@ -92,7 +92,7 @@ struct Sprite {
     u16 update:1;        // Update Flag
     u16 present:1;       // Sprite Present Flag
     u16 pause:1;         // Pause Flag (?)
-    s16 xPosition;       // X Position 
+    s16 xPosition;       // X Position
     s16 yPosition;       // Y Position
     u16 layer;           // Layer
     struct Animation *animation; // Animation
