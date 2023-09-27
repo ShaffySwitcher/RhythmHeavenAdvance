@@ -43,16 +43,16 @@ void reset_game_save_data(void) {
         data->levelScores[i] = DEFAULT_LEVEL_SCORE;
     }
 
-    func_0801ad9c(); // studio-related
+    unlock_default_studio_songs();
 
     for (i = 0; i < TOTAL_LEVELS; i++) {
-        data->unk190[i] = 0; // number of attempts?
-        data->unk1C7[i] = 0;
-        data->unk1FE[i] = 0;
+        data->levelTotalPlays[i] = 0;
+        data->levelFirstOK[i] = 0;
+        data->levelFirstSuperb[i] = 0;
     }
 
     reset_all_replay_save_data(&data->drumReplaysAlloc);
-    data->unk235 = 0;
+    data->totalPerfects = 0;
 
     for (i = 0; i < TOTAL_PERFECT_CAMPAIGNS; i++) {
         data->campaignsCleared[i] = FALSE;
@@ -69,7 +69,7 @@ void reset_game_save_data(void) {
 
     data->totalMedals = 0;
     data->unk28F = 1;
-    data->unk290 = 2;
+    data->minFailsForBaristaHelp = 2;
     data->unk291 = 0;
 
     for (i = 0; i < ARRAY_COUNT(data->unk294); i++) {
