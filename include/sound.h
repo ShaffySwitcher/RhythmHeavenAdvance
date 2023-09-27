@@ -174,7 +174,7 @@ struct SampleData {
 	u32 pitch;
 	u32 loopStart;
 	u32 loopEnd;
-	const u32 *romAddress;
+	const u32 *waveform;
 };
 
 struct InstrumentHeader {
@@ -224,7 +224,7 @@ typedef struct InstrumentHeader *InstrumentBank[];
 union Instrument;
 
 struct SequenceData {
-    const u8 *romAddress;
+    const u8 *midiSequence;
     u32 soundPlayer:5;
     u32 soundBank:10;
     u32 volume:7;
@@ -291,10 +291,10 @@ struct MidiTrackStream {
     u32 command_curr:8; // Command (Current)
     u32 command_loop:8; // Command (At Loop Start)
     u32 inLoop:1;       // Reader is within MIDI loop region (note: label may not be accurate). [default = 0]
-    u8 *stream_start;   // Stream Position: Track Start
-    u8 *stream_curr;    // Stream Position: Current
+    const u8 *stream_start;   // Stream Position: Track Start
+    const u8 *stream_curr;    // Stream Position: Current
     u32 unkC;           // ?? ( = initial deltaTime << 8)
-    u8 *stream_loop;    // Stream Position: Loop Start
+    const u8 *stream_loop;    // Stream Position: Loop Start
     u32 unk14;          // ?? (may be unused?)
     u32 runningTime;    // Time until next instruction? (already parsed from variable-length quantity)
 };
@@ -305,9 +305,9 @@ struct SoundPlayer {
     u32 inLoop:1;       // Channel is currently within MIDI loop region. [default = 0]
     u32 isPaused:1;     // Paused State { 0 = Unpaused; 1 = Paused }
     u32 midiTempo:9;    // Current MIDI Tempo, in Beats Per Minute (BPM).
-    u32 playerType:1;   // ??? (set on startup. can prevent loading tracks if set to 1) { 0 = Music/Ambience Channel; 1 = Sound Effect Channel }
-    u32 unk0_b22:5;     // (indeterminate split; may be unused entirely)
-    u32 volumeFadeType:3; // Type of currently-active Volume Fade { 0 = None; 1 = Fade-In; 2 = Fade-Out & Close; 3 = Fade-Out & Pause }
+    u32 priorityEnabled:1;  // If enabled, check priority values before playing a new sound.
+    u32 unk0_b22:5;         // (indeterminate split; may be unused entirely)
+    u32 volumeFadeType:3;   // Type of currently-active Volume Fade { 0 = None; 1 = Fade-In; 2 = Fade-Out & Close; 3 = Fade-Out & Pause }
     struct MidiBus *midiBus;             // MIDI: Bus with effects for all MIDI Channels.
     struct MidiTrackStream *midiReader;  // MIDI: Multiple structures which each keep track of a MIDI Track being processed.
     struct SequenceData *sequence; // SequenceData: Currently-loaded Sound Sequence.
@@ -317,13 +317,13 @@ struct SoundPlayer {
     u8  loopStartSymSize;   // MIDI: Value of soundplayer_get_loop_sym_size(D_08a865a4). [1]
     u8  loopEndSymSize;     // MIDI: Value of soundplayer_get_loop_sym_size(D_08a865a8). [1]
     u16 midiQuarterNote;    // MIDI: Value denoting 1 beat. [effectively always 0x18]
-    u16 channelGain;    // Channel Gain (Volume) Envelope. [Q8.8]
-    u16 trackGain;      // Gain Envelope for a selection of MIDI Tracks. [Q8.8]
-    u16 trackSelect;    // Selection of MIDI Tracks to apply Gain Envelope.
-    u16 speedMulti;     // Speed Multiplier Envelope. [Q8.8]
+    u16 playerVolume;   // Channel Gain (Volume) Envelope. [Q8.8]
+    u16 trackVolume;    // Gain Envelope for a selection of MIDI Tracks. [Q8.8]
+    u16 trackMask;      // Selection of MIDI Tracks to apply Gain Envelope.
+    u16 playerSpeed;    // Speed Multiplier Envelope. [Q8.8]
     u16 volumeFadeEnv;  // Volume Multiplier Envelope used for fade-out and mute effects. [Q1.15]
     u16 volumeFadeSpd;  // Higher values for faster fade-out. Is set to 1 when track is muted instantly. [default = 0]
-    u8  playerVolume;   // SequenceData: Volume
+    u8  sequenceVolume; // SequenceData: Volume
     s8  midiController4E;   // ??: [default = 64]
     s8  midiController4F;   // ??: [default = 64]
     s8  midiController50;   // ??: [default = 64]
@@ -410,7 +410,7 @@ extern struct SoundPlayer *D_08aa4324[];
 extern struct SoundPlayerInitTable {
     u16 id:5;
     u16 trackCount:5;
-    u16 playerType:6; // 0 for Music, 1 for SFX
+    u16 priorityEnabled:6; // FALSE for music; TRUE for sfx
     struct MidiChannel *midiChannels;
     struct MidiBus *midiBus;
     struct MidiTrackStream *trackStreams;

@@ -3,6 +3,21 @@
 #include "global.h"
 #include "sound.h"
 
+enum VolumeFadeTypeEnum {
+    VOL_FADE_RESET,
+    VOL_FADE_IN,
+    VOL_FADE_OUT_CLEAR,
+    VOL_FADE_OUT_PAUSE
+};
+
+
+extern InstrumentBank *instrument_banks[];
+
+extern u32 D_08aa4318;
+extern const char D_08a865a4[];
+extern const char D_08a865a8[];
+
+
 /* INTERRUPT_DMA2 */
 
 extern void func_08049144(void); // INTERRUPT_DMA2
@@ -122,57 +137,57 @@ extern void func_0804b2c4(void);    // Update All PSG SoundChannels
 
 /* SOUND PLAYER OPERATIONS */
 
-extern u16  func_0804b324(const u8 *);      // Evaluate Big-Endian Short
-extern u32  func_0804b330(const u8 *);      // Evaluate Big-Endian Integer
-extern u32  func_0804b348(const char *);    // Get SoundPlayer Loop Marker Symbol Length
-extern void func_0804b368(struct SoundPlayer *, struct SequenceData *); // Play
-extern void func_0804b534(u16);                             // Play from SoundTable
-extern void func_0804b560(struct SoundPlayer *);            // Stop
-extern void func_0804b574(struct SoundPlayer *, u8);        // Pause/Unpause { 0 = Unpause; 1 = Pause }
-extern u32  func_0804b5a0(struct SoundPlayer *);            // Check for Active Midi Readers
-extern void func_0804b5d8(struct SoundPlayer *);            // Pause
-extern void func_0804b5e4(struct SoundPlayer *);            // Unpause
-extern void func_0804b5f0(void);                            // Pause All
-extern void func_0804b620(void);                            // Unpause All
-extern void func_0804b650(struct SoundPlayer *, u16);       // Set Gain (Volume)
-extern void func_0804b654(struct SoundPlayer *, u16, u16);  // Set Gain for Selected Tracks
-extern void func_0804b65c(struct SoundPlayer *, u16, s16);  // Set Pitch
-extern void func_0804b66c(struct SoundPlayer *, u16, s8);   // Set Panning
-extern void func_0804b67c(u16);                             // Pause from Index
-extern u32  func_0804b6c4(const u8 *, const u8 *, u32);     // MidiStream.equals()
-extern u32  func_0804b6f0(u16, u16, u16);                   // Get MIDI Ticks Per Frame
-extern void func_0804b710(struct SoundPlayer *, u16);       // Align Channel Speed with BeatScript
-extern void func_0804b734(struct SoundPlayer *, u16, u16);  // Set Volume Fade { type = 0..3 }
-extern void func_0804b7dc(struct SoundPlayer *, u16);       // Volume Fade-Out & Clear
-extern void func_0804b7ec(struct SoundPlayer *, u16);       // Volume Fade-Out & Pause
-extern void func_0804b7fc(struct SoundPlayer *, u16);       // Volume Fade-In
+extern u16  func_0804b324(const u8 *stream);
+extern u32  func_0804b330(const u8 *stream);
+extern u32  func_0804b348(const char *loopMarker);
+extern void func_0804b368(struct SoundPlayer *soundPlayer, struct SequenceData *sound);
+extern void func_0804b534(u16 soundIndex);
+extern void func_0804b560(struct SoundPlayer *soundPlayer);
+extern void func_0804b574(struct SoundPlayer *soundPlayer, u8 pause);
+extern u32  func_0804b5a0(struct SoundPlayer *soundPlayer);
+extern void func_0804b5d8(struct SoundPlayer *soundPlayer);
+extern void func_0804b5e4(struct SoundPlayer *soundPlayer);
+extern void func_0804b5f0(void);
+extern void func_0804b620(void);
+extern void func_0804b650(struct SoundPlayer *soundPlayer, u16 volume);
+extern void func_0804b654(struct SoundPlayer *soundPlayer, u16 trackMask, u16 volume);
+extern void func_0804b65c(struct SoundPlayer *soundPlayer, u16 unused, s16 pitch);
+extern void func_0804b66c(struct SoundPlayer *soundPlayer, u16 unused, s8 panning);
+extern void func_0804b67c(u16 soundIndex);
+extern u32  func_0804b6c4(const u8 *stream1, const u8 *stream2, u32 length);
+extern u32  func_0804b6f0(u16 tempo, u16 speed, u16 quarterNote);
+extern void func_0804b710(struct SoundPlayer *soundPlayer, u16 speed);
+extern void func_0804b734(struct SoundPlayer *soundPlayer, u16 type, u16 duration);
+extern void func_0804b7dc(struct SoundPlayer *soundPlayer, u16 duration);
+extern void func_0804b7ec(struct SoundPlayer *soundPlayer, u16 duration);
+extern void func_0804b7fc(struct SoundPlayer *soundPlayer, u16 duration);
 
 /* MIDI SEQUENCE OPERATIONS */
 
-extern void func_0804b80c(struct SoundPlayer *, const u8 *);    // MidiStream System-Exclusive Message [Evnt_F0]
-extern u32  func_0804b898(struct SoundPlayer *, const u8 **);   // MidiStream Meta Event (Loop Start, Loop End, Track End, Set Tempo)
-extern void func_0804b95c(struct SoundPlayer *, u32, u8, u8);   // MidiStream Controller Change [Evnt_B]
-extern void func_0804bc5c(u32, u32, u32);                       // MidiStream Note Off/On [Evnt_8; Evnt_9]
-extern u32  func_0804bcc0(struct SoundPlayer *, u32);           // MidiStream Messages/Events
-extern void func_0804bed0(struct SoundPlayer *, u32);           // Update MidiStream
+extern void func_0804b80c(struct SoundPlayer *, const u8 *);
+extern u32  func_0804b898(struct SoundPlayer *, const u8 **);
+extern void func_0804b95c(struct SoundPlayer *, u32, u8, u8);
+extern void func_0804bc5c(u32, u32, u32);
+extern u32  func_0804bcc0(struct SoundPlayer *, u32);
+extern void func_0804bed0(struct SoundPlayer *, u32);
 
 /* MAIN SOUND */
 
-extern void func_0804c040(struct SoundPlayer *);    // Update SoundPlayer Volume
-extern void func_0804c0f8(struct SoundPlayer *);    // Update SoundPlayer MidiStream
-extern void func_0804c170(void);                    // Update Main
-extern void func_0804c340(u32, u32, u32, u32);      // Set Main Reverb Controller Scratch/Queue
-extern void func_0804c358(void);                    // Stub
-extern void func_0804c35c(struct SoundPlayer *, struct MidiBus *, u32, struct MidiTrackStream *, u32); // Initialise SoundPlayer
-extern u32  func_0804c398(const u8 **);             // Parse Midi Variable-Length Quantity
+extern void func_0804c040(struct SoundPlayer *);
+extern void func_0804c0f8(struct SoundPlayer *);
+extern void func_0804c170(void);
+extern void func_0804c340(u32, u32, u32, u32);
+extern void func_0804c358(void);
+extern void func_0804c35c(struct SoundPlayer *, struct MidiBus *, u32, struct MidiTrackStream *, u32);
+extern u32  func_0804c398(const u8 **);
 
 /* DIRECT-MIDI PLAYER */
 
-extern void func_0804c3c0(struct SoundPlayer *, struct MidiTrackStream *, u32, struct MidiBus *, struct MidiChannel *, u8 *); // Initialise DirectMidi Player
-extern void func_0804c4bc(s8 *, u32);   // Append DirectMidi Sequence Instructions
-extern void func_0804c508(void);        // Parse DirectMidi Sequence Instructions
-extern void func_0804c6c8(void);        // Update DirectMidi Player
+extern void func_0804c3c0(struct SoundPlayer *, struct MidiTrackStream *, u32, struct MidiBus *, struct MidiChannel *, u8 *);
+extern void func_0804c4bc(s8 *, u32);
+extern void func_0804c508(void);
+extern void func_0804c6c8(void);
 
 /* INIT */
 
-extern void func_0804c778(void);  // MIDI4AGB - Initialise
+extern void func_0804c778(void);
