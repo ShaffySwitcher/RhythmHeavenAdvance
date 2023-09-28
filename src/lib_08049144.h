@@ -3,6 +3,7 @@
 #include "global.h"
 #include "sound.h"
 
+// VALUES
 enum VolumeFadeTypeEnum {
     VOL_FADE_RESET,
     VOL_FADE_IN,
@@ -10,12 +11,167 @@ enum VolumeFadeTypeEnum {
     VOL_FADE_OUT_PAUSE
 };
 
+enum ModulationTypeEnum {
+    MOD_TYPE_VIBRATO,
+    MOD_TYPE_TREMOLO,
+    MOD_TYPE_PANNING
+};
 
+enum AdsrStageEnum {
+    ADSR_STAGE_ATTACK,
+    ADSR_STAGE_DECAY,
+    ADSR_STAGE_SUSTAIN,
+    ADSR_STAGE_RELEASE,
+    ADSR_STAGE_FORCE_STOP
+};
+
+enum LfoStageEnum {
+    LFO_STAGE_DISABLED,
+    LFO_STAGE_PRE_DELAY,
+    LFO_STAGE_ATTACK,
+    LFO_STAGE_SUSTAIN
+};
+
+enum MidiSystemExclusiveMessageEnum {
+    SYS_EXC_EVENT_LFO,
+    SYS_EXC_EVENT_R_SCALE
+};
+
+enum MidiMetaEventTypeEnum {
+    META_EVENT_OTHER,
+    META_EVENT_TRACK_END,
+    META_EVENT_LOOP_START,
+    META_EVENT_LOOP_END
+};
+
+enum MidiTrackStreamEndEnum {
+    M_TRACK_STREAM_CONTINUE,
+    M_TRACK_STREAM_STOP,
+    M_TRACK_STREAM_LOOP
+};
+
+#define MSG_NOTE_OFF                    0x80
+#define MSG_NOTE_ON                     0x90
+#define MSG_POLYPHONIC_KEY_PRESSURE     0xA0
+#define MSG_CONTROLLER_CHANGE           0xB0
+#define MSG_PROGRAM_CHANGE              0xC0
+#define MSG_CHANNEL_PRESSURE            0xD0
+#define MSG_PITCH_WHEEL_CHANGE          0xE0
+
+#define META_TEXT_MARKER    0x06
+#define META_END_OF_TRACK   0x2F
+#define META_SET_TEMPO      0x51
+
+#define M_CONTROLLER_BANK_SELECT_MSB    0x00
+#define M_CONTROLLER_MOD_DEPTH          0x01
+#define M_CONTROLLER_VOLUME             0x07
+#define M_CONTROLLER_PANNING            0x0A
+#define M_CONTROLLER_EXPRESSION         0x0B
+#define M_CONTROLLER_UNK_0E             0x0E
+#define M_CONTROLLER_UNK_10             0x10
+#define M_CONTROLLER_MOD_RANGE          0x14
+#define M_CONTROLLER_MOD_SPEED          0x15
+#define M_CONTROLLER_MOD_TYPE           0x16
+#define M_CONTROLLER_MOD_DELAY          0x1A
+#define M_CONTROLLER_BANK_SELECT_LSB    0x20
+#define M_CONTROLLER_PRIORITY           0x21
+#define M_CONTROLLER_DAMPEN             0x48
+#define M_CONTROLLER_LFO                0x49
+#define M_CONTROLLER_EQ                 0x4A
+#define M_CONTROLLER_STEREO             0x4B
+#define M_CONTROLLER_LFO_GAIN           0x4C
+#define M_CONTROLLER_EQ_GAIN            0x4D
+#define M_CONTROLLER_RVB1               0x4E
+#define M_CONTROLLER_RVB2               0x4F
+#define M_CONTROLLER_RVB3               0x50
+#define M_CONTROLLER_RVB4               0x51
+#define M_CONTROLLER_RANDOM_PITCH       0x52
+#define M_CONTROLLER_RANDOM_53          0x53
+#define M_CONTROLLER_RANDOM_54          0x54
+
+
+// TYPES
+struct MidiNote {
+    u32 channel:4;
+    u32 key:7;
+    u32 velocity:7;
+};
+
+
+// STATIC VARIABLES
+extern u16 D_03001570;          // [D_03001570] MIDI4AGB - Pseudo-RNG Variable
+
+extern u8  D_03001578[4];       // [D_03001578] PSG CHANNEL - ?? (checked by TONE 1 and WAVE)
+extern u16 D_03001580[4];       // [D_03001580] PSG CHANNEL - Initial Volume of Envelope
+extern u16 D_03001588[4];       // [D_03001588] PSG CHANNEL - Frequency
+extern u8 *D_03001590;          // [D_03001590] PSG CHANNEL - Wave Pattern
+
+extern struct SoundPlayer *D_03001598; // [D_03001598] TEST PLAYER - Sound Player
+extern struct MidiBus *D_0300159c;     // [D_0300159c] TEST PLAYER - MIDI Bus
+extern u8 *D_030015a0;          // [D_030015a0] TEST PLAYER - Sequence Array (max. size = 0x200)
+extern u16 D_030015a4;          // [D_030015a4] TEST PLAYER - Sequence Length
+extern u8  D_030015a6;          // [D_030015a6] TEST PLAYER - Sequence Current Command
+extern u8  D_030015a7[4];       // [D_030015a7] UNDEFINED - Initial value at D_03005b7c
+
+extern volatile s32 D_03001888[1568*2]; // [D_03001888] DIRECTSOUND - DMA Source Addresses { &D_03001888[0] = Right; &D_03001888[D_03005b24] = Left }
+extern volatile s32 D_030024c8[0x400];  // [D_030024c8] DIRECTSOUND - Sample Processing ScratchPad
+extern struct SampleStream D_030028c8[12];  // [D_030028c8] DIRECTSOUND - DMA Sample Readers (12 Channels)
+extern struct SoundChannel D_03002a48[12];     // [D_03002a48] DIRECTSOUND - DirectSound Channels (12 Channels)
+
+extern u16 D_030055f0;              // [D_030055f0] MIDI4AGB - Set to REG_VCOUNT near the start of each update.
+extern u32 D_030055f4;              // [D_030055f4] DIRECTSOUND - Initial Sound Mode { 0 = Stereo; 1 = Mono (One Channel); 2 = Mono (Two Channels) }
+extern s32 D_03005600[4];           // [D_03005600] REVERB - Previous Processed Samples (R+L, x2)
+extern u16 D_03005610;              // [D_03005610] DIRECTSOUND - Number of DMA Sample Readers ( = 12)
+extern s32 D_03005620[3];           // [D_03005620] FILTER EQ - [0] = Filter Setting; [1], [2] = Previous Samples (R+L)
+extern u32 D_0300562c;              // [D_0300562c] ??? - Current Speed (NOT Tempo)
+extern u32 D_03005630;              // [D_03005630] REVERB - Controller #2 (init. = 0)
+extern u32 D_03005634;              // [D_03005634] REVERB - Controller #4 (init. = 4)
+extern u32 D_03005638;              // [D_03005638] DIRECTSOUND - Sample Processing ScratchPad Size, in L+R pairs ( = 0x80)
+extern volatile u32 *D_0300563c;    // [D_0300563c] DIRECTSOUND - REG_DMA1SAD (Right Audio Source) ( = &D_03001888)
+extern u8  D_03005640;              // [D_03005640] LFO - Multiplier [mCtrl4C]
+extern struct SoundPlayer *D_03005644;     // [D_03005644] LFO - Controller Sound Player (for Tempo)
+extern u16 D_03005648;              // [D_03005648] UNDEFINED - Current byte in D_03005b7c to set [mCtrl0E]
+
+extern struct MidiNote D_03005650[20];     // [D_03005650] MIDI - Note Buffer
+extern struct SoundChannel D_030056a0[4];  // [D_030056a0] PSG CHANNEL - PSG Channels { 0 = Tone+Sweep; 1 = Tone; 2 = Wave; 3 = Noise }
+extern s8  D_03005720[0x400];       // [D_03005720] DIRECTSOUND - DMA Buffer Sample = D_03005720[(ScratchPad Sample >> 7) & 0x3ff]
+extern u16 D_03005b20;              // [D_03005b20] UNDEFINED - Total Bytes in array at D_03005b7c
+extern volatile u32 D_03005b24;     // [D_03005b24] DIRECTSOUND - Number of 32-bit samples per DMA Source Address ( = 0x620 / 4 ( = 392))
+extern u8  D_03005b28;              // [D_03005b28] FILTER EQ - High Gain [mCtrl4C]
+
+// [D_03005b30] LFO - Low-Frequency Oscillator
+// [D_03005b3c] LFO - Mode { 0 = Disabled; 1 = Note Triggered; 2 = Constant }
+extern volatile u32 D_03005b40;     // [D_03005b40] DIRECTSOUND - ??
+extern u8  D_03005b44;              // [D_03005b44] FILTER EQ - Enable Global Filter
+extern u32 D_03005b48;              // [D_03005b48] REVERB - gRVBCNT3 (init. = 2)
+
+extern u16 D_03005b78;              // [D_03005b78] MIDI - Next Available MIDI Note
+extern u8 *D_03005b7c;              // [D_03005b7c] UNDEFINED - (Byte at offset D_03005648 set by MIDI Controller 10)
+extern u16 D_03005b80;              // [D_03005b80] MIDI4AGB - Set to REG_VCOUNT near the end of each update.
+extern u16 D_03005b84;              // [D_03005b84] DIRECTSOUND - ??
+extern struct SampleStream *D_03005b88;    // [D_03005b88] DIRECTSOUND - SampleStream (12 Channels, at D_030028c8)
+extern u16 D_03005b8c;              // [D_03005b8c] DIRECTSOUND - Number of DirectSound Channels ( = 12)
+extern s8  D_03005b90[4];           // [D_03005b90] REVERB - Reverb Controller Update Scratch
+extern u32 D_03005b94;              // [D_03005b94] MIDI4AGB - Global Sample Rate ( = 13379Hz)
+
+extern volatile u32 D_030064a0;     // [D_030064a0] DIRECTSOUND - Offset from *D_0300563c and *D_030064b8 to operate on.
+extern u32 D_030064a4;              // [D_030064a4] REVERB - gRVBCNT1 (init. = 0)
+extern u32 D_030064a8;              // [D_030064a8] MIDI4AGB - 13379Hz / 60 (samples per frame, at 60fps)
+extern u16 D_030064ac;              // [D_030064ac] DIRECTSOUND - ??
+extern s32 *D_030064b0;             // [D_030064b0] DIRECTSOUND - Sample Processing ScratchPad ( = &D_030024c8)
+extern u32 D_030064b4;              // [D_030064b4] MIDI4AGB - 16776921 / 13379Hz
+extern volatile u32 *D_030064b8;    // [D_030064b8] DIRECTSOUND - REG_DMA2SAD (Left Audio Source) ( = &D_03001888[D_03005b24] ( = &D_03001ea8))
+extern struct SoundChannel *D_030064bc;    // [D_030064bc] DIRECTSOUND - DirectSound Channels (12 Channels, at D_03002a48)
+extern s8  D_030064c0;              // [D_030064c0] FILTER EQ - Duplicate of D_03005620[0] used for just one (1) singular calculation.
+extern u16 D_030064c4;              // [D_030064c4] DIRECTSOUND - Enable DirectSound
+
+
+// DATA
 extern InstrumentBank *instrument_banks[];
-
 extern u32 D_08aa4318;
 extern const char D_08a865a4[];
 extern const char D_08a865a8[];
+
 
 
 /* INTERRUPT_DMA2 */
