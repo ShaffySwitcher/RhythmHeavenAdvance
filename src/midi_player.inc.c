@@ -724,31 +724,200 @@ void func_0804bed0(struct SoundPlayer *soundPlayer, u32 id) {
 
 
 // Update SoundPlayer Volume
-#include "asm/lib_08049144/asm_0804c040.s"
+void func_0804c040(struct SoundPlayer *soundPlayer) {
+    u32 volumeProduct;
+    u32 volumeLevel;
+
+    switch (soundPlayer->volumeFadeType) {
+        case VOL_FADE_RESET:
+            break;
+
+        case VOL_FADE_IN:
+            soundPlayer->volumeFadeEnv += soundPlayer->volumeFadeSpd;
+            if ((s16)soundPlayer->volumeFadeEnv < 0) {
+                soundPlayer->volumeFadeType = VOL_FADE_RESET;
+                soundPlayer->volumeFadeEnv = (1 << 15);
+                soundPlayer->volumeFadeSpd = 0;
+            }
+            break;
+
+        case VOL_FADE_OUT_CLEAR:
+            if (soundPlayer->volumeFadeEnv < soundPlayer->volumeFadeSpd) {
+                soundPlayer->volumeFadeType = VOL_FADE_RESET;
+                soundPlayer->volumeFadeEnv = 0;
+                func_0804b560(soundPlayer);
+            } else {
+                soundPlayer->volumeFadeEnv -= soundPlayer->volumeFadeSpd;
+            }
+            break;
+
+        case VOL_FADE_OUT_PAUSE:
+            if (soundPlayer->volumeFadeEnv < soundPlayer->volumeFadeSpd) {
+                soundPlayer->volumeFadeEnv = 0;
+                func_0804b574(soundPlayer, TRUE);
+            } else {
+                soundPlayer->volumeFadeEnv -= soundPlayer->volumeFadeSpd;
+            }
+            break;
+    }
+
+    volumeProduct = (soundPlayer->sequenceVolume * soundPlayer->playerVolume * soundPlayer->volumeFadeEnv) >> 8;
+    volumeLevel = volumeProduct >> 15;
+    if (volumeLevel > 0xFF) {
+        volumeLevel = 0xFF;
+    }
+    func_0804adb4(soundPlayer->midiBus, volumeLevel);
+
+    volumeLevel = ((volumeProduct >> 8) * soundPlayer->trackVolume) >> 15;
+    if (volumeLevel > 0xFF) {
+        volumeLevel = 0xFF;
+    }
+    func_08049ec4(soundPlayer->midiBus, volumeLevel, soundPlayer->trackMask);
+}
 
 
 // Update SoundPlayer MidiStream
-#include "asm/lib_08049144/asm_0804c0f8.s"
+void func_0804c0f8(struct SoundPlayer *soundPlayer) {
+    struct MidiTrackStream *mTrkReader;
+    u32 noActiveReader;
+    u32 i;
+
+    // If the SoundPlayer is stopped or paused, do not proceed.
+    if ((soundPlayer->sequence == NULL) || soundPlayer->isPaused) {
+        return;
+    }
+
+    D_0300562c = 0;
+
+    // Update MIDI Track Streams
+    for (i = 0; i < soundPlayer->nTracksUsed; i++) {
+        func_0804bed0(soundPlayer, i);
+    }
+
+    // If the above loop modifies the value of D_0300562c, apply to channel as speed envelope.
+    if (D_0300562c != 0) {
+        soundPlayer->deltaTime = D_0300562c;
+    }
+
+    // Check if any MIDI Track Readers are currently operating.
+    mTrkReader = soundPlayer->midiReader;
+    noActiveReader = TRUE;
+    for (i = 0; (i < soundPlayer->nTracksUsed) && noActiveReader; i++, mTrkReader++) {
+        if (mTrkReader->active_curr) {
+            noActiveReader = FALSE;
+        }
+    }
+
+    // If none are active, remove the Sound Sequence from the Audio Channel.
+    if (noActiveReader) {
+        soundPlayer->sequence = NULL;
+    }
+}
 
 
 // Update Main
-#include "asm/lib_08049144/asm_0804c170.s"
+void func_0804c170(void) {
+    struct SoundPlayer *soundPlayer;
+    u32 delta;
+    u32 i;
+    s32 rvb0 = D_03005b90[0];
+    s32 rvb1 = D_03005b90[1];
+    s32 rvb2 = D_03005b90[2];
+    s32 rvb3 = D_03005b90[3];
+
+    D_030055f0 = REG_VCOUNT;
+
+    // Standard Sound Players
+    for (i = 0; i <= D_08aa4318; i++) {
+        soundPlayer = D_08aa4324[i];
+        if (soundPlayer != NULL) {
+            func_0804c040(soundPlayer);
+            func_0804c0f8(soundPlayer);
+            func_08049d08(soundPlayer->midiBus);
+            if (soundPlayer->sequence != NULL) {
+                rvb0 -= (64 * 2) - (soundPlayer->midiController4E * 2);
+                rvb1 -= 64 - soundPlayer->midiController4F;
+                rvb2 -= 64 - soundPlayer->midiController50;
+                rvb3 -= 64 - soundPlayer->midiController51;
+            }
+        }
+    }
+
+    // DirectMidi Player
+    soundPlayer = D_03001598;
+    if (D_08aa431c && (soundPlayer != NULL)) {
+        func_0804c6c8();
+        rvb0 -= (64 * 2) - (soundPlayer->midiController4E * 2);
+        rvb1 -= 64 - soundPlayer->midiController4F;
+        rvb2 -= 64 - soundPlayer->midiController50;
+        rvb3 -= 64 - soundPlayer->midiController51;
+    }
+
+    // LFO
+    if ((D_03005644 != NULL) && (D_03005b3c != LFO_MODE_DISABLED)) {
+        delta = func_0804b6f0(D_03005644->midiTempo, D_03005644->playerSpeed, 24);
+        func_0804ae6c(&D_03005b30, delta);
+        func_08049b70((D_03005b30.output * D_03005640) >> 8);
+    }
+
+    func_0804a334();
+    D_03005b80 = REG_VCOUNT;
+
+    if (rvb0 < 0) rvb0 = 0;
+    if (rvb0 > 127) rvb0 = 127;
+    if (rvb1 < 0) rvb1 = 0;
+    if (rvb1 > 127) rvb1 = 127;
+    if (rvb2 < 0) rvb2 = 0;
+    if (rvb2 > 127) rvb2 = 127;
+    if (rvb3 < 0) rvb3 = 0;
+    if (rvb3 > 127) rvb3 = 127;
+
+    func_08049b34(rvb0, rvb1, rvb2, rvb3);
+    func_080497f8();
+}
 
 
 // Set Main Reverb Controller Scratch/Queue
-#include "asm/lib_08049144/asm_0804c340.s"
+void func_0804c340(u32 rvb0, u32 rvb1, u32 rvb2, u32 rvb3) {
+    D_03005b90[0] = rvb0;
+    D_03005b90[1] = rvb1;
+    D_03005b90[2] = rvb2;
+    D_03005b90[3] = rvb3;
+}
 
 
 // Stub
-#include "asm/lib_08049144/asm_0804c358.s"
+void func_0804c358(void) {
+}
 
 
 // Initialise SoundPlayer
-#include "asm/lib_08049144/asm_0804c35c.s"
+void func_0804c35c(struct SoundPlayer *soundPlayer, struct MidiBus *midiBus, u32 nTracksMax, struct MidiTrackStream *midiReader, u32 priorityEnabled) {
+    soundPlayer->sequence = NULL;
+    soundPlayer->midiBus = midiBus;
+    soundPlayer->nTracksMax = nTracksMax;
+    soundPlayer->midiReader = midiReader;
+    soundPlayer->priorityEnabled = priorityEnabled;
+    soundPlayer->sequenceVolume = 100;
+}
 
 
 // Parse Midi Variable-Length Quantity
-#include "asm/lib_08049144/asm_0804c398.s"
+u32 func_0804c398(const u8 **upstream) {
+    const u8 *stream = *upstream;
+    u8 current;
+    u32 time = 0;
+
+    do {
+        current = *stream;
+        stream++;
+        time <<= 7;
+        time |= (current & 0x7F);
+    } while ((current & 0x80) != 0);
+
+    *upstream = stream;
+    return time;
+}
 
 
 // Initialise DirectMidi Player
