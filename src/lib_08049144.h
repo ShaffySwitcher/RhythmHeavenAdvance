@@ -167,10 +167,15 @@ extern u16 D_030064c4;              // [D_030064c4] DIRECTSOUND - Enable DirectS
 
 
 // DATA
-extern InstrumentBank *instrument_banks[];
-extern u32 D_08aa4318;
 extern const char D_08a865a4[];
 extern const char D_08a865a8[];
+extern InstrumentBank *instrument_banks[];
+extern u32 D_08aa4318;
+extern u8 D_08aa431c; // Has Data [TRUE]
+extern u8 D_08aa431d; // Sound Bank ID [INST_BANK_37]
+extern u8 D_08aa431e; // Volume [127]
+extern u8 D_08aa431f; // Priority [0]
+extern u8 D_08aa4320; // Tempo [150]
 
 
 
