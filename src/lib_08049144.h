@@ -167,6 +167,10 @@ extern u16 D_030064c4;              // [D_030064c4] DIRECTSOUND - Enable DirectS
 
 
 // DATA
+extern const u16 D_08a86008[128];   // MIDI Note to Frequency Table (A4 = 440Hz)
+extern const u32 D_08a86108[14];    // Semitones to Frequency Table ((2^(p/12) - 1) << 10)
+extern const s16 D_08a86140[0x100]; // Sine Table (init = 0; size = 0x100; max = 0x100; min = -0x100)
+extern const s16 D_08a86340[0x100]; // Cosine Table (init = 0; size = 0x100; max = 0x100; min = -0x100)
 extern const char D_08a865a4[];
 extern const char D_08a865a8[];
 extern InstrumentBank *instrument_banks[];
@@ -281,20 +285,20 @@ extern void func_0804ae18(struct MidiBus *, u16 *); // Set MidiBus Tuning
 
 /* LOW-FREQUENCY OSCILLATOR OPERATIONS */
 
-extern void func_0804ae1c(struct LFO *, u8, u8, u8, u8, u8); // Initialise LFO
-extern void func_0804ae54(struct LFO *);        // Start LFO [Ctrl_49]
-extern void func_0804ae60(struct LFO *);        // Stop LFO [Ctrl_49; Ctrl_4A]
-extern void func_0804ae6c(struct LFO *, u32);   // Update LFO
-extern u32  func_0804af0c(u16); // Pseudo-Random Number Generator
+extern void func_0804ae1c(struct LFO *lfo, u8 preDelay, u8 attack, u8 arg3, u8 offset, u8 duration);
+extern void func_0804ae54(struct LFO *lfo);
+extern void func_0804ae60(struct LFO *lfo);
+extern void func_0804ae6c(struct LFO *lfo, u32 delta);
+extern u32  func_0804af0c(u16 range);
 
 /* PSG CHANNEL OPERATIONS */
 
-extern void func_0804af30(void);    // Stop All PSG SoundChannels
-extern void func_0804af74(u32);     // Initialise PSG SoundChannels
-extern u32  func_0804afa4(u32);     // Convert Pitch Envelope to PSG Frequency Register Variable
-extern u32  func_0804afd8(u32);     // Convert Volume Envelope to PSG Volume Register Variable
-// extern ? func_0804aff0(?);       // Update PSG SoundChannel
-extern void func_0804b2c4(void);    // Update All PSG SoundChannels
+extern void func_0804af30(void);
+extern void func_0804af74(u32 id);
+extern u32  func_0804afa4(u32 freq);
+extern u32  func_0804afd8(u32 vol);
+// extern void func_0804aff0(u32 id);
+extern void func_0804b2c4(void);
 
 /* SOUND PLAYER OPERATIONS */
 
