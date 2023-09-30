@@ -322,7 +322,6 @@ SECTIONS {
         build/data/scenes/results/debug_results.c.o(.rodata);
         build/data/scenes/results/rank_results.c.o(.rodata);
         build/data/scenes/results/score_results.c.o(.rodata);
-        build/data/scenes/results/data.c.o(.rodata);
 		build/src/scenes/results.c.o(.rodata);
         build/data/scenes/data_room/reading.c.o(.rodata);
         build/src/scenes/studio_warning.c.o(.rodata);
@@ -903,7 +902,6 @@ SECTIONS {
         build/data/scenes/results/rank_scene.bs.o(.scene);
         build/data/scenes/results/score_results.c.o(.data);
         build/data/scenes/results/score_scene.bs.o(.scene);
-        build/data/scenes/results/data.c.o(.data);
         build/src/scenes/results.c.o(.data);
         build/data/scenes/epilogue/data.c.o(.data);
         build/data/scenes/epilogue/scene.bs.o(.scene);
@@ -1165,9 +1163,9 @@ SECTIONS {
         build/bin/bindata_08a85a50.bin.o(.rodata*);
         build/games/tap_trial/subroutines.bs.o(.script.sub);
 
+        build/data/lib_midi_data.c.o(.data);
         build/bin/bindata_08a86008.bin.o(.rodata*);
         build/audio/instruments.c.o(.data);
-        build/audio/sequences.c.o(.rodata);
         build/audio/sequences.c.o(.data);
         build/bin/bindata_08a9e8e0.bin.o(.rodata*);
         build/bin/bindata_08aa06f8.bin.o(.rodata*);

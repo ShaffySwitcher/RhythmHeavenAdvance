@@ -21,12 +21,12 @@ thumb_func_start func_0804aff0 \n\
 /* 0804b00e */ B branch_0804b2a6 \n\
  \n\
 branch_0804b010: \n\
-/* 0804b010 */ LDR R0, =D_08a86548 \n\
+/* 0804b010 */ LDR R0, =midi_psg_env_regs \n\
 /* 0804b012 */ LSLS R1, R7, 0x2 \n\
 /* 0804b014 */ ADDS R0, R1, R0 @ Set R0 to R1 + R0 \n\
 /* 0804b016 */ LDR R0, [R0] \n\
 /* 0804b018 */ MOV R10, R0 @ Set R10 to R0 \n\
-/* 0804b01a */ LDR R0, =D_08a86558 \n\
+/* 0804b01a */ LDR R0, =midi_psg_freq_regs \n\
 /* 0804b01c */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\
 /* 0804b01e */ LDR R1, [R1] \n\
 /* 0804b020 */ MOV R9, R1 @ Set R9 to R1 \n\
@@ -106,7 +106,7 @@ branch_0804b0bc: \n\
 /* 0804b0c0 */ MOVS R1, 0x50 @ Set R1 to 0x50 \n\
  \n\
 branch_0804b0c2: \n\
-/* 0804b0c2 */ LDR R0, =D_08a86568 \n\
+/* 0804b0c2 */ LDR R0, =midi_psg_noise_freq_table \n\
 /* 0804b0c4 */ SUBS R1, 0x15 @ Subtract 0x15 from R1 \n\
 /* 0804b0c6 */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\
 /* 0804b0c8 */ LDRB R5, [R1] \n\
@@ -280,7 +280,7 @@ branch_0804b1c2: \n\
 /* 0804b204 */ STRH R0, [R2] \n\
  \n\
 branch_0804b206: \n\
-/* 0804b206 */ LDR R0, =D_08a86540 \n\
+/* 0804b206 */ LDR R0, =midi_psg_wave_vol_table \n\
 /* 0804b208 */ MOV R2, R12 @ Set R2 to R12 \n\
 /* 0804b20a */ LSRS R1, R2, 0x2 \n\
 /* 0804b20c */ LSLS R1, R1, 0x1 \n\

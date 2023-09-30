@@ -28,7 +28,7 @@ branch_08049c58: \n\
 /* 08049c58 */ LDR R1, [R4, 0x4] \n\
 /* 08049c5a */ LSLS R1, R1, 0xB \n\
 /* 08049c5c */ LSRS R1, R1, 0x19 \n\
-/* 08049c5e */ LDR R2, =D_08a86140 \n\
+/* 08049c5e */ LDR R2, =midi_sine_table \n\
 /* 08049c60 */ LDRH R0, [R4, 0x12] \n\
 /* 08049c62 */ LSRS R0, R0, 0x8 \n\
 /* 08049c64 */ LSLS R0, R0, 0x1 \n\

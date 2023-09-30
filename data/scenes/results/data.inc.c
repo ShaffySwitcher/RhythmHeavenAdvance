@@ -4,14 +4,8 @@
 #include "src/scenes/results.h"
 #include "graphics/results/results_graphics.h"
 
-extern struct ScoreHandler sScoreHandler;
-
 
   /* RESULTS - MISC. DATA */
-
-
-// [D_089d7980] Main Score Handler
-struct ScoreHandler *score_handler = &sScoreHandler;
 
 
 // [D_089d7984] Letter Ranks
