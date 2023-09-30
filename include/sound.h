@@ -425,5 +425,5 @@ extern struct SoundPlayerTable {
     struct SoundPlayer *soundPlayer;
     u32 null4; // unused
     u16 trackCount;
-    u16 playerType;
+    u16 priorityEnabled;
 } D_08aa4460[];

@@ -1,11 +1,15 @@
 OUTPUT_ARCH(arm)
 
-/* Sound Library */
+/* Sound Library - Random */
 D_03001570 = 0x03001570;
+
+/* Sound Library - PSG */
 D_03001578 = 0x03001578;
 D_03001580 = 0x03001580;
 D_03001588 = 0x03001588;
 D_03001590 = 0x03001590;
+
+/* Sound Library - Main */
 D_03001598 = 0x03001598;
 D_0300159c = 0x0300159c;
 D_030015a0 = 0x030015a0;
@@ -13,20 +17,20 @@ D_030015a4 = 0x030015a4;
 D_030015a6 = 0x030015a6;
 D_030015a7 = 0x030015a7;
 
-/* Sound Channels */
-D_030015ac = 0x030015ac;
-D_030015e4 = 0x030015e4;
-D_0300161c = 0x0300161c;
-D_03001654 = 0x03001654;
-D_0300168c = 0x0300168c;
-D_030016c4 = 0x030016c4;
-D_030016fc = 0x030016fc;
-D_03001734 = 0x03001734;
-D_0300176c = 0x0300176c;
-D_030017a4 = 0x030017a4;
-D_030017dc = 0x030017dc;
-D_03001814 = 0x03001814;
-D_0300184c = 0x0300184c;
+/* Sound Players */
+sMusicPlayer0 = 0x030015ac;
+sMusicPlayer1 = 0x030015e4;
+sMusicPlayer2 = 0x0300161c;
+sSfxPlayer0 = 0x03001654;
+sSfxPlayer1 = 0x0300168c;
+sSfxPlayer2 = 0x030016c4;
+sSfxPlayer3 = 0x030016fc;
+sSfxPlayer4 = 0x03001734;
+sSfxPlayer5 = 0x0300176c;
+sSfxPlayer6 = 0x030017a4;
+sSfxPlayer7 = 0x030017dc;
+sSfxPlayer8 = 0x03001814;
+sSfxPlayer9 = 0x0300184c;
 
 /* DirectSound Space */
 D_03001888 = 0x03001888;
@@ -35,45 +39,45 @@ D_030028c8 = 0x030028c8;
 D_03002a48 = 0x03002a48;
 
 /* MIDI Reader Space */
-D_03002bc8 = 0x03002bc8;
-D_03002da8 = 0x03002da8;
-D_03002dd0 = 0x03002dd0;
-D_03002f78 = 0x03002f78;
-D_030030f8 = 0x030030f8;
-D_03003120 = 0x03003120;
-D_03003270 = 0x03003270;
-D_030033f0 = 0x030033f0;
-D_03003418 = 0x03003418;
-D_03003568 = 0x03003568;
-D_03003608 = 0x03003608;
-D_03003630 = 0x03003630;
-D_030036c0 = 0x030036c0;
-D_03003760 = 0x03003760;
-D_03003788 = 0x03003788;
-D_03003818 = 0x03003818;
-D_030038b8 = 0x030038b8;
-D_030038e0 = 0x030038e0;
-D_03003970 = 0x03003970;
-D_03003a10 = 0x03003a10;
-D_03003a38 = 0x03003a38;
-D_03003ac8 = 0x03003ac8;
-D_03003b68 = 0x03003b68;
-D_03003b90 = 0x03003b90;
-D_03003c20 = 0x03003c20;
-D_03003cc0 = 0x03003cc0;
-D_03003ce8 = 0x03003ce8;
-D_03003d78 = 0x03003d78;
-D_03003e18 = 0x03003e18;
-D_03003e40 = 0x03003e40;
-D_03003ed0 = 0x03003ed0;
-D_03003f70 = 0x03003f70;
-D_03003f98 = 0x03003f98;
-D_03004028 = 0x03004028;
-D_030040c8 = 0x030040c8;
-D_030040f0 = 0x030040f0;
-D_03004180 = 0x03004180;
-D_03004220 = 0x03004220;
-D_03004248 = 0x03004248;
+sMusicPlayer0_midiChannels = 0x03002bc8;
+sMusicPlayer0_midiBus = 0x03002da8;
+sMusicPlayer0_midiReaders = 0x03002dd0;
+sMusicPlayer1_midiChannels = 0x03002f78;
+sMusicPlayer1_midiBus = 0x030030f8;
+sMusicPlayer1_midiReaders = 0x03003120;
+sMusicPlayer2_midiChannels = 0x03003270;
+sMusicPlayer2_midiBus = 0x030033f0;
+sMusicPlayer2_midiReaders = 0x03003418;
+sSfxPlayer0_midiChannels = 0x03003568;
+sSfxPlayer0_midiBus = 0x03003608;
+sSfxPlayer0_midiReaders = 0x03003630;
+sSfxPlayer1_midiChannels = 0x030036c0;
+sSfxPlayer1_midiBus = 0x03003760;
+sSfxPlayer1_midiReaders = 0x03003788;
+sSfxPlayer2_midiChannels = 0x03003818;
+sSfxPlayer2_midiBus = 0x030038b8;
+sSfxPlayer2_midiReaders = 0x030038e0;
+sSfxPlayer3_midiChannels = 0x03003970;
+sSfxPlayer3_midiBus = 0x03003a10;
+sSfxPlayer3_midiReaders = 0x03003a38;
+sSfxPlayer4_midiChannels = 0x03003ac8;
+sSfxPlayer4_midiBus = 0x03003b68;
+sSfxPlayer4_midiReaders = 0x03003b90;
+sSfxPlayer5_midiChannels = 0x03003c20;
+sSfxPlayer5_midiBus = 0x03003cc0;
+sSfxPlayer5_midiReaders = 0x03003ce8;
+sSfxPlayer6_midiChannels = 0x03003d78;
+sSfxPlayer6_midiBus = 0x03003e18;
+sSfxPlayer6_midiReaders = 0x03003e40;
+sSfxPlayer7_midiChannels = 0x03003ed0;
+sSfxPlayer7_midiBus = 0x03003f70;
+sSfxPlayer7_midiReaders = 0x03003f98;
+sSfxPlayer8_midiChannels = 0x03004028;
+sSfxPlayer8_midiBus = 0x030040c8;
+sSfxPlayer8_midiReaders = 0x030040f0;
+sSfxPlayer9_midiChannels = 0x03004180;
+sSfxPlayer9_midiBus = 0x03004220;
+sSfxPlayer9_midiReaders = 0x03004248;
 
 /* SRAM Library */
 verify_sram_fast_code = 0x030042d8;
@@ -245,21 +249,6 @@ D_08a4b4d0 = 0x08a4b4d0;
 D_08a4b4f0 = 0x08a4b4f0;
 D_08a53508 = 0x08a53508;
 D_08a5fe74 = 0x08a5fe74;
-
-/* bindata_08a9e8e0 (bad split?) */
-
-/* bindata_08aa06f8 */
-D_08aa06f8 = 0x08aa06f8;
-D_08aa4318 = 0x08aa4318;
-D_08aa431c = 0x08aa431c;
-D_08aa431d = 0x08aa431d;
-D_08aa431e = 0x08aa431e;
-D_08aa431f = 0x08aa431f;
-D_08aa4320 = 0x08aa4320;
-D_08aa4324 = 0x08aa4324;
-D_08aa4358 = 0x08aa4358;
-D_08aa445c = 0x08aa445c;
-D_08aa4460 = 0x08aa4460;
 
 /* bindata_08bd0cac */
 D_08bd0cac = 0x08bd0cac;
