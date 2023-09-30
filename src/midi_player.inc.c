@@ -264,7 +264,7 @@ void func_0804b710(struct SoundPlayer *soundPlayer, u16 speed) {
 void func_0804b734(struct SoundPlayer *soundPlayer, u16 type, u16 duration) {
     switch (type) {
         case VOL_FADE_RESET:
-            soundPlayer->volumeFadeEnv = 0x8000;
+            soundPlayer->volumeFadeEnv = (1 << 15);
             soundPlayer->volumeFadeSpd = 0;
             break;
 
@@ -275,17 +275,17 @@ void func_0804b734(struct SoundPlayer *soundPlayer, u16 type, u16 duration) {
             if (soundPlayer->volumeFadeType == 0) {
                 soundPlayer->volumeFadeEnv = 0;
             }
-            soundPlayer->volumeFadeSpd = 0x8000 / duration;
+            soundPlayer->volumeFadeSpd = (1 << 15) / duration;
             soundPlayer->isPaused = FALSE;
             break;
 
         case VOL_FADE_OUT_CLEAR:
         case VOL_FADE_OUT_PAUSE:
             if (soundPlayer->volumeFadeType == VOL_FADE_RESET) {
-                soundPlayer->volumeFadeEnv = 0x8000;
+                soundPlayer->volumeFadeEnv = (1 << 15);
             }
-            if (duration != 0) {
-                soundPlayer->volumeFadeSpd = 0x8000 / duration;
+            if (duration > 0) {
+                soundPlayer->volumeFadeSpd = (1 << 15) / duration;
             } else {
                 soundPlayer->volumeFadeEnv = 0;
                 soundPlayer->volumeFadeSpd = 1;
@@ -359,7 +359,6 @@ u32 func_0804b898(struct SoundPlayer *soundPlayer, const u8 **upstream) {
     *upstream = stream + length;
 
     switch (event) {
-        // Text Marker
         case META_TEXT_MARKER:
             if (length == soundPlayer->loopStartSymSize) {
                 if (func_0804b6c4(soundPlayer->loopStartSym, stream, length)) {
@@ -373,18 +372,15 @@ u32 func_0804b898(struct SoundPlayer *soundPlayer, const u8 **upstream) {
             }
             return META_EVENT_OTHER;
 
-        // End of Track
         case META_END_OF_TRACK:
             return META_EVENT_TRACK_END;
 
-        // Set Tempo
         case META_SET_TEMPO:
-            tempo = (u32)60000000 / ((stream[0] << 16) | (stream[1] << 8) | stream[2]);
+            tempo = 60000000u / ((stream[0] << 16) | (stream[1] << 8) | stream[2]);
             soundPlayer->midiTempo = tempo;
             D_0300562c = func_0804b6f0(tempo, soundPlayer->playerSpeed, soundPlayer->midiQuarterNote);
             return META_EVENT_OTHER;
 
-        // Else, do nothing.
         default:
             return META_EVENT_OTHER;
     }
@@ -392,71 +388,71 @@ u32 func_0804b898(struct SoundPlayer *soundPlayer, const u8 **upstream) {
 
 
 // MidiStream Controller Change [Evnt_B]
-void func_0804b95c(struct SoundPlayer *soundPlayer, u32 id, u8 controller, u8 var) {
+void func_0804b95c(struct SoundPlayer *soundPlayer, u32 track, u8 controller, u8 value) {
     struct MidiBus *midiBus = soundPlayer->midiBus;
 
     switch (controller) {
         case M_CONTROLLER_BANK_SELECT_MSB:
-            func_0804abc8(midiBus, id, var | 0x8000);
+            func_0804abc8(midiBus, track, value | 0x8000);
             break;
 
         case M_CONTROLLER_MOD_DEPTH:
-            func_0804ac40(midiBus, id, var);
+            func_0804ac40(midiBus, track, value);
             break;
 
         case M_CONTROLLER_VOLUME:
-            func_0804aa5c(midiBus, id, var);
+            func_0804aa5c(midiBus, track, value);
             break;
 
         case M_CONTROLLER_PANNING:
-            func_0804aa7c(midiBus, id, var);
+            func_0804aa7c(midiBus, track, value);
             break;
 
         case M_CONTROLLER_EXPRESSION:
-            func_0804aba8(midiBus, id, var);
+            func_0804aba8(midiBus, track, value);
             break;
 
         case M_CONTROLLER_MOD_RANGE:
-            func_0804ace4(midiBus, id, var);
+            func_0804ace4(midiBus, track, value);
             break;
 
         case M_CONTROLLER_MOD_SPEED:
-            func_0804accc(midiBus, id, var);
+            func_0804accc(midiBus, track, value);
             break;
 
         case M_CONTROLLER_MOD_TYPE:
-            func_0804aca0(midiBus, id, var);
+            func_0804aca0(midiBus, track, value);
             break;
 
         case M_CONTROLLER_MOD_DELAY:
-            func_0804acd8(midiBus, id, var);
+            func_0804acd8(midiBus, track, value);
             break;
 
         case M_CONTROLLER_BANK_SELECT_LSB:
-            func_0804abc8(midiBus, id, var);
+            func_0804abc8(midiBus, track, value);
             break;
 
         case M_CONTROLLER_PRIORITY:
-            func_0804ad18(midiBus, id, var);
+            func_0804ad18(midiBus, track, value);
             break;
 
         case M_CONTROLLER_UNK_0E:
-            D_03005648 = var;
+            D_03005648 = value;
             break;
 
         case M_CONTROLLER_UNK_10:
             if (D_03005648 < D_03005b20) {
-                D_03005b7c[D_03005648] = var;
+                D_03005b7c[D_03005648] = value;
             }
             break;
 
         case M_CONTROLLER_DAMPEN:
-            func_0804ac80(midiBus, id, var);
+            func_0804ac80(midiBus, track, value);
             break;
 
-        case M_CONTROLLER_LFO: // Set LFO
-            D_03005b3c = var;
-            switch (var) {
+        case M_CONTROLLER_LFO:
+            D_03005b3c = value;
+            switch (value) {
                 case LFO_MODE_DISABLED:
                 case LFO_MODE_KEYPRESS:
                     func_0804ae60(&D_03005b30);
@@ -472,73 +468,73 @@ void func_0804b95c(struct SoundPlayer *soundPlayer, u32 id, u8 controller, u8 va
             D_03005b3c = LFO_MODE_DISABLED;
             func_0804ae60(&D_03005b30);
             func_08049be4();
-            func_08049b70((var * 2) - 0x80);
+            func_08049b70((value * 2) - 0x80);
             break;
 
         case M_CONTROLLER_LFO_GAIN:
-            D_03005640 = var * 2;
+            D_03005640 = value * 2;
             break;
 
         case M_CONTROLLER_EQ_GAIN:
-            func_08049b8c(var);
+            func_08049b8c(value);
             break;
 
         case M_CONTROLLER_STEREO:
-            func_0804acf0(midiBus, id, var);
+            func_0804acf0(midiBus, track, value);
             break;
 
         case M_CONTROLLER_RVB1:
-            soundPlayer->midiController4E = var;
+            soundPlayer->midiController4E = value;
             break;
 
         case M_CONTROLLER_RVB2:
-            soundPlayer->midiController4F = var;
+            soundPlayer->midiController4F = value;
             break;
 
         case M_CONTROLLER_RVB3:
-            soundPlayer->midiController50 = var;
+            soundPlayer->midiController50 = value;
             break;
 
         case M_CONTROLLER_RVB4:
-            soundPlayer->midiController51 = var;
+            soundPlayer->midiController51 = value;
             break;
 
         case M_CONTROLLER_RANDOM_PITCH:
-            func_0804ad38(midiBus, id, var);
+            func_0804ad38(midiBus, track, value);
             break;
 
         case M_CONTROLLER_RANDOM_53:
-            func_0804ad90(midiBus, id, var);
+            func_0804ad90(midiBus, track, value);
             break;
 
         case M_CONTROLLER_RANDOM_54:
-            func_0804ad9c(midiBus, id, var);
+            func_0804ad9c(midiBus, track, value);
             break;
     }
 }
 
 
 // MidiStream Note Off/On [Evnt_8; Evnt_9]
-void func_0804bc5c(u32 id, u32 key, u32 vel) {
+void func_0804bc5c(u32 track, u32 key, u32 velocity) {
     struct MidiNote *midiNote;
 
     if (D_03005b78 < 20) {
         midiNote = &D_03005650[D_03005b78++];
-        midiNote->channel = id;
+        midiNote->channel = track;
         midiNote->key = key;
-        midiNote->velocity = vel;
+        midiNote->velocity = velocity;
     }
 }
 
 
 // MidiStream Messages/Events
-u32 func_0804bcc0(struct SoundPlayer *soundPlayer, u32 id) {
+u32 func_0804bcc0(struct SoundPlayer *soundPlayer, u32 track) {
     u32 trackEndType = M_TRACK_STREAM_CONTINUE;
-    struct MidiTrackStream *reader = &soundPlayer->midiReader[id];
+    struct MidiTrackStream *reader = &soundPlayer->midiReader[track];
     struct MidiTrackStream *tempReader;
     const u8 *byteStream = reader->stream_curr;
     u8 command;
-    u16 mod;
+    u16 pitch;
     u32 i;
 
     // ??
@@ -564,7 +560,7 @@ u32 func_0804bcc0(struct SoundPlayer *soundPlayer, u32 id) {
                 switch (func_0804b898(soundPlayer, &byteStream)) {
                     // End of Track
                     case META_EVENT_TRACK_END:
-                        func_0804accc(soundPlayer->midiBus, id, 0);
+                        func_0804accc(soundPlayer->midiBus, track, 0);
                         return M_TRACK_STREAM_STOP;
 
                     // Marker: Loop Start
@@ -602,7 +598,7 @@ u32 func_0804bcc0(struct SoundPlayer *soundPlayer, u32 id) {
                 }
                 break;
 
-            // Else, do nothing.
+            // Else, Do Nothing
             default:
                 i = func_0804c398(&byteStream);
                 byteStream += i;
@@ -615,13 +611,13 @@ u32 func_0804bcc0(struct SoundPlayer *soundPlayer, u32 id) {
         switch (command & 0xF0) {
             // Note Off
             case MSG_NOTE_OFF:
-                func_0804bc5c(id, byteStream[0], 0);
+                func_0804bc5c(track, byteStream[0], 0);
                 byteStream += 2;
                 break;
 
             // Note On
             case MSG_NOTE_ON:
-                func_0804bc5c(id, byteStream[0], byteStream[1]);
+                func_0804bc5c(track, byteStream[0], byteStream[1]);
                 byteStream += 2;
                 break;
 
@@ -632,13 +628,13 @@ u32 func_0804bcc0(struct SoundPlayer *soundPlayer, u32 id) {
 
             // MIDI Controller Change
             case MSG_CONTROLLER_CHANGE:
-                func_0804b95c(soundPlayer, id, byteStream[0], byteStream[1]);
+                func_0804b95c(soundPlayer, track, byteStream[0], byteStream[1]);
                 byteStream += 2;
                 break;
 
             // Program Change
             case MSG_PROGRAM_CHANGE:
-                func_0804ab88(soundPlayer->midiBus, id, byteStream[0]);
+                func_0804ab88(soundPlayer->midiBus, track, byteStream[0]);
                 byteStream += 1;
                 break;
 
@@ -649,21 +645,21 @@ u32 func_0804bcc0(struct SoundPlayer *soundPlayer, u32 id) {
 
             // Pitch Wheel Change
             case MSG_PITCH_WHEEL_CHANGE:
-                mod = (byteStream[0] & 0x7f) | ((byteStream[1] & 0x7f) << 7);
-                func_0804aa40(soundPlayer->midiBus, id, mod);
+                pitch = (byteStream[0] & 0x7F) | ((byteStream[1] & 0x7F) << 7);
+                func_0804aa40(soundPlayer->midiBus, track, pitch);
                 byteStream += 2;
                 break;
         }
     }
 
-    // Close.
+    // Close
     reader->stream_curr = byteStream;
     return trackEndType;
 }
 
 
 // Update MidiStream
-void func_0804bed0(struct SoundPlayer *soundPlayer, u32 id) {
+void func_0804bed0(struct SoundPlayer *soundPlayer, u32 track) {
     struct MidiTrackStream *reader;
     struct MidiChannel *channel;
     struct MidiNote *note;
@@ -671,7 +667,7 @@ void func_0804bed0(struct SoundPlayer *soundPlayer, u32 id) {
     u32 delta;
     u32 i;
 
-    reader = &soundPlayer->midiReader[id];
+    reader = &soundPlayer->midiReader[track];
     if (!reader->active_curr) {
         return;
     }
@@ -687,9 +683,9 @@ void func_0804bed0(struct SoundPlayer *soundPlayer, u32 id) {
             reader->inLoop = TRUE;
         }
 
-        if (func_0804bcc0(soundPlayer, id) == M_TRACK_STREAM_STOP) {
+        if (func_0804bcc0(soundPlayer, track) == M_TRACK_STREAM_STOP) {
             reader->active_curr = FALSE;
-            func_08049d30(soundPlayer->midiBus, id);
+            func_08049d30(soundPlayer->midiBus, track);
             return;
         }
 
@@ -714,7 +710,7 @@ void func_0804bed0(struct SoundPlayer *soundPlayer, u32 id) {
 
     // Use Filter EQ with LFO
     if (anyNotePlayed) {
-        channel = &soundPlayer->midiBus->midiChannel[id];
+        channel = &soundPlayer->midiBus->midiChannel[track];
         if (channel->filterEQ && (D_03005b3c == LFO_MODE_KEYPRESS)) {
             func_08049be4();
             func_0804ae54(&D_03005b30);
