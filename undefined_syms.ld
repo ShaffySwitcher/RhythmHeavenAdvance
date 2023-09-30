@@ -1,8 +1,5 @@
 OUTPUT_ARCH(arm)
 
-/* Results Score Handler */
-sScoreHandler = 0x03001338;
-
 /* Sound Library */
 D_03001570 = 0x03001570;
 D_03001578 = 0x03001578;
@@ -248,17 +245,6 @@ D_08a4b4d0 = 0x08a4b4d0;
 D_08a4b4f0 = 0x08a4b4f0;
 D_08a53508 = 0x08a53508;
 D_08a5fe74 = 0x08a5fe74;
-
-/* MIDI Library Data */
-D_08a86008 = 0x08a86008;
-D_08a86108 = 0x08a86108;
-D_08a86140 = 0x08a86140;
-D_08a86540 = 0x08a86540;
-D_08a86548 = 0x08a86548;
-D_08a86558 = 0x08a86558;
-D_08a86568 = 0x08a86568;
-D_08a865a4 = 0x08a865a4;
-D_08a865a8 = 0x08a865a8;
 
 /* bindata_08a9e8e0 (bad split?) */
 

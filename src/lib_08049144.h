@@ -115,6 +115,8 @@ struct MidiNote {
     u32 velocity:7;
 };
 
+typedef volatile u16 *IOReg;
+
 
 // STATIC VARIABLES
 extern u16 D_03001570;          // [D_03001570] MIDI4AGB - Pseudo-RNG Variable
@@ -185,12 +187,17 @@ extern u16 D_030064c4;              // [D_030064c4] DIRECTSOUND - Enable DirectS
 
 
 // DATA
-extern const u16 D_08a86008[128];   // MIDI Note to Frequency Table (A4 = 440Hz)
-extern const u32 D_08a86108[14];    // Semitones to Frequency Table ((2^(p/12) - 1) << 10)
-extern const s16 D_08a86140[0x100]; // Sine Table (init = 0; size = 0x100; max = 0x100; min = -0x100)
-extern const s16 D_08a86340[0x100]; // Cosine Table (init = 0; size = 0x100; max = 0x100; min = -0x100)
-extern const char D_08a865a4[];
-extern const char D_08a865a8[];
+extern u16 midi_tuning_table[128];   // MIDI Note to Frequency Table (A4 = 440Hz)
+extern u32 midi_step_freq_table[14];    // Semitones to Frequency Table ((2^(p/12) - 1) << 10)
+extern s16 midi_sine_table[0x100]; // Sine Table (init = 0; size = 0x100; max = 0x100; min = -0x100)
+extern s16 midi_cosine_table[0x100]; // Cosine Table (init = 0; size = 0x100; max = 0x100; min = -0x100)
+extern u16 midi_psg_wave_vol_table[];
+extern IOReg midi_psg_env_regs[];
+extern IOReg midi_psg_freq_regs[];
+extern u8 midi_psg_noise_freq_table[];
+extern char midi_loop_start_sym[];
+extern char midi_loop_end_sym[];
+
 extern InstrumentBank *instrument_banks[];
 extern u32 D_08aa4318;
 extern u8 D_08aa431c; // Has Data [TRUE]

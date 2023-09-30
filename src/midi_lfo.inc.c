@@ -60,7 +60,7 @@ void func_0804ae6c(struct LFO *lfo, u32 delta) {
                 if (pos > lfo->duration) pos = lfo->duration;
             }
             pos += lfo->offset;
-            result = D_08a86140[pos & 0xFF] >> 1;
+            result = midi_sine_table[pos & 0xFF] >> 1;
             if (result > 0x7F) result = 0x7F;
             if (result < -0x80) result = -0x80;
             if (lfo->stage == LFO_STAGE_ATTACK) {

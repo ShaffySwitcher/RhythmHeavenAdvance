@@ -312,11 +312,11 @@ struct SoundPlayer {
     struct MidiTrackStream *midiReader;  // MIDI: Multiple structures which each keep track of a MIDI Track being processed.
     struct SequenceData *sequence; // SequenceData: Currently-loaded Sound Sequence.
     u32 deltaTime;              // MIDI: Ticks Per Frame, using internal assumption of 60fps [default = 1]
-    const char *loopStartSym;   // MIDI: Label char denoting "Loop Start". [always D_08A865D4, '[']
-    const char *loopEndSym;     // MIDI: Label char denoting "Loop End". [always D_08A865D8, ']']
-    u8  loopStartSymSize;   // MIDI: Value of soundplayer_get_loop_sym_size(D_08a865a4). [1]
-    u8  loopEndSymSize;     // MIDI: Value of soundplayer_get_loop_sym_size(D_08a865a8). [1]
-    u16 midiQuarterNote;    // MIDI: Value denoting 1 beat. [effectively always 0x18]
+    const char *loopStartSym;   // MIDI: Label denoting "Loop Start". [always '[']
+    const char *loopEndSym;     // MIDI: Label denoting "Loop End". [always ']']
+    u8  loopStartSymSize;   // MIDI: Length of the "Loop Start" label. [always 1]
+    u8  loopEndSymSize;     // MIDI: Length of the "Loop End" label. [always 1]
+    u16 midiQuarterNote;    // MIDI: Value denoting 1 beat. [effectively always 24]
     u16 playerVolume;   // Channel Gain (Volume) Envelope. [Q8.8]
     u16 trackVolume;    // Gain Envelope for a selection of MIDI Tracks. [Q8.8]
     u16 trackMask;      // Selection of MIDI Tracks to apply Gain Envelope.

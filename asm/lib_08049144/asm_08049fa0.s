@@ -19,7 +19,7 @@ thumb_func_start func_08049fa0 \n\
 /* 08049fba */ MOVS R0, 0xA0 @ Set R0 to 0xA0 \n\
 /* 08049fbc */ LSLS R0, R0, 0x5 \n\
 /* 08049fbe */ STRH R0, [R6, 0x8] \n\
-/* 08049fc0 */ LDR R0, =D_08a86008 \n\
+/* 08049fc0 */ LDR R0, =midi_tuning_table \n\
 /* 08049fc2 */ STR R0, [R6, 0xC] \n\
 /* 08049fc4 */ MOVS R0, 0x1F @ Set R0 to 0x1F \n\
 /* 08049fc6 */ ADDS R1, R7, 0x0 @ Set R1 to R7 + 0x0 \n\

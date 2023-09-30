@@ -99,10 +99,10 @@ void func_0804b368(struct SoundPlayer *soundPlayer, struct SequenceData *sound) 
     soundPlayer->volumeFadeType = 0;
     soundPlayer->volumeFadeEnv = 0x8000;
     soundPlayer->volumeFadeSpd = 0;
-    soundPlayer->loopStartSym = &D_08a865a4[0];
-    soundPlayer->loopStartSymSize = func_0804b348(D_08a865a4);
-    soundPlayer->loopEndSym = &D_08a865a8[0];
-    soundPlayer->loopEndSymSize = func_0804b348(D_08a865a8);
+    soundPlayer->loopStartSym = midi_loop_start_sym;
+    soundPlayer->loopStartSymSize = func_0804b348(midi_loop_start_sym);
+    soundPlayer->loopEndSym = midi_loop_end_sym;
+    soundPlayer->loopEndSymSize = func_0804b348(midi_loop_end_sym);
     soundPlayer->midiController4E = 64;
     soundPlayer->midiController4F = 64;
     soundPlayer->midiController50 = 64;

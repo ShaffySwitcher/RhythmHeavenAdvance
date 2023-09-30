@@ -40,7 +40,7 @@ branch_08049344: \n\
 branch_0804934c: \n\
 /* 0804934c */ LSLS R0, R0, 0xE \n\
 /* 0804934e */ STR R0, [R6, 0x14] \n\
-/* 08049350 */ LDR R1, =D_08a86008 \n\
+/* 08049350 */ LDR R1, =midi_tuning_table \n\
 /* 08049352 */ LDR R0, [R3, 0x8] \n\
 /* 08049354 */ LSLS R0, R0, 0x1 \n\
 /* 08049356 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\

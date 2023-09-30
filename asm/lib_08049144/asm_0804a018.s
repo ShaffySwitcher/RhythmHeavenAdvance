@@ -167,7 +167,7 @@ branch_0804a12c: \n\
 /* 0804a138 */ ADDS R0, R2, 0x0 @ Set R0 to R2 + 0x0 \n\
 /* 0804a13a */ MULS R0, R4 @ Multiply R0 by R4 \n\
 /* 0804a13c */ SUBS R3, R5, R0 @ Set R3 to R5 - R0 \n\
-/* 0804a13e */ LDR R1, =D_08a86108 \n\
+/* 0804a13e */ LDR R1, =midi_step_freq_table \n\
 /* 0804a140 */ LSLS R0, R2, 0x2 \n\
 /* 0804a142 */ ADDS R0, R0, R1 @ Set R0 to R0 + R1 \n\
 /* 0804a144 */ LDR R5, [R0] \n\
@@ -199,7 +199,7 @@ branch_0804a164: \n\
 /* 0804a176 */ ASRS R2, R0, 0x18 \n\
 /* 0804a178 */ MOVS R3, 0xFF @ Set R3 to 0xFF \n\
 /* 0804a17a */ ANDS R3, R1 @ Set R3 to R3 & R1 \n\
-/* 0804a17c */ LDR R1, =D_08a86108 \n\
+/* 0804a17c */ LDR R1, =midi_step_freq_table \n\
  \n\
 branch_0804a17e: \n\
 /* 0804a17e */ CMP R2, 0xB @ Compare R2 and 0xB \n\
