@@ -1164,11 +1164,9 @@ SECTIONS {
         build/games/tap_trial/subroutines.bs.o(.script.sub);
 
         build/data/lib_midi_data.c.o(.data);
-        build/bin/bindata_08a86008.bin.o(.rodata*);
         build/audio/instruments.c.o(.data);
         build/audio/sequences.c.o(.data);
-        build/bin/bindata_08a9e8e0.bin.o(.rodata*);
-        build/bin/bindata_08aa06f8.bin.o(.rodata*);
+        build/audio/sound_players.c.o(.data);
 		build/audio/sample_table.json.c.o(.data);
 
         build/audio/sequences/Lesson1.mid.o(.rodata*);
