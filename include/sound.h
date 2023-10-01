@@ -1,15 +1,11 @@
 #pragma once
 
-#define INSTRUMENT_PCM_PITCHED 0x41
-#define INSTRUMENT_PCM_UNPITCHED 0x46
-#define INSTRUMENT_PSG 0x50
-#define INSTRUMENT_SUBBANK_SINGLE_KEY 0x52
-#define INSTRUMENT_SUBBANK_MULTI_KEY 0x53
-
-#define PSG_PULSE_CHANNEL_1 0
-#define PSG_PULSE_CHANNEL_2 1
-#define PSG_WAVE_CHANNEL 2
-#define PSG_NOISE_CHANNEL 3
+enum PsgChannelsEnum {
+    PSG_PULSE_CHANNEL_1,
+    PSG_PULSE_CHANNEL_2,
+    PSG_WAVE_CHANNEL,
+    PSG_NOISE_CHANNEL
+};
 
 enum SoundPlayersEnum {
     MUSIC_PLAYER_0,
@@ -177,51 +173,58 @@ struct SampleData {
 	const u32 *waveform;
 };
 
-struct InstrumentHeader {
-	u8 type;
-	u8 unk1;
-	u16 unk2;
+union Instrument {
+    u8 *type;
+    struct InstrumentPCM *pcm;
+    struct InstrumentPSG *psg;
+    struct InstrumentSubRhythm *rhy;
+    struct InstrumentSubSplit *spl;
 };
 
 struct InstrumentPCM {
-	struct InstrumentHeader header;
+	u8 type;
+	u8 key:7;
+    u8 distort:1;
+	s16 panning;
 	struct SampleData *sample;
-	u32 unk8;
-	u32 unkC;
-	u32 unk10;
-	u32 unk14;
-	u32 unk18;
-	u32 unk1C;
+	s32 initial;
+	s32 sustain;
+	s32 attack;
+	s32 decay;
+	s32 fade;
+	s32 release;
 };
 
 struct InstrumentPSG {
-	struct InstrumentHeader header;
-	void *waveChannel;
-	u32 unk8;
-	u32 unkC;
-	u32 unk10;
-	u32 unk14;
-	u32 unk18;
-	u32 unk1C;
-	u8 channel;
-	u8 unk21;
-	u8 unk22;
+	u8 type;
+	u8 key;
+	s16 panning;
+	u32 *wavetable;
+	s32 initial;
+	s32 sustain;
+	s32 attack;
+	s32 decay;
+	s32 fade;
+	s32 release;
+	u32 channel:2;
+	u32 length:8;
+	u32 sweep:7;
+    u32 dutyTone:2;
+    u32 dutyNoise:13;
 };
 
-struct InstrumentSubbankSingleKey {
-	struct InstrumentHeader header;
-	void *subbank;
+struct InstrumentSubRhythm {
+	u32 type:8;
+	u32 total:24;
+	union Instrument *subBank;
 };
 
-struct InstrumentSubbankMultiKey {
-	struct InstrumentHeader header;
-	void *unk4;
-	void *subbank;
+struct InstrumentSubSplit {
+    u32 type:8;
+	u32 total:24;
+	u8 *keySplitTable;
+	union Instrument *subBank;
 };
-
-typedef struct InstrumentHeader *InstrumentBank[];
-
-union Instrument;
 
 struct SequenceData {
     const u8 *midiSequence;

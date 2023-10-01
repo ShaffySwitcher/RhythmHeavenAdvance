@@ -1,6 +1,3 @@
-#include "global.h"
-#include "sound.h"
-#include "src/lib_08049144.h"
 
 
 /* PSG WAVE-CHANNEL PATTERNS */

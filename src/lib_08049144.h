@@ -62,6 +62,12 @@ enum MidiTrackStreamEndEnum {
     M_TRACK_STREAM_LOOP
 };
 
+#define INSTRUMENT_PCM_ALIGNED 'A' // 0x41
+#define INSTRUMENT_PCM_FIXED   'F' // 0x46
+#define INSTRUMENT_PSG         'P' // 0x50
+#define INSTRUMENT_SUB_RHYTHM  'R' // 0x52
+#define INSTRUMENT_SUB_SPLIT   'S' // 0x53
+
 #define MSG_NOTE_OFF                    0x80
 #define MSG_NOTE_ON                     0x90
 #define MSG_POLYPHONIC_KEY_PRESSURE     0xA0
@@ -198,7 +204,7 @@ extern u8 midi_psg_noise_freq_table[];
 extern char midi_loop_start_sym[];
 extern char midi_loop_end_sym[];
 
-extern InstrumentBank *instrument_banks[];
+extern union Instrument *instrument_banks[];
 extern u32 D_08aa4318;
 extern u8 D_08aa431c; // Has Data [TRUE]
 extern u8 D_08aa431d; // Sound Bank ID [INST_BANK_37]
