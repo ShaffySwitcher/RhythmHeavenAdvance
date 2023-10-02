@@ -217,7 +217,7 @@ branch_0804a7f6: \n\
 /* 0804a810 */ BEQ branch_0804a850 \n\
 /* 0804a812 */ LSLS R0, R4, 0x1 \n\
 /* 0804a814 */ ADDS R0, 0x1 @ Add 0x1 to R0 \n\
-/* 0804a816 */ BL func_0804af0c \n\
+/* 0804a816 */ BL midi_random \n\
 /* 0804a81a */ SUBS R0, R0, R4 @ Set R0 to R0 - R4 \n\
 /* 0804a81c */ ADDS R6, R6, R0 @ Set R6 to R6 + R0 \n\
 /* 0804a81e */ ADDS R0, R6, 0x0 @ Set R0 to R6 + 0x0 \n\
@@ -392,7 +392,7 @@ branch_0804a950: \n\
 /* 0804a952 */ LDRH R0, [R1, 0x18] \n\
 /* 0804a954 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0804a956 */ BEQ branch_0804a964 \n\
-/* 0804a958 */ BL func_0804af0c \n\
+/* 0804a958 */ BL midi_random \n\
 /* 0804a95c */ MOV R2, R8 @ Set R2 to R8 \n\
 /* 0804a95e */ LDRH R1, [R2, 0x16] \n\
 /* 0804a960 */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\
@@ -407,7 +407,7 @@ branch_0804a964: \n\
 /* 0804a96e */ LDRB R0, [R0] \n\
 /* 0804a970 */ LSLS R0, R0, 0x1E \n\
 /* 0804a972 */ LSRS R0, R0, 0x1E \n\
-/* 0804a974 */ BL func_0804af74 \n\
+/* 0804a974 */ BL midi_psg_trigger_id \n\
 /* 0804a978 */ B branch_0804aa20 \n\
  \n\
 branch_0804a97a: \n\

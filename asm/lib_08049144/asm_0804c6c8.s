@@ -76,7 +76,7 @@ branch_0804c756: \n\
 /* 0804c75a */ BEQ branch_0804c766 \n\
 /* 0804c75c */ BL func_08049be4 \n\
 /* 0804c760 */ LDR R0, =D_03005b30 \n\
-/* 0804c762 */ BL func_0804ae54 \n\
+/* 0804c762 */ BL midi_lfo_start \n\
  \n\
 branch_0804c766: \n\
 /* 0804c766 */ POP {R3} \n\

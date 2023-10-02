@@ -1,6 +1,6 @@
 #include "global.h"
 #include "sound.h"
-#include "src/lib_08049144.h"
+#include "src/lib_midi.h"
 
 
 /* MIDI LIBRARY INTERNAL DATA */
@@ -86,10 +86,10 @@ s16 midi_cosine_table[] = {
 
 // Convert standard volume for PSG Channel 3 (Wave).
 u16 midi_psg_wave_vol_table[] = {
-    0x60 << 8,
-    0x40 << 8,
-    0x80 << 8,
-    0x20 << 8
+    SOUNDCNT3_VOLUME_25 << 13,
+    SOUNDCNT3_VOLUME_50 << 13,
+    SOUNDCNT3_VOLUME_75 << 13,
+    SOUNDCNT3_VOLUME_100 << 13
 };
 
 

@@ -34,6 +34,7 @@ enum BridgeTypesEnum {
 
 
 static struct DrumTechController *D_03001568;
+static s32 D_0300156c; // Unused, Unknown Location
 
 
 // Init. Play-Yan

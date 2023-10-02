@@ -125,20 +125,6 @@ typedef volatile u16 *IOReg;
 
 
 // STATIC VARIABLES
-extern u16 D_03001570;          // [D_03001570] MIDI4AGB - Pseudo-RNG Variable
-
-extern u8  D_03001578[4];       // [D_03001578] PSG CHANNEL - ?? (checked by TONE 1 and WAVE)
-extern u16 D_03001580[4];       // [D_03001580] PSG CHANNEL - Initial Volume of Envelope
-extern u16 D_03001588[4];       // [D_03001588] PSG CHANNEL - Frequency
-extern u8 *D_03001590;          // [D_03001590] PSG CHANNEL - Wave Pattern
-
-extern struct SoundPlayer *D_03001598; // [D_03001598] TEST PLAYER - Sound Player
-extern struct MidiBus *D_0300159c;     // [D_0300159c] TEST PLAYER - MIDI Bus
-extern u8 *D_030015a0;          // [D_030015a0] TEST PLAYER - Sequence Array (max. size = 0x200)
-extern u16 D_030015a4;          // [D_030015a4] TEST PLAYER - Sequence Length
-extern u8  D_030015a6;          // [D_030015a6] TEST PLAYER - Sequence Current Command
-extern u8  D_030015a7[4];       // [D_030015a7] UNDEFINED - Initial value at D_03005b7c
-
 extern volatile s32 D_03001888[1568*2]; // [D_03001888] DIRECTSOUND - DMA Source Addresses { &D_03001888[0] = Right; &D_03001888[D_03005b24] = Left }
 extern volatile s32 D_030024c8[0x400];  // [D_030024c8] DIRECTSOUND - Sample Processing ScratchPad
 extern struct SampleStream D_030028c8[12];  // [D_030028c8] DIRECTSOUND - DMA Sample Readers (12 Channels)
@@ -316,47 +302,50 @@ extern void func_0804ae18(struct MidiBus *, u16 *);
 
 /* LOW-FREQUENCY OSCILLATOR OPERATIONS */
 
-extern void func_0804ae1c(struct LFO *lfo, u8 preDelay, u8 attack, u8 arg3, u8 offset, u8 duration);
-extern void func_0804ae54(struct LFO *lfo);
-extern void func_0804ae60(struct LFO *lfo);
-extern void func_0804ae6c(struct LFO *lfo, u32 delta);
-extern u32  func_0804af0c(u16 range);
+extern void midi_lfo_init(struct LFO *lfo, u8 preDelay, u8 attack, u8 arg3, u8 offset, u8 duration);
+extern void midi_lfo_start(struct LFO *lfo);
+extern void midi_lfo_stop(struct LFO *lfo);
+extern void midi_lfo_update(struct LFO *lfo, u32 delta);
+
+/* RANDOM */
+
+extern u32  midi_random(u16 range);
 
 /* PSG CHANNEL OPERATIONS */
 
-extern void func_0804af30(void);
-extern void func_0804af74(u32 id);
-extern u32  func_0804afa4(u32 freq);
-extern u32  func_0804afd8(u32 vol);
-// extern void func_0804aff0(u32 id);
-extern void func_0804b2c4(void);
+extern void midi_psg_init(void);
+extern void midi_psg_trigger_id(u32 id);
+extern u32  midi_psg_pitch_to_freq(u32 freq);
+extern u32  midi_psg_volume_to_env(u32 vol);
+extern void midi_psg_update_id(u32 id);
+extern void midi_psg_update(void);
 
 /* SOUND PLAYER OPERATIONS */
 
-extern u16  func_0804b324(const u8 *stream);
-extern u32  func_0804b330(const u8 *stream);
-extern u32  func_0804b348(const char *loopMarker);
-extern void func_0804b368(struct SoundPlayer *soundPlayer, struct SequenceData *sound);
-extern void func_0804b534(u16 soundIndex);
-extern void func_0804b560(struct SoundPlayer *soundPlayer);
-extern void func_0804b574(struct SoundPlayer *soundPlayer, u8 pause);
-extern u32  func_0804b5a0(struct SoundPlayer *soundPlayer);
-extern void func_0804b5d8(struct SoundPlayer *soundPlayer);
-extern void func_0804b5e4(struct SoundPlayer *soundPlayer);
-extern void func_0804b5f0(void);
-extern void func_0804b620(void);
-extern void func_0804b650(struct SoundPlayer *soundPlayer, u16 volume);
-extern void func_0804b654(struct SoundPlayer *soundPlayer, u16 trackMask, u16 volume);
-extern void func_0804b65c(struct SoundPlayer *soundPlayer, u16 unused, s16 pitch);
-extern void func_0804b66c(struct SoundPlayer *soundPlayer, u16 unused, s8 panning);
-extern void func_0804b67c(u16 soundIndex);
-extern u32  func_0804b6c4(const u8 *stream1, const u8 *stream2, u32 length);
-extern u32  func_0804b6f0(u16 tempo, u16 speed, u16 quarterNote);
-extern void func_0804b710(struct SoundPlayer *soundPlayer, u16 speed);
-extern void func_0804b734(struct SoundPlayer *soundPlayer, u16 type, u16 duration);
-extern void func_0804b7dc(struct SoundPlayer *soundPlayer, u16 duration);
-extern void func_0804b7ec(struct SoundPlayer *soundPlayer, u16 duration);
-extern void func_0804b7fc(struct SoundPlayer *soundPlayer, u16 duration);
+extern u16  midi_player_parse_be16(const u8 *stream);
+extern u32  midi_player_parse_be32(const u8 *stream);
+extern u32  midi_player_get_loop_sym_size(const char *loopMarker);
+extern void midi_player_play_header(struct SoundPlayer *soundPlayer, struct SequenceData *sound);
+extern void midi_player_play_id(u16 soundIndex);
+extern void midi_player_stop(struct SoundPlayer *soundPlayer);
+extern void midi_player_set_pause(struct SoundPlayer *soundPlayer, u8 pause);
+extern u32  midi_player_is_playing(struct SoundPlayer *soundPlayer);
+extern void midi_player_pause(struct SoundPlayer *soundPlayer);
+extern void midi_player_unpause(struct SoundPlayer *soundPlayer);
+extern void midi_player_pause_all(void);
+extern void midi_player_unpause_all(void);
+extern void midi_player_set_volume(struct SoundPlayer *soundPlayer, u16 volume);
+extern void midi_player_set_track_volume(struct SoundPlayer *soundPlayer, u16 trackMask, u16 volume);
+extern void midi_player_set_pitch(struct SoundPlayer *soundPlayer, u16 unused, s16 pitch);
+extern void midi_player_set_panning(struct SoundPlayer *soundPlayer, u16 unused, s8 panning);
+extern void midi_player_pause_id(u16 soundIndex);
+extern u32  midi_player_text_is_loop_sym(const u8 *stream1, const u8 *stream2, u32 length);
+extern u32  midi_player_get_delta_time(u16 tempo, u16 speed, u16 quarterNote);
+extern void midi_player_set_speed(struct SoundPlayer *soundPlayer, u16 speed);
+extern void midi_player_set_volume_fade(struct SoundPlayer *soundPlayer, u16 type, u16 duration);
+extern void midi_player_fade_out_to_stop(struct SoundPlayer *soundPlayer, u16 duration);
+extern void midi_player_fade_out_to_pause(struct SoundPlayer *soundPlayer, u16 duration);
+extern void midi_player_fade_in(struct SoundPlayer *soundPlayer, u16 duration);
 
 /* MIDI SEQUENCE OPERATIONS */
 
@@ -384,6 +373,6 @@ extern void func_0804c4bc(s8 *, u32);
 extern void func_0804c508(void);
 extern void func_0804c6c8(void);
 
-/* INIT */
+/* SOUND AREA */
 
 extern void func_0804c778(void);
