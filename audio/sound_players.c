@@ -1,6 +1,6 @@
 #include "global.h"
 #include "sound.h"
-#include "src/lib_08049144.h"
+#include "src/lib_midi.h"
 
 
 /* SOUND PLAYER DATA */

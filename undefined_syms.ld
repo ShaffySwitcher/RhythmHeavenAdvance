@@ -1,22 +1,5 @@
 OUTPUT_ARCH(arm)
 
-/* Sound Library - Random */
-D_03001570 = 0x03001570;
-
-/* Sound Library - PSG */
-D_03001578 = 0x03001578;
-D_03001580 = 0x03001580;
-D_03001588 = 0x03001588;
-D_03001590 = 0x03001590;
-
-/* Sound Library - Main */
-D_03001598 = 0x03001598;
-D_0300159c = 0x0300159c;
-D_030015a0 = 0x030015a0;
-D_030015a4 = 0x030015a4;
-D_030015a6 = 0x030015a6;
-D_030015a7 = 0x030015a7;
-
 /* Sound Players */
 sMusicPlayer0 = 0x030015ac;
 sMusicPlayer1 = 0x030015e4;

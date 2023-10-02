@@ -68,7 +68,7 @@ thumb_func_start func_0804c3c0 \n\
 /* 0804c446 */ STR R0, [R7] \n\
 /* 0804c448 */ LDRB R0, [R4] \n\
 /* 0804c44a */ MOVS R2, 0x18 @ Set R2 to 0x18 \n\
-/* 0804c44c */ BL func_0804b6f0 \n\
+/* 0804c44c */ BL midi_player_get_delta_time \n\
 /* 0804c450 */ STR R0, [R7, 0x10] \n\
 /* 0804c452 */ ADDS R0, R7, 0x0 @ Set R0 to R7 + 0x0 \n\
 /* 0804c454 */ ADDS R0, 0x2D @ Add 0x2D to R0 \n\

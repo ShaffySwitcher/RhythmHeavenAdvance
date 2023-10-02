@@ -42,7 +42,7 @@ branch_0804a046: \n\
 /* 0804a058 */ BNE branch_0804a0f4 \n\
 /* 0804a05a */ LSLS R0, R4, 0x1 \n\
 /* 0804a05c */ ADDS R0, 0x1 @ Add 0x1 to R0 \n\
-/* 0804a05e */ BL func_0804af0c \n\
+/* 0804a05e */ BL midi_random \n\
 /* 0804a062 */ LDRB R1, [R7] \n\
 /* 0804a064 */ LSRS R1, R1, 0x1 \n\
 /* 0804a066 */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\

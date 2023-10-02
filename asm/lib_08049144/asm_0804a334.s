@@ -20,7 +20,7 @@ branch_0804a342: \n\
 /* 0804a34e */ BCC branch_0804a342 \n\
  \n\
 branch_0804a350: \n\
-/* 0804a350 */ BL func_0804b2c4 \n\
+/* 0804a350 */ BL midi_psg_update \n\
 /* 0804a354 */ POP {R4, R5} \n\
 /* 0804a356 */ POP {R0} \n\
 /* 0804a358 */ BX R0 \n\

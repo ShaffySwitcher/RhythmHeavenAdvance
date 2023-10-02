@@ -1,22 +1,36 @@
+#include "global.h"
+#include "sound.h"
+#include "lib_midi.h"
+
+asm(".include \"include/gba.inc\"");//Temporary
 
 
 /* AUDIO LIBRARY - SOUNDPLAYER */
 
 
+// STATIC VARIABLES
+static struct SoundPlayer *D_03001598; // DirectMidi Sound Player
+static struct MidiBus *D_0300159c;     // DirectMidi MidiBus
+static u8 *D_030015a0;          // DirectMidi Sequence (max. size = 0x200)
+static u16 D_030015a4;          // DirectMidi Sequence Length
+static u8  D_030015a6;          // DirectMidi Sequence Current Command
+static u8  D_030015a7;          // Initial value at D_03005b7c
+
+
 // Evaluate Big-Endian Short
-u16 func_0804b324(const u8 *stream) {
+u16 midi_player_parse_be16(const u8 *stream) {
     return (stream[0] << 8) | stream[1];
 }
 
 
 // Evaluate Big-Endian Integer
-u32 func_0804b330(const u8 *stream) {
+u32 midi_player_parse_be32(const u8 *stream) {
     return (stream[0] << 24) | (stream[1] << 16) | (stream[2] << 8) | stream[3];
 }
 
 
 // Get SoundPlayer Loop Marker Symbol Length
-u32 func_0804b348(const char *loopMarker) {
+u32 midi_player_get_loop_sym_size(const char *loopMarker) {
     u8 i;
 
     for (i = 0; loopMarker[i] != '\0'; i++);
@@ -26,7 +40,7 @@ u32 func_0804b348(const char *loopMarker) {
 
 
 // Play
-void func_0804b368(struct SoundPlayer *soundPlayer, struct SequenceData *sound) {
+void midi_player_play_header(struct SoundPlayer *soundPlayer, struct SequenceData *sound) {
     struct MidiBus *midiBus;
     struct MidiTrackStream *mTrkReader;
     const u8 *mTrkStream;
@@ -37,7 +51,7 @@ void func_0804b368(struct SoundPlayer *soundPlayer, struct SequenceData *sound) 
     u32 i;
 
     // Reading Sequence Data:
-    if (func_0804b5a0(soundPlayer)) {
+    if (midi_player_is_playing(soundPlayer)) {
         if (soundPlayer->priorityEnabled && !soundPlayer->isPaused) {
             if (soundPlayer->sequence->priority > sound->priority) {
                 return;
@@ -59,22 +73,22 @@ void func_0804b368(struct SoundPlayer *soundPlayer, struct SequenceData *sound) 
 
     // Header:
     mTrkStream += 4; // Skip (Header: "MThd")
-    chunkLength = func_0804b330(mTrkStream);
+    chunkLength = midi_player_parse_be32(mTrkStream);
     mTrkStream += 4; // Skip (Header: Length)
-    trackTotal = func_0804b324(mTrkStream + 2); // Header: Number of MIDI Tracks
+    trackTotal = midi_player_parse_be16(mTrkStream + 2); // Header: Number of MIDI Tracks
     soundPlayer->nTracksUsed = trackTotal;
 
     if (soundPlayer->nTracksUsed > soundPlayer->nTracksMax) {
         soundPlayer->nTracksUsed = soundPlayer->nTracksMax;
     }
-    soundPlayer->midiQuarterNote = func_0804b324(mTrkStream + 4); // Header: Division
+    soundPlayer->midiQuarterNote = midi_player_parse_be16(mTrkStream + 4); // Header: Division
     mTrkStream += chunkLength; // Skip (Header: Data)
 
     // Track:
     mTrkReader = soundPlayer->midiReader;
     for (i = 0; i < soundPlayer->nTracksUsed; i++) {
         mTrkStream += 4; // Skip (Track: Header)
-        chunkLength = func_0804b330(mTrkStream);
+        chunkLength = midi_player_parse_be32(mTrkStream);
         mTrkStream += 4; // Skip (Track: Length)
         mTrkStart = mTrkStream;
         mTrkStream += chunkLength;
@@ -100,9 +114,9 @@ void func_0804b368(struct SoundPlayer *soundPlayer, struct SequenceData *sound) 
     soundPlayer->volumeFadeEnv = 0x8000;
     soundPlayer->volumeFadeSpd = 0;
     soundPlayer->loopStartSym = midi_loop_start_sym;
-    soundPlayer->loopStartSymSize = func_0804b348(midi_loop_start_sym);
+    soundPlayer->loopStartSymSize = midi_player_get_loop_sym_size(midi_loop_start_sym);
     soundPlayer->loopEndSym = midi_loop_end_sym;
-    soundPlayer->loopEndSymSize = func_0804b348(midi_loop_end_sym);
+    soundPlayer->loopEndSymSize = midi_player_get_loop_sym_size(midi_loop_end_sym);
     soundPlayer->midiController4E = 64;
     soundPlayer->midiController4F = 64;
     soundPlayer->midiController50 = 64;
@@ -112,25 +126,25 @@ void func_0804b368(struct SoundPlayer *soundPlayer, struct SequenceData *sound) 
 
 
 // Play from SoundTable
-void func_0804b534(u16 soundIndex) {
+void midi_player_play_id(u16 soundIndex) {
     struct SoundPlayer *soundPlayer;
     struct SequenceData *sound;
 
     soundPlayer = D_08aa4460[D_08aa06f8[soundIndex].player].soundPlayer;
     sound = D_08aa06f8[soundIndex].sound;
-    func_0804b368(soundPlayer, sound);
+    midi_player_play_header(soundPlayer, sound);
 }
 
 
 // Stop
-void func_0804b560(struct SoundPlayer *soundPlayer) {
+void midi_player_stop(struct SoundPlayer *soundPlayer) {
     func_08049e3c(soundPlayer->midiBus);
     soundPlayer->sequence = NULL;
 }
 
 
 // Set Pause
-void func_0804b574(struct SoundPlayer *soundPlayer, u8 pause) {
+void midi_player_set_pause(struct SoundPlayer *soundPlayer, u8 pause) {
     soundPlayer->isPaused = pause;
 
     if (pause) {
@@ -140,7 +154,7 @@ void func_0804b574(struct SoundPlayer *soundPlayer, u8 pause) {
 
 
 // Check for Active Midi Readers
-u32 func_0804b5a0(struct SoundPlayer *soundPlayer) {
+u32 midi_player_is_playing(struct SoundPlayer *soundPlayer) {
     u32 i;
 
     if (soundPlayer->sequence == NULL) {
@@ -158,77 +172,77 @@ u32 func_0804b5a0(struct SoundPlayer *soundPlayer) {
 
 
 // Pause
-void func_0804b5d8(struct SoundPlayer *soundPlayer) {
-    func_0804b574(soundPlayer, TRUE);
+void midi_player_pause(struct SoundPlayer *soundPlayer) {
+    midi_player_set_pause(soundPlayer, TRUE);
 }
 
 
 // Unpause
-void func_0804b5e4(struct SoundPlayer *soundPlayer) {
-    func_0804b574(soundPlayer, FALSE);
+void midi_player_unpause(struct SoundPlayer *soundPlayer) {
+    midi_player_set_pause(soundPlayer, FALSE);
 }
 
 
 // Pause All
-void func_0804b5f0(void) {
+void midi_player_pause_all(void) {
     u32 i;
 
     for (i = 0; i <= D_08aa4318; i++) {
-        func_0804b574(D_08aa4324[i], TRUE);
+        midi_player_set_pause(D_08aa4324[i], TRUE);
     }
 }
 
 
 // Unpause All
-void func_0804b620(void) {
+void midi_player_unpause_all(void) {
     u32 i;
 
     for (i = 0; i <= D_08aa4318; i++) {
-        func_0804b574(D_08aa4324[i], FALSE);
+        midi_player_set_pause(D_08aa4324[i], FALSE);
     }
 }
 
 
 // Set Volume
-void func_0804b650(struct SoundPlayer *soundPlayer, u16 volume) {
+void midi_player_set_volume(struct SoundPlayer *soundPlayer, u16 volume) {
     soundPlayer->playerVolume = volume;
 }
 
 
 // Set Volume for Selected Tracks
-void func_0804b654(struct SoundPlayer *soundPlayer, u16 trackMask, u16 volume) {
+void midi_player_set_track_volume(struct SoundPlayer *soundPlayer, u16 trackMask, u16 volume) {
     soundPlayer->trackVolume = volume;
     soundPlayer->trackMask = trackMask;
 }
 
 
 // Set Pitch
-void func_0804b65c(struct SoundPlayer *soundPlayer, u16 unused, s16 pitch) {
+void midi_player_set_pitch(struct SoundPlayer *soundPlayer, u16 unused, s16 pitch) {
     func_0804ade4(soundPlayer->midiBus, pitch);
 }
 
 
 // Set Panning
-void func_0804b66c(struct SoundPlayer *soundPlayer, u16 unused, s8 panning) {
+void midi_player_set_panning(struct SoundPlayer *soundPlayer, u16 unused, s8 panning) {
     func_0804adb8(soundPlayer->midiBus, panning);
 }
 
 
 // Pause from Index
-void func_0804b67c(u16 soundIndex) {
+void midi_player_pause_id(u16 soundIndex) {
     struct SequenceData *sound = D_08aa06f8[soundIndex].sound;
     u32 i;
 
     for (i = 0; i <= D_08aa4318; i++) {
         if ((D_08aa4324[i] != NULL) && (D_08aa4324[i]->sequence == sound)) {
-            func_0804b5d8(D_08aa4324[i]);
+            midi_player_pause(D_08aa4324[i]);
         }
     }
 }
 
 
 // MidiStream.equals()
-u32 func_0804b6c4(const u8 *stream1, const u8 *stream2, u32 length) {
+u32 midi_player_text_is_loop_sym(const u8 *stream1, const u8 *stream2, u32 length) {
     u32 i;
 
     for (i = 0; i < length; i++) {
@@ -242,17 +256,17 @@ u32 func_0804b6c4(const u8 *stream1, const u8 *stream2, u32 length) {
 
 
 // Get MIDI Ticks Per Frame
-u32 func_0804b6f0(u16 tempo, u16 speed, u16 quarterNote) {
+u32 midi_player_get_delta_time(u16 tempo, u16 speed, u16 quarterNote) {
     return (tempo * speed * quarterNote) / (60u * 60u);
 }
 
 
 // Set Speed
-void func_0804b710(struct SoundPlayer *soundPlayer, u16 speed) {
+void midi_player_set_speed(struct SoundPlayer *soundPlayer, u16 speed) {
     u32 delta;
 
     soundPlayer->playerSpeed = speed;
-    delta = func_0804b6f0(soundPlayer->midiTempo, speed, soundPlayer->midiQuarterNote);
+    delta = midi_player_get_delta_time(soundPlayer->midiTempo, speed, soundPlayer->midiQuarterNote);
     if (delta == 0) {
         delta = 1;
     }
@@ -261,7 +275,7 @@ void func_0804b710(struct SoundPlayer *soundPlayer, u16 speed) {
 
 
 // Set Volume Fade { type = 0..3 }
-void func_0804b734(struct SoundPlayer *soundPlayer, u16 type, u16 duration) {
+void midi_player_set_volume_fade(struct SoundPlayer *soundPlayer, u16 type, u16 duration) {
     switch (type) {
         case VOL_FADE_RESET:
             soundPlayer->volumeFadeEnv = (1 << 15);
@@ -291,9 +305,9 @@ void func_0804b734(struct SoundPlayer *soundPlayer, u16 type, u16 duration) {
                 soundPlayer->volumeFadeSpd = 1;
                 if (type == VOL_FADE_OUT_CLEAR) {
                     type = VOL_FADE_RESET;
-                    func_0804b560(soundPlayer);
+                    midi_player_stop(soundPlayer);
                 } else {
-                    func_0804b574(soundPlayer, TRUE);
+                    midi_player_set_pause(soundPlayer, TRUE);
                 }
             }
             break;
@@ -304,20 +318,20 @@ void func_0804b734(struct SoundPlayer *soundPlayer, u16 type, u16 duration) {
 
 
 // Volume Fade-Out & Clear
-void func_0804b7dc(struct SoundPlayer *soundPlayer, u16 duration) {
-    func_0804b734(soundPlayer, VOL_FADE_OUT_CLEAR, duration);
+void midi_player_fade_out_to_stop(struct SoundPlayer *soundPlayer, u16 duration) {
+    midi_player_set_volume_fade(soundPlayer, VOL_FADE_OUT_CLEAR, duration);
 }
 
 
 // Volume Fade-Out & Pause
-void func_0804b7ec(struct SoundPlayer *soundPlayer, u16 duration) {
-    func_0804b734(soundPlayer, VOL_FADE_OUT_PAUSE, duration);
+void midi_player_fade_out_to_pause(struct SoundPlayer *soundPlayer, u16 duration) {
+    midi_player_set_volume_fade(soundPlayer, VOL_FADE_OUT_PAUSE, duration);
 }
 
 
 // Volume Fade-In
-void func_0804b7fc(struct SoundPlayer *soundPlayer, u16 duration) {
-    func_0804b734(soundPlayer, VOL_FADE_IN, duration);
+void midi_player_fade_in(struct SoundPlayer *soundPlayer, u16 duration) {
+    midi_player_set_volume_fade(soundPlayer, VOL_FADE_IN, duration);
 }
 
 
@@ -333,7 +347,7 @@ void func_0804b80c(struct SoundPlayer *soundPlayer, const u8 *stream) {
             func_08049be4();
             D_03005b3c = LFO_MODE_DISABLED;
             D_03005640 = stream[0] * 2;
-            func_0804ae1c(&D_03005b30, stream[1] * 2, stream[2] * 2, stream[3] * 2, stream[4] * 2, stream[5] * 2);
+            midi_lfo_init(&D_03005b30, stream[1] * 2, stream[2] * 2, stream[3] * 2, stream[4] * 2, stream[5] * 2);
             func_08049b8c(stream[6]);
             D_03005644 = soundPlayer;
             break;
@@ -361,12 +375,12 @@ u32 func_0804b898(struct SoundPlayer *soundPlayer, const u8 **upstream) {
     switch (event) {
         case META_TEXT_MARKER:
             if (length == soundPlayer->loopStartSymSize) {
-                if (func_0804b6c4(soundPlayer->loopStartSym, stream, length)) {
+                if (midi_player_text_is_loop_sym(soundPlayer->loopStartSym, stream, length)) {
                     return META_EVENT_LOOP_START;
                 }
             }
             if (length == soundPlayer->loopEndSymSize) {
-                if (func_0804b6c4(soundPlayer->loopEndSym, stream, length)) {
+                if (midi_player_text_is_loop_sym(soundPlayer->loopEndSym, stream, length)) {
                     return META_EVENT_LOOP_END;
                 }
             }
@@ -378,7 +392,7 @@ u32 func_0804b898(struct SoundPlayer *soundPlayer, const u8 **upstream) {
         case META_SET_TEMPO:
             tempo = 60000000u / ((stream[0] << 16) | (stream[1] << 8) | stream[2]);
             soundPlayer->midiTempo = tempo;
-            D_0300562c = func_0804b6f0(tempo, soundPlayer->playerSpeed, soundPlayer->midiQuarterNote);
+            D_0300562c = midi_player_get_delta_time(tempo, soundPlayer->playerSpeed, soundPlayer->midiQuarterNote);
             return META_EVENT_OTHER;
 
         default:
@@ -455,18 +469,18 @@ void func_0804b95c(struct SoundPlayer *soundPlayer, u32 track, u8 controller, u8
             switch (value) {
                 case LFO_MODE_DISABLED:
                 case LFO_MODE_KEYPRESS:
-                    func_0804ae60(&D_03005b30);
+                    midi_lfo_stop(&D_03005b30);
                     break;
                 case LFO_MODE_CONSTANT:
                     func_08049be4();
-                    func_0804ae54(&D_03005b30);
+                    midi_lfo_start(&D_03005b30);
                     break;
             }
             break;
 
         case M_CONTROLLER_EQ:
             D_03005b3c = LFO_MODE_DISABLED;
-            func_0804ae60(&D_03005b30);
+            midi_lfo_stop(&D_03005b30);
             func_08049be4();
             func_08049b70((value * 2) - 0x80);
             break;
@@ -713,7 +727,7 @@ void func_0804bed0(struct SoundPlayer *soundPlayer, u32 track) {
         channel = &soundPlayer->midiBus->midiChannel[track];
         if (channel->filterEQ && (D_03005b3c == LFO_MODE_KEYPRESS)) {
             func_08049be4();
-            func_0804ae54(&D_03005b30);
+            midi_lfo_start(&D_03005b30);
         }
     }
 }
@@ -741,7 +755,7 @@ void func_0804c040(struct SoundPlayer *soundPlayer) {
             if (soundPlayer->volumeFadeEnv < soundPlayer->volumeFadeSpd) {
                 soundPlayer->volumeFadeType = VOL_FADE_RESET;
                 soundPlayer->volumeFadeEnv = 0;
-                func_0804b560(soundPlayer);
+                midi_player_stop(soundPlayer);
             } else {
                 soundPlayer->volumeFadeEnv -= soundPlayer->volumeFadeSpd;
             }
@@ -750,7 +764,7 @@ void func_0804c040(struct SoundPlayer *soundPlayer) {
         case VOL_FADE_OUT_PAUSE:
             if (soundPlayer->volumeFadeEnv < soundPlayer->volumeFadeSpd) {
                 soundPlayer->volumeFadeEnv = 0;
-                func_0804b574(soundPlayer, TRUE);
+                midi_player_set_pause(soundPlayer, TRUE);
             } else {
                 soundPlayer->volumeFadeEnv -= soundPlayer->volumeFadeSpd;
             }
@@ -851,8 +865,8 @@ void func_0804c170(void) {
 
     // LFO
     if ((D_03005644 != NULL) && (D_03005b3c != LFO_MODE_DISABLED)) {
-        delta = func_0804b6f0(D_03005644->midiTempo, D_03005644->playerSpeed, 24);
-        func_0804ae6c(&D_03005b30, delta);
+        delta = midi_player_get_delta_time(D_03005644->midiTempo, D_03005644->playerSpeed, 24);
+        midi_lfo_update(&D_03005b30, delta);
         func_08049b70((D_03005b30.output * D_03005640) >> 8);
     }
 
@@ -930,3 +944,36 @@ u32 func_0804c398(const u8 **upstream) {
 
 // Update DirectMidi Player
 #include "asm/lib_08049144/asm_0804c6c8.s"
+
+
+// Init. Sound Area
+void func_0804c778(void) {
+    u32 i;
+
+    func_08049490(DIRECTSOUND_MODE_STEREO, AUDIO_SAMPLE_RATE,
+                    DMA_SAMPLE_BUFFER_SIZE, D_03001888,
+                    SAMPLE_SCRATCHPAD_SIZE, D_030024c8,
+                    DIRECTSOUND_CHANNEL_COUNT, D_030028c8);
+    midi_psg_init();
+    func_0804a360(DIRECTSOUND_CHANNEL_COUNT, D_03002a48);
+
+    for (i = 0; i < SOUND_PLAYER_COUNT; i++) {
+        func_08049fa0(D_08aa4358[i].midiBus, D_08aa4358[i].trackCount, D_08aa4358[i].midiChannels);
+        func_0804c35c(D_08aa4358[i].soundPlayer, D_08aa4358[i].midiBus, D_08aa4358[i].trackCount, D_08aa4358[i].trackStreams, D_08aa4358[i].priorityEnabled);
+    }
+
+    D_03005b7c = &D_030015a7;
+    D_03005b20 = 4;
+
+    for (i = 0; i < 4; i++) {
+        D_03005b7c[i] = 0;
+    }
+
+    D_03005b3c = LFO_MODE_DISABLED;
+    D_03005644 = NULL;
+    D_03005b90[0] = 0;
+    D_03005b90[1] = 0;
+    D_03005b90[2] = 0;
+    D_03005b90[3] = 0;
+    D_03001598 = NULL;
+}
