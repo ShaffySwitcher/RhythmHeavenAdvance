@@ -275,13 +275,13 @@ struct MidiChannel {
 struct MidiBus {
     u8  busVolume;
     u8  trackVolume;
-    u16 trackSelect;
+    u16 trackMask;
     s8  key;
     s8  panning;
     s16 pitch;
     u16 unk8;
-    const u16 *tuningTable;
-    const union Instrument *soundBank;
+    u16 *tuningTable;
+    union Instrument *soundBank;
     u32 totalChannels:5;
     u32 priority:27;
     struct MidiChannel *midiChannel;
@@ -340,10 +340,7 @@ struct SoundChannel {
     u32 key:7; // MIDI Key
     u32 velocity:7; // MIDI Velocity
     u32 frequency:17;
-    union {
-        struct InstrumentPCM *pcm;
-        struct InstrumentPSG *psg;
-    } instrument;
+    union Instrument instrument;
     struct MidiBus *midiBus;
     struct MidiChannel *midiChannel;
     u16 unk10;
