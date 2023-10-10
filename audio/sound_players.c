@@ -78,12 +78,12 @@ extern struct MidiTrackStream sSfxPlayer9_midiReaders[TRACK_COUNT_SFX];
 u32 D_08aa4318 = SOUND_PLAYER_COUNT - 1;
 
 
-// DirectMIDI Data
-u8 D_08aa431c = TRUE;
-u8 D_08aa431d = INST_BANK_37;
-u8 D_08aa431e = 127;
-u8 D_08aa431f = 0;
-u8 D_08aa4320 = 150;
+// DirectPlayer Data
+u8 midi_direct_player_enabled = TRUE;
+u8 midi_direct_player_bank_id = INST_BANK_37;
+u8 midi_direct_player_volume = 127;
+u8 midi_direct_player_priority = 0;
+u8 midi_direct_player_tempo = 150;
 
 
 // SoundPlayer List

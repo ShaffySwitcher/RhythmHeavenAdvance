@@ -2,7 +2,7 @@ asm(".syntax unified \n\
 \n\
 .balign 4, 0 \n\
 \n\
-thumb_func_start func_0804c508 \n\
+thumb_func_start midi_direct_player_read_sequence \n\
 /* 0804c508 */ PUSH {R4-R7, LR} \n\
 /* 0804c50a */ MOV R7, R10 @ Set R7 to R10 \n\
 /* 0804c50c */ MOV R6, R9 @ Set R6 to R9 \n\
@@ -113,7 +113,7 @@ branch_0804c5c6: \n\
 /* 0804c5ca */ MOV R0, R8 @ Set R0 to R8 \n\
 /* 0804c5cc */ ADDS R1, R3, 0x0 @ Set R1 to R3 + 0x0 \n\
 /* 0804c5ce */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 0804c5d0 */ BL func_0804bc5c \n\
+/* 0804c5d0 */ BL midi_player_add_note \n\
 /* 0804c5d4 */ B branch_0804c67a \n\
  \n\
 branch_0804c5d6: \n\
@@ -122,7 +122,7 @@ branch_0804c5d6: \n\
 /* 0804c5da */ MOV R0, R8 @ Set R0 to R8 \n\
 /* 0804c5dc */ ADDS R1, R3, 0x0 @ Set R1 to R3 + 0x0 \n\
 /* 0804c5de */ MOV R2, R12 @ Set R2 to R12 \n\
-/* 0804c5e0 */ BL func_0804bc5c \n\
+/* 0804c5e0 */ BL midi_player_add_note \n\
 /* 0804c5e4 */ B branch_0804c67a \n\
  \n\
 branch_0804c5e6: \n\
@@ -137,7 +137,7 @@ branch_0804c5ec: \n\
 /* 0804c5f2 */ MOV R1, R8 @ Set R1 to R8 \n\
 /* 0804c5f4 */ ADDS R2, R3, 0x0 @ Set R2 to R3 + 0x0 \n\
 /* 0804c5f6 */ MOV R3, R12 @ Set R3 to R12 \n\
-/* 0804c5f8 */ BL func_0804b95c \n\
+/* 0804c5f8 */ BL midi_player_parse_controller_change \n\
 /* 0804c5fc */ B branch_0804c67a \n\
  \n\
 branch_0804c5fe: \n\
@@ -147,7 +147,7 @@ branch_0804c5fe: \n\
 /* 0804c604 */ LDR R0, [R1, 0x4] \n\
 /* 0804c606 */ MOV R1, R8 @ Set R1 to R8 \n\
 /* 0804c608 */ ADDS R2, R3, 0x0 @ Set R2 to R3 + 0x0 \n\
-/* 0804c60a */ BL func_0804ab88 \n\
+/* 0804c60a */ BL midi_channel_set_patch \n\
 /* 0804c60e */ B branch_0804c61a \n\
  \n\
 branch_0804c610: \n\
@@ -177,7 +177,7 @@ branch_0804c620: \n\
 /* 0804c632 */ LDR R0, [R1, 0x4] \n\
 /* 0804c634 */ MOV R1, R8 @ Set R1 to R8 \n\
 /* 0804c636 */ ADDS R2, R3, 0x0 @ Set R2 to R3 + 0x0 \n\
-/* 0804c638 */ BL func_0804aa40 \n\
+/* 0804c638 */ BL midi_channel_set_pitch \n\
 /* 0804c63c */ B branch_0804c67a \n\
  \n\
 branch_0804c63e: \n\
@@ -217,7 +217,7 @@ branch_0804c662: \n\
  \n\
 branch_0804c674: \n\
 /* 0804c674 */ MOV R0, R10 @ Set R0 to R10 \n\
-/* 0804c676 */ BL func_0804b80c \n\
+/* 0804c676 */ BL midi_player_parse_sys_exc_message \n\
  \n\
 branch_0804c67a: \n\
 /* 0804c67a */ ADDS R7, R7, R4 @ Set R7 to R7 + R4 \n\

@@ -2,7 +2,7 @@ asm(".syntax unified \n\
 \n\
 .balign 4, 0 \n\
 \n\
-thumb_func_start func_08049b34 \n\
+thumb_func_start midi_directsound_set_reverb \n\
 /* 08049b34 */ PUSH {R4, LR} \n\
 /* 08049b36 */ LDR R4, =D_030064a4 \n\
 /* 08049b38 */ STR R0, [R4] \n\

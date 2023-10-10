@@ -2,7 +2,7 @@ asm(".syntax unified \n\
 \n\
 .balign 4, 0 \n\
 \n\
-thumb_func_start func_0804a5b4 \n\
+thumb_func_start midi_note_stop \n\
 /* 0804a5b4 */ PUSH {R4-R7, LR} \n\
 /* 0804a5b6 */ MOV R7, R8 @ Set R7 to R8 \n\
 /* 0804a5b8 */ PUSH {R7} \n\
@@ -18,7 +18,7 @@ branch_0804a5c8: \n\
 /* 0804a5c8 */ LDR R0, [R6, 0x18] \n\
 /* 0804a5ca */ ADDS R0, R0, R4 @ Set R0 to R0 + R4 \n\
 /* 0804a5cc */ ADDS R1, R5, 0x0 @ Set R1 to R5 + 0x0 \n\
-/* 0804a5ce */ BL func_0804a3a0 \n\
+/* 0804a5ce */ BL midi_note_get_first_active \n\
 /* 0804a5d2 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
 /* 0804a5d4 */ CMP R2, 0x0 @ Compare R2 and 0x0 \n\
 /* 0804a5d6 */ BLT branch_0804a5ec \n\

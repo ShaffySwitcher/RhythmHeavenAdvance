@@ -2,7 +2,7 @@ asm(".syntax unified \n\
 \n\
 .balign 4, 0 \n\
 \n\
-thumb_func_start func_080497f8 \n\
+thumb_func_start midi_directsound_update \n\
 /* 080497f8 */ PUSH {R4-R7, LR} \n\
 /* 080497fa */ MOV R7, R10 @ Set R7 to R10 \n\
 /* 080497fc */ MOV R6, R9 @ Set R6 to R9 \n\

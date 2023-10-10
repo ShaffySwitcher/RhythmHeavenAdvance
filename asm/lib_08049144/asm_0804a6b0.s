@@ -2,7 +2,7 @@ asm(".syntax unified \n\
 \n\
 .balign 4, 0 \n\
 \n\
-thumb_func_start func_0804a6b0 \n\
+thumb_func_start midi_note_start \n\
 /* 0804a6b0 */ PUSH {R4-R7, LR} \n\
 /* 0804a6b2 */ MOV R7, R10 @ Set R7 to R10 \n\
 /* 0804a6b4 */ MOV R6, R9 @ Set R6 to R9 \n\
@@ -19,7 +19,7 @@ thumb_func_start func_0804a6b0 \n\
 /* 0804a6ca */ CMP R3, 0x0 @ Compare R3 and 0x0 \n\
 /* 0804a6cc */ BNE branch_0804a6d6 \n\
 /* 0804a6ce */ ADDS R2, R5, 0x0 @ Set R2 to R5 + 0x0 \n\
-/* 0804a6d0 */ BL func_0804a5b4 \n\
+/* 0804a6d0 */ BL midi_note_stop \n\
 /* 0804a6d4 */ B branch_0804aa2e \n\
  \n\
 branch_0804a6d6: \n\
@@ -121,7 +121,7 @@ branch_0804a76c: \n\
 /* 0804a774 */ LDR R1, [SP] \n\
 /* 0804a776 */ ADDS R2, R5, 0x0 @ Set R2 to R5 + 0x0 \n\
 /* 0804a778 */ LDR R3, [SP, 0x4] \n\
-/* 0804a77a */ BL func_0804a628 \n\
+/* 0804a77a */ BL midi_note_get_free \n\
 /* 0804a77e */ MOV R10, R0 @ Set R10 to R0 \n\
 /* 0804a780 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0804a782 */ BGE branch_0804a786 \n\
@@ -259,7 +259,7 @@ branch_0804a850: \n\
 /* 0804a850 */ LSLS R1, R6, 0x18 \n\
 /* 0804a852 */ LSRS R1, R1, 0x18 \n\
 /* 0804a854 */ MOV R0, R9 @ Set R0 to R9 \n\
-/* 0804a856 */ BL func_0804a690 \n\
+/* 0804a856 */ BL midi_key_to_freq \n\
 /* 0804a85a */ LSLS R0, R0, 0xF \n\
 /* 0804a85c */ LDR R2, [R7] \n\
 /* 0804a85e */ LDR R3, =0x00007fff \n\
@@ -289,7 +289,7 @@ branch_0804a884: \n\
 /* 0804a88a */ LSLS R1, R1, 0x18 \n\
 /* 0804a88c */ LSRS R1, R1, 0x18 \n\
 /* 0804a88e */ MOV R0, R9 @ Set R0 to R9 \n\
-/* 0804a890 */ BL func_0804a690 \n\
+/* 0804a890 */ BL midi_key_to_freq \n\
 /* 0804a894 */ LDR R1, [R7] \n\
 /* 0804a896 */ LSRS R1, R1, 0xF \n\
 /* 0804a898 */ SUBS R1, R1, R0 @ Set R1 to R1 - R0 \n\
@@ -300,7 +300,7 @@ branch_0804a884: \n\
 /* 0804a8a2 */ LSRS R4, R4, 0x18 \n\
 /* 0804a8a4 */ MOV R0, R9 @ Set R0 to R9 \n\
 /* 0804a8a6 */ ADDS R1, R4, 0x0 @ Set R1 to R4 + 0x0 \n\
-/* 0804a8a8 */ BL func_0804a690 \n\
+/* 0804a8a8 */ BL midi_key_to_freq \n\
 /* 0804a8ac */ LDR R1, [R7] \n\
 /* 0804a8ae */ LSRS R1, R1, 0xF \n\
 /* 0804a8b0 */ SUBS R0, R0, R1 @ Set R0 to R0 - R1 \n\
@@ -311,7 +311,7 @@ branch_0804a884: \n\
 /* 0804a8ba */ LSLS R1, R1, 0x18 \n\
 /* 0804a8bc */ LSRS R1, R1, 0x18 \n\
 /* 0804a8be */ MOV R0, R9 @ Set R0 to R9 \n\
-/* 0804a8c0 */ BL func_0804a690 \n\
+/* 0804a8c0 */ BL midi_key_to_freq \n\
 /* 0804a8c4 */ LDR R1, [R7] \n\
 /* 0804a8c6 */ LSRS R1, R1, 0xF \n\
 /* 0804a8c8 */ SUBS R0, R0, R1 @ Set R0 to R0 - R1 \n\
@@ -412,16 +412,16 @@ branch_0804a964: \n\
  \n\
 branch_0804a97a: \n\
 /* 0804a97a */ MOV R0, R10 @ Set R0 to R10 \n\
-/* 0804a97c */ BL func_080493b0 \n\
+/* 0804a97c */ BL midi_sampler_stop \n\
 /* 0804a980 */ LDR R0, [SP, 0x10] \n\
 /* 0804a982 */ LDR R1, [R0, 0x4] \n\
 /* 0804a984 */ MOV R0, R10 @ Set R0 to R10 \n\
-/* 0804a986 */ BL func_0804930c \n\
+/* 0804a986 */ BL midi_sampler_load \n\
 /* 0804a98a */ ADDS R0, R7, 0x0 @ Set R0 to R7 + 0x0 \n\
-/* 0804a98c */ BL func_0804a1f4 \n\
+/* 0804a98c */ BL midi_note_update_volume \n\
 /* 0804a990 */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
 /* 0804a992 */ MOV R0, R10 @ Set R0 to R10 \n\
-/* 0804a994 */ BL func_080493e4 \n\
+/* 0804a994 */ BL midi_sampler_set_volume \n\
 /* 0804a998 */ MOV R1, R8 @ Set R1 to R8 \n\
 /* 0804a99a */ LDRB R0, [R1, 0x3] \n\
 /* 0804a99c */ LSRS R0, R0, 0x7 \n\
@@ -433,7 +433,7 @@ branch_0804a97a: \n\
 branch_0804a9a6: \n\
 /* 0804a9a6 */ MOV R0, R9 @ Set R0 to R9 \n\
 /* 0804a9a8 */ LDR R1, [SP] \n\
-/* 0804a9aa */ BL func_0804aaa4 \n\
+/* 0804a9aa */ BL midi_channel_get_panning \n\
 /* 0804a9ae */ LSLS R0, R0, 0x18 \n\
 /* 0804a9b0 */ LSRS R0, R0, 0x18 \n\
 /* 0804a9b2 */ LDR R2, [SP, 0x8] \n\
@@ -456,37 +456,37 @@ branch_0804a9ca: \n\
 /* 0804a9cc */ LSLS R4, R2, 0x18 \n\
 /* 0804a9ce */ LSRS R4, R4, 0x18 \n\
 /* 0804a9d0 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
-/* 0804a9d2 */ BL func_0804a674 \n\
+/* 0804a9d2 */ BL midi_get_stereo_bias_l \n\
 /* 0804a9d6 */ ADDS R5, R0, 0x0 @ Set R5 to R0 + 0x0 \n\
 /* 0804a9d8 */ LSLS R5, R5, 0x18 \n\
 /* 0804a9da */ LSRS R5, R5, 0x18 \n\
 /* 0804a9dc */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
-/* 0804a9de */ BL func_0804a65c \n\
+/* 0804a9de */ BL midi_get_stereo_bias_r \n\
 /* 0804a9e2 */ LSLS R0, R0, 0x18 \n\
 /* 0804a9e4 */ LSRS R0, R0, 0x18 \n\
 /* 0804a9e6 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
 /* 0804a9e8 */ MULS R2, R6 @ Multiply R2 by R6 \n\
 /* 0804a9ea */ MOV R0, R10 @ Set R0 to R10 \n\
 /* 0804a9ec */ ADDS R1, R5, 0x0 @ Set R1 to R5 + 0x0 \n\
-/* 0804a9ee */ BL func_080493c8 \n\
+/* 0804a9ee */ BL midi_sampler_set_stereo_bias \n\
 /* 0804a9f2 */ ADDS R0, R7, 0x0 @ Set R0 to R7 + 0x0 \n\
-/* 0804a9f4 */ BL func_0804a018 \n\
+/* 0804a9f4 */ BL midi_note_update_pitch \n\
 /* 0804a9f8 */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
 /* 0804a9fa */ MOV R0, R10 @ Set R0 to R10 \n\
-/* 0804a9fc */ BL func_080493f4 \n\
+/* 0804a9fc */ BL midi_sampler_set_frequency \n\
 /* 0804aa00 */ LDR R3, [SP, 0x10] \n\
 /* 0804aa02 */ LDRB R1, [R3, 0x1] \n\
 /* 0804aa04 */ LSRS R1, R1, 0x7 \n\
 /* 0804aa06 */ MOV R0, R10 @ Set R0 to R10 \n\
-/* 0804aa08 */ BL func_08049450 \n\
+/* 0804aa08 */ BL midi_sampler_set_enable_distort \n\
 /* 0804aa0c */ MOV R0, R8 @ Set R0 to R8 \n\
 /* 0804aa0e */ LDRB R1, [R0, 0x3] \n\
 /* 0804aa10 */ LSLS R1, R1, 0x19 \n\
 /* 0804aa12 */ LSRS R1, R1, 0x1F \n\
 /* 0804aa14 */ MOV R0, R10 @ Set R0 to R10 \n\
-/* 0804aa16 */ BL func_08049470 \n\
+/* 0804aa16 */ BL midi_sampler_set_enable_eq \n\
 /* 0804aa1a */ MOV R0, R10 @ Set R0 to R10 \n\
-/* 0804aa1c */ BL func_08049394 \n\
+/* 0804aa1c */ BL midi_sampler_start \n\
  \n\
 branch_0804aa20: \n\
 /* 0804aa20 */ MOV R1, R8 @ Set R1 to R8 \n\

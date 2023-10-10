@@ -118,7 +118,7 @@ void gameplay_start_scene(void) {
     gGameplay->latenessRangeMin = 1;
     gGameplay->earlinessRangeMin = -0x80;
     gGameplay->latenessRangeMax = 0x7f;
-    func_0804c340(35, 2, 2, 4); // Reverb
+    midi_player_set_reverb(35, 2, 2, 4);
     if (get_current_scene_trans_target() == NULL) {
         set_next_scene(&scene_results_ver_rank);
     }
@@ -415,7 +415,7 @@ u32 func_080175d8(void) {
 
 // [func_080175e8] Set Global Reverb
 void gameplay_set_reverb(u32 level) {
-    func_0804c340(clamp_int32(level + 35, 0, 127), 2, 2, 4);
+    midi_player_set_reverb(clamp_int32(level + 35, 0, 127), 2, 2, 4);
 }
 
 
@@ -536,7 +536,7 @@ void gameplay_stop_scene(void) {
 
     func_08008628();
     func_08004058();
-    func_0804c340(35, 2, 2, 4); // Reverb
+    midi_player_set_reverb(35, 2, 2, 4);
 }
 
 

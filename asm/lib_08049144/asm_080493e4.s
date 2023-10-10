@@ -2,7 +2,7 @@ asm(".syntax unified \n\
 \n\
 .balign 4, 0 \n\
 \n\
-thumb_func_start func_080493e4 \n\
+thumb_func_start midi_sampler_set_volume \n\
 /* 080493e4 */ LDR R2, =D_03005b88 \n\
 /* 080493e6 */ LDR R2, [R2] \n\
 /* 080493e8 */ LSLS R0, R0, 0x5 \n\

@@ -9,7 +9,7 @@ asm(".include \"include/gba.inc\"");//Temporary
 
 
 // Update MidiChannel Modulation
-void func_08049c34(struct MidiBus *midiBus, u32 track) {
+void midi_channel_update_mod(struct MidiBus *midiBus, u32 track) {
     struct MidiChannel *midiChannel = &midiBus->midiChannel[track];
     s32 modVolume;
     u32 busVolume;
@@ -34,7 +34,7 @@ void func_08049c34(struct MidiBus *midiBus, u32 track) {
     }
 
     if (midiChannel->modType == MOD_TYPE_PANNING) {
-        func_0804aae0(midiBus, track);
+        midi_channel_update_panning(midiBus, track);
     }
 
     busVolume = ((midiBus->trackMask >> track) & 1) ? midiBus->trackVolume : midiBus->busVolume;
@@ -54,22 +54,22 @@ void func_08049c34(struct MidiBus *midiBus, u32 track) {
 
 
 // Update MidiChannel Modulation (All)
-void func_08049d08(struct MidiBus *midiBus) {
+void midi_channel_update_mod_all(struct MidiBus *midiBus) {
     u32 i;
 
     for (i = 0; i < midiBus->totalChannels; i++) {
-        func_08049c34(midiBus, i);
+        midi_channel_update_mod(midiBus, i);
     }
 }
 
 
-// SoundChannel Note Off
-void func_08049d30(struct MidiBus *midiBus, u32 track) {
+// SoundChannel Note Cut
+void midi_channel_cut(struct MidiBus *midiBus, u32 track) {
     struct MidiChannel *midiChannel = &midiBus->midiChannel[track];
     u32 i;
 
     if (midiChannel->volumeWheel == 0) {
-        func_08049db8(midiBus, track);
+        midi_channel_stop(midiBus, track);
         return;
     }
 
@@ -87,15 +87,15 @@ void func_08049d30(struct MidiBus *midiBus, u32 track) {
 }
 
 
-// SoundChannel Close
-void func_08049db8(struct MidiBus *midiBus, u32 track) {
+// SoundChannel Stop
+void midi_channel_stop(struct MidiBus *midiBus, u32 track) {
     struct MidiChannel *midiChannel = &midiBus->midiChannel[track];
     u32 i;
 
     for (i = 0; i < D_03005b8c; i++) {
         if (D_030064bc[i].active && (D_030064bc[i].midiChannel == midiChannel)) {
             D_030064bc[i].active = FALSE;
-            func_080493b0(i);
+            midi_sampler_stop(i);
         }
     }
 
@@ -108,47 +108,47 @@ void func_08049db8(struct MidiBus *midiBus, u32 track) {
 }
 
 
-// SoundChannel Note Off (All)
-void func_08049e3c(struct MidiBus *midiBus) {
+// SoundChannel Note Cut (All)
+void midi_channel_cut_all(struct MidiBus *midiBus) {
     u32 i;
 
     for (i = 0; i < midiBus->totalChannels; i++) {
-        func_08049d30(midiBus, i);
+        midi_channel_cut(midiBus, i);
     }
 }
 
 
-// SoundChannel Close (All)
-void func_08049e64(struct MidiBus *midiBus) {
+// SoundChannel Stop (All)
+void midi_channel_stop_all(struct MidiBus *midiBus) {
     u32 i;
 
     for (i = 0; i < midiBus->totalChannels; i++) {
-        func_08049db8(midiBus, i);
+        midi_channel_stop(midiBus, i);
     }
 }
 
 
 // Set MidiBus Priority
-void func_08049e8c(struct MidiBus *midiBus, u8 priority) {
+void midi_bus_set_priority(struct MidiBus *midiBus, u8 priority) {
     u32 i;
 
     midiBus->priority = priority;
 
     for (i = 0; i < midiBus->totalChannels; i++) {
-        func_0804ad18(midiBus, i, 0);
+        midi_channel_set_priority(midiBus, i, 0);
     }
 }
 
 
 // Set MidiBus Track Volume & Mask
-void func_08049ec4(struct MidiBus *midiBus, u8 volume, u16 mask) {
+void midi_bus_set_track_volume(struct MidiBus *midiBus, u8 volume, u16 mask) {
     midiBus->trackVolume = volume;
     midiBus->trackMask = mask;
 }
 
 
 // Initialise MidiChannel
-void func_08049ecc(struct MidiChannel *midiChannel) {
+void midi_channel_init(struct MidiChannel *midiChannel) {
     midiChannel->unk0_b0 = FALSE;
     midiChannel->unk0_b1 = FALSE;
     midiChannel->instPatch = 0;
@@ -180,7 +180,7 @@ void func_08049ecc(struct MidiChannel *midiChannel) {
 
 
 // Initialise MidiBus
-void func_08049fa0(struct MidiBus *midiBus, u32 totalChannels, struct MidiChannel *midiChannelArray) {
+void midi_bus_init(struct MidiBus *midiBus, u32 totalChannels, struct MidiChannel *midiChannelArray) {
     u32 i;
 
     midiBus->busVolume = 100;
@@ -195,7 +195,7 @@ void func_08049fa0(struct MidiBus *midiBus, u32 totalChannels, struct MidiChanne
     midiBus->midiChannel = midiChannelArray;
 
     for (i = 0; i < totalChannels; i++) {
-        func_08049ecc(&midiChannelArray[i]);
+        midi_channel_init(&midiChannelArray[i]);
     }
 
     midiBus->priority = 0;
@@ -207,7 +207,7 @@ void func_08049fa0(struct MidiBus *midiBus, u32 totalChannels, struct MidiChanne
 
 
 // Set MidiBus Sound Bank
-void func_0804a014(struct MidiBus *midiBus, union Instrument *instrumentBank) {
+void midi_bus_set_bank(struct MidiBus *midiBus, union Instrument *instrumentBank) {
     midiBus->soundBank = instrumentBank;
 }
 
@@ -215,19 +215,15 @@ void func_0804a014(struct MidiBus *midiBus, union Instrument *instrumentBank) {
 /* SOUND CHANNEL OPERATIONS */
 
 
-// Update SoundChannel Pitch (https://decomp.me/scratch/Tms2v)
-u32 func_0804a018(struct SoundChannel *soundChannel) {
+// Update SoundChannel Pitch
+u32 midi_note_update_pitch(struct SoundChannel *soundChannel) {
     struct MidiBus *midiBus;
     struct MidiChannel *midiChannel;
-    s32 freq;
-    u32 modRange;
-    u32 unk1C;
-    s32 r5;
-    u32 r8;
-    u32 r0;
-    u32 r3;
-    s32 index;
-    s32 what;
+    s32 outputFrequency, keyFrequency;
+    u32 randomKeyOffsetMax;
+    s32 key, subKey;
+    s32 pitchWheel;
+    u32 inc;
 
     // Do not calculate pitch envelope for unpitched instruments.
     if (*soundChannel->instrument.type == INSTRUMENT_PCM_FIXED) {
@@ -236,91 +232,94 @@ u32 func_0804a018(struct SoundChannel *soundChannel) {
 
     midiBus = soundChannel->midiBus;
     midiChannel = soundChannel->midiChannel;
-    freq = soundChannel->frequency;
+    outputFrequency = soundChannel->frequency;
 
-    // If... whatever this flag is, bypass all pitch envelopes, returning sndChnl->frequency.
+    // If... whatever this flag is, bypass all pitch envelopes, returning soundChannel->frequency.
     if (midiChannel->unk0_b1) {
-        return freq;
+        return outputFrequency;
     }
 
-    // Pitch Envelope: ???
-    unk1C = midiChannel->unk1C;
-    if ((unk1C != 0) && (midiChannel->unk1D != 0) && (midiChannel->unk1E == 0)) {
-        r5 = soundChannel->key + midi_random((unk1C * 2) + 1) - unk1C + midiBus->key;
+    // Pitch Envelope: Random Key Offset
+    randomKeyOffsetMax = midiChannel->unk1C;
+    if ((randomKeyOffsetMax != 0) && (midiChannel->unk1D != 0) && (midiChannel->unk1E == 0)) {
+        s32 randomKey = soundChannel->key + midi_random((randomKeyOffsetMax * 2) + 1) - randomKeyOffsetMax + midiBus->key;
+        s32 modRange;
+        s32 what = randomKey;
 
-        what = r5;
-        while (what < 0) r5 += 12; // ????????
-        r5 += midiBus->unk1C[what % 12];
+        while (what < 0) randomKey += 12; // ????????
+        randomKey += midiBus->unk1C[what % 12];
 
-        while (r5 < 0) {
-            r5 += 12;
+        while (randomKey < 0) {
+            randomKey += 12;
         }
-        while (r5 > 127) {
-            r5 -= 12;
+        while (randomKey > 127) {
+            randomKey -= 12;
         }
 
-        freq = func_0804a690(midiBus, r5);
-        soundChannel->frequency = freq;
+        outputFrequency = midi_key_to_freq(midiBus, randomKey);
+        soundChannel->frequency = outputFrequency;
         modRange = midiChannel->modRange;
-        soundChannel->unk10 = soundChannel->frequency - func_0804a690(midiBus, r5 - modRange);
-        soundChannel->unk12 = func_0804a690(midiBus, r5 + modRange) - soundChannel->frequency;
-        soundChannel->unk14 = func_0804a690(midiBus, r5 + midiChannel->unkC) - soundChannel->frequency;
+        soundChannel->unk10 = soundChannel->frequency - midi_key_to_freq(midiBus, randomKey - modRange);
+        soundChannel->unk12 = midi_key_to_freq(midiBus, randomKey + modRange) - soundChannel->frequency;
+        soundChannel->unk14 = midi_key_to_freq(midiBus, randomKey + midiChannel->unkC) - soundChannel->frequency;
     }
 
-    // Pitch Envelope: MidiChannel Pitch Wheel (14 Bits)
-    r5 = midiChannel->pitchWheel;
-    if (r5 != 0x2000) {
-        r8 = (r5 < 0x2000) ? soundChannel->unk10 : soundChannel->unk12;
+    // Pitch Envelope: MidiChannel Pitch Wheel (14 Bits, Signed)
+    pitchWheel = midiChannel->pitchWheel;
+    if (pitchWheel != 0x2000) {
+        u32 frequencyRange = (pitchWheel < 0x2000) ? soundChannel->unk10 : soundChannel->unk12;
 
-        if (r5 < 0x2000) {
-            freq -= r8;
+        if (pitchWheel < 0x2000) {
+            outputFrequency -= frequencyRange;
         } else {
-            r5 -= 0x2000;
+            pitchWheel -= 0x2000;
         }
 
-        index = (r5 / 682);
-        r3 = r5 - (index * 682); // pitchWheel - ((pitchWheel / 682) * 682) = margin of error?
-        r5 = midi_step_freq_table[index];
-        r0 = midi_step_freq_table[index + 1] - r5;
-        r0 = r5 + ((r0 * r3) / 682);
-        freq += ((r0 * r8) >> 16);
+        key = pitchWheel / (0x2000 / 12); // 682
+        subKey = pitchWheel - (key * (0x2000 / 12));
+        keyFrequency = midi_step_freq_table[key];
+        inc = midi_step_freq_table[key + 1] - keyFrequency;
+        inc = keyFrequency + ((inc * subKey) / (0x2000 / 12));
+        outputFrequency += ((inc * frequencyRange) >> 16);
     }
 
-    // Pitch Envelope: MidiBus Fine-Pitch (Q24.8)
+    // Pitch Envelope: MidiBus Fine-Pitch (Q24.8, Signed)
     if (midiBus->pitch != 0) {
-        index = (midiBus->pitch >> 8);
-        r3 = midiBus->pitch & 0xFF;
-        while ((u32) index >= 12) {
-            if (index < 0) {
-                freq >>= 1;
-                index += 12;
+        key = (midiBus->pitch >> 8);
+        subKey = midiBus->pitch & 0xFF;
+
+        while (key < 0 || key >= 12) {
+            if (key < 0) {
+                outputFrequency >>= 1;
+                key += 12;
             } else {
-                freq <<= 1;
-                index -= 12;
+                outputFrequency <<= 1;
+                key -= 12;
             }
         }
-        r5 = midi_step_freq_table[index];
-        r0 = midi_step_freq_table[index + 1] - r5;
-        r0 = r5 + ((r0 * r3) >> 8);
-        freq += ((r0 * freq) >> 16);
+
+        keyFrequency = midi_step_freq_table[key];
+        inc = midi_step_freq_table[key + 1] - keyFrequency;
+        inc = keyFrequency + ((inc * subKey) >> 8);
+        outputFrequency += ((inc * outputFrequency) >> 16);
     }
 
     // Pitch Envelope: Modulation
     if (midiChannel->modType == MOD_TYPE_VIBRATO) {
-        freq += ((midiChannel->modResult * soundChannel->unk14) >> 5);
+        outputFrequency += ((midiChannel->modResult * soundChannel->unk14 * 8) >> 8);
     }
 
     // Pitch Envelope: Random Pitch
     if (midiChannel->rndmPitch != (1 << 8)) {
-        freq = ((freq * midiChannel->rndmPitch) >> 8);
+        outputFrequency = ((outputFrequency * midiChannel->rndmPitch) >> 8);
     }
 
-    return freq;
+    return outputFrequency;
 }
 
 
 // Update SoundChannel Volume
-u32 func_0804a1f4(struct SoundChannel *soundChannel) {
+u32 midi_note_update_volume(struct SoundChannel *soundChannel) {
     u32 volume;
 
     if (soundChannel->midiChannel == NULL) {
@@ -333,7 +332,7 @@ u32 func_0804a1f4(struct SoundChannel *soundChannel) {
 
 
 // Update SoundChannel ADSR
-u32 func_0804a224(struct SoundChannel *soundChannel) {
+u32 midi_note_update_adsr(struct SoundChannel *soundChannel) {
     struct InstrumentPCM *instrument;
     struct BufferADSR *adsr;
     u32 finished;
@@ -424,25 +423,25 @@ u32 func_0804a224(struct SoundChannel *soundChannel) {
 
 
 // Update PCM SoundChannel
-void func_0804a2c4(u32 id) {
+void midi_note_update_id(u32 id) {
     struct SoundChannel *soundChannel = &D_030064bc[id];
 
     if (!soundChannel->active) {
         return;
     }
 
-    if (func_08049b5c(id)) {
+    if (midi_sampler_is_active(id)) {
         soundChannel->unk17_b7 = FALSE;
         if (!soundChannel->midiChannel->unk0_b1) {
-            func_080493f4(id, func_0804a018(soundChannel));
+            midi_sampler_set_frequency(id, midi_note_update_pitch(soundChannel));
         }
 
-        func_080493e4(id, func_0804a1f4(soundChannel));
-        if (func_0804a224(soundChannel) == FALSE) {
+        midi_sampler_set_volume(id, midi_note_update_volume(soundChannel));
+        if (midi_note_update_adsr(soundChannel) == FALSE) {
             return;
         }
 
-        func_080493b0(id);
+        midi_sampler_stop(id);
     }
 
     soundChannel->active = FALSE;
@@ -450,11 +449,11 @@ void func_0804a2c4(u32 id) {
 
 
 // Update PCM SoundChannel (All)
-void func_0804a334(void) {
+void midi_note_update_all(void) {
     u32 i;
 
     for (i = 0; i < D_03005b8c; i++) {
-        func_0804a2c4(i);
+        midi_note_update_id(i);
     }
 
     midi_psg_update();
@@ -462,11 +461,11 @@ void func_0804a334(void) {
 
 
 // Initialise PCM SoundChannels
-void func_0804a360(u32 totalChannels, struct SoundChannel *soundChannelArray) {
+void midi_note_init(u32 totalChannels, struct SoundChannel *soundChannelPool) {
     u32 i;
 
     D_03005b8c = totalChannels;
-    D_030064bc = soundChannelArray;
+    D_030064bc = soundChannelPool;
 
     for (i = 0; i < D_03005b8c; i++) {
         D_030064bc[i].active = FALSE;
@@ -475,7 +474,7 @@ void func_0804a360(u32 totalChannels, struct SoundChannel *soundChannelArray) {
 
 
 // Get First Active PCM SoundChannel not at ADSR Stage RELEASE.
-s32 func_0804a3a0(struct MidiChannel *midiChannel, u8 key) {
+s32 midi_note_get_first_active(struct MidiChannel *midiChannel, u8 key) {
     struct SoundChannel *soundChannel = D_030064bc;
     struct BufferADSR *adsr;
     s32 i;
@@ -493,7 +492,7 @@ s32 func_0804a3a0(struct MidiChannel *midiChannel, u8 key) {
 
 
 // Get First Inactive PCM SoundChannel
-s32 func_0804a3fc(void) {
+s32 midi_note_get_first_inactive(void) {
     s32 i;
 
     for (i = 0; i < D_03005b8c; i++) {
@@ -507,7 +506,7 @@ s32 func_0804a3fc(void) {
 
 
 // Get PCM SoundChannel with Lowest Volume
-s32 func_0804a434(void) {
+s32 midi_note_get_quietest_released(void) {
     struct SoundChannel *soundChannel;
     u32 lowestVolume, channelVolume;
     s32 index, i;
@@ -531,7 +530,7 @@ s32 func_0804a434(void) {
 
 
 // Get PCM SoundChannel with Lowest Volume (exclude ADSR)
-s32 func_0804a48c(void) {
+s32 midi_note_get_quietest_unreleased(void) {
     u32 lowestVolume, channelVolume;
     s32 index, i;
 
@@ -552,12 +551,54 @@ s32 func_0804a48c(void) {
 }
 
 
-// Get PCM SoundChannel with Lowest Priority (https://decomp.me/scratch/erQPa)
-#include "asm/lib_08049144/asm_0804a4e0.s"
+// Get PCM SoundChannel with Lowest Priority and Velocity
+s32 midi_note_get_least_significant(struct MidiBus *midiBus, u32 track, u32 velocity) {
+    struct SoundChannel *soundChannel;
+    struct MidiChannel *midiChannel;
+    u32 channelPriority, lowestPriority;
+    u32 lowestVolume;
+    s32 index, i;
+
+    midiChannel = &midiBus->midiChannel[track];
+    channelPriority = (midiChannel->priority << 4) + (15 - track);
+    velocity *= midiChannel->volumeWheel;
+    lowestPriority = channelPriority;
+    index = -1;
+
+    for (i = 0, soundChannel = D_030064bc; i < D_03005b8c; i++, soundChannel++) {
+        if (!soundChannel->active || (soundChannel->priority > lowestPriority)) {
+            continue;
+        }
+
+        if (soundChannel->priority == lowestPriority) {
+            if ((lowestPriority == channelPriority) && soundChannel->unk17_b7) {
+                u32 volume = soundChannel->velocity;
+                volume *= soundChannel->midiChannel->volumeWheel;
+                if (volume > velocity) {
+                    continue;
+                }
+            }
+
+            if (index < 0) {
+                lowestVolume = soundChannel->velocity * soundChannel->midiChannel->volumeWheel;
+                index = i;
+            } else if (lowestVolume > (soundChannel->velocity * soundChannel->midiChannel->volumeWheel)) {
+                index = i;
+                lowestVolume = soundChannel->velocity * soundChannel->midiChannel->volumeWheel;
+            }
+        } else {
+            lowestPriority = soundChannel->priority;
+            lowestVolume = soundChannel->velocity * soundChannel->midiChannel->volumeWheel;
+            index = i;
+        }
+    }
+
+    return index;
+}
 
 
 // SoundChannel Midi 'Note Off' Event
-void func_0804a5b4(struct MidiBus *midiBus, u32 track, u8 key) {
+void midi_note_stop(struct MidiBus *midiBus, u32 track, u8 key) {
     struct SoundChannel *psgChannel, *pcmChannel;
     struct BufferADSR *adsr;
     s32 adsrState;
@@ -565,7 +606,7 @@ void func_0804a5b4(struct MidiBus *midiBus, u32 track, u8 key) {
 
     // Set ADSR Stage to RELEASE for all relevant PCM SoundChannels.
     do {
-        if ((i = func_0804a3a0(&midiBus->midiChannel[track], key)) < 0) {
+        if ((i = midi_note_get_first_active(&midiBus->midiChannel[track], key)) < 0) {
             break;
         }
 
@@ -586,23 +627,23 @@ void func_0804a5b4(struct MidiBus *midiBus, u32 track, u8 key) {
 
 
 // Return First Most Replaceable DirectSound Channel
-s32 func_0804a628(struct MidiBus *midiBus, u32 track, u8 key, u8 velocity) {
+s32 midi_note_get_free(struct MidiBus *midiBus, u32 track, u8 key, u8 velocity) {
     s32 channel;
 
     // Return the first inactive buffer.
-    channel = func_0804a3fc();
+    channel = midi_note_get_first_inactive();
     if (channel >= 0) {
         return channel;
     }
 
     // Return the quietest buffer (below threshold; see function).
-    channel = func_0804a434();
+    channel = midi_note_get_quietest_released();
     if (channel >= 0) {
         return channel;
     }
 
     // Return a buffer of a lower priority.
-    channel = func_0804a4e0(midiBus, track, velocity);
+    channel = midi_note_get_least_significant(midiBus, track, velocity);
     if (channel >= 0) {
         return channel;
     }
@@ -612,193 +653,374 @@ s32 func_0804a628(struct MidiBus *midiBus, u32 track, u8 key, u8 velocity) {
 
 
 // Convert PCM SoundChannel Panning to SampleStream Right Volume
-u8 func_0804a65c(u8 panning) {
+u8 midi_get_stereo_bias_r(u8 panning) {
     return (panning >= 64) ? 127 : (panning * 2);
 }
 
 
 // Convert PCM SoundChannel Panning to SampleStream Left Volume
-u8 func_0804a674(u8 panning) {
+u8 midi_get_stereo_bias_l(u8 panning) {
     return (panning < 64) ? 127 : ((127 - panning) * 2);
 }
 
 
 // Get Frequency of Midi Key
-u32 func_0804a690(struct MidiBus *midiBus, u32 key) {
-    u8 u = key;
-    s8 s = key;
+u32 midi_key_to_freq(struct MidiBus *midiBus, u32 key) {
+    u8 k = key;
 
-    if (s < 0) {
-        s = 0;
-        if (u < 191) s = 127;
-        u = s;
+    if (k > 127) {
+        k = (k < 191) ? 127 : 0;
     }
 
-    return midiBus->tuningTable[u];
+    return midiBus->tuningTable[k];
 }
 
 
 // SoundChannel Midi 'Note On' Event
-#include "asm/lib_08049144/asm_0804a6b0.s"
+void midi_note_start(struct MidiBus *midiBus, u32 track, u8 key, u8 velocity) {
+    union Instrument inst;
+    struct MidiChannel *midiChannel;
+    struct SoundChannel *soundChannel;
+    s32 panning; // sp8
+    u32 isPSG; // spC
+    struct InstrumentPCM *instPCM; // sp10
+    struct InstrumentPSG *instPSG; // sp14
+    u32 isSubRhythm;
+    u32 randomKeyOffsetMax;
+    u32 modRange;
+    s32 temp;
+    s32 temp2;
+    s32 channelIndex;
+    struct BufferADSR *adsr;
+    u32 adsrEnv;
+
+    if (velocity == 0) {
+        midi_note_stop(midiBus, track, key);
+        return;
+    }
+
+    midiChannel = &midiBus->midiChannel[track];
+    if (midiChannel->unk0_b0) {
+        return;
+    }
+
+    inst = midiBus->soundBank[midiChannel->instPatch];
+    if (inst.type == NULL) {
+        return;
+    }
+
+    isSubRhythm = FALSE;
+
+    switch (*inst.type) {
+        case INSTRUMENT_SUB_RHYTHM:
+            isSubRhythm = TRUE;
+            inst = inst.rhy->subBank[key - inst.rhy->total];
+            if (inst.type == NULL) {
+                return;
+            }
+            if ((u8) (*inst.type - 0x52) < 2) {
+                return;
+            }
+            break;
+
+        case INSTRUMENT_SUB_SPLIT:
+            inst = inst.spl->subBank[inst.spl->keySplitTable[key - inst.spl->total]];
+            if (inst.type == NULL) {
+                return;
+            }
+            if ((u8) (*inst.type - 0x52) < 2) {
+                return;
+            }
+            break;
+    }
+
+    if ((u8) (*inst.type - 0x50) < 2) {
+        // Instantiate PSG Instrument
+        instPSG = inst.psg;
+        isPSG = TRUE;
+        soundChannel = &D_030056a0[inst.psg->channel];
+    } else {
+        // Instantiate PCM Instrument
+        instPCM = inst.pcm;
+        isPSG = FALSE;
+        channelIndex = midi_note_get_free(midiBus, track, key, velocity);
+        if (channelIndex < 0) {
+            return;
+        }
+        soundChannel = &D_030064bc[channelIndex];
+    }
+
+    // Use the built-in Key/Panning parameters.
+    if (!isSubRhythm) {
+        temp = key + midiBus->key;
+        panning = 0;
+    } else {
+        if (isPSG) {
+            temp = instPSG->key;
+        } else {
+            temp = instPCM->key;
+        }
+        if (isPSG) {
+            panning = instPSG->panning;
+        } else {
+            panning = instPCM->panning;
+        }
+        if (panning == 127) {
+            panning = 0;
+        }
+    }
+
+    if (temp < 0 || temp > 127) {
+        return;
+    }
+
+    // For "Unpitched" Instruments, use the Key from the Sample Data.
+    if (!isPSG && (instPCM->type == INSTRUMENT_PCM_FIXED)) {
+        temp = instPCM->sample->pitch;
+    }
+
+    soundChannel->active = FALSE;
+
+    randomKeyOffsetMax = midiChannel->unk1C;
+    if (randomKeyOffsetMax != 0) {
+        temp += (midi_random((randomKeyOffsetMax * 2) + 1) - randomKeyOffsetMax);
+        temp2 = temp;
+
+        while (temp2 < 0) {
+            temp2 += 12;
+        }
+
+        temp += midiBus->unk1C[temp2 % 12];
+        while (temp < 0) {
+            temp += 12;
+        }
+        while (temp > 127) {
+            temp -= 12;
+        }
+    }
+
+    soundChannel->frequency = midi_key_to_freq(midiBus, (u8) temp);
+
+    if (isPSG && (instPSG->channel == PSG_NOISE_CHANNEL)) {
+        soundChannel->frequency = temp;
+    }
+
+    modRange = midiChannel->modRange;
+    soundChannel->unk10 = soundChannel->frequency - midi_key_to_freq(midiBus, (u8) (temp - modRange));
+    soundChannel->unk12 = midi_key_to_freq(midiBus, (u8) (modRange + temp)) - soundChannel->frequency;
+    soundChannel->unk14 = midi_key_to_freq(midiBus, (u8) (temp + midiChannel->unkC)) - soundChannel->frequency;
+
+    soundChannel->key = key;
+    soundChannel->velocity = velocity;
+    soundChannel->midiChannel = midiChannel;
+    soundChannel->panning = panning;
+    soundChannel->priority = (midiChannel->priority << 4) + (15 - track);
+    soundChannel->unk17_b7 = TRUE;
+    soundChannel->midiBus = midiBus;
+
+    // ADSR
+    adsr = &soundChannel->adsr;
+    adsr->stage = ADSR_STAGE_ATTACK;
+    if (isPSG) {
+        adsrEnv = instPSG->initial;
+    } else {
+        adsrEnv = instPCM->initial;
+    }
+    adsr->envelope = adsrEnv;
+
+    if (!isPSG) {
+        soundChannel->instrument.pcm = instPCM;
+    } else {
+        soundChannel->instrument.psg = instPSG;
+    }
+
+    if (midiChannel->rndmPitchRange != 0) {
+        midiChannel->rndmPitch = midiChannel->rndmPitchFloor + midi_random(midiChannel->rndmPitchRange);
+    }
+
+    if (isPSG) {
+        midi_psg_trigger_id(instPSG->channel);
+    } else {
+        midi_sampler_stop(channelIndex);
+        midi_sampler_load(channelIndex, instPCM->sample);
+        midi_sampler_set_volume(channelIndex, midi_note_update_volume(soundChannel));
+        temp = (midiChannel->stereo) ? -1 : 1;
+        panning += midi_channel_get_panning(midiBus, track);
+        if (panning < 0) {
+            panning = 0;
+        }
+        if (panning > 127) {
+            panning = 127;
+        }
+        midi_sampler_set_stereo_bias(channelIndex, midi_get_stereo_bias_l(panning), midi_get_stereo_bias_r(panning) * temp);
+        midi_sampler_set_frequency(channelIndex, midi_note_update_pitch(soundChannel));
+        midi_sampler_set_enable_distort(channelIndex, instPCM->distort);
+        midi_sampler_set_enable_eq(channelIndex, midiChannel->filterEQ);
+        midi_sampler_start(channelIndex);
+    }
+
+    midiChannel->modDelayCount = midiChannel->modDelay;
+    soundChannel->active = TRUE;
+}
 
 
 /* MIDI CHANNEL OPERATIONS */
 
 
 // Set MidiChannel Pitch Wheel [Evnt_E]
-void func_0804aa40(struct MidiBus *midiBus, u32 track, u16 pitch) {
+void midi_channel_set_pitch(struct MidiBus *midiBus, u32 track, u16 pitch) {
     midiBus->midiChannel[track].pitchWheel = pitch;
 }
 
 
 // Set MidiChannel Volume [Ctrl_07]
-void func_0804aa5c(struct MidiBus *midiBus, u32 track, u8 volume) {
+void midi_channel_set_volume(struct MidiBus *midiBus, u32 track, u8 volume) {
     midiBus->midiChannel[track].volume = volume;
 }
 
 
 // Set MidiChannel Panning [Ctrl_0A]
-void func_0804aa7c(struct MidiBus *midiBus, u32 track, u8 panning) {
+void midi_channel_set_panning(struct MidiBus *midiBus, u32 track, u8 panning) {
     midiBus->midiChannel[track].panning = panning;
-    func_0804aae0(midiBus, track);
+    midi_channel_update_panning(midiBus, track);
 }
 
 
 // Calculate MidiChannel Panning Envelope
-u8 func_0804aaa4(struct MidiBus *midiBus, u32 track) {
+u8 midi_channel_get_panning(struct MidiBus *midiBus, u32 track) {
     struct MidiChannel *midiChannel = &midiBus->midiChannel[track];
-    s32 pan = midiChannel->panning + (midiBus->panning >> 1);
+    s32 panning = midiChannel->panning + (midiBus->panning >> 1);
 
     if (midiChannel->modType == MOD_TYPE_PANNING) {
-        pan += (midiChannel->modResult >> 1);
+        panning += (midiChannel->modResult >> 1);
     }
 
-    if (pan < 0) pan = 0;
-    if (pan > 127) pan = 127;
-    return pan;
+    if (panning < 0) panning = 0;
+    if (panning > 127) panning = 127;
+    return panning;
 }
 
 
-// Update Sample Stream Panning
-void func_0804aae0(struct MidiBus *midiBus, u32 track) {
-    s32 pan, isStereo, i;
+// Update SampleStream Panning
+void midi_channel_update_panning(struct MidiBus *midiBus, u32 track) {
+    s32 panning, isStereo, i;
     struct MidiChannel *midiChannel;
     struct SoundChannel *soundChannel;
 
-    pan = func_0804aaa4(midiBus, track);
+    panning = midi_channel_get_panning(midiBus, track);
     midiChannel = &midiBus->midiChannel[track];
     isStereo = (midiChannel->stereo) ? -1 : 1;
 
     for (i = 0, soundChannel = D_030064bc; i < D_03005b8c; i++, soundChannel++) {
         if (soundChannel->active && (soundChannel->midiChannel == midiChannel)) {
-            pan += soundChannel->panning;
-            if (pan < 0) pan = 0;
-            if (pan > 127) pan = 127;
-            func_080493c8(i, func_0804a674(pan), func_0804a65c(pan) * isStereo);
+            panning += soundChannel->panning;
+            if (panning < 0) panning = 0;
+            if (panning > 127) panning = 127;
+            midi_sampler_set_stereo_bias(i, midi_get_stereo_bias_l(panning), midi_get_stereo_bias_r(panning) * isStereo);
         }
     }
 }
 
 
 // Set MidiChannel Instrument/Patch [Evnt_C]
-void func_0804ab88(struct MidiBus *midiBus, u32 track, u8 patch) {
+void midi_channel_set_patch(struct MidiBus *midiBus, u32 track, u8 patch) {
     midiBus->midiChannel[track].instPatch = patch;
 }
 
 
 // Set MidiChannel Expression [Ctrl_0B]
-void func_0804aba8(struct MidiBus *midiBus, u32 track, u8 expression) {
+void midi_channel_set_expression(struct MidiBus *midiBus, u32 track, u8 expression) {
     midiBus->midiChannel[track].expression = expression;
 }
 
 
 // Set MidiChannel Bank Select [Ctrl_00; Ctrl_20]
-void func_0804abc8(struct MidiBus *midiBus, u32 track, u16 select) {
-    u16 bank = midiBus->midiChannel[track].bankSelect;
+void midi_channel_set_bankselect(struct MidiBus *midiBus, u32 track, u16 args) {
+    u16 bankSelect = midiBus->midiChannel[track].bankSelect;
 
-    // MIDI Controller 00 - ??
-    if (select & 0x8000) {
-        bank &= 0x3F80;         // Bits 0-6  = 0
-        bank |= (select << 7);  // Bits 7-13 = var
+    if (args & 0x8000) {
+        // MIDI Controller 00
+        bankSelect &= 0x3F80;       // Bits 0-6  = 0
+        bankSelect |= (args << 7);  // Bits 7-13 = args
+    } else {
+        // MIDI Controller 20
+        bankSelect &= 0x7F; // Bits 7-13 = 0
+        bankSelect |= args; // Bits 0-6  = args
     }
-    // MIDI Controller 20 - ??
-    else {
-        bank &= 0x7F;   // Bits 7-13 = 0
-        bank |= select; // Bits 0-6  = var
-    }
-    midiBus->midiChannel[track].bankSelect = bank;
+
+    midiBus->midiChannel[track].bankSelect = bankSelect;
 }
 
 
 // Set MidiChannel unk0_b0
-void func_0804ac24(struct MidiBus *midiBus, u32 track, u8 arg) {
+void midi_channel_set_unk0_b0(struct MidiBus *midiBus, u32 track, u8 arg) {
     midiBus->midiChannel[track].unk0_b0 = arg;
 }
 
 
 // Set MidiChannel Modulation Depth [Ctrl_01]
-void func_0804ac40(struct MidiBus *midiBus, u32 track, u8 depth) {
+void midi_channel_set_mod_depth(struct MidiBus *midiBus, u32 track, u8 depth) {
     midiBus->midiChannel[track].modDepth = depth;
 }
 
 
 // Set MidiChannel unk4_b21
-void func_0804ac60(struct MidiBus *midiBus, u32 track, u8 arg) {
+void midi_channel_set_unk4_b21(struct MidiBus *midiBus, u32 track, u8 arg) {
     midiBus->midiChannel[track].unk4_b21 = arg;
 }
 
 
 // Set MidiChannel Filter EQ [Ctrl_48]
-void func_0804ac80(struct MidiBus *midiBus, u32 track, u8 useFilter) {
+void midi_channel_set_enable_filter_eq(struct MidiBus *midiBus, u32 track, u8 useFilter) {
     midiBus->midiChannel[track].filterEQ = useFilter;
 }
 
 
 // Set MidiChannel Modulation Type [Ctrl_16]
-void func_0804aca0(struct MidiBus *midiBus, u32 track, u8 type) {
+void midi_channel_set_mod_type(struct MidiBus *midiBus, u32 track, u8 type) {
     midiBus->midiChannel[track].modType = type;
 }
 
 
 // Set MidiChannel unkC
-void func_0804acc0(struct MidiBus *midiBus, u32 track, u8 arg) {
+void midi_channel_set_unkC(struct MidiBus *midiBus, u32 track, u8 arg) {
     midiBus->midiChannel[track].unkC = arg;
 }
 
 
 // Set MidiChannel Modulation Speed [Ctrl_15]
-void func_0804accc(struct MidiBus *midiBus, u32 track, u16 speed) {
+void midi_channel_set_mod_speed(struct MidiBus *midiBus, u32 track, u16 speed) {
     midiBus->midiChannel[track].modSpeed = speed << 8;
 }
 
 
 // Set MidiChannel Modulation Delay [Ctrl_1A]
-void func_0804acd8(struct MidiBus *midiBus, u32 track, u8 delay) {
+void midi_channel_set_mod_delay(struct MidiBus *midiBus, u32 track, u8 delay) {
     midiBus->midiChannel[track].modDelay = delay;
 }
 
 
 // Set MidiChannel Modulation Range [Ctrl_14]
-void func_0804ace4(struct MidiBus *midiBus, u32 track, u8 range) {
+void midi_channel_set_mod_range(struct MidiBus *midiBus, u32 track, u8 range) {
     midiBus->midiChannel[track].modRange = range;
 }
 
 
 // Set MidiChannel Offset/Split Stereo Effect [Ctrl_4B]
-void func_0804acf0(struct MidiBus *midiBus, u32 track, u32 isStereo) {
+void midi_channel_set_stereo_phase(struct MidiBus *midiBus, u32 track, u32 isStereo) {
     midiBus->midiChannel[track].stereo = isStereo;
-    func_0804aa7c(midiBus, track, midiBus->midiChannel[track].panning);
+    midi_channel_set_panning(midiBus, track, midiBus->midiChannel[track].panning);
 }
 
 
 // Set MidiChannel Priority [Ctrl_21]
-void func_0804ad18(struct MidiBus *midiBus, u32 i, u8 priority) {
-    midiBus->midiChannel[i].priority = priority + midiBus->priority;
+void midi_channel_set_priority(struct MidiBus *midiBus, u32 track, u8 priority) {
+    midiBus->midiChannel[track].priority = priority + midiBus->priority;
 }
 
 
 // Set MidiChannel Random Pitch Variation [Ctrl_52]
-void func_0804ad38(struct MidiBus *midiBus, u32 track, u8 range) {
+void midi_channel_set_random_key_mod(struct MidiBus *midiBus, u32 track, u8 range) {
     u32 min = 0x8000u / (0x80 + range);
     u32 max = 0x10000u / (0x100 - range);
 
@@ -809,13 +1031,13 @@ void func_0804ad38(struct MidiBus *midiBus, u32 track, u8 range) {
 
 
 // Set MidiChannel unk1C [Ctrl_53]
-void func_0804ad90(struct MidiBus *midiBus, u32 track, u8 arg) {
+void midi_channel_set_random53(struct MidiBus *midiBus, u32 track, u8 arg) {
     midiBus->midiChannel[track].unk1C = arg;
 }
 
 
 // Set MidiChannel unk1D & unk1E [Ctrl_54]
-void func_0804ad9c(struct MidiBus *midiBus, u32 track, u8 arg) {
+void midi_channel_set_random54(struct MidiBus *midiBus, u32 track, u8 arg) {
     midiBus->midiChannel[track].unk1D = arg;
     midiBus->midiChannel[track].unk1E = arg;
 }
@@ -825,36 +1047,36 @@ void func_0804ad9c(struct MidiBus *midiBus, u32 track, u8 arg) {
 
 
 // Set MidiBus Key
-void func_0804adb0(struct MidiBus *midiBus, s8 key) {
+void midi_bus_set_key(struct MidiBus *midiBus, s8 key) {
     midiBus->key = key;
 }
 
 
 // Set MidiBus Volume
-void func_0804adb4(struct MidiBus *midiBus, u8 volume) {
+void midi_bus_set_volume(struct MidiBus *midiBus, u8 volume) {
     midiBus->busVolume = volume;
 }
 
 
 // Set MidiBus Panning
-void func_0804adb8(struct MidiBus *midiBus, s8 panning) {
+void midi_bus_set_panning(struct MidiBus *midiBus, s8 panning) {
     u32 i;
 
     midiBus->panning = panning;
     for (i = 0; i < midiBus->totalChannels; i++) {
-        func_0804aae0(midiBus, i);
+        midi_channel_update_panning(midiBus, i);
     }
 }
 
 
 // Set MidiBus Pitch
-void func_0804ade4(struct MidiBus *midiBus, s16 pitch) {
+void midi_bus_set_pitch(struct MidiBus *midiBus, s16 pitch) {
     midiBus->pitch = pitch;
 }
 
 
 // Set MidiBus Modulation Range
-void func_0804ade8(struct MidiBus *midiBus, u8 range) {
+void midi_bus_set_mod_range(struct MidiBus *midiBus, u8 range) {
     u32 i;
 
     for (i = 0; i < midiBus->totalChannels; i++) {
@@ -864,12 +1086,12 @@ void func_0804ade8(struct MidiBus *midiBus, u8 range) {
 
 
 // Set MidiBus unk8
-void func_0804ae14(struct MidiBus *midiBus, u16 arg) {
+void midi_bus_set_unk8(struct MidiBus *midiBus, u16 arg) {
     midiBus->unk8 = arg;
 }
 
 
 // Set MidiBus Tuning
-void func_0804ae18(struct MidiBus *midiBus, u16 *table) {
+void midi_bus_set_tuning(struct MidiBus *midiBus, u16 *table) {
     midiBus->tuningTable = table;
 }

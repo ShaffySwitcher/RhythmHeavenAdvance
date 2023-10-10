@@ -2,7 +2,7 @@ asm(".syntax unified \n\
 \n\
 .balign 4, 0 \n\
 \n\
-thumb_func_start func_08049bac \n\
+thumb_func_start midi_equalizer_init \n\
 /* 08049bac */ LDR R0, =D_03005620 \n\
 /* 08049bae */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08049bb0 */ STR R2, [R0, 0x8] \n\

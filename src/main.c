@@ -92,8 +92,8 @@ void agb_main(void) {
 	init_ewram();
 	func_08000224();
 	debug_menu_scene_init_memory();
-	func_0804c778(); // Init. MIDI Sound Library
-	func_0804c340(35, 2, 2, 4); // Set Sound Reverb Levels
+	lib_midi_init(); // Init. MIDI Sound Library
+	midi_player_set_reverb(35, 2, 2, 4);
 	func_080029d8(D_030046a8->data.unk294[8]); // Set DirectSound Mode (Stereo/Mono)
 
 	REG_DISPSTAT = 8;
@@ -124,7 +124,7 @@ void agb_main(void) {
 			}
 		}
 
-		func_0804c170();
+		midi_player_update_all();
 		update_time_keeper();
 		func_08003ff0();
 	}

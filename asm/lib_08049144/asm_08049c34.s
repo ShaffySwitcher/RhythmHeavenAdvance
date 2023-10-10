@@ -2,7 +2,7 @@ asm(".syntax unified \n\
 \n\
 .balign 4, 0 \n\
 \n\
-thumb_func_start func_08049c34 \n\
+thumb_func_start midi_channel_update_mod \n\
 /* 08049c34 */ PUSH {R4-R7, LR} \n\
 /* 08049c36 */ ADDS R6, R0, 0x0 @ Set R6 to R0 + 0x0 \n\
 /* 08049c38 */ ADDS R7, R1, 0x0 @ Set R7 to R1 + 0x0 \n\
@@ -64,7 +64,7 @@ branch_08049c92: \n\
 /* 08049c98 */ BNE branch_08049ca2 \n\
 /* 08049c9a */ ADDS R0, R6, 0x0 @ Set R0 to R6 + 0x0 \n\
 /* 08049c9c */ ADDS R1, R7, 0x0 @ Set R1 to R7 + 0x0 \n\
-/* 08049c9e */ BL func_0804aae0 \n\
+/* 08049c9e */ BL midi_channel_update_panning \n\
  \n\
 branch_08049ca2: \n\
 /* 08049ca2 */ LDRH R0, [R6, 0x2] \n\
