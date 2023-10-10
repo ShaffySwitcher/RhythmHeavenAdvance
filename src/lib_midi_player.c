@@ -514,15 +514,15 @@ void midi_player_parse_controller_change(struct SoundPlayer *soundPlayer, u32 tr
             break;
 
         case M_CONTROLLER_RANDOM_PITCH:
-            midi_channel_set_random_key_mod(midiBus, track, value);
+            midi_channel_set_random_pitch(midiBus, track, value);
             break;
 
         case M_CONTROLLER_RANDOM_53:
-            midi_channel_set_random53(midiBus, track, value);
+            midi_channel_set_random_key_mod_depth(midiBus, track, value);
             break;
 
         case M_CONTROLLER_RANDOM_54:
-            midi_channel_set_random54(midiBus, track, value);
+            midi_channel_set_random_key_mod_interval(midiBus, track, value);
             break;
     }
 }
