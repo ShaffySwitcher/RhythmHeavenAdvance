@@ -650,13 +650,13 @@ s32 midi_note_get_free(struct MidiBus *midiBus, u32 track, u8 key, u8 velocity) 
 }
 
 
-// Convert PCM SoundChannel Panning to SampleStream Right Volume
+// Convert PCM SoundChannel Panning to Sampler Stereo Bias (Right)
 u8 midi_get_stereo_bias_r(u8 panning) {
     return (panning >= 64) ? 127 : (panning * 2);
 }
 
 
-// Convert PCM SoundChannel Panning to SampleStream Left Volume
+// Convert PCM SoundChannel Panning to Sampler Stereo Bias (Left)
 u8 midi_get_stereo_bias_l(u8 panning) {
     return (panning < 64) ? 127 : ((127 - panning) * 2);
 }

@@ -358,19 +358,19 @@ struct SoundChannel {
 // DirectSound Sample Reader/Stream
 struct SampleStream {
     u8 active:1;
-    u8 unk0_b1:1;
-    u8 unk0_b2:1;  // ?? ( = instPCM->unk1_b7)
-    u8 useEQ:1;    // Use Filter EQ
-    u8 volume;  // Volume: Main
-    s8 volumeL; // Volume: Left
-    s8 volumeR; // Volume: Right
+    u8 hasFrequency:1;  // TRUE if Frequency Envelope is not 1.0 (Q18.14)
+    u8 distort:1;       // Distortion(?)
+    u8 equalize:1;      // Use Equalizer
+    u8 volume;          // Volume
+    s8 leftBias;        // Stereo Left Bias
+    s8 rightBias;       // Stereo Right Bias
     const u32 *sample;  // Sample - Stream
     u32 length;         // Sample - Length << 14
     u32 position;       // Sample - Stream Position << 14
     u32 loopStart;      // Sample - Loop Start << 14
     u32 loopEnd;        // Sample - Loop End << 14
-    u32 frequency;  // Frequency Envelope
-    u32 unk1C;  // ?? (samplerate-related)
+    u32 frequency;      // Frequency Envelope
+    u32 rate;           // ? (samplerate-related)
 };
 
 enum LfoModesEnum {
