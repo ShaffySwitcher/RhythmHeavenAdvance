@@ -179,10 +179,10 @@ extern u16 D_030064c4;              // [D_030064c4] DIRECTSOUND - Enable DirectS
 
 
 // DATA
-extern u16 midi_tuning_table[128];   // MIDI Note to Frequency Table (A4 = 440Hz)
-extern u32 midi_step_freq_table[14];    // Semitones to Frequency Table ((2^(p/12) - 1) << 10)
-extern s16 midi_sine_table[0x100]; // Sine Table (init = 0; size = 0x100; max = 0x100; min = -0x100)
-extern s16 midi_cosine_table[0x100]; // Cosine Table (init = 0; size = 0x100; max = 0x100; min = -0x100)
+extern u16 midi_tuning_table[128];      // MIDI Note to Frequency Table (A4 = 440Hz)
+extern u32 midi_step_freq_table[14];    // Semitones to Frequency Table
+extern s16 midi_sine_table[0x100];      // Sine Table (Q8.8)
+extern s16 midi_cosine_table[0x100];    // Cosine Table (Q8.8)
 extern u16 midi_psg_wave_vol_table[];
 extern IOReg midi_psg_env_regs[];
 extern IOReg midi_psg_freq_regs[];
@@ -192,113 +192,115 @@ extern char midi_loop_end_sym[];
 
 extern union Instrument *instrument_banks[];
 extern u32 D_08aa4318;
-extern u8 D_08aa431c; // Has Data [TRUE]
-extern u8 D_08aa431d; // Sound Bank ID [INST_BANK_37]
-extern u8 D_08aa431e; // Volume [127]
-extern u8 D_08aa431f; // Priority [0]
-extern u8 D_08aa4320; // Tempo [150]
+
+extern u8 midi_direct_player_enabled;
+extern u8 midi_direct_player_bank_id;
+extern u8 midi_direct_player_volume;
+extern u8 midi_direct_player_priority;
+extern u8 midi_direct_player_tempo;
 
 
 
 /* INTERRUPT_DMA2 */
 
-extern void func_08049144(void);
+extern void midi_interrupt_dma2(void);
 
 /* DIRECTSOUND STREAM OPERATIONS */
 
-extern void func_0804930c(u32, struct SampleData *);
-extern void func_08049394(u32);
-extern void func_080493b0(u32);
-extern void func_080493c8(u32, u32, u32);
-extern void func_080493e4(u32, u32);
-extern void func_080493f4(u32, u32);
-extern void func_08049450(u32, u32);
-extern void func_08049470(u32, u32);
+extern void midi_sampler_load(u32 id, struct SampleData *sampleData);
+extern void midi_sampler_start(u32 id);
+extern void midi_sampler_stop(u32 id);
+extern void midi_sampler_set_stereo_bias(u32 id, u32 left, u32 right);
+extern void midi_sampler_set_volume(u32 id, u32 volume);
+extern void midi_sampler_set_frequency(u32 id, u32 frequency);
+extern void midi_sampler_set_enable_distort(u32 id, u32 enable);
+extern void midi_sampler_set_enable_eq(u32 id, u32 enable);
 
 /* DIRECTSOUND OPERATIONS */
 
-extern void func_08049490(u32, u32, u32, volatile s32 *, u32, volatile s32 *, u16, struct SampleStream *);
-extern void func_080497f8(void);
-extern void func_08049ad8(void);
-extern void func_08049b34(u32, u32, u32, u32);
-extern u32  func_08049b5c(u32);
-extern void func_08049b70(u32);
-extern void func_08049b8c(u8);
-extern void func_08049bac(void);
-extern void func_08049be4(void);
-extern void func_08049bfc(u32, u32, u32);
+extern void midi_directsound_init(u32 soundMode, u32 sampleRate, u32 bufferSize, volatile s32 *buffer, u32 scratchSize,
+                                    volatile s32 *scratch, u16 samplerCount, struct SampleStream *samplerPool);
+extern void midi_directsound_update(void);
+extern void midi_directsound_flush(void);
+extern void midi_directsound_set_reverb(u32 rvb0, u32 rvb1, u32 rvb2, u32 rvb3);
+extern u32  midi_sampler_is_active(u32 id);
+extern void midi_equalizer_set_position(u32 position);
+extern void midi_equalizer_set_high_gain(u8 gain);
+extern void midi_equalizer_init(void);
+extern void midi_equalizer_reset(void);
+extern void midi_equalizer_set(u32 enable, u32 position, u32 gain);
 
 /* MIDI BUS UPDATE OPERATIONS */
 
-extern void func_08049c34(struct MidiBus *midiBus, u32 track);
-extern void func_08049d08(struct MidiBus *midiBus);
-extern void func_08049d30(struct MidiBus *midiBus, u32 track);
-extern void func_08049db8(struct MidiBus *midiBus, u32 track);
-extern void func_08049e3c(struct MidiBus *midiBus);
-extern void func_08049e64(struct MidiBus *midiBus);
+extern void midi_channel_update_mod(struct MidiBus *midiBus, u32 track);
+extern void midi_channel_update_mod_all(struct MidiBus *midiBus);
+extern void midi_channel_cut(struct MidiBus *midiBus, u32 track);
+extern void midi_channel_stop(struct MidiBus *midiBus, u32 track);
+extern void midi_channel_cut_all(struct MidiBus *midiBus);
+extern void midi_channel_stop_all(struct MidiBus *midiBus);
 
 /* MIDI BUS INITIALISATION OPERATIONS */
 
-extern void func_08049e8c(struct MidiBus *midiBus, u8 priority);
-extern void func_08049ec4(struct MidiBus *midiBus, u8 volume, u16 mask);
-extern void func_08049ecc(struct MidiChannel *midiChannel);
-extern void func_08049fa0(struct MidiBus *midiBus, u32 totalChannels, struct MidiChannel *midiChannelArray);
-extern void func_0804a014(struct MidiBus *midiBus, union Instrument *instrumentBank);
+extern void midi_bus_set_priority(struct MidiBus *midiBus, u8 priority);
+extern void midi_bus_set_track_volume(struct MidiBus *midiBus, u8 volume, u16 mask);
+extern void midi_channel_init(struct MidiChannel *midiChannel);
+extern void midi_bus_init(struct MidiBus *midiBus, u32 totalChannels, struct MidiChannel *midiChannelArray);
+extern void midi_bus_set_bank(struct MidiBus *midiBus, union Instrument *instrumentBank);
 
 /* SOUND CHANNEL OPERATIONS */
 
-extern u32  func_0804a018(struct SoundChannel *soundChannel);
-extern u32  func_0804a1f4(struct SoundChannel *soundChannel);
-extern u32  func_0804a224(struct SoundChannel *soundChannel);
-extern void func_0804a2c4(u32 id);
-extern void func_0804a334(void);
-extern void func_0804a360(u32 totalChannels, struct SoundChannel *soundChannelArray);
-extern s32  func_0804a3a0(struct MidiChannel *midiChannel, u8 key);
-extern s32  func_0804a3fc(void);
-extern s32  func_0804a434(void);
-extern s32  func_0804a48c(void);
-// extern ? func_0804a4e0(?);
-extern void func_0804a5b4(struct MidiBus *midiBus, u32 track, u8 key);
-extern s32  func_0804a628(struct MidiBus *midiBus, u32 track, u8 key, u8 velocity);
-extern u8   func_0804a65c(u8 panning);
-extern u8   func_0804a674(u8 panning);
-extern u32  func_0804a690(struct MidiBus *midiBus, u32 key);
-extern void func_0804a6b0(struct MidiBus *midiBus, u32 track, u8 key, u8 velocity);
+extern u32  midi_note_update_pitch(struct SoundChannel *soundChannel);
+extern u32  midi_note_update_volume(struct SoundChannel *soundChannel);
+extern u32  midi_note_update_adsr(struct SoundChannel *soundChannel);
+extern void midi_note_update_id(u32 id);
+extern void midi_note_update_all(void);
+extern void midi_note_init(u32 totalChannels, struct SoundChannel *soundChannelPool);
+extern s32  midi_note_get_first_active(struct MidiChannel *midiChannel, u8 key);
+extern s32  midi_note_get_first_inactive(void);
+extern s32  midi_note_get_quietest_released(void);
+extern s32  midi_note_get_quietest_unreleased(void);
+extern s32  midi_note_get_least_significant(struct MidiBus *midiBus, u32 track, u32 velocity);
+extern void midi_note_stop(struct MidiBus *midiBus, u32 track, u8 key);
+extern s32  midi_note_get_free(struct MidiBus *midiBus, u32 track, u8 key, u8 velocity);
+extern u8   midi_get_stereo_bias_r(u8 panning);
+extern u8   midi_get_stereo_bias_l(u8 panning);
+extern u32  midi_key_to_freq(struct MidiBus *midiBus, u32 key);
+extern void midi_note_start(struct MidiBus *midiBus, u32 track, u8 key, u8 velocity);
 
 /* MIDI CHANNEL OPERATIONS */
 
-extern void func_0804aa40(struct MidiBus *midiBus, u32 track, u16 pitch);
-extern void func_0804aa5c(struct MidiBus *midiBus, u32 track, u8 volume);
-extern void func_0804aa7c(struct MidiBus *midiBus, u32 track, u8 panning);
-extern u8   func_0804aaa4(struct MidiBus *midiBus, u32 track);
-extern void func_0804aae0(struct MidiBus *midiBus, u32 track);
-extern void func_0804ab88(struct MidiBus *midiBus, u32 track, u8 patch);
-extern void func_0804aba8(struct MidiBus *midiBus, u32 track, u8 expression);
-extern void func_0804abc8(struct MidiBus *midiBus, u32 track, u16 select);
-extern void func_0804ac24(struct MidiBus *midiBus, u32 track, u8 arg);
-extern void func_0804ac40(struct MidiBus *midiBus, u32 track, u8 depth);
-extern void func_0804ac60(struct MidiBus *midiBus, u32 track, u8 arg);
-extern void func_0804ac80(struct MidiBus *midiBus, u32 track, u8 useFilter);
-extern void func_0804aca0(struct MidiBus *midiBus, u32 track, u8 type);
-extern void func_0804acc0(struct MidiBus *midiBus, u32 track, u8 arg);
-extern void func_0804accc(struct MidiBus *midiBus, u32 track, u16 speed);
-extern void func_0804acd8(struct MidiBus *midiBus, u32 track, u8 delay);
-extern void func_0804ace4(struct MidiBus *midiBus, u32 track, u8 range);
-extern void func_0804acf0(struct MidiBus *midiBus, u32 track, u32 isStereo);
-extern void func_0804ad18(struct MidiBus *midiBus, u32 track, u8 priority);
-extern void func_0804ad38(struct MidiBus *midiBus, u32 track, u8 range);
-extern void func_0804ad90(struct MidiBus *midiBus, u32 track, u8 arg);
-extern void func_0804ad9c(struct MidiBus *midiBus, u32 track, u8 arg);
+extern void midi_channel_set_pitch(struct MidiBus *midiBus, u32 track, u16 pitch);
+extern void midi_channel_set_volume(struct MidiBus *midiBus, u32 track, u8 volume);
+extern void midi_channel_set_panning(struct MidiBus *midiBus, u32 track, u8 panning);
+extern u8   midi_channel_get_panning(struct MidiBus *midiBus, u32 track);
+extern void midi_channel_update_panning(struct MidiBus *midiBus, u32 track);
+extern void midi_channel_set_patch(struct MidiBus *midiBus, u32 track, u8 patch);
+extern void midi_channel_set_expression(struct MidiBus *midiBus, u32 track, u8 expression);
+extern void midi_channel_set_bankselect(struct MidiBus *midiBus, u32 track, u16 args);
+extern void midi_channel_set_unk0_b0(struct MidiBus *midiBus, u32 track, u8 arg);
+extern void midi_channel_set_mod_depth(struct MidiBus *midiBus, u32 track, u8 depth);
+extern void midi_channel_set_unk4_b21(struct MidiBus *midiBus, u32 track, u8 arg);
+extern void midi_channel_set_enable_filter_eq(struct MidiBus *midiBus, u32 track, u8 useFilter);
+extern void midi_channel_set_mod_type(struct MidiBus *midiBus, u32 track, u8 type);
+extern void midi_channel_set_unkC(struct MidiBus *midiBus, u32 track, u8 arg);
+extern void midi_channel_set_mod_speed(struct MidiBus *midiBus, u32 track, u16 speed);
+extern void midi_channel_set_mod_delay(struct MidiBus *midiBus, u32 track, u8 delay);
+extern void midi_channel_set_mod_range(struct MidiBus *midiBus, u32 track, u8 range);
+extern void midi_channel_set_stereo_phase(struct MidiBus *midiBus, u32 track, u32 isStereo);
+extern void midi_channel_set_priority(struct MidiBus *midiBus, u32 track, u8 priority);
+extern void midi_channel_set_random_key_mod(struct MidiBus *midiBus, u32 track, u8 range);
+extern void midi_channel_set_random53(struct MidiBus *midiBus, u32 track, u8 arg);
+extern void midi_channel_set_random54(struct MidiBus *midiBus, u32 track, u8 arg);
 
 /* MIDI BUS OPERATIONS */
 
-extern void func_0804adb0(struct MidiBus *midiBus, s8 key);
-extern void func_0804adb4(struct MidiBus *midiBus, u8 volume);
-extern void func_0804adb8(struct MidiBus *midiBus, s8 panning);
-extern void func_0804ade4(struct MidiBus *midiBus, s16 pitch);
-extern void func_0804ade8(struct MidiBus *midiBus, u8 range);
-extern void func_0804ae14(struct MidiBus *midiBus, u16 arg);
-extern void func_0804ae18(struct MidiBus *midiBus, u16 *table);
+extern void midi_bus_set_key(struct MidiBus *midiBus, s8 key);
+extern void midi_bus_set_volume(struct MidiBus *midiBus, u8 volume);
+extern void midi_bus_set_panning(struct MidiBus *midiBus, s8 panning);
+extern void midi_bus_set_pitch(struct MidiBus *midiBus, s16 pitch);
+extern void midi_bus_set_mod_range(struct MidiBus *midiBus, u8 range);
+extern void midi_bus_set_unk8(struct MidiBus *midiBus, u16 arg);
+extern void midi_bus_set_tuning(struct MidiBus *midiBus, u16 *table);
 
 /* LOW-FREQUENCY OSCILLATOR OPERATIONS */
 
@@ -349,30 +351,30 @@ extern void midi_player_fade_in(struct SoundPlayer *soundPlayer, u16 duration);
 
 /* MIDI SEQUENCE OPERATIONS */
 
-extern void func_0804b80c(struct SoundPlayer *soundPlayer, const u8 *stream);
-extern u32  func_0804b898(struct SoundPlayer *soundPlayer, const u8 **upstream);
-extern void func_0804b95c(struct SoundPlayer *soundPlayer, u32 track, u8 controller, u8 value);
-extern void func_0804bc5c(u32 track, u32 key, u32 velocity);
-extern u32  func_0804bcc0(struct SoundPlayer *soundPlayer, u32 track);
-extern void func_0804bed0(struct SoundPlayer *soundPlayer, u32 track);
+extern void midi_player_parse_sys_exc_message(struct SoundPlayer *soundPlayer, const u8 *stream);
+extern u32  midi_player_parse_meta_event(struct SoundPlayer *soundPlayer, const u8 **upstream);
+extern void midi_player_parse_controller_change(struct SoundPlayer *soundPlayer, u32 track, u8 controller, u8 value);
+extern void midi_player_add_note(u32 track, u32 key, u32 velocity);
+extern u32  midi_player_read_track(struct SoundPlayer *soundPlayer, u32 track);
+extern void midi_player_update_track(struct SoundPlayer *soundPlayer, u32 track);
 
 /* MAIN SOUND */
 
-extern void func_0804c040(struct SoundPlayer *soundPlayer);
-extern void func_0804c0f8(struct SoundPlayer *soundPlayer);
-extern void func_0804c170(void);
-extern void func_0804c340(u32 rvb0, u32 rvb1, u32 rvb2, u32 rvb3);
-extern void func_0804c358(void);
-extern void func_0804c35c(struct SoundPlayer *soundPlayer, struct MidiBus *midiBus, u32 nTracksMax, struct MidiTrackStream *midiReader, u32 priorityEnabled);
-extern u32  func_0804c398(const u8 **upstream);
+extern void midi_player_update_volume_fade(struct SoundPlayer *soundPlayer);
+extern void midi_player_update_sequence(struct SoundPlayer *soundPlayer);
+extern void midi_player_update_all(void);
+extern void midi_player_set_reverb(u32 rvb0, u32 rvb1, u32 rvb2, u32 rvb3);
+extern void midi_stub(void);
+extern void midi_player_init(struct SoundPlayer *soundPlayer, struct MidiBus *midiBus, u32 nTracksMax, struct MidiTrackStream *midiReader, u32 priorityEnabled);
+extern u32  midi_parse_variable_length(const u8 **upstream);
 
 /* DIRECT-MIDI PLAYER */
 
-extern void func_0804c3c0(struct SoundPlayer *, struct MidiTrackStream *, u32, struct MidiBus *, struct MidiChannel *, u8 *);
-extern void func_0804c4bc(s8 *, u32);
-extern void func_0804c508(void);
-extern void func_0804c6c8(void);
+extern void midi_direct_player_init(struct SoundPlayer *, struct MidiTrackStream *, u32, struct MidiBus *, struct MidiChannel *, u8 *);
+extern void midi_direct_player_append_sequence(s8 *, u32);
+extern void midi_direct_player_read_sequence(void);
+extern void midi_direct_player_update(void);
 
 /* SOUND AREA */
 
-extern void func_0804c778(void);
+extern void lib_midi_init(void);

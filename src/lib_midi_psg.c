@@ -105,7 +105,7 @@ void midi_psg_update_id(u32 id) {
         case PSG_PULSE_CHANNEL_1:
         case PSG_PULSE_CHANNEL_2:
         case PSG_WAVE_CHANNEL:
-            frequency = midi_psg_pitch_to_freq(func_0804a018(soundChannel));
+            frequency = midi_psg_pitch_to_freq(midi_note_update_pitch(soundChannel));
             if (instrument->length != 0) {
                 frequency |= SOUNDCNTX_TIMED_SOUND;
             }
@@ -121,7 +121,7 @@ void midi_psg_update_id(u32 id) {
             break;
     }
 
-    volume = midi_psg_volume_to_env(func_0804a1f4(soundChannel));
+    volume = midi_psg_volume_to_env(midi_note_update_volume(soundChannel));
     reset = (volume != D_03001580[id]) << 15;
 
     if ((volume != D_03001580[id]) || (frequency != D_03001588[id])) {
@@ -189,7 +189,7 @@ void midi_psg_update_id(u32 id) {
 
     D_03001578[id] = 0;
 
-    if (func_0804a224(soundChannel)) {
+    if (midi_note_update_adsr(soundChannel)) {
         D_03001580[id] = 0;
         *envReg = 0;
         D_03001588[id] = SOUNDCNTX_SOUND_RESET;

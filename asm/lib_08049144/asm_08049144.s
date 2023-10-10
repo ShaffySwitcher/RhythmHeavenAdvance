@@ -2,7 +2,7 @@ asm(".syntax unified \n\
 \n\
 .balign 4, 0 \n\
 \n\
-thumb_func_start func_08049144 \n\
+thumb_func_start midi_interrupt_dma2 \n\
 /* 08049144 */ PUSH {R4-R6, LR} \n\
 /* 08049146 */ SUB SP, 0x4 \n\
 /* 08049148 */ LDR R0, =D_030064c4 \n\

@@ -484,8 +484,8 @@ u32 scene_change_music(struct SequenceData *music, u32 override, s32 soundPlayer
     }
 
     D_03005b3c = LFO_MODE_DISABLED;
-    func_08049be4();
-    func_08049b70(0);
+    midi_equalizer_reset();
+    midi_equalizer_set_position(0);
     D_030053c0.musicPlayer = (soundPlayer < 0) ? play_sound(music) : play_sound_in_player(soundPlayer, music);
     D_030053c0.musicBaseBPM = get_music_base_tempo(music);
     update_beatscript_tempo();

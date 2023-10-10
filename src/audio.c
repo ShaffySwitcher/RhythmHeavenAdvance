@@ -301,7 +301,7 @@ u32 soundplayer_is_playing(struct SoundPlayer *soundPlayer) {
 // Set SoundPlayer Key Offset
 void set_soundplayer_key(struct SoundPlayer *soundPlayer, s32 key) {
     if (soundPlayer != NULL) {
-        func_0804adb0(soundPlayer->midiBus, key);
+        midi_bus_set_key(soundPlayer->midiBus, key);
     }
 }
 
@@ -314,7 +314,7 @@ void func_080029d8(u32 soundMode) {
         REG_SOUNDCNT_H &= ~(SOUNDCNT_DIRECT_SOUND_A_LEFT_ENABLE | SOUNDCNT_DIRECT_SOUND_B_RIGHT_ENABLE);
     }
 
-    func_08049bfc(soundMode, 166, 6);
+    midi_equalizer_set(soundMode, 166, 6);
 }
 
 

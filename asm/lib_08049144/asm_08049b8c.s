@@ -2,7 +2,7 @@ asm(".syntax unified \n\
 \n\
 .balign 4, 0 \n\
 \n\
-thumb_func_start func_08049b8c \n\
+thumb_func_start midi_equalizer_set_high_gain \n\
 /* 08049b8c */ PUSH {LR} \n\
 /* 08049b8e */ LSLS R0, R0, 0x18 \n\
 /* 08049b90 */ LSRS R1, R0, 0x18 \n\

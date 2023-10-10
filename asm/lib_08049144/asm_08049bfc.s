@@ -2,7 +2,7 @@ asm(".syntax unified \n\
 \n\
 .balign 4, 0 \n\
 \n\
-thumb_func_start func_08049bfc \n\
+thumb_func_start midi_equalizer_set \n\
 /* 08049bfc */ PUSH {R4-R7, LR} \n\
 /* 08049bfe */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 08049c00 */ ADDS R6, R1, 0x0 @ Set R6 to R1 + 0x0 \n\
@@ -16,7 +16,7 @@ branch_08049c0a: \n\
 /* 08049c0c */ LDRB R0, [R5] \n\
 /* 08049c0e */ CMP R0, R4 @ Check R0 - R4 \n\
 /* 08049c10 */ BEQ branch_08049c20 \n\
-/* 08049c12 */ BL func_08049bac \n\
+/* 08049c12 */ BL midi_equalizer_init \n\
 /* 08049c16 */ STRB R4, [R5] \n\
 /* 08049c18 */ LDR R0, =D_03005620 \n\
 /* 08049c1a */ STR R6, [R0] \n\

@@ -2,7 +2,7 @@ asm(".syntax unified \n\
 \n\
 .balign 4, 0 \n\
 \n\
-thumb_func_start func_0804a690 \n\
+thumb_func_start midi_key_to_freq \n\
 /* 0804a690 */ PUSH {LR} \n\
 /* 0804a692 */ LSLS R1, R1, 0x18 \n\
 /* 0804a694 */ LSRS R2, R1, 0x18 \n\

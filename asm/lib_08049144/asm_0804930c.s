@@ -2,7 +2,7 @@ asm(".syntax unified \n\
 \n\
 .balign 4, 0 \n\
 \n\
-thumb_func_start func_0804930c \n\
+thumb_func_start midi_sampler_load \n\
 /* 0804930c */ PUSH {R4-R6, LR} \n\
 /* 0804930e */ ADDS R3, R1, 0x0 @ Set R3 to R1 + 0x0 \n\
 /* 08049310 */ LDR R1, =D_03005b88 \n\

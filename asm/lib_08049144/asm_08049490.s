@@ -2,7 +2,7 @@ asm(".syntax unified \n\
 \n\
 .balign 4, 0 \n\
 \n\
-thumb_func_start func_08049490 \n\
+thumb_func_start midi_directsound_init \n\
 /* 08049490 */ PUSH {R4-R7, LR} \n\
 /* 08049492 */ MOV R7, R10 @ Set R7 to R10 \n\
 /* 08049494 */ MOV R6, R9 @ Set R6 to R9 \n\
@@ -216,7 +216,7 @@ branch_08049672: \n\
 /* 08049672 */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 08049674 */ MOV R3, R10 @ Set R3 to R10 \n\
 /* 08049676 */ STRH R0, [R3] \n\
-/* 08049678 */ BL func_080497f8 \n\
+/* 08049678 */ BL midi_directsound_update \n\
 /* 0804967c */ LDR R1, =0x04000084 @ !Hardware REG_SOUNDCNT_X \n\
 /* 0804967e */ MOVS R0, 0x80 @ Set R0 to 0x80 \n\
 /* 08049680 */ STRB R0, [R1] \n\

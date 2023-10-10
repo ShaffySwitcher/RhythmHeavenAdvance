@@ -2,7 +2,7 @@ asm(".syntax unified \n\
 \n\
 .balign 4, 0 \n\
 \n\
-thumb_func_start func_080493c8 \n\
+thumb_func_start midi_sampler_set_stereo_bias \n\
 /* 080493c8 */ PUSH {R4, LR} \n\
 /* 080493ca */ LDR R4, =D_03005b88 \n\
 /* 080493cc */ LDR R3, [R4] \n\
