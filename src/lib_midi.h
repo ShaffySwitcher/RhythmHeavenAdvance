@@ -62,11 +62,12 @@ enum MidiTrackStreamEndEnum {
     /* 02 */ M_TRACK_STREAM_LOOP
 };
 
-#define INSTRUMENT_PCM_ALIGNED 'A' // 0x41
-#define INSTRUMENT_PCM_FIXED   'F' // 0x46
-#define INSTRUMENT_PSG         'P' // 0x50
-#define INSTRUMENT_SUB_RHYTHM  'R' // 0x52
-#define INSTRUMENT_SUB_SPLIT   'S' // 0x53
+#define INSTRUMENT_PCM_ALIGNED  'A' // 0x41
+#define INSTRUMENT_PCM_FIXED    'F' // 0x46
+#define INSTRUMENT_PSG          'P' // 0x50
+#define INSTRUMENT_PSG_ALT      'Q' // 0x51
+#define INSTRUMENT_SUB_RHYTHM   'R' // 0x52
+#define INSTRUMENT_SUB_SPLIT    'S' // 0x53
 
 #define MSG_NOTE_OFF                    0x80
 #define MSG_NOTE_ON                     0x90
@@ -264,7 +265,7 @@ extern void midi_note_stop(struct MidiBus *midiBus, u32 track, u8 key);
 extern s32  midi_note_get_free(struct MidiBus *midiBus, u32 track, u8 key, u8 velocity);
 extern u8   midi_get_stereo_bias_r(u8 panning);
 extern u8   midi_get_stereo_bias_l(u8 panning);
-extern u32  midi_key_to_freq(struct MidiBus *midiBus, u32 key);
+// extern u32 midi_key_to_freq(struct MidiBus *midiBus, u8 key);
 extern void midi_note_start(struct MidiBus *midiBus, u32 track, u8 key, u8 velocity);
 
 /* MIDI CHANNEL OPERATIONS */
@@ -277,7 +278,7 @@ extern void midi_channel_update_panning(struct MidiBus *midiBus, u32 track);
 extern void midi_channel_set_patch(struct MidiBus *midiBus, u32 track, u8 patch);
 extern void midi_channel_set_expression(struct MidiBus *midiBus, u32 track, u8 expression);
 extern void midi_channel_set_bankselect(struct MidiBus *midiBus, u32 track, u16 args);
-extern void midi_channel_set_unk0_b0(struct MidiBus *midiBus, u32 track, u8 arg);
+extern void midi_channel_set_disable(struct MidiBus *midiBus, u32 track, u8 disable);
 extern void midi_channel_set_mod_depth(struct MidiBus *midiBus, u32 track, u8 depth);
 extern void midi_channel_set_unk4_b21(struct MidiBus *midiBus, u32 track, u8 arg);
 extern void midi_channel_set_enable_filter_eq(struct MidiBus *midiBus, u32 track, u8 useFilter);
@@ -288,9 +289,9 @@ extern void midi_channel_set_mod_delay(struct MidiBus *midiBus, u32 track, u8 de
 extern void midi_channel_set_mod_range(struct MidiBus *midiBus, u32 track, u8 range);
 extern void midi_channel_set_stereo_phase(struct MidiBus *midiBus, u32 track, u32 isStereo);
 extern void midi_channel_set_priority(struct MidiBus *midiBus, u32 track, u8 priority);
-extern void midi_channel_set_random_key_mod(struct MidiBus *midiBus, u32 track, u8 range);
-extern void midi_channel_set_random53(struct MidiBus *midiBus, u32 track, u8 arg);
-extern void midi_channel_set_random54(struct MidiBus *midiBus, u32 track, u8 arg);
+extern void midi_channel_set_random_pitch(struct MidiBus *midiBus, u32 track, u8 range);
+extern void midi_channel_set_random_key_mod_depth(struct MidiBus *midiBus, u32 track, u8 maxOffset);
+extern void midi_channel_set_random_key_mod_interval(struct MidiBus *midiBus, u32 track, u8 interval);
 
 /* MIDI BUS OPERATIONS */
 
