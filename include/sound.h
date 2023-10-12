@@ -303,8 +303,8 @@ struct MidiTrackStream {
 };
 
 struct SoundPlayer {
-    u32 nTracksMax:5;   // Maximum number of MIDI Tracks this SoundPlayer is able to process.
-    u32 nTracksUsed:5;  // Total number of MIDI Tracks used by the given MIDI.
+    u32 totalTracks:5;  // Maximum number of MIDI Tracks this SoundPlayer is able to process.
+    u32 usedTracks:5;   // Total number of MIDI Tracks used by the current MIDI.
     u32 inLoop:1;       // Channel is currently within MIDI loop region. [default = 0]
     u32 isPaused:1;     // Paused State { 0 = Unpaused; 1 = Paused }
     u32 midiTempo:9;    // Current MIDI Tempo, in Beats Per Minute (BPM).
@@ -409,7 +409,7 @@ extern struct SoundPlayer *D_08aa4324[];
 // [D_08aa4358] SoundPlayer Init. Table
 extern struct SoundPlayerInitTable {
     u16 id:5;
-    u16 trackCount:5;
+    u16 totalTracks:5;
     u16 priorityEnabled:6; // FALSE for music; TRUE for sfx
     struct MidiChannel *midiChannels;
     struct MidiBus *midiBus;
@@ -424,6 +424,6 @@ extern u8 D_08aa445c;
 extern struct SoundPlayerTable {
     struct SoundPlayer *soundPlayer;
     u32 null4; // unused
-    u16 trackCount;
+    u16 totalTracks;
     u16 priorityEnabled;
 } D_08aa4460[];
