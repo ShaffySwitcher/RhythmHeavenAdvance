@@ -126,10 +126,10 @@ typedef volatile u16 *IOReg;
 
 
 // STATIC VARIABLES
-extern volatile s32 D_03001888[1568*2]; // [D_03001888] DIRECTSOUND - DMA Source Addresses { &D_03001888[0] = Right; &D_03001888[D_03005b24] = Left }
-extern volatile s32 D_030024c8[0x400];  // [D_030024c8] DIRECTSOUND - Sample Processing ScratchPad
+extern volatile s32 D_03001888[1568*2];     // [D_03001888] DIRECTSOUND - DMA Source Addresses { &D_03001888[0] = Right; &D_03001888[D_03005b24] = Left }
+extern s32 D_030024c8[0x400];               // [D_030024c8] DIRECTSOUND - Sample Processing ScratchPad
 extern struct SampleStream D_030028c8[12];  // [D_030028c8] DIRECTSOUND - DMA Sample Readers (12 Channels)
-extern struct SoundChannel D_03002a48[12];     // [D_03002a48] DIRECTSOUND - DirectSound Channels (12 Channels)
+extern struct SoundChannel D_03002a48[12];  // [D_03002a48] DIRECTSOUND - DirectSound Channels (12 Channels)
 
 extern u16 D_030055f0;              // [D_030055f0] MIDI4AGB - Set to REG_VCOUNT near the start of each update.
 extern u32 D_030055f4;              // [D_030055f4] DIRECTSOUND - Initial Sound Mode { 0 = Stereo; 1 = Mono (One Channel); 2 = Mono (Two Channels) }
@@ -149,7 +149,7 @@ extern struct MidiNote D_03005650[20];     // [D_03005650] MIDI - Note Buffer
 extern struct SoundChannel D_030056a0[4];  // [D_030056a0] PSG CHANNEL - PSG Channels { 0 = Tone+Sweep; 1 = Tone; 2 = Wave; 3 = Noise }
 extern s8  D_03005720[0x400];       // [D_03005720] DIRECTSOUND - DMA Buffer Sample = D_03005720[(ScratchPad Sample >> 7) & 0x3ff]
 extern u16 D_03005b20;              // [D_03005b20] UNDEFINED - Total Bytes in array at D_03005b7c
-extern volatile u32 D_03005b24;     // [D_03005b24] DIRECTSOUND - Number of 32-bit samples per DMA Source Address ( = 0x620 / 4 ( = 392))
+extern volatile u32 D_03005b24;     // [D_03005b24] DIRECTSOUND - Number of 32-bit samples per DMA Source Address ( = 1568 / 4)
 extern u8  D_03005b28;              // [D_03005b28] FILTER EQ - High Gain [mCtrl4C]
 
 // [D_03005b30] LFO - Low-Frequency Oscillator
@@ -200,7 +200,18 @@ extern u8 midi_direct_player_volume;
 extern u8 midi_direct_player_priority;
 extern u8 midi_direct_player_tempo;
 
+/* ASSEMBLY */
 
+typedef void (*ThumbFunc)();
+#define ALIGN_THUMB_FUNC(x) (ThumbFunc)((u32)&x|1)
+
+extern ThumbFunc func_0804833e;
+extern ThumbFunc func_080483b8;
+extern ThumbFunc func_08048758;
+extern ThumbFunc func_08048a00;
+extern ThumbFunc func_08048b9c;
+extern ThumbFunc func_08048d58;
+extern ThumbFunc func_08048fc0;
 
 /* INTERRUPT_DMA2 */
 
@@ -220,7 +231,7 @@ extern void midi_sampler_set_enable_eq(u32 id, u32 enable);
 /* DIRECTSOUND OPERATIONS */
 
 extern void midi_directsound_init(u32 soundMode, u32 sampleRate, u32 bufferSize, volatile s32 *buffer, u32 scratchSize,
-                                    volatile s32 *scratch, u16 samplerCount, struct SampleStream *samplerPool);
+                                    s32 *scratch, u16 samplerCount, struct SampleStream *samplerPool);
 extern void midi_directsound_update(void);
 extern void midi_directsound_flush(void);
 extern void midi_directsound_set_reverb(u32 rvb0, u32 rvb1, u32 rvb2, u32 rvb3);
