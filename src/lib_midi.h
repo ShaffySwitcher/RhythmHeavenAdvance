@@ -377,14 +377,16 @@ extern void midi_player_update_sequence(struct SoundPlayer *soundPlayer);
 extern void midi_player_update_all(void);
 extern void midi_player_set_reverb(u32 rvb0, u32 rvb1, u32 rvb2, u32 rvb3);
 extern void midi_stub(void);
-extern void midi_player_init(struct SoundPlayer *soundPlayer, struct MidiBus *midiBus, u32 nTracksMax, struct MidiTrackStream *midiReader, u32 priorityEnabled);
+extern void midi_player_init(struct SoundPlayer *soundPlayer, struct MidiBus *midiBus, u32 totalTracks,
+                                struct MidiTrackStream *midiReader, u32 priorityEnabled);
 extern u32  midi_parse_variable_length(const u8 **upstream);
 
 /* DIRECT-MIDI PLAYER */
 
-extern void midi_direct_player_init(struct SoundPlayer *, struct MidiTrackStream *, u32, struct MidiBus *, struct MidiChannel *, u8 *);
-extern void midi_direct_player_append_sequence(s8 *, u32);
-extern void midi_direct_player_read_sequence(void);
+extern void midi_direct_player_init(struct SoundPlayer *soundPlayer, struct MidiTrackStream *midiReader, u32 totalTracks,
+                                        struct MidiBus *midiBus, struct MidiChannel *midiChannels, u8 *sequenceSource);
+extern void midi_direct_player_append_sequence(u8 *sequence, u32 length);
+extern u32  midi_direct_player_read_sequence(void);
 extern void midi_direct_player_update(void);
 
 /* SOUND AREA */

@@ -9,12 +9,13 @@ asm(".include \"include/gba.inc\"");//Temporary
 
 
 // STATIC VARIABLES
-static struct SoundPlayer *D_03001598; // DirectMidi Sound Player
-static struct MidiBus *D_0300159c;     // DirectMidi MidiBus
-static u8 *D_030015a0;          // DirectMidi Sequence (max. size = 0x200)
-static u16 D_030015a4;          // DirectMidi Sequence Length
-static u8  D_030015a6;          // DirectMidi Sequence Current Command
-static u8  D_030015a7;          // Initial value at D_03005b7c
+static struct SoundPlayer *sDirectPlayer;   // DirectMidi SoundPlayer
+static struct MidiBus *sDirectBus;          // DirectMidi MidiBus
+static u8 *sDirectSequence;                 // DirectMidi Sequence (max. size = 0x200)
+static u16 sDirectLength;                   // DirectMidi Sequence Length
+static u8 sDirectLastCommand;               // DirectMidi Sequence Current Command
+
+static u8 D_030015a7;   // Initial value at D_03005b7c
 
 
 // Evaluate Big-Endian Short
@@ -76,17 +77,17 @@ void midi_player_play_header(struct SoundPlayer *soundPlayer, struct SequenceDat
     chunkLength = midi_player_parse_be32(mTrkStream);
     mTrkStream += 4; // Skip (Header: Length)
     trackTotal = midi_player_parse_be16(mTrkStream + 2); // Header: Number of MIDI Tracks
-    soundPlayer->nTracksUsed = trackTotal;
+    soundPlayer->usedTracks = trackTotal;
 
-    if (soundPlayer->nTracksUsed > soundPlayer->nTracksMax) {
-        soundPlayer->nTracksUsed = soundPlayer->nTracksMax;
+    if (soundPlayer->usedTracks > soundPlayer->totalTracks) {
+        soundPlayer->usedTracks = soundPlayer->totalTracks;
     }
     soundPlayer->midiQuarterNote = midi_player_parse_be16(mTrkStream + 4); // Header: Division
     mTrkStream += chunkLength; // Skip (Header: Data)
 
     // Track:
     mTrkReader = soundPlayer->midiReader;
-    for (i = 0; i < soundPlayer->nTracksUsed; i++) {
+    for (i = 0; i < soundPlayer->usedTracks; i++) {
         mTrkStream += 4; // Skip (Track: Header)
         chunkLength = midi_player_parse_be32(mTrkStream);
         mTrkStream += 4; // Skip (Track: Length)
@@ -161,7 +162,7 @@ u32 midi_player_is_playing(struct SoundPlayer *soundPlayer) {
         return FALSE;
     }
 
-    for (i = 0; i < soundPlayer->nTracksUsed; i++) {
+    for (i = 0; i < soundPlayer->usedTracks; i++) {
         if (soundPlayer->midiReader[i].active_curr) {
             return TRUE;
         }
@@ -595,7 +596,7 @@ u32 midi_player_read_track(struct SoundPlayer *soundPlayer, u32 track) {
                         if (!soundPlayer->inLoop) {
                             break;
                         }
-                        for (i = 0; i < soundPlayer->nTracksUsed; i++) {
+                        for (i = 0; i < soundPlayer->usedTracks; i++) {
                             tempReader = &soundPlayer->midiReader[i];
                             tempReader->active_curr = tempReader->active_loop;
                             tempReader->command_curr = tempReader->command_loop;
@@ -800,7 +801,7 @@ void midi_player_update_sequence(struct SoundPlayer *soundPlayer) {
     D_0300562c = 0;
 
     // Update MIDI Track Streams
-    for (i = 0; i < soundPlayer->nTracksUsed; i++) {
+    for (i = 0; i < soundPlayer->usedTracks; i++) {
         midi_player_update_track(soundPlayer, i);
     }
 
@@ -812,7 +813,7 @@ void midi_player_update_sequence(struct SoundPlayer *soundPlayer) {
     // Check if any MIDI Track Readers are currently operating.
     mTrkReader = soundPlayer->midiReader;
     noActiveReader = TRUE;
-    for (i = 0; (i < soundPlayer->nTracksUsed) && noActiveReader; i++, mTrkReader++) {
+    for (i = 0; (i < soundPlayer->usedTracks) && noActiveReader; i++, mTrkReader++) {
         if (mTrkReader->active_curr) {
             noActiveReader = FALSE;
         }
@@ -854,7 +855,7 @@ void midi_player_update_all(void) {
     }
 
     // DirectMidi Player
-    soundPlayer = D_03001598;
+    soundPlayer = sDirectPlayer;
     if (midi_direct_player_enabled && (soundPlayer != NULL)) {
         midi_direct_player_update();
         rvb0 -= (64 * 2) - (soundPlayer->midiController4E * 2);
@@ -902,10 +903,10 @@ void midi_stub(void) {
 
 
 // Initialise SoundPlayer
-void midi_player_init(struct SoundPlayer *soundPlayer, struct MidiBus *midiBus, u32 nTracksMax, struct MidiTrackStream *midiReader, u32 priorityEnabled) {
+void midi_player_init(struct SoundPlayer *soundPlayer, struct MidiBus *midiBus, u32 totalTracks, struct MidiTrackStream *midiReader, u32 priorityEnabled) {
     soundPlayer->sequence = NULL;
     soundPlayer->midiBus = midiBus;
-    soundPlayer->nTracksMax = nTracksMax;
+    soundPlayer->totalTracks = totalTracks;
     soundPlayer->midiReader = midiReader;
     soundPlayer->priorityEnabled = priorityEnabled;
     soundPlayer->sequenceVolume = 100;
@@ -915,12 +916,11 @@ void midi_player_init(struct SoundPlayer *soundPlayer, struct MidiBus *midiBus, 
 // Parse Midi Variable-Length Quantity
 u32 midi_parse_variable_length(const u8 **upstream) {
     const u8 *stream = *upstream;
-    u8 current;
     u32 time = 0;
+    u8 current;
 
     do {
-        current = *stream;
-        stream++;
+        current = *stream++;
         time <<= 7;
         time |= (current & 0x7F);
     } while ((current & 0x80) != 0);
@@ -931,22 +931,233 @@ u32 midi_parse_variable_length(const u8 **upstream) {
 
 
 // Initialise DirectMidi Player
-#include "asm/lib_08049144/asm_0804c3c0.s"
+void midi_direct_player_init(struct SoundPlayer *soundPlayer, struct MidiTrackStream *midiReader, u32 totalTracks,
+                                struct MidiBus *midiBus, struct MidiChannel *midiChannels, u8 *sequenceSource) {
+    if (!midi_direct_player_enabled) {
+        return;
+    }
+
+    midi_bus_init(midiBus, totalTracks, midiChannels);
+    midi_bus_set_bank(midiBus, instrument_banks[midi_direct_player_bank_id]);
+    midi_bus_set_volume(midiBus, midi_direct_player_volume);
+    midi_bus_set_priority(midiBus, midi_direct_player_priority);
+    midi_player_init(soundPlayer, midiBus, totalTracks, midiReader, midi_direct_player_priority);
+
+    soundPlayer->playerSpeed = (1 << 8);
+    soundPlayer->trackVolume = (1 << 8);
+    soundPlayer->volumeFadeType = 0;
+    soundPlayer->volumeFadeEnv = (1 << 15);
+    soundPlayer->volumeFadeSpd = 0;
+    soundPlayer->midiTempo = midi_direct_player_tempo;
+    soundPlayer->deltaTime = midi_player_get_delta_time(midi_direct_player_tempo, (1 << 8), 24);
+    soundPlayer->midiController4E = 64;
+    soundPlayer->midiController4F = 64;
+    soundPlayer->midiController50 = 64;
+    soundPlayer->midiController51 = 64;
+
+    sDirectPlayer = soundPlayer;
+    sDirectBus = midiBus;
+    sDirectSequence = sequenceSource;
+    sDirectLength = 0;
+    sDirectLastCommand = 0;
+}
 
 
 // Append DirectMidi Sequence Instructions
-#include "asm/lib_08049144/asm_0804c4bc.s"
+void midi_direct_player_append_sequence(u8 *sequence, u32 length) {
+    while ((length != 0) && (sDirectLength < 0x200)) {
+        sDirectSequence[sDirectLength++] = *sequence;
+        sequence++;
+        length--;
+    }
+}
 
 
 // Parse DirectMidi Sequence Instructions
-#include "asm/lib_08049144/asm_0804c508.s"
+u32 midi_direct_player_read_sequence(void) {
+    struct SoundPlayer *soundPlayer = sDirectPlayer;
+    u8 *stream = sDirectSequence;
+    u32 sequenceLength = sDirectLength;
+    u32 lengthIsInsufficient = FALSE;
+    u32 i;
+
+    while ((sequenceLength != 0) && !lengthIsInsufficient) {
+        u32 shortCommandLength, longCommandLength;
+        u8 *commandArgs;
+        u8 command, arg0, arg1;
+        u32 track;
+        u16 pitch;
+
+        if (stream[0] >= 0x80) {
+            command = 0xF0 & stream[0];
+            track = 0x0F & stream[0];
+            commandArgs = stream + 1;
+            i = 1;
+            sDirectLastCommand = ((command >= 0x80) && (command < 0xF0)) ? stream[0] : 0;
+        } else {
+            command = 0xF0 & sDirectLastCommand;
+            track = 0x0F & sDirectLastCommand;
+            commandArgs = stream;
+            i = 0;
+        }
+
+        shortCommandLength = i + 1;
+        longCommandLength = i + 2;
+        arg0 = commandArgs[0];
+        arg1 = commandArgs[1];
+
+        switch (command) {
+            // Note Off
+            case MSG_NOTE_OFF:
+                if (sequenceLength < longCommandLength) {
+                    lengthIsInsufficient = TRUE;
+                    break;
+                }
+                midi_player_add_note(track, arg0, 0);
+                stream += longCommandLength;
+                sequenceLength -= longCommandLength;
+                break;
+
+            // Note On
+            case MSG_NOTE_ON:
+                if (sequenceLength < longCommandLength) {
+                    lengthIsInsufficient = TRUE;
+                    break;
+                }
+                midi_player_add_note(track, arg0, arg1);
+                stream += longCommandLength;
+                sequenceLength -= longCommandLength;
+                break;
+
+            // Polyphonic Key Pressure (Aftertouch) [Not Supported]
+            case MSG_POLYPHONIC_KEY_PRESSURE:
+                if (sequenceLength < longCommandLength) {
+                    lengthIsInsufficient = TRUE;
+                    break;
+                }
+                stream += longCommandLength;
+                sequenceLength -= longCommandLength;
+                break;
+
+            // MIDI Controller Change
+            case MSG_CONTROLLER_CHANGE:
+                if (sequenceLength < longCommandLength) {
+                    lengthIsInsufficient = TRUE;
+                    break;
+                }
+                midi_player_parse_controller_change(soundPlayer, track, arg0, arg1);
+                stream += longCommandLength;
+                sequenceLength -= longCommandLength;
+                break;
+
+            // Program Change
+            case MSG_PROGRAM_CHANGE:
+                if (sequenceLength < shortCommandLength) {
+                    lengthIsInsufficient = TRUE;
+                    break;
+                }
+                midi_channel_set_patch(soundPlayer->midiBus, track, arg0);
+                stream += shortCommandLength;
+                sequenceLength -= shortCommandLength;
+                break;
+
+            // Channel Pressure (Aftertouch) [Not Supported]
+            case MSG_CHANNEL_PRESSURE:
+                if (sequenceLength < shortCommandLength) {
+                    lengthIsInsufficient = TRUE;
+                    break;
+                }
+                stream += shortCommandLength;
+                sequenceLength -= shortCommandLength;
+                break;
+
+            // Pitch Wheel Change
+            case MSG_PITCH_WHEEL_CHANGE:
+                if (sequenceLength < longCommandLength) {
+                    lengthIsInsufficient = TRUE;
+                    break;
+                }
+                pitch = (arg0 & 0x7F) | ((arg1 & 0x7F) << 7);
+                midi_channel_set_pitch(soundPlayer->midiBus, track, pitch);
+                stream += longCommandLength;
+                sequenceLength -= longCommandLength;
+                break;
+
+            // Meta Event / System Message
+            case 0xF0:
+                switch (track) {
+                    case 0:
+                        for (i = 1; (i < sequenceLength) && (stream[i] < 0x80); i++);
+                        midi_player_parse_sys_exc_message(soundPlayer, stream + 1);
+                        stream += i;
+                        sequenceLength -= i;
+                        break;
+
+                    case 1:
+                    case 2:
+                    case 3:
+                        if (sequenceLength < 2) {
+                            lengthIsInsufficient = TRUE;
+                            break;
+                        }
+                        stream += 2;
+                        sequenceLength -= 2;
+                        break;
+
+                    default:
+                        stream += 1;
+                        sequenceLength -= 1;
+                        break;
+                }
+                break;
+
+            default:
+                stream += 1;
+                sequenceLength -= 1;
+                break;
+        }
+    }
+
+    for (i = 0; i < sequenceLength; i++) {
+        sDirectSequence[i] = stream[i];
+    }
+
+    sDirectLength = sequenceLength;
+}
 
 
 // Update DirectMidi Player
-#include "asm/lib_08049144/asm_0804c6c8.s"
+void midi_direct_player_update(void) {
+    struct MidiChannel *midiChannel;
+    struct MidiNote *note;
+    u32 anyNotePlayed;
+    u32 i;
+
+    midi_channel_update_mod_all(sDirectBus);
+    anyNotePlayed = FALSE;
+    D_03005b78 = 0;
+    midi_direct_player_read_sequence();
+
+    for (note = D_03005650, i = 0; i < D_03005b78; i++, note++) {
+        if (note->velocity != 0) {
+            midi_note_start(sDirectBus, note->channel, note->key, note->velocity);
+
+            midiChannel = &sDirectBus->midiChannel[note->channel];
+            if (midiChannel->filterEQ && (D_03005b3c == LFO_MODE_KEYPRESS)) {
+                anyNotePlayed = TRUE;
+            }
+        } else {
+            midi_note_stop(sDirectBus, note->channel, note->key);
+        }
+    }
+    if (anyNotePlayed) {
+        midi_equalizer_reset();
+        midi_lfo_start(&D_03005b30);
+    }
+}
 
 
-// Init. Sound Area
+// Initialise Sound Area
 void lib_midi_init(void) {
     u32 i;
 
@@ -958,8 +1169,8 @@ void lib_midi_init(void) {
     midi_note_init(DIRECTSOUND_CHANNEL_COUNT, D_03002a48);
 
     for (i = 0; i < SOUND_PLAYER_COUNT; i++) {
-        midi_bus_init(D_08aa4358[i].midiBus, D_08aa4358[i].trackCount, D_08aa4358[i].midiChannels);
-        midi_player_init(D_08aa4358[i].soundPlayer, D_08aa4358[i].midiBus, D_08aa4358[i].trackCount, D_08aa4358[i].trackStreams, D_08aa4358[i].priorityEnabled);
+        midi_bus_init(D_08aa4358[i].midiBus, D_08aa4358[i].totalTracks, D_08aa4358[i].midiChannels);
+        midi_player_init(D_08aa4358[i].soundPlayer, D_08aa4358[i].midiBus, D_08aa4358[i].totalTracks, D_08aa4358[i].trackStreams, D_08aa4358[i].priorityEnabled);
     }
 
     D_03005b7c = &D_030015a7;
@@ -975,5 +1186,5 @@ void lib_midi_init(void) {
     D_03005b90[1] = 0;
     D_03005b90[2] = 0;
     D_03005b90[3] = 0;
-    D_03001598 = NULL;
+    sDirectPlayer = NULL;
 }
