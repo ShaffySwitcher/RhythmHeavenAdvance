@@ -178,12 +178,127 @@ void midi_sampler_set_enable_eq(u32 id, u32 enable) {
 /* DIRECTSOUND OPERATIONS */
 
 
-// Initialise DirectSound
+// Initialise DirectSound (https://decomp.me/scratch/ohUd1)
 #include "asm/lib_08049144/asm_08049490.s"
 
 
-// Update DirectSound
-#include "asm/lib_08049144/asm_080497f8.s"
+// Update DirectSound (https://decomp.me/scratch/jRyYQ)
+void midi_directsound_update(void) {
+    ThumbFunc fastProcessBaseFreq, fastProcessShiftedFreq, fastProcessDistort;
+    ThumbFunc fastProcessEQ;
+    u32 noSamplesProcessed;
+    struct SampleStream *streams;
+    s32 wordsPerFrame, unreadProcessedWords;
+    u32 totalWordsToProcess, wordBatchSize;
+    u32 sampleBufferPos;
+    u32 eqWasUsed;
+    u8 eqPosition;
+    u16 eqHighGain;
+    u32 eqSmoothing;
+    u32 i;
+
+    if (!D_030064c4) {
+        return;
+    }
+
+    fastProcessBaseFreq = ALIGN_THUMB_FUNC(func_08048b9c);
+    fastProcessShiftedFreq = ALIGN_THUMB_FUNC(func_080483b8);
+    fastProcessDistort = ALIGN_THUMB_FUNC(func_08048d58);
+    fastProcessEQ = ALIGN_THUMB_FUNC(func_08048fc0);
+    streams = D_03005b88;
+
+    wordsPerFrame = (D_030064a8 + 259) / 4;
+    if (wordsPerFrame > D_03005b24) {
+        wordsPerFrame = D_03005b24;
+    }
+
+    unreadProcessedWords = D_03005b40 - D_030064a0;
+    if (unreadProcessedWords < 0) {
+        unreadProcessedWords += D_03005b24;
+    }
+
+    totalWordsToProcess = (wordsPerFrame > unreadProcessedWords) ? (wordsPerFrame - unreadProcessedWords) : 0;
+
+    eqPosition = D_03005620[0];
+    if ((D_030064c0 >= 0) && (eqPosition > 127)) { // High-Pass
+        D_03005620[1] = 0;
+        D_03005620[2] = 0;
+    } else if ((D_030064c0 < 0) && (eqPosition <= 127)) { // Low-Pass
+        D_03005620[1] = D_030064b0[D_03005638 - 2];
+        D_03005620[2] = D_030064b0[D_03005638 - 1];
+    }
+    D_030064c0 = eqPosition;
+
+    while (totalWordsToProcess != 0) {
+        wordBatchSize = D_03005638 / 4;
+        if (wordBatchSize > totalWordsToProcess) {
+            wordBatchSize = totalWordsToProcess;
+        }
+
+        (ALIGN_THUMB_FUNC(func_08048758))(wordBatchSize);
+
+        noSamplesProcessed = TRUE;
+        eqWasUsed = FALSE;
+        eqPosition = D_03005620[0];
+        eqHighGain = 0;
+
+        for (i = 0; i < D_03005610; i++) {
+            eqSmoothing = 256 - eqPosition;
+
+            if (streams[i].active) {
+                if (streams[i].equalize || D_03005b44) {
+                    noSamplesProcessed = FALSE;
+                    eqWasUsed = TRUE;
+                    if (eqPosition > 127) {
+                        eqHighGain = (streams[i].volume * eqSmoothing * D_03005b28) >> 7;
+                    }
+                    D_030064ac = eqHighGain;
+
+                    if (!streams[i].hasFrequency) {
+                        fastProcessBaseFreq(wordBatchSize, &streams[i]);
+                    } else if (streams[i].distort) {
+                        fastProcessDistort(wordBatchSize, &streams[i]);
+                    } else {
+                        fastProcessShiftedFreq(wordBatchSize, &streams[i]);
+                    }
+                }
+            }
+        }
+
+        if (eqWasUsed) {
+            fastProcessEQ(wordBatchSize, D_03005620);
+        }
+
+        D_030064ac = 0;
+        for (i = 0; i < D_03005610; i++) {
+            if (streams[i].active) {
+                if (!streams[i].equalize && !D_03005b44) {
+                    noSamplesProcessed = FALSE;
+
+                    if (!streams[i].hasFrequency) {
+                        fastProcessBaseFreq(wordBatchSize, &streams[i]);
+                    } else if (streams[i].distort) {
+                        fastProcessDistort(wordBatchSize, &streams[i]);
+                    } else {
+                        fastProcessShiftedFreq(wordBatchSize, &streams[i]);
+                    }
+                }
+            }
+        }
+
+        D_03005720[0x3FF] = (noSamplesProcessed) ? 0 : -1;
+        (ALIGN_THUMB_FUNC(func_08048a00))(wordBatchSize);
+
+        sampleBufferPos = D_03005b40 + wordBatchSize;
+        while (sampleBufferPos >= D_03005b24) {
+            sampleBufferPos -= D_03005b24;
+        }
+        D_03005b40 = sampleBufferPos;
+
+        totalWordsToProcess -= wordBatchSize;
+        D_03005b84 = REG_VCOUNT;
+    }
+}
 
 
 // Flush(?) DirectSound (Unused)
