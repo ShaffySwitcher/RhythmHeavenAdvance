@@ -1,143 +1,142 @@
-// WARNING: do not try to call most of these functions from C!
-// A lot of the thumb functions don't have the thumb bit set in
-// their addresses, so they need to be orred with 1 first!
+@ WARNING: do not try to call most of these functions from C!
+@ A lot of the thumb functions don't have the thumb bit set in
+@ their addresses, so they need to be ORR'd with 1 first!
 
 .section .text
 .syntax unified
 
 .include "include/gba.inc"
 
-/*
-    D_080482e0 and D_08048314 are arrays of the following struct
-    struct ARMFuncDef {
-        u16 stopCode;
-        u16 dedicatedMemory;
-        void *armFunction;
-    };
-*/
 
-glabel D_080482e0   // struct ARMFuncDef []
-    .short 0
-    .short 0x174
-    .word func_080487d8
+@ ARM Sample-Processing Functions (Stereo Mode)
+midi_arm_func_table_stereo:
+    /* Stop */ .short 0
+    /* Size */ .short 0x174
+    /* Func */ .word func_080487d8
 
-    .short 0
-    .short 0x90
-    .word func_08048a68
+    /* Stop */ .short 0
+    /* Size */ .short 0x90
+    /* Func */ .word func_08048a68
 
-    .short 0
-    .short 0x124
-    .word func_08048c20
+    /* Stop */ .short 0
+    /* Size */ .short 0x124
+    /* Func */ .word func_08048c20
 
-    .short 0
-    .short 0x194
-    .word func_08048434
+    /* Stop */ .short 0
+    /* Size */ .short 0x194
+    /* Func */ .word func_08048434
 
-    .short 0
-    .short 0xfc
-    .word func_08048dd4
+    /* Stop */ .short 0
+    /* Size */ .short 0xFC
+    /* Func */ .word func_08048dd4
 
-    .short 0
-    .short 0x150
-    .word func_08048fe4
+    /* Stop */ .short 0
+    /* Size */ .short 0x150
+    /* Func */ .word func_08048fe4
 
-glabel D_08048310
-    .short 2
+    /* Stop */ .short 2
+.balign 4, 0
 
-glabel D_08048312
-    .short 0        // may just be alignment
 
-glabel D_08048314   // struct ARMFuncDef []
-    .short 0
-    .short 0xb4
-    .word func_0804894c
+@ ARM Sample-Processing Functions (Monaural Mode)
+midi_arm_func_table_mono:
+    /* Stop */ .short 0
+    /* Size */ .short 0xB4
+    /* Func */ .word func_0804894c
 
-    .short 0
-    .short 0x48
-    .word func_08048af8
+    /* Stop */ .short 0
+    /* Size */ .short 0x48
+    /* Func */ .word func_08048af8
 
-    .short 0
-    .short 0
-    .word func_08048d44
+    /* Stop */ .short 0
+    /* Size */ .short 0
+    /* Func */ .word func_08048d44
 
-    .short 0
-    .short 0x17c
-    .word func_080485c8
+    /* Stop */ .short 0
+    /* Size */ .short 0x17C
+    /* Func */ .word func_080485c8
 
-    .short 0
-    .short 0xdc
-    .word func_08048ed0
+    /* Stop */ .short 0
+    /* Size */ .short 0xDC
+    /* Func */ .word func_08048ed0
 
-glabel D_0804833c
-    .short 2
+    /* Stop */ .short 2
 
-unaligned_thumb_func_start func_0804833e
-    push {lr}
-    cmp r0, #0
-    bne branch_08048348
-    ldr r0, =D_080482e0
-    b branch_0804834a
-branch_08048348:
-    ldr r0, =D_08048314
-branch_0804834a:
-    bl branch_08048352
-    pop {r0}
-    bx r0
-branch_08048352:
-    ldr r1, =func_08048364
-    adds r1, #1
-    bx r1
 
+@ Load ARM Functions to Memory from SoundMode
+    @ R0: 0 if STEREO
+unaligned_thumb_func_start midi_asm_init_mode
+    push    {lr}
+    cmp     r0, #0
+    bne     sound_mode_is_mono
+    ldr     r0, =midi_arm_func_table_stereo
+    b       sound_mode_endif
+sound_mode_is_mono:
+    ldr     r0, =midi_arm_func_table_mono
+sound_mode_endif:
+    bl      align_call_init_table
+    pop     {r0}
+    bx      r0
+
+align_call_init_table:
+    ldr     r1, =midi_asm_init_table
+    adds    r1, #1
+    bx      r1
 .balign 4, 0
 .ltorg
 
-unaligned_thumb_func_start func_08048364
-    push {r4, r5, r6, r7, lr}
-    adds r1, r0, #0
-    ldr r4, =D_03005b50
-    ldr r6, =D_03005ba0
-branch_0804836c:
-    ldrh r3, [r1, #0]
-    cmp r3, #2
-    beq branch_0804837e
-    ldrh r7, [r1, #2]
-    ldr r5, [r1, #4]
-    bl func_08048384
-    adds r1, #8
-    b branch_0804836c
-branch_0804837e:
-    pop {r4, r5, r6, r7}
-    pop {r0}
-    bx r0
 
-thumb_func_start func_08048384
-    adds r0, r3, r6
-    str r0, [r4, #0]
-    adds r4, #4
-    adds r7, #3
-    lsrs r7, r7, #2
-    bne branch_08048392
-    bx lr
-branch_08048392:
-    ldr r0, [r5, #0]
-    str r0, [r6, #0]
-    adds r5, #4
-    adds r6, #4
-    subs r7, #1
-    bne branch_08048392
-    bx lr
+@ Load ARM Functions to Memory from Table
+    @ R0: ARM Function Table (see above)
+unaligned_thumb_func_start midi_asm_init_table
+    push    {r4, r5, r6, r7, lr}
+    adds    r1, r0, #0
+    ldr     r4, =D_03005b50
+    ldr     r6, =D_03005ba0
+read_func_table_loop_start:
+    ldrh    r3, [r1, #0]
+    cmp     r3, #2
+    beq     read_func_table_loop_end
+    ldrh    r7, [r1, #2]
+    ldr     r5, [r1, #4]
+    bl      read_func_table_entry
+    adds    r1, #8
+    b       read_func_table_loop_start
+read_func_table_loop_end:
+    pop     {r4, r5, r6, r7}
+    pop     {r0}
+    bx      r0
 
-unaligned_thumb_func_start func_080483a0
-    push {r1}
-    lsls r0, r0, #2
-    ldr r1, _080483b4 // needed in order to remove ltorg optimizations
-    ldr r0, [r0, r1]
-    pop {r1}
-    bx r0
+read_func_table_entry:
+    adds    r0, r3, r6
+    str     r0, [r4, #0]
+    adds    r4, #4
+    adds    r7, #3
+    lsrs    r7, r7, #2
+    bne     copy_func_to_memory_loop
+    bx      lr
+copy_func_to_memory_loop:
+    ldr     r0, [r5, #0]
+    str     r0, [r6, #0]
+    adds    r5, #4
+    adds    r6, #4
+    subs    r7, #1
+    bne     copy_func_to_memory_loop
+    bx      lr
 
+@ Call ARM Function from Memory
+    @ R0: Index of Function in D_03005b50
+unaligned_thumb_func_start midi_asm_call_arm_func_id
+    push    {r1}
+    lsls    r0, r0, #2
+    ldr     r1, _080483b4 // needed in order to remove ltorg optimizations
+    ldr     r0, [r0, r1]
+    pop     {r1}
+    bx      r0
 .balign 4, 0
 .ltorg
 _080483b4: .word D_03005b50
+
 
 unaligned_thumb_func_start func_080483b8
     orrs r0, r0
@@ -425,7 +424,7 @@ unaligned_thumb_func_start func_08048744
 .balign 4, 0
 _804874c: .word D_030064b0
 _8048750: .word D_030064ac
-_8048754: .word func_080483a0
+_8048754: .word midi_asm_call_arm_func_id
 
 unaligned_thumb_func_start func_08048758
     orrs r0, r0
@@ -782,7 +781,7 @@ _8048b88: .word D_03005b24
 _8048b8c: .word D_0300563c
 _8048b90: .word D_03005720
 _8048b94: .word 0x3ff
-_8048b98: .word func_080483a0
+_8048b98: .word midi_asm_call_arm_func_id
 
 unaligned_thumb_func_start func_08048b9c
     orrs r0, r0
@@ -943,7 +942,7 @@ unaligned_thumb_func_start func_08048d44
 .balign 4, 0
 _8048d4c: .word D_030064b0
 _8048d50: .word D_030064ac
-_8048d54: .word func_080483a0
+_8048d54: .word midi_asm_call_arm_func_id
 
 unaligned_thumb_func_start func_08048d58
     orrs r0, r0
@@ -1148,7 +1147,7 @@ unaligned_thumb_func_start func_08048fac
 .balign 4, 0
 _8048fb4: .word D_030064b0
 _8048fb8: .word D_030064ac
-_8048fbc: .word func_080483a0
+_8048fbc: .word midi_asm_call_arm_func_id
 
 unaligned_thumb_func_start func_08048fc0
     orrs r0, r0
@@ -1267,4 +1266,4 @@ unaligned_thumb_func_start func_08049134
 
 .balign 4, 0
 _804913c: .word D_030064b0
-_8049140: .word func_080483a0
+_8049140: .word midi_asm_call_arm_func_id

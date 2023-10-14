@@ -205,7 +205,7 @@ extern u8 midi_direct_player_tempo;
 typedef void (*ThumbFunc)();
 #define ALIGN_THUMB_FUNC(x) (ThumbFunc)((u32)&x|1)
 
-extern ThumbFunc func_0804833e;
+extern ThumbFunc midi_asm_init_mode;
 extern ThumbFunc func_080483b8;
 extern ThumbFunc func_08048758;
 extern ThumbFunc func_08048a00;

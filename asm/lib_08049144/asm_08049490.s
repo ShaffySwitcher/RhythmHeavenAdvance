@@ -106,7 +106,7 @@ branch_0804952e: \n\
 /* 08049554 */ MOV R1, R10 @ Set R1 to R10 \n\
 /* 08049556 */ STR R0, [R1] \n\
 /* 08049558 */ MOVS R1, 0x1 @ Set R1 to 0x1 \n\
-/* 0804955a */ LDR R2, =func_0804833e \n\
+/* 0804955a */ LDR R2, =midi_asm_init_mode \n\
 /* 0804955c */ ORRS R1, R2 @ Set R1 to R1 | R2 \n\
 /* 0804955e */ MOV R0, R9 @ Set R0 to R9 \n\
 /* 08049560 */ BL _call_via_r1 \n\
