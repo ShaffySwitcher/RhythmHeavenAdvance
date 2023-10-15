@@ -148,7 +148,6 @@ SECTIONS {
         build/src/lib_midi_random.c.o(.bss);
         build/src/lib_midi_psg.c.o(.bss);
         build/src/lib_midi_player.c.o(.bss);
-        build/src/lib_midi_sound_area.c.o(.bss);
         build/src/lib_sram.c.o(.bss);
         build/src/lib_0804ca80.c.o(.bss);
         build/src/lib_0804e564.c.o(.bss);
@@ -300,7 +299,6 @@ SECTIONS {
         build/src/lib_midi_random.c.o(.text);
         build/src/lib_midi_psg.c.o(.text);
         build/src/lib_midi_player.c.o(.text);
-        build/src/lib_midi_sound_area.c.o(.text);
         build/asm/libagbsyscall.s.o(.text);
         build/src/lib_sram.c.o(.text);
         build/src/lib_0804ca80.c.o(.text);
@@ -1190,7 +1188,6 @@ SECTIONS {
         build/audio/instruments.c.o(.data);
         build/audio/sequences.c.o(.data);
         build/audio/sound_players.c.o(.data);
-        build/src/lib_midi_sound_area.c.o(.data);
 		build/audio/sample_table.json.c.o(.data);
 
         build/audio/sequences/Lesson1.mid.o(.rodata*);

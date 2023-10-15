@@ -16,57 +16,57 @@ thumb_func_start midi_directsound_init \n\
 /* 080494a4 */ LDR R0, [SP, 0x2C] \n\
 /* 080494a6 */ MOV R8, R0 @ Set R8 to R0 \n\
 /* 080494a8 */ LDR R7, [SP, 0x30] \n\
-/* 080494aa */ LDR R0, =D_030055f4 \n\
+/* 080494aa */ LDR R0, =gMidiSoundMode \n\
 /* 080494ac */ MOV R1, R9 @ Set R1 to R9 \n\
 /* 080494ae */ STR R1, [R0] \n\
-/* 080494b0 */ LDR R0, =D_03005b94 \n\
+/* 080494b0 */ LDR R0, =gMidiDMASampleRate \n\
 /* 080494b2 */ STR R5, [R0] \n\
-/* 080494b4 */ LDR R1, =D_03005b24 \n\
+/* 080494b4 */ LDR R1, =gMidiPCMBufSize32 \n\
 /* 080494b6 */ LSRS R2, R2, 0x2 \n\
 /* 080494b8 */ STR R2, [R1] \n\
-/* 080494ba */ LDR R0, =D_0300563c \n\
+/* 080494ba */ LDR R0, =gMidiPCMBufR \n\
 /* 080494bc */ STR R3, [R0] \n\
-/* 080494be */ LDR R2, =D_030064b8 \n\
+/* 080494be */ LDR R2, =gMidiPCMBufL \n\
 /* 080494c0 */ LDR R0, [R1] \n\
 /* 080494c2 */ LSLS R0, R0, 0x2 \n\
 /* 080494c4 */ ADDS R3, R3, R0 @ Set R3 to R3 + R0 \n\
 /* 080494c6 */ STR R3, [R2] \n\
-/* 080494c8 */ LDR R0, =D_03005638 \n\
+/* 080494c8 */ LDR R0, =gMidiScratchSize \n\
 /* 080494ca */ STR R4, [R0] \n\
-/* 080494cc */ LDR R0, =D_030064b0 \n\
+/* 080494cc */ LDR R0, =gMidiSampleScratch \n\
 /* 080494ce */ STR R6, [R0] \n\
-/* 080494d0 */ LDR R0, =D_03005610 \n\
+/* 080494d0 */ LDR R0, =gMidiSamplerCount \n\
 /* 080494d2 */ MOV R2, R8 @ Set R2 to R8 \n\
 /* 080494d4 */ STRH R2, [R0] \n\
-/* 080494d6 */ LDR R0, =D_03005b88 \n\
+/* 080494d6 */ LDR R0, =gMidiSamplerPool \n\
 /* 080494d8 */ STR R7, [R0] \n\
-/* 080494da */ LDR R4, =D_030064a8 \n\
+/* 080494da */ LDR R4, =gMidiSamplesPerFrame \n\
 /* 080494dc */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\
 /* 080494de */ MOVS R1, 0x3C @ Set R1 to 0x3C \n\
 /* 080494e0 */ BL __udivsi3 \n\
 /* 080494e4 */ STR R0, [R4] \n\
-/* 080494e6 */ LDR R4, =D_030064b4 \n\
+/* 080494e6 */ LDR R4, =gMidiTM0Rate \n\
 /* 080494e8 */ LDR R0, =0x00fffed9 \n\
 /* 080494ea */ ADDS R1, R5, 0x0 @ Set R1 to R5 + 0x0 \n\
 /* 080494ec */ BL __udivsi3 \n\
 /* 080494f0 */ STR R0, [R4] \n\
-/* 080494f2 */ LDR R1, =D_030064a4 \n\
+/* 080494f2 */ LDR R1, =gMidiRVB_Control1 \n\
 /* 080494f4 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 080494f6 */ STR R0, [R1] \n\
 /* 080494f8 */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
-/* 080494fa */ LDR R2, =D_03005630 \n\
-/* 080494fc */ LDR R3, =D_03005634 \n\
-/* 080494fe */ LDR R5, =D_03005b48 \n\
-/* 08049500 */ LDR R7, =D_030064c0 \n\
-/* 08049502 */ LDR R0, =D_03005b28 \n\
+/* 080494fa */ LDR R2, =gMidiRVB_Control2 \n\
+/* 080494fc */ LDR R3, =gMidiRVB_Control4 \n\
+/* 080494fe */ LDR R5, =gMidiRVB_Control3 \n\
+/* 08049500 */ LDR R7, =gMidiEQ_PrevPos \n\
+/* 08049502 */ LDR R0, =gMidiEQ_HighGain \n\
 /* 08049504 */ MOV R8, R0 @ Set R8 to R0 \n\
-/* 08049506 */ LDR R1, =D_03005b44 \n\
+/* 08049506 */ LDR R1, =gMidiEQ_IsGlobal \n\
 /* 08049508 */ MOV R12, R1 @ Set R12 to R1 \n\
 /* 0804950a */ LDR R0, =D_030064a0 \n\
 /* 0804950c */ MOV R10, R0 @ Set R10 to R0 \n\
 /* 0804950e */ LDR R6, =D_03005b40 \n\
 /* 08049510 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
-/* 08049512 */ LDR R1, =D_03005600 \n\
+/* 08049512 */ LDR R1, =gMidiRVB_Scratch \n\
  \n\
 branch_08049514: \n\
 /* 08049514 */ STMIA R1!, {R0} \n\
@@ -81,7 +81,7 @@ branch_08049514: \n\
 /* 08049526 */ STR R0, [R5] \n\
 /* 08049528 */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
 /* 0804952a */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
-/* 0804952c */ LDR R1, =D_03005620 \n\
+/* 0804952c */ LDR R1, =gMidiEQ_Area \n\
  \n\
 branch_0804952e: \n\
 /* 0804952e */ STMIA R1!, {R0} \n\
@@ -110,7 +110,7 @@ branch_0804952e: \n\
 /* 0804955c */ ORRS R1, R2 @ Set R1 to R1 | R2 \n\
 /* 0804955e */ MOV R0, R9 @ Set R0 to R9 \n\
 /* 08049560 */ BL _call_via_r1 \n\
-/* 08049564 */ LDR R5, =D_03005720 \n\
+/* 08049564 */ LDR R5, =gMidiSampleTable \n\
 /* 08049566 */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
 /* 08049568 */ LDR R3, =0x000001ff \n\
 /* 0804956a */ ADDS R2, R5, 0x0 @ Set R2 to R5 + 0x0 \n\
@@ -157,15 +157,15 @@ branch_08049600: \n\
 /* 0804960c */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0804960e */ STRB R0, [R1] \n\
 /* 08049610 */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
-/* 08049612 */ LDR R7, =D_03005610 \n\
-/* 08049614 */ LDR R2, =D_03005b24 \n\
+/* 08049612 */ LDR R7, =gMidiSamplerCount \n\
+/* 08049614 */ LDR R2, =gMidiPCMBufSize32 \n\
 /* 08049616 */ MOV R12, R2 @ Set R12 to R2 \n\
-/* 08049618 */ LDR R3, =D_030064c4 \n\
+/* 08049618 */ LDR R3, =gMidiDirectSoundEnabled \n\
 /* 0804961a */ MOV R10, R3 @ Set R10 to R3 \n\
 /* 0804961c */ LDRH R0, [R7] \n\
 /* 0804961e */ CMP R4, R0 @ Check R4 - R0 \n\
 /* 08049620 */ BCS branch_0804964a \n\
-/* 08049622 */ LDR R6, =D_03005b88 \n\
+/* 08049622 */ LDR R6, =gMidiSamplerPool \n\
 /* 08049624 */ MOVS R1, 0x2 @ Set R1 to 0x2 \n\
 /* 08049626 */ NEGS R1, R1 @ Set R1 to -R1 \n\
 /* 08049628 */ MOV R8, R1 @ Set R8 to R1 \n\
@@ -194,8 +194,8 @@ branch_0804964a: \n\
 /* 0804964e */ LDR R0, [R3] \n\
 /* 08049650 */ CMP R4, R0 @ Check R4 - R0 \n\
 /* 08049652 */ BCS branch_08049672 \n\
-/* 08049654 */ LDR R7, =D_0300563c \n\
-/* 08049656 */ LDR R6, =D_030064b8 \n\
+/* 08049654 */ LDR R7, =gMidiPCMBufR \n\
+/* 08049656 */ LDR R6, =gMidiPCMBufL \n\
 /* 08049658 */ MOVS R5, 0x0 @ Set R5 to 0x0 \n\
  \n\
 branch_0804965a: \n\
@@ -242,11 +242,11 @@ branch_080496b4: \n\
 /* 080496c2 */ LDR R3, =0x040000a4 @ !Hardware REG_SGFIFOB \n\
 /* 080496c4 */ STR R2, [R3] \n\
 /* 080496c6 */ ADDS R1, 0x3A @ Add 0x3A to R1 \n\
-/* 080496c8 */ LDR R0, =D_0300563c \n\
+/* 080496c8 */ LDR R0, =gMidiPCMBufR \n\
 /* 080496ca */ LDR R0, [R0] \n\
 /* 080496cc */ STR R0, [R1] \n\
 /* 080496ce */ ADDS R1, 0xC @ Add 0xC to R1 \n\
-/* 080496d0 */ LDR R0, =D_030064b8 \n\
+/* 080496d0 */ LDR R0, =gMidiPCMBufL \n\
 /* 080496d2 */ LDR R0, [R0] \n\
 /* 080496d4 */ STR R0, [R1] \n\
 /* 080496d6 */ LDR R0, =0x040000c0 @ !Hardware REG_DMA1DAD \n\
@@ -275,7 +275,7 @@ branch_0804970c: \n\
 /* 0804971a */ LDR R3, =0x040000a4 @ !Hardware REG_SGFIFOB \n\
 /* 0804971c */ STR R2, [R3] \n\
 /* 0804971e */ ADDS R1, 0x46 @ Add 0x46 to R1 \n\
-/* 08049720 */ LDR R0, =D_0300563c \n\
+/* 08049720 */ LDR R0, =gMidiPCMBufR \n\
 /* 08049722 */ LDR R0, [R0] \n\
 /* 08049724 */ STR R0, [R1] \n\
 /* 08049726 */ LDR R0, =0x040000cc @ !Hardware REG_DMA2DAD \n\
@@ -304,7 +304,7 @@ branch_08049758: \n\
 /* 08049766 */ LDR R4, =0x040000a4 @ !Hardware REG_SGFIFOB \n\
 /* 08049768 */ STR R3, [R4] \n\
 /* 0804976a */ LDR R2, =0x040000bc @ !Hardware REG_DMA1SAD\n\
-/* 0804976c */ LDR R0, =D_0300563c \n\
+/* 0804976c */ LDR R0, =gMidiPCMBufR \n\
 /* 0804976e */ LDR R1, [R0] \n\
 /* 08049770 */ STR R1, [R2] \n\
 /* 08049772 */ LDR R0, =0x040000c8 @ !Hardware REG_DMA2SAD\n\
@@ -337,7 +337,7 @@ branch_0804979a: \n\
 /* 080497a4 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 080497a6 */ STRH R0, [R2] \n\
 /* 080497a8 */ ADDS R1, 0x80 @ Add 0x80 to R1 \n\
-/* 080497aa */ LDR R0, =D_030064b4 \n\
+/* 080497aa */ LDR R0, =gMidiTM0Rate \n\
 /* 080497ac */ LDR R0, [R0] \n\
 /* 080497ae */ NEGS R0, R0 @ Set R0 to -R0 \n\
 /* 080497b0 */ STRH R0, [R1] \n\

@@ -422,8 +422,8 @@ unaligned_thumb_func_start func_08048744
     bx r1
 
 .balign 4, 0
-_804874c: .word D_030064b0
-_8048750: .word D_030064ac
+_804874c: .word gMidiSampleScratch
+_8048750: .word gMidiSamplerHighGain
 _8048754: .word midi_asm_call_arm_func_id
 
 unaligned_thumb_func_start func_08048758
@@ -588,7 +588,7 @@ branch_0804880c:
 _8048938: .word 0
 _804893c: .word 0
 _8048940: .word 0
-_8048944: .word D_03005600
+_8048944: .word gMidiRVB_Scratch
 _8048948: .word 0
 
 arm_func_start func_0804894c
@@ -639,7 +639,7 @@ branch_08048964:
     bx lr
 
 .balign 4, 0
-_80489fc: .word D_03005600
+_80489fc: .word gMidiRVB_Scratch
 
 unaligned_thumb_func_start func_08048a00
     orrs r0, r0
@@ -761,25 +761,25 @@ unaligned_thumb_func_start func_08048b40
     bx r1
 
 .balign 4, 0
-_8048b48: .word D_030064b0
+_8048b48: .word gMidiSampleScratch
 _8048b4c: .word D_03005b40
-_8048b50: .word D_0300563c
-_8048b54: .word D_030064b8
-_8048b58: .word D_03005630
-_8048b5c: .word D_03005b24
-_8048b60: .word D_030064a4
-_8048b64: .word D_03005634
-_8048b68: .word D_03005b48
-_8048b6c: .word D_03005b24
-_8048b70: .word D_0300563c
-_8048b74: .word D_030064b8
-_8048b78: .word D_030064b0
+_8048b50: .word gMidiPCMBufR
+_8048b54: .word gMidiPCMBufL
+_8048b58: .word gMidiRVB_Control2
+_8048b5c: .word gMidiPCMBufSize32
+_8048b60: .word gMidiRVB_Control1
+_8048b64: .word gMidiRVB_Control4
+_8048b68: .word gMidiRVB_Control3
+_8048b6c: .word gMidiPCMBufSize32
+_8048b70: .word gMidiPCMBufR
+_8048b74: .word gMidiPCMBufL
+_8048b78: .word gMidiSampleScratch
 _8048b7c: .word D_03005b40
-_8048b80: .word D_0300563c
-_8048b84: .word D_030064b8
-_8048b88: .word D_03005b24
-_8048b8c: .word D_0300563c
-_8048b90: .word D_03005720
+_8048b80: .word gMidiPCMBufR
+_8048b84: .word gMidiPCMBufL
+_8048b88: .word gMidiPCMBufSize32
+_8048b8c: .word gMidiPCMBufR
+_8048b90: .word gMidiSampleTable
 _8048b94: .word 0x3ff
 _8048b98: .word midi_asm_call_arm_func_id
 
@@ -940,8 +940,8 @@ unaligned_thumb_func_start func_08048d44
     bx r1
 
 .balign 4, 0
-_8048d4c: .word D_030064b0
-_8048d50: .word D_030064ac
+_8048d4c: .word gMidiSampleScratch
+_8048d50: .word gMidiSamplerHighGain
 _8048d54: .word midi_asm_call_arm_func_id
 
 unaligned_thumb_func_start func_08048d58
@@ -1145,8 +1145,8 @@ unaligned_thumb_func_start func_08048fac
     bx r1
 
 .balign 4, 0
-_8048fb4: .word D_030064b0
-_8048fb8: .word D_030064ac
+_8048fb4: .word gMidiSampleScratch
+_8048fb8: .word gMidiSamplerHighGain
 _8048fbc: .word midi_asm_call_arm_func_id
 
 unaligned_thumb_func_start func_08048fc0
@@ -1265,5 +1265,5 @@ unaligned_thumb_func_start func_08049134
     bx r1
 
 .balign 4, 0
-_804913c: .word D_030064b0
+_804913c: .word gMidiSampleScratch
 _8049140: .word midi_asm_call_arm_func_id

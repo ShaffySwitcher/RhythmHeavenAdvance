@@ -71,15 +71,15 @@ void midi_channel_cut(struct MidiBus *midiBus, u32 track) {
         return;
     }
 
-    for (i = 0; i < D_03005b8c; i++) {
-        if (D_030064bc[i].active && (D_030064bc[i].midiChannel == midiChannel)) {
-            D_030064bc[i].adsr.stage = ADSR_STAGE_FORCE_STOP;
+    for (i = 0; i < gMidiSoundChannelCount; i++) {
+        if (gMidiSoundChannelPool[i].active && (gMidiSoundChannelPool[i].midiChannel == midiChannel)) {
+            gMidiSoundChannelPool[i].adsr.stage = ADSR_STAGE_FORCE_STOP;
         }
     }
 
     for (i = 0; i < 4; i++) {
-        if (D_030056a0[i].active && (D_030056a0[i].midiChannel == midiChannel)) {
-            D_030056a0[i].adsr.stage = ADSR_STAGE_FORCE_STOP;
+        if (gMidiPSGChannelPool[i].active && (gMidiPSGChannelPool[i].midiChannel == midiChannel)) {
+            gMidiPSGChannelPool[i].adsr.stage = ADSR_STAGE_FORCE_STOP;
         }
     }
 }
@@ -90,17 +90,17 @@ void midi_channel_stop(struct MidiBus *midiBus, u32 track) {
     struct MidiChannel *midiChannel = &midiBus->midiChannel[track];
     u32 i;
 
-    for (i = 0; i < D_03005b8c; i++) {
-        if (D_030064bc[i].active && (D_030064bc[i].midiChannel == midiChannel)) {
-            D_030064bc[i].active = FALSE;
+    for (i = 0; i < gMidiSoundChannelCount; i++) {
+        if (gMidiSoundChannelPool[i].active && (gMidiSoundChannelPool[i].midiChannel == midiChannel)) {
+            gMidiSoundChannelPool[i].active = FALSE;
             midi_sampler_stop(i);
         }
     }
 
     for (i = 0; i < 4; i++) {
-        if (D_030056a0[i].active && (D_030056a0[i].midiChannel == midiChannel)) {
-            D_030056a0[i].adsr.stage = ADSR_STAGE_RELEASE;
-            D_030056a0[i].adsr.envelope = 0;
+        if (gMidiPSGChannelPool[i].active && (gMidiPSGChannelPool[i].midiChannel == midiChannel)) {
+            gMidiPSGChannelPool[i].adsr.stage = ADSR_STAGE_RELEASE;
+            gMidiPSGChannelPool[i].adsr.envelope = 0;
         }
     }
 }
@@ -422,7 +422,7 @@ u32 midi_note_update_adsr(struct SoundChannel *soundChannel) {
 
 // Update PCM SoundChannel
 void midi_note_update_id(u32 id) {
-    struct SoundChannel *soundChannel = &D_030064bc[id];
+    struct SoundChannel *soundChannel = &gMidiSoundChannelPool[id];
 
     if (!soundChannel->active) {
         return;
@@ -450,7 +450,7 @@ void midi_note_update_id(u32 id) {
 void midi_note_update_all(void) {
     u32 i;
 
-    for (i = 0; i < D_03005b8c; i++) {
+    for (i = 0; i < gMidiSoundChannelCount; i++) {
         midi_note_update_id(i);
     }
 
@@ -462,24 +462,24 @@ void midi_note_update_all(void) {
 void midi_note_init(u32 totalChannels, struct SoundChannel *soundChannelPool) {
     u32 i;
 
-    D_03005b8c = totalChannels;
-    D_030064bc = soundChannelPool;
+    gMidiSoundChannelCount = totalChannels;
+    gMidiSoundChannelPool = soundChannelPool;
 
-    for (i = 0; i < D_03005b8c; i++) {
-        D_030064bc[i].active = FALSE;
+    for (i = 0; i < gMidiSoundChannelCount; i++) {
+        gMidiSoundChannelPool[i].active = FALSE;
     }
 }
 
 
 // Get First Active PCM SoundChannel not at ADSR Stage RELEASE.
 s32 midi_note_get_first_active(struct MidiChannel *midiChannel, u8 key) {
-    struct SoundChannel *soundChannel = D_030064bc;
+    struct SoundChannel *soundChannel = gMidiSoundChannelPool;
     struct BufferADSR *adsr;
     s32 i;
 
-    for (i = 0; i < D_03005b8c; i++, soundChannel++) {
+    for (i = 0; i < gMidiSoundChannelCount; i++, soundChannel++) {
         if (soundChannel->active && (soundChannel->midiChannel == midiChannel) && (soundChannel->key == key)) {
-            adsr = &D_030064bc[i].adsr;
+            adsr = &gMidiSoundChannelPool[i].adsr;
             if (adsr->stage != ADSR_STAGE_RELEASE) {
                 return i;
             }
@@ -493,8 +493,8 @@ s32 midi_note_get_first_active(struct MidiChannel *midiChannel, u8 key) {
 s32 midi_note_get_first_inactive(void) {
     s32 i;
 
-    for (i = 0; i < D_03005b8c; i++) {
-        if (!D_030064bc[i].active) {
+    for (i = 0; i < gMidiSoundChannelCount; i++) {
+        if (!gMidiSoundChannelPool[i].active) {
             return i;
         }
     }
@@ -512,7 +512,7 @@ s32 midi_note_get_quietest_released(void) {
     index = -1;
     lowestVolume = 0x10000;
 
-    for (i = 0, soundChannel = D_030064bc; i < D_03005b8c; i++, soundChannel++) {
+    for (i = 0, soundChannel = gMidiSoundChannelPool; i < gMidiSoundChannelCount; i++, soundChannel++) {
         if (soundChannel->active && (soundChannel->adsr.stage == ADSR_STAGE_RELEASE)) {
             channelVolume = soundChannel->midiChannel->volumeWheel * soundChannel->velocity;
             if (channelVolume < lowestVolume) {
@@ -535,9 +535,9 @@ s32 midi_note_get_quietest_unreleased(void) {
     index = -1;
     lowestVolume = 0x10000;
 
-    for (i = 0; i < D_03005b8c; i++) {
-        if (D_030064bc[i].active) {
-            channelVolume = D_030064bc[i].midiChannel->volumeWheel * D_030064bc[i].velocity;
+    for (i = 0; i < gMidiSoundChannelCount; i++) {
+        if (gMidiSoundChannelPool[i].active) {
+            channelVolume = gMidiSoundChannelPool[i].midiChannel->volumeWheel * gMidiSoundChannelPool[i].velocity;
             if (channelVolume < lowestVolume) {
                 lowestVolume = channelVolume;
                 index = i;
@@ -563,7 +563,7 @@ s32 midi_note_get_least_significant(struct MidiBus *midiBus, u32 track, u32 velo
     lowestPriority = channelPriority;
     index = -1;
 
-    for (i = 0, soundChannel = D_030064bc; i < D_03005b8c; i++, soundChannel++) {
+    for (i = 0, soundChannel = gMidiSoundChannelPool; i < gMidiSoundChannelCount; i++, soundChannel++) {
         if (!soundChannel->active || (soundChannel->priority > lowestPriority)) {
             continue;
         }
@@ -608,12 +608,12 @@ void midi_note_stop(struct MidiBus *midiBus, u32 track, u8 key) {
             break;
         }
 
-        adsr = &D_030064bc[i].adsr;
+        adsr = &gMidiSoundChannelPool[i].adsr;
         adsr->stage = ADSR_STAGE_RELEASE;
     } while (TRUE);
 
     // Set ADSR Stage to RELEASE for all relevant PSG SoundChannels.
-    psgChannel = D_030056a0;
+    psgChannel = gMidiPSGChannelPool;
     adsrState = ADSR_STAGE_RELEASE;
     for (i = 3; i >= 0; i--, psgChannel++) {
         if (psgChannel->active && (psgChannel->midiChannel == &midiBus->midiChannel[track]) && (psgChannel->key == key)) {
@@ -733,7 +733,7 @@ void midi_note_start(struct MidiBus *midiBus, u32 track, u8 noteKey, u8 noteVelo
         // Initialise PSG instrument.
         instPSG = instrument.psg;
         isPSG = TRUE;
-        soundChannel = &D_030056a0[instrument.psg->channel];
+        soundChannel = &gMidiPSGChannelPool[instrument.psg->channel];
     } else {
         // Initialise PCM instrument.
         instPCM = instrument.pcm;
@@ -742,7 +742,7 @@ void midi_note_start(struct MidiBus *midiBus, u32 track, u8 noteKey, u8 noteVelo
         if (channelIndex < 0) {
             return;
         }
-        soundChannel = &D_030064bc[channelIndex];
+        soundChannel = &gMidiSoundChannelPool[channelIndex];
     }
 
     // Use the built-in key & panning parameters.
@@ -893,7 +893,7 @@ void midi_channel_update_panning(struct MidiBus *midiBus, u32 track) {
     midiChannel = &midiBus->midiChannel[track];
     isStereo = (midiChannel->stereo) ? -1 : 1;
 
-    for (i = 0, soundChannel = D_030064bc; i < D_03005b8c; i++, soundChannel++) {
+    for (i = 0, soundChannel = gMidiSoundChannelPool; i < gMidiSoundChannelCount; i++, soundChannel++) {
         if (soundChannel->active && (soundChannel->midiChannel == midiChannel)) {
             panning += soundChannel->panning;
             if (panning < 0) panning = 0;

@@ -126,57 +126,57 @@ typedef volatile u16 *IOReg;
 
 
 // STATIC VARIABLES
-extern volatile s32 D_03001888[1568*2];     // [D_03001888] DIRECTSOUND - DMA Source Addresses { &D_03001888[0] = Right; &D_03001888[D_03005b24] = Left }
-extern s32 D_030024c8[0x400];               // [D_030024c8] DIRECTSOUND - Sample Processing ScratchPad
-extern struct SampleStream D_030028c8[12];  // [D_030028c8] DIRECTSOUND - DMA Sample Readers (12 Channels)
-extern struct SoundChannel D_03002a48[12];  // [D_03002a48] DIRECTSOUND - DirectSound Channels (12 Channels)
+extern volatile s32 D_03001888[1568*2];     // DIRECTSOUND - DMA Source Addresses { &D_03001888[0] = Right; &D_03001888[gMidiPCMBufSize32] = Left }
+extern s32 D_030024c8[0x400];               // DIRECTSOUND - Sample Processing ScratchPad
+extern struct SampleStream D_030028c8[12];  // DIRECTSOUND - DMA Sample Readers (12 Channels)
+extern struct SoundChannel D_03002a48[12];  // DIRECTSOUND - DirectSound Channels (12 Channels)
 
-extern u16 D_030055f0;              // [D_030055f0] MIDI4AGB - Set to REG_VCOUNT near the start of each update.
-extern u32 D_030055f4;              // [D_030055f4] DIRECTSOUND - Initial Sound Mode { 0 = Stereo; 1 = Mono (One Channel); 2 = Mono (Two Channels) }
-extern s32 D_03005600[4];           // [D_03005600] REVERB - Previous Processed Samples (R+L, x2)
-extern u16 D_03005610;              // [D_03005610] DIRECTSOUND - Number of DMA Sample Readers ( = 12)
-extern s32 D_03005620[3];           // [D_03005620] FILTER EQ - [0] = Filter Setting; [1], [2] = Previous Samples (R+L)
-extern u32 D_0300562c;              // [D_0300562c] ??? - Current Speed (NOT Tempo)
-extern u32 D_03005630;              // [D_03005630] REVERB - Controller #2 (init. = 0)
-extern u32 D_03005634;              // [D_03005634] REVERB - Controller #4 (init. = 4)
-extern u32 D_03005638;              // [D_03005638] DIRECTSOUND - Sample Processing ScratchPad Size, in L+R pairs ( = 0x80)
-extern volatile u32 *D_0300563c;    // [D_0300563c] DIRECTSOUND - REG_DMA1SAD (Right Audio Source) ( = &D_03001888)
-extern u8  D_03005640;              // [D_03005640] LFO - Multiplier [mCtrl4C]
-extern struct SoundPlayer *D_03005644;     // [D_03005644] LFO - Controller Sound Player (for Tempo)
-extern u16 D_03005648;              // [D_03005648] UNDEFINED - Current byte in D_03005b7c to set [mCtrl0E]
+extern u16 gMidiVCOUNTAtStart;      // MIDI4AGB - Set to REG_VCOUNT near the start of each update.
+extern u32 gMidiSoundMode;          // DIRECTSOUND - Initial Sound Mode { 0 = Stereo; 1 = Mono (One Channel); 2 = Mono (Two Channels) }
+extern s32 gMidiRVB_Scratch[4];     // REVERB - Previous Processed Samples (R+L, x2)
+extern u16 gMidiSamplerCount;       // DIRECTSOUND - Number of DMA Sample Readers ( = 12)
+extern s32 gMidiEQ_Area[3];         // FILTER EQ - [0] = Filter Setting; [1], [2] = Previous Samples (R+L)
+extern u32 gMidiPlayerDeltaTime;    // SOUNDPLAYER - New Delta Time
+extern u32 gMidiRVB_Control2;       // REVERB - Controller #2 (init. = 0)
+extern u32 gMidiRVB_Control4;       // REVERB - Controller #4 (init. = 4)
+extern u32 gMidiScratchSize;        // DIRECTSOUND - Sample Processing ScratchPad Size, in L+R pairs ( = 0x80)
+extern volatile u32 *gMidiPCMBufR;  // DIRECTSOUND - REG_DMA1SAD (Right Audio Source) ( = &D_03001888)
+extern u8  gMidiLFO_Depth;          // LFO - Multiplier [mCtrl4C]
+extern struct SoundPlayer *gMidiLFO_Player; // LFO - Controller Sound Player (for Speed)
+extern u16 D_03005648;              // UNDEFINED - Current byte in D_03005b7c to set [mCtrl0E]
 
-extern struct MidiNote D_03005650[20];     // [D_03005650] MIDI - Note Buffer
-extern struct SoundChannel D_030056a0[4];  // [D_030056a0] PSG CHANNEL - PSG Channels { 0 = Tone+Sweep; 1 = Tone; 2 = Wave; 3 = Noise }
-extern s8  D_03005720[0x400];       // [D_03005720] DIRECTSOUND - DMA Buffer Sample = D_03005720[(ScratchPad Sample >> 7) & 0x3ff]
-extern u16 D_03005b20;              // [D_03005b20] UNDEFINED - Total Bytes in array at D_03005b7c
-extern volatile u32 D_03005b24;     // [D_03005b24] DIRECTSOUND - Number of 32-bit samples per DMA Source Address ( = 1568 / 4)
-extern u8  D_03005b28;              // [D_03005b28] FILTER EQ - High Gain [mCtrl4C]
+extern struct MidiNote gMidiNotePool[20];   // MIDI - Note Buffer
+extern struct SoundChannel gMidiPSGChannelPool[4];  // PSG CHANNEL - PSG Channels { 0 = Tone+Sweep; 1 = Tone; 2 = Wave; 3 = Noise }
+extern s8  gMidiSampleTable[0x400]; // DIRECTSOUND - DMA Buffer Sample = gMidiSampleTable[(ScratchPad Sample >> 7) & 0x3FF]
+extern u16 D_03005b20;              // UNDEFINED - Total Bytes in array at D_03005b7c
+extern volatile u32 gMidiPCMBufSize32;  // DIRECTSOUND - Number of 32-bit samples per DMA Source Address ( = 1568 / 4)
+extern u8  gMidiEQ_HighGain;        // FILTER EQ - High Gain [mCtrl4C]
 
-// [D_03005b30] LFO - Low-Frequency Oscillator
-// [D_03005b3c] LFO - Mode { 0 = Disabled; 1 = Note Triggered; 2 = Constant }
-extern volatile u32 D_03005b40;     // [D_03005b40] DIRECTSOUND - ??
-extern u8  D_03005b44;              // [D_03005b44] FILTER EQ - Enable Global Filter
-extern u32 D_03005b48;              // [D_03005b48] REVERB - gRVBCNT3 (init. = 2)
+// extern struct LFO gMidiLFO;      // LFO - Low-Frequency Oscillator
+// extern u8 gMidiLFO_Mode;         // LFO - Mode { 0 = Disabled; 1 = Note Triggered; 2 = Constant }
+extern volatile u32 D_03005b40;     // DIRECTSOUND - ??
+extern u8  gMidiEQ_IsGlobal;        // FILTER EQ - Enable Global Filter
+extern u32 gMidiRVB_Control3;       // REVERB - gRVBCNT3 (init. = 2)
 
-extern u16 D_03005b78;              // [D_03005b78] MIDI - Next Available MIDI Note
-extern u8 *D_03005b7c;              // [D_03005b7c] UNDEFINED - (Byte at offset D_03005648 set by MIDI Controller 10)
-extern u16 D_03005b80;              // [D_03005b80] MIDI4AGB - Set to REG_VCOUNT near the end of each update.
-extern u16 D_03005b84;              // [D_03005b84] DIRECTSOUND - ??
-extern struct SampleStream *D_03005b88;    // [D_03005b88] DIRECTSOUND - SampleStream (12 Channels, at D_030028c8)
-extern u16 D_03005b8c;              // [D_03005b8c] DIRECTSOUND - Number of DirectSound Channels ( = 12)
-extern s8  D_03005b90[4];           // [D_03005b90] REVERB - Reverb Controller Update Scratch
-extern u32 D_03005b94;              // [D_03005b94] MIDI4AGB - Global Sample Rate ( = 13379Hz)
+extern u16 gMidiNoteNext;           // MIDI - Next Available MIDI Note
+extern u8 *D_03005b7c;              // UNDEFINED - (Byte at offset D_03005648 set by [mCtrl10])
+extern u16 gMidiVCOUNTAtEnd;        // MIDI4AGB - Set to REG_VCOUNT near the end of each SoundPlayer update.
+extern u16 gMidiVCOUNTAtSamplerEnd; // DIRECTSOUND - Set to REG_VCOUNT at the end of each SampleStream update loop.
+extern struct SampleStream *gMidiSamplerPool;   // DIRECTSOUND - SampleStream (12 Channels, at D_030028c8)
+extern u16 gMidiSoundChannelCount;  // DIRECTSOUND - Number of DirectSound Channels ( = 12)
+extern s8  gMidiRVB_ControlBuf[4];  // REVERB - Reverb Controller Update Scratch
+extern u32 gMidiDMASampleRate;      // MIDI4AGB - Global Sample Rate ( = 13379Hz)
 
-extern volatile u32 D_030064a0;     // [D_030064a0] DIRECTSOUND - Offset from *D_0300563c and *D_030064b8 to operate on.
-extern u32 D_030064a4;              // [D_030064a4] REVERB - gRVBCNT1 (init. = 0)
-extern u32 D_030064a8;              // [D_030064a8] MIDI4AGB - 13379Hz / 60 (samples per frame, at 60fps)
-extern u16 D_030064ac;              // [D_030064ac] DIRECTSOUND - ??
-extern s32 *D_030064b0;             // [D_030064b0] DIRECTSOUND - Sample Processing ScratchPad ( = &D_030024c8)
-extern u32 D_030064b4;              // [D_030064b4] MIDI4AGB - 16776921 / 13379Hz
-extern volatile u32 *D_030064b8;    // [D_030064b8] DIRECTSOUND - REG_DMA2SAD (Left Audio Source) ( = &D_03001888[D_03005b24] ( = &D_03001ea8))
-extern struct SoundChannel *D_030064bc;    // [D_030064bc] DIRECTSOUND - DirectSound Channels (12 Channels, at D_03002a48)
-extern s8  D_030064c0;              // [D_030064c0] FILTER EQ - Duplicate of D_03005620[0] used for just one (1) singular calculation.
-extern u16 D_030064c4;              // [D_030064c4] DIRECTSOUND - Enable DirectSound
+extern volatile u32 D_030064a0;     // DIRECTSOUND - Offset from *gMidiPCMBufR and *gMidiPCMBufL to operate on.
+extern u32 gMidiRVB_Control1;       // REVERB - gRVBCNT1 (init. = 0)
+extern u32 gMidiSamplesPerFrame;    // MIDI4AGB - 13379Hz / 60 (samples per frame, at 60fps)
+extern u16 gMidiSamplerHighGain;    // DIRECTSOUND - ??
+extern s32 *gMidiSampleScratch;     // DIRECTSOUND - Sample Processing ScratchPad ( = &D_030024c8)
+extern u32 gMidiTM0Rate;            // MIDI4AGB - 16776921 / 13379Hz
+extern volatile u32 *gMidiPCMBufL;  // DIRECTSOUND - REG_DMA2SAD (Left Audio Source) ( = &D_03001888[gMidiPCMBufSize32] ( = &D_03001ea8))
+extern struct SoundChannel *gMidiSoundChannelPool;  // DIRECTSOUND - DirectSound Channels (12 Channels, at D_03002a48)
+extern s8  gMidiEQ_PrevPos;         // FILTER EQ - Duplicate of gMidiEQ_Area[0] used for just one (1) singular calculation.
+extern u16 gMidiDirectSoundEnabled; // DIRECTSOUND - Enable DirectSound
 
 
 // DATA
@@ -339,7 +339,7 @@ extern void midi_psg_update(void);
 extern u16  midi_player_parse_be16(const u8 *stream);
 extern u32  midi_player_parse_be32(const u8 *stream);
 extern u32  midi_player_get_loop_sym_size(const char *loopMarker);
-extern void midi_player_play_header(struct SoundPlayer *soundPlayer, struct SequenceData *sound);
+extern void midi_player_play_header(struct SoundPlayer *soundPlayer, struct SongHeader *song);
 extern void midi_player_play_id(u16 soundIndex);
 extern void midi_player_stop(struct SoundPlayer *soundPlayer);
 extern void midi_player_set_pause(struct SoundPlayer *soundPlayer, u8 pause);
@@ -350,8 +350,8 @@ extern void midi_player_pause_all(void);
 extern void midi_player_unpause_all(void);
 extern void midi_player_set_volume(struct SoundPlayer *soundPlayer, u16 volume);
 extern void midi_player_set_track_volume(struct SoundPlayer *soundPlayer, u16 trackMask, u16 volume);
-extern void midi_player_set_pitch(struct SoundPlayer *soundPlayer, u16 unused, s16 pitch);
-extern void midi_player_set_panning(struct SoundPlayer *soundPlayer, u16 unused, s8 panning);
+extern void midi_player_set_pitch(struct SoundPlayer *soundPlayer, u16 trackMask, s16 pitch);
+extern void midi_player_set_panning(struct SoundPlayer *soundPlayer, u16 trackMask, s8 panning);
 extern void midi_player_pause_id(u16 soundIndex);
 extern u32  midi_player_text_is_loop_sym(const u8 *stream1, const u8 *stream2, u32 length);
 extern u32  midi_player_get_delta_time(u16 tempo, u16 speed, u16 quarterNote);
@@ -374,21 +374,15 @@ extern void midi_player_update_track(struct SoundPlayer *soundPlayer, u32 track)
 
 extern void midi_player_update_volume_fade(struct SoundPlayer *soundPlayer);
 extern void midi_player_update_sequence(struct SoundPlayer *soundPlayer);
-extern void midi_player_update_all(void);
+extern void midi_sound_main(void);
 extern void midi_player_set_reverb(u32 rvb0, u32 rvb1, u32 rvb2, u32 rvb3);
 extern void midi_stub(void);
 extern void midi_player_init(struct SoundPlayer *soundPlayer, struct MidiBus *midiBus, u32 totalTracks,
                                 struct MidiTrackStream *midiReader, u32 priorityEnabled);
 extern u32  midi_parse_variable_length(const u8 **upstream);
-
-/* DIRECT-MIDI PLAYER */
-
 extern void midi_direct_player_init(struct SoundPlayer *soundPlayer, struct MidiTrackStream *midiReader, u32 totalTracks,
                                         struct MidiBus *midiBus, struct MidiChannel *midiChannels, u8 *sequenceSource);
-extern void midi_direct_player_append_sequence(u8 *sequence, u32 length);
+extern void midi_direct_player_append_sequence(u8 *midiIn, u32 length);
 extern u32  midi_direct_player_read_sequence(void);
 extern void midi_direct_player_update(void);
-
-/* SOUND AREA */
-
-extern void lib_midi_init(void);
+extern void midi_sound_init(void);

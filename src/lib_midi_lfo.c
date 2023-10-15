@@ -2,8 +2,6 @@
 #include "sound.h"
 #include "lib_midi.h"
 
-asm(".include \"include/gba.inc\"");//Temporary
-
 
 /* AUDIO LIBRARY - LOW-FREQUENCY OSCILLATOR */
 
