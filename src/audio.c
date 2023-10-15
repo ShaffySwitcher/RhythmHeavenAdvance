@@ -5,26 +5,26 @@
 /* AUDIO LIBRARY INTERFACE */
 
 
-// Get SoundTable Index
-u16 get_sound_num(struct SequenceData *sound) {
-    return sound->songNum;
+// Get SongTable Index
+u16 get_sound_num(struct SongHeader *song) {
+    return song->songNum;
 }
 
 
 // Play Sound
-struct SoundPlayer *play_sound(struct SequenceData *sound) {
+struct SoundPlayer *play_sound(struct SongHeader *song) {
     struct SoundPlayer *soundPlayer;
     u32 id;
 
-    if (sound == NULL) {
+    if (song == NULL) {
         return NULL;
     }
 
-    id = get_sound_num(sound);
+    id = get_sound_num(song);
     midi_player_play_id(id);
     soundPlayer = D_08aa4460[D_08aa06f8[id].player].soundPlayer;
 
-    if (soundPlayer->sequence == sound) {
+    if (soundPlayer->song == song) {
         return soundPlayer;
     } else {
         return NULL;
@@ -33,18 +33,18 @@ struct SoundPlayer *play_sound(struct SequenceData *sound) {
 
 
 // Play Sound in Specified Player
-struct SoundPlayer *play_sound_in_player(s32 playerID, struct SequenceData *sound) {
-    midi_player_play_header(D_08aa4324[playerID], sound);
+struct SoundPlayer *play_sound_in_player(s32 playerID, struct SongHeader *song) {
+    midi_player_play_header(D_08aa4324[playerID], song);
 
     return D_08aa4324[playerID];
 }
 
 
 // Play Sound at Given Volume & Pitch
-struct SoundPlayer *play_sound_w_pitch_volume(struct SequenceData *sound, u24_8 volume, s24_8 pitch) {
+struct SoundPlayer *play_sound_w_pitch_volume(struct SongHeader *song, u24_8 volume, s24_8 pitch) {
     struct SoundPlayer *soundPlayer;
 
-    soundPlayer = play_sound(sound);
+    soundPlayer = play_sound(song);
     set_soundplayer_volume(soundPlayer, volume);
     set_soundplayer_pitch(soundPlayer, pitch);
 
@@ -53,11 +53,11 @@ struct SoundPlayer *play_sound_w_pitch_volume(struct SequenceData *sound, u24_8 
 
 
 // Play Sound in Specified Player, at Given Volume & Pitch
-struct SoundPlayer *play_sound_in_player_w_pitch_volume(s32 playerID, struct SequenceData *sound, u24_8 volume, s24_8 pitch) {
+struct SoundPlayer *play_sound_in_player_w_pitch_volume(s32 playerID, struct SongHeader *song, u24_8 volume, s24_8 pitch) {
     struct SoundPlayer *soundPlayer;
 
     soundPlayer = D_08aa4324[playerID];
-    midi_player_play_header(soundPlayer, sound);
+    midi_player_play_header(soundPlayer, song);
     set_soundplayer_volume(soundPlayer, volume);
     set_soundplayer_pitch(soundPlayer, pitch);
 
@@ -66,21 +66,21 @@ struct SoundPlayer *play_sound_in_player_w_pitch_volume(s32 playerID, struct Seq
 
 
 // Play Sound (unless it is already playing)
-struct SoundPlayer *func_080026fc(struct SequenceData *sound) {
+struct SoundPlayer *continue_sound(struct SongHeader *song) {
     struct SoundPlayer *soundPlayer;
     u32 id;
 
-    if (sound == NULL) {
+    if (song == NULL) {
         return NULL;
     }
 
-    id = get_sound_num(sound);
+    id = get_sound_num(song);
     soundPlayer = D_08aa4460[D_08aa06f8[id].player].soundPlayer;
 
-    if (soundPlayer->sequence != sound) {
+    if (soundPlayer->song != song) {
         midi_player_play_id(id);
 
-        if (soundPlayer->sequence != sound) {
+        if (soundPlayer->song != song) {
             soundPlayer = NULL;
         }
     }
@@ -90,18 +90,18 @@ struct SoundPlayer *func_080026fc(struct SequenceData *sound) {
 
 
 // Stop All Instances of This Sound
-void stop_sound(struct SequenceData *sound) {
+void stop_sound(struct SongHeader *song) {
     struct SoundPlayer *soundPlayer;
     u32 isPlayingThisSound;
     u32 i;
 
-    if (sound == NULL) {
+    if (song == NULL) {
         return;
     }
 
     for (i = 0; i < D_08aa445c; i++) {
         soundPlayer = D_08aa4460[i].soundPlayer;
-        isPlayingThisSound = (soundPlayer->sequence == sound);
+        isPlayingThisSound = (soundPlayer->song == song);
 
         if (isPlayingThisSound) {
             midi_player_fade_out_to_stop(soundPlayer, 0);
@@ -111,18 +111,18 @@ void stop_sound(struct SequenceData *sound) {
 
 
 // Set Pause for All Instances of This Sound
-void pause_sound(struct SequenceData *sound, u32 pause) {
+void pause_sound(struct SongHeader *song, u32 pause) {
     struct SoundPlayer *soundPlayer;
     u32 isPlayingThisSound;
     u32 i;
 
-    if (sound == NULL) {
+    if (song == NULL) {
         return;
     }
 
     for (i = 0; i < D_08aa445c; i++) {
         soundPlayer = D_08aa4460[i].soundPlayer;
-        isPlayingThisSound = (soundPlayer->sequence == sound);
+        isPlayingThisSound = (soundPlayer->song == song);
 
         if (isPlayingThisSound) {
             pause_soundplayer(soundPlayer, pause);
@@ -132,18 +132,18 @@ void pause_sound(struct SequenceData *sound, u32 pause) {
 
 
 // Fade Out All Instances of This Sound
-void fade_out_sound(struct SequenceData *sound, u16 duration) {
+void fade_out_sound(struct SongHeader *song, u16 duration) {
     struct SoundPlayer *soundPlayer;
     u32 isPlayingThisSound;
     u32 i;
 
-    if (sound == NULL) {
+    if (song == NULL) {
         return;
     }
 
     for (i = 0; i < D_08aa445c; i++) {
         soundPlayer = D_08aa4460[i].soundPlayer;
-        isPlayingThisSound = (soundPlayer->sequence == sound);
+        isPlayingThisSound = (soundPlayer->song == song);
 
         if (isPlayingThisSound) {
             midi_player_fade_out_to_stop(soundPlayer, duration);
@@ -263,18 +263,18 @@ void set_soundplayer_panning(struct SoundPlayer *soundPlayer, s8 panning) {
 
 
 // Get Sound from SoundPlayer
-struct SequenceData *get_sound_from_player(struct SoundPlayer *soundPlayer) {
+struct SongHeader *get_sound_from_player(struct SoundPlayer *soundPlayer) {
     if (soundPlayer == NULL) {
         return NULL;
     }
 
-    return soundPlayer->sequence;
+    return soundPlayer->song;
 }
 
 
 // Get Sound from SoundPlayer ID
-struct SequenceData *get_sound_from_player_id(s32 playerID) {
-    return D_08aa4460[playerID].soundPlayer->sequence;
+struct SongHeader *get_sound_from_player_id(s32 playerID) {
+    return D_08aa4460[playerID].soundPlayer->song;
 }
 
 
@@ -307,7 +307,7 @@ void set_soundplayer_key(struct SoundPlayer *soundPlayer, s32 key) {
 
 
 // Set DirectSound Mode
-void func_080029d8(u32 soundMode) {
+void set_sound_mode(u32 soundMode) {
     if (soundMode != DIRECTSOUND_MODE_STEREO) {
         REG_SOUNDCNT_H |= (SOUNDCNT_DIRECT_SOUND_A_LEFT_ENABLE | SOUNDCNT_DIRECT_SOUND_B_RIGHT_ENABLE);
     } else {
@@ -319,18 +319,18 @@ void func_080029d8(u32 soundMode) {
 
 
 // Get First Instance of This Sound
-struct SoundPlayer *get_soundplayer_by_sound(struct SequenceData *sound) {
+struct SoundPlayer *get_soundplayer_by_sound(struct SongHeader *song) {
     struct SoundPlayer *soundPlayer;
     u32 i;
 
-    if (sound == NULL) {
+    if (song == NULL) {
         return; // ???
     }
 
     for (i = 0; i < D_08aa445c; i++) {
         soundPlayer = D_08aa4460[i].soundPlayer;
 
-        if (soundPlayer->sequence == sound) {
+        if (soundPlayer->song == song) {
             return soundPlayer;
         }
     }

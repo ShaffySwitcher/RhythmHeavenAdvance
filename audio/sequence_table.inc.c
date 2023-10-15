@@ -2,7 +2,7 @@
 u32 D_08aa06f4 = 1924;
 
 // Table of Sounds and Their Respective Sound Players
-struct SoundTable D_08aa06f8[] = {
+struct SongTable D_08aa06f8[] = {
     /* 0000 */ { NULL, 0 },
     /* 0001 */ { NULL, 0 },
     /* 0002 */ { NULL, 0 },

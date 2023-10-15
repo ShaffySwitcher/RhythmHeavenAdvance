@@ -19,7 +19,7 @@ void midi_psg_init(void) {
     u32 i;
 
     for (i = 0; i < 4; i++) {
-        D_030056a0[i].active = FALSE;
+        gMidiPSGChannelPool[i].active = FALSE;
     }
 
     for (i = 0; i < 4; i++) {
@@ -78,7 +78,7 @@ void midi_psg_update_id(u32 id) {
     u32 noise, sweep, reset;
     volatile u32 dummy;
 
-    soundChannel = &D_030056a0[id];
+    soundChannel = &gMidiPSGChannelPool[id];
     if (!soundChannel->active) {
         return;
     }
@@ -201,7 +201,7 @@ void midi_psg_update_id(u32 id) {
 
 // Update All PSG SoundChannels
 void midi_psg_update(void) {
-    struct SoundChannel *channel = D_030056a0;
+    struct SoundChannel *channel = gMidiPSGChannelPool;
     u16 controls = 0;
     u32 i;
 

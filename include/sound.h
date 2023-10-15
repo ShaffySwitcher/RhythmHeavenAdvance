@@ -226,7 +226,7 @@ struct InstrumentSubSplit {
 	union Instrument *subBank;
 };
 
-struct SequenceData {
+struct SongHeader {
     const u8 *midiSequence;
     u32 soundPlayer:5;
     u32 soundBank:10;
@@ -311,9 +311,9 @@ struct SoundPlayer {
     u32 priorityEnabled:1;  // If enabled, check priority values before playing a new sound.
     u32 unk0_b22:5;         // (indeterminate split; may be unused entirely)
     u32 volumeFadeType:3;   // Type of currently-active Volume Fade { 0 = None; 1 = Fade-In; 2 = Fade-Out & Close; 3 = Fade-Out & Pause }
-    struct MidiBus *midiBus;             // MIDI: Bus with effects for all MIDI Channels.
-    struct MidiTrackStream *midiReader;  // MIDI: Multiple structures which each keep track of a MIDI Track being processed.
-    struct SequenceData *sequence; // SequenceData: Currently-loaded Sound Sequence.
+    struct MidiBus *midiBus;            // MIDI: Bus with effects for all MIDI Channels.
+    struct MidiTrackStream *midiReader; // MIDI: Multiple structures which each keep track of a MIDI Track being processed.
+    struct SongHeader *song;    // SongHeader: Currently-loaded Sound Sequence.
     u32 deltaTime;              // MIDI: Ticks Per Frame, using internal assumption of 60fps [default = 1]
     const char *loopStartSym;   // MIDI: Label denoting "Loop Start". [always '[']
     const char *loopEndSym;     // MIDI: Label denoting "Loop End". [always ']']
@@ -326,7 +326,7 @@ struct SoundPlayer {
     u16 playerSpeed;    // Speed Multiplier Envelope. [Q8.8]
     u16 volumeFadeEnv;  // Volume Multiplier Envelope used for fade-out and mute effects. [Q1.15]
     u16 volumeFadeSpd;  // Higher values for faster fade-out. Is set to 1 when track is muted instantly. [default = 0]
-    u8  sequenceVolume; // SequenceData: Volume
+    u8  songVolume;     // SongHeader: Volume
     s8  midiController4E;   // ??: [default = 64]
     s8  midiController4F;   // ??: [default = 64]
     s8  midiController50;   // ??: [default = 64]
@@ -391,15 +391,15 @@ struct LFO {
     u32 ticks;      // Running Time
 };
 
-// [D_03005b30] LFO - Low-Frequency Oscillator
-extern struct LFO D_03005b30;
+// LFO - Low-Frequency Oscillator
+extern struct LFO gMidiLFO;
 
-// [D_03005b3c] LFO - Mode { 0 = Disabled; 1 = Note Triggered; 2 = Constant }
-extern u8 D_03005b3c;
+// LFO - Mode { 0 = Disabled; 1 = Note Triggered; 2 = Constant }
+extern u8 gMidiLFO_Mode;
 
 // [D_08aa06f8] Song Table
-extern struct SoundTable {
-    struct SequenceData *sound;
+extern struct SongTable {
+    struct SongHeader *song;
     u16 player;
 } D_08aa06f8[];
 

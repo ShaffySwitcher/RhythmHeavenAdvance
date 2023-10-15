@@ -2,8 +2,6 @@
 #include "sound.h"
 #include "lib_midi.h"
 
-asm(".include \"include/gba.inc\"");//Temporary
-
 
 /* AUDIO LIBRARY - SOUNDPLAYER */
 
@@ -41,7 +39,7 @@ u32 midi_player_get_loop_sym_size(const char *loopMarker) {
 
 
 // Play
-void midi_player_play_header(struct SoundPlayer *soundPlayer, struct SequenceData *sound) {
+void midi_player_play_header(struct SoundPlayer *soundPlayer, struct SongHeader *song) {
     struct MidiBus *midiBus;
     struct MidiTrackStream *mTrkReader;
     const u8 *mTrkStream;
@@ -54,7 +52,7 @@ void midi_player_play_header(struct SoundPlayer *soundPlayer, struct SequenceDat
     // Reading Sequence Data:
     if (midi_player_is_playing(soundPlayer)) {
         if (soundPlayer->priorityEnabled && !soundPlayer->isPaused) {
-            if (soundPlayer->sequence->priority > sound->priority) {
+            if (soundPlayer->song->priority > song->priority) {
                 return;
             }
         }
@@ -63,14 +61,14 @@ void midi_player_play_header(struct SoundPlayer *soundPlayer, struct SequenceDat
     midiBus = soundPlayer->midiBus;
     midi_channel_stop_all(midiBus);
     midi_bus_init(midiBus, midiBus->totalChannels, midiBus->midiChannel);
-    midi_bus_set_bank(midiBus, instrument_banks[sound->soundBank]);
-    midi_bus_set_volume(midiBus, sound->volume);
-    midi_bus_set_priority(midiBus, sound->priority);
-    soundPlayer->sequence = sound;
-    soundPlayer->sequenceVolume = sound->volume;
+    midi_bus_set_bank(midiBus, instrument_banks[song->soundBank]);
+    midi_bus_set_volume(midiBus, song->volume);
+    midi_bus_set_priority(midiBus, song->priority);
+    soundPlayer->song = song;
+    soundPlayer->songVolume = song->volume;
 
     // Reading MIDI Data:
-    mTrkStream = sound->midiSequence;
+    mTrkStream = song->midiSequence;
 
     // Header:
     mTrkStream += 4; // Skip (Header: "MThd")
@@ -126,21 +124,21 @@ void midi_player_play_header(struct SoundPlayer *soundPlayer, struct SequenceDat
 }
 
 
-// Play from SoundTable
+// Play from SongTable
 void midi_player_play_id(u16 soundIndex) {
     struct SoundPlayer *soundPlayer;
-    struct SequenceData *sound;
+    struct SongHeader *song;
 
     soundPlayer = D_08aa4460[D_08aa06f8[soundIndex].player].soundPlayer;
-    sound = D_08aa06f8[soundIndex].sound;
-    midi_player_play_header(soundPlayer, sound);
+    song = D_08aa06f8[soundIndex].song;
+    midi_player_play_header(soundPlayer, song);
 }
 
 
 // Stop
 void midi_player_stop(struct SoundPlayer *soundPlayer) {
     midi_channel_cut_all(soundPlayer->midiBus);
-    soundPlayer->sequence = NULL;
+    soundPlayer->song = NULL;
 }
 
 
@@ -158,7 +156,7 @@ void midi_player_set_pause(struct SoundPlayer *soundPlayer, u8 pause) {
 u32 midi_player_is_playing(struct SoundPlayer *soundPlayer) {
     u32 i;
 
-    if (soundPlayer->sequence == NULL) {
+    if (soundPlayer->song == NULL) {
         return FALSE;
     }
 
@@ -218,24 +216,24 @@ void midi_player_set_track_volume(struct SoundPlayer *soundPlayer, u16 trackMask
 
 
 // Set Pitch
-void midi_player_set_pitch(struct SoundPlayer *soundPlayer, u16 unused, s16 pitch) {
+void midi_player_set_pitch(struct SoundPlayer *soundPlayer, u16 trackMask, s16 pitch) {
     midi_bus_set_pitch(soundPlayer->midiBus, pitch);
 }
 
 
 // Set Panning
-void midi_player_set_panning(struct SoundPlayer *soundPlayer, u16 unused, s8 panning) {
+void midi_player_set_panning(struct SoundPlayer *soundPlayer, u16 trackMask, s8 panning) {
     midi_bus_set_panning(soundPlayer->midiBus, panning);
 }
 
 
 // Pause from Index
 void midi_player_pause_id(u16 soundIndex) {
-    struct SequenceData *sound = D_08aa06f8[soundIndex].sound;
+    struct SongHeader *song = D_08aa06f8[soundIndex].song;
     u32 i;
 
     for (i = 0; i <= D_08aa4318; i++) {
-        if ((D_08aa4324[i] != NULL) && (D_08aa4324[i]->sequence == sound)) {
+        if ((D_08aa4324[i] != NULL) && (D_08aa4324[i]->song == song)) {
             midi_player_pause(D_08aa4324[i]);
         }
     }
@@ -346,11 +344,11 @@ void midi_player_parse_sys_exc_message(struct SoundPlayer *soundPlayer, const u8
     switch (type) {
         case SYS_EXC_EVENT_LFO:
             midi_equalizer_reset();
-            D_03005b3c = LFO_MODE_DISABLED;
-            D_03005640 = stream[0] * 2;
-            midi_lfo_init(&D_03005b30, stream[1] * 2, stream[2] * 2, stream[3] * 2, stream[4] * 2, stream[5] * 2);
+            gMidiLFO_Mode = LFO_MODE_DISABLED;
+            gMidiLFO_Depth = stream[0] * 2;
+            midi_lfo_init(&gMidiLFO, stream[1] * 2, stream[2] * 2, stream[3] * 2, stream[4] * 2, stream[5] * 2);
             midi_equalizer_set_high_gain(stream[6]);
-            D_03005644 = soundPlayer;
+            gMidiLFO_Player = soundPlayer;
             break;
 
         case SYS_EXC_EVENT_R_SCALE:
@@ -393,7 +391,7 @@ u32 midi_player_parse_meta_event(struct SoundPlayer *soundPlayer, const u8 **ups
         case META_SET_TEMPO:
             tempo = 60000000u / ((stream[0] << 16) | (stream[1] << 8) | stream[2]);
             soundPlayer->midiTempo = tempo;
-            D_0300562c = midi_player_get_delta_time(tempo, soundPlayer->playerSpeed, soundPlayer->midiQuarterNote);
+            gMidiPlayerDeltaTime = midi_player_get_delta_time(tempo, soundPlayer->playerSpeed, soundPlayer->midiQuarterNote);
             return META_EVENT_OTHER;
 
         default:
@@ -466,28 +464,28 @@ void midi_player_parse_controller_change(struct SoundPlayer *soundPlayer, u32 tr
             break;
 
         case M_CONTROLLER_LFO:
-            D_03005b3c = value;
+            gMidiLFO_Mode = value;
             switch (value) {
                 case LFO_MODE_DISABLED:
                 case LFO_MODE_KEYPRESS:
-                    midi_lfo_stop(&D_03005b30);
+                    midi_lfo_stop(&gMidiLFO);
                     break;
                 case LFO_MODE_CONSTANT:
                     midi_equalizer_reset();
-                    midi_lfo_start(&D_03005b30);
+                    midi_lfo_start(&gMidiLFO);
                     break;
             }
             break;
 
         case M_CONTROLLER_EQ:
-            D_03005b3c = LFO_MODE_DISABLED;
-            midi_lfo_stop(&D_03005b30);
+            gMidiLFO_Mode = LFO_MODE_DISABLED;
+            midi_lfo_stop(&gMidiLFO);
             midi_equalizer_reset();
             midi_equalizer_set_position((value * 2) - 0x80);
             break;
 
         case M_CONTROLLER_LFO_GAIN:
-            D_03005640 = value * 2;
+            gMidiLFO_Depth = value * 2;
             break;
 
         case M_CONTROLLER_EQ_GAIN:
@@ -533,8 +531,8 @@ void midi_player_parse_controller_change(struct SoundPlayer *soundPlayer, u32 tr
 void midi_player_add_note(u32 track, u32 key, u32 velocity) {
     struct MidiNote *midiNote;
 
-    if (D_03005b78 < 20) {
-        midiNote = &D_03005650[D_03005b78++];
+    if (gMidiNoteNext < 20) {
+        midiNote = &gMidiNotePool[gMidiNoteNext++];
         midiNote->channel = track;
         midiNote->key = key;
         midiNote->velocity = velocity;
@@ -688,7 +686,7 @@ void midi_player_update_track(struct SoundPlayer *soundPlayer, u32 track) {
     }
 
     anyNotePlayed = FALSE;
-    D_03005b78 = 0; // Reset "Current Note To Modify" counter.
+    gMidiNoteNext = 0; // Reset "Current Note To Modify" counter.
 
     while (reader->unkC < soundPlayer->deltaTime) {
         if (soundPlayer->inLoop && !reader->inLoop && (reader->runningTime >= soundPlayer->unk34)) {
@@ -706,7 +704,7 @@ void midi_player_update_track(struct SoundPlayer *soundPlayer, u32 track) {
 
         delta = midi_parse_variable_length(&reader->stream_curr);
         if (delta != 0) {
-            for (note = D_03005650, i = 0; i < D_03005b78; i++, note++) {
+            for (note = gMidiNotePool, i = 0; i < gMidiNoteNext; i++, note++) {
                 if (note->velocity != 0) { // Note has non-zero velocity.
                     midi_note_start(soundPlayer->midiBus, note->channel, note->key, note->velocity);
                     anyNotePlayed = TRUE;
@@ -714,7 +712,7 @@ void midi_player_update_track(struct SoundPlayer *soundPlayer, u32 track) {
                     midi_note_stop(soundPlayer->midiBus, note->channel, note->key);
                 }
             }
-            D_03005b78 = 0; // Reset "Current Note To Modify" counter.
+            gMidiNoteNext = 0; // Reset "Current Note To Modify" counter.
         }
 
         reader->unkC += delta << 8;
@@ -726,9 +724,9 @@ void midi_player_update_track(struct SoundPlayer *soundPlayer, u32 track) {
     // Use Filter EQ with LFO
     if (anyNotePlayed) {
         channel = &soundPlayer->midiBus->midiChannel[track];
-        if (channel->filterEQ && (D_03005b3c == LFO_MODE_KEYPRESS)) {
+        if (channel->filterEQ && (gMidiLFO_Mode == LFO_MODE_KEYPRESS)) {
             midi_equalizer_reset();
-            midi_lfo_start(&D_03005b30);
+            midi_lfo_start(&gMidiLFO);
         }
     }
 }
@@ -772,7 +770,7 @@ void midi_player_update_volume_fade(struct SoundPlayer *soundPlayer) {
             break;
     }
 
-    volumeProduct = (soundPlayer->sequenceVolume * soundPlayer->playerVolume * soundPlayer->volumeFadeEnv) >> 8;
+    volumeProduct = (soundPlayer->songVolume * soundPlayer->playerVolume * soundPlayer->volumeFadeEnv) >> 8;
     volumeLevel = volumeProduct >> 15;
     if (volumeLevel > 0xFF) {
         volumeLevel = 0xFF;
@@ -794,20 +792,20 @@ void midi_player_update_sequence(struct SoundPlayer *soundPlayer) {
     u32 i;
 
     // If the SoundPlayer is stopped or paused, do not proceed.
-    if ((soundPlayer->sequence == NULL) || soundPlayer->isPaused) {
+    if ((soundPlayer->song == NULL) || soundPlayer->isPaused) {
         return;
     }
 
-    D_0300562c = 0;
+    gMidiPlayerDeltaTime = 0;
 
     // Update MIDI Track Streams
     for (i = 0; i < soundPlayer->usedTracks; i++) {
         midi_player_update_track(soundPlayer, i);
     }
 
-    // If the above loop modifies the value of D_0300562c, apply to channel as speed envelope.
-    if (D_0300562c != 0) {
-        soundPlayer->deltaTime = D_0300562c;
+    // If the above loop modifies the value of gMidiPlayerDeltaTime, apply to channel as speed envelope.
+    if (gMidiPlayerDeltaTime != 0) {
+        soundPlayer->deltaTime = gMidiPlayerDeltaTime;
     }
 
     // Check if any MIDI Track Readers are currently operating.
@@ -821,22 +819,22 @@ void midi_player_update_sequence(struct SoundPlayer *soundPlayer) {
 
     // If none are active, remove the Sound Sequence from the Audio Channel.
     if (noActiveReader) {
-        soundPlayer->sequence = NULL;
+        soundPlayer->song = NULL;
     }
 }
 
 
 // Update Main
-void midi_player_update_all(void) {
+void midi_sound_main(void) {
     struct SoundPlayer *soundPlayer;
     u32 delta;
     u32 i;
-    s32 rvb0 = D_03005b90[0];
-    s32 rvb1 = D_03005b90[1];
-    s32 rvb2 = D_03005b90[2];
-    s32 rvb3 = D_03005b90[3];
+    s32 rvb0 = gMidiRVB_ControlBuf[0];
+    s32 rvb1 = gMidiRVB_ControlBuf[1];
+    s32 rvb2 = gMidiRVB_ControlBuf[2];
+    s32 rvb3 = gMidiRVB_ControlBuf[3];
 
-    D_030055f0 = REG_VCOUNT;
+    gMidiVCOUNTAtStart = REG_VCOUNT;
 
     // Standard Sound Players
     for (i = 0; i <= D_08aa4318; i++) {
@@ -845,7 +843,7 @@ void midi_player_update_all(void) {
             midi_player_update_volume_fade(soundPlayer);
             midi_player_update_sequence(soundPlayer);
             midi_channel_update_mod_all(soundPlayer->midiBus);
-            if (soundPlayer->sequence != NULL) {
+            if (soundPlayer->song != NULL) {
                 rvb0 -= (64 * 2) - (soundPlayer->midiController4E * 2);
                 rvb1 -= 64 - soundPlayer->midiController4F;
                 rvb2 -= 64 - soundPlayer->midiController50;
@@ -865,14 +863,14 @@ void midi_player_update_all(void) {
     }
 
     // LFO
-    if ((D_03005644 != NULL) && (D_03005b3c != LFO_MODE_DISABLED)) {
-        delta = midi_player_get_delta_time(D_03005644->midiTempo, D_03005644->playerSpeed, 24);
-        midi_lfo_update(&D_03005b30, delta);
-        midi_equalizer_set_position((D_03005b30.output * D_03005640) >> 8);
+    if ((gMidiLFO_Player != NULL) && (gMidiLFO_Mode != LFO_MODE_DISABLED)) {
+        delta = midi_player_get_delta_time(gMidiLFO_Player->midiTempo, gMidiLFO_Player->playerSpeed, 24);
+        midi_lfo_update(&gMidiLFO, delta);
+        midi_equalizer_set_position((gMidiLFO.output * gMidiLFO_Depth) >> 8);
     }
 
     midi_note_update_all();
-    D_03005b80 = REG_VCOUNT;
+    gMidiVCOUNTAtEnd = REG_VCOUNT;
 
     if (rvb0 < 0) rvb0 = 0;
     if (rvb0 > 127) rvb0 = 127;
@@ -890,10 +888,10 @@ void midi_player_update_all(void) {
 
 // Set Main Reverb Controller Scratch/Queue
 void midi_player_set_reverb(u32 rvb0, u32 rvb1, u32 rvb2, u32 rvb3) {
-    D_03005b90[0] = rvb0;
-    D_03005b90[1] = rvb1;
-    D_03005b90[2] = rvb2;
-    D_03005b90[3] = rvb3;
+    gMidiRVB_ControlBuf[0] = rvb0;
+    gMidiRVB_ControlBuf[1] = rvb1;
+    gMidiRVB_ControlBuf[2] = rvb2;
+    gMidiRVB_ControlBuf[3] = rvb3;
 }
 
 
@@ -904,12 +902,12 @@ void midi_stub(void) {
 
 // Initialise SoundPlayer
 void midi_player_init(struct SoundPlayer *soundPlayer, struct MidiBus *midiBus, u32 totalTracks, struct MidiTrackStream *midiReader, u32 priorityEnabled) {
-    soundPlayer->sequence = NULL;
+    soundPlayer->song = NULL;
     soundPlayer->midiBus = midiBus;
     soundPlayer->totalTracks = totalTracks;
     soundPlayer->midiReader = midiReader;
     soundPlayer->priorityEnabled = priorityEnabled;
-    soundPlayer->sequenceVolume = 100;
+    soundPlayer->songVolume = 100;
 }
 
 
@@ -964,10 +962,10 @@ void midi_direct_player_init(struct SoundPlayer *soundPlayer, struct MidiTrackSt
 
 
 // Append DirectMidi Sequence Instructions
-void midi_direct_player_append_sequence(u8 *sequence, u32 length) {
+void midi_direct_player_append_sequence(u8 *midiIn, u32 length) {
     while ((length != 0) && (sDirectLength < 0x200)) {
-        sDirectSequence[sDirectLength++] = *sequence;
-        sequence++;
+        sDirectSequence[sDirectLength++] = *midiIn;
+        midiIn++;
         length--;
     }
 }
@@ -1135,15 +1133,15 @@ void midi_direct_player_update(void) {
 
     midi_channel_update_mod_all(sDirectBus);
     anyNotePlayed = FALSE;
-    D_03005b78 = 0;
+    gMidiNoteNext = 0;
     midi_direct_player_read_sequence();
 
-    for (note = D_03005650, i = 0; i < D_03005b78; i++, note++) {
+    for (note = gMidiNotePool, i = 0; i < gMidiNoteNext; i++, note++) {
         if (note->velocity != 0) {
             midi_note_start(sDirectBus, note->channel, note->key, note->velocity);
 
             midiChannel = &sDirectBus->midiChannel[note->channel];
-            if (midiChannel->filterEQ && (D_03005b3c == LFO_MODE_KEYPRESS)) {
+            if (midiChannel->filterEQ && (gMidiLFO_Mode == LFO_MODE_KEYPRESS)) {
                 anyNotePlayed = TRUE;
             }
         } else {
@@ -1152,13 +1150,13 @@ void midi_direct_player_update(void) {
     }
     if (anyNotePlayed) {
         midi_equalizer_reset();
-        midi_lfo_start(&D_03005b30);
+        midi_lfo_start(&gMidiLFO);
     }
 }
 
 
 // Initialise Sound Area
-void lib_midi_init(void) {
+void midi_sound_init(void) {
     u32 i;
 
     midi_directsound_init(DIRECTSOUND_MODE_STEREO, AUDIO_SAMPLE_RATE,
@@ -1180,11 +1178,11 @@ void lib_midi_init(void) {
         D_03005b7c[i] = 0;
     }
 
-    D_03005b3c = LFO_MODE_DISABLED;
-    D_03005644 = NULL;
-    D_03005b90[0] = 0;
-    D_03005b90[1] = 0;
-    D_03005b90[2] = 0;
-    D_03005b90[3] = 0;
+    gMidiLFO_Mode = LFO_MODE_DISABLED;
+    gMidiLFO_Player = NULL;
+    gMidiRVB_ControlBuf[0] = 0;
+    gMidiRVB_ControlBuf[1] = 0;
+    gMidiRVB_ControlBuf[2] = 0;
+    gMidiRVB_ControlBuf[3] = 0;
     sDirectPlayer = NULL;
 }

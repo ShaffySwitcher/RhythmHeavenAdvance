@@ -2,7 +2,7 @@
 u32 D_08a9e8e0 = 1924 - 1;
 
 // Unused List of Sounds
-struct SequenceData *D_08a9e8e4[] = {
+struct SongHeader *D_08a9e8e4[] = {
     /* 0000 */ NULL,
     /* 0001 */ NULL,
     /* 0002 */ NULL,
