@@ -179,7 +179,7 @@ void midi_sampler_set_enable_eq(u32 id, u32 enable) {
 
 
 // Initialise DirectSound (https://decomp.me/scratch/ohUd1)
-#include "asm/lib_08049144/asm_08049490.s"
+#include "asm/lib_midi/asm_08049490.s"
 
 
 // Update DirectSound (https://decomp.me/scratch/jRyYQ)
@@ -201,10 +201,10 @@ void midi_directsound_update(void) {
         return;
     }
 
-    fastProcessBaseFreq = ALIGN_THUMB_FUNC(func_08048b9c);
-    fastProcessShiftedFreq = ALIGN_THUMB_FUNC(func_080483b8);
-    fastProcessDistort = ALIGN_THUMB_FUNC(func_08048d58);
-    fastProcessEQ = ALIGN_THUMB_FUNC(func_08048fc0);
+    fastProcessBaseFreq = ALIGN_THUMB_FUNC(midi_asm_process_pcm_no_resample);
+    fastProcessShiftedFreq = ALIGN_THUMB_FUNC(midi_asm_process_pcm_resample);
+    fastProcessDistort = ALIGN_THUMB_FUNC(midi_asm_process_pcm_distort);
+    fastProcessEQ = ALIGN_THUMB_FUNC(midi_asm_process_eq);
     streams = gMidiSamplerPool;
 
     wordsPerFrame = (gMidiSamplesPerFrame + 259) / 4;
@@ -235,7 +235,7 @@ void midi_directsound_update(void) {
             wordBatchSize = totalWordsToProcess;
         }
 
-        (ALIGN_THUMB_FUNC(func_08048758))(wordBatchSize);
+        (ALIGN_THUMB_FUNC(midi_asm_read_samples))(wordBatchSize);
 
         noSamplesProcessed = TRUE;
         eqWasUsed = FALSE;
@@ -287,7 +287,7 @@ void midi_directsound_update(void) {
         }
 
         gMidiSampleTable[0x3FF] = (noSamplesProcessed) ? 0 : -1;
-        (ALIGN_THUMB_FUNC(func_08048a00))(wordBatchSize);
+        (ALIGN_THUMB_FUNC(midi_asm_write_samples))(wordBatchSize);
 
         sampleBufferPos = D_03005b40 + wordBatchSize;
         while (sampleBufferPos >= gMidiPCMBufSize32) {
