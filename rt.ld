@@ -141,7 +141,7 @@ SECTIONS {
 		build/src/prologues/sick_beats.c.o(.bss);
 		build/src/prologues/wizards_waltz.c.o(.bss);
 		build/src/code_08047e50.c.o(.bss);
-        build/asm/lib_080482e0.s.o(.bss);
+        build/asm/lib_midi.s.o(.bss);
         build/src/lib_midi_directsound.c.o(.bss);
         build/src/lib_midi_channel.c.o(.bss);
         build/src/lib_midi_lfo.c.o(.bss);
@@ -292,7 +292,7 @@ SECTIONS {
 		build/src/prologues/sick_beats.c.o(.text);
 		build/src/prologues/wizards_waltz.c.o(.text);
 		build/src/code_08047e50.c.o(.text);
-        build/asm/lib_080482e0.s.o(.text);
+        build/asm/lib_midi.s.o(.text);
         build/src/lib_midi_directsound.c.o(.text);
         build/src/lib_midi_channel.c.o(.text);
         build/src/lib_midi_lfo.c.o(.text);

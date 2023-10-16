@@ -206,12 +206,12 @@ typedef void (*ThumbFunc)();
 #define ALIGN_THUMB_FUNC(x) (ThumbFunc)((u32)&x|1)
 
 extern ThumbFunc midi_asm_init_mode;
-extern ThumbFunc func_080483b8;
-extern ThumbFunc func_08048758;
-extern ThumbFunc func_08048a00;
-extern ThumbFunc func_08048b9c;
-extern ThumbFunc func_08048d58;
-extern ThumbFunc func_08048fc0;
+extern ThumbFunc midi_asm_process_pcm_resample;
+extern ThumbFunc midi_asm_read_samples;
+extern ThumbFunc midi_asm_write_samples;
+extern ThumbFunc midi_asm_process_pcm_no_resample;
+extern ThumbFunc midi_asm_process_pcm_distort;
+extern ThumbFunc midi_asm_process_eq;
 
 /* INTERRUPT_DMA2 */
 
