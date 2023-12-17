@@ -1,12 +1,17 @@
 
 
-/* MIDI LIBRARY ASSEMBLY - PROCESS PCM (DISTORT?) */
+/* MIDI LIBRARY ASSEMBLY - READ PCM (FAST RESAMPLE) */
 
 
-@ Process Samples - Distort?
+@ Read PCM Samples - Fast Resample
+@ This function is called when a different samplerate to the base SampleData is desired.
+@ Unlike the standard, accurate method of resampling, this function does not interpolate
+@ between the two closest samples for the current stream position, instead only reading
+@ the earlier of the two. This results in faster speeds at the cost of diminished low
+@ frequencies.
     @ R0: Batch Size (in 32-bit Words)
     @ R1: SampleStream Pointer
-unaligned_thumb_func_start midi_asm_process_pcm_distort
+unaligned_thumb_func_start midi_asm_read_pcm_fast
     orrs    r0, r0
     bne     branch_08048d5e
     bx      lr
@@ -32,7 +37,7 @@ branch_08048d5e:
     movs    r0, #2
     ldrsb   r3, [r1, r0]
     ldrb    r0, [r1, #1]
-    ldr     r4, _08048fb8   @ gMidiSamplerHighGain
+    ldr     r4, _08048fb8   @ gMidiSamplerGain
     ldrh    r4, [r4, #0]
     adds    r0, r0, r4
     muls    r2, r0
@@ -50,8 +55,8 @@ branch_08048d5e:
     mov     r0, r8
     ldr     r5, [r1, #16]
     subs    r5, r5, r0
-    movs    r0, #FUNC_INDEX_EDIT_PCM_DISTORT
-    bl      midi_asm_process_pcm_distort_call_arm
+    movs    r0, #FUNC_INDEX_READ_PCM_FAST
+    bl      midi_asm_read_pcm_fast_call_arm
     pop     {r1}
     ldrb    r2, [r1, #0]
     movs    r3, #1
@@ -72,8 +77,8 @@ branch_08048d5e:
     bx      r0
 
 
-@ Process Samples - Distort? (ARM Stereo)
-arm_func_start midi_arm_stereo_edit_pcm_distort
+@ Read PCM Samples - Fast Resample (ARM Stereo)
+arm_func_start midi_arm_stereo_read_pcm_fast
     add     r0, r11, r12, lsr #8
     cmp     r0, r8
     bcs     branch_08048e54
@@ -103,7 +108,7 @@ arm_func_start midi_arm_stereo_edit_pcm_distort
     stmia   r6!, {r0, r1, r2, r3}
     sub     r12, r12, #1
     ands    r0, r12, #0xFF
-    bne     midi_arm_stereo_edit_pcm_distort
+    bne     midi_arm_stereo_read_pcm_fast
     mov     r0, #1
     bx      lr
 
@@ -127,7 +132,7 @@ branch_08048e7c:
     bne     branch_08048e60
     sub     r12, r12, #1
     ands    r0, r12, #0xFF
-    bne     midi_arm_stereo_edit_pcm_distort
+    bne     midi_arm_stereo_read_pcm_fast
     mov     r0, #1
     bx      lr
 
@@ -144,11 +149,11 @@ branch_08048ea4:
     mov     r0, #0
     bx      lr
 
-glabel midi_arm_stereo_edit_pcm_distort_end
+glabel midi_arm_stereo_read_pcm_fast_end
 
 
-@ Process Samples - Distort? (ARM Mono)
-arm_func_start midi_arm_mono_edit_pcm_distort
+@ Read PCM Samples - Fast Resample (ARM Mono)
+arm_func_start midi_arm_mono_read_pcm_fast
     add     r0, r11, r12, lsr #8
     cmp     r0, r8
     bcs     branch_08048f38
@@ -172,7 +177,7 @@ arm_func_start midi_arm_mono_edit_pcm_distort
     stmia   r6!, {r0, r1, r2, r3}
     sub     r12, r12, #1
     ands    r0, r12, #0xFF
-    bne     midi_arm_mono_edit_pcm_distort
+    bne     midi_arm_mono_read_pcm_fast
     mov     r0, #1
     bx      lr
 
@@ -195,7 +200,7 @@ branch_08048f5c:
     bne     branch_08048f44
     sub     r12, r12, #1
     ands    r0, r12, #0xFF
-    bne     midi_arm_mono_edit_pcm_distort
+    bne     midi_arm_mono_read_pcm_fast
     mov     r0, #1
     bx      lr
 
@@ -211,17 +216,17 @@ branch_08048f84:
     mov     r0, #0
     bx      lr
 
-glabel midi_arm_mono_edit_pcm_distort_end
+glabel midi_arm_mono_read_pcm_fast_end
 
 
-@ Process Samples - Distort?
+@ Read PCM Samples - Fast Resample
     @ Align THUMB Function Call
-unaligned_thumb_func_start midi_asm_process_pcm_distort_call_arm
+unaligned_thumb_func_start midi_asm_read_pcm_fast_call_arm
     ldr     r1, _08048fbc   @ midi_asm_call_arm_func_id
     adds    r1, #1
     bx      r1
 
 .balign 4, 0
 _08048fb4: .word gMidiSampleScratch
-_08048fb8: .word gMidiSamplerHighGain
+_08048fb8: .word gMidiSamplerGain
 _08048fbc: .word midi_asm_call_arm_func_id

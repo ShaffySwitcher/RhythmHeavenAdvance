@@ -156,7 +156,7 @@ void midi_channel_init(struct MidiChannel *midiChannel) {
     midiChannel->expression = 127;
     midiChannel->unk4_b21 = 0;
     midiChannel->modDepth = 0;
-    midiChannel->modType = 0;
+    midiChannel->modType = MOD_TYPE_VIBRATO;
     midiChannel->unkC = 1;
     midiChannel->modSpeed = (60 << 8);
     midiChannel->modCount = 0;
@@ -485,6 +485,7 @@ s32 midi_note_get_first_active(struct MidiChannel *midiChannel, u8 key) {
             }
         }
     }
+
     return -1;
 }
 
@@ -825,7 +826,7 @@ void midi_note_start(struct MidiBus *midiBus, u32 track, u8 noteKey, u8 noteVelo
 
     // Initialise sound outputs.
     if (isPSG) {
-        midi_psg_trigger_id(instPSG->channel);
+        midi_psg_start_id(instPSG->channel);
     } else {
         midi_sampler_stop(channelIndex);
         midi_sampler_load(channelIndex, instPCM->sample);
@@ -836,7 +837,7 @@ void midi_note_start(struct MidiBus *midiBus, u32 track, u8 noteKey, u8 noteVelo
         if (panning > 127) panning = 127;
         midi_sampler_set_stereo_bias(channelIndex, midi_get_stereo_bias_l(panning), midi_get_stereo_bias_r(panning) * stereoPhase);
         midi_sampler_set_frequency(channelIndex, midi_note_update_pitch(soundChannel));
-        midi_sampler_set_enable_distort(channelIndex, instPCM->distort);
+        midi_sampler_set_enable_fast_resample(channelIndex, instPCM->fastRead);
         midi_sampler_set_enable_eq(channelIndex, midiChannel->filterEQ);
         midi_sampler_start(channelIndex);
     }

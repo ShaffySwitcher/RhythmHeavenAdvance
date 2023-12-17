@@ -13,40 +13,42 @@ extern u32 __udivmoddi4(u64, u64);
 // INTERRUPT_DMA2
 void midi_interrupt_dma2(void) {
     volatile u32 dummy;
-    u32 temp;
-    u32 flag;
+    u32 samples;
+    u32 resetDMA;
 
     if (!gMidiDirectSoundEnabled) {
         return;
     }
 
-    flag = FALSE;
-    D_030064a0 += 4;
+    resetDMA = FALSE;
 
+    D_030064a0 += 4;
     if (D_030064a0 >= gMidiPCMBufSize32) {
         D_030064a0 -= gMidiPCMBufSize32;
     }
 
+    // Buffer Underrun Handler
     if (D_030064a0 == D_03005b40) {
         D_030064a0 = (D_030064a0 != 0) ? D_030064a0 - 4 : gMidiPCMBufSize32 - 4;
 
-        temp = gMidiPCMBufR[D_030064a0 + 3] >> 24;
-        temp |= (temp << 8);
-        temp |= (temp << 16);
-        gMidiPCMBufR[D_030064a0 + 0] = gMidiPCMBufR[D_030064a0 + 1] = gMidiPCMBufR[D_030064a0 + 2] = gMidiPCMBufR[D_030064a0 + 3] = temp;
+        // Write the last-read sample across all of the previous 16 samples.
+        samples = gMidiPCMBufR[D_030064a0 + 3] >> 24;
+        samples |= (samples << 8);
+        samples |= (samples << 16);
+        gMidiPCMBufR[D_030064a0 + 0] = gMidiPCMBufR[D_030064a0 + 1] = gMidiPCMBufR[D_030064a0 + 2] = gMidiPCMBufR[D_030064a0 + 3] = samples;
+        samples = gMidiPCMBufL[D_030064a0 + 3] >> 24;
+        samples |= (samples << 8);
+        samples |= (samples << 16);
+        gMidiPCMBufL[D_030064a0 + 0] = gMidiPCMBufL[D_030064a0 + 1] = gMidiPCMBufL[D_030064a0 + 2] = gMidiPCMBufL[D_030064a0 + 3] = samples;
 
-        temp = gMidiPCMBufL[D_030064a0 + 3] >> 24;
-        temp |= (temp << 8);
-        temp |= (temp << 16);
-        gMidiPCMBufL[D_030064a0 + 0] = gMidiPCMBufL[D_030064a0 + 1] = gMidiPCMBufL[D_030064a0 + 2] = gMidiPCMBufL[D_030064a0 + 3] = temp;
-        flag = TRUE;
+        resetDMA = TRUE;
     }
 
     if (D_030064a0 == 0) {
-        flag = TRUE;
+        resetDMA = TRUE;
     }
 
-    if (!flag) {
+    if (!resetDMA) {
         return;
     }
 
@@ -163,9 +165,9 @@ void midi_sampler_set_frequency(u32 id, u32 frequency) {
 }
 
 
-// Set Sampler Enable Distortion(?)
-void midi_sampler_set_enable_distort(u32 id, u32 enable) {
-    gMidiSamplerPool[id].distort = enable;
+// Set Sampler Enable Fast Resample
+void midi_sampler_set_enable_fast_resample(u32 id, u32 enable) {
+    gMidiSamplerPool[id].fastRead = enable;
 }
 
 
@@ -184,8 +186,8 @@ void midi_sampler_set_enable_eq(u32 id, u32 enable) {
 
 // Update DirectSound (https://decomp.me/scratch/jRyYQ)
 void midi_directsound_update(void) {
-    ThumbFunc fastProcessBaseFreq, fastProcessShiftedFreq, fastProcessDistort;
-    ThumbFunc fastProcessEQ;
+    ThumbFunc readPcmFixed, readPcmAccurate, readPcmFast;
+    ThumbFunc applyEQ;
     u32 noSamplesProcessed;
     struct SampleStream *streams;
     s32 wordsPerFrame, unreadProcessedWords;
@@ -201,10 +203,10 @@ void midi_directsound_update(void) {
         return;
     }
 
-    fastProcessBaseFreq = ALIGN_THUMB_FUNC(midi_asm_process_pcm_no_resample);
-    fastProcessShiftedFreq = ALIGN_THUMB_FUNC(midi_asm_process_pcm_resample);
-    fastProcessDistort = ALIGN_THUMB_FUNC(midi_asm_process_pcm_distort);
-    fastProcessEQ = ALIGN_THUMB_FUNC(midi_asm_process_eq);
+    readPcmFixed = ALIGN_THUMB_FUNC(midi_asm_read_pcm_fixed);
+    readPcmAccurate = ALIGN_THUMB_FUNC(midi_asm_read_pcm_accurate);
+    readPcmFast = ALIGN_THUMB_FUNC(midi_asm_read_pcm_fast);
+    applyEQ = ALIGN_THUMB_FUNC(midi_asm_apply_eq);
     streams = gMidiSamplerPool;
 
     wordsPerFrame = (gMidiSamplesPerFrame + 259) / 4;
@@ -235,13 +237,14 @@ void midi_directsound_update(void) {
             wordBatchSize = totalWordsToProcess;
         }
 
-        (ALIGN_THUMB_FUNC(midi_asm_read_samples))(wordBatchSize);
+        (ALIGN_THUMB_FUNC(midi_asm_update_scratch))(wordBatchSize);
 
         noSamplesProcessed = TRUE;
         eqWasUsed = FALSE;
         eqPosition = gMidiEQ_Area[0];
         eqHighGain = 0;
 
+        // Read samples that will be filtered by EQ.
         for (i = 0; i < gMidiSamplerCount; i++) {
             eqSmoothing = 256 - eqPosition;
 
@@ -252,42 +255,43 @@ void midi_directsound_update(void) {
                     if (eqPosition > 127) {
                         eqHighGain = (streams[i].volume * eqSmoothing * gMidiEQ_HighGain) >> 7;
                     }
-                    gMidiSamplerHighGain = eqHighGain;
+                    gMidiSamplerGain = eqHighGain;
 
                     if (!streams[i].hasFrequency) {
-                        fastProcessBaseFreq(wordBatchSize, &streams[i]);
-                    } else if (streams[i].distort) {
-                        fastProcessDistort(wordBatchSize, &streams[i]);
+                        readPcmFixed(wordBatchSize, &streams[i]);
+                    } else if (streams[i].fastRead) {
+                        readPcmFast(wordBatchSize, &streams[i]);
                     } else {
-                        fastProcessShiftedFreq(wordBatchSize, &streams[i]);
+                        readPcmAccurate(wordBatchSize, &streams[i]);
                     }
                 }
             }
         }
 
         if (eqWasUsed) {
-            fastProcessEQ(wordBatchSize, gMidiEQ_Area);
+            applyEQ(wordBatchSize, gMidiEQ_Area);
         }
+        gMidiSamplerGain = 0;
 
-        gMidiSamplerHighGain = 0;
+        // Read unfiltered samples.
         for (i = 0; i < gMidiSamplerCount; i++) {
             if (streams[i].active) {
                 if (!streams[i].equalize && !gMidiEQ_IsGlobal) {
                     noSamplesProcessed = FALSE;
 
                     if (!streams[i].hasFrequency) {
-                        fastProcessBaseFreq(wordBatchSize, &streams[i]);
-                    } else if (streams[i].distort) {
-                        fastProcessDistort(wordBatchSize, &streams[i]);
+                        readPcmFixed(wordBatchSize, &streams[i]);
+                    } else if (streams[i].fastRead) {
+                        readPcmFast(wordBatchSize, &streams[i]);
                     } else {
-                        fastProcessShiftedFreq(wordBatchSize, &streams[i]);
+                        readPcmAccurate(wordBatchSize, &streams[i]);
                     }
                 }
             }
         }
 
         gMidiSampleTable[0x3FF] = (noSamplesProcessed) ? 0 : -1;
-        (ALIGN_THUMB_FUNC(midi_asm_write_samples))(wordBatchSize);
+        (ALIGN_THUMB_FUNC(midi_asm_update_buffer))(wordBatchSize);
 
         sampleBufferPos = D_03005b40 + wordBatchSize;
         while (sampleBufferPos >= gMidiPCMBufSize32) {
@@ -305,13 +309,15 @@ void midi_directsound_update(void) {
 void midi_directsound_flush(void) {
     volatile u32 dummy;
 
-    gMidiDirectSoundEnabled = 0;
+    gMidiDirectSoundEnabled = FALSE;
+
     if (gMidiSoundMode != DIRECTSOUND_MODE_MONO1) {
         REG_DMA1CNT = ((DMACNT_ENABLE | DMACNT_SIZE | DMACNT_DEST_INC_TYPE_UNCHANGED) << 16) + (16 / 4);
         dummy = 0;
         dummy = 1;
         REG_DMA1CNT_H = DMACNT_SIZE;
     }
+
     REG_DMA2CNT = ((DMACNT_ENABLE | DMACNT_SIZE | DMACNT_DEST_INC_TYPE_UNCHANGED) << 16) + (16 / 4);
     dummy = 0;
     dummy = 1;

@@ -1184,10 +1184,9 @@ SECTIONS {
         build/src/lib_midi_lfo.c.o(.data);
         build/src/lib_midi_random.c.o(.data);
         build/src/lib_midi_psg.c.o(.data);
-        build/src/lib_midi_player.c.o(.data);
         build/audio/instruments.c.o(.data);
-        build/audio/sequences.c.o(.data);
-        build/audio/sound_players.c.o(.data);
+        build/audio/songs.c.o(.data);
+        build/src/lib_midi_player.c.o(.data);
 		build/audio/sample_table.json.c.o(.data);
 
         build/audio/sequences/Lesson1.mid.o(.rodata*);

@@ -22,7 +22,7 @@ struct SoundPlayer *play_sound(struct SongHeader *song) {
 
     id = get_sound_num(song);
     midi_player_play_id(id);
-    soundPlayer = D_08aa4460[D_08aa06f8[id].player].soundPlayer;
+    soundPlayer = sound_player_table[D_08aa06f8[id].player].soundPlayer;
 
     if (soundPlayer->song == song) {
         return soundPlayer;
@@ -34,9 +34,9 @@ struct SoundPlayer *play_sound(struct SongHeader *song) {
 
 // Play Sound in Specified Player
 struct SoundPlayer *play_sound_in_player(s32 playerID, struct SongHeader *song) {
-    midi_player_play_header(D_08aa4324[playerID], song);
+    midi_player_play_header(sound_players[playerID], song);
 
-    return D_08aa4324[playerID];
+    return sound_players[playerID];
 }
 
 
@@ -56,7 +56,7 @@ struct SoundPlayer *play_sound_w_pitch_volume(struct SongHeader *song, u24_8 vol
 struct SoundPlayer *play_sound_in_player_w_pitch_volume(s32 playerID, struct SongHeader *song, u24_8 volume, s24_8 pitch) {
     struct SoundPlayer *soundPlayer;
 
-    soundPlayer = D_08aa4324[playerID];
+    soundPlayer = sound_players[playerID];
     midi_player_play_header(soundPlayer, song);
     set_soundplayer_volume(soundPlayer, volume);
     set_soundplayer_pitch(soundPlayer, pitch);
@@ -75,7 +75,7 @@ struct SoundPlayer *continue_sound(struct SongHeader *song) {
     }
 
     id = get_sound_num(song);
-    soundPlayer = D_08aa4460[D_08aa06f8[id].player].soundPlayer;
+    soundPlayer = sound_player_table[D_08aa06f8[id].player].soundPlayer;
 
     if (soundPlayer->song != song) {
         midi_player_play_id(id);
@@ -99,8 +99,8 @@ void stop_sound(struct SongHeader *song) {
         return;
     }
 
-    for (i = 0; i < D_08aa445c; i++) {
-        soundPlayer = D_08aa4460[i].soundPlayer;
+    for (i = 0; i < sound_player_count; i++) {
+        soundPlayer = sound_player_table[i].soundPlayer;
         isPlayingThisSound = (soundPlayer->song == song);
 
         if (isPlayingThisSound) {
@@ -120,8 +120,8 @@ void pause_sound(struct SongHeader *song, u32 pause) {
         return;
     }
 
-    for (i = 0; i < D_08aa445c; i++) {
-        soundPlayer = D_08aa4460[i].soundPlayer;
+    for (i = 0; i < sound_player_count; i++) {
+        soundPlayer = sound_player_table[i].soundPlayer;
         isPlayingThisSound = (soundPlayer->song == song);
 
         if (isPlayingThisSound) {
@@ -141,8 +141,8 @@ void fade_out_sound(struct SongHeader *song, u16 duration) {
         return;
     }
 
-    for (i = 0; i < D_08aa445c; i++) {
-        soundPlayer = D_08aa4460[i].soundPlayer;
+    for (i = 0; i < sound_player_count; i++) {
+        soundPlayer = sound_player_table[i].soundPlayer;
         isPlayingThisSound = (soundPlayer->song == song);
 
         if (isPlayingThisSound) {
@@ -165,8 +165,8 @@ void stop_all_soundplayers(void) {
     struct SoundPlayer *soundPlayer;
     u32 i;
 
-    for (i = 0; i < D_08aa445c; i++) {
-        soundPlayer = D_08aa4460[i].soundPlayer;
+    for (i = 0; i < sound_player_count; i++) {
+        soundPlayer = sound_player_table[i].soundPlayer;
         midi_player_fade_out_to_stop(soundPlayer, 0);
     }
 }
@@ -231,8 +231,8 @@ void fade_out_all_soundplayers(u16 duration) {
     struct SoundPlayer *soundPlayer;
     u32 i;
 
-    for (i = 0; i < D_08aa445c; i++) {
-        soundPlayer = D_08aa4460[i].soundPlayer;
+    for (i = 0; i < sound_player_count; i++) {
+        soundPlayer = sound_player_table[i].soundPlayer;
         midi_player_fade_out_to_stop(soundPlayer, duration);
     }
 }
@@ -274,7 +274,7 @@ struct SongHeader *get_sound_from_player(struct SoundPlayer *soundPlayer) {
 
 // Get Sound from SoundPlayer ID
 struct SongHeader *get_sound_from_player_id(s32 playerID) {
-    return D_08aa4460[playerID].soundPlayer->song;
+    return sound_player_table[playerID].soundPlayer->song;
 }
 
 
@@ -284,7 +284,7 @@ struct SoundPlayer *get_soundplayer_from_id(s32 playerID) {
         return NULL;
     }
 
-    return D_08aa4460[playerID].soundPlayer;
+    return sound_player_table[playerID].soundPlayer;
 }
 
 
@@ -327,8 +327,8 @@ struct SoundPlayer *get_soundplayer_by_sound(struct SongHeader *song) {
         return; // ???
     }
 
-    for (i = 0; i < D_08aa445c; i++) {
-        soundPlayer = D_08aa4460[i].soundPlayer;
+    for (i = 0; i < sound_player_count; i++) {
+        soundPlayer = sound_player_table[i].soundPlayer;
 
         if (soundPlayer->song == song) {
             return soundPlayer;

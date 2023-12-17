@@ -184,7 +184,7 @@ union Instrument {
 struct InstrumentPCM {
 	u8 type;
 	u8 key:7;
-    u8 distort:1;
+    u8 fastRead:1;
 	s16 panning;
 	struct SampleData *sample;
 	s32 initial;
@@ -359,7 +359,7 @@ struct SoundChannel {
 struct SampleStream {
     u8 active:1;
     u8 hasFrequency:1;  // TRUE if Frequency Envelope is not 1.0 (Q18.14)
-    u8 distort:1;       // Distortion(?)
+    u8 fastRead:1;      // Use Fast Resample PCM Read Method
     u8 equalize:1;      // Use Equalizer
     u8 volume;          // Volume
     s8 leftBias;        // Stereo Left Bias
@@ -404,7 +404,7 @@ extern struct SongTable {
 } D_08aa06f8[];
 
 // [D_08aa4324] SoundPlayer List
-extern struct SoundPlayer *D_08aa4324[];
+extern struct SoundPlayer *sound_players[];
 
 // [D_08aa4358] SoundPlayer Init. Table
 extern struct SoundPlayerInitTable {
@@ -415,10 +415,10 @@ extern struct SoundPlayerInitTable {
     struct MidiBus *midiBus;
     struct MidiTrackStream *trackStreams;
     struct SoundPlayer *soundPlayer;
-} D_08aa4358[];
+} sound_player_init_table[];
 
 // [D_08aa445c] SoundPlayer Count
-extern u8 D_08aa445c;
+extern u8 sound_player_count;
 
 // [D_08aa4460] SoundPlayer Table
 extern struct SoundPlayerTable {
@@ -426,4 +426,4 @@ extern struct SoundPlayerTable {
     u32 null4; // unused
     u16 totalTracks;
     u16 priorityEnabled;
-} D_08aa4460[];
+} sound_player_table[];

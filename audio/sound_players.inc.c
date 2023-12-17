@@ -1,6 +1,3 @@
-#include "global.h"
-#include "sound.h"
-#include "src/lib_midi.h"
 
 
 /* SOUND PLAYER DATA */
@@ -14,24 +11,7 @@
 
 
 // STATIC VARIABLES
-extern struct SoundPlayer sMusicPlayer0;
-extern struct SoundPlayer sMusicPlayer1;
-extern struct SoundPlayer sMusicPlayer2;
-extern struct SoundPlayer sSfxPlayer0;
-extern struct SoundPlayer sSfxPlayer1;
-extern struct SoundPlayer sSfxPlayer2;
-extern struct SoundPlayer sSfxPlayer3;
-extern struct SoundPlayer sSfxPlayer4;
-extern struct SoundPlayer sSfxPlayer5;
-extern struct SoundPlayer sSfxPlayer6;
-extern struct SoundPlayer sSfxPlayer7;
-extern struct SoundPlayer sSfxPlayer8;
-extern struct SoundPlayer sSfxPlayer9;
 
-// static volatile s32 D_03001888[1568*2];
-// static volatile s32 D_030024c8[0x400];
-// static struct SampleStream D_030028c8[12];
-// static struct SoundChannel D_03002a48[12];
 
 extern struct MidiChannel sMusicPlayer0_midiChannels[TRACK_COUNT_MUSIC_0];
 extern struct MidiBus sMusicPlayer0_midiBus;
@@ -75,7 +55,7 @@ extern struct MidiTrackStream sSfxPlayer9_midiReaders[TRACK_COUNT_SFX];
 
 
 // SoundPlayer Count - 1
-u32 D_08aa4318 = SOUND_PLAYER_COUNT - 1;
+u32 last_sound_player_id = SOUND_PLAYER_COUNT - 1;
 
 
 // DirectPlayer Data
@@ -87,7 +67,7 @@ u8 midi_direct_player_tempo = 150;
 
 
 // SoundPlayer List
-struct SoundPlayer *D_08aa4324[] = {
+struct SoundPlayer *sound_players[] = {
     &sMusicPlayer0,
     &sMusicPlayer1,
     &sMusicPlayer2,
@@ -104,10 +84,10 @@ struct SoundPlayer *D_08aa4324[] = {
 };
 
 
-// SoundPlayer Table
-struct SoundPlayerInitTable D_08aa4358[] = {
+// SoundPlayer Initialisation Table
+struct SoundPlayerInitTable sound_player_init_table[] = {
     /* MUSIC PLAYER 0 */ {
-        /* Player ID     */ MUSIC_PLAYER_0,
+        /* Player Index  */ MUSIC_PLAYER_0,
         /* Track Count   */ TRACK_COUNT_MUSIC_0,
         /* Use Priority  */ FALSE,
         /* MIDI Channels */ sMusicPlayer0_midiChannels,
@@ -116,7 +96,7 @@ struct SoundPlayerInitTable D_08aa4358[] = {
         /* Sound Player  */ &sMusicPlayer0
     },
     /* MUSIC PLAYER 1 */ {
-        /* Player ID     */ MUSIC_PLAYER_1,
+        /* Player Index  */ MUSIC_PLAYER_1,
         /* Track Count   */ TRACK_COUNT_MUSIC_1,
         /* Use Priority  */ FALSE,
         /* MIDI Channels */ sMusicPlayer1_midiChannels,
@@ -125,7 +105,7 @@ struct SoundPlayerInitTable D_08aa4358[] = {
         /* Sound Player  */ &sMusicPlayer1
     },
     /* MUSIC PLAYER 2 */ {
-        /* Player ID     */ MUSIC_PLAYER_2,
+        /* Player Index  */ MUSIC_PLAYER_2,
         /* Track Count   */ TRACK_COUNT_MUSIC_2,
         /* Use Priority  */ FALSE,
         /* MIDI Channels */ sMusicPlayer2_midiChannels,
@@ -134,7 +114,7 @@ struct SoundPlayerInitTable D_08aa4358[] = {
         /* Sound Player  */ &sMusicPlayer2
     },
     /* SFX PLAYER 0 */ {
-        /* Player ID     */ SFX_PLAYER_0,
+        /* Player Index  */ SFX_PLAYER_0,
         /* Track Count   */ TRACK_COUNT_SFX,
         /* Use Priority  */ TRUE,
         /* MIDI Channels */ sSfxPlayer0_midiChannels,
@@ -143,7 +123,7 @@ struct SoundPlayerInitTable D_08aa4358[] = {
         /* Sound Player  */ &sSfxPlayer0
     },
     /* SFX PLAYER 1 */ {
-        /* Player ID     */ SFX_PLAYER_1,
+        /* Player Index  */ SFX_PLAYER_1,
         /* Track Count   */ TRACK_COUNT_SFX,
         /* Use Priority  */ TRUE,
         /* MIDI Channels */ sSfxPlayer1_midiChannels,
@@ -152,7 +132,7 @@ struct SoundPlayerInitTable D_08aa4358[] = {
         /* Sound Player  */ &sSfxPlayer1
     },
     /* SFX PLAYER 2 */ {
-        /* Player ID     */ SFX_PLAYER_2,
+        /* Player Index  */ SFX_PLAYER_2,
         /* Track Count   */ TRACK_COUNT_SFX,
         /* Use Priority  */ TRUE,
         /* MIDI Channels */ sSfxPlayer2_midiChannels,
@@ -161,7 +141,7 @@ struct SoundPlayerInitTable D_08aa4358[] = {
         /* Sound Player  */ &sSfxPlayer2
     },
     /* SFX PLAYER 3 */ {
-        /* Player ID     */ SFX_PLAYER_3,
+        /* Player Index  */ SFX_PLAYER_3,
         /* Track Count   */ TRACK_COUNT_SFX,
         /* Use Priority  */ TRUE,
         /* MIDI Channels */ sSfxPlayer3_midiChannels,
@@ -170,7 +150,7 @@ struct SoundPlayerInitTable D_08aa4358[] = {
         /* Sound Player  */ &sSfxPlayer3
     },
     /* SFX PLAYER 4 */ {
-        /* Player ID     */ SFX_PLAYER_4,
+        /* Player Index  */ SFX_PLAYER_4,
         /* Track Count   */ TRACK_COUNT_SFX,
         /* Use Priority  */ TRUE,
         /* MIDI Channels */ sSfxPlayer4_midiChannels,
@@ -179,7 +159,7 @@ struct SoundPlayerInitTable D_08aa4358[] = {
         /* Sound Player  */ &sSfxPlayer4
     },
     /* SFX PLAYER 5 */ {
-        /* Player ID     */ SFX_PLAYER_5,
+        /* Player Index  */ SFX_PLAYER_5,
         /* Track Count   */ TRACK_COUNT_SFX,
         /* Use Priority  */ TRUE,
         /* MIDI Channels */ sSfxPlayer5_midiChannels,
@@ -188,7 +168,7 @@ struct SoundPlayerInitTable D_08aa4358[] = {
         /* Sound Player  */ &sSfxPlayer5
     },
     /* SFX PLAYER 6 */ {
-        /* Player ID     */ SFX_PLAYER_6,
+        /* Player Index  */ SFX_PLAYER_6,
         /* Track Count   */ TRACK_COUNT_SFX,
         /* Use Priority  */ TRUE,
         /* MIDI Channels */ sSfxPlayer6_midiChannels,
@@ -197,7 +177,7 @@ struct SoundPlayerInitTable D_08aa4358[] = {
         /* Sound Player  */ &sSfxPlayer6
     },
     /* SFX PLAYER 7 */ {
-        /* Player ID     */ SFX_PLAYER_7,
+        /* Player Index  */ SFX_PLAYER_7,
         /* Track Count   */ TRACK_COUNT_SFX,
         /* Use Priority  */ TRUE,
         /* MIDI Channels */ sSfxPlayer7_midiChannels,
@@ -206,7 +186,7 @@ struct SoundPlayerInitTable D_08aa4358[] = {
         /* Sound Player  */ &sSfxPlayer7
     },
     /* SFX PLAYER 8 */ {
-        /* Player ID     */ SFX_PLAYER_8,
+        /* Player Index  */ SFX_PLAYER_8,
         /* Track Count   */ TRACK_COUNT_SFX,
         /* Use Priority  */ TRUE,
         /* MIDI Channels */ sSfxPlayer8_midiChannels,
@@ -215,7 +195,7 @@ struct SoundPlayerInitTable D_08aa4358[] = {
         /* Sound Player  */ &sSfxPlayer8
     },
     /* SFX PLAYER 9 */ {
-        /* Player ID     */ SFX_PLAYER_9,
+        /* Player Index  */ SFX_PLAYER_9,
         /* Track Count   */ TRACK_COUNT_SFX,
         /* Use Priority  */ TRUE,
         /* MIDI Channels */ sSfxPlayer9_midiChannels,
@@ -227,11 +207,11 @@ struct SoundPlayerInitTable D_08aa4358[] = {
 
 
 // SoundPlayer Count
-u8 D_08aa445c = SOUND_PLAYER_COUNT;
+u8 sound_player_count = SOUND_PLAYER_COUNT;
 
 
-// Simplified SoundPlayer List
-struct SoundPlayerTable D_08aa4460[] = {
+// Simplified SoundPlayer Table
+struct SoundPlayerTable sound_player_table[] = {
     /* MUSIC PLAYER 0 */ {
         /* Sound Player */ &sMusicPlayer0,
         /* NULL         */ 0,

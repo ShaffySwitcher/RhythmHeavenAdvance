@@ -1,11 +1,11 @@
 
 
-/* MIDI LIBRARY ASSEMBLY - READ & WRITE */
+/* MIDI LIBRARY ASSEMBLY - BUFFER READ & WRITE */
 
 
-@ Copy Samples to Processing Scratch
+@ Prepare Processing Scratch with Reverb
     @ R0: Batch Size (in 32-bit Words)
-unaligned_thumb_func_start midi_asm_read_samples
+unaligned_thumb_func_start midi_asm_update_scratch
     orrs    r0, r0
     bne     branch_0804875e
     bx      lr
@@ -60,8 +60,8 @@ branch_08048798:
     ldr     r1, _08048b74   @ gMidiPCMBufL
     ldr     r1, [r1, #0]
     mov     r11, r1
-    eors    r0, r0          @ FUNC_INDEX_READ_PCM
-    bl      midi_asm_write_samples_call_arm
+    eors    r0, r0          @ FUNC_INDEX_UPDATE_SCRATCH
+    bl      midi_asm_update_buffer_call_arm
     pop     {r4}
     mov     r12, r4
     pop     {r4, r5, r6, r7}
@@ -74,8 +74,8 @@ branch_08048798:
     bx      r0
 
 
-@ Copy Samples to Processing Scratch (ARM Stereo)
-arm_func_start midi_arm_stereo_read_samples
+@ Prepare Processing Scratch with Reverb (ARM Stereo)
+arm_func_start midi_arm_stereo_update_scratch
     str     lr, _08048938
     str     r10, _0804893c
     str     r11, _08048940
@@ -158,6 +158,7 @@ branch_0804880c:
     ldr     r1, _08048948
     subs    r1, r1, #1
     bne     branch_0804880c
+
     ldr     r0, _08048944   @ gMidiRVB_Scratch
     str     r2, [r0], #4
     str     r3, [r0], #4
@@ -173,11 +174,11 @@ _08048940: .word 0
 _08048944: .word gMidiRVB_Scratch
 _08048948: .word 0
 
-glabel midi_arm_stereo_read_samples_end
+glabel midi_arm_stereo_update_scratch_end
 
 
-@ Copy Samples to Processing Scratch (ARM Mono)
-arm_func_start midi_arm_mono_read_samples
+@ Prepare Processing Scratch with Reverb (ARM Mono)
+arm_func_start midi_arm_mono_update_scratch
     mov     r7, r2
     mov     r11, r3
     ldr     r0, _080489fc   @ gMidiRVB_Scratch
@@ -227,12 +228,12 @@ branch_08048964:
 .balign 4, 0
 _080489fc: .word gMidiRVB_Scratch
 
-glabel midi_arm_mono_read_samples_end
+glabel midi_arm_mono_update_scratch_end
 
 
 @ Write Processed Samples to PCM Buffer
     @ R0: Batch Size (in 32-bit Words)
-unaligned_thumb_func_start midi_asm_write_samples
+unaligned_thumb_func_start midi_asm_update_buffer
     orrs    r0, r0
     bne     branch_08048a06
     bx      lr
@@ -273,8 +274,8 @@ branch_08048a06:
     mov     r11, r0
     ldr     r0, _08048b94   @ 0x3FF
     mov     r12, r0
-    movs    r0, #FUNC_INDEX_WRITE_PCM
-    bl      midi_asm_write_samples_call_arm
+    movs    r0, #FUNC_INDEX_UPDATE_BUFFER
+    bl      midi_asm_update_buffer_call_arm
     pop     {r4}
     mov     r12, r4
     pop     {r4, r5, r6, r7}
@@ -288,7 +289,7 @@ branch_08048a06:
 
 
 @ Write Processed Samples to PCM Buffer (ARM Stereo)
-arm_func_start midi_arm_stereo_write_samples
+arm_func_start midi_arm_stereo_update_buffer
     str     r4, _08048af0
     str     r5, _08048af4
 branch_08048a70:
@@ -329,11 +330,11 @@ branch_08048a70:
 _08048af0: .word 0
 _08048af4: .word 0
 
-glabel midi_arm_stereo_write_samples_end
+glabel midi_arm_stereo_update_buffer_end
 
 
 @ Write Processed Samples to PCM Buffer (ARM Mono)
-arm_func_start midi_arm_mono_write_samples
+arm_func_start midi_arm_mono_update_buffer
     ldm     r7!, {r0, r1, r2, r3}
     and     r0, r12, r0, lsr #7
     and     r1, r12, r1, lsr #7
@@ -350,15 +351,15 @@ arm_func_start midi_arm_mono_write_samples
     cmp     r8, r10
     movcs   r8, r4
     subs    r6, r6, #1
-    bne     midi_arm_mono_write_samples
+    bne     midi_arm_mono_update_buffer
     bx      lr
 
-glabel midi_arm_mono_write_samples_end
+glabel midi_arm_mono_update_buffer_end
 
 
 @ Write Processed Samples to PCM Buffer
     @ Align THUMB Function Call
-unaligned_thumb_func_start midi_asm_write_samples_call_arm
+unaligned_thumb_func_start midi_asm_update_buffer_call_arm
     ldr     r1, _08048b98   @ midi_asm_call_arm_func_id
     adds    r1, #1
     bx      r1

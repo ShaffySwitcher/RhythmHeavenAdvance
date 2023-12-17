@@ -1,6 +1,6 @@
 
 
-/* MIDI LIBRARY ASSEMBLY - MAIN */
+/* AUDIO LIBRARY ASSEMBLY - MAIN */
 
 
 @ WARNING: Do not try to call most of these functions from C!
@@ -18,52 +18,52 @@
 .set END_OF_FUNC_TABLE,     2
 
 @ ARM Function Sizes
-.set FUNC_SIZE_STEREO_READ_PCM,             (midi_arm_stereo_read_samples_end - midi_arm_stereo_read_samples)
-.set FUNC_SIZE_STEREO_WRITE_PCM,            (midi_arm_stereo_write_samples_end - midi_arm_stereo_write_samples)
-.set FUNC_SIZE_STEREO_EDIT_PCM_NO_RESAMPLE, (midi_arm_stereo_edit_pcm_no_resample_end - midi_arm_stereo_edit_pcm_no_resample)
-.set FUNC_SIZE_STEREO_EDIT_PCM_RESAMPLE,    (midi_arm_stereo_edit_pcm_resample_end - midi_arm_stereo_edit_pcm_resample)
-.set FUNC_SIZE_STEREO_EDIT_PCM_DISTORT,     (midi_arm_stereo_edit_pcm_distort_end - midi_arm_stereo_edit_pcm_distort)
-.set FUNC_SIZE_STEREO_PROCESS_EQ,           (midi_arm_stereo_process_eq_end - midi_arm_stereo_process_eq)
-.set FUNC_SIZE_MONO_READ_PCM,               (midi_arm_mono_read_samples_end - midi_arm_mono_read_samples)
-.set FUNC_SIZE_MONO_WRITE_PCM,              (midi_arm_mono_write_samples_end - midi_arm_mono_write_samples)
-.set FUNC_SIZE_MONO_EDIT_PCM_NO_RESAMPLE,   (midi_arm_mono_edit_pcm_no_resample_end - midi_arm_mono_edit_pcm_no_resample)
-.set FUNC_SIZE_MONO_EDIT_PCM_RESAMPLE,      (midi_arm_mono_edit_pcm_resample_end - midi_arm_mono_edit_pcm_resample)
-.set FUNC_SIZE_MONO_EDIT_PCM_DISTORT,       (midi_arm_mono_edit_pcm_distort_end - midi_arm_mono_edit_pcm_distort)
+.set FUNC_SIZE_STEREO_UPDATE_SCRATCH,       (midi_arm_stereo_update_scratch_end - midi_arm_stereo_update_scratch)
+.set FUNC_SIZE_STEREO_UPDATE_BUFFER,        (midi_arm_stereo_update_buffer_end - midi_arm_stereo_update_buffer)
+.set FUNC_SIZE_STEREO_READ_PCM_FIXED,       (midi_arm_stereo_read_pcm_fixed_end - midi_arm_stereo_read_pcm_fixed)
+.set FUNC_SIZE_STEREO_READ_PCM_ACCURATE,    (midi_arm_stereo_read_pcm_accurate_end - midi_arm_stereo_read_pcm_accurate)
+.set FUNC_SIZE_STEREO_READ_PCM_FAST,        (midi_arm_stereo_read_pcm_fast_end - midi_arm_stereo_read_pcm_fast)
+.set FUNC_SIZE_STEREO_APPLY_EQ,             (midi_arm_stereo_apply_eq_end - midi_arm_stereo_apply_eq)
+.set FUNC_SIZE_MONO_UPDATE_SCRATCH,         (midi_arm_mono_update_scratch_end - midi_arm_mono_update_scratch)
+.set FUNC_SIZE_MONO_UPDATE_BUFFER,          (midi_arm_mono_update_buffer_end - midi_arm_mono_update_buffer)
+.set FUNC_SIZE_MONO_READ_PCM_FIXED,         (midi_arm_mono_read_pcm_fixed_end - midi_arm_mono_read_pcm_fixed)
+.set FUNC_SIZE_MONO_READ_PCM_ACCURATE,      (midi_arm_mono_read_pcm_accurate_end - midi_arm_mono_read_pcm_accurate)
+.set FUNC_SIZE_MONO_READ_PCM_FAST,          (midi_arm_mono_read_pcm_fast_end - midi_arm_mono_read_pcm_fast)
 
 @ ARM Function Table Indexes
-.set FUNC_INDEX_READ_PCM,               0
-.set FUNC_INDEX_WRITE_PCM,              1
-.set FUNC_INDEX_EDIT_PCM_NO_RESAMPLE,   2
-.set FUNC_INDEX_EDIT_PCM_RESAMPLE,      3
-.set FUNC_INDEX_EDIT_PCM_DISTORT,       4
-.set FUNC_INDEX_PROCESS_EQ,             5
+.set FUNC_INDEX_UPDATE_SCRATCH,     0
+.set FUNC_INDEX_UPDATE_BUFFER,      1
+.set FUNC_INDEX_READ_PCM_FIXED,     2
+.set FUNC_INDEX_READ_PCM_ACCURATE,  3
+.set FUNC_INDEX_READ_PCM_FAST,      4
+.set FUNC_INDEX_APPLY_EQ,           5
 
 
 @ ARM Function Table (Stereo Mode)
 midi_arm_func_table_stereo:
     /* Stop */ .short CONTINUE_FUNC_TABLE
-    /* Size */ .short FUNC_SIZE_STEREO_READ_PCM @ 0x174
-    /* Func */ .word midi_arm_stereo_read_samples
+    /* Size */ .short FUNC_SIZE_STEREO_UPDATE_SCRATCH @ 0x174
+    /* Func */ .word midi_arm_stereo_update_scratch
 
     /* Stop */ .short CONTINUE_FUNC_TABLE
-    /* Size */ .short FUNC_SIZE_STEREO_WRITE_PCM @ 0x90
-    /* Func */ .word midi_arm_stereo_write_samples
+    /* Size */ .short FUNC_SIZE_STEREO_UPDATE_BUFFER @ 0x90
+    /* Func */ .word midi_arm_stereo_update_buffer
 
     /* Stop */ .short CONTINUE_FUNC_TABLE
-    /* Size */ .short FUNC_SIZE_STEREO_EDIT_PCM_NO_RESAMPLE @ 0x124
-    /* Func */ .word midi_arm_stereo_edit_pcm_no_resample
+    /* Size */ .short FUNC_SIZE_STEREO_READ_PCM_FIXED @ 0x124
+    /* Func */ .word midi_arm_stereo_read_pcm_fixed
 
     /* Stop */ .short CONTINUE_FUNC_TABLE
-    /* Size */ .short FUNC_SIZE_STEREO_EDIT_PCM_RESAMPLE @ 0x194
-    /* Func */ .word midi_arm_stereo_edit_pcm_resample
+    /* Size */ .short FUNC_SIZE_STEREO_READ_PCM_ACCURATE @ 0x194
+    /* Func */ .word midi_arm_stereo_read_pcm_accurate
 
     /* Stop */ .short CONTINUE_FUNC_TABLE
-    /* Size */ .short FUNC_SIZE_STEREO_EDIT_PCM_DISTORT @ 0xFC
-    /* Func */ .word midi_arm_stereo_edit_pcm_distort
+    /* Size */ .short FUNC_SIZE_STEREO_READ_PCM_FAST @ 0xFC
+    /* Func */ .word midi_arm_stereo_read_pcm_fast
 
     /* Stop */ .short CONTINUE_FUNC_TABLE
-    /* Size */ .short FUNC_SIZE_STEREO_PROCESS_EQ @ 0x150
-    /* Func */ .word midi_arm_stereo_process_eq
+    /* Size */ .short FUNC_SIZE_STEREO_APPLY_EQ @ 0x150
+    /* Func */ .word midi_arm_stereo_apply_eq
 
     /* Stop */ .short END_OF_FUNC_TABLE
 
@@ -73,24 +73,24 @@ midi_arm_func_table_stereo:
 @ ARM Function Table (Monaural Mode)
 midi_arm_func_table_mono:
     /* Stop */ .short CONTINUE_FUNC_TABLE
-    /* Size */ .short FUNC_SIZE_MONO_READ_PCM @ 0xB4
-    /* Func */ .word midi_arm_mono_read_samples
+    /* Size */ .short FUNC_SIZE_MONO_UPDATE_SCRATCH @ 0xB4
+    /* Func */ .word midi_arm_mono_update_scratch
 
     /* Stop */ .short CONTINUE_FUNC_TABLE
-    /* Size */ .short FUNC_SIZE_MONO_WRITE_PCM @ 0x48
-    /* Func */ .word midi_arm_mono_write_samples
+    /* Size */ .short FUNC_SIZE_MONO_UPDATE_BUFFER @ 0x48
+    /* Func */ .word midi_arm_mono_update_buffer
 
     /* Stop */ .short CONTINUE_FUNC_TABLE
-    /* Size */ .short FUNC_SIZE_MONO_EDIT_PCM_NO_RESAMPLE @ 0
-    /* Func */ .word midi_arm_mono_edit_pcm_no_resample
+    /* Size */ .short FUNC_SIZE_MONO_READ_PCM_FIXED @ 0
+    /* Func */ .word midi_arm_mono_read_pcm_fixed
 
     /* Stop */ .short CONTINUE_FUNC_TABLE
-    /* Size */ .short FUNC_SIZE_MONO_EDIT_PCM_RESAMPLE @ 0x17C
-    /* Func */ .word midi_arm_mono_edit_pcm_resample
+    /* Size */ .short FUNC_SIZE_MONO_READ_PCM_ACCURATE @ 0x17C
+    /* Func */ .word midi_arm_mono_read_pcm_accurate
 
     /* Stop */ .short CONTINUE_FUNC_TABLE
-    /* Size */ .short FUNC_SIZE_MONO_EDIT_PCM_DISTORT @ 0xDC
-    /* Func */ .word midi_arm_mono_edit_pcm_distort
+    /* Size */ .short FUNC_SIZE_MONO_READ_PCM_FAST @ 0xDC
+    /* Func */ .word midi_arm_mono_read_pcm_fast
 
     /* Stop */ .short END_OF_FUNC_TABLE
 
@@ -178,8 +178,8 @@ _080483b4: .word gMidiARM_FuncTable
 
 
 @ Add All Function Modules
-.include "asm/lib_midi/pcm.s"
+.include "asm/lib_midi/pcm_read.s"
 .include "asm/lib_midi/pcm_buffer.s"
-.include "asm/lib_midi/pcm_no_resample.s"
-.include "asm/lib_midi/pcm_distort.s"
+.include "asm/lib_midi/pcm_read_fixed.s"
+.include "asm/lib_midi/pcm_read_fast.s"
 .include "asm/lib_midi/pcm_equalize.s"

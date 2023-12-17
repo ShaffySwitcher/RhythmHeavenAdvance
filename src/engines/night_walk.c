@@ -443,7 +443,7 @@ void update_drumtech_timers(void) {
     for (i = 0; i < ARRAY_COUNT(D_03001568->soundTimers); i++) {
         if (D_03001568->soundTimers[i] > 0) {
             if (--D_03001568->soundTimers[i] == 0) {
-                stop_soundplayer(D_08aa4460[i].soundPlayer);
+                stop_soundplayer(sound_player_table[i].soundPlayer);
             }
         }
     }
@@ -722,7 +722,7 @@ void stop_drumtech(void) {
 
     for (i = 0; i < ARRAY_COUNT(D_03001568->soundTimers); i++) {
         if (D_03001568->soundTimers[i] != 0) {
-            stop_soundplayer(D_08aa4460[i].soundPlayer);
+            stop_soundplayer(sound_player_table[i].soundPlayer);
         }
     }
 }

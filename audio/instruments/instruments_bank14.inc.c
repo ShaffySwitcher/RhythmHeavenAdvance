@@ -1244,7 +1244,7 @@ extern struct SampleData sample_236_data;
 struct InstrumentPCM instrument_pcm_0417 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
-    /* unkEffect */ FALSE,
+    /* Fast Read */ FALSE,
     /* Panning   */ 127,
     /* Sample    */ &sample_236_data,
     /* ADSR Init */ 0x7F0000,
