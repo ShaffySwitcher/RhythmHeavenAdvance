@@ -44,7 +44,7 @@ struct DrumTechNote {
 };
 
 struct DrumTechPhrase {
-    u8 drumID;
+    u8 drumID; // Used if the sequence is NULL.
     u16 volume;
     s16 pitch;
     const struct DrumTechNote *sequence;

@@ -104,7 +104,7 @@ branch_0802564e: \n\
 /* 080256b6 */ BL run_func_after_task \n\
  \n\
 branch_080256ba: \n\
-/* 080256ba */ BL func_0802555c \n\
+/* 080256ba */ BL drum_live_play_applause \n\
 /* 080256be */ B branch_0802572e \n\
 \n\
 .ltorg \n\

@@ -2,7 +2,7 @@ asm(".syntax unified \n\
 \n\
 .balign 4, 0 \n\
 \n\
-thumb_func_start func_0802555c \n\
+thumb_func_start drum_live_play_applause \n\
 /* 0802555c */ PUSH {LR} \n\
 /* 0802555e */ LDR R0, =gCurrentEngineData \n\
 /* 08025560 */ LDR R0, [R0] \n\

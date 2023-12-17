@@ -175,7 +175,7 @@ u16 D_089e073c[] = {
 };
 
 // [D_089e0758] Crowd BG Map Data
-u16 *D_089e0758[] = {
+u16 *drum_live_crowd_bg_maps[] = {
     /* 0x00 */ D_089e06c4,
     /* 0x01 */ D_089e06d4,
     /* 0x02 */ D_089e06e8,
@@ -332,16 +332,22 @@ struct GraphicsTable *drum_live_gfx_tables[] = {
 };
 
 // [D_089e0ab0] ?
-struct Vector2 D_089e0ab0[] = {
-    /* 0x00 */ {   0,   0 },
-    /* 0x01 */ {   0,   0 },
-    /* 0x02 */ {   0,   0 },
-    /* 0x03 */ {   0,   0 },
-    /* 0x04 */ {   0,   0 },
-    /* 0x05 */ {   0,   0 },
-    /* 0x06 */ { -56,   8 },
-    /* 0x07 */ { 112,  -8 },
-    /* 0x08 */ {  -8, -36 },
+struct Vector2 D_089e0ab0[3][3] = {
+    /* DRUM_GIRLS_LIVE */ {
+        /* DRUMMER   */ {   0,   0 },
+        /* BASSIST   */ {   0,   0 },
+        /* GUITARIST */ {   0,   0 },
+    },
+    /* DRUM_BOYS_LIVE */ {
+        /* DRUMMER   */ {   0,   0 },
+        /* BASSIST   */ {   0,   0 },
+        /* GUITARIST */ {   0,   0 },
+    },
+    /* DRUM_SAMURAI_BAND_LIVE */ {
+        /* DRUMMER   */ { -56,   8 },
+        /* BASSIST   */ { 112,  -8 },
+        /* GUITARIST */ {  -8, -36 },
+    }
 };
 
 // [D_089e0ad4] Guitarist Animation IDs - Head
@@ -394,10 +400,9 @@ u8 drum_live_guitarist_anim_map_jump[] = {
 
 // [D_089e0ae4] Drum Kit ID Map
 u8 drum_live_kit_map[] = {
-    /* 0x00 */ 0,
-    /* 0x01 */ 0,
-    /* 0x02 */ 1,
-    /* 0x03 */ 0
+    /* DRUM_GIRLS */ 0,
+    /* DRUM_BOYS  */ 0,
+    /* DRUM_BAND  */ 1
 };
 
 
@@ -575,20 +580,20 @@ EngineEvent drum_live_common_events[] = {
 EngineEvent drum_live_engine_events[] = {
     /* 0x00 */ func_080268cc,
     /* 0x01 */ func_08026968,
-    /* 0x02 */ func_08025a98,
-    /* 0x03 */ func_08025ad4,
-    /* 0x04 */ func_08025ae8,
+    /* 0x02 */ drum_live_script_clear_input_def,
+    /* 0x03 */ drum_live_script_define_cool_inputs,
+    /* 0x04 */ drum_live_script_define_lame_inputs,
     /* 0x05 */ func_08025748,
     /* 0x06 */ func_08025a2c,
-    /* 0x07 */ func_08025a58,
-    /* 0x08 */ func_080269e8,
+    /* 0x07 */ drum_live_script_play_applause,
+    /* 0x08 */ drum_live_set_enable_boredom,
     /* 0x09 */ func_08025bcc,
     /* 0x0A */ drum_live_engine_event_stub
 };
 
 // [D_089e0cc0] Drum LIVE Game Engine
 struct GameEngine drum_live_engine = {
-    /* Size in Memory */ sizeof(struct DrumLiveEngineData),
+    /* Size in Memory */ 0x1820, // sizeof(struct DrumLiveEngineData)
     /* Start Engine   */ drum_live_engine_start,
     /* Update Engine  */ drum_live_engine_update,
     /* Stop Engine    */ drum_live_engine_stop,
