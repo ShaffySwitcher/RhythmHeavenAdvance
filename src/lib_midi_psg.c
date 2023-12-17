@@ -7,11 +7,10 @@
 
 
 // STATIC VARIABLES
-static u8  D_03001578[4];   // Special Enable Flag (checked by TONE 1 and WAVE)
-static u16 D_03001580[4];   // Initial Envelope Volume
-static u16 D_03001588[4];   // Frequency
-static u8 *D_03001590;      // Wave Pattern
-static s32 D_03001594;      // Unused
+static u8  sChannelJustStarted[4];  // Channel Just Started Flag
+static u16 sChannelPrevVolReg[4];   // Previous Volume Value
+static u16 sChannelPrevFreqReg[4];  // Previous Frequency Register Value
+static u8 *sPrevWavetable;          // Previous Wavetable Address (this is read but mistakenly never written to)
 
 
 // Reset All PSG SoundChannels
@@ -23,23 +22,23 @@ void midi_psg_init(void) {
     }
 
     for (i = 0; i < 4; i++) {
-        D_03001578[i] = FALSE;
+        sChannelJustStarted[i] = FALSE;
     }
 
-    *D_03001590 = 0;
+    *sPrevWavetable = 0;
 }
 
 
 // Start PSG SoundChannel
-void midi_psg_trigger_id(u32 id) {
-    D_03001578[id] = TRUE;
-    D_03001580[id] = -1;
-    D_03001588[id] = -1;
+void midi_psg_start_id(u32 id) {
+    sChannelJustStarted[id] = TRUE;
+    sChannelPrevVolReg[id] = -1;
+    sChannelPrevFreqReg[id] = -1;
 }
 
 
 // Convert Pitch to PSG Frequency Register Variable
-u32 midi_psg_pitch_to_freq(u32 freq) {
+u32 midi_psg_get_frequency(u32 freq) {
     s32 psgFreq;
 
     if (freq == 0) {
@@ -56,7 +55,7 @@ u32 midi_psg_pitch_to_freq(u32 freq) {
 
 
 // Convert Volume to PSG Volume Register Variable
-u32 midi_psg_volume_to_env(u32 vol) {
+u32 midi_psg_get_volume(u32 vol) {
     u32 psgEnv = vol;
 
     psgEnv = (vol >> 3);
@@ -87,13 +86,13 @@ void midi_psg_update_id(u32 id) {
     freqReg = midi_psg_freq_regs[id];
     instrument = soundChannel->instrument.psg;
 
-    if (instrument->length != 0 && !D_03001578[id]) {
+    if (instrument->length != 0 && !sChannelJustStarted[id]) {
         u32 soundControls = REG_SOUNDCNT_X;
 
         if (((soundControls >> id) & 1) == 0) {
-            D_03001580[id] = 0;
+            sChannelPrevVolReg[id] = 0;
             *envReg = 0;
-            D_03001588[id] = SOUNDCNTX_SOUND_RESET;
+            sChannelPrevFreqReg[id] = SOUNDCNTX_SOUND_RESET;
             *freqReg = SOUNDCNTX_SOUND_RESET;
             soundChannel->active = FALSE;
         }
@@ -105,7 +104,7 @@ void midi_psg_update_id(u32 id) {
         case PSG_PULSE_CHANNEL_1:
         case PSG_PULSE_CHANNEL_2:
         case PSG_WAVE_CHANNEL:
-            frequency = midi_psg_pitch_to_freq(midi_note_update_pitch(soundChannel));
+            frequency = midi_psg_get_frequency(midi_note_update_pitch(soundChannel));
             if (instrument->length != 0) {
                 frequency |= SOUNDCNTX_TIMED_SOUND;
             }
@@ -121,13 +120,13 @@ void midi_psg_update_id(u32 id) {
             break;
     }
 
-    volume = midi_psg_volume_to_env(midi_note_update_volume(soundChannel));
-    reset = (volume != D_03001580[id]) << 15;
+    volume = midi_psg_get_volume(midi_note_update_volume(soundChannel));
+    reset = (volume != sChannelPrevVolReg[id]) << 15;
 
-    if ((volume != D_03001580[id]) || (frequency != D_03001588[id])) {
+    if ((volume != sChannelPrevVolReg[id]) || (frequency != sChannelPrevFreqReg[id])) {
         switch (id) {
             case PSG_PULSE_CHANNEL_1:
-                if (D_03001578[id]) {
+                if (sChannelJustStarted[id]) {
                     sweep = (instrument->sweep != 0) ? instrument->sweep : SOUNDCNT1_SWEEP_DECREASE;
                     REG_SOUND1CNT_L = sweep;
                     *envReg = (volume << 12) | (instrument->dutyTone << 6) | (instrument->length);
@@ -153,10 +152,10 @@ void midi_psg_update_id(u32 id) {
                 break;
 
             case PSG_WAVE_CHANNEL:
-                if (D_03001578[id]) {
+                if (sChannelJustStarted[id]) {
                     REG_SOUNDCNT_L = 0xFF77; // Enable Stereo for All PSG Channels
                     frequency |= SOUNDCNTX_SOUND_RESET;
-                    if ((u32 *)D_03001590 != instrument->wavetable) {
+                    if ((u32 *)sPrevWavetable != instrument->wavetable) {
                         volatile u32 *waveDest = &REG_SGWR0;
                         u32 *waveSrc = instrument->wavetable;
                         u32 waveSelect, waveControls;
@@ -183,16 +182,16 @@ void midi_psg_update_id(u32 id) {
                 break;
         }
 
-        D_03001580[id] = volume;
-        D_03001588[id] = frequency;
+        sChannelPrevVolReg[id] = volume;
+        sChannelPrevFreqReg[id] = frequency;
     }
 
-    D_03001578[id] = 0;
+    sChannelJustStarted[id] = FALSE;
 
     if (midi_note_update_adsr(soundChannel)) {
-        D_03001580[id] = 0;
+        sChannelPrevVolReg[id] = 0;
         *envReg = 0;
-        D_03001588[id] = SOUNDCNTX_SOUND_RESET;
+        sChannelPrevFreqReg[id] = SOUNDCNTX_SOUND_RESET;
         *freqReg = SOUNDCNTX_SOUND_RESET;
         soundChannel->active = FALSE;
     }

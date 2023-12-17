@@ -1,12 +1,14 @@
 
 
-/* MIDI LIBRARY ASSEMBLY - PROCESS EQ */
+/* MIDI LIBRARY ASSEMBLY - APPLY EQ */
 
 
-@ Process Equalization
+@ Apply Equalization Filter
+@ This function is only implemented in stereo mode. Calling this function in mono mode
+@ will produce undefined results (likely resulting in a crash or infinite loop).
     @ R0: Batch Size (in 32-bit Words)
     @ R1: Equalizer Area Pointer
-unaligned_thumb_func_start midi_asm_process_eq
+unaligned_thumb_func_start midi_asm_apply_eq
     orrs    r0, r0
     bne     branch_08048fc6
     bx      lr
@@ -20,16 +22,16 @@ branch_08048fc6:
     ldr     r6, _0804913c   @ gMidiSampleScratch
     ldr     r6, [r6, #0]
     push    {r1}
-    movs    r0, #FUNC_INDEX_PROCESS_EQ
-    bl      midi_asm_process_eq_call_arm
+    movs    r0, #FUNC_INDEX_APPLY_EQ
+    bl      midi_asm_apply_eq_call_arm
     pop     {r1}
     str     r2, [r1, #4]
     str     r3, [r1, #8]
     pop     {r4, r5, r6, r7, pc}
 
 
-@ Process Equalization (ARM Stereo)
-arm_func_start midi_arm_stereo_process_eq
+@ Apply Equalization Filter (ARM Stereo)
+arm_func_start midi_arm_stereo_apply_eq
     push    {r8, r9, r10, r11, lr}
     mov     lr, r5
     mov     r12, r6
@@ -119,12 +121,12 @@ branch_08049094:
     pop     {r8, r9, r10, r11, lr}
     bx      lr
 
-glabel midi_arm_stereo_process_eq_end
+glabel midi_arm_stereo_apply_eq_end
 
 
-@ Process Equalization
+@ Apply Equalization Filter
     @ Align THUMB Function Call
-unaligned_thumb_func_start midi_asm_process_eq_call_arm
+unaligned_thumb_func_start midi_asm_apply_eq_call_arm
     ldr     r1, _08049140   @ midi_asm_call_arm_func_id
     adds    r1, #1
     bx      r1

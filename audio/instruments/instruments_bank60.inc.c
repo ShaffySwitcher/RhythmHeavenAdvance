@@ -2,7 +2,7 @@ extern struct SampleData sample_885_data;
 struct InstrumentPCM instrument_pcm_1612 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
-    /* unkEffect */ FALSE,
+    /* Fast Read */ FALSE,
     /* Panning   */ 127,
     /* Sample    */ &sample_885_data,
     /* ADSR Init */ 0x7F0000,
@@ -17,7 +17,7 @@ extern struct SampleData sample_886_data;
 struct InstrumentPCM instrument_pcm_1613 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
-    /* unkEffect */ FALSE,
+    /* Fast Read */ FALSE,
     /* Panning   */ 127,
     /* Sample    */ &sample_886_data,
     /* ADSR Init */ 0x7F0000,
@@ -32,7 +32,7 @@ extern struct SampleData sample_823_data;
 struct InstrumentPCM instrument_pcm_1614 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
-    /* unkEffect */ FALSE,
+    /* Fast Read */ FALSE,
     /* Panning   */ 127,
     /* Sample    */ &sample_823_data,
     /* ADSR Init */ 0x7F0000,
@@ -47,7 +47,7 @@ extern struct SampleData sample_887_data;
 struct InstrumentPCM instrument_pcm_1615 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
-    /* unkEffect */ FALSE,
+    /* Fast Read */ FALSE,
     /* Panning   */ 127,
     /* Sample    */ &sample_887_data,
     /* ADSR Init */ 0x7F0000,
@@ -62,7 +62,7 @@ extern struct SampleData sample_885_data;
 struct InstrumentPCM instrument_pcm_1616 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
-    /* unkEffect */ FALSE,
+    /* Fast Read */ FALSE,
     /* Panning   */ 127,
     /* Sample    */ &sample_885_data,
     /* ADSR Init */ 0x7F0000,
@@ -77,7 +77,7 @@ extern struct SampleData sample_198_data;
 struct InstrumentPCM instrument_pcm_1617 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
-    /* unkEffect */ FALSE,
+    /* Fast Read */ FALSE,
     /* Panning   */ 127,
     /* Sample    */ &sample_198_data,
     /* ADSR Init */ 0x7F0000,
@@ -99,7 +99,7 @@ extern struct SampleData sample_197_data;
 struct InstrumentPCM instrument_pcm_1619 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
-    /* unkEffect */ FALSE,
+    /* Fast Read */ FALSE,
     /* Panning   */ 127,
     /* Sample    */ &sample_197_data,
     /* ADSR Init */ 0x7F0000,
@@ -114,7 +114,7 @@ extern struct SampleData sample_030_data;
 struct InstrumentPCM instrument_pcm_1620 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
-    /* unkEffect */ FALSE,
+    /* Fast Read */ FALSE,
     /* Panning   */ 127,
     /* Sample    */ &sample_030_data,
     /* ADSR Init */ 0x000000,
@@ -129,7 +129,7 @@ extern struct SampleData sample_888_data;
 struct InstrumentPCM instrument_pcm_1621 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
-    /* unkEffect */ FALSE,
+    /* Fast Read */ FALSE,
     /* Panning   */ 127,
     /* Sample    */ &sample_888_data,
     /* ADSR Init */ 0x7F0000,
@@ -180,7 +180,7 @@ extern struct SampleData sample_086_data;
 struct InstrumentPCM instrument_pcm_1624 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x3C,
-    /* unkEffect */ FALSE,
+    /* Fast Read */ FALSE,
     /* Panning   */ 127,
     /* Sample    */ &sample_086_data,
     /* ADSR Init */ 0x7F0000,
@@ -195,7 +195,7 @@ extern struct SampleData sample_796_data;
 struct InstrumentPCM instrument_pcm_1625 = {
     /* Type      */ INSTRUMENT_PCM_ALIGNED,
     /* Key       */ 0x46,
-    /* unkEffect */ FALSE,
+    /* Fast Read */ FALSE,
     /* Panning   */ 127,
     /* Sample    */ &sample_796_data,
     /* ADSR Init */ 0x7F0000,

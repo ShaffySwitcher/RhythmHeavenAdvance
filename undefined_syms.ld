@@ -1,25 +1,10 @@
 OUTPUT_ARCH(arm)
 
-/* Sound Players */
-sMusicPlayer0 = 0x030015ac;
-sMusicPlayer1 = 0x030015e4;
-sMusicPlayer2 = 0x0300161c;
-sSfxPlayer0 = 0x03001654;
-sSfxPlayer1 = 0x0300168c;
-sSfxPlayer2 = 0x030016c4;
-sSfxPlayer3 = 0x030016fc;
-sSfxPlayer4 = 0x03001734;
-sSfxPlayer5 = 0x0300176c;
-sSfxPlayer6 = 0x030017a4;
-sSfxPlayer7 = 0x030017dc;
-sSfxPlayer8 = 0x03001814;
-sSfxPlayer9 = 0x0300184c;
-
 /* DirectSound Space */
-D_03001888 = 0x03001888;
-D_030024c8 = 0x030024c8;
-D_030028c8 = 0x030028c8;
-D_03002a48 = 0x03002a48;
+sPCMBufferArea = 0x03001888;
+sPCMScratchArea = 0x030024c8;
+sSamplerArea = 0x030028c8;
+sSoundChannelArea = 0x03002a48;
 
 /* MIDI Reader Space */
 sMusicPlayer0_midiChannels = 0x03002bc8;
@@ -133,18 +118,18 @@ gMidiSoundMode = 0x030055f4;
 gMidiRVB_Scratch = 0x03005600;
 gMidiSamplerCount = 0x03005610;
 gMidiEQ_Area = 0x03005620;
-gMidiPlayerDeltaTime = 0x0300562c;
+gMidiPlayerNewDeltaTime = 0x0300562c;
 gMidiRVB_Control2 = 0x03005630;
 gMidiRVB_Control4 = 0x03005634;
 gMidiScratchSize = 0x03005638;
 gMidiPCMBufR = 0x0300563c;
 gMidiLFO_Depth = 0x03005640;
 gMidiLFO_Player = 0x03005644;
-D_03005648 = 0x03005648;
+gMidiCommVarCurrent = 0x03005648;
 gMidiNotePool = 0x03005650;
 gMidiPSGChannelPool = 0x030056a0;
 gMidiSampleTable = 0x03005720;
-D_03005b20 = 0x03005b20;
+gMidiCommVarTotal = 0x03005b20;
 gMidiPCMBufSize32 = 0x03005b24;
 gMidiEQ_HighGain = 0x03005b28;
 gMidiLFO = 0x03005b30;
@@ -154,7 +139,7 @@ gMidiEQ_IsGlobal = 0x03005b44;
 gMidiRVB_Control3 = 0x03005b48;
 gMidiARM_FuncTable = 0x03005b50;
 gMidiNoteNext = 0x03005b78;
-D_03005b7c = 0x03005b7c;
+gMidiCommVars = 0x03005b7c;
 gMidiVCOUNTAtEnd = 0x03005b80;
 gMidiVCOUNTAtSamplerEnd = 0x03005b84;
 gMidiSamplerPool = 0x03005b88;
@@ -165,7 +150,7 @@ gMidiARM_FuncArea = 0x03005ba0;
 D_030064a0 = 0x030064a0;
 gMidiRVB_Control1 = 0x030064a4;
 gMidiSamplesPerFrame = 0x030064a8;
-gMidiSamplerHighGain = 0x030064ac;
+gMidiSamplerGain = 0x030064ac;
 gMidiSampleScratch = 0x030064b0;
 gMidiTM0Rate = 0x030064b4;
 gMidiPCMBufL = 0x030064b8;

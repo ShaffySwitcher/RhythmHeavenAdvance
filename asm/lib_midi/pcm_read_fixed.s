@@ -1,12 +1,17 @@
 
 
-/* MIDI LIBRARY ASSEMBLY - PROCESS PCM (NO RESAMPLE) */
+/* MIDI LIBRARY ASSEMBLY - READ PCM (NO RESAMPLE) */
 
 
-@ Process Samples - Base Sample Rate
+@ Read PCM Samples - Base Sample Rate
+@ This function is called when the same samplerate as the base SampleData is desired.
+@ No resampling occurs, resulting in very fast speeds. Instruments can force streams to
+@ use this method if given set as the FIXED_PCM type (char 'F'). Using this bypass may
+@ cause undesired results if the samplerate of the base SampleData does not match the
+@ audio system's output samplerate.
     @ R0: Batch Size (in 32-bit Words)
     @ R1: SampleStream Pointer
-unaligned_thumb_func_start midi_asm_process_pcm_no_resample
+unaligned_thumb_func_start midi_asm_read_pcm_fixed
     orrs    r0, r0
     bne     branch_08048ba2
     bx      lr
@@ -41,7 +46,7 @@ branch_08048ba2:
     movs    r0, #2
     ldrsb   r3, [r1, r0]
     ldrb    r0, [r1, #1]
-    ldr     r4, _08048d50   @ gMidiSamplerHighGain
+    ldr     r4, _08048d50   @ gMidiSamplerGain
     ldrh    r4, [r4, #0]
     adds    r0, r0, r4
     muls    r2, r0
@@ -51,8 +56,8 @@ branch_08048ba2:
     mov     r8, r2
     mov     r9, r3
     push    {r1}
-    movs    r0, #FUNC_INDEX_EDIT_PCM_NO_RESAMPLE
-    bl      midi_asm_process_pcm_no_resample_call_arm
+    movs    r0, #FUNC_INDEX_READ_PCM_FIXED
+    bl      midi_asm_read_pcm_fixed_call_arm
     pop     {r1}
     ldrb    r2, [r1, #0]
     movs    r3, #1
@@ -75,8 +80,8 @@ branch_08048ba2:
     bx      r0
 
 
-@ Process Samples - Base Sample Rate (ARM Stereo)
-arm_func_start midi_arm_stereo_edit_pcm_no_resample
+@ Read PCM Samples - Base Sample Rate (ARM Stereo)
+arm_func_start midi_arm_stereo_read_pcm_fixed
     str     lr, _08048d40
 branch_08048c24:
     ands    r0, r7, #3
@@ -160,23 +165,23 @@ branch_08048d38:
 .balign 4, 0
 _08048d40: .word 0
 
-glabel midi_arm_stereo_edit_pcm_no_resample_end
+glabel midi_arm_stereo_read_pcm_fixed_end
 
 
-@ Process Samples - Base Sample Rate (ARM Mono)
-arm_func_start midi_arm_mono_edit_pcm_no_resample
+@ Read PCM Samples - Base Sample Rate (ARM Mono)
+arm_func_start midi_arm_mono_read_pcm_fixed
 
-glabel midi_arm_mono_edit_pcm_no_resample_end
+glabel midi_arm_mono_read_pcm_fixed_end
 
 
-@ Process Samples - Base Sample Rate
+@ Read PCM Samples - Base Sample Rate
     @ Align THUMB Function Call
-unaligned_thumb_func_start midi_asm_process_pcm_no_resample_call_arm
+unaligned_thumb_func_start midi_asm_read_pcm_fixed_call_arm
     ldr     r1, _08048d54   @ midi_asm_call_arm_func_id
     adds    r1, #1
     bx      r1
 
 .balign 4, 0
 _08048d4c: .word gMidiSampleScratch
-_08048d50: .word gMidiSamplerHighGain
+_08048d50: .word gMidiSamplerGain
 _08048d54: .word midi_asm_call_arm_func_id

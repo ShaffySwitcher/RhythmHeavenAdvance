@@ -7,13 +7,18 @@
 
 
 // STATIC VARIABLES
+static s32 D_03001594;  // Unused
+
 static struct SoundPlayer *sDirectPlayer;   // DirectMidi SoundPlayer
 static struct MidiBus *sDirectBus;          // DirectMidi MidiBus
 static u8 *sDirectSequence;                 // DirectMidi Sequence (max. size = 0x200)
 static u16 sDirectLength;                   // DirectMidi Sequence Length
 static u8 sDirectLastCommand;               // DirectMidi Sequence Current Command
 
-static u8 D_030015a7;   // Initial value at D_03005b7c
+static u8 sMidiCommVar1;
+static u8 sMidiCommVar2;
+static u8 sMidiCommVar3;
+static u8 sMidiCommVar4;
 
 
 // Evaluate Big-Endian Short
@@ -110,7 +115,7 @@ void midi_player_play_header(struct SoundPlayer *soundPlayer, struct SongHeader 
     soundPlayer->playerSpeed = 1 << 8;
     soundPlayer->trackVolume = 1 << 8;
     soundPlayer->volumeFadeType = 0;
-    soundPlayer->volumeFadeEnv = 0x8000;
+    soundPlayer->volumeFadeEnv = (1 << 15);
     soundPlayer->volumeFadeSpd = 0;
     soundPlayer->loopStartSym = midi_loop_start_sym;
     soundPlayer->loopStartSymSize = midi_player_get_loop_sym_size(midi_loop_start_sym);
@@ -129,7 +134,7 @@ void midi_player_play_id(u16 soundIndex) {
     struct SoundPlayer *soundPlayer;
     struct SongHeader *song;
 
-    soundPlayer = D_08aa4460[D_08aa06f8[soundIndex].player].soundPlayer;
+    soundPlayer = sound_player_table[D_08aa06f8[soundIndex].player].soundPlayer;
     song = D_08aa06f8[soundIndex].song;
     midi_player_play_header(soundPlayer, song);
 }
@@ -186,8 +191,8 @@ void midi_player_unpause(struct SoundPlayer *soundPlayer) {
 void midi_player_pause_all(void) {
     u32 i;
 
-    for (i = 0; i <= D_08aa4318; i++) {
-        midi_player_set_pause(D_08aa4324[i], TRUE);
+    for (i = 0; i <= last_sound_player_id; i++) {
+        midi_player_set_pause(sound_players[i], TRUE);
     }
 }
 
@@ -196,8 +201,8 @@ void midi_player_pause_all(void) {
 void midi_player_unpause_all(void) {
     u32 i;
 
-    for (i = 0; i <= D_08aa4318; i++) {
-        midi_player_set_pause(D_08aa4324[i], FALSE);
+    for (i = 0; i <= last_sound_player_id; i++) {
+        midi_player_set_pause(sound_players[i], FALSE);
     }
 }
 
@@ -227,25 +232,25 @@ void midi_player_set_panning(struct SoundPlayer *soundPlayer, u16 trackMask, s8 
 }
 
 
-// Pause from Index
-void midi_player_pause_id(u16 soundIndex) {
-    struct SongHeader *song = D_08aa06f8[soundIndex].song;
+// Pause Song from Index
+void midi_player_pause_id(u16 songNum) {
+    struct SongHeader *song = D_08aa06f8[songNum].song;
     u32 i;
 
-    for (i = 0; i <= D_08aa4318; i++) {
-        if ((D_08aa4324[i] != NULL) && (D_08aa4324[i]->song == song)) {
-            midi_player_pause(D_08aa4324[i]);
+    for (i = 0; i <= last_sound_player_id; i++) {
+        if ((sound_players[i] != NULL) && (sound_players[i]->song == song)) {
+            midi_player_pause(sound_players[i]);
         }
     }
 }
 
 
-// MidiStream.equals()
-u32 midi_player_text_is_loop_sym(const u8 *stream1, const u8 *stream2, u32 length) {
+// Check if Stream Output is Equal to String
+u32 midi_player_text_is_loop_sym(const char *string, const u8 *byteStream, u32 length) {
     u32 i;
 
     for (i = 0; i < length; i++) {
-        if (stream1[i] != stream2[i]) {
+        if (string[i] != byteStream[i]) {
             return FALSE;
         }
     }
@@ -266,9 +271,7 @@ void midi_player_set_speed(struct SoundPlayer *soundPlayer, u16 speed) {
 
     soundPlayer->playerSpeed = speed;
     delta = midi_player_get_delta_time(soundPlayer->midiTempo, speed, soundPlayer->midiQuarterNote);
-    if (delta == 0) {
-        delta = 1;
-    }
+    if (delta < 1) delta = 1;
     soundPlayer->deltaTime = delta;
 }
 
@@ -282,10 +285,8 @@ void midi_player_set_volume_fade(struct SoundPlayer *soundPlayer, u16 type, u16 
             break;
 
         case VOL_FADE_IN:
-            if (duration == 0) {
-                duration = 1;
-            }
-            if (soundPlayer->volumeFadeType == 0) {
+            if (duration < 1) duration = 1;
+            if (soundPlayer->volumeFadeType == VOL_FADE_RESET) {
                 soundPlayer->volumeFadeEnv = 0;
             }
             soundPlayer->volumeFadeSpd = (1 << 15) / duration;
@@ -342,7 +343,7 @@ void midi_player_parse_sys_exc_message(struct SoundPlayer *soundPlayer, const u8
 
     stream++;
     switch (type) {
-        case SYS_EXC_EVENT_LFO:
+        case SYS_EXC_EVENT_LFO_SETTINGS:
             midi_equalizer_reset();
             gMidiLFO_Mode = LFO_MODE_DISABLED;
             gMidiLFO_Depth = stream[0] * 2;
@@ -351,7 +352,7 @@ void midi_player_parse_sys_exc_message(struct SoundPlayer *soundPlayer, const u8
             gMidiLFO_Player = soundPlayer;
             break;
 
-        case SYS_EXC_EVENT_R_SCALE:
+        case SYS_EXC_EVENT_KEY_MOD_SCALE:
             for (i = 0; i < 12; i++) {
                 midiBus->unk1C[i] = stream[i] - 64;
             }
@@ -391,7 +392,7 @@ u32 midi_player_parse_meta_event(struct SoundPlayer *soundPlayer, const u8 **ups
         case META_SET_TEMPO:
             tempo = 60000000u / ((stream[0] << 16) | (stream[1] << 8) | stream[2]);
             soundPlayer->midiTempo = tempo;
-            gMidiPlayerDeltaTime = midi_player_get_delta_time(tempo, soundPlayer->playerSpeed, soundPlayer->midiQuarterNote);
+            gMidiPlayerNewDeltaTime = midi_player_get_delta_time(tempo, soundPlayer->playerSpeed, soundPlayer->midiQuarterNote);
             return META_EVENT_OTHER;
 
         default:
@@ -449,21 +450,21 @@ void midi_player_parse_controller_change(struct SoundPlayer *soundPlayer, u32 tr
             midi_channel_set_priority(midiBus, track, value);
             break;
 
-        case M_CONTROLLER_UNK_0E:
-            D_03005648 = value;
+        case M_CONTROLLER_SELECT_VAR:
+            gMidiCommVarCurrent = value;
             break;
 
-        case M_CONTROLLER_UNK_10:
-            if (D_03005648 < D_03005b20) {
-                D_03005b7c[D_03005648] = value;
+        case M_CONTROLLER_SET_VAR:
+            if (gMidiCommVarCurrent < gMidiCommVarTotal) {
+                gMidiCommVars[gMidiCommVarCurrent] = value;
             }
             break;
 
-        case M_CONTROLLER_DAMPEN:
+        case M_CONTROLLER_EQ_MODE:
             midi_channel_set_enable_filter_eq(midiBus, track, value);
             break;
 
-        case M_CONTROLLER_LFO:
+        case M_CONTROLLER_LFO_MODE:
             gMidiLFO_Mode = value;
             switch (value) {
                 case LFO_MODE_DISABLED:
@@ -477,7 +478,7 @@ void midi_player_parse_controller_change(struct SoundPlayer *soundPlayer, u32 tr
             }
             break;
 
-        case M_CONTROLLER_EQ:
+        case M_CONTROLLER_SET_EQ:
             gMidiLFO_Mode = LFO_MODE_DISABLED;
             midi_lfo_stop(&gMidiLFO);
             midi_equalizer_reset();
@@ -542,7 +543,7 @@ void midi_player_add_note(u32 track, u32 key, u32 velocity) {
 
 // MidiStream Messages/Events
 u32 midi_player_read_track(struct SoundPlayer *soundPlayer, u32 track) {
-    u32 trackEndType = M_TRACK_STREAM_CONTINUE;
+    u32 trackEndType = M_TRACK_READER_CONTINUE;
     struct MidiTrackStream *reader = &soundPlayer->midiReader[track];
     struct MidiTrackStream *tempReader;
     const u8 *byteStream = reader->stream_curr;
@@ -550,7 +551,6 @@ u32 midi_player_read_track(struct SoundPlayer *soundPlayer, u32 track) {
     u16 pitch;
     u32 i;
 
-    // ??
     command = byteStream[0];
     if ((command & 0x80) != 0) {
         reader->command_curr = command;
@@ -574,7 +574,7 @@ u32 midi_player_read_track(struct SoundPlayer *soundPlayer, u32 track) {
                     // End of Track
                     case META_EVENT_TRACK_END:
                         midi_channel_set_mod_speed(soundPlayer->midiBus, track, 0);
-                        return M_TRACK_STREAM_STOP;
+                        return M_TRACK_READER_STOP;
 
                     // Marker: Loop Start
                     case META_EVENT_LOOP_START:
@@ -606,7 +606,7 @@ u32 midi_player_read_track(struct SoundPlayer *soundPlayer, u32 track) {
                             }
                             midi_channel_cut(soundPlayer->midiBus, i);
                         }
-                        trackEndType = M_TRACK_STREAM_LOOP;
+                        trackEndType = M_TRACK_READER_LOOP;
                         break;
                 }
                 break;
@@ -696,7 +696,7 @@ void midi_player_update_track(struct SoundPlayer *soundPlayer, u32 track) {
             reader->inLoop = TRUE;
         }
 
-        if (midi_player_read_track(soundPlayer, track) == M_TRACK_STREAM_STOP) {
+        if (midi_player_read_track(soundPlayer, track) == M_TRACK_READER_STOP) {
             reader->active_curr = FALSE;
             midi_channel_cut(soundPlayer->midiBus, track);
             return;
@@ -743,7 +743,7 @@ void midi_player_update_volume_fade(struct SoundPlayer *soundPlayer) {
 
         case VOL_FADE_IN:
             soundPlayer->volumeFadeEnv += soundPlayer->volumeFadeSpd;
-            if ((s16)soundPlayer->volumeFadeEnv < 0) {
+            if (soundPlayer->volumeFadeEnv >= (1 << 15)) {
                 soundPlayer->volumeFadeType = VOL_FADE_RESET;
                 soundPlayer->volumeFadeEnv = (1 << 15);
                 soundPlayer->volumeFadeSpd = 0;
@@ -772,15 +772,11 @@ void midi_player_update_volume_fade(struct SoundPlayer *soundPlayer) {
 
     volumeProduct = (soundPlayer->songVolume * soundPlayer->playerVolume * soundPlayer->volumeFadeEnv) >> 8;
     volumeLevel = volumeProduct >> 15;
-    if (volumeLevel > 0xFF) {
-        volumeLevel = 0xFF;
-    }
+    if (volumeLevel > 0xFF) volumeLevel = 0xFF;
     midi_bus_set_volume(soundPlayer->midiBus, volumeLevel);
 
     volumeLevel = ((volumeProduct >> 8) * soundPlayer->trackVolume) >> 15;
-    if (volumeLevel > 0xFF) {
-        volumeLevel = 0xFF;
-    }
+    if (volumeLevel > 0xFF) volumeLevel = 0xFF;
     midi_bus_set_track_volume(soundPlayer->midiBus, volumeLevel, soundPlayer->trackMask);
 }
 
@@ -796,16 +792,16 @@ void midi_player_update_sequence(struct SoundPlayer *soundPlayer) {
         return;
     }
 
-    gMidiPlayerDeltaTime = 0;
+    gMidiPlayerNewDeltaTime = 0;
 
     // Update MIDI Track Streams
     for (i = 0; i < soundPlayer->usedTracks; i++) {
         midi_player_update_track(soundPlayer, i);
     }
 
-    // If the above loop modifies the value of gMidiPlayerDeltaTime, apply to channel as speed envelope.
-    if (gMidiPlayerDeltaTime != 0) {
-        soundPlayer->deltaTime = gMidiPlayerDeltaTime;
+    // If the above loop modifies the value of gMidiPlayerNewDeltaTime, apply to SoundPlayer.
+    if (gMidiPlayerNewDeltaTime != 0) {
+        soundPlayer->deltaTime = gMidiPlayerNewDeltaTime;
     }
 
     // Check if any MIDI Track Readers are currently operating.
@@ -817,7 +813,7 @@ void midi_player_update_sequence(struct SoundPlayer *soundPlayer) {
         }
     }
 
-    // If none are active, remove the Sound Sequence from the Audio Channel.
+    // If none are active, remove the Sound Sequence from the SoundPlayer.
     if (noActiveReader) {
         soundPlayer->song = NULL;
     }
@@ -837,8 +833,8 @@ void midi_sound_main(void) {
     gMidiVCOUNTAtStart = REG_VCOUNT;
 
     // Standard Sound Players
-    for (i = 0; i <= D_08aa4318; i++) {
-        soundPlayer = D_08aa4324[i];
+    for (i = 0; i <= last_sound_player_id; i++) {
+        soundPlayer = sound_players[i];
         if (soundPlayer != NULL) {
             midi_player_update_volume_fade(soundPlayer);
             midi_player_update_sequence(soundPlayer);
@@ -926,6 +922,9 @@ u32 midi_parse_variable_length(const u8 **upstream) {
     *upstream = stream;
     return time;
 }
+
+
+/* DIRECT-MIDI SOUND PLAYER */
 
 
 // Initialise DirectMidi Player
@@ -1155,27 +1154,51 @@ void midi_direct_player_update(void) {
 }
 
 
+/* SOUND AREA */
+
+
+static struct SoundPlayer sMusicPlayer0;
+static struct SoundPlayer sMusicPlayer1;
+static struct SoundPlayer sMusicPlayer2;
+static struct SoundPlayer sSfxPlayer0;
+static struct SoundPlayer sSfxPlayer1;
+static struct SoundPlayer sSfxPlayer2;
+static struct SoundPlayer sSfxPlayer3;
+static struct SoundPlayer sSfxPlayer4;
+static struct SoundPlayer sSfxPlayer5;
+static struct SoundPlayer sSfxPlayer6;
+static struct SoundPlayer sSfxPlayer7;
+static struct SoundPlayer sSfxPlayer8;
+static struct SoundPlayer sSfxPlayer9;
+
+extern s32 sPCMBufferArea[1568 * 2 / 4];
+extern s32 sPCMScratchArea[0x80 * 2];
+extern struct SampleStream sSamplerArea[12];
+extern struct SoundChannel sSoundChannelArea[12];
+
+
 // Initialise Sound Area
 void midi_sound_init(void) {
     u32 i;
 
     midi_directsound_init(DIRECTSOUND_MODE_STEREO, AUDIO_SAMPLE_RATE,
-                    DMA_SAMPLE_BUFFER_SIZE, D_03001888,
-                    SAMPLE_SCRATCHPAD_SIZE, D_030024c8,
-                    DIRECTSOUND_CHANNEL_COUNT, D_030028c8);
+                    DMA_SAMPLE_BUFFER_SIZE, sPCMBufferArea,
+                    SAMPLE_SCRATCHPAD_SIZE, sPCMScratchArea,
+                    DIRECTSOUND_CHANNEL_COUNT, sSamplerArea);
     midi_psg_init();
-    midi_note_init(DIRECTSOUND_CHANNEL_COUNT, D_03002a48);
+    midi_note_init(DIRECTSOUND_CHANNEL_COUNT, sSoundChannelArea);
 
     for (i = 0; i < SOUND_PLAYER_COUNT; i++) {
-        midi_bus_init(D_08aa4358[i].midiBus, D_08aa4358[i].totalTracks, D_08aa4358[i].midiChannels);
-        midi_player_init(D_08aa4358[i].soundPlayer, D_08aa4358[i].midiBus, D_08aa4358[i].totalTracks, D_08aa4358[i].trackStreams, D_08aa4358[i].priorityEnabled);
+        midi_bus_init(sound_player_init_table[i].midiBus, sound_player_init_table[i].totalTracks, sound_player_init_table[i].midiChannels);
+        midi_player_init(sound_player_init_table[i].soundPlayer, sound_player_init_table[i].midiBus, sound_player_init_table[i].totalTracks,
+                            sound_player_init_table[i].trackStreams, sound_player_init_table[i].priorityEnabled);
     }
 
-    D_03005b7c = &D_030015a7;
-    D_03005b20 = 4;
+    gMidiCommVars = &sMidiCommVar1;
+    gMidiCommVarTotal = 4;
 
     for (i = 0; i < 4; i++) {
-        D_03005b7c[i] = 0;
+        gMidiCommVars[i] = 0;
     }
 
     gMidiLFO_Mode = LFO_MODE_DISABLED;
@@ -1186,3 +1209,5 @@ void midi_sound_init(void) {
     gMidiRVB_ControlBuf[3] = 0;
     sDirectPlayer = NULL;
 }
+
+#include "audio/sound_players.inc.c"

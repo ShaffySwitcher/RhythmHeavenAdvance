@@ -699,7 +699,7 @@ struct SoundPlayer *scene_set_random_music(struct SongHeader **musicPool) {
     music = musicPool[agb_random(total)];
     scene_set_music(music);
 
-    return D_08aa4460[music->soundPlayer].soundPlayer;
+    return sound_player_table[music->soundPlayer].soundPlayer;
 }
 
 

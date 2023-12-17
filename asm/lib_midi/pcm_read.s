@@ -1,12 +1,16 @@
 
 
-/* MIDI LIBRARY ASSEMBLY - PROCESS PCM (RESAMPLE) */
+/* MIDI LIBRARY ASSEMBLY - READ PCM (ACCURATE RESAMPLE) */
 
 
-@ Process Samples - Shifted Sample Rate
+@ Read PCM Samples - Accurate Resample
+@ This function is called when a different samplerate to the base SampleData is desired.
+@ Of the two resampling functions, this is the more accurate one, interpolating between
+@ the two closest samples to the current stream position. This method is slower, as the
+@ number of samples read is doubled, and due to extra logic needed for interpolation.
     @ R0: Batch Size (in 32-bit Words)
     @ R1: SampleStream Pointer
-unaligned_thumb_func_start midi_asm_process_pcm_resample
+unaligned_thumb_func_start midi_asm_read_pcm_accurate
     orrs    r0, r0
     bne     branch_080483be
     bx      lr
@@ -32,7 +36,7 @@ branch_080483be:
     movs    r0, #2
     ldrsb   r3, [r1, r0]
     ldrb    r0, [r1, #1]
-    ldr     r4, _08048750   @ gMidiSamplerHighGain
+    ldr     r4, _08048750   @ gMidiSamplerGain
     ldrh    r4, [r4, #0]
     adds    r0, r0, r4
     muls    r2, r0
@@ -50,8 +54,8 @@ branch_080483be:
     mov     r0, r8
     ldr     r4, [r1, #16]
     subs    r4, r4, r0
-    movs    r0, #FUNC_INDEX_EDIT_PCM_RESAMPLE
-    bl      midi_asm_process_pcm_resample_call_arm
+    movs    r0, #FUNC_INDEX_READ_PCM_ACCURATE
+    bl      midi_asm_read_pcm_accurate_call_arm
     pop     {r1}
     ldrb    r2, [r1, #0]
     movs    r3, #1
@@ -72,8 +76,8 @@ branch_080483be:
     bx      r0
 
 
-@ Process Samples - Shifted Sample Rate (ARM Stereo)
-arm_func_start midi_arm_stereo_edit_pcm_resample
+@ Read PCM Samples - Accurate Resample (ARM Stereo)
+arm_func_start midi_arm_stereo_read_pcm_accurate
     str     lr, _080485c0
     str     r4, _080485c4
 branch_0804843c:
@@ -185,11 +189,11 @@ branch_0804857c:
 _080485c0: .word 0
 _080485c4: .word 0
 
-glabel midi_arm_stereo_edit_pcm_resample_end
+glabel midi_arm_stereo_read_pcm_accurate_end
 
 
-@ Process Samples - Shifted Sample Rate (ARM Mono)
-arm_func_start midi_arm_mono_edit_pcm_resample
+@ Read PCM Samples - Accurate Resample (ARM Mono)
+arm_func_start midi_arm_mono_read_pcm_accurate
     str     lr, _0804873c
     str     r4, _08048740
 branch_080485d0:
@@ -295,17 +299,17 @@ branch_080486f8:
 _0804873c: .word 0
 _08048740: .word 0
 
-glabel midi_arm_mono_edit_pcm_resample_end
+glabel midi_arm_mono_read_pcm_accurate_end
 
 
-@ Process Samples - Shifted Sample Rate
+@ Read PCM Samples - Accurate Resample
     @ Align THUMB Function Call
-unaligned_thumb_func_start midi_asm_process_pcm_resample_call_arm
+unaligned_thumb_func_start midi_asm_read_pcm_accurate_call_arm
     ldr     r1, _08048754   @ midi_asm_call_arm_func_id
     adds    r1, #1
     bx      r1
 
 .balign 4, 0
 _0804874c: .word gMidiSampleScratch
-_08048750: .word gMidiSamplerHighGain
+_08048750: .word gMidiSamplerGain
 _08048754: .word midi_asm_call_arm_func_id
