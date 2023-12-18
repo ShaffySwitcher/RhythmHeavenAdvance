@@ -65,6 +65,14 @@ enum DrumLiveAnimationsEnum {
     /* 41 */ LIVE_ANIM_LIGHT_FLASH
 };
 
+enum DrumLiveGuitaristStatesEnum {
+    /* 00 */ LIVE_GUITARIST_STATE_DEFAULT,
+    /* 01 */ LIVE_GUITARIST_STATE_CROUCH,
+    /* 02 */ LIVE_GUITARIST_STATE_STRUM_JUMP,
+    /* 03 */ LIVE_GUITARIST_STATE_JUMP,
+    /* 04 */ LIVE_GUITARIST_STATE_HALF_CROUCH
+};
+
 
 // TYPES
 struct LiveDrummer {
@@ -92,42 +100,27 @@ struct LiveGuitarist {
     s16 legs;
     u16 unkA;
     u16 unkC;
-    u8 unkE;
-    u8 unkF;
-    u16 unk10;
+    u8 currentState;
+    u8 nextState;
+    u16 timeUntilNextState;
 };
 
-// this should be moved to the relevant library header
-struct DynamicBgMap {
-    u32 unk0;
-    u32 unk4;
-    u32 unk8;
-    u32 unkC;
-    u32 unk10;
-    u32 unk14;
-    u32 unk18;
-    u32 unk1C;
-    u32 unk20;
-    u32 unk24;
-};
-
-struct DrumLiveEngineData { // size = 0x1820
+struct DrumLiveEngineData {
     // [0x000]
     u8 version;
-    // [0x004]
     struct DrumTechController drumTech;
     // [0x354]
     struct LiveDrummer drummer;
     // [0x374, 0x388]
     struct LiveGuitarist guitarists[2];
     // [0x39C]
-    u32 unk39C;
-    s8 unk3A0;
+    u32 adjustModeTempo;
+    u8 adjustModeEnabled;
     s16 adjustModeIcon;
     s16 busyIcon;
-    u16 unk3A6;
+    u16 null3A6;
     // [0x3A8]
-    u8 padding3A8[0x1000];
+    u8 bgMapArea[0x1000];
     // [0x13A8]
     struct DynamicBgMap dynamicBgMap;
     // [0x13D0]
@@ -139,27 +132,42 @@ struct DrumLiveEngineData { // size = 0x1820
     u16 coolInputs[6];
     u16 lameInputs[6];
     // [0x13F8]
-    u8 unk13F8;
-    u8 unk13F9;
-    s8 unk13FA;
-    u32 unk13FC;
-    u32 unk1400;
-    u32 unk1404;
-    u32 unk1408;
-    u32 unk140C;
-    u32 unk1410;
-    u8 unk1414;
-    u8 unk1415;
-    u16 unk1416;
-    u8 padding1418[0x400];
-    u32 unk1818;
+    u8 excitementDisabled;
+    u8 totalActiveLights;
+    s8 nextFlashType;
+    u8 flashTypeCooldown[4];
+    s16 lightFlashes[4];
+    u8 nextLightFlash;
+    s24_8 brightnessLevel;
+    s24_8 brightnessInc;
+    u8 currentLightStyle;
+    u8 nextLightStyle;
+    u16 timeUntilNextLightStyle;
+    u32 nextLightBRG;
+    // [0x141C]
+    u16 bgPalBuf1[0x40];
+    // [0x149C]
+    u16 objPalBuf1[0x40];
+    // [0x151C]
+    u16 bgPalBuf2[0x40];
+    // [0x159C]
+    u16 objPalBuf2[0x40];
+    // [0x161C]
+    u16 bgPalBuf3[0x40];
+    // [0x169C]
+    u16 bgPalBuf4[0x40];
+    // [0x171C]
+    u16 objPalBuf3[0x40];
+    // [0x179C]
+    u16 objPalBuf4[0x40];
+    // [0x181C]
     u8 boredomEnabled;
     u16 timeSinceLastInput;
 };
 
 struct DrumLiveCue {
-    u8 type;
-    s8 unk1;
+    u8 index;
+    s8 flashType;
     u16 coolInputs;
     u16 lameInputs;
     s8_8 baseInc;
@@ -171,13 +179,13 @@ struct DrumLiveCue {
 extern struct Animation **drum_live_anim_table[];
 extern Palette *drum_live_obj_palettes[];
 extern Palette *drum_live_bg_palettes[];
-extern u16 D_089e06b0[];
-extern u8 D_089e06c0[];
+extern u16 drum_live_color_masks[];
+extern u8 drum_live_brg_targets[];
 extern u16 *drum_live_crowd_bg_maps[];
 extern struct DrumTechKit *drum_live_kits[];
 extern struct CompressedGraphics *drum_live_buffered_textures[];
 extern struct GraphicsTable *drum_live_gfx_tables[];
-extern struct Vector2 D_089e0ab0[3][3];
+extern struct Vector2 drum_live_performer_sprite_offsets[3][3];
 extern u8 drum_live_guitarist_anim_map_head[];
 extern u8 drum_live_guitarist_anim_map_body[];
 extern u8 drum_live_guitarist_anim_map_legs[];
@@ -191,17 +199,17 @@ extern u8 drum_live_kit_map[];
 
 // FUNCTIONS
 extern struct Animation *drum_live_get_anim(u32 anim); // Get Animation
-// extern ? func_08025248(?);
-// extern ? func_08025460(?);
-// extern ? func_08025538(?);
+extern void drum_live_init_lighting(void);
+extern void drum_live_update_lighting(void);
+extern void drum_live_light_flash_callback(void);
 extern void drum_live_play_applause(void);
-// extern ? func_080255f8(?);
-extern void func_08025748(u32 arg); // Engine Event 0x05 (?)
-// extern ? func_0802575c(?);
-// extern ? func_080257b8(?);
-// extern ? func_08025848(?);
-// extern ? func_080258c0(?);
-extern void func_08025a2c(u32 arg); // Engine Event 0x06 (?)
+extern void drum_live_flash_big_lights(s32 flashType);
+extern void drum_live_set_next_flash_type(s32 flashType); // Engine Event 0x05 (Set Next Flash Type)
+extern void drum_live_and_palette(const u16 *src, u16 *dest, u32 totalPal, u32 maskIndex);
+extern void drum_live_multiply_palette(const u16 *src, u16 *dest, u32 totalPal, u32 brgTargets, u32 mul);
+extern void drum_live_update_rainbow_lights(void);
+extern void drum_live_flash_beat_lights(void);
+extern void drum_live_set_next_beat_light_style(u32 arg); // Engine Event 0x06 (Set Next Beat Light Style)
 extern void drum_live_script_play_applause(void); // Engine Event 0x07 (Play Applause)
 extern void drum_live_clear_input_def(void);
 extern void drum_live_script_clear_input_def(void); // Engine Event 0x02 (Clear "Cool"/"Lame" Inputs)
@@ -209,44 +217,44 @@ extern void drum_live_define_cool_inputs(u32 index, u32 keys);
 extern void drum_live_define_lame_inputs(u32 index, u32 keys);
 extern void drum_live_script_define_cool_inputs(u32 args); // Engine Event 0x03 (Define "Cool" Inputs)
 extern void drum_live_script_define_lame_inputs(u32 args); // Engine Event 0x04 (Define "Lame" Inputs)
-// extern ? func_08025afc(?);
+extern void drum_live_modify_excitement_old(u32 index, u32 keys);
 extern void drum_live_reset_excitement(void);
-extern void func_08025bcc(); // Engine Event 0x09 (?)
+extern void drum_live_set_disable_excitement(u32 disable); // Engine Event 0x09 (Set Disable Excitement)
 extern void drum_live_reset_crowd_and_rank(void);
 extern void drum_live_set_crowd_and_rank(u32 arg);
-extern void drum_live_kit_play_roll(); // Drum Kit Event - D-Pad Up (Snare Roll)
-extern void drum_live_kit_play_bass_l(); // Drum Kit Event - D-Pad Down
-extern void drum_live_kit_play_bass_r(); // Drum Kit Event - B Button
-extern void drum_live_kit_play_stub(void); // (STUB)
-extern void drum_live_kit_play_snare_l(); // Drum Kit Event - D-Pad Left
-extern void drum_live_kit_play_snare_r(); // Drum Kit Event - A Button
-extern void drum_live_kit_play_unknown(); // Drum Kit Event - ?
-extern void drum_live_kit_play_tom(); // Drum Kit Event - D-Pad Right
-extern void drum_live_kit_play_hihat(); // Drum Kit Event - D-Pad Up (Hi-Hat)
-extern void drum_live_kit_play_splash(); // Drum Kit Event - L Button
-extern void drum_live_kit_play_crash(); // Drum Kit Event - R Button
+extern void drum_live_kit_play_roll(void);
+extern void drum_live_kit_play_bass_l(void);
+extern void drum_live_kit_play_bass_r(void);
+extern void drum_live_kit_play_stub(void);
+extern void drum_live_kit_play_snare_l(void);
+extern void drum_live_kit_play_snare_r(void);
+extern void drum_live_kit_play_tom_unused(void);
+extern void drum_live_kit_play_tom(void);
+extern void drum_live_kit_play_hihat(void);
+extern void drum_live_kit_play_splash(void);
+extern void drum_live_kit_play_crash(void);
 extern void drum_live_init_gfx3(void); // Graphics Init. 3
 extern void drum_live_init_gfx2(void); // Graphics Init. 2
 extern void drum_live_init_gfx1(void); // Graphics Init. 1
 extern void drum_live_offset_sprite_pos(s16 sprite, u32 performer);
 extern void drum_live_engine_start(u32 version); // Game Engine Start
 extern void drum_live_engine_event_stub(void); // Engine Event 0x0A (STUB)
-// extern ? func_08026640(?);
-extern void func_080268cc(u32 args); // Engine Event 0x00 (?)
+extern void drum_live_set_guitarist_state(u32 id, u32 state);
+extern void drum_live_set_guitarist_next_state(u32 args); // Engine Event 0x00 (Set Guitarist Next State)
 extern void drum_live_update_guitarists(void);
-extern void func_08026968(); // Engine Event 0x01 (?)
+extern void drum_live_set_adjust_mode_tempo(u32 tempo); // Engine Event 0x01 (Adjust Mode)
 extern void drum_live_set_enable_boredom(u32 enable); // Engine Event 0x08 (Enable Boredom Timer)
 extern void drum_live_update_boredom(void);
 extern void drum_live_update_band_monkeys(void);
 extern void drum_live_engine_update(void); // Game Engine Update
 extern void drum_live_set_result_rank(u32 rank);
-extern u32 drum_live_get_result_rank(void);
+extern u32  drum_live_get_result_rank(void);
 extern void drum_live_engine_stop(void); // Game Engine Stop
 extern void drum_live_modify_excitement(struct DrumLiveCue *info, u8_8 coolMultiplier, u8_8 lameMultiplier);
-extern void drum_live_cue_spawn(struct Cue *, struct DrumLiveCue *, u32 type); // Cue - Spawn
+extern void drum_live_cue_spawn(struct Cue *, struct DrumLiveCue *, u32 index); // Cue - Spawn
 extern u32  drum_live_cue_update(struct Cue *, struct DrumLiveCue *, u32 runningTime, u32 duration); // Cue - Update
 extern void drum_live_cue_despawn(struct Cue *, struct DrumLiveCue *); // Cue - Despawn
-extern void func_08026c3c(void);
+extern void drum_live_update_adjust_mode(void);
 extern void drum_live_cue_hit(struct Cue *, struct DrumLiveCue *, u32 pressed, u32 released); // Cue - Hit
 extern void drum_live_cue_barely(struct Cue *, struct DrumLiveCue *, u32 pressed, u32 released); // Cue - Barely
 extern void drum_live_cue_miss(struct Cue *, struct DrumLiveCue *); // Cue - Miss

@@ -11,11 +11,11 @@ script script_drum_live_entry
     rest 24
     rest 24
     load_drum_live_menu
-    enable_play_inputs 1
-    assess_inputs 1
+    enable_play_inputs TRUE
+    assess_inputs TRUE
     call script_drum_live_menu
-    enable_pause 0
-    enable_play_inputs 0
+    enable_pause_menu FALSE
+    enable_play_inputs FALSE
     fade_music_out TO_TEMPO, 48
     fade_screen_out 12, BLACK
     rest 24
@@ -34,47 +34,50 @@ script script_drum_live_menu
     play_music s_studio_bgm_seqData
     rest 24
     drum_live_menu_freeze_scene
+
     run gameplay_get_inter_engine_variable, 0
     switch INT8, FUNCTION_RESULT
-        case 0
+        case ENGINE_VER_DRUM_GIRLS_LIVE
             load_drum_girls_live
             break
-        case 1
+        case ENGINE_VER_DRUM_BOYS_LIVE
             load_drum_boys_live
             break
-        case 2
+        case ENGINE_VER_DRUM_BAND_LIVE
             load_drum_samurai_band_live
             break
     end_switch
-    dml_event09 1
-    dml_event08 0
-    run gameplay_enable_cue_input_overlap, 0
+
+    dml_set_disable_excitement TRUE
+    dml_set_enable_boredom FALSE
+    run gameplay_enable_cue_input_overlap, FALSE
     rest 24
-    enable_pause 1
+    enable_pause_menu TRUE
     run gameplay_get_inter_engine_variable, 0
     switch INT8, FUNCTION_RESULT
-        case 0
+        case ENGINE_VER_DRUM_GIRLS_LIVE
             call script_drum_girls_night_walk
             call script_drum_girls_space_dance
             call script_drum_girls_koi_no_honey_sweet_angel
             break
-        case 1
+        case ENGINE_VER_DRUM_BOYS_LIVE
             call script_drum_boys_clappy_trio
             call script_drum_boys_tap_trial
             call script_drum_boys_wish_kimi_wo_matenakute
             break
-        case 2
+        case ENGINE_VER_DRUM_BAND_LIVE
             call script_drum_samurai_cosmic_dance
             call script_drum_samurai_snappy_trio
             call script_drum_samurai_tap_trial_2
             break
     end_switch
+
     rest 24
     rest 24
     rest 24
     rest 24
-    run gameplay_enable_tutorial, 0
-    enable_pause 0
+    run gameplay_enable_tutorial, FALSE
+    enable_pause_menu FALSE
 return
 
 
@@ -85,7 +88,7 @@ return
 script script_drum_girls_space_dance
     set_tempo 120
     set_music_volume 256
-    mute_music_track MIDI_TRACK_4 | MIDI_TRACK_7
+    mute_music_track (MIDI_TRACK_4 | MIDI_TRACK_7)
     run func_08047f28, 0
     run func_08047f5c, 0
     rest 24
@@ -93,9 +96,9 @@ script script_drum_girls_space_dance
     run func_08047f5c, 0
     rest 24
     rest 24
-    dml_event02 0
-    dml_event03 0xA300
-    dml_event03 0xA301
+    dml_clear_input_def
+    dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
+    dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     run func_08047f5c, 0
     rest 24
     run func_08047f3c, 0
@@ -124,8 +127,8 @@ script script_drum_girls_space_dance
     rest 6
     spawn_cue CUE_LIVE_02
     rest 6
-    dml_event09 0
-    dml_event08 1
+    dml_set_disable_excitement FALSE
+    dml_set_enable_boredom TRUE
     dml_event06 1
     call drum_live_sub_08a7ac80
     call drum_live_sub_08a7a278
@@ -216,22 +219,22 @@ script script_drum_girls_space_dance
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
-    dml_event00 7
+    dml_set_guitarist_next_state 0x3, 1
     call drum_live_sub_08a7aef0
-    dml_event00 19
+    dml_set_guitarist_next_state 0x3, 4
     call drum_live_sub_08a7aef0
-    dml_event00 3
-    call drum_live_sub_08a7aef0
-    call drum_live_sub_08a7aef0
+    dml_set_guitarist_next_state 0x3, 0
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
-    dml_event00 7
     call drum_live_sub_08a7aef0
-    dml_event00 19
     call drum_live_sub_08a7aef0
-    dml_event00 3
+    dml_set_guitarist_next_state 0x3, 1
+    call drum_live_sub_08a7aef0
+    dml_set_guitarist_next_state 0x3, 4
+    call drum_live_sub_08a7aef0
+    dml_set_guitarist_next_state 0x3, 0
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
@@ -274,14 +277,14 @@ script script_drum_girls_space_dance
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
-    dml_event00 7
+    dml_set_guitarist_next_state 0x3, 1
     call drum_live_sub_08a7b2b0
     call drum_live_sub_08a7b2b0
     call drum_live_sub_08a7b2b0
     call drum_live_sub_08a7a950
     dml_event06 1
     call drum_live_sub_08a7a278
-    dml_event00 3
+    dml_set_guitarist_next_state 0x3, 0
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
@@ -295,11 +298,11 @@ script script_drum_girls_space_dance
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7b2b0
     call drum_live_sub_08a7b2b0
-    dml_event00 7
+    dml_set_guitarist_next_state 0x3, 1
     call drum_live_sub_08a7b2b0
     call drum_live_sub_08a7a950
     call drum_live_sub_08a7a278
-    dml_event00 3
+    dml_set_guitarist_next_state 0x3, 0
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
@@ -340,12 +343,12 @@ script script_drum_girls_space_dance
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
-    dml_event09 1
+    dml_set_disable_excitement TRUE
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
-    dml_event08 0
+    dml_set_enable_boredom FALSE
     dml_event07 0
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
@@ -359,9 +362,9 @@ return
 script script_drum_girls_koi_no_honey_sweet_angel
     set_tempo 137
     set_music_volume 210
-    mute_music_track MIDI_TRACK_4 | MIDI_TRACK_5 | MIDI_TRACK_12
+    mute_music_track (MIDI_TRACK_4 | MIDI_TRACK_5 | MIDI_TRACK_12)
     run func_08047f84, 0
-    dml_event00 7
+    dml_set_guitarist_next_state 0x3, 1
     rest 24
     run func_08047fb8, 0
     rest 24
@@ -369,9 +372,9 @@ script script_drum_girls_koi_no_honey_sweet_angel
     run func_08047fb8, 0
     rest 24
     rest 24
-    dml_event02 0
-    dml_event03 0xA300
-    dml_event03 0xA301
+    dml_clear_input_def
+    dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
+    dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     run func_08047fb8, 0
     rest 24
     run func_08047f98, 0
@@ -387,7 +390,7 @@ script script_drum_girls_koi_no_honey_sweet_angel
     rest 6
     spawn_cue CUE_LIVE_02
     rest 6
-    dml_event00 11
+    dml_set_guitarist_next_state 0x3, 2
     run func_08047fb8, 0
     dml_event05 0
     spawn_cue CUE_LIVE_00
@@ -405,17 +408,17 @@ script script_drum_girls_koi_no_honey_sweet_angel
     spawn_cue CUE_LIVE_02
     rest 6
     dml_event06 1
-    dml_event00 3
+    dml_set_guitarist_next_state 0x3, 0
     call drum_live_sub_08a7b448
     call drum_live_sub_08a7b448
     call drum_live_sub_08a7aef0
-    dml_event00 7
+    dml_set_guitarist_next_state 0x3, 1
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7a560
     call drum_live_sub_08a7a278
-    dml_event00 3
-    dml_event09 0
-    dml_event08 1
+    dml_set_guitarist_next_state 0x3, 0
+    dml_set_disable_excitement FALSE
+    dml_set_enable_boredom TRUE
     dml_event06 0
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7a278
@@ -445,13 +448,13 @@ script script_drum_girls_koi_no_honey_sweet_angel
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
-    dml_event00 7
+    dml_set_guitarist_next_state 0x3, 1
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
-    dml_event00 11
+    dml_set_guitarist_next_state 0x3, 2
     call drum_live_sub_08a7ac80
-    dml_event00 3
+    dml_set_guitarist_next_state 0x3, 0
     dml_event06 1
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7a278
@@ -478,14 +481,14 @@ script script_drum_girls_koi_no_honey_sweet_angel
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
-    dml_event00 18
+    dml_set_guitarist_next_state 0x2, 4
     spawn_cue CUE_LIVE_00
     spawn_cue CUE_LIVE_00
     spawn_cue CUE_LIVE_00
     rest 6
     spawn_cue CUE_LIVE_02
     rest 6
-    dml_event00 17
+    dml_set_guitarist_next_state 0x1, 4
     spawn_cue CUE_LIVE_01
     spawn_cue CUE_LIVE_01
     rest 6
@@ -494,7 +497,7 @@ script script_drum_girls_koi_no_honey_sweet_angel
     beat_anim
     rest 0
     call drum_live_sub_08a7a278
-    dml_event00 3
+    dml_set_guitarist_next_state 0x3, 0
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
@@ -509,14 +512,14 @@ script script_drum_girls_koi_no_honey_sweet_angel
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
-    dml_event00 17
+    dml_set_guitarist_next_state 0x1, 4
     spawn_cue CUE_LIVE_00
     spawn_cue CUE_LIVE_00
     spawn_cue CUE_LIVE_00
     rest 6
     spawn_cue CUE_LIVE_02
     rest 6
-    dml_event00 18
+    dml_set_guitarist_next_state 0x2, 4
     spawn_cue CUE_LIVE_01
     spawn_cue CUE_LIVE_01
     rest 6
@@ -525,7 +528,7 @@ script script_drum_girls_koi_no_honey_sweet_angel
     beat_anim
     rest 0
     call drum_live_sub_08a7a278
-    dml_event00 3
+    dml_set_guitarist_next_state 0x3, 0
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
@@ -574,13 +577,13 @@ script script_drum_girls_koi_no_honey_sweet_angel
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
-    dml_event00 7
+    dml_set_guitarist_next_state 0x3, 1
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
-    dml_event00 11
+    dml_set_guitarist_next_state 0x3, 2
     call drum_live_sub_08a7ac80
-    dml_event00 3
+    dml_set_guitarist_next_state 0x3, 0
     dml_event06 1
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
@@ -597,11 +600,11 @@ script script_drum_girls_koi_no_honey_sweet_angel
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
-    dml_event00 7
+    dml_set_guitarist_next_state 0x3, 1
     call drum_live_sub_08a7aef0
-    dml_event00 11
+    dml_set_guitarist_next_state 0x3, 2
     call drum_live_sub_08a7ac80
-    dml_event00 3
+    dml_set_guitarist_next_state 0x3, 0
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
@@ -613,13 +616,13 @@ script script_drum_girls_koi_no_honey_sweet_angel
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
-    dml_event00 7
+    dml_set_guitarist_next_state 0x3, 1
     call drum_live_sub_08a7ac80
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
-    dml_event00 11
+    dml_set_guitarist_next_state 0x3, 2
     call drum_live_sub_08a7a278
-    dml_event00 3
+    dml_set_guitarist_next_state 0x3, 0
     dml_event06 1
     call drum_live_sub_08a7ac80
     call drum_live_sub_08a7a278
@@ -636,11 +639,11 @@ script script_drum_girls_koi_no_honey_sweet_angel
     call drum_live_sub_08a7b2b0
     call drum_live_sub_08a7b2b0
     call drum_live_sub_08a7b2b0
-    dml_event00 7
+    dml_set_guitarist_next_state 0x3, 1
     call drum_live_sub_08a7b2b0
-    dml_event00 11
+    dml_set_guitarist_next_state 0x3, 2
     call drum_live_sub_08a7ac80
-    dml_event00 3
+    dml_set_guitarist_next_state 0x3, 0
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
@@ -656,8 +659,8 @@ script script_drum_girls_koi_no_honey_sweet_angel
     call drum_live_sub_08a7b2b0
     call drum_live_sub_08a7b2b0
     call drum_live_sub_08a7b2b0
-    dml_event00 7
-    dml_event09 1
+    dml_set_guitarist_next_state 0x3, 1
+    dml_set_disable_excitement TRUE
     call drum_live_sub_08a7b028
     call drum_live_sub_08a7b028
     call drum_live_sub_08a7b028
@@ -666,13 +669,13 @@ script script_drum_girls_koi_no_honey_sweet_angel
     call drum_live_sub_08a7b028
     call drum_live_sub_08a7b028
     call drum_live_sub_08a7b028
-    dml_event00 11
+    dml_set_guitarist_next_state 0x3, 2
     dml_event06 0
     call drum_live_sub_08a7ac80
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
-    dml_event08 0
+    dml_set_enable_boredom FALSE
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
@@ -687,13 +690,13 @@ return
 script script_drum_girls_night_walk
     set_tempo 127
     set_music_volume 200
-    mute_music_track MIDI_TRACK_3 | MIDI_TRACK_6
-    dml_event02 0
-    dml_event03 0xA300
-    dml_event03 0xA301
+    mute_music_track (MIDI_TRACK_3 | MIDI_TRACK_6)
+    dml_clear_input_def
+    dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
+    dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     run func_08047fe0, 0
-    dml_event09 1
-    dml_event08 0
+    dml_set_disable_excitement TRUE
+    dml_set_enable_boredom FALSE
     rest 24
     rest 24
     rest 24
@@ -722,8 +725,8 @@ script script_drum_girls_night_walk
     call drum_live_sub_08a7a278
     run func_08047ff4, 0
     call drum_live_sub_08a7a278
-    dml_event09 0
-    dml_event08 1
+    dml_set_disable_excitement FALSE
+    dml_set_enable_boredom TRUE
     dml_event06 0
     call drum_live_sub_08a7ac80
     call drum_live_sub_08a7a278
@@ -860,11 +863,11 @@ script script_drum_girls_night_walk
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
-    dml_event00 7
+    dml_set_guitarist_next_state 0x3, 1
     call drum_live_sub_08a7aef0
-    dml_event00 11
+    dml_set_guitarist_next_state 0x3, 2
     call drum_live_sub_08a7aef0
-    dml_event00 3
+    dml_set_guitarist_next_state 0x3, 0
     dml_event06 0
     call drum_live_sub_08a7ac80
     call drum_live_sub_08a7a278
@@ -894,12 +897,12 @@ script script_drum_girls_night_walk
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
-    dml_event09 1
+    dml_set_disable_excitement TRUE
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
-    dml_event08 0
+    dml_set_enable_boredom FALSE
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
@@ -915,15 +918,15 @@ return
 script script_drum_boys_clappy_trio
     set_tempo 118
     set_music_volume 256
-    mute_music_track MIDI_TRACK_2 | MIDI_TRACK_3
+    mute_music_track (MIDI_TRACK_2 | MIDI_TRACK_3)
     run func_0804803c, 0
     rest 24
     rest 24
     rest 24
     rest 24
-    dml_event02 0
-    dml_event03 0xA300
-    dml_event03 0xA301
+    dml_clear_input_def
+    dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
+    dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     run func_08048070, 0
     rest 24
     run func_08048070, 0
@@ -932,7 +935,7 @@ script script_drum_boys_clappy_trio
     rest 24
     run func_08048070, 0
     run func_08048050, 0
-    dml_event09 0
+    dml_set_disable_excitement FALSE
     dml_event06 1
     dml_event05 0
     spawn_cue CUE_LIVE_00
@@ -957,7 +960,7 @@ script script_drum_boys_clappy_trio
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
-    dml_event08 1
+    dml_set_enable_boredom TRUE
     call drum_live_sub_08a7ac80
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
@@ -1093,7 +1096,7 @@ script script_drum_boys_clappy_trio
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
-    dml_event09 1
+    dml_set_disable_excitement TRUE
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
@@ -1114,7 +1117,7 @@ script script_drum_boys_clappy_trio
     rest 6
     run scene_stop_music, 0
     rest 6
-    dml_event08 0
+    dml_set_enable_boredom FALSE
     rest 24
     rest 24
     rest 24
@@ -1125,15 +1128,15 @@ return
 script script_drum_boys_tap_trial
     set_tempo 124
     set_music_volume 200
-    mute_music_track MIDI_TRACK_6 | MIDI_TRACK_7 | MIDI_TRACK_9
+    mute_music_track (MIDI_TRACK_6 | MIDI_TRACK_7 | MIDI_TRACK_9)
     run func_08048098, 0
     rest 24
     rest 24
     rest 24
     rest 24
-    dml_event02 0
-    dml_event03 0xA300
-    dml_event03 0xA301
+    dml_clear_input_def
+    dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
+    dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     run func_080480cc, 0
     rest 24
     run func_080480cc, 0
@@ -1142,12 +1145,12 @@ script script_drum_boys_tap_trial
     rest 24
     run func_080480cc, 0
     run func_080480ac, 0
-    dml_event09 0
+    dml_set_disable_excitement FALSE
     dml_event06 1
-    dml_event00 11
+    dml_set_guitarist_next_state 0x3, 2
     call drum_live_sub_08a7ac80
     play_music s_tapdance_bgm_seqData
-    dml_event00 3
+    dml_set_guitarist_next_state 0x3, 0
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
@@ -1163,7 +1166,7 @@ script script_drum_boys_tap_trial
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
-    dml_event08 1
+    dml_set_enable_boredom TRUE
     dml_event06 0
     call drum_live_sub_08a7ac80
     call drum_live_sub_08a7a278
@@ -1235,7 +1238,7 @@ script script_drum_boys_tap_trial
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
-    dml_event00 7
+    dml_set_guitarist_next_state 0x3, 1
     call drum_live_sub_08a7aef0
     set_tempo 139
     run func_08048098, 0
@@ -1245,11 +1248,11 @@ script script_drum_boys_tap_trial
     run func_080480cc, 96
     call drum_live_sub_08a7a278
     run func_080480cc, 96
-    dml_event00 11
+    dml_set_guitarist_next_state 0x3, 2
     dml_event06 1
     call drum_live_sub_08a7ac80
     run func_080480ac, 0
-    dml_event00 3
+    dml_set_guitarist_next_state 0x3, 0
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
@@ -1344,12 +1347,12 @@ script script_drum_boys_tap_trial
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
-    dml_event00 7
+    dml_set_guitarist_next_state 0x3, 1
     call drum_live_sub_08a7aef0
     dml_event06 0
-    dml_event00 11
+    dml_set_guitarist_next_state 0x3, 2
     call drum_live_sub_08a7ac80
-    dml_event00 3
+    dml_set_guitarist_next_state 0x3, 0
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
@@ -1378,19 +1381,19 @@ script script_drum_boys_tap_trial
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
-    dml_event09 1
+    dml_set_disable_excitement TRUE
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
-    dml_event00 7
+    dml_set_guitarist_next_state 0x3, 1
     call drum_live_sub_08a7a278
     dml_event06 0
-    dml_event00 11
+    dml_set_guitarist_next_state 0x3, 2
     call drum_live_sub_08a7ac80
-    dml_event08 0
+    dml_set_enable_boredom FALSE
     rest 24
     rest 24
     rest 24
@@ -1401,7 +1404,7 @@ return
 script script_drum_boys_wish_kimi_wo_matenakute
     set_tempo 204
     set_music_volume 200
-    mute_music_track MIDI_TRACK_5 | MIDI_TRACK_6
+    mute_music_track (MIDI_TRACK_5 | MIDI_TRACK_6)
     run func_080480f4, 0
     rest 24
     rest 24
@@ -1413,9 +1416,9 @@ script script_drum_boys_wish_kimi_wo_matenakute
     run func_08048128, 0
     rest 24
     rest 24
-    dml_event02 0
-    dml_event03 0xA300
-    dml_event03 0xA301
+    dml_clear_input_def
+    dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
+    dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     run func_08048128, 0
     call drum_live_sub_08a7a368
     run func_08048128, 0
@@ -1423,9 +1426,9 @@ script script_drum_boys_wish_kimi_wo_matenakute
     run func_08048128, 0
     call drum_live_sub_08a7a368
     run func_08048128, 0
-    dml_event09 0
+    dml_set_disable_excitement FALSE
     dml_event06 1
-    dml_event00 7
+    dml_set_guitarist_next_state 0x3, 1
     call drum_live_sub_08a7ac80
     play_music s_wish_bgm_seqData
     call drum_live_sub_08a7a368
@@ -1442,9 +1445,9 @@ script script_drum_boys_wish_kimi_wo_matenakute
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a368
     call drum_live_sub_08a7a278
-    dml_event00 19
+    dml_set_guitarist_next_state 0x3, 4
     call drum_live_sub_08a7a368
-    dml_event00 3
+    dml_set_guitarist_next_state 0x3, 0
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a368
     call drum_live_sub_08a7a278
@@ -1502,9 +1505,9 @@ script script_drum_boys_wish_kimi_wo_matenakute
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a368
     run func_08048108, 0
-    dml_event08 1
+    dml_set_enable_boredom TRUE
     dml_event06 1
-    dml_event00 7
+    dml_set_guitarist_next_state 0x3, 1
     call drum_live_sub_08a7b028
     call drum_live_sub_08a7b028
     call drum_live_sub_08a7b028
@@ -1513,9 +1516,9 @@ script script_drum_boys_wish_kimi_wo_matenakute
     call drum_live_sub_08a7b028
     call drum_live_sub_08a7b028
     call drum_live_sub_08a7b028
-    dml_event00 11
+    dml_set_guitarist_next_state 0x3, 2
     call drum_live_sub_08a7ac80
-    dml_event00 3
+    dml_set_guitarist_next_state 0x3, 0
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
@@ -1613,7 +1616,7 @@ script script_drum_boys_wish_kimi_wo_matenakute
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     dml_event06 1
-    dml_event00 5
+    dml_set_guitarist_next_state 0x1, 1
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
@@ -1622,7 +1625,7 @@ script script_drum_boys_wish_kimi_wo_matenakute
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7aef0
-    dml_event00 6
+    dml_set_guitarist_next_state 0x2, 1
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
@@ -1630,15 +1633,15 @@ script script_drum_boys_wish_kimi_wo_matenakute
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
-    dml_event00 17
+    dml_set_guitarist_next_state 0x1, 4
     call drum_live_sub_08a7aef0
-    dml_event00 1
+    dml_set_guitarist_next_state 0x1, 0
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7a278
-    dml_event00 18
+    dml_set_guitarist_next_state 0x2, 4
     call drum_live_sub_08a7aef0
-    dml_event00 2
+    dml_set_guitarist_next_state 0x2, 0
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7a278
@@ -1682,13 +1685,13 @@ script script_drum_boys_wish_kimi_wo_matenakute
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
-    dml_event00 7
+    dml_set_guitarist_next_state 0x3, 1
     call drum_live_sub_08a7aef0
     dml_event06 1
     call drum_live_sub_08a7a560
     dml_event06 0
     call drum_live_sub_08a7aef0
-    dml_event00 3
+    dml_set_guitarist_next_state 0x3, 0
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
@@ -1751,13 +1754,13 @@ script script_drum_boys_wish_kimi_wo_matenakute
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
-    dml_event00 7
+    dml_set_guitarist_next_state 0x3, 1
     call drum_live_sub_08a7aef0
     dml_event06 1
     call drum_live_sub_08a7a560
     dml_event06 0
     call drum_live_sub_08a7aef0
-    dml_event00 3
+    dml_set_guitarist_next_state 0x3, 0
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
@@ -1786,7 +1789,7 @@ script script_drum_boys_wish_kimi_wo_matenakute
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
     dml_event06 1
-    dml_event00 7
+    dml_set_guitarist_next_state 0x3, 1
     call drum_live_sub_08a7ac80
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
@@ -1794,9 +1797,9 @@ script script_drum_boys_wish_kimi_wo_matenakute
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
-    dml_event00 19
+    dml_set_guitarist_next_state 0x3, 4
     call drum_live_sub_08a7aef0
-    dml_event00 3
+    dml_set_guitarist_next_state 0x3, 0
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
@@ -1813,7 +1816,7 @@ script script_drum_boys_wish_kimi_wo_matenakute
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
-    dml_event09 1
+    dml_set_disable_excitement TRUE
     call drum_live_sub_08a7ac80
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
@@ -1825,7 +1828,7 @@ script script_drum_boys_wish_kimi_wo_matenakute
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7b190
     call drum_live_sub_08a7a278
-    dml_event00 7
+    dml_set_guitarist_next_state 0x3, 1
     call drum_live_sub_08a7ac80
     rest 24
     rest 24
@@ -1840,9 +1843,9 @@ script script_drum_boys_wish_kimi_wo_matenakute
     rest 24
     run func_08048128, 80
     dml_event06 0
-    dml_event00 11
+    dml_set_guitarist_next_state 0x3, 2
     call drum_live_sub_08a7ac80
-    dml_event08 0
+    dml_set_enable_boredom FALSE
     rest 24
     rest 24
     rest 24
@@ -1857,7 +1860,7 @@ return
 script script_drum_samurai_cosmic_dance
     set_tempo 135
     set_music_volume 230
-    mute_music_track MIDI_TRACK_6 | MIDI_TRACK_8 | MIDI_TRACK_9
+    mute_music_track (MIDI_TRACK_6 | MIDI_TRACK_8 | MIDI_TRACK_9)
     run func_08048150, 0
     rest 24
     rest 24
@@ -1874,9 +1877,9 @@ script script_drum_samurai_cosmic_dance
     run func_08048184, 0
     rest 24
     run func_08048184, 0
-    dml_event02 0
-    dml_event03 0xA300
-    dml_event03 0xA301
+    dml_clear_input_def
+    dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
+    dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     spawn_cue CUE_LIVE_00
     spawn_cue CUE_LIVE_00
     spawn_cue CUE_LIVE_00
@@ -1889,7 +1892,7 @@ script script_drum_samurai_cosmic_dance
     dml_event05 0
     spawn_cue CUE_LIVE_01
     rest 8
-    dml_event09 0
+    dml_set_disable_excitement FALSE
     run func_08048164, 0
     dml_event06 1
     call drum_live_sub_08a7b7a8
@@ -1908,7 +1911,7 @@ script script_drum_samurai_cosmic_dance
     call drum_live_sub_08a7b940
     call drum_live_sub_08a7b7a8
     call drum_live_sub_08a7b7a8
-    dml_event08 1
+    dml_set_enable_boredom TRUE
     dml_event06 0
     call drum_live_sub_08a7b7a8
     call drum_live_sub_08a7b7a8
@@ -2073,14 +2076,14 @@ script script_drum_samurai_cosmic_dance
     call drum_live_sub_08a7b7a8
     call drum_live_sub_08a7b7a8
     call drum_live_sub_08a7c060
-    dml_event09 1
+    dml_set_disable_excitement TRUE
     call drum_live_sub_08a7b7a8
     call drum_live_sub_08a7b7a8
     call drum_live_sub_08a7b7a8
     call drum_live_sub_08a7b7a8
     call drum_live_sub_08a7bdf0
     call drum_live_sub_08a7b940
-    dml_event08 0
+    dml_set_enable_boredom FALSE
     rest 24
     rest 24
     rest 24
@@ -2095,7 +2098,7 @@ return
 script script_drum_samurai_snappy_trio
     set_tempo 108
     set_music_volume 230
-    mute_music_track MIDI_TRACK_4 | MIDI_TRACK_5 | MIDI_TRACK_6
+    mute_music_track (MIDI_TRACK_4 | MIDI_TRACK_5 | MIDI_TRACK_6)
     run func_080481ac, 0
     rest 24
     rest 24
@@ -2108,10 +2111,10 @@ script script_drum_samurai_snappy_trio
     run func_080481e0, 0
     rest 24
     run func_080481e0, 0
-    dml_event02 0
-    dml_event03 0xA300
-    dml_event03 0xA301
-    dml_event09 0
+    dml_clear_input_def
+    dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
+    dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
+    dml_set_disable_excitement FALSE
     call drum_live_sub_08a7c738
     run func_080481c0, 0
     play_music s_tebyoushi_dexy_bgm_seqData
@@ -2122,7 +2125,7 @@ script script_drum_samurai_snappy_trio
     call drum_live_sub_08a7c2d0
     call drum_live_sub_08a7c2d0
     call drum_live_sub_08a7c2d0
-    dml_event08 1
+    dml_set_enable_boredom TRUE
     dml_event06 0
     call drum_live_sub_08a7c738
     call drum_live_sub_08a7c2d0
@@ -2229,7 +2232,7 @@ script script_drum_samurai_snappy_trio
     call drum_live_sub_08a7c9a8
     call drum_live_sub_08a7c2d0
     dml_event06 0
-    dml_event09 1
+    dml_set_disable_excitement TRUE
     call drum_live_sub_08a7c738
     call drum_live_sub_08a7c2d0
     call drum_live_sub_08a7c2d0
@@ -2240,7 +2243,7 @@ script script_drum_samurai_snappy_trio
     call drum_live_sub_08a7c3c0
     dml_event06 0
     call drum_live_sub_08a7c738
-    dml_event08 0
+    dml_set_enable_boredom FALSE
     rest 24
     rest 24
     rest 24
@@ -2255,7 +2258,7 @@ return
 script script_drum_samurai_tap_trial_2
     set_tempo 165
     set_music_volume 230
-    mute_music_track MIDI_TRACK_3 | MIDI_TRACK_4
+    mute_music_track (MIDI_TRACK_3 | MIDI_TRACK_4)
     run func_08048208, 0
     rest 24
     rest 24
@@ -2268,14 +2271,14 @@ script script_drum_samurai_tap_trial_2
     run func_0804823c, 0
     rest 24
     run func_0804823c, 0
-    dml_event02 0
-    dml_event03 0xA300
-    dml_event03 0xA301
+    dml_clear_input_def
+    dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
+    dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_event06 1
     call drum_live_sub_08a7adb8
     run func_0804821c, 0
     play_music s_tapdance_ska_bgm_seqData
-    dml_event09 0
+    dml_set_disable_excitement FALSE
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
@@ -2291,7 +2294,7 @@ script script_drum_samurai_tap_trial_2
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
     call drum_live_sub_08a7a278
-    dml_event08 1
+    dml_set_enable_boredom TRUE
     dml_event06 0
     call drum_live_sub_08a7ac80
     call drum_live_sub_08a7a278
@@ -2490,7 +2493,7 @@ script script_drum_samurai_tap_trial_2
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
-    dml_event09 1
+    dml_set_disable_excitement TRUE
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
     call drum_live_sub_08a7aef0
@@ -2504,7 +2507,7 @@ script script_drum_samurai_tap_trial_2
     call drum_live_sub_08a7b028
     dml_event06 0
     call drum_live_sub_08a7ac80
-    dml_event08 0
+    dml_set_enable_boredom FALSE
     rest 24
     rest 24
     rest 24

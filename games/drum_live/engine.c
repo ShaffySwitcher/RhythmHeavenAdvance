@@ -115,7 +115,7 @@ Palette *drum_live_bg_palettes[] = {
 };
 
 // [D_089e06b0] Bit Masks/Fields
-u16 D_089e06b0[] = {
+u16 drum_live_color_masks[] = {
     /* 0x00 */ 0x0000,
     /* 0x01 */ 0x7C00,
     /* 0x02 */ 0x001F,
@@ -126,12 +126,12 @@ u16 D_089e06b0[] = {
     /* 0x07 */ 0x7FFF
 };
 
-// [D_089e06c0] ?
-u8 D_089e06c0[] = {
-    /* 0x00 */ 1,
-    /* 0x01 */ 2,
-    /* 0x02 */ 4,
-    /* 0x03 */ 6
+// [D_089e06c0] Flashing Light BRG Targets
+u8 drum_live_brg_targets[] = {
+    /* 0x00 */ (1 << 0),
+    /* 0x01 */ (1 << 1),
+    /* 0x02 */ (1 << 2),
+    /* 0x03 */ (1 << 2) | (1 << 1)
 };
 
 // [D_089e06c4] ?
@@ -332,7 +332,7 @@ struct GraphicsTable *drum_live_gfx_tables[] = {
 };
 
 // [D_089e0ab0] ?
-struct Vector2 D_089e0ab0[3][3] = {
+struct Vector2 drum_live_performer_sprite_offsets[3][3] = {
     /* DRUM_GIRLS_LIVE */ {
         /* DRUMMER   */ {   0,   0 },
         /* BASSIST   */ {   0,   0 },
@@ -578,22 +578,22 @@ EngineEvent drum_live_common_events[] = {
 
 // [D_089e0c94] Engine Events
 EngineEvent drum_live_engine_events[] = {
-    /* 0x00 */ func_080268cc,
-    /* 0x01 */ func_08026968,
+    /* 0x00 */ drum_live_set_guitarist_next_state,
+    /* 0x01 */ drum_live_set_adjust_mode_tempo,
     /* 0x02 */ drum_live_script_clear_input_def,
     /* 0x03 */ drum_live_script_define_cool_inputs,
     /* 0x04 */ drum_live_script_define_lame_inputs,
-    /* 0x05 */ func_08025748,
-    /* 0x06 */ func_08025a2c,
+    /* 0x05 */ drum_live_set_next_flash_type,
+    /* 0x06 */ drum_live_set_next_beat_light_style,
     /* 0x07 */ drum_live_script_play_applause,
     /* 0x08 */ drum_live_set_enable_boredom,
-    /* 0x09 */ func_08025bcc,
+    /* 0x09 */ drum_live_set_disable_excitement,
     /* 0x0A */ drum_live_engine_event_stub
 };
 
 // [D_089e0cc0] Drum LIVE Game Engine
 struct GameEngine drum_live_engine = {
-    /* Size in Memory */ 0x1820, // sizeof(struct DrumLiveEngineData)
+    /* Size in Memory */ sizeof(struct DrumLiveEngineData),
     /* Start Engine   */ drum_live_engine_start,
     /* Update Engine  */ drum_live_engine_update,
     /* Stop Engine    */ drum_live_engine_stop,
