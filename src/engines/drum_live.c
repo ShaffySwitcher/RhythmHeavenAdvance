@@ -2,8 +2,6 @@
 #include "src/scenes/gameplay.h"
 #include "src/scenes/results.h"
 
-asm(".include \"include/gba.inc\""); // Temporary
-
 // For readability.
 #define gDrumLive ((struct DrumLiveEngineData *)gCurrentEngineData)
 #define CROWD_BG_MAP_BASE (void *)(VRAMBase + 0xE000)
@@ -20,55 +18,244 @@ struct Animation *drum_live_get_anim(u32 anim) {
 }
 
 
-// Init. Lights
-#include "asm/engines/drumming_lessons/asm_08025248.s"
+// Init. Lighting
+void drum_live_init_lighting(void) {
+    u32 i;
+
+    gDrumLive->nextFlashType = -1;
+
+    for (i = 0; i < 4; i++) {
+        gDrumLive->flashTypeCooldown[i] = 0;
+    }
+
+    gDrumLive->currentLightStyle = 0;
+    gDrumLive->timeUntilNextLightStyle = 0;
+    dma3_set(drum_live_obj_palettes[gDrumLive->version][0], gDrumLive->objPalBuf1, 0x80, 0x20, 0x200);
+    dma3_set(drum_live_bg_palettes[gDrumLive->version][0], gDrumLive->bgPalBuf1, 0x80, 0x20, 0x200);
+    dma3_set(drum_live_obj_palettes[gDrumLive->version][0], gDrumLive->objPalBuf3, 0x80, 0x20, 0x200);
+    dma3_set(drum_live_bg_palettes[gDrumLive->version][0], gDrumLive->bgPalBuf3, 0x80, 0x20, 0x200);
+    dma3_set(drum_live_obj_palettes[gDrumLive->version][0], gDrumLive->objPalBuf4, 0x80, 0x20, 0x200);
+    dma3_set(drum_live_bg_palettes[gDrumLive->version][0], gDrumLive->bgPalBuf4, 0x80, 0x20, 0x200);
+    func_08001e4c(0x08, 4, 0x294A, drum_live_obj_palettes[gDrumLive->version][0], gDrumLive->objPalBuf2);
+    func_08001e4c(0x08, 4, 0x7FFF, drum_live_bg_palettes[gDrumLive->version][0], gDrumLive->bgPalBuf2);
+
+    gDrumLive->totalActiveLights = 0;
+
+    for (i = 0; i < 4; i++) {
+        gDrumLive->lightFlashes[i] = func_0804d160(D_03005380, drum_live_get_anim(LIVE_ANIM_LIGHT_FLASH), 0, 12 + (i * 72), 21, 0x700, 1, 0, 0x8002);
+        func_0804d7b4(D_03005380, gDrumLive->lightFlashes[i], 0x04);
+    }
+
+    gDrumLive->nextLightFlash = 2;
+    D_03004b10.BLDMOD = 0x02BF;
+    D_03004b10.COLEY = 0;
+    D_03004b10.COLEV = 0x1008;
+    gDrumLive->brightnessLevel = INT_TO_FIXED(0.0);
+    gDrumLive->brightnessInc = INT_TO_FIXED(-0.5);
+}
 
 
-// Update Lights
-#include "asm/engines/drumming_lessons/asm_08025460.s"
+// Update Lighting
+void drum_live_update_lighting(void) {
+    u32 i;
+
+    for (i = 0; i < 4; i++) {
+        if (gDrumLive->flashTypeCooldown[i] != 0) {
+            gDrumLive->flashTypeCooldown[i]--;
+        }
+    }
+
+    if (gDrumLive->totalActiveLights == 0) {
+        dma3_set(gDrumLive->bgPalBuf1, D_03004b10.bgPalette, 0x80, 0x20, 0x200);
+        dma3_set(gDrumLive->objPalBuf1, D_03004b10.objPalette, 0x80, 0x20, 0x200);
+    }
+
+    if (gDrumLive->timeUntilNextLightStyle != 0) {
+        if (--gDrumLive->timeUntilNextLightStyle == 0) {
+            gDrumLive->currentLightStyle = gDrumLive->nextLightStyle;
+        }
+    }
+
+    gDrumLive->brightnessLevel = clamp_int32(gDrumLive->brightnessLevel + gDrumLive->brightnessInc, 0, INT_TO_FIXED(16.0));
+    D_03004b10.COLEY = FIXED_TO_INT(gDrumLive->brightnessLevel);
+}
 
 
 // Light Callback Function
-void func_08025538() {
+void drum_live_light_flash_callback(void) {
     func_0800c604(0);
-    gDrumLive->unk13F9--;
+    gDrumLive->totalActiveLights--;
 }
 
 
 // Play Applause
-#include "asm/engines/drumming_lessons/asm_0802555c.s"
+void drum_live_play_applause(void) {
+    struct SoundPlayer *soundPlayer;
+    u32 crowd = clamp_int32(FIXED_TO_INT(gDrumLive->excitementFactor), 0, 4);
 
-
-// ?
-#include "asm/engines/drumming_lessons/asm_080255f8.s"
-
-
-// Engine Event 0x05 (?)
-void func_08025748(u32 arg) {
-    gDrumLive->unk13FA = arg;
+    switch (crowd) {
+        case 0:
+            break;
+        case 1:
+            soundPlayer = play_sound_in_player_w_pitch_volume(1, &s_hakushu_solo_seqData, 0x50, 0);
+            set_soundplayer_speed(soundPlayer, INT_TO_FIXED(1.0));
+            break;
+        case 2:
+            soundPlayer = play_sound_in_player_w_pitch_volume(1, &s_warai_little_seqData, 0x50, 0);
+            set_soundplayer_speed(soundPlayer, INT_TO_FIXED(1.0));
+            break;
+        case 3:
+            soundPlayer = play_sound_in_player_w_pitch_volume(1, &s_kansei_solo_seqData, 0x50, 0);
+            set_soundplayer_speed(soundPlayer, INT_TO_FIXED(0.75));
+            break;
+        case 4:
+            soundPlayer = play_sound_in_player_w_pitch_volume(1, &s_kansei_seqData, 0x60, 0);
+            set_soundplayer_speed(soundPlayer, INT_TO_FIXED(0.5));
+            break;
+    }
 }
 
 
-// ?
-#include "asm/engines/drumming_lessons/asm_0802575c.s"
+// On-Hit Light Flash and Crowd Cheer
+void drum_live_flash_big_lights(s32 flashType) {
+    s32 task;
+    s16 sprite;
+    u32 i;
+
+    if ((flashType < 0) || (gDrumLive->flashTypeCooldown[flashType] != 0)) {
+        return;
+    }
+
+    gDrumLive->flashTypeCooldown[flashType] = 10;
+
+    switch (flashType) {
+        case 0:
+            gDrumLive->totalActiveLights++;
+            func_08001fe0(get_current_mem_id(), ticks_to_frames(72), 4, gDrumLive->objPalBuf2, gDrumLive->objPalBuf1, D_03004b10.objPalette[0]);
+            task = func_08001fe0(get_current_mem_id(), ticks_to_frames(72), 4, gDrumLive->bgPalBuf2, gDrumLive->bgPalBuf1, D_03004b10.bgPalette[0]);
+            run_func_after_task(task, drum_live_light_flash_callback, 0);
+            drum_live_play_applause();
+            break;
+
+        case 1:
+            gDrumLive->totalActiveLights++;
+            func_08001fe0(get_current_mem_id(), ticks_to_frames(72), 4, gDrumLive->objPalBuf2, gDrumLive->objPalBuf1, D_03004b10.objPalette[0]);
+            task = func_08001fe0(get_current_mem_id(), ticks_to_frames(72), 4, gDrumLive->bgPalBuf2, gDrumLive->bgPalBuf1, D_03004b10.bgPalette[0]);
+            run_func_after_task(task, drum_live_light_flash_callback, 0);
+            drum_live_play_applause();
+            break;
+
+        case 2:
+            drum_live_play_applause();
+            break;
+
+        case 3:
+            gDrumLive->brightnessInc = -0x30;
+            gDrumLive->brightnessLevel = INT_TO_FIXED(5.0);
+            sprite = gDrumLive->lightFlashes[gDrumLive->nextLightFlash];
+            func_0804d770(D_03005380, sprite, TRUE);
+            func_0804cebc(D_03005380, sprite, 0);
+            gDrumLive->nextLightFlash = (gDrumLive->nextLightFlash + 1) & 3;
+            break;
+    }
+}
 
 
-// ?
-#include "asm/engines/drumming_lessons/asm_080257b8.s"
+// Engine Event 0x05 (Set Next Flash Type)
+void drum_live_set_next_flash_type(s32 flashType) {
+    gDrumLive->nextFlashType = flashType;
+}
 
 
-// ?
-#include "asm/engines/drumming_lessons/asm_08025848.s"
+// Bitwise AND Palette (Unused)
+void drum_live_and_palette(const u16 *src, u16 *dest, u32 totalPal, u32 maskIndex) {
+    u16 mask;
+    u32 i;
+
+    mask = drum_live_color_masks[maskIndex];
+    totalPal *= 2;
+
+    for (i = 0; i < totalPal; i++) {
+        dest[0] = src[0] & mask;
+        dest[1] = src[1] & mask;
+        dest[2] = src[2] & mask;
+        dest[3] = src[3] & mask;
+        dest[4] = src[4] & mask;
+        dest[5] = src[5] & mask;
+        dest[6] = src[6] & mask;
+        dest[7] = src[7] & mask;
+        dest += 8;
+        src += 8;
+    }
+}
 
 
-// ?
-#include "asm/engines/drumming_lessons/asm_080258c0.s"
+// Multiply Palette
+void drum_live_multiply_palette(const u16 *src, u16 *dest, u32 totalPal, u32 brgTargets, u32 mul) {
+    u32 blueMul, redMul, greenMul;
+    u32 blueVal, redVal, greenVal;
+    u32 totalColors;
+    u32 i;
+
+    // 'mul' is a 5-bit fixed-point integer.
+    blueMul = (brgTargets & 1) ? 0x20 : mul;
+    redMul = ((brgTargets >> 1) & 1) ? 0x20 : mul;
+    greenMul = ((brgTargets >> 2) & 1) ? 0x20 : mul;
+    totalColors = totalPal * 16;
+
+    for (i = 0; i < totalColors; i++) {
+        u32 color = *src++;
+
+        blueVal = (color >> 10) & 0x1F;
+        redVal = (color >> 0) & 0x1F;
+        greenVal = (color >> 5) & 0x1F;
+        blueVal = (blueVal * blueMul) >> 5;
+        redVal = (redVal * redMul) >> 5;
+        greenVal = (greenVal * greenMul) >> 5;
+
+        *dest++ = ((blueVal << 10) | redVal | (greenVal << 5));
+    }
+}
 
 
-// Engine Event 0x06 (?)
-void func_08025a2c(u32 arg) {
-    gDrumLive->unk1415 = arg;
-    gDrumLive->unk1416 = ticks_to_frames(20);
+// Update Rainbow Lighting
+void drum_live_update_rainbow_lights(void) {
+    u32 brgTargets;
+
+    gDrumLive->nextLightBRG = (gDrumLive->nextLightBRG + 1) & 3;
+    brgTargets = drum_live_brg_targets[gDrumLive->nextLightBRG];
+    drum_live_multiply_palette(drum_live_obj_palettes[gDrumLive->version][0], gDrumLive->objPalBuf4, 4, brgTargets, 0x12);
+    drum_live_multiply_palette(drum_live_bg_palettes[gDrumLive->version][0], gDrumLive->bgPalBuf4, 4, brgTargets, 0x1A);
+}
+
+
+// Lighting Beat Animation
+void drum_live_flash_beat_lights(void) {
+    dma3_set(gDrumLive->objPalBuf4, gDrumLive->objPalBuf3, 0x80, 0x20, 0x200);
+    dma3_set(gDrumLive->bgPalBuf4, gDrumLive->bgPalBuf3, 0x80, 0x20, 0x200);
+
+    switch (gDrumLive->currentLightStyle) {
+        case 0:
+            dma3_set(drum_live_obj_palettes[gDrumLive->version], gDrumLive->objPalBuf4, 0x80, 0x20, 0x200);
+            dma3_set(drum_live_bg_palettes[gDrumLive->version], gDrumLive->bgPalBuf4, 0x80, 0x20, 0x200);
+            break;
+
+        case 1:
+            drum_live_update_rainbow_lights();
+            break;
+    }
+
+    func_08001ddc(0x10, 4, gDrumLive->objPalBuf3, gDrumLive->objPalBuf4, gDrumLive->objPalBuf3);
+    func_08001ddc(0x10, 4, gDrumLive->bgPalBuf3, gDrumLive->bgPalBuf4, gDrumLive->bgPalBuf3);
+    func_08001fe0(get_current_mem_id(), ticks_to_frames(4), 4, gDrumLive->objPalBuf3, gDrumLive->objPalBuf4, gDrumLive->objPalBuf1);
+    func_08001fe0(get_current_mem_id(), ticks_to_frames(4), 4, gDrumLive->bgPalBuf3, gDrumLive->bgPalBuf4, gDrumLive->bgPalBuf1);
+}
+
+
+// Engine Event 0x06 (Set Next Light Style)
+void drum_live_set_next_beat_light_style(u32 style) {
+    gDrumLive->nextLightStyle = style;
+    gDrumLive->timeUntilNextLightStyle = ticks_to_frames(20);
 }
 
 
@@ -119,8 +306,22 @@ void drum_live_script_define_lame_inputs(u32 args) {
 }
 
 
-// ?
-#include "asm/engines/drumming_lessons/asm_08025afc.s"
+// Update Excitement for Inputs (Unused)
+void drum_live_modify_excitement_old(u32 index, u32 keys) {
+    if (gDrumLive->excitementDisabled) {
+        return;
+    }
+
+    if (gDrumLive->coolInputs[index] & keys) {
+        gDrumLive->excitementFactor += gDrumLive->excitementBaseInc;
+    }
+
+    if (gDrumLive->lameInputs[index] & keys) {
+        gDrumLive->excitementFactor -= gDrumLive->excitementBaseDec;
+    }
+
+    gDrumLive->excitementFactor = clamp_int32(gDrumLive->excitementFactor, -0x100, 0x500);
+}
 
 
 // Reset Excitement Factor
@@ -128,14 +329,14 @@ void drum_live_reset_excitement(void) {
     gDrumLive->excitementFactor = 0x1E0;
     gDrumLive->excitementBaseInc = 0x10;
     gDrumLive->excitementBaseDec = 0x10;
-    gDrumLive->unk13F8 = 0;
+    gDrumLive->excitementDisabled = FALSE;
     drum_live_clear_input_def();
 }
 
 
-// Engine Event 0x09 (?)
-void func_08025bcc(u32 arg) {
-    gDrumLive->unk13F8 = arg;
+// Engine Event 0x09 (Set Disable Excitement)
+void drum_live_set_disable_excitement(u32 disable) {
+    gDrumLive->excitementDisabled = disable;
 }
 
 
@@ -171,12 +372,12 @@ void drum_live_set_crowd_and_rank(u32 excitement) {
 
 
 // Drum Kit Event - D-Pad Up (Snare Roll)
-void drum_live_kit_play_roll() {
+void drum_live_kit_play_roll(void) {
 }
 
 
 // Drum Kit Event - D-Pad Down
-void drum_live_kit_play_bass_l() {
+void drum_live_kit_play_bass_l(void) {
     struct LiveDrummer *drummer = &gDrumLive->drummer;
 
     func_0804cebc(D_03005380, drummer->leftBassDrum, 0);
@@ -186,7 +387,7 @@ void drum_live_kit_play_bass_l() {
 
 
 // Drum Kit Event - B Button
-void drum_live_kit_play_bass_r() {
+void drum_live_kit_play_bass_r(void) {
     struct LiveDrummer *drummer = &gDrumLive->drummer;
 
     func_0804cebc(D_03005380, drummer->rightBassDrum, 0);
@@ -201,7 +402,7 @@ void drum_live_kit_play_stub(void) {
 
 
 // Drum Kit Event - D-Pad Left
-void drum_live_kit_play_snare_l() {
+void drum_live_kit_play_snare_l(void) {
     struct LiveDrummer *drummer = &gDrumLive->drummer;
 
     func_0804d8f8(D_03005380, drummer->leftArm, drum_live_get_anim(LIVE_ANIM_DRUMMER_USE_SNARE_L), 0, 1, 0x7F, 0);
@@ -212,7 +413,7 @@ void drum_live_kit_play_snare_l() {
 
 
 // Drum Kit Event - A Button
-void drum_live_kit_play_snare_r() {
+void drum_live_kit_play_snare_r(void) {
     struct LiveDrummer *drummer = &gDrumLive->drummer;
 
     func_0804d8f8(D_03005380, drummer->rightArm, drum_live_get_anim(LIVE_ANIM_DRUMMER_USE_SNARE_R), 0, 1, 0x7F, 0);
@@ -222,13 +423,13 @@ void drum_live_kit_play_snare_r() {
 }
 
 
-// Drum Kit Event - ?
-void drum_live_kit_play_unknown() {
+// Drum Kit Event - Unused Tom
+void drum_live_kit_play_tom_unused(void) {
 }
 
 
 // Drum Kit Event - D-Pad Right
-void drum_live_kit_play_tom() {
+void drum_live_kit_play_tom(void) {
     struct LiveDrummer *drummer = &gDrumLive->drummer;
 
     func_0804d8f8(D_03005380, drummer->leftArm, drum_live_get_anim(LIVE_ANIM_DRUMMER_USE_TOM), 0, 1, 0x7F, 0);
@@ -239,7 +440,7 @@ void drum_live_kit_play_tom() {
 
 
 // Drum Kit Event - D-Pad Up (Hi-Hat)
-void drum_live_kit_play_hihat() {
+void drum_live_kit_play_hihat(void) {
     struct LiveDrummer *drummer = &gDrumLive->drummer;
 
     func_0804d8f8(D_03005380, drummer->leftArm, drum_live_get_anim(LIVE_ANIM_DRUMMER_USE_HIHAT), 0, 1, 0x7F, 0);
@@ -251,7 +452,7 @@ void drum_live_kit_play_hihat() {
 
 
 // Drum Kit Event - L Button
-void drum_live_kit_play_splash() {
+void drum_live_kit_play_splash(void) {
     struct LiveDrummer *drummer = &gDrumLive->drummer;
 
     func_0804d8f8(D_03005380, drummer->leftArm, drum_live_get_anim(LIVE_ANIM_DRUMMER_USE_SPLASH), 0, 1, 0x7F, 0);
@@ -262,7 +463,7 @@ void drum_live_kit_play_splash() {
 
 
 // Drum Kit Event - R Button
-void drum_live_kit_play_crash() {
+void drum_live_kit_play_crash(void) {
     struct LiveDrummer *drummer = &gDrumLive->drummer;
 
     func_0804d8f8(D_03005380, drummer->rightArm, drum_live_get_anim(LIVE_ANIM_DRUMMER_USE_CRASH), 0, 1, 0x7F, 0);
@@ -302,7 +503,7 @@ void drum_live_init_gfx1(void) {
 
 // Offset Performer Sprite X/Y Position by Vector Table
 void drum_live_offset_sprite_pos(s16 sprite, u32 performer) {
-    struct Vector2 *offset = &D_089e0ab0[gDrumLive->version][performer];
+    struct Vector2 *offset = &drum_live_performer_sprite_offsets[gDrumLive->version][performer];
     s32 x = func_0804ddb0(D_03005380, sprite, 4);
     s32 y = func_0804ddb0(D_03005380, sprite, 5);
 
@@ -363,8 +564,8 @@ void drum_live_engine_start(u32 version) {
     drum_live_offset_sprite_pos(guitarist->leftArm, LIVE_PERFORMER_BASSIST);
     drum_live_offset_sprite_pos(guitarist->rightArm, LIVE_PERFORMER_BASSIST);
     func_0804d160(D_03005380, drum_live_get_anim(LIVE_ANIM_MICROPHONE), 0, 38, 142, 0x4738, 0, 0, 0);
-    guitarist->unkE = 0;
-    guitarist->unk10 = 0;
+    guitarist->currentState = LIVE_GUITARIST_STATE_DEFAULT;
+    guitarist->timeUntilNextState = 0;
 
     // Init. Guitarist
     guitarist = &gDrumLive->guitarists[0];
@@ -379,14 +580,14 @@ void drum_live_engine_start(u32 version) {
     drum_live_offset_sprite_pos(guitarist->leftArm, LIVE_PERFORMER_GUITARIST);
     drum_live_offset_sprite_pos(guitarist->rightArm, LIVE_PERFORMER_GUITARIST);
     func_0804d160(D_03005380, drum_live_get_anim(LIVE_ANIM_MICROPHONE), 0, 202, 139, 0x4738, 0, 0, 0);
-    guitarist->unkE = 0;
-    guitarist->unk10 = 0;
+    guitarist->currentState = LIVE_GUITARIST_STATE_DEFAULT;
+    guitarist->timeUntilNextState = 0;
 
     // Init. Modes and Icons
     func_0804e188(D_03005380, get_current_mem_id(), NULL, &D_03004b10.BG_OFS[BG_LAYER_1].y);
-    gDrumLive->unk39C = 0;
-    gDrumLive->unk3A0 = 1;
-    gDrumLive->adjustModeIcon = func_0804d160(D_03005380, drum_live_get_anim(LIVE_ANIM_ADJUST_MODE_ICON), gDrumLive->unk3A0, 120, 154, 0, 0, 0, 0x8000);
+    gDrumLive->adjustModeTempo = 0;
+    gDrumLive->adjustModeEnabled = TRUE;
+    gDrumLive->adjustModeIcon = func_0804d160(D_03005380, drum_live_get_anim(LIVE_ANIM_ADJUST_MODE_ICON), gDrumLive->adjustModeEnabled, 120, 154, 0, 0, 0, 0x8000);
     gDrumLive->busyIcon = func_0804d160(D_03005380, drum_live_get_anim(LIVE_ANIM_BUSY_ICON), 0, 120, 144, 0, 0, 0, 0x8000);
 
     // Init. Other
@@ -395,7 +596,7 @@ void drum_live_engine_start(u32 version) {
     gameplay_prevent_dpad_overlap(FALSE);
     drum_live_reset_excitement();
     gDrumLive->unk13D0 = INT_TO_FIXED(1.0);
-    func_08025248();
+    drum_live_init_lighting();
     drum_live_set_result_rank(RESULTS_RANK_TRY_AGAIN);
 }
 
@@ -405,31 +606,77 @@ void drum_live_engine_event_stub(void) {
 }
 
 
-// ?
-#include "asm/engines/drumming_lessons/asm_08026640.s"
+// Set Guitarist State
+void drum_live_set_guitarist_state(u32 id, u32 state) {
+    struct LiveGuitarist *guitarist = &gDrumLive->guitarists[id];
+    s32 x, y;
+    s32 frame;
+
+    func_0804d770(D_03005380, guitarist->head, FALSE);
+    func_0804d770(D_03005380, guitarist->legs, FALSE);
+    func_0804d770(D_03005380, guitarist->leftArm, FALSE);
+    func_0804d770(D_03005380, guitarist->rightArm, FALSE);
+
+    switch (state) {
+        case LIVE_GUITARIST_STATE_DEFAULT:
+            func_0804d8f8(D_03005380, guitarist->head, drum_live_get_anim(drum_live_guitarist_anim_map_head[id]), 0, 1, 0x7F, 0);
+            func_0804d8f8(D_03005380, guitarist->body, drum_live_get_anim(drum_live_guitarist_anim_map_body[id]), 0, 1, 0x7F, 0);
+            func_0804d8f8(D_03005380, guitarist->legs, drum_live_get_anim(drum_live_guitarist_anim_map_legs[id]), 0, 1, 0x7F, 0);
+            func_0804d8f8(D_03005380, guitarist->leftArm, drum_live_get_anim(drum_live_guitarist_anim_map_arm_l[id]), 0, 1, 0x7F, 0);
+            func_0804d8f8(D_03005380, guitarist->rightArm, drum_live_get_anim(drum_live_guitarist_anim_map_arm_r[id]), 0, 1, 0x7F, 0);
+            func_0804d770(D_03005380, guitarist->head, TRUE);
+            func_0804d770(D_03005380, guitarist->legs, TRUE);
+            func_0804d770(D_03005380, guitarist->leftArm, TRUE);
+            func_0804d770(D_03005380, guitarist->rightArm, TRUE);
+            break;
+
+        case LIVE_GUITARIST_STATE_CROUCH:
+            func_0804d8f8(D_03005380, guitarist->body, drum_live_get_anim(drum_live_guitarist_anim_map_crouch[id]), 0, 1, 0x7F, 0);
+            break;
+
+        case LIVE_GUITARIST_STATE_STRUM_JUMP:
+            func_0804d8f8(D_03005380, guitarist->body, drum_live_get_anim(drum_live_guitarist_anim_map_jump_strum[id]), 0, 1, 0x7F, 0);
+            break;
+
+        case LIVE_GUITARIST_STATE_JUMP:
+            func_0804d8f8(D_03005380, guitarist->body, drum_live_get_anim(drum_live_guitarist_anim_map_jump[id]), 0, 1, 0x7F, 0);
+            x = func_0804ddb0(D_03005380, guitarist->body, 4);
+            y = func_0804ddb0(D_03005380, guitarist->body, 5);
+            scene_move_sprite_sine_wave(guitarist->body, x, y, 16, ticks_to_frames(24));
+            break;
+
+        case LIVE_GUITARIST_STATE_HALF_CROUCH:
+            func_0804d8f8(D_03005380, guitarist->body, drum_live_get_anim(drum_live_guitarist_anim_map_crouch[id]), 0, -1, 0, 0);
+            frame = func_0804ddb0(D_03005380, guitarist->body, 2);
+            func_0804cebc(D_03005380, guitarist->body, frame - 1);
+            break;
+    }
+
+    guitarist->currentState = state;
+}
 
 
-// Engine Event 0x00 (?)
-void func_080268cc(u32 args) {
+// Engine Event 0x00 (Set Guitarist Next State)
+void drum_live_set_guitarist_next_state(u32 args) {
     struct LiveGuitarist *guitarist;
-    u32 arg0, arg1;
+    u32 state, mask;
     u32 i;
 
-    arg0 = args >> 2;
-    arg1 = args & 3;
+    state = args >> 2;
+    mask = args & 3;
 
     for (i = 0; i < 2; i++) {
-        if ((arg1 >> i) & 1) {
+        if ((mask >> i) & 1) {
             guitarist = &gDrumLive->guitarists[i];
 
-            if (guitarist->unk10 != 0) {
-                if (guitarist->unk10 < 3) {
-                    func_08026640(i, guitarist->unkF);
+            if (guitarist->timeUntilNextState != 0) {
+                if (guitarist->timeUntilNextState < 3) {
+                    drum_live_set_guitarist_state(i, guitarist->nextState);
                 }
             }
 
-            guitarist->unk10 = ticks_to_frames(24);
-            guitarist->unkF = arg0;
+            guitarist->timeUntilNextState = ticks_to_frames(24);
+            guitarist->nextState = state;
         }
     }
 }
@@ -443,17 +690,30 @@ void drum_live_update_guitarists(void) {
     for (i = 0; i < 2; i++) {
         guitarist = &gDrumLive->guitarists[i];
 
-        if (guitarist->unk10 != 0) {
-            if (--guitarist->unk10 == 0) {
-                func_08026640(i, guitarist->unkF);
+        if (guitarist->timeUntilNextState != 0) {
+            if (--guitarist->timeUntilNextState == 0) {
+                drum_live_set_guitarist_state(i, guitarist->nextState);
             }
         }
     }
 }
 
 
-// Engine Event 0x01 (?)
-#include "asm/engines/drumming_lessons/asm_08026968.s"
+// Engine Event 0x01 (Adjust Mode)
+void drum_live_set_adjust_mode_tempo(u32 tempo) {
+    if (!gDrumLive->adjustModeEnabled) {
+        return;
+    }
+
+    if (tempo != 0) {
+        gDrumLive->adjustModeTempo = get_beatscript_tempo();
+        func_0804d770(D_03005380, gDrumLive->busyIcon, TRUE);
+    } else if (gDrumLive->adjustModeTempo != 0) {
+        set_beatscript_tempo(gDrumLive->adjustModeTempo);
+        gDrumLive->adjustModeTempo = tempo;
+        func_0804d770(D_03005380, gDrumLive->busyIcon, FALSE);
+    }
+}
 
 
 // Engine Event 0x08 (Set Enable Boredom Timer)
@@ -495,7 +755,7 @@ void drum_live_engine_update(void) {
     drum_live_update_boredom();
     drum_live_update_guitarists();
     drum_live_update_band_monkeys();
-    func_08025460();
+    drum_live_update_lighting();
 }
 
 
@@ -519,7 +779,7 @@ void drum_live_engine_stop(void) {
 
 // Update Excitement Factor
 void drum_live_modify_excitement(struct DrumLiveCue *info, u8_8 coolMultiplier, u8_8 lameMultiplier) {
-    if (gDrumLive->unk13F8 != 0) {
+    if (gDrumLive->excitementDisabled) {
         return;
     }
 
@@ -536,14 +796,14 @@ void drum_live_modify_excitement(struct DrumLiveCue *info, u8_8 coolMultiplier, 
 
 
 // Cue - Spawn
-void drum_live_cue_spawn(struct Cue *cue, struct DrumLiveCue *info, u32 type) {
-    info->type = type;
-    info->coolInputs = gDrumLive->coolInputs[info->type];
-    info->lameInputs = gDrumLive->lameInputs[info->type];
+void drum_live_cue_spawn(struct Cue *cue, struct DrumLiveCue *info, u32 index) {
+    info->index = index;
+    info->coolInputs = gDrumLive->coolInputs[info->index];
+    info->lameInputs = gDrumLive->lameInputs[info->index];
     info->baseInc = gDrumLive->excitementBaseInc;
     info->baseDec = gDrumLive->excitementBaseDec;
-    info->unk1 = gDrumLive->unk13FA;
-    gDrumLive->unk13FA = -1;
+    info->flashType = gDrumLive->nextFlashType;
+    gDrumLive->nextFlashType = -1;
 }
 
 
@@ -562,32 +822,32 @@ void drum_live_cue_despawn(struct Cue *cue, struct DrumLiveCue *info) {
 }
 
 
-// Set Tempo?
-void func_08026c3c(void) {
-    u32 tempo = gDrumLive->unk39C;
+// Update Tempo for Adjust Mode
+void drum_live_update_adjust_mode(void) {
+    u32 adjustModeTempo = gDrumLive->adjustModeTempo;
     s32 hitOffset, oneBeat, newTempo;
 
-    if (tempo == 0) {
+    if (adjustModeTempo == 0) {
         return;
     }
 
     hitOffset = gameplay_get_last_hit_offset();
     oneBeat = ticks_to_frames(24);
     newTempo = (s32)get_beatscript_tempo() * (oneBeat - hitOffset) / oneBeat;
-    set_beatscript_tempo(clamp_int32(newTempo, tempo - 5, tempo + 5));
+    set_beatscript_tempo(clamp_int32(newTempo, adjustModeTempo - 5, adjustModeTempo + 5));
 }
 
 
 // Cue - Hit
 void drum_live_cue_hit(struct Cue *cue, struct DrumLiveCue *info, u32 pressed, u32 released) {
-    if (info->type == 0) {
-        func_08026c3c();
+    if (info->index == 0) {
+        drum_live_update_adjust_mode();
     }
 
     drum_live_modify_excitement(info, INT_TO_FIXED(1.0), INT_TO_FIXED(1.0));
 
-    if (info->unk1 >= 0) {
-        func_080255f8(info->unk1);
+    if (info->flashType >= 0) {
+        drum_live_flash_big_lights(info->flashType);
     }
 
     gDrumLive->timeSinceLastInput = 0;
@@ -596,8 +856,8 @@ void drum_live_cue_hit(struct Cue *cue, struct DrumLiveCue *info, u32 pressed, u
 
 // Cue - Barely
 void drum_live_cue_barely(struct Cue *cue, struct DrumLiveCue *info, u32 pressed, u32 released) {
-    if (gDrumLive->unk39C != 0) {
-        set_beatscript_tempo(gDrumLive->unk39C);
+    if (gDrumLive->adjustModeTempo != 0) {
+        set_beatscript_tempo(gDrumLive->adjustModeTempo);
     }
 
     drum_live_modify_excitement(info, INT_TO_FIXED(0.5), INT_TO_FIXED(1.0));
@@ -607,15 +867,15 @@ void drum_live_cue_barely(struct Cue *cue, struct DrumLiveCue *info, u32 pressed
 
 // Cue - Miss
 void drum_live_cue_miss(struct Cue *cue, struct DrumLiveCue *info) {
-    if (gDrumLive->unk39C != 0) {
-        set_beatscript_tempo(gDrumLive->unk39C);
+    if (gDrumLive->adjustModeTempo != 0) {
+        set_beatscript_tempo(gDrumLive->adjustModeTempo);
     }
 }
 
 
 // Input Event
 void drum_live_input_event(u32 pressed, u32 released) {
-    if (gDrumLive->unk13F8 == 0) {
+    if (!gDrumLive->excitementDisabled) {
         gDrumLive->excitementFactor -= INT_TO_FIXED(1.0);
     }
 
@@ -631,7 +891,7 @@ void drum_live_common_beat_animation(void) {
     for (i = 0; i < 2; i++) {
         guitarist = &gDrumLive->guitarists[i];
 
-        if (guitarist->unkE == 0) {
+        if (guitarist->currentState == LIVE_GUITARIST_STATE_DEFAULT) {
             func_0804cebc(D_03005380, guitarist->head, 0);
             func_0804cebc(D_03005380, guitarist->body, 0);
             func_0804cebc(D_03005380, guitarist->legs, 0);
@@ -640,7 +900,7 @@ void drum_live_common_beat_animation(void) {
     }
 
     drum_live_set_crowd_and_rank(FIXED_TO_INT(gDrumLive->excitementFactor));
-    func_080258c0();
+    drum_live_flash_beat_lights();
 }
 
 

@@ -72,7 +72,7 @@ struct DrumTechPhrase D_089e07dc = {
     /* Volume   */ 0xc0,
     /* Pitch    */ 0,
     /* Sequence */ NULL,
-    /* On-Play  */ drum_live_kit_play_unknown,
+    /* On-Play  */ drum_live_kit_play_tom_unused,
     /* Param.   */ 0
 };
 
