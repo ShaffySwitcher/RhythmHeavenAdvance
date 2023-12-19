@@ -1166,7 +1166,15 @@ SECTIONS {
         build/games/bon_odori/bon_dance.bs.o(.script.main);
         build/games/remix_6/remix_6.bs.o(.script.main);
         build/games/remix_8/remix_8.bs.o(.script.main);
-        build/games/drum_live/drum_live.bs.o(.script.main);
+        build/games/drum_live/drum_girls_space_dance.bs.o(.script.main);
+        build/games/drum_live/drum_girls_honey_sweet_angel.bs.o(.script.main);
+        build/games/drum_live/drum_girls_night_walk.bs.o(.script.main);
+        build/games/drum_live/drum_boys_clappy_trio.bs.o(.script.main);
+        build/games/drum_live/drum_boys_tap_trial.bs.o(.script.main);
+        build/games/drum_live/drum_boys_wish.bs.o(.script.main);
+        build/games/drum_live/drum_band_cosmic_dance.bs.o(.script.main);
+        build/games/drum_live/drum_band_snappy_trio.bs.o(.script.main);
+        build/games/drum_live/drum_band_tap_trial_2.bs.o(.script.main);
         build/games/sneaky_spirits/subroutines.bs.o(.script.sub);
         build/bin/bindata_08a7a20c.bin.o(.rodata*);
         build/games/drum_live/subroutines.bs.o(.script.sub);

@@ -959,7 +959,7 @@ script script_remix_6_main
     beat_anim
     rest 24
     print_text_f D_08a6b230
-    run func_08047f18, s_rap_kimitte_saiko_seqData
+    run remix6_sync_rap_vocal, s_rap_kimitte_saiko_seqData
     rap_men_animate_rapper 2
     beat_anim
     rest 24
@@ -978,7 +978,7 @@ script script_remix_6_main
     rest 24
     rest 8
     rest 8
-    run func_08047f18, s_rap_honto_desuka_seqData
+    run remix6_sync_rap_vocal, s_rap_honto_desuka_seqData
     rap_men_animate_rapper 4
     rest 8
     print_text_f D_08a6b218

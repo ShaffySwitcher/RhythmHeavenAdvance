@@ -628,7 +628,7 @@ script script_remix_2_main
     bon_odori_darken_screen 24
     beat_anim
     rest 12
-    run func_08047e78, s_bon_dondon1_1_seqData
+    run remix2_sync_bon_vocal, s_bon_dondon1_1_seqData
     rest 12
     mute_music_track MIDI_TRACK_5
     bon_odori_animate_all 3
@@ -723,7 +723,7 @@ script script_remix_2_main
     beat_anim
     rest 24
     bon_odori_start_input_check
-    run func_08047e78, s_bon_dondon1_2_seqData
+    run remix2_sync_bon_vocal, s_bon_dondon1_2_seqData
     bon_odori_lyrics_set_curr_line 1
     bon_odori_lyrics_curr_line_start_highlight 60
     spawn_cue CUE_FORWARD_CLAP
@@ -995,7 +995,7 @@ script script_remix_2_main
     bon_odori_darken_screen 24
     beat_anim
     rest 12
-    run func_08047e78, s_bon_dondon1_1_seqData
+    run remix2_sync_bon_vocal, s_bon_dondon1_1_seqData
     rest 12
     mute_music_track MIDI_TRACK_5
     bon_odori_animate_all 3

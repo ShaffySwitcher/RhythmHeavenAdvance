@@ -154,7 +154,7 @@ struct DrumStudioMonitorData {
 struct DrumLessonPattern {
     const struct Beatscript *beat1;
     const struct Beatscript *beat2;
-    struct SongHeader *audienceSfx;
+    struct SongHeader *cheerSfx;
     const char *dialogue;
 };
 
