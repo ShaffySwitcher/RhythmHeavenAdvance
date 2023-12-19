@@ -8,7 +8,7 @@ load_drum_live_labels
 .section .script.sub
 @ Drum LIVE - Subroutines
 
-script drum_live_sub_08a7a278
+script drum_live_pat00
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -28,7 +28,7 @@ script drum_live_sub_08a7a278
 return
 
 
-script drum_live_sub_08a7a368
+script drum_live_pat01
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -46,7 +46,7 @@ script drum_live_sub_08a7a368
 return
 
 
-script drum_live_sub_08a7a440
+script drum_live_pat02
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -68,7 +68,7 @@ script drum_live_sub_08a7a440
 return
 
 
-script drum_live_sub_08a7a560
+script drum_live_pat03
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -92,7 +92,7 @@ return
 
 
 @ Unused?
-script drum_live_sub_08a7a698
+script drum_live_pat04
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -116,7 +116,7 @@ return
 
 
 @ Unused?
-script drum_live_sub_08a7a7d0
+script drum_live_pat05
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -142,7 +142,7 @@ script drum_live_sub_08a7a7d0
 return
 
 
-script drum_live_sub_08a7a950
+script drum_live_pat06
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -169,7 +169,7 @@ script drum_live_sub_08a7a950
 return
 
 
-script drum_live_sub_08a7aae8
+script drum_live_pat07
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -196,7 +196,7 @@ script drum_live_sub_08a7aae8
 return
 
 
-script drum_live_sub_08a7ac80
+script drum_live_pat08
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -219,7 +219,7 @@ script drum_live_sub_08a7ac80
 return
 
 
-script drum_live_sub_08a7adb8
+script drum_live_pat09
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -242,7 +242,7 @@ script drum_live_sub_08a7adb8
 return
 
 
-script drum_live_sub_08a7aef0
+script drum_live_pat10
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -265,7 +265,7 @@ script drum_live_sub_08a7aef0
 return
 
 
-script drum_live_sub_08a7b028
+script drum_live_pat11
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -290,7 +290,7 @@ script drum_live_sub_08a7b028
 return
 
 
-script drum_live_sub_08a7b190
+script drum_live_pat12
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -312,7 +312,7 @@ script drum_live_sub_08a7b190
 return
 
 
-script drum_live_sub_08a7b2b0
+script drum_live_pat13
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -339,7 +339,7 @@ script drum_live_sub_08a7b2b0
 return
 
 
-script drum_live_sub_08a7b448
+script drum_live_pat14
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -381,7 +381,7 @@ script drum_live_sub_08a7b448
 return
 
 
-script drum_live_sub_08a7b6ac
+script drum_live_pat15
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -399,7 +399,7 @@ script drum_live_sub_08a7b6ac
 return
 
 
-script drum_live_sub_08a7b7a8
+script drum_live_pat16
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -417,7 +417,7 @@ script drum_live_sub_08a7b7a8
 return
 
 
-script drum_live_sub_08a7b880
+script drum_live_pat17
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -433,7 +433,7 @@ script drum_live_sub_08a7b880
 return
 
 
-script drum_live_sub_08a7b940
+script drum_live_pat18
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -454,7 +454,7 @@ return
 
 
 @ Unused?
-script drum_live_sub_08a7ba48
+script drum_live_pat19
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -478,7 +478,7 @@ script drum_live_sub_08a7ba48
 return
 
 
-script drum_live_sub_08a7bbb0
+script drum_live_pat20
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -500,7 +500,7 @@ return
 
 
 @ Unused?
-script drum_live_sub_08a7bcd0
+script drum_live_pat21
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -521,7 +521,7 @@ script drum_live_sub_08a7bcd0
 return
 
 
-script drum_live_sub_08a7bdf0
+script drum_live_pat22
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -543,7 +543,7 @@ return
 
 
 @ Unused?
-script drum_live_sub_08a7bf10
+script drum_live_pat23
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -566,7 +566,7 @@ script drum_live_sub_08a7bf10
 return
 
 
-script drum_live_sub_08a7c060
+script drum_live_pat24
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -587,7 +587,7 @@ return
 
 
 @ Unused?
-script drum_live_sub_08a7c168
+script drum_live_pat25
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -611,7 +611,7 @@ script drum_live_sub_08a7c168
 return
 
 
-script drum_live_sub_08a7c2d0
+script drum_live_pat26
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -631,7 +631,7 @@ script drum_live_sub_08a7c2d0
 return
 
 
-script drum_live_sub_08a7c3c0
+script drum_live_pat27
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -650,7 +650,7 @@ return
 
 
 @ Unused?
-script drum_live_sub_08a7c498
+script drum_live_pat28
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -673,7 +673,7 @@ return
 
 
 @ Unused?
-script drum_live_sub_08a7c5b8
+script drum_live_pat29
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -699,7 +699,7 @@ script drum_live_sub_08a7c5b8
 return
 
 
-script drum_live_sub_08a7c738
+script drum_live_pat30
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -723,7 +723,7 @@ return
 
 
 @ Unused?
-script drum_live_sub_08a7c870
+script drum_live_pat31
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -746,7 +746,7 @@ script drum_live_sub_08a7c870
 return
 
 
-script drum_live_sub_08a7c9a8
+script drum_live_pat32
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -770,7 +770,7 @@ return
 
 
 @ Unused?
-script drum_live_sub_08a7cae0
+script drum_live_pat33
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -796,7 +796,7 @@ return
 
 
 @ Unused?
-script drum_live_sub_08a7cc48
+script drum_live_pat34
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -819,7 +819,7 @@ return
 
 
 @ Unused?
-script drum_live_sub_08a7cd68
+script drum_live_pat35
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -847,7 +847,7 @@ return
 
 
 @ Unused?
-script drum_live_sub_08a7cf00
+script drum_live_pat36
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -874,7 +874,7 @@ return
 
 
 @ Unused?
-script drum_live_sub_08a7d068
+script drum_live_pat37
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -899,7 +899,7 @@ script drum_live_sub_08a7d068
 return
 
 
-script drum_live_sub_08a7d1b8
+script drum_live_pat38
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -919,71 +919,28 @@ script drum_live_sub_08a7d1b8
     rest 8
     spawn_cue CUE_LIVE_01
     rest 4
-return
-
-
-@ Unused?
-script drum_live_sub_08a7d2f0
-    dml_clear_input_def
-    dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
-    dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
-    spawn_cue CUE_LIVE_00
-    spawn_cue CUE_LIVE_00
-    spawn_cue CUE_LIVE_00
-    rest 8
-    spawn_cue CUE_LIVE_01
-    rest 4
-    spawn_cue CUE_LIVE_01
-    spawn_cue CUE_LIVE_01
-    rest 8
-    dml_event05 3
-    spawn_cue CUE_LIVE_01
-    dml_event05 3
-    spawn_cue CUE_LIVE_01
-    dml_event05 3
-    spawn_cue CUE_LIVE_01
-    rest 4
-    beat_anim
-    rest 0
 return
 
 
 @ Unused?
-script drum_live_sub_08a7d440
+script drum_live_pat39
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
-    dml_event05 3
     spawn_cue CUE_LIVE_00
-    dml_event05 3
     spawn_cue CUE_LIVE_00
-    dml_event05 3
     spawn_cue CUE_LIVE_00
     rest 8
     spawn_cue CUE_LIVE_01
     rest 4
     spawn_cue CUE_LIVE_01
-    rest 8
-    dml_event05 3
-    spawn_cue CUE_LIVE_01
-    dml_event05 3
-    spawn_cue CUE_LIVE_01
-    dml_event05 3
-    spawn_cue CUE_LIVE_01
-    rest 4
-    beat_anim
-    rest 0
-    spawn_cue CUE_LIVE_00
-    rest 8
-    spawn_cue CUE_LIVE_01
-    rest 4
-    dml_event05 3
-    spawn_cue CUE_LIVE_01
-    dml_event05 3
-    spawn_cue CUE_LIVE_01
-    dml_event05 3
     spawn_cue CUE_LIVE_01
     rest 8
+    dml_event05 3
+    spawn_cue CUE_LIVE_01
+    dml_event05 3
+    spawn_cue CUE_LIVE_01
+    dml_event05 3
     spawn_cue CUE_LIVE_01
     rest 4
     beat_anim
@@ -992,7 +949,50 @@ return
 
 
 @ Unused?
-script drum_live_sub_08a7d6a4
+script drum_live_pat40
+    dml_clear_input_def
+    dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
+    dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
+    dml_event05 3
+    spawn_cue CUE_LIVE_00
+    dml_event05 3
+    spawn_cue CUE_LIVE_00
+    dml_event05 3
+    spawn_cue CUE_LIVE_00
+    rest 8
+    spawn_cue CUE_LIVE_01
+    rest 4
+    spawn_cue CUE_LIVE_01
+    rest 8
+    dml_event05 3
+    spawn_cue CUE_LIVE_01
+    dml_event05 3
+    spawn_cue CUE_LIVE_01
+    dml_event05 3
+    spawn_cue CUE_LIVE_01
+    rest 4
+    beat_anim
+    rest 0
+    spawn_cue CUE_LIVE_00
+    rest 8
+    spawn_cue CUE_LIVE_01
+    rest 4
+    dml_event05 3
+    spawn_cue CUE_LIVE_01
+    dml_event05 3
+    spawn_cue CUE_LIVE_01
+    dml_event05 3
+    spawn_cue CUE_LIVE_01
+    rest 8
+    spawn_cue CUE_LIVE_01
+    rest 4
+    beat_anim
+    rest 0
+return
+
+
+@ Unused?
+script drum_live_pat41
     dml_clear_input_def
     dml_define_cool_inputs 0, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
     dml_define_cool_inputs 1, (A_BUTTON | B_BUTTON | DPAD_LEFT | DPAD_DOWN)
@@ -1008,5 +1008,6 @@ script drum_live_sub_08a7d6a4
     beat_anim
     rest 0
 return
+
 
 .end

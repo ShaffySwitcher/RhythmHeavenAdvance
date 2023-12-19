@@ -8,39 +8,39 @@ enum PsgChannelsEnum {
 };
 
 enum SoundPlayersEnum {
-    MUSIC_PLAYER_0,
-    MUSIC_PLAYER_1,
-    MUSIC_PLAYER_2,
-    SFX_PLAYER_0,
-    SFX_PLAYER_1,
-    SFX_PLAYER_2,
-    SFX_PLAYER_3,
-    SFX_PLAYER_4,
-    SFX_PLAYER_5,
-    SFX_PLAYER_6,
-    SFX_PLAYER_7,
-    SFX_PLAYER_8,
-    SFX_PLAYER_9,
-    DEFAULT_SOUND_PLAYER = 0xFF
+    /* 00 */ MUSIC_PLAYER_0,
+    /* 01 */ MUSIC_PLAYER_1,
+    /* 02 */ MUSIC_PLAYER_2,
+    /* 03 */ SFX_PLAYER_0,
+    /* 04 */ SFX_PLAYER_1,
+    /* 05 */ SFX_PLAYER_2,
+    /* 06 */ SFX_PLAYER_3,
+    /* 07 */ SFX_PLAYER_4,
+    /* 08 */ SFX_PLAYER_5,
+    /* 09 */ SFX_PLAYER_6,
+    /* 10 */ SFX_PLAYER_7,
+    /* 11 */ SFX_PLAYER_8,
+    /* 12 */ SFX_PLAYER_9,
+    /* -1 */ DEFAULT_SOUND_PLAYER = 0xFF
 };
 
 enum MidiTracksEnum {
-    MIDI_TRACK_0,
-    MIDI_TRACK_1,
-    MIDI_TRACK_2,
-    MIDI_TRACK_3,
-    MIDI_TRACK_4,
-    MIDI_TRACK_5,
-    MIDI_TRACK_6,
-    MIDI_TRACK_7,
-    MIDI_TRACK_8,
-    MIDI_TRACK_9,
-    MIDI_TRACK_10,
-    MIDI_TRACK_11,
-    MIDI_TRACK_12,
-    MIDI_TRACK_13,
-    MIDI_TRACK_14,
-    MIDI_TRACK_15
+    MIDI_TRACK_0    = (1 << 0),
+    MIDI_TRACK_1    = (1 << 1),
+    MIDI_TRACK_2    = (1 << 2),
+    MIDI_TRACK_3    = (1 << 3),
+    MIDI_TRACK_4    = (1 << 4),
+    MIDI_TRACK_5    = (1 << 5),
+    MIDI_TRACK_6    = (1 << 6),
+    MIDI_TRACK_7    = (1 << 7),
+    MIDI_TRACK_8    = (1 << 8),
+    MIDI_TRACK_9    = (1 << 9),
+    MIDI_TRACK_10   = (1 << 10),
+    MIDI_TRACK_11   = (1 << 11),
+    MIDI_TRACK_12   = (1 << 12),
+    MIDI_TRACK_13   = (1 << 13),
+    MIDI_TRACK_14   = (1 << 14),
+    MIDI_TRACK_15   = (1 << 15)
 };
 
 enum DirectSoundModesEnum {
