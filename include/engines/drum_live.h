@@ -122,7 +122,7 @@ struct DrumLiveEngineData {
     // [0x3A8]
     u8 bgMapArea[0x1000];
     // [0x13A8]
-    struct DynamicBgMap dynamicBgMap;
+    struct BgAnimator dynamicBgMap;
     // [0x13D0]
     u16 unk13D0;
     s24_8 excitementFactor;
@@ -181,7 +181,7 @@ extern Palette *drum_live_obj_palettes[];
 extern Palette *drum_live_bg_palettes[];
 extern u16 drum_live_color_masks[];
 extern u8 drum_live_brg_targets[];
-extern u16 *drum_live_crowd_bg_maps[];
+extern BgMapAnim *drum_live_crowd_bg_maps[];
 extern struct DrumTechKit *drum_live_kits[];
 extern struct CompressedGraphics *drum_live_buffered_textures[];
 extern struct GraphicsTable *drum_live_gfx_tables[];

@@ -351,7 +351,7 @@ void drum_live_set_crowd_and_rank(u32 excitement) {
     s32 crowd = clamp_int32(excitement, 0, 4);
     u32 rank;
 
-    func_08003bd4(&gDrumLive->dynamicBgMap, drum_live_crowd_bg_maps[crowd], 1, CROWD_BG_MAP_BASE, 0x800);
+    bg_anim_play(&gDrumLive->dynamicBgMap, drum_live_crowd_bg_maps[crowd], 1, CROWD_BG_MAP_BASE, 0x800);
 
     switch (crowd) {
         case 0:
@@ -522,7 +522,7 @@ void drum_live_engine_start(u32 version) {
     scene_show_obj_layer();
     scene_set_bg_layer_display(BG_LAYER_0, TRUE, 0, 0, 2, 28, 0);
     scene_set_bg_layer_display(BG_LAYER_1, TRUE, 0, 0, 0, 29, 1);
-    func_08003b28(&gDrumLive->dynamicBgMap);
+    bg_anim_init(&gDrumLive->dynamicBgMap);
 
     // Init. Drummer
     drummer->head = func_0804d160(D_03005380, drum_live_get_anim(LIVE_ANIM_DRUMMER_HEAD), 0, 120, 70, 0x482D, 1, 0x7F, 0);
@@ -748,10 +748,10 @@ void drum_live_update_band_monkeys(void) {
 
 // Game Engine Update
 void drum_live_engine_update(void) {
-    func_08003b34(&gDrumLive->dynamicBgMap);
+    bg_anim_write_to_vram(&gDrumLive->dynamicBgMap);
     play_drumtech_kit_w_anim(drum_live_kits[drum_live_kit_map[gDrumLive->version]], D_03004afc);
     update_drumtech();
-    func_08003c1c(&gDrumLive->dynamicBgMap);
+    bg_anim_update_script(&gDrumLive->dynamicBgMap);
     drum_live_update_boredom();
     drum_live_update_guitarists();
     drum_live_update_band_monkeys();
