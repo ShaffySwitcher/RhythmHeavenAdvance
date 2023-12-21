@@ -134,48 +134,73 @@ u8 drum_live_brg_targets[] = {
     /* 0x03 */ (1 << 2) | (1 << 1)
 };
 
-// [D_089e06c4] ?
-u16 D_089e06c4[] = {
-    0x1400, 0x3000, 0x7ED4, 0x68C4,
-    0x7FDC, 0x68C4, 0x06C4, 0x189E
+// [D_089e06c4] Crowd BG Map Beat Anim (excitement <= 0)
+BgMapAnim D_089e06c4[] = {
+    BG_ANIM_SET_DELAY(INT_TO_FIXED(20)),
+    BG_ANIM_WRITE_COMP(&D_08c47ed4),
+    BG_ANIM_WRITE_COMP(&D_08c47fdc),
+    BG_ANIM_GOTO(D_089e06c4)
 };
 
-// [D_089e06d4] ?
-u16 D_089e06d4[] = {
-    0x0500, 0x3000, 0x80E4, 0x68C4,
-    0x7FDC, 0x68C4, 0x7ED4, 0x68C4,
-    0x06C4, 0x189E
+// [D_089e06d4] Crowd BG Map Beat Anim (excitement == 1)
+BgMapAnim D_089e06d4[] = {
+    BG_ANIM_SET_DELAY(INT_TO_FIXED(5)),
+    BG_ANIM_WRITE_COMP(&D_08c480e4),
+    BG_ANIM_WRITE_COMP(&D_08c47fdc),
+    BG_ANIM_WRITE_COMP(&D_08c47ed4),
+    BG_ANIM_GOTO(D_089e06c4)
 };
 
-// [D_089e06e8] ?
-u16 D_089e06e8[] = {
-    0x0500, 0x3000, 0x81F4, 0x68C4,
-    0x80E4, 0x68C4, 0x7FDC, 0x68C4,
-    0x7ED4, 0x68C4, 0x06C4, 0x189E,
-    0x1400, 0x3000, 0x8458, 0x68C4,
-    0x8328, 0x68C4, 0x0700, 0x189E
+// [D_089e06e8] Crowd BG Map Beat Anim (excitement == 2)
+BgMapAnim D_089e06e8[] = {
+    BG_ANIM_SET_DELAY(INT_TO_FIXED(5)),
+    BG_ANIM_WRITE_COMP(&D_08c481f4),
+    BG_ANIM_WRITE_COMP(&D_08c480e4),
+    BG_ANIM_WRITE_COMP(&D_08c47fdc),
+    BG_ANIM_WRITE_COMP(&D_08c47ed4),
+    BG_ANIM_GOTO(D_089e06c4)
 };
 
-// [D_089e0710] ?
-u16 D_089e0710[] = {
-    0x0500, 0x3000, 0x86F4, 0x68C4,
-    0x85A4, 0x68C4, 0x8458, 0x68C4,
-    0x2800, 0x3000, 0x8328, 0x68C4,
-    0x0700, 0x189E, 0x1400, 0x3000,
-    0x89FC, 0x68C4, 0x8874, 0x68C4,
-    0x072C, 0x189E
+// [D_089e0700] Crowd BG Map Beat Anim
+BgMapAnim D_089e0700[] = {
+    BG_ANIM_SET_DELAY(INT_TO_FIXED(20)),
+    BG_ANIM_WRITE_COMP(&D_08c48458),
+    BG_ANIM_WRITE_COMP(&D_08c48328),
+    BG_ANIM_GOTO(D_089e0700)
 };
 
-// [D_089e073c] ?
-u16 D_089e073c[] = {
-    0x0500, 0x3000, 0x8CFC, 0x68C4,
-    0x8B84, 0x68C4, 0x89FC, 0x68C4,
-    0x2800, 0x3000, 0x8874, 0x68C4,
-    0x072C, 0x189E
+// [D_089e0710] Crowd BG Map Beat Anim (excitement == 3)
+BgMapAnim D_089e0710[] = {
+    BG_ANIM_SET_DELAY(INT_TO_FIXED(5)),
+    BG_ANIM_WRITE_COMP(&D_08c486f4),
+    BG_ANIM_WRITE_COMP(&D_08c485a4),
+    BG_ANIM_WRITE_COMP(&D_08c48458),
+    BG_ANIM_SET_DELAY(INT_TO_FIXED(40)),
+    BG_ANIM_WRITE_COMP(&D_08c48328),
+    BG_ANIM_GOTO(D_089e0700)
+};
+
+// [D_089e072c] Crowd BG Map Beat Anim
+BgMapAnim D_089e072c[] = {
+    BG_ANIM_SET_DELAY(INT_TO_FIXED(20)),
+    BG_ANIM_WRITE_COMP(&D_08c489fc),
+    BG_ANIM_WRITE_COMP(&D_08c48874),
+    BG_ANIM_GOTO(D_089e072c)
+};
+
+// [D_089e073c] Crowd BG Map Beat Anim (excitement >= 4)
+BgMapAnim D_089e073c[] = {
+    BG_ANIM_SET_DELAY(INT_TO_FIXED(5)),
+    BG_ANIM_WRITE_COMP(&D_08c48cfc),
+    BG_ANIM_WRITE_COMP(&D_08c48b84),
+    BG_ANIM_WRITE_COMP(&D_08c489fc),
+    BG_ANIM_SET_DELAY(INT_TO_FIXED(40)),
+    BG_ANIM_WRITE_COMP(&D_08c48874),
+    BG_ANIM_GOTO(D_089e072c)
 };
 
 // [D_089e0758] Crowd BG Map Data
-u16 *drum_live_crowd_bg_maps[] = {
+BgMapAnim *drum_live_crowd_bg_maps[] = {
     /* 0x00 */ D_089e06c4,
     /* 0x01 */ D_089e06d4,
     /* 0x02 */ D_089e06e8,
