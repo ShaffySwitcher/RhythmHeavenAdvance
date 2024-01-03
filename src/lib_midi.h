@@ -88,7 +88,7 @@ enum MidiTrackReaderEndEnum {
 #define M_CONTROLLER_EXPRESSION         0x0B
 #define M_CONTROLLER_SELECT_VAR         0x0E
 #define M_CONTROLLER_SET_VAR            0x10
-#define M_CONTROLLER_MOD_RANGE          0x14
+#define M_CONTROLLER_PITCH_RANGE          0x14
 #define M_CONTROLLER_MOD_SPEED          0x15
 #define M_CONTROLLER_MOD_TYPE           0x16
 #define M_CONTROLLER_MOD_DELAY          0x1A
@@ -100,13 +100,13 @@ enum MidiTrackReaderEndEnum {
 #define M_CONTROLLER_STEREO             0x4B
 #define M_CONTROLLER_LFO_GAIN           0x4C
 #define M_CONTROLLER_EQ_GAIN            0x4D
-#define M_CONTROLLER_RVB1               0x4E
-#define M_CONTROLLER_RVB2               0x4F
-#define M_CONTROLLER_RVB3               0x50
-#define M_CONTROLLER_RVB4               0x51
-#define M_CONTROLLER_RANDOM_PITCH       0x52
-#define M_CONTROLLER_RANDOM_53          0x53
-#define M_CONTROLLER_RANDOM_54          0x54
+#define M_CONTROLLER_RVB1_WET           0x4E
+#define M_CONTROLLER_RVB2_PHASE         0x4F
+#define M_CONTROLLER_RVB3_DECAY         0x50
+#define M_CONTROLLER_RVB4_LOW_CUT       0x51
+#define M_CONTROLLER_RANDOM_BASE_PITCH  0x52
+#define M_CONTROLLER_KEY_MOD_DEPTH      0x53
+#define M_CONTROLLER_KEY_MOD_SPEED      0x54
 
 #define AUDIO_SAMPLE_RATE 13379
 #define DIRECTSOUND_CHANNEL_COUNT 12
@@ -294,15 +294,15 @@ extern void midi_channel_set_mod_depth(struct MidiBus *midiBus, u32 track, u8 de
 extern void midi_channel_set_unk4_b21(struct MidiBus *midiBus, u32 track, u8 arg);
 extern void midi_channel_set_enable_filter_eq(struct MidiBus *midiBus, u32 track, u8 useFilter);
 extern void midi_channel_set_mod_type(struct MidiBus *midiBus, u32 track, u8 type);
-extern void midi_channel_set_unkC(struct MidiBus *midiBus, u32 track, u8 arg);
+extern void midi_channel_set_mod_range(struct MidiBus *midiBus, u32 track, u8 arg);
 extern void midi_channel_set_mod_speed(struct MidiBus *midiBus, u32 track, u16 speed);
 extern void midi_channel_set_mod_delay(struct MidiBus *midiBus, u32 track, u8 delay);
-extern void midi_channel_set_mod_range(struct MidiBus *midiBus, u32 track, u8 range);
+extern void midi_channel_set_pitch_range(struct MidiBus *midiBus, u32 track, u8 range);
 extern void midi_channel_set_stereo_phase(struct MidiBus *midiBus, u32 track, u32 isStereo);
 extern void midi_channel_set_priority(struct MidiBus *midiBus, u32 track, u8 priority);
 extern void midi_channel_set_random_pitch(struct MidiBus *midiBus, u32 track, u8 range);
 extern void midi_channel_set_random_key_mod_depth(struct MidiBus *midiBus, u32 track, u8 maxOffset);
-extern void midi_channel_set_random_key_mod_interval(struct MidiBus *midiBus, u32 track, u8 interval);
+extern void midi_channel_set_random_key_mod_speed(struct MidiBus *midiBus, u32 track, u8 interval);
 
 /* MIDI BUS OPERATIONS */
 
@@ -310,7 +310,7 @@ extern void midi_bus_set_key(struct MidiBus *midiBus, s8 key);
 extern void midi_bus_set_volume(struct MidiBus *midiBus, u8 volume);
 extern void midi_bus_set_panning(struct MidiBus *midiBus, s8 panning);
 extern void midi_bus_set_pitch(struct MidiBus *midiBus, s16 pitch);
-extern void midi_bus_set_mod_range(struct MidiBus *midiBus, u8 range);
+extern void midi_bus_set_pitch_range(struct MidiBus *midiBus, u8 range);
 extern void midi_bus_set_unk8(struct MidiBus *midiBus, u16 arg);
 extern void midi_bus_set_tuning(struct MidiBus *midiBus, u16 *table);
 
@@ -348,13 +348,13 @@ extern void midi_player_pause(struct SoundPlayer *soundPlayer);
 extern void midi_player_unpause(struct SoundPlayer *soundPlayer);
 extern void midi_player_pause_all(void);
 extern void midi_player_unpause_all(void);
-extern void midi_player_set_volume(struct SoundPlayer *soundPlayer, u16 volume);
-extern void midi_player_set_track_volume(struct SoundPlayer *soundPlayer, u16 trackMask, u16 volume);
+extern void midi_player_set_volume_a(struct SoundPlayer *soundPlayer, u16 volume);
+extern void midi_player_set_volume_b(struct SoundPlayer *soundPlayer, u16 trackMask, u16 volume);
 extern void midi_player_set_pitch(struct SoundPlayer *soundPlayer, u16 trackMask, s16 pitch);
 extern void midi_player_set_panning(struct SoundPlayer *soundPlayer, u16 trackMask, s8 panning);
 extern void midi_player_pause_id(u16 soundIndex);
 extern u32  midi_player_text_is_loop_sym(const char *string, const u8 *byteStream, u32 length);
-extern u32  midi_player_get_delta_time(u16 tempo, u16 speed, u16 quarterNote);
+extern u32  midi_player_get_clocks_per_frame(u16 tempo, u16 speed, u16 quarterNote);
 extern void midi_player_set_speed(struct SoundPlayer *soundPlayer, u16 speed);
 extern void midi_player_set_volume_fade(struct SoundPlayer *soundPlayer, u16 type, u16 duration);
 extern void midi_player_fade_out_to_stop(struct SoundPlayer *soundPlayer, u16 duration);
