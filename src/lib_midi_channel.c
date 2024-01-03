@@ -35,7 +35,7 @@ void midi_channel_update_mod(struct MidiBus *midiBus, u32 track) {
         midi_channel_update_panning(midiBus, track);
     }
 
-    busVolume = ((midiBus->trackMask >> track) & 1) ? midiBus->trackVolume : midiBus->busVolume;
+    busVolume = ((midiBus->volumeTrackMap >> track) & 1) ? midiBus->volumeB : midiBus->volumeA;
     result = modVolume;
     result = (busVolume * midiChannel->volume * midiChannel->expression * result) >> 21;
     if (result > 0xFF) result = 0xFF;
@@ -140,8 +140,8 @@ void midi_bus_set_priority(struct MidiBus *midiBus, u8 priority) {
 
 // Set MidiBus Track Volume & Mask
 void midi_bus_set_track_volume(struct MidiBus *midiBus, u8 volume, u16 mask) {
-    midiBus->trackVolume = volume;
-    midiBus->trackMask = mask;
+    midiBus->volumeB = volume;
+    midiBus->volumeTrackMap = mask;
 }
 
 
@@ -157,17 +157,17 @@ void midi_channel_init(struct MidiChannel *midiChannel) {
     midiChannel->unk4_b21 = 0;
     midiChannel->modDepth = 0;
     midiChannel->modType = MOD_TYPE_VIBRATO;
-    midiChannel->unkC = 1;
+    midiChannel->modRange = 1;
     midiChannel->modSpeed = (60 << 8);
     midiChannel->modCount = 0;
     midiChannel->modDelay = 0;
     midiChannel->modDelayCount = 0;
     midiChannel->modResult = 0;
     midiChannel->pitchWheel = 0x2000;
-    midiChannel->modRange = 2;
+    midiChannel->pitchRange = 2;
     midiChannel->priority = 0;
     midiChannel->filterEQ = FALSE;
-    midiChannel->stereo = FALSE;
+    midiChannel->phaseStereo = FALSE;
     midiChannel->randomPitchResult = (1 << 8);
     midiChannel->randomPitchFloor = (1 << 8);
     midiChannel->randomPitchRange = 0;
@@ -181,9 +181,9 @@ void midi_channel_init(struct MidiChannel *midiChannel) {
 void midi_bus_init(struct MidiBus *midiBus, u32 totalChannels, struct MidiChannel *midiChannelArray) {
     u32 i;
 
-    midiBus->busVolume = 100;
-    midiBus->trackVolume = 100;
-    midiBus->trackMask = 0;
+    midiBus->volumeA = 100;
+    midiBus->volumeB = 100;
+    midiBus->volumeTrackMap = 0;
     midiBus->key = 0;
     midiBus->panning = 0;
     midiBus->pitch = 0;
@@ -199,7 +199,7 @@ void midi_bus_init(struct MidiBus *midiBus, u32 totalChannels, struct MidiChanne
     midiBus->priority = 0;
 
     for (i = 0; i < 12; i++) {
-        midiBus->unk1C[i] = 0;
+        midiBus->keyModScale[i] = 0;
     }
 }
 
@@ -241,11 +241,11 @@ u32 midi_note_update_pitch(struct SoundChannel *soundChannel) {
     randomKeyOffsetMax = midiChannel->keyModDepth;
     if ((randomKeyOffsetMax != 0) && (midiChannel->keyModInterval != 0) && (midiChannel->keyModCount == 0)) {
         s32 randomKey = soundChannel->key + midi_random((randomKeyOffsetMax * 2) + 1) - randomKeyOffsetMax + midiBus->key;
-        s32 modRange;
+        s32 pitchRange;
         s32 what = randomKey;
 
         while (what < 0) randomKey += 12; // ????????
-        randomKey += midiBus->unk1C[what % 12];
+        randomKey += midiBus->keyModScale[what % 12];
 
         while (randomKey < 0) {
             randomKey += 12;
@@ -256,10 +256,10 @@ u32 midi_note_update_pitch(struct SoundChannel *soundChannel) {
 
         outputFrequency = midi_key_to_freq(midiBus, randomKey);
         soundChannel->frequency = outputFrequency;
-        modRange = midiChannel->modRange;
-        soundChannel->unk10 = soundChannel->frequency - midi_key_to_freq(midiBus, randomKey - modRange);
-        soundChannel->unk12 = midi_key_to_freq(midiBus, randomKey + modRange) - soundChannel->frequency;
-        soundChannel->unk14 = midi_key_to_freq(midiBus, randomKey + midiChannel->unkC) - soundChannel->frequency;
+        pitchRange = midiChannel->pitchRange;
+        soundChannel->unk10 = soundChannel->frequency - midi_key_to_freq(midiBus, randomKey - pitchRange);
+        soundChannel->unk12 = midi_key_to_freq(midiBus, randomKey + pitchRange) - soundChannel->frequency;
+        soundChannel->unk14 = midi_key_to_freq(midiBus, randomKey + midiChannel->modRange) - soundChannel->frequency;
     }
 
     // Pitch Envelope: MidiChannel Pitch Wheel (14 Bits, Signed)
@@ -680,7 +680,7 @@ void midi_note_start(struct MidiBus *midiBus, u32 track, u8 noteKey, u8 noteVelo
     s32 channelIndex;
     s32 key, randomKey;
     u32 randomKeyOffsetMax;
-    u32 modRange;
+    u32 pitchRange;
     s32 panning;
     s32 stereoPhase;
     u32 isPSG, isSubRhythm;
@@ -778,7 +778,7 @@ void midi_note_start(struct MidiBus *midiBus, u32 track, u8 noteKey, u8 noteVelo
             randomKey += 12;
         }
 
-        key += midiBus->unk1C[randomKey % 12];
+        key += midiBus->keyModScale[randomKey % 12];
         while (key < 0) {
             key += 12;
         }
@@ -793,10 +793,10 @@ void midi_note_start(struct MidiBus *midiBus, u32 track, u8 noteKey, u8 noteVelo
         soundChannel->frequency = key;
     }
 
-    modRange = midiChannel->modRange;
-    soundChannel->unk10 = soundChannel->frequency - midi_key_to_freq(midiBus, key - modRange);
-    soundChannel->unk12 = midi_key_to_freq(midiBus, modRange + key) - soundChannel->frequency;
-    soundChannel->unk14 = midi_key_to_freq(midiBus, key + midiChannel->unkC) - soundChannel->frequency;
+    pitchRange = midiChannel->pitchRange;
+    soundChannel->unk10 = soundChannel->frequency - midi_key_to_freq(midiBus, key - pitchRange);
+    soundChannel->unk12 = midi_key_to_freq(midiBus, pitchRange + key) - soundChannel->frequency;
+    soundChannel->unk14 = midi_key_to_freq(midiBus, key + midiChannel->modRange) - soundChannel->frequency;
 
     // Initialise SoundChannel.
     soundChannel->key = noteKey;
@@ -831,7 +831,7 @@ void midi_note_start(struct MidiBus *midiBus, u32 track, u8 noteKey, u8 noteVelo
         midi_sampler_stop(channelIndex);
         midi_sampler_load(channelIndex, instPCM->sample);
         midi_sampler_set_volume(channelIndex, midi_note_update_volume(soundChannel));
-        stereoPhase = (midiChannel->stereo) ? -1 : 1;
+        stereoPhase = (midiChannel->phaseStereo) ? -1 : 1;
         panning += midi_channel_get_panning(midiBus, track);
         if (panning < 0) panning = 0;
         if (panning > 127) panning = 127;
@@ -892,7 +892,7 @@ void midi_channel_update_panning(struct MidiBus *midiBus, u32 track) {
 
     panning = midi_channel_get_panning(midiBus, track);
     midiChannel = &midiBus->midiChannel[track];
-    isStereo = (midiChannel->stereo) ? -1 : 1;
+    isStereo = (midiChannel->phaseStereo) ? -1 : 1;
 
     for (i = 0, soundChannel = gMidiSoundChannelPool; i < gMidiSoundChannelCount; i++, soundChannel++) {
         if (soundChannel->active && (soundChannel->midiChannel == midiChannel)) {
@@ -965,9 +965,9 @@ void midi_channel_set_mod_type(struct MidiBus *midiBus, u32 track, u8 type) {
 }
 
 
-// Set MidiChannel unkC
-void midi_channel_set_unkC(struct MidiBus *midiBus, u32 track, u8 arg) {
-    midiBus->midiChannel[track].unkC = arg;
+// Set MidiChannel Modulation Range
+void midi_channel_set_mod_range(struct MidiBus *midiBus, u32 track, u8 arg) {
+    midiBus->midiChannel[track].modRange = arg;
 }
 
 
@@ -984,14 +984,14 @@ void midi_channel_set_mod_delay(struct MidiBus *midiBus, u32 track, u8 delay) {
 
 
 // Set MidiChannel Modulation Range [Ctrl_14]
-void midi_channel_set_mod_range(struct MidiBus *midiBus, u32 track, u8 range) {
-    midiBus->midiChannel[track].modRange = range;
+void midi_channel_set_pitch_range(struct MidiBus *midiBus, u32 track, u8 range) {
+    midiBus->midiChannel[track].pitchRange = range;
 }
 
 
 // Set MidiChannel Offset/Split Stereo Effect [Ctrl_4B]
 void midi_channel_set_stereo_phase(struct MidiBus *midiBus, u32 track, u32 isStereo) {
-    midiBus->midiChannel[track].stereo = isStereo;
+    midiBus->midiChannel[track].phaseStereo = isStereo;
     midi_channel_set_panning(midiBus, track, midiBus->midiChannel[track].panning);
 }
 
@@ -1002,7 +1002,9 @@ void midi_channel_set_priority(struct MidiBus *midiBus, u32 track, u8 priority) 
 }
 
 
-// Set MidiChannel Random Pitch Variation [Ctrl_52]
+// Set MidiChannel Random Base Pitch [Ctrl_52]
+    // Each time this channel performs a note, the base pitch of the note will be
+    // offset by an amount within this range. This pitch is only randomised on start.
 void midi_channel_set_random_pitch(struct MidiBus *midiBus, u32 track, u8 range) {
     u32 min = 0x8000u / (0x80 + range);
     u32 max = 0x10000u / (0x100 - range);
@@ -1019,8 +1021,8 @@ void midi_channel_set_random_key_mod_depth(struct MidiBus *midiBus, u32 track, u
 }
 
 
-// Set MidiChannel Random Key Modulation Interval [Ctrl_54]
-void midi_channel_set_random_key_mod_interval(struct MidiBus *midiBus, u32 track, u8 interval) {
+// Set MidiChannel Random Key Modulation Speed [Ctrl_54]
+void midi_channel_set_random_key_mod_speed(struct MidiBus *midiBus, u32 track, u8 interval) {
     midiBus->midiChannel[track].keyModInterval = interval;
     midiBus->midiChannel[track].keyModCount = interval;
 }
@@ -1037,7 +1039,7 @@ void midi_bus_set_key(struct MidiBus *midiBus, s8 key) {
 
 // Set MidiBus Volume
 void midi_bus_set_volume(struct MidiBus *midiBus, u8 volume) {
-    midiBus->busVolume = volume;
+    midiBus->volumeA = volume;
 }
 
 
@@ -1058,12 +1060,12 @@ void midi_bus_set_pitch(struct MidiBus *midiBus, s16 pitch) {
 }
 
 
-// Set MidiBus Modulation Range
-void midi_bus_set_mod_range(struct MidiBus *midiBus, u8 range) {
+// Set MidiBus Pitch Wheel Range
+void midi_bus_set_pitch_range(struct MidiBus *midiBus, u8 range) {
     u32 i;
 
     for (i = 0; i < midiBus->totalChannels; i++) {
-        midiBus->midiChannel[i].modRange = range;
+        midiBus->midiChannel[i].pitchRange = range;
     }
 }
 

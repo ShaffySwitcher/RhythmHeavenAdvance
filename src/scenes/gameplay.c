@@ -319,8 +319,8 @@ void gameplay_force_stop_music_midi_track(s32 midiTrack) {
 
     if ((soundPlayer == NULL) || (midiTrack < 0)) return;
 
-    soundPlayer->midiReader[midiTrack].active_curr = FALSE;
-    soundPlayer->midiReader[midiTrack].active_loop = FALSE;
+    soundPlayer->midiReader[midiTrack].active = FALSE;
+    soundPlayer->midiReader[midiTrack].activeAtLoop = FALSE;
 }
 
 

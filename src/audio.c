@@ -238,18 +238,18 @@ void fade_out_all_soundplayers(u16 duration) {
 }
 
 
-// Set SoundPlayer Volume
+// Set SoundPlayer Primary Volume Envelope
 void set_soundplayer_volume(struct SoundPlayer *soundPlayer, u8_8 volume) {
     if (soundPlayer != NULL) {
-        midi_player_set_volume(soundPlayer, volume);
+        midi_player_set_volume_a(soundPlayer, volume);
     }
 }
 
 
-// Set SoundPlayer Track Volume & Mask
+// Set SoundPlayer Secondary Volume Envelope and Track Mask
 void set_soundplayer_track_volume(struct SoundPlayer *soundPlayer, u16 trackMask, u8_8 volume) {
     if (soundPlayer != NULL) {
-        midi_player_set_track_volume(soundPlayer, trackMask, volume);
+        midi_player_set_volume_b(soundPlayer, trackMask, volume);
     }
 }
 

@@ -240,98 +240,98 @@ struct SongHeader {
 /* MIDI PLAYER DEVICES */
 
 struct MidiChannel {
-    u32 disabled:1;     // Disable MidiChannel [default = FALSE]
-    u32 fixedPitch:1;   // Disable Pitch Modulation [default = FALSE]
-    u32 instPatch:7;    // Instrument Patch Number [Evnt_C; default = 0]
-    u32 bankSelect:14;  // Bank Select (underused) [Ctrl_00; Ctrl_20; default = 0]
-    u32 volume:7;       // Channel Volume [Ctrl_07; default = 100]
-    u32 filterEQ:1;     // Use Equalizer [Ctrl_48; default = FALSE]
-    u32 stereo:1;       // Stereo Phase Effect [Ctrl_4B; default = FALSE]
-    u32 panning:7;      // Channel Panning [Ctrl_0A; default = 0x40]
-    u32 expression:7;   // Expression [Ctrl_0B; default = 127]
-    u32 modDepth:7;     // Modulation Depth [Ctrl_01; default = 0]
-    u32 unk4_b21:7;     // ? [default = 0]
-    u32 modType:2;      // Modulation Type [default = PITCH]
+    u32 disabled:1;     // Disable channel.
+    u32 fixedPitch:1;   // Disable pitch modulation.
+    u32 instPatch:7;    // Instrument patch number (0-127).
+    u32 bankSelect:14;  // Target bank (unused - MIDI specification only).
+    u32 volume:7;       // Volume level (0-127).
+    u32 filterEQ:1;     // Apply EQ filter to output.
+    u32 phaseStereo:1;  // Apply stereo phase effect.
+    u32 panning:7;      // Panning level (0-64-127).
+    u32 expression:7;   // Expression level (0-127).
+    u32 modDepth:7;     // Modulation depth.
+    u32 unk4_b21:7;     // Unknown modifiable value (defaults to 0).
+    u32 modType:2;      // Modulation target (defaults to PITCH).
     u32 unk4_b30:2;     // Unused
-    u32 pitchWheel:14;  // Pitch Wheel [Evnt_E; default = 0x2000]
-    u32 volumeWheel:8;  // Volume Wheel
-    u32 priority:10;    // Priority [Ctrl_20; default = 0]
-    u8  unkC;           // ? [default = 1]
-    s8  modResult;      // Modulation Result [Ctrl_01; default = 0]
+    u32 pitchWheel:14;  // 14-bit signed pitch envelope.
+    u32 volumeWheel:8;  // 8-bit unsigned volume envelope.
+    u32 priority:10;    // Priority.
+    u8  modRange;       // Modulation range.
+    s8  modResult;      // Modulation value.
     u8  unkE;           // Unused
-    u8  modRange;       // Pitch Wheel Range [Ctrl_14; default = 2]
-    u16 modSpeed;       // Modulation Counter Increment [Ctrl_15; default = 0x3C00]
-    u16 modCount;       // Modulation Counter (ticks Up) [Ctrl_15; default = 0]
-    u8  modDelay;       // Modulation Delay Time [Ctrl_1A; default = 0]
-    u8  modDelayCount;  // Modulation Delay Counter (ticks down) [Ctrl_1A; default = 0]
-    u16 randomPitchFloor;   // Random Pitch Minimum [Ctrl_52; default = 0x100]
-    u16 randomPitchRange;   // Random Pitch Range [Ctrl_52; default = 0]
-    u16 randomPitchResult;  // Random Pitch Result [Ctrl_52; default = 0x100]
-    u8  keyModDepth;        // Random Key Modulation Max Offset [Ctrl_53; default = 0]
-    u8  keyModInterval;     // Random Key Modulation Interval [Ctrl_54; default = 0]
-    u8  keyModCount;        // Random Key Modulation Counter [Ctrl_54; default = 0]
+    u8  pitchRange;     // Pitch wheel range, in octaves (defaults to 2).
+    u16 modSpeed;       // Q8.8 modulation counter increment (defaults to 60.0).
+    u16 modCount;       // Q8.8 modulation counter, ticking up.
+    u8  modDelay;       // Modulation base delay time, in frames.
+    u8  modDelayCount;  // Modulation delay clock, ticking down to 0.
+    u16 randomPitchFloor;   // Q8.8 random base pitch - minimum.
+    u16 randomPitchRange;   // Q8.8 random base pitch - range.
+    u16 randomPitchResult;  // Q8.8 random base pitch - value.
+    u8  keyModDepth;        // Random key modulation - max offset.
+    u8  keyModInterval;     // Random key modulation - interval.
+    u8  keyModCount;        // Random key modulation - clock.
 };
 
 struct MidiBus {
-    u8  busVolume;
-    u8  trackVolume;
-    u16 trackMask;
-    s8  key;
-    s8  panning;
-    s16 pitch;
-    u16 unk8;
-    u16 *tuningTable;
-    union Instrument *soundBank;
-    u32 totalChannels:5;
-    u32 priority:27;
-    struct MidiChannel *midiChannel;
-    s8  unk1C[12];
+    u8  volumeA;            // Primary volume level.
+    u8  volumeB;            // Secondary volume level.
+    u16 volumeTrackMap;     // Bitmask mapping of MIDI Tracks to primary or secondary volume levels.
+    s8  key;                // Output MIDI key offset.
+    s8  panning;            // Output panning offset.
+    s16 pitch;              // Q8.8 output pitch offset.
+    u16 unk8;               // Q8.8 unknown modifiable value (defaults to 20.0).
+    u16 *tuningTable;       // MIDI key frequency table.
+    union Instrument *soundBank;     // Instrument bank.
+    u32 totalChannels:5;             // Total number of MidiChannels controlled by this MidiBus.
+    u32 priority:27;                 // Priority value.
+    struct MidiChannel *midiChannel; // MIDI Channel array.
+    s8  keyModScale[12];             // Offsets for each key in an octave for randomised key modulation.
 };
 
 struct MidiTrackStream {
-    u32 active_curr:1;  // Active State (Current)
-    u32 active_loop:1;  // Active State (At Loop Start)
-    u32 command_curr:8; // Command (Current)
-    u32 command_loop:8; // Command (At Loop Start)
-    u32 inLoop:1;       // Reader is within MIDI loop region (note: label may not be accurate). [default = 0]
-    const u8 *stream_start;   // Stream Position: Track Start
-    const u8 *stream_curr;    // Stream Position: Current
-    u32 unkC;           // ?? ( = initial deltaTime << 8)
-    const u8 *stream_loop;    // Stream Position: Loop Start
-    u32 unk14;          // ?? (may be unused?)
-    u32 runningTime;    // Time until next instruction? (already parsed from variable-length quantity)
+    u32 active:1;           // TRUE if active.
+    u32 activeAtLoop:1;     // TRUE if active at Loop Start.
+    u32 command:8;          // Buffered MIDI instruction.
+    u32 commandAtLoop:8;    // Buffered MIDI instruction at Loop Start.
+    u32 withinLoop:1;       // TRUE if this stream has been updated for the loop region.
+    const u8 *startPos;     // Track start position.
+    const u8 *currentPos;   // Current position.
+    u32 clocksThisFrame;    // Clocks passed this frame.
+    const u8 *loopStartPos; // Loop Start position.
+    u32 unused;             // Unused value.
+    u32 clocksPassed;       // Clocks passed in total.
 };
 
 struct SoundPlayer {
-    u32 totalTracks:5;  // Maximum number of MIDI Tracks this SoundPlayer is able to process.
-    u32 usedTracks:5;   // Total number of MIDI Tracks used by the current MIDI.
-    u32 inLoop:1;       // Channel is currently within MIDI loop region. [default = 0]
-    u32 isPaused:1;     // Paused State { 0 = Unpaused; 1 = Paused }
-    u32 midiTempo:9;    // Current MIDI Tempo, in Beats Per Minute (BPM).
-    u32 priorityEnabled:1;  // If enabled, check priority values before playing a new sound.
-    u32 unk0_b22:5;         // (indeterminate split; may be unused entirely)
-    u32 volumeFadeType:3;   // Type of currently-active Volume Fade { 0 = None; 1 = Fade-In; 2 = Fade-Out & Close; 3 = Fade-Out & Pause }
-    struct MidiBus *midiBus;            // MIDI: Bus with effects for all MIDI Channels.
-    struct MidiTrackStream *midiReader; // MIDI: Multiple structures which each keep track of a MIDI Track being processed.
-    struct SongHeader *song;    // SongHeader: Currently-loaded Sound Sequence.
-    u32 deltaTime;              // MIDI: Ticks Per Frame, using internal assumption of 60fps [default = 1]
-    const char *loopStartSym;   // MIDI: Label denoting "Loop Start". [always '[']
-    const char *loopEndSym;     // MIDI: Label denoting "Loop End". [always ']']
-    u8  loopStartSymSize;   // MIDI: Length of the "Loop Start" label. [always 1]
-    u8  loopEndSymSize;     // MIDI: Length of the "Loop End" label. [always 1]
-    u16 midiQuarterNote;    // MIDI: Value denoting 1 beat. [effectively always 24]
-    u16 playerVolume;   // Channel Gain (Volume) Envelope. [Q8.8]
-    u16 trackVolume;    // Gain Envelope for a selection of MIDI Tracks. [Q8.8]
-    u16 trackMask;      // Selection of MIDI Tracks to apply Gain Envelope.
-    u16 playerSpeed;    // Speed Multiplier Envelope. [Q8.8]
-    u16 volumeFadeEnv;  // Volume Multiplier Envelope used for fade-out and mute effects. [Q1.15]
-    u16 volumeFadeSpd;  // Higher values for faster fade-out. Is set to 1 when track is muted instantly. [default = 0]
-    u8  songVolume;     // SongHeader: Volume
-    s8  midiController4E;   // ??: [default = 64]
-    s8  midiController4F;   // ??: [default = 64]
-    s8  midiController50;   // ??: [default = 64]
-    s8  midiController51;   // ??: [default = 64]
-    u32 unk34;      // ??: (is set to midiReader->deltaTime upon hitting a loop start marker) [default = 0]
+    u32 totalTracks:5;      // Maximum MIDI Tracks this SoundPlayer can process.
+    u32 usedTracks:5;       // Total MIDI Tracks used by the current MIDI, no higher than the maximum.
+    u32 withinLoop:1;       // Set to TRUE upon passing the Loop Start marker.
+    u32 isPaused:1;         // Set to TRUE when paused.
+    u32 midiTempo:9;        // Current MIDI tempo, in Beats Per Minute.
+    u32 priorityEnabled:1;  // If TRUE, priority values will be checked before playing a new sound.
+    u32 unused:5;           // Unused.
+    u32 volumeFadeType:3;   // Current volume fade effect type.
+    struct MidiBus *midiBus;            // Effect and playback manager for all MIDI Channels.
+    struct MidiTrackStream *midiReader; // Array of MIDI Track streams.
+    struct SongHeader *song;    // Current loaded SongHeader.
+    u32 clocksPerFrame;         // Q24.8 MIDI clocks passed each frame, assuming 60FPS.
+    const char *loopStartSym;   // String denoting Loop Start marker ("[").
+    const char *loopEndSym;     // String denoting Loop End marker ("]").
+    u8  loopStartSymLen;        // Length of the Loop Start marker string (1).
+    u8  loopEndSymLen;          // Length of the Loop End marker string (1).
+    u16 midiQuarterNote;        // Number of MIDI clocks per quarter note, as defined by the MIDI.
+    u16 volumeA;            // Q8.8 primary volume envelope.
+    u16 volumeB;            // Q8.8 secondary volume envelope.
+    u16 volumeTrackMap;     // Bitmask mapping of MIDI Tracks to primary or secondary volume envelopes.
+    u16 playerSpeed;        // Q8.8 playback speed envelope.
+    u16 volumeFadeEnv;      // Q1.15 volume fade envelope.
+    u16 volumeFadeSpd;      // Q1.15 volume fade increment per frame.
+    u8  songVolume;         // Base volume, as specified by the SongHeader.
+    s8  rvb1Wet;            // 64 + RVB1.
+    s8  rvb2Phase;          // 64 + RVB2.
+    s8  rvb3Decay;          // 64 + RVB3.
+    s8  rvb4LowCut;         // 64 + RVB4.
+    u32 clocksPassedAtLoop; // Clocks passed upon reaching the Loop Start marker.
 };
 
 // Sound Channel
