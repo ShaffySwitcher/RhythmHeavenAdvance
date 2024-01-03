@@ -336,41 +336,41 @@ struct SoundPlayer {
 
 // Sound Channel
 struct SoundChannel {
-    u32 active:1;
-    u32 key:7; // MIDI Key
-    u32 velocity:7; // MIDI Velocity
-    u32 frequency:17;
-    union Instrument instrument;
-    struct MidiBus *midiBus;
-    struct MidiChannel *midiChannel;
-    u16 unk10;
-    u16 unk12;
-    s16 unk14;
-    u16 priority:15;
-    u16 unk17_b7:1;
-    s16 panning;
-    struct BufferADSR {
-        u32 stage:8;
-        u32 envelope:24;
-    } adsr;
+    u32 active:1;       // TRUE if currently outputting a note.
+    u32 key:7;          // MIDI key (0-127).
+    u32 velocity:7;     // MIDI velocity (0-127).
+    u32 frequency:17;   // Frequency, in hertz.
+    union Instrument instrument;        // Current instrument.
+    struct MidiBus *midiBus;            // Source channel bus.
+    struct MidiChannel *midiChannel;    // Source MIDI Channel.
+    u16 pitchDecFreq;   // Difference between the current frequency and the lowest frequency within range, in hertz.
+    u16 pitchIncFreq;   // Difference between the highest frequency within range and the current frequency, in hertz.
+    s16 modStepFreq;    // Frequency of a modulation output step, in hertz.
+    u16 priority:15;    // Priority value.
+    u16 justStarted:1;  // Set to TRUE between initialisation and the first update.
+    s16 panning;        // Panning value.
+    struct AdsrEnvelope {
+        u32 stage:8;        // Current stage (starts on ATTACK).
+        u32 envelope:24;    // Volume envelope.
+    } adsr;             // ADSR controller.
 };
 
 // DirectSound Sample Reader/Stream
 struct SampleStream {
-    u8 active:1;
-    u8 hasFrequency:1;  // TRUE if Frequency Envelope is not 1.0 (Q18.14)
-    u8 fastRead:1;      // Use Fast Resample PCM Read Method
-    u8 equalize:1;      // Use Equalizer
-    u8 volume;          // Volume
-    s8 leftBias;        // Stereo Left Bias
-    s8 rightBias;       // Stereo Right Bias
-    const u32 *sample;  // Sample - Stream
-    u32 length;         // Sample - Length << 14
-    u32 position;       // Sample - Stream Position << 14
-    u32 loopStart;      // Sample - Loop Start << 14
-    u32 loopEnd;        // Sample - Loop End << 14
-    u32 frequency;      // Frequency Envelope
-    u32 rate;           // ? (samplerate-related)
+    u8 active:1;        // TRUE if the stream is outputting samples.
+    u8 hasFrequency:1;  // TRUE if sample output rate is not 1.0.
+    u8 fastRead:1;      // Use Fast-Resample PCM read method.
+    u8 equalize:1;      // Apply EQ filter.
+    u8 volume;          // Volume envelope.
+    s8 leftBias;        // Stereo left bias.
+    s8 rightBias;       // Stereo right bias.
+    const u32 *sample;  // PCM wave address.
+    u32 length;         // Q18.14 sample length.
+    u32 position;       // Q18.14 stream position.
+    u32 loopStart;      // Q18.14 loop start offset.
+    u32 loopEnd;        // Q18.14 loop end offset.
+    u32 frequency;      // Q18.14 sample output rate.
+    u32 rate;           // uh... something that helps convert note frequency to 13379Hz
 };
 
 enum LfoModesEnum {

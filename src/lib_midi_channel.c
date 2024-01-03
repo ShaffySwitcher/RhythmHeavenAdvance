@@ -257,15 +257,15 @@ u32 midi_note_update_pitch(struct SoundChannel *soundChannel) {
         outputFrequency = midi_key_to_freq(midiBus, randomKey);
         soundChannel->frequency = outputFrequency;
         pitchRange = midiChannel->pitchRange;
-        soundChannel->unk10 = soundChannel->frequency - midi_key_to_freq(midiBus, randomKey - pitchRange);
-        soundChannel->unk12 = midi_key_to_freq(midiBus, randomKey + pitchRange) - soundChannel->frequency;
-        soundChannel->unk14 = midi_key_to_freq(midiBus, randomKey + midiChannel->modRange) - soundChannel->frequency;
+        soundChannel->pitchDecFreq = soundChannel->frequency - midi_key_to_freq(midiBus, randomKey - pitchRange);
+        soundChannel->pitchIncFreq = midi_key_to_freq(midiBus, randomKey + pitchRange) - soundChannel->frequency;
+        soundChannel->modStepFreq = midi_key_to_freq(midiBus, randomKey + midiChannel->modRange) - soundChannel->frequency;
     }
 
     // Pitch Envelope: MidiChannel Pitch Wheel (14 Bits, Signed)
     pitchWheel = midiChannel->pitchWheel;
     if (pitchWheel != 0x2000) {
-        u32 frequencyRange = (pitchWheel < 0x2000) ? soundChannel->unk10 : soundChannel->unk12;
+        u32 frequencyRange = (pitchWheel < 0x2000) ? soundChannel->pitchDecFreq : soundChannel->pitchIncFreq;
 
         if (pitchWheel < 0x2000) {
             outputFrequency -= frequencyRange;
@@ -304,7 +304,7 @@ u32 midi_note_update_pitch(struct SoundChannel *soundChannel) {
 
     // Pitch Envelope: Modulation
     if (midiChannel->modType == MOD_TYPE_VIBRATO) {
-        outputFrequency += ((midiChannel->modResult * soundChannel->unk14 * 8) >> 8);
+        outputFrequency += ((midiChannel->modResult * soundChannel->modStepFreq * 8) >> 8);
     }
 
     // Pitch Envelope: Random Pitch
@@ -332,7 +332,7 @@ u32 midi_note_update_volume(struct SoundChannel *soundChannel) {
 // Update SoundChannel ADSR
 u32 midi_note_update_adsr(struct SoundChannel *soundChannel) {
     struct InstrumentPCM *instrument;
-    struct BufferADSR *adsr;
+    struct AdsrEnvelope *adsr;
     u32 finished;
     s32 envelope;
     u32 release;
@@ -429,7 +429,7 @@ void midi_note_update_id(u32 id) {
     }
 
     if (midi_sampler_is_active(id)) {
-        soundChannel->unk17_b7 = FALSE;
+        soundChannel->justStarted = FALSE;
         if (!soundChannel->midiChannel->fixedPitch) {
             midi_sampler_set_frequency(id, midi_note_update_pitch(soundChannel));
         }
@@ -474,7 +474,7 @@ void midi_note_init(u32 totalChannels, struct SoundChannel *soundChannelPool) {
 // Get First Active PCM SoundChannel not at ADSR Stage RELEASE.
 s32 midi_note_get_first_active(struct MidiChannel *midiChannel, u8 key) {
     struct SoundChannel *soundChannel = gMidiSoundChannelPool;
-    struct BufferADSR *adsr;
+    struct AdsrEnvelope *adsr;
     s32 i;
 
     for (i = 0; i < gMidiSoundChannelCount; i++, soundChannel++) {
@@ -570,7 +570,7 @@ s32 midi_note_get_least_significant(struct MidiBus *midiBus, u32 track, u32 velo
         }
 
         if (soundChannel->priority == lowestPriority) {
-            if ((lowestPriority == channelPriority) && soundChannel->unk17_b7) {
+            if ((lowestPriority == channelPriority) && soundChannel->justStarted) {
                 u32 volume = soundChannel->velocity;
                 volume *= soundChannel->midiChannel->volumeWheel;
                 if (volume > velocity) {
@@ -599,7 +599,7 @@ s32 midi_note_get_least_significant(struct MidiBus *midiBus, u32 track, u32 velo
 // SoundChannel Midi 'Note Off' Event
 void midi_note_stop(struct MidiBus *midiBus, u32 track, u8 key) {
     struct SoundChannel *psgChannel, *pcmChannel;
-    struct BufferADSR *adsr;
+    struct AdsrEnvelope *adsr;
     s32 adsrState;
     s32 i;
 
@@ -687,7 +687,7 @@ void midi_note_start(struct MidiBus *midiBus, u32 track, u8 noteKey, u8 noteVelo
     union Instrument instrument;
     struct InstrumentPCM *instPCM;
     struct InstrumentPSG *instPSG;
-    struct BufferADSR *adsr;
+    struct AdsrEnvelope *adsr;
 
     // A "Note ON" instruction with a velocity of 0 is a "Note OFF" instruction.
     if (noteVelocity == 0) {
@@ -794,9 +794,9 @@ void midi_note_start(struct MidiBus *midiBus, u32 track, u8 noteKey, u8 noteVelo
     }
 
     pitchRange = midiChannel->pitchRange;
-    soundChannel->unk10 = soundChannel->frequency - midi_key_to_freq(midiBus, key - pitchRange);
-    soundChannel->unk12 = midi_key_to_freq(midiBus, pitchRange + key) - soundChannel->frequency;
-    soundChannel->unk14 = midi_key_to_freq(midiBus, key + midiChannel->modRange) - soundChannel->frequency;
+    soundChannel->pitchDecFreq = soundChannel->frequency - midi_key_to_freq(midiBus, key - pitchRange);
+    soundChannel->pitchIncFreq = midi_key_to_freq(midiBus, pitchRange + key) - soundChannel->frequency;
+    soundChannel->modStepFreq = midi_key_to_freq(midiBus, key + midiChannel->modRange) - soundChannel->frequency;
 
     // Initialise SoundChannel.
     soundChannel->key = noteKey;
@@ -804,7 +804,7 @@ void midi_note_start(struct MidiBus *midiBus, u32 track, u8 noteKey, u8 noteVelo
     soundChannel->midiChannel = midiChannel;
     soundChannel->panning = panning;
     soundChannel->priority = (midiChannel->priority << 4) + (15 - track);
-    soundChannel->unk17_b7 = TRUE;
+    soundChannel->justStarted = TRUE;
     soundChannel->midiBus = midiBus;
 
     // Initialise SoundChannel ADSR.
