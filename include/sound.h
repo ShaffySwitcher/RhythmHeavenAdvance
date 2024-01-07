@@ -164,15 +164,27 @@ enum InstrumentBanksEnum {
 	INST_BANK_63
 };
 
+
+/* DATA STRUCTURES */
+
+
+// Sample Data (known in M4A as "WaveData")
+    // Contains information from header and sampler data sections of standard
+    // audio file formats.
+    //
+    // Both 'loopStart' and 'loopEnd' must be set to 0 for there to be no loop.
 struct SampleData {
-	u32 length;
-	u32 sampleRate;
-	u32 pitch;
-	u32 loopStart;
-	u32 loopEnd;
-	const u32 *waveform;
+	u32 length;     // Waveform length, in bytes.
+	u32 sampleRate; // Base samplerate, in Hertz.
+	u32 pitch;      // Sample base MIDI key.
+	u32 loopStart;  // Sample loop start offset, in bytes.
+	u32 loopEnd;    // Sample loop end offset, in bytes.
+	const u32 *waveform; // Waveform address.
 };
 
+// Instrument Data (known in M4A as "ToneData")
+    // Contains information akin to standard MIDI sound bank file formats,
+    // and up to 128 may appear (directly) in each bank.
 union Instrument {
     u8 *type;
     struct InstrumentPCM *pcm;
@@ -181,51 +193,103 @@ union Instrument {
     struct InstrumentSubSplit *spl;
 };
 
+// PCM Instrument Data
+    // Contains note playback information for PCM sampled instruments.
+    //
+    // The type can be either PCM_ALIGNED ('A') or PCM_FIXED ('F'). The former
+    // allows the tone to play at a variety of keys/pitches. The latter
+    // forces the tone to output its samples to the PCM buffer at a 1:1 rate,
+    // which may have unintended results if the waveform samplerate does not
+    // match the global output samplerate (13379Hz by default).
+    //
+    // The 'key' and 'panning' fields provide default values to use only when
+    // called as part of a percussion bank.
 struct InstrumentPCM {
-	u8 type;
-	u8 key:7;
-    u8 fastRead:1;
-	s16 panning;
-	struct SampleData *sample;
-	s32 initial;
-	s32 sustain;
-	s32 attack;
-	s32 decay;
-	s32 fade;
-	s32 release;
+	u8 type;        // Tone type (common). Always either PCM_ALIGNED or PCM_FIXED.
+	u8 key:7;       // Default MIDI key, if part of a percussion bank.
+    u8 fastRead:1;  // If TRUE, use Fast-Resample PCM read method.
+	s16 panning;    // Default MIDI panning, if part of a percussion bank.
+	struct SampleData *sample;  // Sampling data.
+	s32 initial;    // Q16.16 ADSR initial envelope value.
+	s32 sustain;    // Q16.16 ADSR envelope level during SUSTAIN stage.
+	s32 attack;     // Q16.16 ADSR inc. during ATTACK stage.
+	s32 decay;      // Q16.16 ADSR dec. during DECAY stage.
+	s32 fade;       // Q16.16 ADSR dec. during SUSTAIN stage.
+	s32 release;    // Q16.16 ADSR dec. during RELEASE stage.
 };
 
+// PSG Instrument Data
+    // Contains note playback information for instruments output through the
+    // CGB sound channels.
+    //
+    // The type can be either PSG ('P') or PSG_ALT ('Q'). There is no functional
+    // difference between these two types, and the latter is never used in
+    // Rhythm Tengoku.
+    //
+    // The 'key' and 'panning' fields provide default values to use only when
+    // called as part of a percussion bank.
 struct InstrumentPSG {
-	u8 type;
-	u8 key;
-	s16 panning;
-	u32 *wavetable;
-	s32 initial;
-	s32 sustain;
-	s32 attack;
-	s32 decay;
-	s32 fade;
-	s32 release;
-	u32 channel:2;
-	u32 length:8;
-	u32 sweep:7;
-    u32 dutyTone:2;
-    u32 dutyNoise:13;
+	u8 type;        // Tone type (common). Always either PSG or PSG_ALT.
+	u8 key;         // Base MIDI key, if part of a percussion bank.
+	s16 panning;    // Base MIDI panning, if part of a percussion bank.
+	u32 *wavetable; // 4-bit waveform (32 samples), for the WAVE channel.
+	s32 initial;    // Q16.16 ADSR initial envelope value.
+	s32 sustain;    // Q16.16 ADSR envelope level during SUSTAIN stage.
+	s32 attack;     // Q16.16 ADSR inc. during ATTACK stage.
+	s32 decay;      // Q16.16 ADSR dec. during DECAY stage.
+	s32 fade;       // Q16.16 ADSR dec. during SUSTAIN stage.
+	s32 release;    // Q16.16 ADSR dec. during RELEASE stage.
+	u32 channel:2;  // Target CGB sound channel.
+	u32 length:8;   // Note length (inserted directly into the relevant sound register).
+	u32 sweep:7;    // Sweep parameters (all, inserted directly into REG_SOUND1CNT_L).
+    u32 dutyTone:2; // Duty cycle, for PULSE channels.
+    u32 dutyNoise:13; // Duty cycle, for the NOISE channel.
 };
 
+// Percussion Bank Data
+    // Contains an instrument bank and the base MIDI key which instrument
+    // mapping starts on.
+    //
+    // The type can only be SUB_RHYTHM ('R'). The label "rhythm" originates
+    // from M4A.
+    //
+    // Unintended playback or crashes may occur if the instrument is made to
+    // perform a note lower than its base key. Additionally, if the requested
+    // instrument within the sub-bank is another sub-bank instrument, playback
+    // will be denied entirely.
 struct InstrumentSubRhythm {
-	u32 type:8;
-	u32 total:24;
-	union Instrument *subBank;
+	u32 type:8;         // Tone type (common). Always SUB_RHYTHM.
+	u32 baseKey:24;     // Base MIDI key where instrument mapping starts.
+	union Instrument *subBank;  // Instrument sub-bank.
 };
 
+// Multi-Instrument Data
+    // Contains an instrument bank, an array of key-instrument mappings,
+    // and the base MIDI key which key-instrument mapping starts on.
+    //
+    // The type can only be SUB_SPLIT ('S'). The label "split" originates
+    // from M4A.
+    //
+    // Unintended playback or crashes may occur if the instrument is made to
+    // perform a note lower than its base key, and/or if the key split table
+    // requests an out-of-range instrument. Additionally, if the requested
+    // instrument within the sub-bank is another sub-bank instrument, playback
+    // will be denied entirely.
 struct InstrumentSubSplit {
-    u32 type:8;
-	u32 total:24;
-	u8 *keySplitTable;
-	union Instrument *subBank;
+    u32 type:8;         // Tone type (common). Always SUB_SPLIT.
+	u32 baseKey:24;     // Base MIDI key where key-instrument mapping starts.
+	u8 *keySplitTable;  // Key-instrument mapping table.
+	union Instrument *subBank;  // Instrument sub-bank.
 };
 
+// Song Header (name from M4A)
+    // The main sound file to be referenced throughout a project using the
+    // MIDI library. Contains the primary playback information for a music
+    // sequence.
+    //
+    // The 'songNum' field is a holdover from M4A, though it is still used when
+    // determining the default SoundPlayer to play this song with, despite the
+    // presence of a 'soundPlayer' field here (which is never read).
 struct SongHeader {
     const u8 *midiSequence;
     u32 soundPlayer:5;
@@ -237,8 +301,18 @@ struct SongHeader {
     u32 songNum;
 };
 
-/* MIDI PLAYER DEVICES */
 
+/* MEMORY STRUCTURES */
+
+
+// MIDI Channel
+    // Strongly resembling the MIDI Channel of General MIDI specifications,
+    // containing runtime instrument playback memory. Some fields are
+    // modifiable but serve no purpose in the library.
+    //
+    // Despite General MIDI separating MIDI Channels from MIDI Tracks, the
+    // library always uses the Track ID wherever the Channel ID would be
+    // requested.
 struct MidiChannel {
     u32 disabled:1;     // Disable channel.
     u32 fixedPitch:1;   // Disable pitch modulation.
@@ -272,6 +346,9 @@ struct MidiChannel {
     u8  keyModCount;        // Random key modulation - clock.
 };
 
+// MIDI Channel Bus
+    // Manages MIDI Channel output for all given tracks for a SoundPlayer,
+    // including allocation of playback to output Sound Channels.
 struct MidiBus {
     u8  volumeA;            // Primary volume level.
     u8  volumeB;            // Secondary volume level.
@@ -288,6 +365,11 @@ struct MidiBus {
     s8  keyModScale[12];             // Offsets for each key in an octave for randomised key modulation.
 };
 
+// MIDI Track Stream/Reader
+    // Reads instructions from a specific MIDI Track.
+    //
+    // Despite General MIDI specifications, each of these streams has a respective
+    // MIDI Channel which it will always provide instructions for.
 struct MidiTrackStream {
     u32 active:1;           // TRUE if active.
     u32 activeAtLoop:1;     // TRUE if active at Loop Start.
@@ -302,6 +384,10 @@ struct MidiTrackStream {
     u32 clocksPassed;       // Clocks passed in total.
 };
 
+// MIDI Player
+    // The primary structure for sound playback. A convention seems to exist
+    // where sound play/start functions must return a pointer to the SoundPlayer
+    // which is now playing it.
 struct SoundPlayer {
     u32 totalTracks:5;      // Maximum MIDI Tracks this SoundPlayer can process.
     u32 usedTracks:5;       // Total MIDI Tracks used by the current MIDI, no higher than the maximum.
@@ -335,6 +421,12 @@ struct SoundPlayer {
 };
 
 // Sound Channel
+    // Instrument/note playback controller, functioning as a virtual instrument.
+    //
+    // Four of these are especially reserved for CGB sound channel playback,
+    // while the total number of those used for PCM sampled instruments may be
+    // specified at compile-time (the default is 12). Each of the PCM sampled
+    // Sound Channels has a respective SampleStream for buffered waveform output.
 struct SoundChannel {
     u32 active:1;       // TRUE if currently outputting a note.
     u32 key:7;          // MIDI key (0-127).
@@ -355,11 +447,12 @@ struct SoundChannel {
     } adsr;             // ADSR controller.
 };
 
-// DirectSound Sample Reader/Stream
+// DirectSound Sample Stream
+    // Reads and writes PCM sampled data to the PCM buffer.
 struct SampleStream {
     u8 active:1;        // TRUE if the stream is outputting samples.
     u8 hasFrequency:1;  // TRUE if sample output rate is not 1.0.
-    u8 fastRead:1;      // Use Fast-Resample PCM read method.
+    u8 fastRead:1;      // If TRUE, use Fast-Resample PCM read method.
     u8 equalize:1;      // Apply EQ filter.
     u8 volume;          // Volume envelope.
     s8 leftBias;        // Stereo left bias.

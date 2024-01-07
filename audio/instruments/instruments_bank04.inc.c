@@ -565,13 +565,13 @@ struct InstrumentPCM instrument_pcm_0118 = {
 extern union Instrument inst_bank_47[];
 struct InstrumentSubRhythm instrument_rhy_0119 = {
     /* Type      */ INSTRUMENT_SUB_RHYTHM,
-    /* Total     */ 36,
+    /* Base Key  */ 36,
     /* Sub-Bank  */ inst_bank_47
 };
 
 extern union Instrument inst_bank_54[];
 struct InstrumentSubRhythm instrument_rhy_0120 = {
     /* Type      */ INSTRUMENT_SUB_RHYTHM,
-    /* Total     */ 36,
+    /* Base Key  */ 36,
     /* Sub-Bank  */ inst_bank_54
 };

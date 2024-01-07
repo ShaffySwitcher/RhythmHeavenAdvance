@@ -1157,24 +1157,7 @@ void midi_direct_player_update(void) {
 /* SOUND AREA */
 
 
-static struct SoundPlayer sMusicPlayer0;
-static struct SoundPlayer sMusicPlayer1;
-static struct SoundPlayer sMusicPlayer2;
-static struct SoundPlayer sSfxPlayer0;
-static struct SoundPlayer sSfxPlayer1;
-static struct SoundPlayer sSfxPlayer2;
-static struct SoundPlayer sSfxPlayer3;
-static struct SoundPlayer sSfxPlayer4;
-static struct SoundPlayer sSfxPlayer5;
-static struct SoundPlayer sSfxPlayer6;
-static struct SoundPlayer sSfxPlayer7;
-static struct SoundPlayer sSfxPlayer8;
-static struct SoundPlayer sSfxPlayer9;
-
-extern s32 sPCMBufferArea[1568 * 2 / 4];
-extern s32 sPCMScratchArea[0x80 * 2];
-extern struct SampleStream sSamplerArea[12];
-extern struct SoundChannel sSoundChannelArea[12];
+#include "audio/sound_players.inc.c"
 
 
 // Initialise Sound Area
@@ -1182,8 +1165,8 @@ void midi_sound_init(void) {
     u32 i;
 
     midi_directsound_init(DIRECTSOUND_MODE_STEREO, AUDIO_SAMPLE_RATE,
-                    DMA_SAMPLE_BUFFER_SIZE, sPCMBufferArea,
-                    SAMPLE_SCRATCHPAD_SIZE, sPCMScratchArea,
+                    DMA_SAMPLE_BUFFER_SIZE, (void *)sPCMBufferArea,
+                    SAMPLE_SCRATCHPAD_SIZE, (void *)sPCMScratchArea,
                     DIRECTSOUND_CHANNEL_COUNT, sSamplerArea);
     midi_psg_init();
     midi_note_init(DIRECTSOUND_CHANNEL_COUNT, sSoundChannelArea);
@@ -1209,5 +1192,3 @@ void midi_sound_init(void) {
     gMidiRVB_ControlBuf[3] = 0;
     sDirectPlayer = NULL;
 }
-
-#include "audio/sound_players.inc.c"
