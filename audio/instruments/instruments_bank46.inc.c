@@ -211,7 +211,7 @@ struct InstrumentPCM instrument_pcm_0926 = {
 extern union Instrument inst_bank_30[];
 struct InstrumentSubSplit instrument_spl_0927 = {
     /* Type      */ INSTRUMENT_SUB_SPLIT,
-    /* Total     */ 12,
+    /* Base Key  */ 12,
     /* Key Split */ keysplit_table_3,
     /* Sub-Bank  */ inst_bank_30
 };
@@ -309,7 +309,7 @@ struct InstrumentPCM instrument_pcm_0933 = {
 extern union Instrument inst_bank_29[];
 struct InstrumentSubSplit instrument_spl_0934 = {
     /* Type      */ INSTRUMENT_SUB_SPLIT,
-    /* Total     */ 12,
+    /* Base Key  */ 12,
     /* Key Split */ keysplit_table_1,
     /* Sub-Bank  */ inst_bank_29
 };
@@ -587,34 +587,34 @@ struct InstrumentPCM instrument_pcm_0952 = {
 extern union Instrument inst_bank_52[];
 struct InstrumentSubRhythm instrument_rhy_0953 = {
     /* Type      */ INSTRUMENT_SUB_RHYTHM,
-    /* Total     */ 36,
+    /* Base Key  */ 36,
     /* Sub-Bank  */ inst_bank_52
 };
 
 extern union Instrument inst_bank_50[];
 struct InstrumentSubRhythm instrument_rhy_0954 = {
     /* Type      */ INSTRUMENT_SUB_RHYTHM,
-    /* Total     */ 36,
+    /* Base Key  */ 36,
     /* Sub-Bank  */ inst_bank_50
 };
 
 extern union Instrument inst_bank_48[];
 struct InstrumentSubRhythm instrument_rhy_0955 = {
     /* Type      */ INSTRUMENT_SUB_RHYTHM,
-    /* Total     */ 36,
+    /* Base Key  */ 36,
     /* Sub-Bank  */ inst_bank_48
 };
 
 extern union Instrument inst_bank_49[];
 struct InstrumentSubRhythm instrument_rhy_0956 = {
     /* Type      */ INSTRUMENT_SUB_RHYTHM,
-    /* Total     */ 36,
+    /* Base Key  */ 36,
     /* Sub-Bank  */ inst_bank_49
 };
 
 extern union Instrument inst_bank_47[];
 struct InstrumentSubRhythm instrument_rhy_0957 = {
     /* Type      */ INSTRUMENT_SUB_RHYTHM,
-    /* Total     */ 36,
+    /* Base Key  */ 36,
     /* Sub-Bank  */ inst_bank_47
 };

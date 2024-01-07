@@ -710,7 +710,7 @@ void midi_note_start(struct MidiBus *midiBus, u32 track, u8 noteKey, u8 noteVelo
     switch (*instrument.type) {
         case INSTRUMENT_SUB_RHYTHM:
             isSubRhythm = TRUE;
-            instrument = instrument.rhy->subBank[noteKey - instrument.rhy->total];
+            instrument = instrument.rhy->subBank[noteKey - instrument.rhy->baseKey];
             if (instrument.type == NULL) {
                 return;
             }
@@ -720,7 +720,7 @@ void midi_note_start(struct MidiBus *midiBus, u32 track, u8 noteKey, u8 noteVelo
             break;
 
         case INSTRUMENT_SUB_SPLIT:
-            instrument = instrument.spl->subBank[instrument.spl->keySplitTable[noteKey - instrument.spl->total]];
+            instrument = instrument.spl->subBank[instrument.spl->keySplitTable[noteKey - instrument.spl->baseKey]];
             if (instrument.type == NULL) {
                 return;
             }

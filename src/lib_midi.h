@@ -88,7 +88,7 @@ enum MidiTrackReaderEndEnum {
 #define M_CONTROLLER_EXPRESSION         0x0B
 #define M_CONTROLLER_SELECT_VAR         0x0E
 #define M_CONTROLLER_SET_VAR            0x10
-#define M_CONTROLLER_PITCH_RANGE          0x14
+#define M_CONTROLLER_PITCH_RANGE        0x14
 #define M_CONTROLLER_MOD_SPEED          0x15
 #define M_CONTROLLER_MOD_TYPE           0x16
 #define M_CONTROLLER_MOD_DELAY          0x1A

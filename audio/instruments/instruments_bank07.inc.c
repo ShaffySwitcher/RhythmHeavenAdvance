@@ -226,6 +226,6 @@ struct InstrumentPCM instrument_pcm_0196 = {
 extern union Instrument inst_bank_54[];
 struct InstrumentSubRhythm instrument_rhy_0197 = {
     /* Type      */ INSTRUMENT_SUB_RHYTHM,
-    /* Total     */ 36,
+    /* Base Key  */ 36,
     /* Sub-Bank  */ inst_bank_54
 };
