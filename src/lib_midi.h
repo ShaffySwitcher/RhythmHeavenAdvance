@@ -316,10 +316,10 @@ extern void midi_bus_set_tuning(struct MidiBus *midiBus, u16 *table);
 
 /* LOW-FREQUENCY OSCILLATOR OPERATIONS */
 
-extern void midi_lfo_init(struct LFO *lfo, u8 preDelay, u8 attack, u8 arg3, u8 offset, u8 duration);
+extern void midi_lfo_init(struct LFO *lfo, u8 delay, u8 attack, u8 period, u8 offset, u8 endPos);
 extern void midi_lfo_start(struct LFO *lfo);
 extern void midi_lfo_stop(struct LFO *lfo);
-extern void midi_lfo_update(struct LFO *lfo, u32 delta);
+extern void midi_lfo_update(struct LFO *lfo, u32 clocksPassed);
 
 /* RANDOM */
 

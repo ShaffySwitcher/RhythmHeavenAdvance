@@ -7,22 +7,22 @@
 
 
 // Initialise LFO
-void midi_lfo_init(struct LFO *lfo, u8 preDelay, u8 attack, u8 arg3, u8 offset, u8 duration) {
+void midi_lfo_init(struct LFO *lfo, u8 delay, u8 attack, u8 period, u8 offset, u8 endPos) {
     lfo->stage = LFO_STAGE_DISABLED;
     lfo->output = 0;
-    lfo->ticks = 0;
-    lfo->preDelay = preDelay;
+    lfo->clocks = 0;
+    lfo->delay = delay;
     lfo->attack = attack;
-    lfo->rate = 0x10000 / arg3;
+    lfo->rate = (1 << 16) / period;
     lfo->offset = offset;
-    lfo->duration = duration;
+    lfo->endPos = endPos;
 }
 
 
 // Start LFO [Ctrl_49]
 void midi_lfo_start(struct LFO *lfo) {
     lfo->stage = LFO_STAGE_PRE_DELAY;
-    lfo->ticks = 0;
+    lfo->clocks = 0;
     lfo->output = 0;
 }
 
@@ -30,15 +30,16 @@ void midi_lfo_start(struct LFO *lfo) {
 // Stop LFO [Ctrl_49; Ctrl_4A]
 void midi_lfo_stop(struct LFO *lfo) {
     lfo->stage = LFO_STAGE_DISABLED;
-    lfo->ticks = 0;
+    lfo->clocks = 0;
     lfo->output = 0;
 }
 
 
 // Update LFO
-void midi_lfo_update(struct LFO *lfo, u32 delta) {
-    u32 pos;
-    s32 time, result;
+void midi_lfo_update(struct LFO *lfo, u32 clocksPassed) {
+    u32 cyclePos;
+    s32 totalClocks;
+    s32 output;
 
     switch (lfo->stage) {
         case LFO_STAGE_DISABLED:
@@ -46,34 +47,35 @@ void midi_lfo_update(struct LFO *lfo, u32 delta) {
             break;
 
         case LFO_STAGE_PRE_DELAY:
-            lfo->ticks += delta;
+            lfo->clocks += clocksPassed;
             lfo->output = 0;
-            if ((lfo->ticks >> 8) >= lfo->preDelay) {
-                lfo->ticks = 0;
+            if ((lfo->clocks >> 8) >= lfo->delay) {
+                lfo->clocks = 0;
                 lfo->stage = LFO_STAGE_ATTACK;
             }
             break;
 
         case LFO_STAGE_ATTACK:
         case LFO_STAGE_SUSTAIN:
-            lfo->ticks += delta;
-            time = (lfo->ticks >> 8);
-            pos = (time * lfo->rate) >> 8;
-            if (lfo->duration != 0) {
-                if (pos > lfo->duration) pos = lfo->duration;
+            lfo->clocks += clocksPassed;
+            totalClocks = (lfo->clocks >> 8);
+            cyclePos = (totalClocks * lfo->rate) >> 8;
+            if (lfo->endPos != 0) {
+                if (cyclePos > lfo->endPos) cyclePos = lfo->endPos;
             }
-            pos += lfo->offset;
-            result = midi_sine_table[pos & 0xFF] >> 1;
-            if (result > 0x7F) result = 0x7F;
-            if (result < -0x80) result = -0x80;
+            cyclePos += lfo->offset;
+
+            output = midi_sine_table[cyclePos & 0xFF] >> 1;
+            if (output > 0x7F) output = 0x7F;
+            if (output < -0x80) output = -0x80;
             if (lfo->stage == LFO_STAGE_ATTACK) {
-                if (time < lfo->attack) {
-                    result = result * time / lfo->attack;
+                if (totalClocks < lfo->attack) {
+                    output = output * totalClocks / lfo->attack;
                 } else {
                     lfo->stage = LFO_STAGE_SUSTAIN;
                 }
             }
-            lfo->output = result;
+            lfo->output = output;
             break;
     }
 }

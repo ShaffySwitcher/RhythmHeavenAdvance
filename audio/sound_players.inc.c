@@ -84,7 +84,7 @@ u8 midi_direct_player_priority = 0;
 u8 midi_direct_player_tempo = 150;
 
 
-// SoundPlayer List
+// [D_08aa4324] SoundPlayer List
 struct SoundPlayer *sound_players[] = {
     &sMusicPlayer0,
     &sMusicPlayer1,
@@ -102,7 +102,7 @@ struct SoundPlayer *sound_players[] = {
 };
 
 
-// SoundPlayer Initialisation Table
+// [D_08aa4358] SoundPlayer Initialisation Table
 struct SoundPlayerInitTable sound_player_init_table[] = {
     /* MUSIC PLAYER 0 */ {
         /* Player Index  */ MUSIC_PLAYER_0,
@@ -224,11 +224,11 @@ struct SoundPlayerInitTable sound_player_init_table[] = {
 };
 
 
-// SoundPlayer Count
+// [D_08aa445c] SoundPlayer Count
 u8 sound_player_count = SOUND_PLAYER_COUNT;
 
 
-// Simplified SoundPlayer Table
+// [D_08aa4460] Simplified SoundPlayer Table
 struct SoundPlayerTable sound_player_table[] = {
     /* MUSIC PLAYER 0 */ {
         /* Sound Player */ &sMusicPlayer0,

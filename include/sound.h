@@ -165,7 +165,7 @@ enum InstrumentBanksEnum {
 };
 
 
-/* DATA STRUCTURES */
+/* INSTRUMENT DATA STRUCTURES */
 
 
 // Sample Data (known in M4A as "WaveData")
@@ -388,6 +388,11 @@ struct MidiTrackStream {
     // The primary structure for sound playback. A convention seems to exist
     // where sound play/start functions must return a pointer to the SoundPlayer
     // which is now playing it.
+    //
+    // Rhythm Tengoku operates 13 of these in total:
+    //  - 1 for primary BGM (15 tracks).
+    //  - 2 for secondary BGM (12 tracks each).
+    //  - 10 for SFX (5 tracks each).
 struct SoundPlayer {
     u32 totalTracks:5;      // Maximum MIDI Tracks this SoundPlayer can process.
     u32 usedTracks:5;       // Total MIDI Tracks used by the current MIDI, no higher than the maximum.
@@ -466,57 +471,72 @@ struct SampleStream {
     u32 rate;           // uh... something that helps convert note frequency to 13379Hz
 };
 
+// Low-Frequency Oscillator Mode
+    // DISABLED - LFO will not update nor apply to any MIDI Channels.
+    // KEYPRESS - LFO will reset when a note is played by any of the caller MIDI Channels.
+    // CONSTANT - LFO will run continuously until the mode is changed.
 enum LfoModesEnum {
     LFO_MODE_DISABLED,
     LFO_MODE_KEYPRESS,
     LFO_MODE_CONSTANT
 };
-
-// Low-Frequency Oscillator (used for an Auto-Wah)
-struct LFO {
-    u8  preDelay;   // Pre-Delay Time
-    u8  attack;     // Attack Time
-    u16 rate;       // Rate
-    u8  offset;     // Offset
-    u8  duration;   // Range
-    u8  stage;      // Current Envelope Stage { 0..3 }
-    s8  output;     // Output
-    u32 ticks;      // Running Time
-};
-
-// LFO - Low-Frequency Oscillator
-extern struct LFO gMidiLFO;
-
-// LFO - Mode { 0 = Disabled; 1 = Note Triggered; 2 = Constant }
 extern u8 gMidiLFO_Mode;
 
-// [D_08aa06f8] Song Table
+// Low-Frequency Oscillator
+    // General-purpose customizable oscillator. Used for an auto-wah effect in
+    // the MIDI library.
+    //
+    // The oscillator uses MIDI clocks as time units, and assumes a rate of 24
+    // MIDI clocks per quarter note. The clock rate is synchronized with the
+    // caller SoundPlayer.
+extern struct LFO {
+    u8  delay;      // Initial delay upon trigger, in MIDI clocks.
+    u8  attack;     // Time to reach maximum amplitude (after initial delay), in MIDI clocks.
+    u16 rate;       // Q0.16 oscillation speed, in cycles per MIDI clock.
+    u8  offset;     // Q0.8 cycle offset.
+    u8  endPos;     // Q0.8 max cycle position before stopping entirely.
+    u8  stage;      // Current state.
+    s8  output;     // Q0.8 output multiplier.
+    u32 clocks;     // Q24.8 running time, in MIDI clocks.
+} gMidiLFO;
+
+
+/* SONG & SOUNDPLAYER DATA STRUCTURES */
+
+
+// Song Table (from M4A)
+    // Pointless but still used holdover from M4A. Song headers include an index
+    // for this table, which is used to retrieve the song header (again) and its
+    // default sound player.
 extern struct SongTable {
-    struct SongHeader *song;
-    u16 player;
+    struct SongHeader *song;    // Sound file.
+    u16 player;                 // SoundPlayer index.
 } D_08aa06f8[];
 
-// [D_08aa4324] SoundPlayer List
+// Sound Player List
+    // Pointers to all Sound Players in order, for quick iteration.
 extern struct SoundPlayer *sound_players[];
 
-// [D_08aa4358] SoundPlayer Init. Table
+// Sound Player Initialisation Table
+    // Initialisation data for Sound Players, including allocated memory addresses.
 extern struct SoundPlayerInitTable {
     u16 id:5;
     u16 totalTracks:5;
-    u16 priorityEnabled:6; // FALSE for music; TRUE for sfx
+    u16 priorityEnabled:6;
     struct MidiChannel *midiChannels;
     struct MidiBus *midiBus;
     struct MidiTrackStream *trackStreams;
     struct SoundPlayer *soundPlayer;
 } sound_player_init_table[];
 
-// [D_08aa445c] SoundPlayer Count
+// Total Number of Sound Players
 extern u8 sound_player_count;
 
-// [D_08aa4460] SoundPlayer Table
+// Sound Player Table
+    // Data table for Sound Players in order, for more complex iteration.
 extern struct SoundPlayerTable {
     struct SoundPlayer *soundPlayer;
-    u32 null4; // unused
+    u32 unused;
     u16 totalTracks;
     u16 priorityEnabled;
 } sound_player_table[];
