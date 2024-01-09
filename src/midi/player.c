@@ -353,7 +353,7 @@ void midi_player_parse_sys_exc_message(struct SoundPlayer *soundPlayer, const u8
             break;
 
         case SYS_EXC_EVENT_KEY_MOD_SCALE:
-            for (i = 0; i < 12; i++) {
+            for (i = 0; i < ARRAY_COUNT(midiBus->keyModScale); i++) {
                 midiBus->keyModScale[i] = stream[i] - 64;
             }
             break;
@@ -532,7 +532,7 @@ void midi_player_parse_controller_change(struct SoundPlayer *soundPlayer, u32 tr
 void midi_player_add_note(u32 track, u32 key, u32 velocity) {
     struct MidiNote *midiNote;
 
-    if (gMidiNoteNext < 20) {
+    if (gMidiNoteNext < ARRAY_COUNT(gMidiNotePool)) {
         midiNote = &gMidiNotePool[gMidiNoteNext++];
         midiNote->channel = track;
         midiNote->key = key;

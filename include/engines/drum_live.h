@@ -73,6 +73,9 @@ enum DrumLiveGuitaristStatesEnum {
     /* 04 */ LIVE_GUITARIST_STATE_HALF_CROUCH
 };
 
+#define DRUM_LIVE_TOTAL_INPUT_DEF   6
+#define DRUM_LIVE_TOTAL_LIGHTS      4
+
 
 // TYPES
 struct LiveDrummer {
@@ -129,14 +132,14 @@ struct DrumLiveEngineData {
     s24_8 excitementBaseInc;
     s24_8 excitementBaseDec;
     // [0x13E0]
-    u16 coolInputs[6];
-    u16 lameInputs[6];
+    u16 coolInputs[DRUM_LIVE_TOTAL_INPUT_DEF];
+    u16 lameInputs[DRUM_LIVE_TOTAL_INPUT_DEF];
     // [0x13F8]
     u8 excitementDisabled;
     u8 totalActiveLights;
     s8 nextFlashType;
-    u8 flashTypeCooldown[4];
-    s16 lightFlashes[4];
+    u8 flashTypeCooldown[DRUM_LIVE_TOTAL_LIGHTS];
+    s16 lightFlashes[DRUM_LIVE_TOTAL_LIGHTS];
     u8 nextLightFlash;
     s24_8 brightnessLevel;
     s24_8 brightnessInc;
