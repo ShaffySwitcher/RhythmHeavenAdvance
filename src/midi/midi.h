@@ -146,7 +146,7 @@ extern struct SoundPlayer *gMidiLFO_Player; // LFO - Controller Sound Player (fo
 extern u16 gMidiCommVarCurrent;             // UNDEFINED - Current byte in gMidiCommVars to set [mCtrl0E]
 
 extern struct MidiNote gMidiNotePool[20];   // MIDI - Note Buffer
-extern struct SoundChannel gMidiPSGChannelPool[4];  // PSG CHANNEL - PSG Channels { 0 = Tone+Sweep; 1 = Tone; 2 = Wave; 3 = Noise }
+extern struct SoundChannel gMidiPSGChannelPool[TOTAL_PSG_CHANNELS]; // PSG CHANNEL - PSG Channels { 0 = Tone+Sweep; 1 = Tone; 2 = Wave; 3 = Noise }
 extern s8  gMidiSampleTable[0x400]; // DIRECTSOUND - DMA Buffer Sample = gMidiSampleTable[(ScratchPad Sample >> 7) & 0x3FF]
 extern u16 gMidiCommVarTotal;       // UNDEFINED - Total Bytes in array at gMidiCommVars
 extern volatile u32 gMidiPCMBufSize32;  // DIRECTSOUND - Number of 32-bit samples per DMA Source Address ( = 1568 / 4)

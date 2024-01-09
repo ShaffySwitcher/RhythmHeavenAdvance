@@ -24,7 +24,7 @@ void drum_live_init_lighting(void) {
 
     gDrumLive->nextFlashType = -1;
 
-    for (i = 0; i < 4; i++) {
+    for (i = 0; i < DRUM_LIVE_TOTAL_LIGHTS; i++) {
         gDrumLive->flashTypeCooldown[i] = 0;
     }
 
@@ -41,7 +41,7 @@ void drum_live_init_lighting(void) {
 
     gDrumLive->totalActiveLights = 0;
 
-    for (i = 0; i < 4; i++) {
+    for (i = 0; i < DRUM_LIVE_TOTAL_LIGHTS; i++) {
         gDrumLive->lightFlashes[i] = func_0804d160(D_03005380, drum_live_get_anim(LIVE_ANIM_LIGHT_FLASH), 0, 12 + (i * 72), 21, 0x700, 1, 0, 0x8002);
         func_0804d7b4(D_03005380, gDrumLive->lightFlashes[i], 0x04);
     }
@@ -59,7 +59,7 @@ void drum_live_init_lighting(void) {
 void drum_live_update_lighting(void) {
     u32 i;
 
-    for (i = 0; i < 4; i++) {
+    for (i = 0; i < DRUM_LIVE_TOTAL_LIGHTS; i++) {
         if (gDrumLive->flashTypeCooldown[i] != 0) {
             gDrumLive->flashTypeCooldown[i]--;
         }
@@ -269,7 +269,7 @@ void drum_live_script_play_applause(void) {
 void drum_live_clear_input_def(void) {
     u32 i;
 
-    for (i = 0; i < 6; i++) {
+    for (i = 0; i < DRUM_LIVE_TOTAL_INPUT_DEF; i++) {
         gDrumLive->coolInputs[i] = 0;
         gDrumLive->lameInputs[i] = 0;
     }
@@ -665,7 +665,7 @@ void drum_live_set_guitarist_next_state(u32 args) {
     state = args >> 2;
     mask = args & 3;
 
-    for (i = 0; i < 2; i++) {
+    for (i = 0; i < ARRAY_COUNT(gDrumLive->guitarists); i++) {
         if ((mask >> i) & 1) {
             guitarist = &gDrumLive->guitarists[i];
 
@@ -687,7 +687,7 @@ void drum_live_update_guitarists(void) {
     struct LiveGuitarist *guitarist;
     u32 i;
 
-    for (i = 0; i < 2; i++) {
+    for (i = 0; i < ARRAY_COUNT(gDrumLive->guitarists); i++) {
         guitarist = &gDrumLive->guitarists[i];
 
         if (guitarist->timeUntilNextState != 0) {
@@ -888,7 +888,7 @@ void drum_live_common_beat_animation(void) {
     struct LiveGuitarist *guitarist;
     u32 i;
 
-    for (i = 0; i < 2; i++) {
+    for (i = 0; i < ARRAY_COUNT(gDrumLive->guitarists); i++) {
         guitarist = &gDrumLive->guitarists[i];
 
         if (guitarist->currentState == LIVE_GUITARIST_STATE_DEFAULT) {

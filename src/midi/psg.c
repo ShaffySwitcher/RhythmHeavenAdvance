@@ -7,21 +7,21 @@
 
 
 // STATIC VARIABLES
-static u8  sChannelJustStarted[4];  // Channel Just Started Flag
-static u16 sChannelPrevVolReg[4];   // Previous Volume Value
-static u16 sChannelPrevFreqReg[4];  // Previous Frequency Register Value
-static u8 *sPrevWavetable;          // Previous Wavetable Address (this is read but mistakenly never written to)
+static u8  sChannelJustStarted[TOTAL_PSG_CHANNELS]; // Channel Just Started Flag
+static u16 sChannelPrevVolReg[TOTAL_PSG_CHANNELS];  // Previous Volume Value
+static u16 sChannelPrevFreqReg[TOTAL_PSG_CHANNELS]; // Previous Frequency Register Value
+static u8 *sPrevWavetable;                          // Previous Wavetable Address (this is read but mistakenly never written to)
 
 
 // Reset All PSG SoundChannels
 void midi_psg_init(void) {
     u32 i;
 
-    for (i = 0; i < 4; i++) {
+    for (i = 0; i < TOTAL_PSG_CHANNELS; i++) {
         gMidiPSGChannelPool[i].active = FALSE;
     }
 
-    for (i = 0; i < 4; i++) {
+    for (i = 0; i < TOTAL_PSG_CHANNELS; i++) {
         sChannelJustStarted[i] = FALSE;
     }
 
@@ -204,7 +204,7 @@ void midi_psg_update(void) {
     u16 controls = 0;
     u32 i;
 
-    for (i = 0; i < 4; i++) {
+    for (i = 0; i < TOTAL_PSG_CHANNELS; i++) {
         midi_psg_update_id(i);
         controls >>= 1;
         if (channel->active) {

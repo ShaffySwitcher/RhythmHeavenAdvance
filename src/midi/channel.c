@@ -77,7 +77,7 @@ void midi_channel_cut(struct MidiBus *midiBus, u32 track) {
         }
     }
 
-    for (i = 0; i < 4; i++) {
+    for (i = 0; i < TOTAL_PSG_CHANNELS; i++) {
         if (gMidiPSGChannelPool[i].active && (gMidiPSGChannelPool[i].midiChannel == midiChannel)) {
             gMidiPSGChannelPool[i].adsr.stage = ADSR_STAGE_FORCE_STOP;
         }
@@ -97,7 +97,7 @@ void midi_channel_stop(struct MidiBus *midiBus, u32 track) {
         }
     }
 
-    for (i = 0; i < 4; i++) {
+    for (i = 0; i < TOTAL_PSG_CHANNELS; i++) {
         if (gMidiPSGChannelPool[i].active && (gMidiPSGChannelPool[i].midiChannel == midiChannel)) {
             gMidiPSGChannelPool[i].adsr.stage = ADSR_STAGE_RELEASE;
             gMidiPSGChannelPool[i].adsr.envelope = 0;
@@ -198,7 +198,7 @@ void midi_bus_init(struct MidiBus *midiBus, u32 totalChannels, struct MidiChanne
 
     midiBus->priority = 0;
 
-    for (i = 0; i < 12; i++) {
+    for (i = 0; i < ARRAY_COUNT(midiBus->keyModScale); i++) {
         midiBus->keyModScale[i] = 0;
     }
 }
@@ -245,7 +245,7 @@ u32 midi_note_update_pitch(struct SoundChannel *soundChannel) {
         s32 what = randomKey;
 
         while (what < 0) randomKey += 12; // ????????
-        randomKey += midiBus->keyModScale[what % 12];
+        randomKey += midiBus->keyModScale[what % ARRAY_COUNT(midiBus->keyModScale)];
 
         while (randomKey < 0) {
             randomKey += 12;
@@ -778,7 +778,7 @@ void midi_note_start(struct MidiBus *midiBus, u32 track, u8 noteKey, u8 noteVelo
             randomKey += 12;
         }
 
-        key += midiBus->keyModScale[randomKey % 12];
+        key += midiBus->keyModScale[randomKey % ARRAY_COUNT(midiBus->keyModScale)];
         while (key < 0) {
             key += 12;
         }
