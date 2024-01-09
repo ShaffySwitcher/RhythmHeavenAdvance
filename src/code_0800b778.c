@@ -10,7 +10,7 @@
 #include "src/task_pool.h"
 #include "src/memory_heap.h"
 #include "src/code_08007468.h"
-#include "src/lib_midi.h"
+#include "src/midi/midi.h"
 #include "src/lib_0804ca80.h"
 
 // Could use better split

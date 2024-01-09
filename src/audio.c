@@ -1,5 +1,5 @@
 #include "audio.h"
-#include "src/lib_midi.h"
+#include "src/midi/midi.h"
 
 
 /* AUDIO LIBRARY INTERFACE */

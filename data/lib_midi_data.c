@@ -1,6 +1,6 @@
 #include "global.h"
 #include "sound.h"
-#include "src/lib_midi.h"
+#include "src/midi/midi.h"
 
 
 /* MIDI LIBRARY INTERNAL DATA */
