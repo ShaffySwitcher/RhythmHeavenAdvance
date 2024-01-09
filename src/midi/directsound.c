@@ -1,6 +1,6 @@
 #include "global.h"
 #include "sound.h"
-#include "lib_midi.h"
+#include "midi.h"
 
 asm(".include \"include/gba.inc\"");//Temporary
 

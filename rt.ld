@@ -142,12 +142,12 @@ SECTIONS {
 		build/src/prologues/wizards_waltz.c.o(.bss);
 		build/src/code_08047e50.c.o(.bss);
         build/asm/lib_midi.s.o(.bss);
-        build/src/lib_midi_directsound.c.o(.bss);
-        build/src/lib_midi_channel.c.o(.bss);
-        build/src/lib_midi_lfo.c.o(.bss);
-        build/src/lib_midi_random.c.o(.bss);
-        build/src/lib_midi_psg.c.o(.bss);
-        build/src/lib_midi_player.c.o(.bss);
+        build/src/midi/directsound.c.o(.bss);
+        build/src/midi/channel.c.o(.bss);
+        build/src/midi/lfo.c.o(.bss);
+        build/src/midi/random.c.o(.bss);
+        build/src/midi/psg.c.o(.bss);
+        build/src/midi/player.c.o(.bss);
         build/src/lib_sram.c.o(.bss);
         build/src/lib_0804ca80.c.o(.bss);
         build/src/lib_0804e564.c.o(.bss);
@@ -293,12 +293,12 @@ SECTIONS {
 		build/src/prologues/wizards_waltz.c.o(.text);
 		build/src/code_08047e50.c.o(.text);
         build/asm/lib_midi.s.o(.text);
-        build/src/lib_midi_directsound.c.o(.text);
-        build/src/lib_midi_channel.c.o(.text);
-        build/src/lib_midi_lfo.c.o(.text);
-        build/src/lib_midi_random.c.o(.text);
-        build/src/lib_midi_psg.c.o(.text);
-        build/src/lib_midi_player.c.o(.text);
+        build/src/midi/directsound.c.o(.text);
+        build/src/midi/channel.c.o(.text);
+        build/src/midi/lfo.c.o(.text);
+        build/src/midi/random.c.o(.text);
+        build/src/midi/psg.c.o(.text);
+        build/src/midi/player.c.o(.text);
         build/asm/libagbsyscall.s.o(.text);
         build/src/lib_sram.c.o(.text);
         build/src/lib_0804ca80.c.o(.text);
@@ -1187,14 +1187,14 @@ SECTIONS {
         build/games/tap_trial/subroutines.bs.o(.script.sub);
 
         build/data/lib_midi_data.c.o(.data);
-        build/src/lib_midi_directsound.c.o(.data);
-        build/src/lib_midi_channel.c.o(.data);
-        build/src/lib_midi_lfo.c.o(.data);
-        build/src/lib_midi_random.c.o(.data);
-        build/src/lib_midi_psg.c.o(.data);
+        build/src/midi/directsound.c.o(.data);
+        build/src/midi/channel.c.o(.data);
+        build/src/midi/lfo.c.o(.data);
+        build/src/midi/random.c.o(.data);
+        build/src/midi/psg.c.o(.data);
         build/audio/instruments.c.o(.data);
         build/audio/songs.c.o(.data);
-        build/src/lib_midi_player.c.o(.data);
+        build/src/midi/player.c.o(.data);
 		build/audio/sample_table.json.c.o(.data);
 
         build/audio/sequences/Lesson1.mid.o(.rodata*);
