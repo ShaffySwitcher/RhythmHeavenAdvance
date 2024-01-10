@@ -22,7 +22,7 @@ branch_0804875e:
     adds    r4, r0, #0
     ldr     r5, _08048b48   @ gMidiSampleScratch
     ldr     r5, [r5, #0]
-    ldr     r0, _08048b4c   @ D_03005b40
+    ldr     r0, _08048b4c   @ gMidiPCMBufWritePos
     ldr     r0, [r0, #0]
     lsls    r0, r0, #2
     ldr     r6, _08048b50   @ gMidiPCMBufR
@@ -30,7 +30,7 @@ branch_0804875e:
     ldr     r7, _08048b54   @ gMidiPCMBufL
     ldr     r7, [r7, #0]
     adds    r6, r6, r0
-    ldr     r1, _08048b58   @ gMidiRVB_Control2
+    ldr     r1, _08048b58   @ gMidiReverb2Phase
     ldr     r1, [r1, #0]
     lsls    r1, r1, #2
     adds    r0, r0, r1
@@ -42,11 +42,11 @@ branch_0804875e:
     subs    r0, r0, r1
 branch_08048798:
     adds    r7, r7, r0
-    ldr     r0, _08048b60   @ gMidiRVB_Control1
+    ldr     r0, _08048b60   @ gMidiReverb1Wet
     ldr     r0, [r0, #0]
-    ldr     r2, _08048b64   @ gMidiRVB_Control4
+    ldr     r2, _08048b64   @ gMidiReverb4LowCut
     ldr     r2, [r2, #0]
-    ldr     r3, _08048b68   @ gMidiRVB_Control3
+    ldr     r3, _08048b68   @ gMidiReverb3Decay
     ldr     r3, [r3, #0]
     lsrs    r0, r3
     mov     r8, r0
@@ -84,7 +84,7 @@ arm_func_start midi_arm_stereo_update_scratch
     mov     r9, r2
     mov     lr, r3
     mov     r1, r4
-    ldr     r0, _08048944   @ gMidiRVB_Scratch
+    ldr     r0, _08048944   @ gMidiReverbScratch
     ldr     r2, [r0], #4
     ldr     r3, [r0], #4
     ldr     r12, [r0], #4
@@ -159,7 +159,7 @@ branch_0804880c:
     subs    r1, r1, #1
     bne     branch_0804880c
 
-    ldr     r0, _08048944   @ gMidiRVB_Scratch
+    ldr     r0, _08048944   @ gMidiReverbScratch
     str     r2, [r0], #4
     str     r3, [r0], #4
     str     r12, [r0], #4
@@ -171,7 +171,7 @@ branch_0804880c:
 _08048938: .word 0
 _0804893c: .word 0
 _08048940: .word 0
-_08048944: .word gMidiRVB_Scratch
+_08048944: .word gMidiReverbScratch
 _08048948: .word 0
 
 glabel midi_arm_stereo_update_scratch_end
@@ -181,7 +181,7 @@ glabel midi_arm_stereo_update_scratch_end
 arm_func_start midi_arm_mono_update_scratch
     mov     r7, r2
     mov     r11, r3
-    ldr     r0, _080489fc   @ gMidiRVB_Scratch
+    ldr     r0, _080489fc   @ gMidiReverbScratch
     ldr     r2, [r0], #4
     ldr     r3, [r0], #4
     add     r10, r9, r10
@@ -220,13 +220,13 @@ branch_08048964:
     subcs   r6, r6, r9
     subs    r4, r4, #1
     bne     branch_08048964
-    ldr     r0, _080489fc   @ gMidiRVB_Scratch
+    ldr     r0, _080489fc   @ gMidiReverbScratch
     str     r2, [r0], #4
     str     r3, [r0], #4
     bx      lr
 
 .balign 4, 0
-_080489fc: .word gMidiRVB_Scratch
+_080489fc: .word gMidiReverbScratch
 
 glabel midi_arm_mono_update_scratch_end
 
@@ -250,7 +250,7 @@ branch_08048a06:
     adds    r6, r0, #0
     ldr     r7, _08048b78   @ gMidiSampleScratch
     ldr     r7, [r7, #0]
-    ldr     r0, _08048b7c   @ D_03005b40
+    ldr     r0, _08048b7c   @ gMidiPCMBufWritePos
     ldr     r0, [r0, #0]
     lsls    r0, r0, #2
     ldr     r1, _08048b80   @ gMidiPCMBufR
@@ -366,19 +366,19 @@ unaligned_thumb_func_start midi_asm_update_buffer_call_arm
 
 .balign 4, 0
 _08048b48: .word gMidiSampleScratch
-_08048b4c: .word D_03005b40
+_08048b4c: .word gMidiPCMBufWritePos
 _08048b50: .word gMidiPCMBufR
 _08048b54: .word gMidiPCMBufL
-_08048b58: .word gMidiRVB_Control2
+_08048b58: .word gMidiReverb2Phase
 _08048b5c: .word gMidiPCMBufSize32
-_08048b60: .word gMidiRVB_Control1
-_08048b64: .word gMidiRVB_Control4
-_08048b68: .word gMidiRVB_Control3
+_08048b60: .word gMidiReverb1Wet
+_08048b64: .word gMidiReverb4LowCut
+_08048b68: .word gMidiReverb3Decay
 _08048b6c: .word gMidiPCMBufSize32
 _08048b70: .word gMidiPCMBufR
 _08048b74: .word gMidiPCMBufL
 _08048b78: .word gMidiSampleScratch
-_08048b7c: .word D_03005b40
+_08048b7c: .word gMidiPCMBufWritePos
 _08048b80: .word gMidiPCMBufR
 _08048b84: .word gMidiPCMBufL
 _08048b88: .word gMidiPCMBufSize32

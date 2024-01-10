@@ -483,7 +483,7 @@ u32 scene_change_music(struct SongHeader *music, u32 override, s32 soundPlayer) 
         return;
     }
 
-    gMidiLFO_Mode = LFO_MODE_DISABLED;
+    gMidiLFOMode = LFO_MODE_DISABLED;
     midi_equalizer_reset();
     midi_equalizer_set_position(0);
     D_030053c0.musicPlayer = (soundPlayer < 0) ? play_sound(music) : play_sound_in_player(soundPlayer, music);

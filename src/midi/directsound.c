@@ -22,29 +22,29 @@ void midi_interrupt_dma2(void) {
 
     resetDMA = FALSE;
 
-    D_030064a0 += 4;
-    if (D_030064a0 >= gMidiPCMBufSize32) {
-        D_030064a0 -= gMidiPCMBufSize32;
+    gMidiPCMBufReadPos += 4;
+    if (gMidiPCMBufReadPos >= gMidiPCMBufSize32) {
+        gMidiPCMBufReadPos -= gMidiPCMBufSize32;
     }
 
     // Buffer Underrun Handler
-    if (D_030064a0 == D_03005b40) {
-        D_030064a0 = (D_030064a0 != 0) ? D_030064a0 - 4 : gMidiPCMBufSize32 - 4;
+    if (gMidiPCMBufReadPos == gMidiPCMBufWritePos) {
+        gMidiPCMBufReadPos = (gMidiPCMBufReadPos != 0) ? gMidiPCMBufReadPos - 4 : gMidiPCMBufSize32 - 4;
 
         // Write the last-read sample across all of the previous 16 samples.
-        samples = gMidiPCMBufR[D_030064a0 + 3] >> 24;
+        samples = gMidiPCMBufR[gMidiPCMBufReadPos + 3] >> 24;
         samples |= (samples << 8);
         samples |= (samples << 16);
-        gMidiPCMBufR[D_030064a0 + 0] = gMidiPCMBufR[D_030064a0 + 1] = gMidiPCMBufR[D_030064a0 + 2] = gMidiPCMBufR[D_030064a0 + 3] = samples;
-        samples = gMidiPCMBufL[D_030064a0 + 3] >> 24;
+        gMidiPCMBufR[gMidiPCMBufReadPos + 0] = gMidiPCMBufR[gMidiPCMBufReadPos + 1] = gMidiPCMBufR[gMidiPCMBufReadPos + 2] = gMidiPCMBufR[gMidiPCMBufReadPos + 3] = samples;
+        samples = gMidiPCMBufL[gMidiPCMBufReadPos + 3] >> 24;
         samples |= (samples << 8);
         samples |= (samples << 16);
-        gMidiPCMBufL[D_030064a0 + 0] = gMidiPCMBufL[D_030064a0 + 1] = gMidiPCMBufL[D_030064a0 + 2] = gMidiPCMBufL[D_030064a0 + 3] = samples;
+        gMidiPCMBufL[gMidiPCMBufReadPos + 0] = gMidiPCMBufL[gMidiPCMBufReadPos + 1] = gMidiPCMBufL[gMidiPCMBufReadPos + 2] = gMidiPCMBufL[gMidiPCMBufReadPos + 3] = samples;
 
         resetDMA = TRUE;
     }
 
-    if (D_030064a0 == 0) {
+    if (gMidiPCMBufReadPos == 0) {
         resetDMA = TRUE;
     }
 
@@ -56,8 +56,8 @@ void midi_interrupt_dma2(void) {
         case DIRECTSOUND_MODE_STEREO:
             REG_DMA1CNT_H = 0;
             REG_DMA2CNT_H = 0;
-            REG_DMA1SAD = (u32)&gMidiPCMBufR[D_030064a0];
-            REG_DMA2SAD = (u32)&gMidiPCMBufL[D_030064a0];
+            REG_DMA1SAD = (u32)&gMidiPCMBufR[gMidiPCMBufReadPos];
+            REG_DMA2SAD = (u32)&gMidiPCMBufL[gMidiPCMBufReadPos];
             REG_DMA1CNT_H = (DMACNT_DEST_INC_TYPE_INCREMENT | DMACNT_SRC_INC_TYPE_INCREMENT
                                 | DMACNT_START_MODE_VBLANK | DMACNT_START_MODE_FIFO_EMPTY
                                 | DMACNT_REPEAT | DMACNT_SIZE | DMACNT_ENABLE);
@@ -72,7 +72,7 @@ void midi_interrupt_dma2(void) {
 
         case DIRECTSOUND_MODE_MONO1:
             REG_DMA2CNT_H = 0;
-            REG_DMA2SAD = (u32)&gMidiPCMBufR[D_030064a0];
+            REG_DMA2SAD = (u32)&gMidiPCMBufR[gMidiPCMBufReadPos];
             REG_DMA2CNT_H = (DMACNT_DEST_INC_TYPE_INCREMENT | DMACNT_SRC_INC_TYPE_INCREMENT
                                 | DMACNT_START_MODE_VBLANK | DMACNT_START_MODE_FIFO_EMPTY
                                 | DMACNT_REPEAT | DMACNT_SIZE | DMACNT_IRQ | DMACNT_ENABLE);
@@ -83,8 +83,8 @@ void midi_interrupt_dma2(void) {
         case DIRECTSOUND_MODE_MONO2:
             REG_DMA1CNT_H = 0;
             REG_DMA2CNT_H = 0;
-            REG_DMA1SAD = (u32)&gMidiPCMBufR[D_030064a0];
-            REG_DMA2SAD = (u32)&gMidiPCMBufR[D_030064a0];
+            REG_DMA1SAD = (u32)&gMidiPCMBufR[gMidiPCMBufReadPos];
+            REG_DMA2SAD = (u32)&gMidiPCMBufR[gMidiPCMBufReadPos];
             REG_DMA1CNT_H = (DMACNT_DEST_INC_TYPE_INCREMENT | DMACNT_SRC_INC_TYPE_INCREMENT
                                 | DMACNT_START_MODE_VBLANK | DMACNT_START_MODE_FIFO_EMPTY
                                 | DMACNT_REPEAT | DMACNT_SIZE | DMACNT_ENABLE);
@@ -214,22 +214,22 @@ void midi_directsound_update(void) {
         wordsPerFrame = gMidiPCMBufSize32;
     }
 
-    unreadProcessedWords = D_03005b40 - D_030064a0;
+    unreadProcessedWords = gMidiPCMBufWritePos - gMidiPCMBufReadPos;
     if (unreadProcessedWords < 0) {
         unreadProcessedWords += gMidiPCMBufSize32;
     }
 
     totalWordsToProcess = (wordsPerFrame > unreadProcessedWords) ? (wordsPerFrame - unreadProcessedWords) : 0;
 
-    eqPosition = gMidiEQ_Area[0];
-    if ((gMidiEQ_PrevPos >= 0) && (eqPosition > 127)) { // High-Pass
-        gMidiEQ_Area[1] = 0;
-        gMidiEQ_Area[2] = 0;
-    } else if ((gMidiEQ_PrevPos < 0) && (eqPosition <= 127)) { // Low-Pass
-        gMidiEQ_Area[1] = gMidiSampleScratch[gMidiScratchSize - 2];
-        gMidiEQ_Area[2] = gMidiSampleScratch[gMidiScratchSize - 1];
+    eqPosition = gMidiEQArea[0];
+    if ((gMidiEQPrevPos >= 0) && (eqPosition > 127)) { // High-Pass
+        gMidiEQArea[1] = 0;
+        gMidiEQArea[2] = 0;
+    } else if ((gMidiEQPrevPos < 0) && (eqPosition <= 127)) { // Low-Pass
+        gMidiEQArea[1] = gMidiSampleScratch[gMidiScratchSize - 2];
+        gMidiEQArea[2] = gMidiSampleScratch[gMidiScratchSize - 1];
     }
-    gMidiEQ_PrevPos = eqPosition;
+    gMidiEQPrevPos = eqPosition;
 
     while (totalWordsToProcess != 0) {
         wordBatchSize = gMidiScratchSize / 4;
@@ -241,7 +241,7 @@ void midi_directsound_update(void) {
 
         noSamplesProcessed = TRUE;
         eqWasUsed = FALSE;
-        eqPosition = gMidiEQ_Area[0];
+        eqPosition = gMidiEQArea[0];
         eqHighGain = 0;
 
         // Read samples that will be filtered by EQ.
@@ -249,11 +249,11 @@ void midi_directsound_update(void) {
             eqSmoothing = 256 - eqPosition;
 
             if (streams[i].active) {
-                if (streams[i].equalize || gMidiEQ_IsGlobal) {
+                if (streams[i].equalize || gMidiEQIsGlobal) {
                     noSamplesProcessed = FALSE;
                     eqWasUsed = TRUE;
                     if (eqPosition > 127) {
-                        eqHighGain = (streams[i].volume * eqSmoothing * gMidiEQ_HighGain) >> 7;
+                        eqHighGain = (streams[i].volume * eqSmoothing * gMidiEQHighGain) >> 7;
                     }
                     gMidiSamplerGain = eqHighGain;
 
@@ -269,14 +269,14 @@ void midi_directsound_update(void) {
         }
 
         if (eqWasUsed) {
-            applyEQ(wordBatchSize, gMidiEQ_Area);
+            applyEQ(wordBatchSize, gMidiEQArea);
         }
         gMidiSamplerGain = 0;
 
         // Read unfiltered samples.
         for (i = 0; i < gMidiSamplerCount; i++) {
             if (streams[i].active) {
-                if (!streams[i].equalize && !gMidiEQ_IsGlobal) {
+                if (!streams[i].equalize && !gMidiEQIsGlobal) {
                     noSamplesProcessed = FALSE;
 
                     if (!streams[i].hasFrequency) {
@@ -293,11 +293,11 @@ void midi_directsound_update(void) {
         gMidiSampleTable[0x3FF] = (noSamplesProcessed) ? 0 : -1;
         (ALIGN_THUMB_FUNC(midi_asm_update_buffer))(wordBatchSize);
 
-        sampleBufferPos = D_03005b40 + wordBatchSize;
+        sampleBufferPos = gMidiPCMBufWritePos + wordBatchSize;
         while (sampleBufferPos >= gMidiPCMBufSize32) {
             sampleBufferPos -= gMidiPCMBufSize32;
         }
-        D_03005b40 = sampleBufferPos;
+        gMidiPCMBufWritePos = sampleBufferPos;
 
         totalWordsToProcess -= wordBatchSize;
         gMidiVCOUNTAtSamplerEnd = REG_VCOUNT;
@@ -327,10 +327,10 @@ void midi_directsound_flush(void) {
 
 // Set Reverb Controllers
 void midi_directsound_set_reverb(u32 arg0, u32 arg1, u32 arg2, u32 arg3) {
-    gMidiRVB_Control1 = arg0;
-    gMidiRVB_Control2 = arg1;
-    gMidiRVB_Control3 = arg2;
-    gMidiRVB_Control4 = arg3;
+    gMidiReverb1Wet = arg0;
+    gMidiReverb2Phase = arg1;
+    gMidiReverb3Decay = arg2;
+    gMidiReverb4LowCut = arg3;
 }
 
 
@@ -342,33 +342,33 @@ u32 midi_sampler_is_active(u32 id) {
 
 // Set Equalizer Position
 void midi_equalizer_set_position(u32 position) {
-    if (!gMidiEQ_IsGlobal) {
-        gMidiEQ_Area[0] = position;
+    if (!gMidiEQIsGlobal) {
+        gMidiEQArea[0] = position;
     }
 }
 
 
 // Set Equalizer High Gain
 void midi_equalizer_set_high_gain(u8 gain) {
-    if (!gMidiEQ_IsGlobal) {
-        gMidiEQ_HighGain = gain;
+    if (!gMidiEQIsGlobal) {
+        gMidiEQHighGain = gain;
     }
 }
 
 
 // Initialise Equalizer
 void midi_equalizer_init(void) {
-    gMidiEQ_Area[2] = 0;
-    gMidiEQ_Area[1] = 0;
-    gMidiEQ_Area[0] = 0;
-    gMidiEQ_PrevPos = 0;
+    gMidiEQArea[2] = 0;
+    gMidiEQArea[1] = 0;
+    gMidiEQArea[0] = 0;
+    gMidiEQPrevPos = 0;
     gMidiSampleScratch[gMidiScratchSize - 2] = gMidiSampleScratch[gMidiScratchSize - 1] = 0;
 }
 
 
 // Reset Equalizer
 void midi_equalizer_reset(void) {
-    if (!gMidiEQ_IsGlobal) {
+    if (!gMidiEQIsGlobal) {
         midi_equalizer_init();
     }
 }
@@ -378,10 +378,10 @@ void midi_equalizer_reset(void) {
 void midi_equalizer_set(u32 enable, u32 position, u32 gain) {
     enable = (enable != FALSE);
 
-    if (gMidiEQ_IsGlobal != enable) {
+    if (gMidiEQIsGlobal != enable) {
         midi_equalizer_init();
-        gMidiEQ_IsGlobal = enable;
-        gMidiEQ_Area[0] = position;
-        gMidiEQ_HighGain = gain;
+        gMidiEQIsGlobal = enable;
+        gMidiEQArea[0] = position;
+        gMidiEQHighGain = gain;
     }
 }

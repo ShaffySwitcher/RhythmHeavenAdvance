@@ -345,11 +345,11 @@ void midi_player_parse_sys_exc_message(struct SoundPlayer *soundPlayer, const u8
     switch (type) {
         case SYS_EXC_EVENT_LFO_SETTINGS:
             midi_equalizer_reset();
-            gMidiLFO_Mode = LFO_MODE_DISABLED;
-            gMidiLFO_Depth = stream[0] * 2;
+            gMidiLFOMode = LFO_MODE_DISABLED;
+            gMidiLFODepth = stream[0] * 2;
             midi_lfo_init(&gMidiLFO, stream[1] * 2, stream[2] * 2, stream[3] * 2, stream[4] * 2, stream[5] * 2);
             midi_equalizer_set_high_gain(stream[6]);
-            gMidiLFO_Player = soundPlayer;
+            gMidiLFOPlayer = soundPlayer;
             break;
 
         case SYS_EXC_EVENT_KEY_MOD_SCALE:
@@ -465,7 +465,7 @@ void midi_player_parse_controller_change(struct SoundPlayer *soundPlayer, u32 tr
             break;
 
         case M_CONTROLLER_LFO_MODE:
-            gMidiLFO_Mode = value;
+            gMidiLFOMode = value;
             switch (value) {
                 case LFO_MODE_DISABLED:
                 case LFO_MODE_KEYPRESS:
@@ -479,14 +479,14 @@ void midi_player_parse_controller_change(struct SoundPlayer *soundPlayer, u32 tr
             break;
 
         case M_CONTROLLER_SET_EQ:
-            gMidiLFO_Mode = LFO_MODE_DISABLED;
+            gMidiLFOMode = LFO_MODE_DISABLED;
             midi_lfo_stop(&gMidiLFO);
             midi_equalizer_reset();
             midi_equalizer_set_position((value * 2) - 0x80);
             break;
 
         case M_CONTROLLER_LFO_GAIN:
-            gMidiLFO_Depth = value * 2;
+            gMidiLFODepth = value * 2;
             break;
 
         case M_CONTROLLER_EQ_GAIN:
@@ -724,7 +724,7 @@ void midi_player_update_track(struct SoundPlayer *soundPlayer, u32 track) {
     // Use Filter EQ with LFO
     if (anyNotePlayed) {
         channel = &soundPlayer->midiBus->midiChannel[track];
-        if (channel->filterEQ && (gMidiLFO_Mode == LFO_MODE_KEYPRESS)) {
+        if (channel->filterEQ && (gMidiLFOMode == LFO_MODE_KEYPRESS)) {
             midi_equalizer_reset();
             midi_lfo_start(&gMidiLFO);
         }
@@ -825,10 +825,10 @@ void midi_sound_main(void) {
     struct SoundPlayer *soundPlayer;
     u32 clocks;
     u32 i;
-    s32 rvb0 = gMidiRVB_ControlBuf[0];
-    s32 rvb1 = gMidiRVB_ControlBuf[1];
-    s32 rvb2 = gMidiRVB_ControlBuf[2];
-    s32 rvb3 = gMidiRVB_ControlBuf[3];
+    s32 rvb0 = gMidiReverbControls[0];
+    s32 rvb1 = gMidiReverbControls[1];
+    s32 rvb2 = gMidiReverbControls[2];
+    s32 rvb3 = gMidiReverbControls[3];
 
     gMidiVCOUNTAtStart = REG_VCOUNT;
 
@@ -859,10 +859,10 @@ void midi_sound_main(void) {
     }
 
     // LFO
-    if ((gMidiLFO_Player != NULL) && (gMidiLFO_Mode != LFO_MODE_DISABLED)) {
-        clocks = midi_player_get_clocks_per_frame(gMidiLFO_Player->midiTempo, gMidiLFO_Player->playerSpeed, 24);
+    if ((gMidiLFOPlayer != NULL) && (gMidiLFOMode != LFO_MODE_DISABLED)) {
+        clocks = midi_player_get_clocks_per_frame(gMidiLFOPlayer->midiTempo, gMidiLFOPlayer->playerSpeed, 24);
         midi_lfo_update(&gMidiLFO, clocks);
-        midi_equalizer_set_position((gMidiLFO.output * gMidiLFO_Depth) >> 8);
+        midi_equalizer_set_position((gMidiLFO.output * gMidiLFODepth) >> 8);
     }
 
     midi_note_update_all();
@@ -884,10 +884,10 @@ void midi_sound_main(void) {
 
 // Set Main Reverb Controller Scratch/Queue
 void midi_player_set_reverb(u32 rvb0, u32 rvb1, u32 rvb2, u32 rvb3) {
-    gMidiRVB_ControlBuf[0] = rvb0;
-    gMidiRVB_ControlBuf[1] = rvb1;
-    gMidiRVB_ControlBuf[2] = rvb2;
-    gMidiRVB_ControlBuf[3] = rvb3;
+    gMidiReverbControls[0] = rvb0;
+    gMidiReverbControls[1] = rvb1;
+    gMidiReverbControls[2] = rvb2;
+    gMidiReverbControls[3] = rvb3;
 }
 
 
@@ -1140,7 +1140,7 @@ void midi_direct_player_update(void) {
             midi_note_start(sDirectBus, note->channel, note->key, note->velocity);
 
             midiChannel = &sDirectBus->midiChannel[note->channel];
-            if (midiChannel->filterEQ && (gMidiLFO_Mode == LFO_MODE_KEYPRESS)) {
+            if (midiChannel->filterEQ && (gMidiLFOMode == LFO_MODE_KEYPRESS)) {
                 anyNotePlayed = TRUE;
             }
         } else {
@@ -1184,11 +1184,11 @@ void midi_sound_init(void) {
         gMidiCommVars[i] = 0;
     }
 
-    gMidiLFO_Mode = LFO_MODE_DISABLED;
-    gMidiLFO_Player = NULL;
-    gMidiRVB_ControlBuf[0] = 0;
-    gMidiRVB_ControlBuf[1] = 0;
-    gMidiRVB_ControlBuf[2] = 0;
-    gMidiRVB_ControlBuf[3] = 0;
+    gMidiLFOMode = LFO_MODE_DISABLED;
+    gMidiLFOPlayer = NULL;
+    gMidiReverbControls[0] = 0;
+    gMidiReverbControls[1] = 0;
+    gMidiReverbControls[2] = 0;
+    gMidiReverbControls[3] = 0;
     sDirectPlayer = NULL;
 }
