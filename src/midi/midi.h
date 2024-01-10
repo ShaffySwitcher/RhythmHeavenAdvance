@@ -131,32 +131,32 @@ typedef volatile u16 *IOReg;
 // extern struct SampleStream sSamplerArea[12];        // DIRECTSOUND - DMA Sample Readers (12 Channels)
 // extern struct SoundChannel sSoundChannelArea[12];   // DIRECTSOUND - DirectSound Channels (12 Channels)
 
-extern u16 gMidiVCOUNTAtStart;      // MIDI4AGB - Set to REG_VCOUNT near the start of each update.
+extern u16 gMidiVCOUNTAtStart;      // MAIN - Set to REG_VCOUNT near the start of each update.
 extern u32 gMidiSoundMode;          // DIRECTSOUND - Initial Sound Mode { 0 = Stereo; 1 = Mono (One Channel); 2 = Mono (Two Channels) }
-extern s32 gMidiRVB_Scratch[4];     // REVERB - Previous Processed Samples (R+L, x2)
+extern s32 gMidiReverbScratch[4];   // REVERB - Previous Processed Samples (R+L, x2)
 extern u16 gMidiSamplerCount;       // DIRECTSOUND - Number of DMA Sample Readers ( = 12)
-extern s32 gMidiEQ_Area[3];         // FILTER EQ - [0] = Filter Setting; [1], [2] = Previous Samples (R+L)
+extern s32 gMidiEQArea[3];          // FILTER EQ - [0] = Filter Setting; [1], [2] = Previous Samples (R+L)
 extern u32 gMidiPlayerNewDeltaTime; // SOUNDPLAYER - New Delta Time
-extern u32 gMidiRVB_Control2;       // REVERB - Controller #2 (init. = 0)
-extern u32 gMidiRVB_Control4;       // REVERB - Controller #4 (init. = 4)
+extern u32 gMidiReverb2Phase;       // REVERB - Stereo Phase (default = 0)
+extern u32 gMidiReverb4LowCut;      // REVERB - Low Cut / High Level (default = 4)
 extern u32 gMidiScratchSize;        // DIRECTSOUND - Sample Processing ScratchPad Size, in L+R pairs ( = 0x80)
 extern volatile u32 *gMidiPCMBufR;  // DIRECTSOUND - REG_DMA1SAD (Right Audio Source) ( = &sPCMBufferArea)
-extern u8  gMidiLFO_Depth;          // LFO - Multiplier [mCtrl4C]
-extern struct SoundPlayer *gMidiLFO_Player; // LFO - Controller Sound Player (for Speed)
+extern u8  gMidiLFODepth;           // LFO - Multiplier [mCtrl4C]
+extern struct SoundPlayer *gMidiLFOPlayer;  // LFO - Controller Sound Player (for Speed)
 extern u16 gMidiCommVarCurrent;             // UNDEFINED - Current byte in gMidiCommVars to set [mCtrl0E]
 
 extern struct MidiNote gMidiNotePool[20];   // MIDI - Note Buffer
 extern struct SoundChannel gMidiPSGChannelPool[TOTAL_PSG_CHANNELS]; // PSG CHANNEL - PSG Channels { 0 = Tone+Sweep; 1 = Tone; 2 = Wave; 3 = Noise }
-extern s8  gMidiSampleTable[0x400]; // DIRECTSOUND - DMA Buffer Sample = gMidiSampleTable[(ScratchPad Sample >> 7) & 0x3FF]
-extern u16 gMidiCommVarTotal;       // UNDEFINED - Total Bytes in array at gMidiCommVars
+extern s8  gMidiSampleTable[0x400];     // DIRECTSOUND - DMA Buffer Sample = gMidiSampleTable[(ScratchPad Sample >> 7) & 0x3FF]
+extern u16 gMidiCommVarTotal;           // UNDEFINED - Total Bytes in array at gMidiCommVars
 extern volatile u32 gMidiPCMBufSize32;  // DIRECTSOUND - Number of 32-bit samples per DMA Source Address ( = 1568 / 4)
-extern u8  gMidiEQ_HighGain;        // FILTER EQ - High Gain [mCtrl4C]
+extern u8  gMidiEQHighGain;             // FILTER EQ - High Gain [mCtrl4C]
 
 // extern struct LFO gMidiLFO;      // LFO - Low-Frequency Oscillator
-// extern u8 gMidiLFO_Mode;         // LFO - Mode { 0 = Disabled; 1 = Note Triggered; 2 = Constant }
-extern volatile u32 D_03005b40;     // DIRECTSOUND - ??
-extern u8  gMidiEQ_IsGlobal;        // FILTER EQ - Enable Global Filter
-extern u32 gMidiRVB_Control3;       // REVERB - gRVBCNT3 (init. = 2)
+// extern u8 gMidiLFOMode;          // LFO - Mode { 0 = Disabled; 1 = Note Triggered; 2 = Constant }
+extern volatile u32 gMidiPCMBufWritePos;    // DIRECTSOUND - PCM Buffer Write Position (Update)
+extern u8  gMidiEQIsGlobal;         // FILTER EQ - Enable Global Filter
+extern u32 gMidiReverb3Decay;       // REVERB - Decay (default = 2)
 
 extern u16 gMidiNoteNext;           // MIDI - Next Available MIDI Note
 extern u8 *gMidiCommVars;           // UNDEFINED - (Byte at offset gMidiCommVarCurrent set by [mCtrl10])
@@ -164,18 +164,18 @@ extern u16 gMidiVCOUNTAtEnd;        // MIDI4AGB - Set to REG_VCOUNT near the end
 extern u16 gMidiVCOUNTAtSamplerEnd; // DIRECTSOUND - Set to REG_VCOUNT at the end of each SampleStream update loop.
 extern struct SampleStream *gMidiSamplerPool;   // DIRECTSOUND - SampleStream (12 Channels, at sSamplerArea)
 extern u16 gMidiSoundChannelCount;  // DIRECTSOUND - Number of DirectSound Channels ( = 12)
-extern s8  gMidiRVB_ControlBuf[4];  // REVERB - Reverb Controller Update Scratch
-extern u32 gMidiDMASampleRate;      // MIDI4AGB - Global Sample Rate ( = 13379Hz)
+extern s8  gMidiReverbControls[4];  // REVERB - Reverb Controller Update Scratch
+extern u32 gMidiDMASampleRate;      // MAIN - Global Sample Rate ( = 13379Hz)
 
-extern volatile u32 D_030064a0;     // DIRECTSOUND - Offset from *gMidiPCMBufR and *gMidiPCMBufL to operate on.
-extern u32 gMidiRVB_Control1;       // REVERB - gRVBCNT1 (init. = 0)
-extern u32 gMidiSamplesPerFrame;    // MIDI4AGB - 13379Hz / 60 (samples per frame, at 60fps)
-extern u16 gMidiSamplerGain;    // DIRECTSOUND - ??
+extern volatile u32 gMidiPCMBufReadPos; // DIRECTSOUND - PCM Buffer Read Position (Interrupt)
+extern u32 gMidiReverb1Wet;         // REVERB - Wet Level (default = 0)
+extern u32 gMidiSamplesPerFrame;    // MAIN - 13379Hz / 60 (samples per frame, at 60fps)
+extern u16 gMidiSamplerGain;        // DIRECTSOUND - Sampler Volume Multiplier (when EQ filter is applied)
 extern s32 *gMidiSampleScratch;     // DIRECTSOUND - Sample Processing ScratchPad ( = &sPCMScratchArea)
-extern u32 gMidiTM0Rate;            // MIDI4AGB - 16776921 / 13379Hz
+extern u32 gMidiTM0Rate;            // MAIN - Hardware Timer 0 Value (16776921 / 13379Hz)
 extern volatile u32 *gMidiPCMBufL;  // DIRECTSOUND - REG_DMA2SAD (Left Audio Source) ( = &sPCMBufferArea[gMidiPCMBufSize32] ( = &D_03001ea8))
 extern struct SoundChannel *gMidiSoundChannelPool;  // DIRECTSOUND - DirectSound Channels (12 Channels, at sSoundChannelArea)
-extern s8  gMidiEQ_PrevPos;         // FILTER EQ - Duplicate of gMidiEQ_Area[0] used for just one (1) singular calculation.
+extern s8  gMidiEQPrevPos;          // FILTER EQ - Duplicate of gMidiEQArea[0] used for just one (1) singular calculation.
 extern u16 gMidiDirectSoundEnabled; // DIRECTSOUND - Enable DirectSound
 
 

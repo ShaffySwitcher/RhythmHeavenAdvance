@@ -31,45 +31,45 @@ extern s32 sPCMScratchArea[0x80 * 2];
 extern struct SampleStream sSamplerArea[12];
 extern struct SoundChannel sSoundChannelArea[12];
 
-extern struct MidiChannel sMusicPlayer0_midiChannels[N_TRACKS_MUS0];
-extern struct MidiBus sMusicPlayer0_midiBus;
-extern struct MidiTrackStream sMusicPlayer0_midiReaders[N_TRACKS_MUS0];
-extern struct MidiChannel sMusicPlayer1_midiChannels[N_TRACKS_MUS1];
-extern struct MidiBus sMusicPlayer1_midiBus;
-extern struct MidiTrackStream sMusicPlayer1_midiReaders[N_TRACKS_MUS1];
-extern struct MidiChannel sMusicPlayer2_midiChannels[N_TRACKS_MUS2];
-extern struct MidiBus sMusicPlayer2_midiBus;
-extern struct MidiTrackStream sMusicPlayer2_midiReaders[N_TRACKS_MUS2];
-extern struct MidiChannel sSfxPlayer0_midiChannels[N_TRACKS_SFX];
-extern struct MidiBus sSfxPlayer0_midiBus;
-extern struct MidiTrackStream sSfxPlayer0_midiReaders[N_TRACKS_SFX];
-extern struct MidiChannel sSfxPlayer1_midiChannels[N_TRACKS_SFX];
-extern struct MidiBus sSfxPlayer1_midiBus;
-extern struct MidiTrackStream sSfxPlayer1_midiReaders[N_TRACKS_SFX];
-extern struct MidiChannel sSfxPlayer2_midiChannels[N_TRACKS_SFX];
-extern struct MidiBus sSfxPlayer2_midiBus;
-extern struct MidiTrackStream sSfxPlayer2_midiReaders[N_TRACKS_SFX];
-extern struct MidiChannel sSfxPlayer3_midiChannels[N_TRACKS_SFX];
-extern struct MidiBus sSfxPlayer3_midiBus;
-extern struct MidiTrackStream sSfxPlayer3_midiReaders[N_TRACKS_SFX];
-extern struct MidiChannel sSfxPlayer4_midiChannels[N_TRACKS_SFX];
-extern struct MidiBus sSfxPlayer4_midiBus;
-extern struct MidiTrackStream sSfxPlayer4_midiReaders[N_TRACKS_SFX];
-extern struct MidiChannel sSfxPlayer5_midiChannels[N_TRACKS_SFX];
-extern struct MidiBus sSfxPlayer5_midiBus;
-extern struct MidiTrackStream sSfxPlayer5_midiReaders[N_TRACKS_SFX];
-extern struct MidiChannel sSfxPlayer6_midiChannels[N_TRACKS_SFX];
-extern struct MidiBus sSfxPlayer6_midiBus;
-extern struct MidiTrackStream sSfxPlayer6_midiReaders[N_TRACKS_SFX];
-extern struct MidiChannel sSfxPlayer7_midiChannels[N_TRACKS_SFX];
-extern struct MidiBus sSfxPlayer7_midiBus;
-extern struct MidiTrackStream sSfxPlayer7_midiReaders[N_TRACKS_SFX];
-extern struct MidiChannel sSfxPlayer8_midiChannels[N_TRACKS_SFX];
-extern struct MidiBus sSfxPlayer8_midiBus;
-extern struct MidiTrackStream sSfxPlayer8_midiReaders[N_TRACKS_SFX];
-extern struct MidiChannel sSfxPlayer9_midiChannels[N_TRACKS_SFX];
-extern struct MidiBus sSfxPlayer9_midiBus;
-extern struct MidiTrackStream sSfxPlayer9_midiReaders[N_TRACKS_SFX];
+extern struct MidiChannel sMusicPlayer0Channels[N_TRACKS_MUS0];
+extern struct MidiBus sMusicPlayer0MidiBus;
+extern struct MidiTrackStream sMusicPlayer0Streams[N_TRACKS_MUS0];
+extern struct MidiChannel sMusicPlayer1Channels[N_TRACKS_MUS1];
+extern struct MidiBus sMusicPlayer1MidiBus;
+extern struct MidiTrackStream sMusicPlayer1Streams[N_TRACKS_MUS1];
+extern struct MidiChannel sMusicPlayer2Channels[N_TRACKS_MUS2];
+extern struct MidiBus sMusicPlayer2MidiBus;
+extern struct MidiTrackStream sMusicPlayer2Streams[N_TRACKS_MUS2];
+extern struct MidiChannel sSfxPlayer0Channels[N_TRACKS_SFX];
+extern struct MidiBus sSfxPlayer0MidiBus;
+extern struct MidiTrackStream sSfxPlayer0Streams[N_TRACKS_SFX];
+extern struct MidiChannel sSfxPlayer1Channels[N_TRACKS_SFX];
+extern struct MidiBus sSfxPlayer1MidiBus;
+extern struct MidiTrackStream sSfxPlayer1Streams[N_TRACKS_SFX];
+extern struct MidiChannel sSfxPlayer2Channels[N_TRACKS_SFX];
+extern struct MidiBus sSfxPlayer2MidiBus;
+extern struct MidiTrackStream sSfxPlayer2Streams[N_TRACKS_SFX];
+extern struct MidiChannel sSfxPlayer3Channels[N_TRACKS_SFX];
+extern struct MidiBus sSfxPlayer3MidiBus;
+extern struct MidiTrackStream sSfxPlayer3Streams[N_TRACKS_SFX];
+extern struct MidiChannel sSfxPlayer4Channels[N_TRACKS_SFX];
+extern struct MidiBus sSfxPlayer4MidiBus;
+extern struct MidiTrackStream sSfxPlayer4Streams[N_TRACKS_SFX];
+extern struct MidiChannel sSfxPlayer5Channels[N_TRACKS_SFX];
+extern struct MidiBus sSfxPlayer5MidiBus;
+extern struct MidiTrackStream sSfxPlayer5Streams[N_TRACKS_SFX];
+extern struct MidiChannel sSfxPlayer6Channels[N_TRACKS_SFX];
+extern struct MidiBus sSfxPlayer6MidiBus;
+extern struct MidiTrackStream sSfxPlayer6Streams[N_TRACKS_SFX];
+extern struct MidiChannel sSfxPlayer7Channels[N_TRACKS_SFX];
+extern struct MidiBus sSfxPlayer7MidiBus;
+extern struct MidiTrackStream sSfxPlayer7Streams[N_TRACKS_SFX];
+extern struct MidiChannel sSfxPlayer8Channels[N_TRACKS_SFX];
+extern struct MidiBus sSfxPlayer8MidiBus;
+extern struct MidiTrackStream sSfxPlayer8Streams[N_TRACKS_SFX];
+extern struct MidiChannel sSfxPlayer9Channels[N_TRACKS_SFX];
+extern struct MidiBus sSfxPlayer9MidiBus;
+extern struct MidiTrackStream sSfxPlayer9Streams[N_TRACKS_SFX];
 
 
 // Last SoundPlayer Index
@@ -108,117 +108,117 @@ struct SoundPlayerInitTable sound_player_init_table[] = {
         /* Player Index  */ MUSIC_PLAYER_0,
         /* Track Count   */ N_TRACKS_MUS0,
         /* Use Priority  */ FALSE,
-        /* MIDI Channels */ sMusicPlayer0_midiChannels,
-        /* MIDI Bus      */ &sMusicPlayer0_midiBus,
-        /* MIDI Streams  */ sMusicPlayer0_midiReaders,
+        /* MIDI Channels */ sMusicPlayer0Channels,
+        /* MIDI Bus      */ &sMusicPlayer0MidiBus,
+        /* MIDI Streams  */ sMusicPlayer0Streams,
         /* Sound Player  */ &sMusicPlayer0
     },
     /* MUSIC PLAYER 1 */ {
         /* Player Index  */ MUSIC_PLAYER_1,
         /* Track Count   */ N_TRACKS_MUS1,
         /* Use Priority  */ FALSE,
-        /* MIDI Channels */ sMusicPlayer1_midiChannels,
-        /* MIDI Bus      */ &sMusicPlayer1_midiBus,
-        /* MIDI Streams  */ sMusicPlayer1_midiReaders,
+        /* MIDI Channels */ sMusicPlayer1Channels,
+        /* MIDI Bus      */ &sMusicPlayer1MidiBus,
+        /* MIDI Streams  */ sMusicPlayer1Streams,
         /* Sound Player  */ &sMusicPlayer1
     },
     /* MUSIC PLAYER 2 */ {
         /* Player Index  */ MUSIC_PLAYER_2,
         /* Track Count   */ N_TRACKS_MUS2,
         /* Use Priority  */ FALSE,
-        /* MIDI Channels */ sMusicPlayer2_midiChannels,
-        /* MIDI Bus      */ &sMusicPlayer2_midiBus,
-        /* MIDI Streams  */ sMusicPlayer2_midiReaders,
+        /* MIDI Channels */ sMusicPlayer2Channels,
+        /* MIDI Bus      */ &sMusicPlayer2MidiBus,
+        /* MIDI Streams  */ sMusicPlayer2Streams,
         /* Sound Player  */ &sMusicPlayer2
     },
     /* SFX PLAYER 0 */ {
         /* Player Index  */ SFX_PLAYER_0,
         /* Track Count   */ N_TRACKS_SFX,
         /* Use Priority  */ TRUE,
-        /* MIDI Channels */ sSfxPlayer0_midiChannels,
-        /* MIDI Bus      */ &sSfxPlayer0_midiBus,
-        /* MIDI Streams  */ sSfxPlayer0_midiReaders,
+        /* MIDI Channels */ sSfxPlayer0Channels,
+        /* MIDI Bus      */ &sSfxPlayer0MidiBus,
+        /* MIDI Streams  */ sSfxPlayer0Streams,
         /* Sound Player  */ &sSfxPlayer0
     },
     /* SFX PLAYER 1 */ {
         /* Player Index  */ SFX_PLAYER_1,
         /* Track Count   */ N_TRACKS_SFX,
         /* Use Priority  */ TRUE,
-        /* MIDI Channels */ sSfxPlayer1_midiChannels,
-        /* MIDI Bus      */ &sSfxPlayer1_midiBus,
-        /* MIDI Streams  */ sSfxPlayer1_midiReaders,
+        /* MIDI Channels */ sSfxPlayer1Channels,
+        /* MIDI Bus      */ &sSfxPlayer1MidiBus,
+        /* MIDI Streams  */ sSfxPlayer1Streams,
         /* Sound Player  */ &sSfxPlayer1
     },
     /* SFX PLAYER 2 */ {
         /* Player Index  */ SFX_PLAYER_2,
         /* Track Count   */ N_TRACKS_SFX,
         /* Use Priority  */ TRUE,
-        /* MIDI Channels */ sSfxPlayer2_midiChannels,
-        /* MIDI Bus      */ &sSfxPlayer2_midiBus,
-        /* MIDI Streams  */ sSfxPlayer2_midiReaders,
+        /* MIDI Channels */ sSfxPlayer2Channels,
+        /* MIDI Bus      */ &sSfxPlayer2MidiBus,
+        /* MIDI Streams  */ sSfxPlayer2Streams,
         /* Sound Player  */ &sSfxPlayer2
     },
     /* SFX PLAYER 3 */ {
         /* Player Index  */ SFX_PLAYER_3,
         /* Track Count   */ N_TRACKS_SFX,
         /* Use Priority  */ TRUE,
-        /* MIDI Channels */ sSfxPlayer3_midiChannels,
-        /* MIDI Bus      */ &sSfxPlayer3_midiBus,
-        /* MIDI Streams  */ sSfxPlayer3_midiReaders,
+        /* MIDI Channels */ sSfxPlayer3Channels,
+        /* MIDI Bus      */ &sSfxPlayer3MidiBus,
+        /* MIDI Streams  */ sSfxPlayer3Streams,
         /* Sound Player  */ &sSfxPlayer3
     },
     /* SFX PLAYER 4 */ {
         /* Player Index  */ SFX_PLAYER_4,
         /* Track Count   */ N_TRACKS_SFX,
         /* Use Priority  */ TRUE,
-        /* MIDI Channels */ sSfxPlayer4_midiChannels,
-        /* MIDI Bus      */ &sSfxPlayer4_midiBus,
-        /* MIDI Streams  */ sSfxPlayer4_midiReaders,
+        /* MIDI Channels */ sSfxPlayer4Channels,
+        /* MIDI Bus      */ &sSfxPlayer4MidiBus,
+        /* MIDI Streams  */ sSfxPlayer4Streams,
         /* Sound Player  */ &sSfxPlayer4
     },
     /* SFX PLAYER 5 */ {
         /* Player Index  */ SFX_PLAYER_5,
         /* Track Count   */ N_TRACKS_SFX,
         /* Use Priority  */ TRUE,
-        /* MIDI Channels */ sSfxPlayer5_midiChannels,
-        /* MIDI Bus      */ &sSfxPlayer5_midiBus,
-        /* MIDI Streams  */ sSfxPlayer5_midiReaders,
+        /* MIDI Channels */ sSfxPlayer5Channels,
+        /* MIDI Bus      */ &sSfxPlayer5MidiBus,
+        /* MIDI Streams  */ sSfxPlayer5Streams,
         /* Sound Player  */ &sSfxPlayer5
     },
     /* SFX PLAYER 6 */ {
         /* Player Index  */ SFX_PLAYER_6,
         /* Track Count   */ N_TRACKS_SFX,
         /* Use Priority  */ TRUE,
-        /* MIDI Channels */ sSfxPlayer6_midiChannels,
-        /* MIDI Bus      */ &sSfxPlayer6_midiBus,
-        /* MIDI Streams  */ sSfxPlayer6_midiReaders,
+        /* MIDI Channels */ sSfxPlayer6Channels,
+        /* MIDI Bus      */ &sSfxPlayer6MidiBus,
+        /* MIDI Streams  */ sSfxPlayer6Streams,
         /* Sound Player  */ &sSfxPlayer6
     },
     /* SFX PLAYER 7 */ {
         /* Player Index  */ SFX_PLAYER_7,
         /* Track Count   */ N_TRACKS_SFX,
         /* Use Priority  */ TRUE,
-        /* MIDI Channels */ sSfxPlayer7_midiChannels,
-        /* MIDI Bus      */ &sSfxPlayer7_midiBus,
-        /* MIDI Streams  */ sSfxPlayer7_midiReaders,
+        /* MIDI Channels */ sSfxPlayer7Channels,
+        /* MIDI Bus      */ &sSfxPlayer7MidiBus,
+        /* MIDI Streams  */ sSfxPlayer7Streams,
         /* Sound Player  */ &sSfxPlayer7
     },
     /* SFX PLAYER 8 */ {
         /* Player Index  */ SFX_PLAYER_8,
         /* Track Count   */ N_TRACKS_SFX,
         /* Use Priority  */ TRUE,
-        /* MIDI Channels */ sSfxPlayer8_midiChannels,
-        /* MIDI Bus      */ &sSfxPlayer8_midiBus,
-        /* MIDI Streams  */ sSfxPlayer8_midiReaders,
+        /* MIDI Channels */ sSfxPlayer8Channels,
+        /* MIDI Bus      */ &sSfxPlayer8MidiBus,
+        /* MIDI Streams  */ sSfxPlayer8Streams,
         /* Sound Player  */ &sSfxPlayer8
     },
     /* SFX PLAYER 9 */ {
         /* Player Index  */ SFX_PLAYER_9,
         /* Track Count   */ N_TRACKS_SFX,
         /* Use Priority  */ TRUE,
-        /* MIDI Channels */ sSfxPlayer9_midiChannels,
-        /* MIDI Bus      */ &sSfxPlayer9_midiBus,
-        /* MIDI Streams  */ sSfxPlayer9_midiReaders,
+        /* MIDI Channels */ sSfxPlayer9Channels,
+        /* MIDI Bus      */ &sSfxPlayer9MidiBus,
+        /* MIDI Streams  */ sSfxPlayer9Streams,
         /* Sound Player  */ &sSfxPlayer9
     }
 };

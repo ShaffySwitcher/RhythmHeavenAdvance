@@ -481,7 +481,7 @@ enum LfoModesEnum {
     LFO_MODE_KEYPRESS,
     LFO_MODE_CONSTANT
 };
-extern u8 gMidiLFO_Mode;
+extern u8 gMidiLFOMode;
 
 // Low-Frequency Oscillator
     // General-purpose customizable oscillator. Used for an auto-wah effect in

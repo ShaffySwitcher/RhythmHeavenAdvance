@@ -50,23 +50,23 @@ thumb_func_start midi_directsound_init \n\
 /* 080494ea */ ADDS R1, R5, 0x0 @ Set R1 to R5 + 0x0 \n\
 /* 080494ec */ BL __udivsi3 \n\
 /* 080494f0 */ STR R0, [R4] \n\
-/* 080494f2 */ LDR R1, =gMidiRVB_Control1 \n\
+/* 080494f2 */ LDR R1, =gMidiReverb1Wet \n\
 /* 080494f4 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 080494f6 */ STR R0, [R1] \n\
 /* 080494f8 */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
-/* 080494fa */ LDR R2, =gMidiRVB_Control2 \n\
-/* 080494fc */ LDR R3, =gMidiRVB_Control4 \n\
-/* 080494fe */ LDR R5, =gMidiRVB_Control3 \n\
-/* 08049500 */ LDR R7, =gMidiEQ_PrevPos \n\
-/* 08049502 */ LDR R0, =gMidiEQ_HighGain \n\
+/* 080494fa */ LDR R2, =gMidiReverb2Phase \n\
+/* 080494fc */ LDR R3, =gMidiReverb4LowCut \n\
+/* 080494fe */ LDR R5, =gMidiReverb3Decay \n\
+/* 08049500 */ LDR R7, =gMidiEQPrevPos \n\
+/* 08049502 */ LDR R0, =gMidiEQHighGain \n\
 /* 08049504 */ MOV R8, R0 @ Set R8 to R0 \n\
-/* 08049506 */ LDR R1, =gMidiEQ_IsGlobal \n\
+/* 08049506 */ LDR R1, =gMidiEQIsGlobal \n\
 /* 08049508 */ MOV R12, R1 @ Set R12 to R1 \n\
-/* 0804950a */ LDR R0, =D_030064a0 \n\
+/* 0804950a */ LDR R0, =gMidiPCMBufReadPos \n\
 /* 0804950c */ MOV R10, R0 @ Set R10 to R0 \n\
-/* 0804950e */ LDR R6, =D_03005b40 \n\
+/* 0804950e */ LDR R6, =gMidiPCMBufWritePos \n\
 /* 08049510 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
-/* 08049512 */ LDR R1, =gMidiRVB_Scratch \n\
+/* 08049512 */ LDR R1, =gMidiReverbScratch \n\
  \n\
 branch_08049514: \n\
 /* 08049514 */ STMIA R1!, {R0} \n\
@@ -81,7 +81,7 @@ branch_08049514: \n\
 /* 08049526 */ STR R0, [R5] \n\
 /* 08049528 */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
 /* 0804952a */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
-/* 0804952c */ LDR R1, =gMidiEQ_Area \n\
+/* 0804952c */ LDR R1, =gMidiEQArea \n\
  \n\
 branch_0804952e: \n\
 /* 0804952e */ STMIA R1!, {R0} \n\
