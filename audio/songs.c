@@ -1,17 +1,35 @@
 #include "global.h"
 #include "sound.h"
 
-// Song Titles
-#include "song_titles.inc.c"
 
 // Song Headers
+#include "song_titles.inc.c"
 #include "song_headers.inc.c"
 
+
 // Song List (Unused)
-u32 D_08a9e8e0 = 1924 - 1; // Size of the Song List - 1 (Unused)
-#include "song_array_gen.inc.c"
+#define DEFINE_SONG(song, player) +1
+u32 song_header_list_size = (
+    #include "song_defines.inc.c"
+) - 1;
+#undef DEFINE_SONG
+
+#define DEFINE_SONG(song, player) song,
+struct SongHeader *song_header_list[] = {
+    #include "song_defines.inc.c"
+};
+#undef DEFINE_SONG
+
 
 // Song Table
-u32 D_08aa06f4 = 1924; // Size of the Song Table (Unused)
-#define GEN_SONG_TABLE
-#include "song_array_gen.inc.c"
+#define DEFINE_SONG(song, player) +1
+u32 song_header_table_size = (
+    #include "song_defines.inc.c"
+);
+#undef DEFINE_SONG
+
+#define DEFINE_SONG(song, player) { song, player },
+struct SongTable song_header_table[] = {
+    #include "song_defines.inc.c"
+};
+#undef DEFINE_SONG

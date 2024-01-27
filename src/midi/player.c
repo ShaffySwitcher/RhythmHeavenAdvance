@@ -134,8 +134,8 @@ void midi_player_play_id(u16 soundIndex) {
     struct SoundPlayer *soundPlayer;
     struct SongHeader *song;
 
-    soundPlayer = sound_player_table[D_08aa06f8[soundIndex].player].soundPlayer;
-    song = D_08aa06f8[soundIndex].song;
+    soundPlayer = sound_player_table[song_header_table[soundIndex].player].soundPlayer;
+    song = song_header_table[soundIndex].song;
     midi_player_play_header(soundPlayer, song);
 }
 
@@ -234,7 +234,7 @@ void midi_player_set_panning(struct SoundPlayer *soundPlayer, u16 trackMask, s8 
 
 // Pause Song from Index
 void midi_player_pause_id(u16 songNum) {
-    struct SongHeader *song = D_08aa06f8[songNum].song;
+    struct SongHeader *song = song_header_table[songNum].song;
     u32 i;
 
     for (i = 0; i <= last_sound_player_id; i++) {
