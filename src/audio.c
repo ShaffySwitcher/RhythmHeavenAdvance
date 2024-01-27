@@ -22,7 +22,7 @@ struct SoundPlayer *play_sound(struct SongHeader *song) {
 
     id = get_sound_num(song);
     midi_player_play_id(id);
-    soundPlayer = sound_player_table[D_08aa06f8[id].player].soundPlayer;
+    soundPlayer = sound_player_table[song_header_table[id].player].soundPlayer;
 
     if (soundPlayer->song == song) {
         return soundPlayer;
@@ -75,7 +75,7 @@ struct SoundPlayer *continue_sound(struct SongHeader *song) {
     }
 
     id = get_sound_num(song);
-    soundPlayer = sound_player_table[D_08aa06f8[id].player].soundPlayer;
+    soundPlayer = sound_player_table[song_header_table[id].player].soundPlayer;
 
     if (soundPlayer->song != song) {
         midi_player_play_id(id);

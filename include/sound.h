@@ -512,7 +512,7 @@ extern struct LFO {
 extern struct SongTable {
     struct SongHeader *song;    // Sound file.
     u16 player;                 // SoundPlayer index.
-} D_08aa06f8[];
+} song_header_table[];
 
 // Sound Player List
     // Pointers to all Sound Players in order, for quick iteration.
