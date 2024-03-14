@@ -25,7 +25,7 @@ branch_0803c654: \n\
 /* 0803c65c */ MOVS R0, 0x10 @ Set R0 to 0x10 \n\
 /* 0803c65e */ BL ninja_get_anim \n\
 /* 0803c662 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 0803c664 */ LDR R4, =D_03005380 \n\
+/* 0803c664 */ LDR R4, =gSpriteHandler \n\
 /* 0803c666 */ LDR R0, [R4] \n\
 /* 0803c668 */ LDR R1, [R6] \n\
 /* 0803c66a */ MOVS R3, 0x4 @ Set R3 to 0x4 \n\
@@ -34,7 +34,7 @@ branch_0803c654: \n\
 /* 0803c670 */ MOVS R3, 0x7F @ Set R3 to 0x7F \n\
 /* 0803c672 */ STR R3, [SP, 0x4] \n\
 /* 0803c674 */ STR R5, [SP, 0x8] \n\
-/* 0803c676 */ BL func_0804d8f8 \n\
+/* 0803c676 */ BL sprite_set_anim \n\
 /* 0803c67a */ LDR R0, [R4] \n\
 /* 0803c67c */ LDR R1, [R6] \n\
 /* 0803c67e */ MOVS R2, 0xBB @ Set R2 to 0xBB \n\
@@ -43,7 +43,7 @@ branch_0803c654: \n\
 /* 0803c684 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 0803c686 */ LDRSH R1, [R1, R3] \n\
 /* 0803c688 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 0803c68a */ BL func_0804cebc \n\
+/* 0803c68a */ BL sprite_set_anim_cel \n\
 /* 0803c68e */ B branch_0803c6ce \n\
 \n\
 .ltorg \n\
@@ -55,7 +55,7 @@ branch_0803c694: \n\
 /* 0803c69c */ MOVS R0, 0xF @ Set R0 to 0xF \n\
 /* 0803c69e */ BL ninja_get_anim \n\
 /* 0803c6a2 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 0803c6a4 */ LDR R4, =D_03005380 \n\
+/* 0803c6a4 */ LDR R4, =gSpriteHandler \n\
 /* 0803c6a6 */ LDR R0, [R4] \n\
 /* 0803c6a8 */ LDR R1, [R6] \n\
 /* 0803c6aa */ MOVS R3, 0x4 @ Set R3 to 0x4 \n\
@@ -64,7 +64,7 @@ branch_0803c694: \n\
 /* 0803c6b0 */ MOVS R3, 0x7F @ Set R3 to 0x7F \n\
 /* 0803c6b2 */ STR R3, [SP, 0x4] \n\
 /* 0803c6b4 */ STR R5, [SP, 0x8] \n\
-/* 0803c6b6 */ BL func_0804d8f8 \n\
+/* 0803c6b6 */ BL sprite_set_anim \n\
 /* 0803c6ba */ LDR R0, [R4] \n\
 /* 0803c6bc */ LDR R1, [R6] \n\
 /* 0803c6be */ MOVS R2, 0xBB @ Set R2 to 0xBB \n\
@@ -73,7 +73,7 @@ branch_0803c694: \n\
 /* 0803c6c4 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 0803c6c6 */ LDRSH R1, [R1, R3] \n\
 /* 0803c6c8 */ MOVS R2, 0x1 @ Set R2 to 0x1 \n\
-/* 0803c6ca */ BL func_0804cebc \n\
+/* 0803c6ca */ BL sprite_set_anim_cel \n\
  \n\
 branch_0803c6ce: \n\
 /* 0803c6ce */ LDR R2, =gCurrentEngineData \n\

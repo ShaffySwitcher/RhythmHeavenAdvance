@@ -8,7 +8,7 @@ thumb_func_start func_0803cb0c \n\
 /* 0803cb10 */ MOVS R0, 0x6 @ Set R0 to 0x6 \n\
 /* 0803cb12 */ BL ninja_get_anim \n\
 /* 0803cb16 */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
-/* 0803cb18 */ LDR R0, =D_03005380 \n\
+/* 0803cb18 */ LDR R0, =gSpriteHandler \n\
 /* 0803cb1a */ LDR R0, [R0] \n\
 /* 0803cb1c */ MOVS R2, 0x49 @ Set R2 to 0x49 \n\
 /* 0803cb1e */ STR R2, [SP] \n\
@@ -21,7 +21,7 @@ thumb_func_start func_0803cb0c \n\
 /* 0803cb2c */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0803cb2e */ STR R2, [SP, 0x10] \n\
 /* 0803cb30 */ MOVS R3, 0xA8 @ Set R3 to 0xA8 \n\
-/* 0803cb32 */ BL func_0804d160 \n\
+/* 0803cb32 */ BL sprite_create \n\
 /* 0803cb36 */ LDR R1, =gCurrentEngineData \n\
 /* 0803cb38 */ LDR R1, [R1] \n\
 /* 0803cb3a */ LDR R2, =0x2d2 \n\

@@ -21,7 +21,7 @@ branch_08036266: \n\
 /* 0803626a */ LSRS R0, R0, 0x1D \n\
 /* 0803626c */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 0803626e */ BEQ branch_0803629e \n\
-/* 08036270 */ LDR R0, =D_03005380 \n\
+/* 08036270 */ LDR R0, =gSpriteHandler \n\
 /* 08036272 */ LDR R0, [R0] \n\
 /* 08036274 */ MOVS R3, 0x4 @ Set R3 to 0x4 \n\
 /* 08036276 */ LDRSH R1, [R4, R3] \n\
@@ -36,7 +36,7 @@ branch_08036266: \n\
 /* 08036288 */ STR R3, [SP, 0x4] \n\
 /* 0803628a */ STR R3, [SP, 0x8] \n\
 /* 0803628c */ MOVS R3, 0x3 @ Set R3 to 0x3 \n\
-/* 0803628e */ BL func_0804d8f8 \n\
+/* 0803628e */ BL sprite_set_anim \n\
 /* 08036292 */ LDRB R0, [R4] \n\
 /* 08036294 */ MOVS R2, 0x39 @ Set R2 to 0x39 \n\
 /* 08036296 */ NEGS R2, R2 @ Set R2 to -R2 \n\

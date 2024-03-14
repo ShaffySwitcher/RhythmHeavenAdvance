@@ -11,7 +11,7 @@ thumb_func_start func_08033468 \n\
 /* 08033472 */ ADDS R5, R0, 0x0 @ Set R5 to R0 + 0x0 \n\
 /* 08033474 */ ADDS R6, R1, 0x0 @ Set R6 to R1 + 0x0 \n\
 /* 08033476 */ ADDS R3, R2, 0x0 @ Set R3 to R2 + 0x0 \n\
-/* 08033478 */ LDR R0, =D_03005380 \n\
+/* 08033478 */ LDR R0, =gSpriteHandler \n\
 /* 0803347a */ MOV R9, R0 @ Set R9 to R0 \n\
 /* 0803347c */ LDR R0, [R0] \n\
 /* 0803347e */ LDR R1, =gCurrentEngineData \n\
@@ -26,7 +26,7 @@ thumb_func_start func_08033468 \n\
 /* 08033490 */ STR R4, [SP] \n\
 /* 08033492 */ STR R4, [SP, 0x4] \n\
 /* 08033494 */ STR R4, [SP, 0x8] \n\
-/* 08033496 */ BL func_0804d8f8 \n\
+/* 08033496 */ BL sprite_set_anim \n\
 /* 0803349a */ MOV R1, R9 @ Set R1 to R9 \n\
 /* 0803349c */ LDR R0, [R1] \n\
 /* 0803349e */ MOV R2, R8 @ Set R2 to R8 \n\
@@ -41,7 +41,7 @@ thumb_func_start func_08033468 \n\
 /* 080334b0 */ ASRS R6, R6, 0x10 \n\
 /* 080334b2 */ ADDS R2, R5, 0x0 @ Set R2 to R5 + 0x0 \n\
 /* 080334b4 */ ADDS R3, R6, 0x0 @ Set R3 to R6 + 0x0 \n\
-/* 080334b6 */ BL func_0804d5d4 \n\
+/* 080334b6 */ BL sprite_set_x_y \n\
 /* 080334ba */ ADD SP, 0xC \n\
 /* 080334bc */ POP {R3, R4} \n\
 /* 080334be */ MOV R8, R3 @ Set R8 to R3 \n\

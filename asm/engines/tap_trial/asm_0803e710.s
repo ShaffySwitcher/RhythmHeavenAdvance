@@ -16,7 +16,7 @@ thumb_func_start tap_trial_common_beat_animation \n\
 /* 0803e724 */ MOVS R0, 0xC @ Set R0 to 0xC \n\
 /* 0803e726 */ BL tap_trial_get_anim \n\
 /* 0803e72a */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 0803e72c */ LDR R0, =D_03005380 \n\
+/* 0803e72c */ LDR R0, =gSpriteHandler \n\
 /* 0803e72e */ LDR R0, [R0] \n\
 /* 0803e730 */ MOV R3, R8 @ Set R3 to R8 \n\
 /* 0803e732 */ LDR R1, [R3] \n\
@@ -28,7 +28,7 @@ thumb_func_start tap_trial_common_beat_animation \n\
 /* 0803e73e */ STR R3, [SP, 0x4] \n\
 /* 0803e740 */ STR R4, [SP, 0x8] \n\
 /* 0803e742 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 0803e744 */ BL func_0804d8f8 \n\
+/* 0803e744 */ BL sprite_set_anim \n\
  \n\
 branch_0803e748: \n\
 /* 0803e748 */ MOV R1, R8 @ Set R1 to R8 \n\
@@ -39,7 +39,7 @@ branch_0803e748: \n\
 /* 0803e752 */ MOVS R0, 0x1B @ Set R0 to 0x1B \n\
 /* 0803e754 */ BL tap_trial_get_anim \n\
 /* 0803e758 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 0803e75a */ LDR R6, =D_03005380 \n\
+/* 0803e75a */ LDR R6, =gSpriteHandler \n\
 /* 0803e75c */ LDR R0, [R6] \n\
 /* 0803e75e */ MOV R3, R8 @ Set R3 to R8 \n\
 /* 0803e760 */ LDR R1, [R3] \n\
@@ -51,7 +51,7 @@ branch_0803e748: \n\
 /* 0803e76c */ STR R4, [SP, 0x4] \n\
 /* 0803e76e */ STR R7, [SP, 0x8] \n\
 /* 0803e770 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 0803e772 */ BL func_0804d8f8 \n\
+/* 0803e772 */ BL sprite_set_anim \n\
 /* 0803e776 */ MOVS R0, 0x1B @ Set R0 to 0x1B \n\
 /* 0803e778 */ BL tap_trial_get_anim \n\
 /* 0803e77c */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
@@ -64,7 +64,7 @@ branch_0803e748: \n\
 /* 0803e78a */ STR R4, [SP, 0x4] \n\
 /* 0803e78c */ STR R7, [SP, 0x8] \n\
 /* 0803e78e */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 0803e790 */ BL func_0804d8f8 \n\
+/* 0803e790 */ BL sprite_set_anim \n\
  \n\
 branch_0803e794: \n\
 /* 0803e794 */ ADD SP, 0xC \n\

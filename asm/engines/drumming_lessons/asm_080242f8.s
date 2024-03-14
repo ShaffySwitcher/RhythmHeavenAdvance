@@ -41,7 +41,7 @@ thumb_func_start drum_intro_engine_start \n\
 branch_08024344: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R1, =D_03005380 \n\
+	LDR R1, =gSpriteHandler \n\
 	LDR R0, [R1] \n\
 	MOVS R1, 0x78 \n\
 	STR R1, [SP] \n\
@@ -57,7 +57,7 @@ branch_08024344: \n\
 	ADDS R1, R4, 0x0 \n\
 	MOVS R2, 0x0 \n\
 	MOVS R3, 0x78 \n\
-	BL func_0804d160 \n\
+	BL sprite_create \n\
 	STRH R0, [R7, 0x2] \n\
 	BL func_08024bd0 \n\
 	LDR R4, =anim_drum_samurai_head \n\
@@ -68,7 +68,7 @@ branch_08024344: \n\
 branch_0802437e: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R2, =D_03005380 \n\
+	LDR R2, =gSpriteHandler \n\
 	LDR R0, [R2] \n\
 	MOVS R1, 0x78 \n\
 	STR R1, [SP] \n\
@@ -83,7 +83,7 @@ branch_0802437e: \n\
 	ADDS R1, R4, 0x0 \n\
 	MOVS R2, 0x0 \n\
 	MOVS R3, 0x78 \n\
-	BL func_0804d160 \n\
+	BL sprite_create \n\
 	STRH R0, [R7] \n\
 	BL func_08024bd0 \n\
 	LDR R4, =anim_drum_samurai_waist \n\
@@ -94,7 +94,7 @@ branch_0802437e: \n\
 branch_080243b6: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R1, =D_03005380 \n\
+	LDR R1, =gSpriteHandler \n\
 	LDR R0, [R1] \n\
 	MOVS R1, 0x78 \n\
 	STR R1, [SP] \n\
@@ -109,7 +109,7 @@ branch_080243b6: \n\
 	ADDS R1, R4, 0x0 \n\
 	MOVS R2, 0x0 \n\
 	MOVS R3, 0x78 \n\
-	BL func_0804d160 \n\
+	BL sprite_create \n\
 	STRH R0, [R7, 0x4] \n\
 	BL func_08024bd0 \n\
 	LDR R4, =anim_drum_samurai_use_snare_l \n\
@@ -120,7 +120,7 @@ branch_080243b6: \n\
 branch_080243ee: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R2, =D_03005380 \n\
+	LDR R2, =gSpriteHandler \n\
 	LDR R0, [R2] \n\
 	MOVS R1, 0x57 \n\
 	STR R1, [SP] \n\
@@ -135,7 +135,7 @@ branch_080243ee: \n\
 	ADDS R1, R4, 0x0 \n\
 	MOVS R2, 0x7f \n\
 	MOVS R3, 0x7f \n\
-	BL func_0804d160 \n\
+	BL sprite_create \n\
 	STRH R0, [R7, 0x6] \n\
 	BL func_08024bd0 \n\
 	LDR R4, =anim_drum_samurai_use_snare_r \n\
@@ -146,7 +146,7 @@ branch_080243ee: \n\
 branch_08024426: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R1, =D_03005380 \n\
+	LDR R1, =gSpriteHandler \n\
 	LDR R0, [R1] \n\
 	MOVS R1, 0x55 \n\
 	STR R1, [SP] \n\
@@ -161,7 +161,7 @@ branch_08024426: \n\
 	ADDS R1, R4, 0x0 \n\
 	MOVS R2, 0x7f \n\
 	MOVS R3, 0x82 \n\
-	BL func_0804d160 \n\
+	BL sprite_create \n\
 	STRH R0, [R7, 0x8] \n\
 	BL func_08024bd0 \n\
 	LDR R4, =anim_drum_samurai_use_pedal_l \n\
@@ -172,7 +172,7 @@ branch_08024426: \n\
 branch_0802445e: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R2, =D_03005380 \n\
+	LDR R2, =gSpriteHandler \n\
 	LDR R0, [R2] \n\
 	MOVS R1, 0x78 \n\
 	MOV R9, R1 \n\
@@ -189,7 +189,7 @@ branch_0802445e: \n\
 	ADDS R1, R4, 0x0 \n\
 	MOVS R2, 0x2 \n\
 	MOVS R3, 0x78 \n\
-	BL func_0804d160 \n\
+	BL sprite_create \n\
 	STRH R0, [R7, 0xa] \n\
 	BL func_08024bd0 \n\
 	LDR R4, =anim_drum_samurai_use_pedal_r \n\
@@ -200,7 +200,7 @@ branch_0802445e: \n\
 branch_0802449a: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R1, =D_03005380 \n\
+	LDR R1, =gSpriteHandler \n\
 	LDR R0, [R1] \n\
 	MOV R2, R9 \n\
 	STR R2, [SP] \n\
@@ -213,7 +213,7 @@ branch_0802449a: \n\
 	ADDS R1, R4, 0x0 \n\
 	MOVS R2, 0x2 \n\
 	MOVS R3, 0x78 \n\
-	BL func_0804d160 \n\
+	BL sprite_create \n\
 	STRH R0, [R7, 0xc] \n\
 	BL func_08024bd0 \n\
 	LDR R4, =anim_drum_samurai_kit_bass_l \n\
@@ -224,7 +224,7 @@ branch_0802449a: \n\
 branch_080244ce: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R2, =D_03005380 \n\
+	LDR R2, =gSpriteHandler \n\
 	LDR R0, [R2] \n\
 	MOV R1, R9 \n\
 	STR R1, [SP] \n\
@@ -237,7 +237,7 @@ branch_080244ce: \n\
 	ADDS R1, R4, 0x0 \n\
 	MOVS R2, 0x0 \n\
 	MOVS R3, 0x78 \n\
-	BL func_0804d160 \n\
+	BL sprite_create \n\
 	STRH R0, [R7, 0x12] \n\
 	BL func_08024bd0 \n\
 	LDR R4, =anim_drum_samurai_kit_bass_r \n\
@@ -248,7 +248,7 @@ branch_080244ce: \n\
 branch_08024502: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R1, =D_03005380 \n\
+	LDR R1, =gSpriteHandler \n\
 	LDR R0, [R1] \n\
 	MOV R2, R9 \n\
 	STR R2, [SP] \n\
@@ -261,7 +261,7 @@ branch_08024502: \n\
 	ADDS R1, R4, 0x0 \n\
 	MOVS R2, 0x0 \n\
 	MOVS R3, 0x78 \n\
-	BL func_0804d160 \n\
+	BL sprite_create \n\
 	STRH R0, [R7, 0x14] \n\
 	BL func_08024bd0 \n\
 	LDR R4, =anim_drum_samurai_kit_snare \n\
@@ -272,7 +272,7 @@ branch_08024502: \n\
 branch_08024536: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R2, =D_03005380 \n\
+	LDR R2, =gSpriteHandler \n\
 	LDR R0, [R2] \n\
 	MOV R1, R9 \n\
 	STR R1, [SP] \n\
@@ -285,7 +285,7 @@ branch_08024536: \n\
 	ADDS R1, R4, 0x0 \n\
 	MOVS R2, 0x0 \n\
 	MOVS R3, 0x78 \n\
-	BL func_0804d160 \n\
+	BL sprite_create \n\
 	STRH R0, [R7, 0x16] \n\
 	BL func_08024bd0 \n\
 	LDR R4, =anim_drum_samurai_kit_tom \n\
@@ -296,7 +296,7 @@ branch_08024536: \n\
 branch_0802456a: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R1, =D_03005380 \n\
+	LDR R1, =gSpriteHandler \n\
 	LDR R0, [R1] \n\
 	MOV R2, R9 \n\
 	STR R2, [SP] \n\
@@ -309,7 +309,7 @@ branch_0802456a: \n\
 	ADDS R1, R4, 0x0 \n\
 	MOVS R2, 0x0 \n\
 	MOVS R3, 0x78 \n\
-	BL func_0804d160 \n\
+	BL sprite_create \n\
 	STRH R0, [R7, 0x18] \n\
 	BL func_08024bd0 \n\
 	LDR R4, =anim_drum_samurai_kit_hihat \n\
@@ -320,7 +320,7 @@ branch_0802456a: \n\
 branch_0802459e: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R2, =D_03005380 \n\
+	LDR R2, =gSpriteHandler \n\
 	LDR R0, [R2] \n\
 	MOV R1, R9 \n\
 	STR R1, [SP] \n\
@@ -333,7 +333,7 @@ branch_0802459e: \n\
 	ADDS R1, R4, 0x0 \n\
 	MOVS R2, 0x0 \n\
 	MOVS R3, 0x78 \n\
-	BL func_0804d160 \n\
+	BL sprite_create \n\
 	STRH R0, [R7, 0x1a] \n\
 	BL func_08024bd0 \n\
 	LDR R4, =anim_drum_samurai_kit_splash \n\
@@ -344,7 +344,7 @@ branch_0802459e: \n\
 branch_080245d2: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R1, =D_03005380 \n\
+	LDR R1, =gSpriteHandler \n\
 	LDR R0, [R1] \n\
 	MOV R2, R9 \n\
 	STR R2, [SP] \n\
@@ -357,7 +357,7 @@ branch_080245d2: \n\
 	ADDS R1, R4, 0x0 \n\
 	MOVS R2, 0x7f \n\
 	MOVS R3, 0x78 \n\
-	BL func_0804d160 \n\
+	BL sprite_create \n\
 	STRH R0, [R7, 0x1c] \n\
 	BL func_08024bd0 \n\
 	LDR R4, =anim_drum_samurai_kit_crash \n\
@@ -368,7 +368,7 @@ branch_080245d2: \n\
 branch_08024606: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R2, =D_03005380 \n\
+	LDR R2, =gSpriteHandler \n\
 	LDR R0, [R2] \n\
 	MOV R1, R9 \n\
 	STR R1, [SP] \n\
@@ -381,7 +381,7 @@ branch_08024606: \n\
 	ADDS R1, R4, 0x0 \n\
 	MOVS R2, 0x7f \n\
 	MOVS R3, 0x78 \n\
-	BL func_0804d160 \n\
+	BL sprite_create \n\
 	STRH R0, [R7, 0x1e] \n\
 	BL func_08024bd0 \n\
 	LDR R4, =anim_drum_samurai_kit_seat \n\
@@ -392,7 +392,7 @@ branch_08024606: \n\
 branch_0802463a: \n\
 	BL func_08024bd0 \n\
 	BL func_08024bd0 \n\
-	LDR R1, =D_03005380 \n\
+	LDR R1, =gSpriteHandler \n\
 	LDR R0, [R1] \n\
 	MOV R2, R9 \n\
 	STR R2, [SP] \n\
@@ -405,7 +405,7 @@ branch_0802463a: \n\
 	ADDS R1, R4, 0x0 \n\
 	MOVS R2, 0x0 \n\
 	MOVS R3, 0x78 \n\
-	BL func_0804d160 \n\
+	BL sprite_create \n\
 	STRH R0, [R7, 0x20] \n\
 	ADDS R2, R7, 0x0 \n\
 	ADDS R2, 0x22 \n\
@@ -445,22 +445,22 @@ branch_0802463a: \n\
 	STRB R0, [R1] \n\
 	LDR R6, =(D_03004b10 + 0x10) \n\
 	ADDS R4, R6, 0x2 \n\
-	LDR R2, =D_03005380 \n\
+	LDR R2, =gSpriteHandler \n\
 	LDR R0, [R2] \n\
 	B branch_0802476c \n\
  \n\
 .ltorg \n\
 branch_0802476c: \n\
-	BL func_0804e0c0 \n\
+	BL sprite_handler_get_mem_id \n\
 	ADDS R1, R0, 0x0 \n\
-	LDR R2, =D_03005380 \n\
+	LDR R2, =gSpriteHandler \n\
 	LDR R0, [R2] \n\
 	LSLS R1, R1, 0x10 \n\
 	LSRS R1, R1, 0x10 \n\
 	ADDS R2, R6, 0x0 \n\
 	ADDS R3, R4, 0x0 \n\
-	BL func_0804e188 \n\
-	LDR R1, =D_03005380 \n\
+	BL sprite_id_set_origin_x_y \n\
+	LDR R1, =gSpriteHandler \n\
 	LDR R0, [R1] \n\
 	MOVS R2, 0x0 \n\
 	LDRSH R1, [R7, R2] \n\
@@ -470,21 +470,21 @@ branch_0802476c: \n\
 	ADDS R5, 0x10 \n\
 	ADDS R2, R4, 0x0 \n\
 	ADDS R3, R5, 0x0 \n\
-	BL func_0804db44 \n\
-	LDR R1, =D_03005380 \n\
+	BL sprite_set_origin_x_y \n\
+	LDR R1, =gSpriteHandler \n\
 	LDR R0, [R1] \n\
 	MOVS R2, 0x6 \n\
 	LDRSH R1, [R7, R2] \n\
 	ADDS R2, R4, 0x0 \n\
 	ADDS R3, R5, 0x0 \n\
-	BL func_0804db44 \n\
-	LDR R1, =D_03005380 \n\
+	BL sprite_set_origin_x_y \n\
+	LDR R1, =gSpriteHandler \n\
 	LDR R0, [R1] \n\
 	MOVS R2, 0x8 \n\
 	LDRSH R1, [R7, R2] \n\
 	ADDS R2, R4, 0x0 \n\
 	ADDS R3, R5, 0x0 \n\
-	BL func_0804db44 \n\
+	BL sprite_set_origin_x_y \n\
 	LDRH R0, [R6] \n\
 	STRH R0, [R7, 0xe] \n\
 	LDRH R0, [R6, 0x2] \n\
@@ -615,7 +615,7 @@ branch_080248be: \n\
 	MOVS R2, 0x0 \n\
 	MOVS R3, 0x0 \n\
 	BL scene_set_bg_layer_display \n\
-	LDR R0, =D_03005380 \n\
+	LDR R0, =gSpriteHandler \n\
 	LDR R0, [R0] \n\
 	LDR R1, =anim_drum_player_unk25 \n\
 	MOVS R2, 0x30 \n\
@@ -630,7 +630,7 @@ branch_080248be: \n\
 	STR R2, [SP, 0x10] \n\
 	MOVS R2, 0x0 \n\
 	MOVS R3, 0x38 \n\
-	BL func_0804d160 \n\
+	BL sprite_create \n\
 	LDR R1, [R5] \n\
 	MOVS R2, 0xe5 \n\
 	LSLS R2, R2, 0x2 \n\

@@ -58,12 +58,12 @@ branch_08032ce8: \n\
 /* 08032cf6 */ BL agb_random \n\
 /* 08032cfa */ NEGS R0, R0 @ Set R0 to -R0 \n\
 /* 08032cfc */ STRH R0, [R4, 0x8] \n\
-/* 08032cfe */ LDR R0, =D_03005380 \n\
+/* 08032cfe */ LDR R0, =gSpriteHandler \n\
 /* 08032d00 */ LDR R0, [R0] \n\
 /* 08032d02 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08032d04 */ LDRSH R1, [R4, R2] \n\
 /* 08032d06 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 08032d08 */ BL func_0804cebc \n\
+/* 08032d08 */ BL sprite_set_anim_cel \n\
 /* 08032d0c */ ADDS R5, 0xC @ Add 0xC to R5 \n\
 /* 08032d0e */ ADDS R6, 0x1 @ Add 0x1 to R6 \n\
 /* 08032d10 */ CMP R6, 0x1D @ Compare R6 and 0x1D \n\

@@ -19,7 +19,7 @@ branch_0803d91c: \n\
 /* 0803d92a */ MOVS R0, 0x7 @ Set R0 to 0x7 \n\
 /* 0803d92c */ BL space_dance_get_anim \n\
 /* 0803d930 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 0803d932 */ LDR R0, =D_03005380 \n\
+/* 0803d932 */ LDR R0, =gSpriteHandler \n\
 /* 0803d934 */ LDR R0, [R0] \n\
 /* 0803d936 */ LDR R1, [R7] \n\
 /* 0803d938 */ ADDS R1, 0x6 @ Add 0x6 to R1 \n\
@@ -32,7 +32,7 @@ branch_0803d91c: \n\
 /* 0803d946 */ STR R3, [SP, 0x4] \n\
 /* 0803d948 */ STR R5, [SP, 0x8] \n\
 /* 0803d94a */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 0803d94c */ BL func_0804d8f8 \n\
+/* 0803d94c */ BL sprite_set_anim \n\
  \n\
 branch_0803d950: \n\
 /* 0803d950 */ ADDS R6, 0x1 @ Add 0x1 to R6 \n\
@@ -52,7 +52,7 @@ branch_0803d950: \n\
 /* 0803d96c */ MOVS R0, 0x3 @ Set R0 to 0x3 \n\
 /* 0803d96e */ BL space_dance_get_anim \n\
 /* 0803d972 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 0803d974 */ LDR R0, =D_03005380 \n\
+/* 0803d974 */ LDR R0, =gSpriteHandler \n\
 /* 0803d976 */ LDR R0, [R0] \n\
 /* 0803d978 */ LDR R1, [R5] \n\
 /* 0803d97a */ MOVS R3, 0x16 @ Set R3 to 0x16 \n\
@@ -63,7 +63,7 @@ branch_0803d950: \n\
 /* 0803d984 */ STR R3, [SP, 0x4] \n\
 /* 0803d986 */ STR R4, [SP, 0x8] \n\
 /* 0803d988 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 0803d98a */ BL func_0804d8f8 \n\
+/* 0803d98a */ BL sprite_set_anim \n\
  \n\
 branch_0803d98e: \n\
 /* 0803d98e */ ADD SP, 0xC \n\

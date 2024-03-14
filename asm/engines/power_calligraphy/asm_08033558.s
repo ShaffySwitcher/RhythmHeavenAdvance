@@ -30,14 +30,14 @@ thumb_func_start func_08033558 \n\
 .ltorg \n\
  \n\
 branch_08033594: \n\
-/* 08033594 */ LDR R0, =D_03005380 \n\
+/* 08033594 */ LDR R0, =gSpriteHandler \n\
 /* 08033596 */ LDR R0, [R0] \n\
 /* 08033598 */ LDR R1, =gCurrentEngineData \n\
 /* 0803359a */ LDR R1, [R1] \n\
 /* 0803359c */ MOVS R2, 0x38 @ Set R2 to 0x38 \n\
 /* 0803359e */ LDRSH R1, [R1, R2] \n\
 /* 080335a0 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 080335a2 */ BL func_0804cebc \n\
+/* 080335a2 */ BL sprite_set_anim_cel \n\
 /* 080335a6 */ BL get_current_mem_id \n\
 /* 080335aa */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 080335ac */ LSLS R4, R4, 0x10 \n\

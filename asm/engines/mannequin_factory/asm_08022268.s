@@ -39,7 +39,7 @@ branch_0802229a: \n\
 /* 0802229e */ B branch_08022398 \n\
  \n\
 branch_080222a0: \n\
-/* 080222a0 */ LDR R4, =D_03005380 \n\
+/* 080222a0 */ LDR R4, =gSpriteHandler \n\
 /* 080222a2 */ LDR R0, [R4] \n\
 /* 080222a4 */ MOVS R2, 0x2 @ Set R2 to 0x2 \n\
 /* 080222a6 */ LDRSH R1, [R6, R2] \n\
@@ -49,13 +49,13 @@ branch_080222a0: \n\
 /* 080222ae */ STR R3, [SP, 0x4] \n\
 /* 080222b0 */ STR R7, [SP, 0x8] \n\
 /* 080222b2 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 080222b4 */ BL func_0804d8f8 \n\
+/* 080222b4 */ BL sprite_set_anim \n\
 /* 080222b8 */ LDR R0, [R4] \n\
 /* 080222ba */ MOVS R2, 0x2 @ Set R2 to 0x2 \n\
 /* 080222bc */ LDRSH R1, [R6, R2] \n\
 /* 080222be */ MOVS R2, 0x80 @ Set R2 to 0x80 \n\
 /* 080222c0 */ LSLS R2, R2, 0x1 \n\
-/* 080222c2 */ BL func_0804dcb8 \n\
+/* 080222c2 */ BL sprite_set_anim_speed \n\
 /* 080222c6 */ STRH R7, [R6, 0x4] \n\
 /* 080222c8 */ MOVS R0, 0xC @ Set R0 to 0xC \n\
 /* 080222ca */ BL ticks_to_frames \n\
@@ -69,7 +69,7 @@ branch_080222a0: \n\
 .ltorg \n\
  \n\
 branch_080222e8: \n\
-/* 080222e8 */ LDR R0, =D_03005380 \n\
+/* 080222e8 */ LDR R0, =gSpriteHandler \n\
 /* 080222ea */ LDR R0, [R0] \n\
 /* 080222ec */ MOVS R2, 0x2 @ Set R2 to 0x2 \n\
 /* 080222ee */ LDRSH R1, [R6, R2] \n\
@@ -79,7 +79,7 @@ branch_080222e8: \n\
 /* 080222f6 */ STR R7, [SP, 0x4] \n\
 /* 080222f8 */ STR R5, [SP, 0x8] \n\
 /* 080222fa */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 080222fc */ BL func_0804d8f8 \n\
+/* 080222fc */ BL sprite_set_anim \n\
 /* 08022300 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 08022302 */ STRB R0, [R6] \n\
 /* 08022304 */ LDR R0, =s_virus_fork_seqData \n\
@@ -94,7 +94,7 @@ branch_08022318: \n\
 /* 0802231c */ LDRB R3, [R0] \n\
 /* 0802231e */ CMP R3, 0x1 @ Compare R3 and 0x1 \n\
 /* 08022320 */ BNE branch_08022354 \n\
-/* 08022322 */ LDR R0, =D_03005380 \n\
+/* 08022322 */ LDR R0, =gSpriteHandler \n\
 /* 08022324 */ LDR R0, [R0] \n\
 /* 08022326 */ MOVS R2, 0x2 @ Set R2 to 0x2 \n\
 /* 08022328 */ LDRSH R1, [R6, R2] \n\
@@ -104,7 +104,7 @@ branch_08022318: \n\
 /* 08022330 */ MOVS R3, 0x3 @ Set R3 to 0x3 \n\
 /* 08022332 */ STR R3, [SP, 0x8] \n\
 /* 08022334 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 08022336 */ BL func_0804d8f8 \n\
+/* 08022336 */ BL sprite_set_anim \n\
 /* 0802233a */ LDR R0, =s_ghost_walk_seqData \n\
 /* 0802233c */ BL play_sound \n\
 /* 08022340 */ B branch_08022394 \n\
@@ -112,18 +112,18 @@ branch_08022318: \n\
 .ltorg \n\
  \n\
 branch_08022354: \n\
-/* 08022354 */ LDR R5, =D_03005380 \n\
+/* 08022354 */ LDR R5, =gSpriteHandler \n\
 /* 08022356 */ LDR R0, [R5] \n\
 /* 08022358 */ MOVS R2, 0x2 @ Set R2 to 0x2 \n\
 /* 0802235a */ LDRSH R1, [R6, R2] \n\
-/* 0802235c */ BL func_0804d3cc \n\
+/* 0802235c */ BL sprite_clone \n\
 /* 08022360 */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 08022362 */ LDR R0, [R5] \n\
 /* 08022364 */ LSLS R4, R4, 0x10 \n\
 /* 08022366 */ ASRS R4, R4, 0x10 \n\
 /* 08022368 */ LDR R2, =0x000048be \n\
 /* 0802236a */ ADDS R1, R4, 0x0 @ Set R1 to R4 + 0x0 \n\
-/* 0802236c */ BL func_0804d67c \n\
+/* 0802236c */ BL sprite_set_z \n\
 /* 08022370 */ LDR R0, [R5] \n\
 /* 08022372 */ LDR R2, =anim_mannequin_ng_effect \n\
 /* 08022374 */ MOVS R1, 0x1 @ Set R1 to 0x1 \n\
@@ -133,11 +133,11 @@ branch_08022354: \n\
 /* 0802237c */ STR R1, [SP, 0x8] \n\
 /* 0802237e */ ADDS R1, R4, 0x0 @ Set R1 to R4 + 0x0 \n\
 /* 08022380 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 08022382 */ BL func_0804d8f8 \n\
+/* 08022382 */ BL sprite_set_anim \n\
 /* 08022386 */ LDR R0, [R5] \n\
 /* 08022388 */ ADDS R1, R4, 0x0 @ Set R1 to R4 + 0x0 \n\
 /* 0802238a */ MOVS R2, 0x20 @ Set R2 to 0x20 \n\
-/* 0802238c */ BL func_0804dcb8 \n\
+/* 0802238c */ BL sprite_set_anim_speed \n\
 /* 08022390 */ BL func_0802310c \n\
  \n\
 branch_08022394: \n\

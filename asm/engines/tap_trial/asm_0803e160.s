@@ -13,7 +13,7 @@ thumb_func_start func_0803e160 \n\
 /* 0803e16e */ MOVS R0, 0x1D @ Set R0 to 0x1D \n\
 /* 0803e170 */ BL tap_trial_get_anim \n\
 /* 0803e174 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 0803e176 */ LDR R0, =D_03005380 \n\
+/* 0803e176 */ LDR R0, =gSpriteHandler \n\
 /* 0803e178 */ LDR R0, [R0] \n\
 /* 0803e17a */ LDR R1, [R5] \n\
 /* 0803e17c */ MOVS R3, 0x18 @ Set R3 to 0x18 \n\
@@ -23,7 +23,7 @@ thumb_func_start func_0803e160 \n\
 /* 0803e184 */ STR R4, [SP, 0x4] \n\
 /* 0803e186 */ STR R4, [SP, 0x8] \n\
 /* 0803e188 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 0803e18a */ BL func_0804d8f8 \n\
+/* 0803e18a */ BL sprite_set_anim \n\
 /* 0803e18e */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 0803e190 */ BL func_0803e258 \n\
  \n\

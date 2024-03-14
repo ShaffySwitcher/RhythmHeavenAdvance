@@ -6,14 +6,14 @@ thumb_func_start func_080357c4 \n\
 /* 080357c4 */ PUSH {R4-R7, LR} \n\
 /* 080357c6 */ SUB SP, 0x4 \n\
 /* 080357c8 */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
-/* 080357ca */ LDR R0, =D_03005380 \n\
+/* 080357ca */ LDR R0, =gSpriteHandler \n\
 /* 080357cc */ LDR R0, [R0] \n\
 /* 080357ce */ LDR R5, =gCurrentEngineData \n\
 /* 080357d0 */ LDR R1, [R5] \n\
 /* 080357d2 */ MOVS R2, 0xE @ Set R2 to 0xE \n\
 /* 080357d4 */ LDRSH R1, [R1, R2] \n\
 /* 080357d6 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 080357d8 */ BL func_0804cebc \n\
+/* 080357d8 */ BL sprite_set_anim_cel \n\
 /* 080357dc */ CMP R4, 0x0 @ Compare R4 and 0x0 \n\
 /* 080357de */ BEQ branch_080357e6 \n\
 /* 080357e0 */ LDR R0, =s_metro_count1_seqData \n\

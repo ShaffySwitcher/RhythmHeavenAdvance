@@ -47,7 +47,7 @@ thumb_func_start rhythm_toys_engine_start \n\
 /* 0804458e */ BL func_08044248 \n\
 /* 08044592 */ LSLS R0, R0, 0x10 \n\
 /* 08044594 */ ASRS R0, R0, 0x10 \n\
-/* 08044596 */ LDR R3, =D_03005380 \n\
+/* 08044596 */ LDR R3, =gSpriteHandler \n\
 /* 08044598 */ LDR R1, [R3] \n\
 /* 0804459a */ STR R0, [SP] \n\
 /* 0804459c */ MOVS R0, 0x80 @ Set R0 to 0x80 \n\
@@ -63,7 +63,7 @@ thumb_func_start rhythm_toys_engine_start \n\
 /* 080445b0 */ ADDS R1, R6, 0x0 @ Set R1 to R6 + 0x0 \n\
 /* 080445b2 */ MOVS R2, 0x7F @ Set R2 to 0x7F \n\
 /* 080445b4 */ ADDS R3, R4, 0x0 @ Set R3 to R4 + 0x0 \n\
-/* 080445b6 */ BL func_0804d160 \n\
+/* 080445b6 */ BL sprite_create \n\
 /* 080445ba */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
 /* 080445bc */ MOV R3, R9 @ Set R3 to R9 \n\
 /* 080445be */ LDR R1, [R3] \n\
@@ -85,7 +85,7 @@ thumb_func_start rhythm_toys_engine_start \n\
 /* 080445e2 */ BL func_08044248 \n\
 /* 080445e6 */ LSLS R0, R0, 0x10 \n\
 /* 080445e8 */ ASRS R0, R0, 0x10 \n\
-/* 080445ea */ LDR R2, =D_03005380 \n\
+/* 080445ea */ LDR R2, =gSpriteHandler \n\
 /* 080445ec */ LDR R1, [R2] \n\
 /* 080445ee */ STR R0, [SP] \n\
 /* 080445f0 */ LDR R0, =0x7ff \n\
@@ -99,7 +99,7 @@ thumb_func_start rhythm_toys_engine_start \n\
 /* 08044600 */ ADDS R1, R5, 0x0 @ Set R1 to R5 + 0x0 \n\
 /* 08044602 */ MOVS R2, 0x7F @ Set R2 to 0x7F \n\
 /* 08044604 */ ADDS R3, R4, 0x0 @ Set R3 to R4 + 0x0 \n\
-/* 08044606 */ BL func_0804d160 \n\
+/* 08044606 */ BL sprite_create \n\
 /* 0804460a */ MOV R2, R9 @ Set R2 to R9 \n\
 /* 0804460c */ LDR R1, [R2] \n\
 /* 0804460e */ LDR R3, =0x356 \n\
@@ -152,7 +152,7 @@ branch_0804465c: \n\
 /* 08044676 */ BL func_08044248 \n\
 /* 0804467a */ LSLS R0, R0, 0x10 \n\
 /* 0804467c */ ASRS R0, R0, 0x10 \n\
-/* 0804467e */ LDR R1, =D_03005380 \n\
+/* 0804467e */ LDR R1, =gSpriteHandler \n\
 /* 08044680 */ LDR R1, [R1] \n\
 /* 08044682 */ STR R0, [SP] \n\
 /* 08044684 */ MOVS R0, 0xE0 @ Set R0 to 0xE0 \n\
@@ -169,7 +169,7 @@ branch_0804465c: \n\
 /* 0804469a */ ADDS R1, R6, 0x0 @ Set R1 to R6 + 0x0 \n\
 /* 0804469c */ MOVS R2, 0x7F @ Set R2 to 0x7F \n\
 /* 0804469e */ ADDS R3, R5, 0x0 @ Set R3 to R5 + 0x0 \n\
-/* 080446a0 */ BL func_0804d160 \n\
+/* 080446a0 */ BL sprite_create \n\
 /* 080446a4 */ LDR R4, =gCurrentEngineData \n\
 /* 080446a6 */ LDR R1, [R4] \n\
 /* 080446a8 */ LSLS R2, R7, 0x1 \n\

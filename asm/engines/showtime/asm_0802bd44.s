@@ -21,7 +21,7 @@ branch_0802bd50: \n\
 /* 0802bd5e */ BEQ branch_0802bdc8 \n\
 /* 0802bd60 */ CMP R4, 0x0 @ Compare R4 and 0x0 \n\
 /* 0802bd62 */ BNE branch_0802bd98 \n\
-/* 0802bd64 */ LDR R0, =D_03005380 \n\
+/* 0802bd64 */ LDR R0, =gSpriteHandler \n\
 /* 0802bd66 */ LDR R0, [R0] \n\
 /* 0802bd68 */ LDR R3, [R2] \n\
 /* 0802bd6a */ SUBS R3, 0x4 @ Subtract 0x4 from R3 \n\
@@ -37,13 +37,13 @@ branch_0802bd50: \n\
 /* 0802bd7e */ STR R1, [SP, 0x10] \n\
 /* 0802bd80 */ LDR R1, =anim_showtime_splash_ball \n\
 /* 0802bd82 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 0802bd84 */ BL func_0804d160 \n\
+/* 0802bd84 */ BL sprite_create \n\
 /* 0802bd88 */ B branch_0802bdba \n\
 \n\
 .ltorg \n\
  \n\
 branch_0802bd98: \n\
-/* 0802bd98 */ LDR R0, =D_03005380 \n\
+/* 0802bd98 */ LDR R0, =gSpriteHandler \n\
 /* 0802bd9a */ LDR R0, [R0] \n\
 /* 0802bd9c */ ADDS R3, 0x8 @ Add 0x8 to R3 \n\
 /* 0802bd9e */ LSLS R3, R3, 0x10 \n\
@@ -58,7 +58,7 @@ branch_0802bd98: \n\
 /* 0802bdb0 */ STR R1, [SP, 0x10] \n\
 /* 0802bdb2 */ LDR R1, =anim_showtime_splash_penguin \n\
 /* 0802bdb4 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 0802bdb6 */ BL func_0804d160 \n\
+/* 0802bdb6 */ BL sprite_create \n\
  \n\
 branch_0802bdba: \n\
 /* 0802bdba */ LDR R1, =gCurrentEngineData \n\

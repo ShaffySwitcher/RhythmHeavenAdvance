@@ -70,7 +70,7 @@ branch_0803a970: \n\
 branch_0803a97c: \n\
 /* 0803a97c */ ADDS R0, R2, R0 @ Set R0 to R2 + R0 \n\
 /* 0803a97e */ LDRB R2, [R0] \n\
-/* 0803a980 */ LDR R0, =D_03005380 \n\
+/* 0803a980 */ LDR R0, =gSpriteHandler \n\
 /* 0803a982 */ LDR R0, [R0] \n\
 /* 0803a984 */ LDR R1, =gCurrentEngineData \n\
 /* 0803a986 */ LDR R1, [R1] \n\
@@ -93,7 +93,7 @@ jump_0803a9a0: \n\
 /* 0803a9b0 */ MOVS R2, 0x6 @ Set R2 to 0x6 \n\
  \n\
 branch_0803a9b2: \n\
-/* 0803a9b2 */ LDR R0, =D_03005380 \n\
+/* 0803a9b2 */ LDR R0, =gSpriteHandler \n\
 /* 0803a9b4 */ LDR R0, [R0] \n\
 /* 0803a9b6 */ ADDS R1, 0x76 @ Add 0x76 to R1 \n\
 /* 0803a9b8 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
@@ -102,7 +102,7 @@ branch_0803a9b2: \n\
  \n\
 branch_0803a9be: \n\
 /* 0803a9be */ ASRS R2, R2, 0x18 \n\
-/* 0803a9c0 */ BL func_0804cebc \n\
+/* 0803a9c0 */ BL sprite_set_anim_cel \n\
 /* 0803a9c4 */ B branch_0803a9ee \n\
 \n\
 .ltorg \n\
@@ -124,7 +124,7 @@ branch_0803a9ec: \n\
 /* 0803a9ec */ STR R1, [R4] \n\
  \n\
 branch_0803a9ee: \n\
-/* 0803a9ee */ LDR R5, =D_03005380 \n\
+/* 0803a9ee */ LDR R5, =gSpriteHandler \n\
 /* 0803a9f0 */ LDR R0, [R5] \n\
 /* 0803a9f2 */ LDR R4, =gCurrentEngineData \n\
 /* 0803a9f4 */ LDR R2, [R4] \n\
@@ -138,7 +138,7 @@ branch_0803a9ee: \n\
 /* 0803aa04 */ ADDS R2, 0x44 @ Add 0x44 to R2 \n\
 /* 0803aa06 */ LSLS R2, R2, 0x10 \n\
 /* 0803aa08 */ ASRS R2, R2, 0x10 \n\
-/* 0803aa0a */ BL func_0804d648 \n\
+/* 0803aa0a */ BL sprite_set_y \n\
 /* 0803aa0e */ LDR R0, [R5] \n\
 /* 0803aa10 */ LDR R2, [R4] \n\
 /* 0803aa12 */ ADDS R1, R2, 0x0 @ Set R1 to R2 + 0x0 \n\
@@ -151,7 +151,7 @@ branch_0803a9ee: \n\
 /* 0803aa20 */ ADDS R2, 0x44 @ Add 0x44 to R2 \n\
 /* 0803aa22 */ LSLS R2, R2, 0x10 \n\
 /* 0803aa24 */ ASRS R2, R2, 0x10 \n\
-/* 0803aa26 */ BL func_0804d648 \n\
+/* 0803aa26 */ BL sprite_set_y \n\
 /* 0803aa2a */ LDR R4, [R4] \n\
 /* 0803aa2c */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 0803aa2e */ ADDS R0, 0xD3 @ Add 0xD3 to R0 \n\

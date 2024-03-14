@@ -18,12 +18,12 @@ thumb_func_start samurai_slice_cue_hit \n\
 /* 080312d0 */ LDRH R0, [R1] \n\
 /* 080312d2 */ ADDS R0, 0x1 @ Add 0x1 to R0 \n\
 /* 080312d4 */ STRH R0, [R1] \n\
-/* 080312d6 */ LDR R0, =D_03005380 \n\
+/* 080312d6 */ LDR R0, =gSpriteHandler \n\
 /* 080312d8 */ LDR R0, [R0] \n\
 /* 080312da */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 080312dc */ LDRSH R1, [R5, R2] \n\
 /* 080312de */ MOVS R2, 0x7 @ Set R2 to 0x7 \n\
-/* 080312e0 */ BL func_0804ddb0 \n\
+/* 080312e0 */ BL sprite_get_data \n\
 /* 080312e4 */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
 /* 080312e6 */ LDR R0, =anim_small_demon_hop \n\
 /* 080312e8 */ CMP R1, R0 @ Check R1 - R0 \n\
@@ -154,17 +154,17 @@ jump_080313b2: \n\
 /* 080313ee */ BL func_08032510 \n\
  \n\
 branch_080313f2: \n\
-/* 080313f2 */ LDR R4, =D_03005380 \n\
+/* 080313f2 */ LDR R4, =gSpriteHandler \n\
 /* 080313f4 */ LDR R0, [R4] \n\
 /* 080313f6 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 080313f8 */ LDRSH R1, [R5, R2] \n\
 /* 080313fa */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 080313fc */ BL func_0804d770 \n\
+/* 080313fc */ BL sprite_set_visible \n\
 /* 08031400 */ LDR R0, [R4] \n\
 /* 08031402 */ MOVS R2, 0x2 @ Set R2 to 0x2 \n\
 /* 08031404 */ LDRSH R1, [R5, R2] \n\
 /* 08031406 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 08031408 */ BL func_0804d770 \n\
+/* 08031408 */ BL sprite_set_visible \n\
 /* 0803140c */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0803140e */ STRB R0, [R5, 0x4] \n\
 /* 08031410 */ LDR R0, =gCurrentEngineData \n\
@@ -324,21 +324,21 @@ branch_0803153e: \n\
 /* 0803154e */ BNE branch_08031576 \n\
 /* 08031550 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 08031552 */ STRB R0, [R1] \n\
-/* 08031554 */ LDR R4, =D_03005380 \n\
+/* 08031554 */ LDR R4, =gSpriteHandler \n\
 /* 08031556 */ LDR R0, [R4] \n\
 /* 08031558 */ LDR R1, [R5] \n\
 /* 0803155a */ ADDS R1, 0x8C @ Add 0x8C to R1 \n\
 /* 0803155c */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0803155e */ LDRSH R1, [R1, R2] \n\
 /* 08031560 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 08031562 */ BL func_0804cebc \n\
+/* 08031562 */ BL sprite_set_anim_cel \n\
 /* 08031566 */ LDR R0, [R4] \n\
 /* 08031568 */ LDR R1, [R5] \n\
 /* 0803156a */ ADDS R1, 0x8C @ Add 0x8C to R1 \n\
 /* 0803156c */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0803156e */ LDRSH R1, [R1, R2] \n\
 /* 08031570 */ MOVS R2, 0x1 @ Set R2 to 0x1 \n\
-/* 08031572 */ BL func_0804d770 \n\
+/* 08031572 */ BL sprite_set_visible \n\
  \n\
 branch_08031576: \n\
 /* 08031576 */ POP {R4-R6} \n\

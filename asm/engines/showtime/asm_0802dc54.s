@@ -60,7 +60,7 @@ branch_0802dc64: \n\
 /* 0802dcc0 */ MOV R3, R8 @ Set R3 to R8 \n\
 /* 0802dcc2 */ LSLS R1, R3, 0x8 \n\
 /* 0802dcc4 */ STR R1, [R0] \n\
-/* 0802dcc6 */ LDR R0, =D_03005380 \n\
+/* 0802dcc6 */ LDR R0, =gSpriteHandler \n\
 /* 0802dcc8 */ LDR R0, [R0] \n\
 /* 0802dcca */ MOVS R3, 0x81 @ Set R3 to 0x81 \n\
 /* 0802dccc */ LSLS R3, R3, 0x2 \n\
@@ -69,7 +69,7 @@ branch_0802dc64: \n\
 /* 0802dcd2 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0802dcd4 */ LDRSH R1, [R1, R2] \n\
 /* 0802dcd6 */ MOVS R2, 0x1 @ Set R2 to 0x1 \n\
-/* 0802dcd8 */ BL func_0804d770 \n\
+/* 0802dcd8 */ BL sprite_set_visible \n\
 /* 0802dcdc */ LDR R0, [R5] \n\
 /* 0802dcde */ MOVS R3, 0x82 @ Set R3 to 0x82 \n\
 /* 0802dce0 */ LSLS R3, R3, 0x2 \n\

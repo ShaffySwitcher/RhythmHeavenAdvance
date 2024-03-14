@@ -5,7 +5,7 @@ asm(".syntax unified \n\
 thumb_func_start func_08029cec \n\
 /* 08029cec */ PUSH {LR} \n\
 /* 08029cee */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 08029cf0 */ LDR R0, =D_03005380 \n\
+/* 08029cf0 */ LDR R0, =gSpriteHandler \n\
 /* 08029cf2 */ LDR R0, [R0] \n\
 /* 08029cf4 */ LDR R1, =gCurrentEngineData \n\
 /* 08029cf6 */ LDR R1, [R1] \n\
@@ -16,7 +16,7 @@ thumb_func_start func_08029cec \n\
 /* 08029d00 */ LSLS R2, R2, 0x3 \n\
 /* 08029d02 */ LDR R3, =D_089e2b98 \n\
 /* 08029d04 */ ADDS R2, R2, R3 @ Set R2 to R2 + R3 \n\
-/* 08029d06 */ BL func_0804d9b0 \n\
+/* 08029d06 */ BL sprite_set_anim_data \n\
 /* 08029d0a */ POP {R0} \n\
 /* 08029d0c */ BX R0 \n\
 \n\

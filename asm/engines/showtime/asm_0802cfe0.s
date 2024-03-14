@@ -37,7 +37,7 @@ thumb_func_start func_0802cfe0 \n\
 /* 0802d022 */ ADDS R1, 0x38 @ Add 0x38 to R1 \n\
 /* 0802d024 */ ADDS R1, R1, R6 @ Set R1 to R1 + R6 \n\
 /* 0802d026 */ STR R0, [R1] \n\
-/* 0802d028 */ LDR R5, =D_03005380 \n\
+/* 0802d028 */ LDR R5, =gSpriteHandler \n\
 /* 0802d02a */ LDR R0, [R5] \n\
 /* 0802d02c */ ADDS R2, R2, R6 @ Set R2 to R2 + R6 \n\
 /* 0802d02e */ MOVS R3, 0x20 @ Set R3 to 0x20 \n\
@@ -48,14 +48,14 @@ thumb_func_start func_0802cfe0 \n\
 /* 0802d038 */ STR R4, [SP, 0x4] \n\
 /* 0802d03a */ STR R4, [SP, 0x8] \n\
 /* 0802d03c */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 0802d03e */ BL func_0804d8f8 \n\
+/* 0802d03e */ BL sprite_set_anim \n\
 /* 0802d042 */ LDR R0, [R5] \n\
 /* 0802d044 */ LDR R1, [R7] \n\
 /* 0802d046 */ ADDS R1, R1, R6 @ Set R1 to R1 + R6 \n\
 /* 0802d048 */ MOVS R2, 0x20 @ Set R2 to 0x20 \n\
 /* 0802d04a */ LDRSH R1, [R1, R2] \n\
 /* 0802d04c */ MOVS R2, 0x1 @ Set R2 to 0x1 \n\
-/* 0802d04e */ BL func_0804cebc \n\
+/* 0802d04e */ BL sprite_set_anim_cel \n\
  \n\
 branch_0802d052: \n\
 /* 0802d052 */ ADD SP, 0xC \n\

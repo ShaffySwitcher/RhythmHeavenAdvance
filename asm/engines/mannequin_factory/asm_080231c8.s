@@ -15,7 +15,7 @@ thumb_func_start func_080231c8 \n\
 /* 080231da */ MOVS R7, 0x0 @ Set R7 to 0x0 \n\
  \n\
 branch_080231dc: \n\
-/* 080231dc */ LDR R0, =D_03005380 \n\
+/* 080231dc */ LDR R0, =gSpriteHandler \n\
 /* 080231de */ LDR R5, [R0] \n\
 /* 080231e0 */ LDR R2, =gCurrentEngineData \n\
 /* 080231e2 */ MOV R8, R2 @ Set R8 to R2 \n\
@@ -34,7 +34,7 @@ branch_080231dc: \n\
 /* 080231fe */ ASRS R2, R2, 0x18 \n\
 /* 08023200 */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\
 /* 08023202 */ ADDS R1, R4, 0x0 @ Set R1 to R4 + 0x0 \n\
-/* 08023204 */ BL func_0804cebc \n\
+/* 08023204 */ BL sprite_set_anim_cel \n\
 /* 08023208 */ ADDS R0, R6, 0x0 @ Set R0 to R6 + 0x0 \n\
 /* 0802320a */ MOVS R1, 0xA @ Set R1 to 0xA \n\
 /* 0802320c */ BL __udivsi3 \n\
@@ -50,7 +50,7 @@ branch_080231dc: \n\
 /* 08023222 */ MOVS R7, 0x0 @ Set R7 to 0x0 \n\
  \n\
 branch_08023224: \n\
-/* 08023224 */ LDR R0, =D_03005380 \n\
+/* 08023224 */ LDR R0, =gSpriteHandler \n\
 /* 08023226 */ LDR R5, [R0] \n\
 /* 08023228 */ LDR R0, =gCurrentEngineData \n\
 /* 0802322a */ LDR R0, [R0] \n\
@@ -69,7 +69,7 @@ branch_08023224: \n\
 /* 08023246 */ ASRS R2, R2, 0x18 \n\
 /* 08023248 */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\
 /* 0802324a */ ADDS R1, R4, 0x0 @ Set R1 to R4 + 0x0 \n\
-/* 0802324c */ BL func_0804cebc \n\
+/* 0802324c */ BL sprite_set_anim_cel \n\
 /* 08023250 */ ADDS R0, R6, 0x0 @ Set R0 to R6 + 0x0 \n\
 /* 08023252 */ MOVS R1, 0xA @ Set R1 to 0xA \n\
 /* 08023254 */ BL __udivsi3 \n\

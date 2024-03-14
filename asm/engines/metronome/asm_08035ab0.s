@@ -53,14 +53,14 @@ branch_08035af6: \n\
 /* 08035b0c */ STRB R1, [R0] \n\
  \n\
 branch_08035b0e: \n\
-/* 08035b0e */ LDR R0, =D_03005380 \n\
+/* 08035b0e */ LDR R0, =gSpriteHandler \n\
 /* 08035b10 */ LDR R0, [R0] \n\
 /* 08035b12 */ LDR R2, [R6] \n\
 /* 08035b14 */ MOVS R3, 0x10 @ Set R3 to 0x10 \n\
 /* 08035b16 */ LDRSH R1, [R2, R3] \n\
 /* 08035b18 */ ADDS R2, 0x2F @ Add 0x2F to R2 \n\
 /* 08035b1a */ LDRB R2, [R2] \n\
-/* 08035b1c */ BL func_0804d770 \n\
+/* 08035b1c */ BL sprite_set_visible \n\
 /* 08035b20 */ POP {R4-R6} \n\
 /* 08035b22 */ POP {R0} \n\
 /* 08035b24 */ BX R0 \n\

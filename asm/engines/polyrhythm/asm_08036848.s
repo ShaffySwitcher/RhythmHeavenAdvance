@@ -9,12 +9,12 @@ thumb_func_start func_08036848 \n\
 /* 0803684e */ SUB SP, 0x4 \n\
 /* 08036850 */ ADDS R6, R0, 0x0 @ Set R6 to R0 + 0x0 \n\
 /* 08036852 */ LDR R4, [R6, 0x14] \n\
-/* 08036854 */ LDR R0, =D_03005380 \n\
+/* 08036854 */ LDR R0, =gSpriteHandler \n\
 /* 08036856 */ LDR R0, [R0] \n\
 /* 08036858 */ MOVS R2, 0x4 @ Set R2 to 0x4 \n\
 /* 0803685a */ LDRSH R1, [R6, R2] \n\
 /* 0803685c */ MOVS R2, 0x6 @ Set R2 to 0x6 \n\
-/* 0803685e */ BL func_0804ddb0 \n\
+/* 0803685e */ BL sprite_get_data \n\
 /* 08036862 */ ADDS R7, R0, 0x0 @ Set R7 to R0 + 0x0 \n\
 /* 08036864 */ LDRB R0, [R6, 0x1] \n\
 /* 08036866 */ LSLS R0, R0, 0x1F \n\
@@ -60,14 +60,14 @@ branch_080368b4: \n\
 /* 080368b6 */ MOVS R1, 0x1 @ Set R1 to 0x1 \n\
 /* 080368b8 */ ORRS R0, R1 @ Set R0 to R0 | R1 \n\
 /* 080368ba */ STRB R0, [R6, 0x1] \n\
-/* 080368bc */ LDR R0, =D_03005380 \n\
+/* 080368bc */ LDR R0, =gSpriteHandler \n\
 /* 080368be */ LDR R0, [R0] \n\
 /* 080368c0 */ MOVS R7, 0x4 @ Set R7 to 0x4 \n\
 /* 080368c2 */ LDRSH R1, [R6, R7] \n\
 /* 080368c4 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 080368c6 */ STR R2, [SP] \n\
 /* 080368c8 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 080368ca */ BL func_0804dae0 \n\
+/* 080368ca */ BL sprite_set_playback \n\
  \n\
 branch_080368ce: \n\
 /* 080368ce */ LDR R0, [R6, 0x2C] \n\
@@ -114,7 +114,7 @@ branch_080368fc: \n\
 /* 08036924 */ ADDS R3, R0, 0x0 @ Set R3 to R0 + 0x0 \n\
 /* 08036926 */ LDR R0, [R6, 0xC] \n\
 /* 08036928 */ ADDS R3, R3, R0 @ Set R3 to R3 + R0 \n\
-/* 0803692a */ LDR R5, =D_03005380 \n\
+/* 0803692a */ LDR R5, =gSpriteHandler \n\
 /* 0803692c */ LDR R0, [R5] \n\
 /* 0803692e */ MOVS R2, 0x4 @ Set R2 to 0x4 \n\
 /* 08036930 */ LDRSH R1, [R6, R2] \n\
@@ -127,12 +127,12 @@ branch_080368fc: \n\
 /* 0803693e */ LSRS R2, R2, 0x10 \n\
 /* 08036940 */ STR R2, [SP] \n\
 /* 08036942 */ ADDS R2, R4, 0x0 @ Set R2 to R4 + 0x0 \n\
-/* 08036944 */ BL func_0804d55c \n\
+/* 08036944 */ BL sprite_set_x_y_z \n\
 /* 08036948 */ LDR R0, [R5] \n\
 /* 0803694a */ MOVS R2, 0x4 @ Set R2 to 0x4 \n\
 /* 0803694c */ LDRSH R1, [R6, R2] \n\
 /* 0803694e */ MOVS R2, 0x1 @ Set R2 to 0x1 \n\
-/* 08036950 */ BL func_0804d770 \n\
+/* 08036950 */ BL sprite_set_visible \n\
 /* 08036954 */ LDR R0, [R6, 0x30] \n\
 /* 08036956 */ ADDS R0, 0x1 @ Add 0x1 to R0 \n\
 /* 08036958 */ STR R0, [R6, 0x30] \n\

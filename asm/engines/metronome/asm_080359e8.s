@@ -33,7 +33,7 @@ branch_08035a12: \n\
 /* 08035a16 */ SUBS R5, 0x1 @ Subtract 0x1 from R5 \n\
  \n\
 branch_08035a18: \n\
-/* 08035a18 */ LDR R6, =D_03005380 \n\
+/* 08035a18 */ LDR R6, =gSpriteHandler \n\
 /* 08035a1a */ LDR R0, [R6] \n\
 /* 08035a1c */ LDR R4, =gCurrentEngineData \n\
 /* 08035a1e */ LDR R1, [R4] \n\
@@ -43,7 +43,7 @@ branch_08035a18: \n\
 /* 08035a26 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08035a28 */ LDRSH R1, [R1, R2] \n\
 /* 08035a2a */ MOVS R2, 0x7F @ Set R2 to 0x7F \n\
-/* 08035a2c */ BL func_0804cebc \n\
+/* 08035a2c */ BL sprite_set_anim_cel \n\
 /* 08035a30 */ ADDS R7, 0x1 @ Add 0x1 to R7 \n\
 /* 08035a32 */ CMP R7, 0x2 @ Compare R7 and 0x2 \n\
 /* 08035a34 */ BLS branch_08035a18 \n\
@@ -56,7 +56,7 @@ branch_08035a18: \n\
 /* 08035a42 */ BCS branch_08035a98 \n\
  \n\
 branch_08035a44: \n\
-/* 08035a44 */ LDR R0, =D_03005380 \n\
+/* 08035a44 */ LDR R0, =gSpriteHandler \n\
 /* 08035a46 */ LDR R0, [R0] \n\
 /* 08035a48 */ MOV R9, R0 @ Set R9 to R0 \n\
 /* 08035a4a */ LDR R1, =gCurrentEngineData \n\
@@ -74,12 +74,12 @@ branch_08035a44: \n\
 /* 08035a64 */ ASRS R2, R2, 0x18 \n\
 /* 08035a66 */ MOV R0, R9 @ Set R0 to R9 \n\
 /* 08035a68 */ ADDS R1, R4, 0x0 @ Set R1 to R4 + 0x0 \n\
-/* 08035a6a */ BL func_0804cebc \n\
+/* 08035a6a */ BL sprite_set_anim_cel \n\
 /* 08035a6e */ MOV R0, R8 @ Set R0 to R8 \n\
 /* 08035a70 */ MOVS R1, 0xA @ Set R1 to 0xA \n\
 /* 08035a72 */ BL __udivsi3 \n\
 /* 08035a76 */ MOV R8, R0 @ Set R8 to R0 \n\
-/* 08035a78 */ LDR R1, =D_03005380 \n\
+/* 08035a78 */ LDR R1, =gSpriteHandler \n\
 /* 08035a7a */ LDR R0, [R1] \n\
 /* 08035a7c */ LDR R2, =gCurrentEngineData \n\
 /* 08035a7e */ LDR R1, [R2] \n\
@@ -89,7 +89,7 @@ branch_08035a44: \n\
 /* 08035a86 */ LDRSH R1, [R1, R2] \n\
 /* 08035a88 */ LSLS R2, R5, 0x10 \n\
 /* 08035a8a */ ASRS R2, R2, 0x10 \n\
-/* 08035a8c */ BL func_0804d614 \n\
+/* 08035a8c */ BL sprite_set_x \n\
 /* 08035a90 */ SUBS R5, 0xA @ Subtract 0xA from R5 \n\
 /* 08035a92 */ ADDS R7, 0x1 @ Add 0x1 to R7 \n\
 /* 08035a94 */ CMP R7, R10 @ Compare R7 and R10 \n\

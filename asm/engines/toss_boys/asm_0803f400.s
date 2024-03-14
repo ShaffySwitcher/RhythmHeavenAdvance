@@ -70,13 +70,13 @@ branch_0803f43e: \n\
 /* 0803f484 */ LSLS R3, R3, 0x2 \n\
 /* 0803f486 */ ADDS R1, R2, R3 @ Set R1 to R2 + R3 \n\
 /* 0803f488 */ STR R0, [R1] \n\
-/* 0803f48a */ LDR R0, =D_03005380 \n\
+/* 0803f48a */ LDR R0, =gSpriteHandler \n\
 /* 0803f48c */ LDR R0, [R0] \n\
 /* 0803f48e */ ADD R2, R8 @ Add R8 to R2 \n\
 /* 0803f490 */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
 /* 0803f492 */ LDRSH R1, [R2, R4] \n\
 /* 0803f494 */ MOVS R2, 0x1 @ Set R2 to 0x1 \n\
-/* 0803f496 */ BL func_0804d770 \n\
+/* 0803f496 */ BL sprite_set_visible \n\
 /* 0803f49a */ LDR R2, [R6] \n\
 /* 0803f49c */ LDR R3, =D_089e86bc \n\
 /* 0803f49e */ LDRB R0, [R7, 0x7] \n\

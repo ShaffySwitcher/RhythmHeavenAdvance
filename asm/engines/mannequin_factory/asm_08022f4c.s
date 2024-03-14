@@ -35,12 +35,12 @@ branch_08022f84: \n\
 /* 08022f88 */ LDRB R0, [R1] \n\
 /* 08022f8a */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08022f8c */ BEQ branch_08022f9c \n\
-/* 08022f8e */ LDR R0, =D_03005380 \n\
+/* 08022f8e */ LDR R0, =gSpriteHandler \n\
 /* 08022f90 */ LDR R0, [R0] \n\
 /* 08022f92 */ MOVS R2, 0x8 @ Set R2 to 0x8 \n\
 /* 08022f94 */ LDRSH R1, [R1, R2] \n\
 /* 08022f96 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 08022f98 */ BL func_0804d770 \n\
+/* 08022f98 */ BL sprite_set_visible \n\
  \n\
 branch_08022f9c: \n\
 /* 08022f9c */ ADDS R4, 0x14 @ Add 0x14 to R4 \n\

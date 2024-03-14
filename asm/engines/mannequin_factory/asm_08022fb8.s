@@ -34,7 +34,7 @@ thumb_func_start func_08022fb8 \n\
 /* 08022ff4 */ STRB R1, [R0] \n\
 /* 08022ff6 */ MOVS R6, 0x0 @ Set R6 to 0x0 \n\
 /* 08022ff8 */ MOV R8, R4 @ Set R8 to R4 \n\
-/* 08022ffa */ LDR R7, =D_03005380 \n\
+/* 08022ffa */ LDR R7, =gSpriteHandler \n\
 /* 08022ffc */ MOVS R5, 0x14 @ Set R5 to 0x14 \n\
  \n\
 branch_08022ffe: \n\
@@ -48,12 +48,12 @@ branch_08022ffe: \n\
 /* 0802300c */ MOVS R2, 0x8 @ Set R2 to 0x8 \n\
 /* 0802300e */ LDRSH R1, [R4, R2] \n\
 /* 08023010 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 08023012 */ BL func_0804cebc \n\
+/* 08023012 */ BL sprite_set_anim_cel \n\
 /* 08023016 */ LDR R0, [R7] \n\
 /* 08023018 */ MOVS R2, 0x8 @ Set R2 to 0x8 \n\
 /* 0802301a */ LDRSH R1, [R4, R2] \n\
 /* 0802301c */ MOVS R2, 0x1 @ Set R2 to 0x1 \n\
-/* 0802301e */ BL func_0804d770 \n\
+/* 0802301e */ BL sprite_set_visible \n\
  \n\
 branch_08023022: \n\
 /* 08023022 */ ADDS R5, 0x14 @ Add 0x14 to R5 \n\

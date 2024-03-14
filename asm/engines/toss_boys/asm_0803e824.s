@@ -10,7 +10,7 @@ thumb_func_start func_0803e824 \n\
 /* 0803e82c */ LDRB R3, [R1] \n\
 /* 0803e82e */ CMP R3, 0x1 @ Compare R3 and 0x1 \n\
 /* 0803e830 */ BNE branch_0803e86c \n\
-/* 0803e832 */ LDR R0, =D_03005380 \n\
+/* 0803e832 */ LDR R0, =gSpriteHandler \n\
 /* 0803e834 */ LDR R0, [R0] \n\
 /* 0803e836 */ LDR R1, =anim_toss_remix_5_soshi_strum_pop \n\
 /* 0803e838 */ MOVS R2, 0x38 @ Set R2 to 0x38 \n\
@@ -26,7 +26,7 @@ thumb_func_start func_0803e824 \n\
 /* 0803e84c */ STR R2, [SP, 0x10] \n\
 /* 0803e84e */ MOVS R2, 0x7F @ Set R2 to 0x7F \n\
 /* 0803e850 */ MOVS R3, 0x74 @ Set R3 to 0x74 \n\
-/* 0803e852 */ BL func_0804d160 \n\
+/* 0803e852 */ BL sprite_create \n\
 /* 0803e856 */ LDR R1, [R4] \n\
 /* 0803e858 */ MOVS R2, 0xE7 @ Set R2 to 0xE7 \n\
 /* 0803e85a */ LSLS R2, R2, 0x2 \n\

@@ -14,7 +14,7 @@ thumb_func_start mr_upbeat_engine_start \n\
 /* 08035268 */ BL func_08034f64 \n\
 /* 0803526c */ BL func_08034dd0 \n\
 /* 08035270 */ BL func_08034b14 \n\
-/* 08035274 */ LDR R0, =D_03005380 \n\
+/* 08035274 */ LDR R0, =gSpriteHandler \n\
 /* 08035276 */ LDR R0, [R0] \n\
 /* 08035278 */ LDR R1, =anim_mr_upbeat_beep \n\
 /* 0803527a */ MOVS R2, 0x1E @ Set R2 to 0x1E \n\
@@ -30,7 +30,7 @@ thumb_func_start mr_upbeat_engine_start \n\
 /* 0803528e */ STR R2, [SP, 0x10] \n\
 /* 08035290 */ MOVS R2, 0x7F @ Set R2 to 0x7F \n\
 /* 08035292 */ MOVS R3, 0x78 @ Set R3 to 0x78 \n\
-/* 08035294 */ BL func_0804d160 \n\
+/* 08035294 */ BL sprite_create \n\
 /* 08035298 */ LDR R1, [R4] \n\
 /* 0803529a */ STRH R0, [R1, 0x34] \n\
 /* 0803529c */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\

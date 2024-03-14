@@ -11,13 +11,13 @@ thumb_func_start func_0800cb28 \n\
 /* 0800cb32 */ SUB SP, 0x54 \n\
 /* 0800cb34 */ MOV R10, R0 @ Set R10 to R0 \n\
 /* 0800cb36 */ LDR R4, =D_030053c0 \n\
-/* 0800cb38 */ LDR R0, =D_03005380 \n\
+/* 0800cb38 */ LDR R0, =gSpriteHandler \n\
 /* 0800cb3a */ LDR R0, [R0] \n\
 /* 0800cb3c */ MOV R1, R10 @ Set R1 to R10 \n\
 /* 0800cb3e */ ADDS R1, 0x1 @ Add 0x1 to R1 \n\
 /* 0800cb40 */ LSLS R1, R1, 0x10 \n\
 /* 0800cb42 */ LSRS R1, R1, 0x10 \n\
-/* 0800cb44 */ BL func_0804e0bc \n\
+/* 0800cb44 */ BL sprite_handler_set_mem_id \n\
 /* 0800cb48 */ MOVS R0, 0x9C @ Set R0 to 0x9C \n\
 /* 0800cb4a */ MOV R2, R10 @ Set R2 to R10 \n\
 /* 0800cb4c */ MULS R2, R0 @ Multiply R2 by R0 \n\
@@ -1671,7 +1671,7 @@ jump_0800d87e: \n\
 /* 0800d888 */ LSLS R2, R6, 0xC \n\
 /* 0800d88a */ LSLS R4, R6, 0x4 \n\
 /* 0800d88c */ LSRS R5, R6, 0x1C \n\
-/* 0800d88e */ LDR R0, =D_03005380 \n\
+/* 0800d88e */ LDR R0, =gSpriteHandler \n\
 /* 0800d890 */ LDR R0, [R0] \n\
 /* 0800d892 */ MOVS R6, 0x0 @ Set R6 to 0x0 \n\
 /* 0800d894 */ LDRSH R1, [R1, R6] \n\
@@ -1682,7 +1682,7 @@ jump_0800d87e: \n\
 /* 0800d89e */ STR R4, [SP, 0x4] \n\
 /* 0800d8a0 */ STR R5, [SP, 0x8] \n\
 /* 0800d8a2 */ MOV R2, R8 @ Set R2 to R8 \n\
-/* 0800d8a4 */ BL func_0804d8f8 \n\
+/* 0800d8a4 */ BL sprite_set_anim \n\
 /* 0800d8a8 */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
@@ -1690,14 +1690,14 @@ jump_0800d87e: \n\
 jump_0800d8b0: \n\
 /* 0800d8b0 */ LSLS R1, R6, 0x1 \n\
 /* 0800d8b2 */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
-/* 0800d8b4 */ LDR R0, =D_03005380 \n\
+/* 0800d8b4 */ LDR R0, =gSpriteHandler \n\
 /* 0800d8b6 */ LDR R0, [R0] \n\
 /* 0800d8b8 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0800d8ba */ LDRSH R1, [R1, R2] \n\
 /* 0800d8bc */ MOV R3, R8 @ Set R3 to R8 \n\
 /* 0800d8be */ LSLS R2, R3, 0x18 \n\
 /* 0800d8c0 */ ASRS R2, R2, 0x18 \n\
-/* 0800d8c2 */ BL func_0804cebc \n\
+/* 0800d8c2 */ BL sprite_set_anim_cel \n\
 /* 0800d8c6 */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
@@ -1711,14 +1711,14 @@ jump_0800d8cc: \n\
 /* 0800d8d6 */ LSRS R4, R4, 0xC \n\
 /* 0800d8d8 */ MOVS R0, 0xF @ Set R0 to 0xF \n\
 /* 0800d8da */ ANDS R4, R0 @ Set R4 to R4 & R0 \n\
-/* 0800d8dc */ LDR R0, =D_03005380 \n\
+/* 0800d8dc */ LDR R0, =gSpriteHandler \n\
 /* 0800d8de */ LDR R0, [R0] \n\
 /* 0800d8e0 */ MOVS R5, 0x0 @ Set R5 to 0x0 \n\
 /* 0800d8e2 */ LDRSH R1, [R1, R5] \n\
 /* 0800d8e4 */ ASRS R2, R2, 0x1C \n\
 /* 0800d8e6 */ ASRS R3, R3, 0x18 \n\
 /* 0800d8e8 */ STR R4, [SP] \n\
-/* 0800d8ea */ BL func_0804dae0 \n\
+/* 0800d8ea */ BL sprite_set_playback \n\
 /* 0800d8ee */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
@@ -1738,7 +1738,7 @@ jump_0800d8f4: \n\
 /* 0800d90a */ ADDS R0, 0x4E @ Add 0x4E to R0 \n\
 /* 0800d90c */ STRH R3, [R0] \n\
 /* 0800d90e */ LSRS R6, R6, 0x10 \n\
-/* 0800d910 */ LDR R0, =D_03005380 \n\
+/* 0800d910 */ LDR R0, =gSpriteHandler \n\
 /* 0800d912 */ LDR R0, [R0] \n\
 /* 0800d914 */ LSLS R1, R4, 0x10 \n\
 /* 0800d916 */ ASRS R1, R1, 0x10 \n\
@@ -1747,7 +1747,7 @@ jump_0800d8f4: \n\
 /* 0800d91c */ LSLS R3, R3, 0x10 \n\
 /* 0800d91e */ ASRS R3, R3, 0x10 \n\
 /* 0800d920 */ STR R6, [SP] \n\
-/* 0800d922 */ BL func_0804d55c \n\
+/* 0800d922 */ BL sprite_set_x_y_z \n\
 /* 0800d926 */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
@@ -1768,7 +1768,7 @@ jump_0800d930: \n\
 /* 0800d948 */ ADDS R3, R4, 0x0 @ Set R3 to R4 + 0x0 \n\
 /* 0800d94a */ BL beatscript_stream_get_sprite_for_motion \n\
 /* 0800d94e */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
-/* 0800d950 */ LDR R0, =D_03005380 \n\
+/* 0800d950 */ LDR R0, =gSpriteHandler \n\
 /* 0800d952 */ LDR R0, [R0] \n\
 /* 0800d954 */ LSLS R1, R1, 0x10 \n\
 /* 0800d956 */ ASRS R1, R1, 0x10 \n\
@@ -1776,7 +1776,7 @@ jump_0800d930: \n\
 /* 0800d95a */ LDRSH R2, [R5, R3] \n\
 /* 0800d95c */ MOVS R5, 0x0 @ Set R5 to 0x0 \n\
 /* 0800d95e */ LDRSH R3, [R4, R5] \n\
-/* 0800d960 */ BL func_0804d5d4 \n\
+/* 0800d960 */ BL sprite_set_x_y \n\
 /* 0800d964 */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
@@ -1787,7 +1787,7 @@ jump_0800d96c: \n\
 /* 0800d970 */ MOV R6, R8 @ Set R6 to R8 \n\
 /* 0800d972 */ LSLS R0, R6, 0x10 \n\
 /* 0800d974 */ LSRS R6, R0, 0x10 \n\
-/* 0800d976 */ LDR R0, =D_03005380 \n\
+/* 0800d976 */ LDR R0, =gSpriteHandler \n\
 /* 0800d978 */ LDR R0, [R0] \n\
 /* 0800d97a */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0800d97c */ LDRSH R1, [R1, R2] \n\
@@ -1829,20 +1829,20 @@ branch_0800d9b4: \n\
 /* 0800d9b6 */ STRH R0, [R6] \n\
  \n\
 branch_0800d9b8: \n\
-/* 0800d9b8 */ LDR R5, =D_03005380 \n\
+/* 0800d9b8 */ LDR R5, =gSpriteHandler \n\
 /* 0800d9ba */ LDR R0, [R5] \n\
 /* 0800d9bc */ LSLS R4, R4, 0x10 \n\
 /* 0800d9be */ ASRS R4, R4, 0x10 \n\
 /* 0800d9c0 */ ADDS R1, R4, 0x0 @ Set R1 to R4 + 0x0 \n\
 /* 0800d9c2 */ MOVS R2, 0x4 @ Set R2 to 0x4 \n\
-/* 0800d9c4 */ BL func_0804ddb0 \n\
+/* 0800d9c4 */ BL sprite_get_data \n\
 /* 0800d9c8 */ LDRH R1, [R7] \n\
 /* 0800d9ca */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\
 /* 0800d9cc */ STRH R1, [R7] \n\
 /* 0800d9ce */ LDR R0, [R5] \n\
 /* 0800d9d0 */ ADDS R1, R4, 0x0 @ Set R1 to R4 + 0x0 \n\
 /* 0800d9d2 */ MOVS R2, 0x5 @ Set R2 to 0x5 \n\
-/* 0800d9d4 */ BL func_0804ddb0 \n\
+/* 0800d9d4 */ BL sprite_get_data \n\
 /* 0800d9d8 */ LDRH R1, [R6] \n\
 /* 0800d9da */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\
 /* 0800d9dc */ STRH R1, [R6] \n\
@@ -1852,7 +1852,7 @@ branch_0800d9b8: \n\
 /* 0800d9e4 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 0800d9e6 */ LDRSH R3, [R6, R1] \n\
 /* 0800d9e8 */ ADDS R1, R4, 0x0 @ Set R1 to R4 + 0x0 \n\
-/* 0800d9ea */ BL func_0804d5d4 \n\
+/* 0800d9ea */ BL sprite_set_x_y \n\
 /* 0800d9ee */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
@@ -1860,13 +1860,13 @@ branch_0800d9b8: \n\
 jump_0800d9f4: \n\
 /* 0800d9f4 */ LSLS R1, R7, 0x1 \n\
 /* 0800d9f6 */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
-/* 0800d9f8 */ LDR R4, =D_03005380 \n\
+/* 0800d9f8 */ LDR R4, =gSpriteHandler \n\
 /* 0800d9fa */ LDR R0, [R4] \n\
 /* 0800d9fc */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0800d9fe */ LDRSH R5, [R1, R2] \n\
 /* 0800da00 */ ADDS R1, R5, 0x0 @ Set R1 to R5 + 0x0 \n\
 /* 0800da02 */ MOVS R2, 0x6 @ Set R2 to 0x6 \n\
-/* 0800da04 */ BL func_0804ddb0 \n\
+/* 0800da04 */ BL sprite_get_data \n\
 /* 0800da08 */ ADDS R0, R0, R6 @ Set R0 to R0 + R6 \n\
 /* 0800da0a */ LSLS R0, R0, 0x10 \n\
 /* 0800da0c */ LSRS R6, R0, 0x10 \n\
@@ -1875,7 +1875,7 @@ jump_0800d9f4: \n\
  \n\
 branch_0800da12: \n\
 /* 0800da12 */ ADDS R2, R6, 0x0 @ Set R2 to R6 + 0x0 \n\
-/* 0800da14 */ BL func_0804d67c \n\
+/* 0800da14 */ BL sprite_set_z \n\
 /* 0800da18 */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
@@ -1886,11 +1886,11 @@ jump_0800da20: \n\
 /* 0800da24 */ MOV R3, R8 @ Set R3 to R8 \n\
 /* 0800da26 */ LSLS R2, R3, 0x10 \n\
 /* 0800da28 */ LSRS R2, R2, 0x10 \n\
-/* 0800da2a */ LDR R0, =D_03005380 \n\
+/* 0800da2a */ LDR R0, =gSpriteHandler \n\
 /* 0800da2c */ LDR R0, [R0] \n\
 /* 0800da2e */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
 /* 0800da30 */ LDRSH R1, [R1, R4] \n\
-/* 0800da32 */ BL func_0804d770 \n\
+/* 0800da32 */ BL sprite_set_visible \n\
 /* 0800da36 */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
@@ -1898,7 +1898,7 @@ jump_0800da20: \n\
 jump_0800da3c: \n\
 /* 0800da3c */ LSLS R1, R6, 0x1 \n\
 /* 0800da3e */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
-/* 0800da40 */ LDR R0, =D_03005380 \n\
+/* 0800da40 */ LDR R0, =gSpriteHandler \n\
 /* 0800da42 */ LDR R0, [R0] \n\
 /* 0800da44 */ MOVS R5, 0x0 @ Set R5 to 0x0 \n\
 /* 0800da46 */ LDRSH R1, [R1, R5] \n\
@@ -1907,7 +1907,7 @@ jump_0800da3c: \n\
 /* 0800da4c */ LDRSH R2, [R6, R3] \n\
 /* 0800da4e */ MOVS R4, 0x2 @ Set R4 to 0x2 \n\
 /* 0800da50 */ LDRSH R3, [R6, R4] \n\
-/* 0800da52 */ BL func_0804d5d4 \n\
+/* 0800da52 */ BL sprite_set_x_y \n\
 /* 0800da56 */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
@@ -1915,14 +1915,14 @@ jump_0800da3c: \n\
 jump_0800da5c: \n\
 /* 0800da5c */ LSLS R1, R6, 0x1 \n\
 /* 0800da5e */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
-/* 0800da60 */ LDR R0, =D_03005380 \n\
+/* 0800da60 */ LDR R0, =gSpriteHandler \n\
 /* 0800da62 */ LDR R0, [R0] \n\
 /* 0800da64 */ MOVS R5, 0x0 @ Set R5 to 0x0 \n\
 /* 0800da66 */ LDRSH R1, [R1, R5] \n\
 /* 0800da68 */ MOV R6, R8 @ Set R6 to R8 \n\
 /* 0800da6a */ LSLS R2, R6, 0x18 \n\
 /* 0800da6c */ ASRS R2, R2, 0x18 \n\
-/* 0800da6e */ BL func_0804d8c4 \n\
+/* 0800da6e */ BL sprite_set_base_palette \n\
 /* 0800da72 */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
@@ -1930,14 +1930,14 @@ jump_0800da5c: \n\
 jump_0800da78: \n\
 /* 0800da78 */ LSLS R1, R6, 0x1 \n\
 /* 0800da7a */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
-/* 0800da7c */ LDR R0, =D_03005380 \n\
+/* 0800da7c */ LDR R0, =gSpriteHandler \n\
 /* 0800da7e */ LDR R0, [R0] \n\
 /* 0800da80 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0800da82 */ LDRSH R1, [R1, R2] \n\
 /* 0800da84 */ MOV R3, R8 @ Set R3 to R8 \n\
 /* 0800da86 */ LSLS R2, R3, 0x10 \n\
 /* 0800da88 */ ASRS R2, R2, 0x10 \n\
-/* 0800da8a */ BL func_0804d890 \n\
+/* 0800da8a */ BL sprite_set_base_tile \n\
 /* 0800da8e */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
@@ -1955,34 +1955,34 @@ jump_0800da94: \n\
 /* 0800daa6 */ B branch_0800df9e \n\
  \n\
 branch_0800daa8: \n\
-/* 0800daa8 */ LDR R0, =D_03005380 \n\
+/* 0800daa8 */ LDR R0, =gSpriteHandler \n\
 /* 0800daaa */ LDR R0, [R0] \n\
 /* 0800daac */ LSLS R1, R4, 0x10 \n\
 /* 0800daae */ ASRS R1, R1, 0x10 \n\
 /* 0800dab0 */ MOV R2, R8 @ Set R2 to R8 \n\
-/* 0800dab2 */ BL func_0804d7b4 \n\
+/* 0800dab2 */ BL sprite_attr_set \n\
 /* 0800dab6 */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
  \n\
 branch_0800dabc: \n\
-/* 0800dabc */ LDR R0, =D_03005380 \n\
+/* 0800dabc */ LDR R0, =gSpriteHandler \n\
 /* 0800dabe */ LDR R0, [R0] \n\
 /* 0800dac0 */ LSLS R1, R4, 0x10 \n\
 /* 0800dac2 */ ASRS R1, R1, 0x10 \n\
 /* 0800dac4 */ MOV R2, R8 @ Set R2 to R8 \n\
-/* 0800dac6 */ BL func_0804d7e8 \n\
+/* 0800dac6 */ BL sprite_attr_orr \n\
 /* 0800daca */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
  \n\
 branch_0800dad0: \n\
-/* 0800dad0 */ LDR R0, =D_03005380 \n\
+/* 0800dad0 */ LDR R0, =gSpriteHandler \n\
 /* 0800dad2 */ LDR R0, [R0] \n\
 /* 0800dad4 */ LSLS R1, R4, 0x10 \n\
 /* 0800dad6 */ ASRS R1, R1, 0x10 \n\
 /* 0800dad8 */ MOV R2, R8 @ Set R2 to R8 \n\
-/* 0800dada */ BL func_0804d858 \n\
+/* 0800dada */ BL sprite_attr_bic \n\
 /* 0800dade */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
@@ -1990,14 +1990,14 @@ branch_0800dad0: \n\
 jump_0800dae4: \n\
 /* 0800dae4 */ LSLS R1, R6, 0x1 \n\
 /* 0800dae6 */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
-/* 0800dae8 */ LDR R0, =D_03005380 \n\
+/* 0800dae8 */ LDR R0, =gSpriteHandler \n\
 /* 0800daea */ LDR R0, [R0] \n\
 /* 0800daec */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
 /* 0800daee */ LDRSH R1, [R1, R4] \n\
 /* 0800daf0 */ MOV R5, R8 @ Set R5 to R8 \n\
 /* 0800daf2 */ LSLS R2, R5, 0x10 \n\
 /* 0800daf4 */ LSRS R2, R2, 0x10 \n\
-/* 0800daf6 */ BL func_0804da20 \n\
+/* 0800daf6 */ BL sprite_set_enable_updates \n\
 /* 0800dafa */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
@@ -2013,7 +2013,7 @@ jump_0800db00: \n\
 /* 0800db0e */ B branch_0800df9e \n\
  \n\
 branch_0800db10: \n\
-/* 0800db10 */ LDR R0, =D_03005380 \n\
+/* 0800db10 */ LDR R0, =gSpriteHandler \n\
 /* 0800db12 */ LDR R0, [R0] \n\
 /* 0800db14 */ LSLS R1, R4, 0x10 \n\
 /* 0800db16 */ ASRS R1, R1, 0x10 \n\
@@ -2024,13 +2024,13 @@ branch_0800db10: \n\
 /* 0800db20 */ ADDS R2, R6, 0x0 @ Set R2 to R6 + 0x0 \n\
 /* 0800db22 */ LSLS R2, R2, 0x8 \n\
 /* 0800db24 */ LSRS R2, R2, 0x10 \n\
-/* 0800db26 */ BL func_0804dcb8 \n\
+/* 0800db26 */ BL sprite_set_anim_speed \n\
 /* 0800db2a */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
  \n\
 branch_0800db34: \n\
-/* 0800db34 */ LDR R0, =D_03005380 \n\
+/* 0800db34 */ LDR R0, =gSpriteHandler \n\
 /* 0800db36 */ LDR R5, [R0] \n\
 /* 0800db38 */ LSLS R4, R4, 0x10 \n\
 /* 0800db3a */ ASRS R4, R4, 0x10 \n\
@@ -2040,7 +2040,7 @@ branch_0800db34: \n\
 /* 0800db44 */ LSRS R2, R2, 0x10 \n\
 /* 0800db46 */ ADDS R0, R5, 0x0 @ Set R0 to R5 + 0x0 \n\
 /* 0800db48 */ ADDS R1, R4, 0x0 @ Set R1 to R4 + 0x0 \n\
-/* 0800db4a */ BL func_0804dcb8 \n\
+/* 0800db4a */ BL sprite_set_anim_speed \n\
 /* 0800db4e */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
@@ -2333,13 +2333,13 @@ jump_0800dd80: \n\
 /* 0800dd80 */ MOV R0, R8 @ Set R0 to R8 \n\
 /* 0800dd82 */ LSLS R1, R0, 0x1 \n\
 /* 0800dd84 */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
-/* 0800dd86 */ LDR R5, =D_03005380 \n\
+/* 0800dd86 */ LDR R5, =gSpriteHandler \n\
 /* 0800dd88 */ LDR R0, [R5] \n\
 /* 0800dd8a */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0800dd8c */ LDRSH R4, [R1, R2] \n\
 /* 0800dd8e */ ADDS R1, R4, 0x0 @ Set R1 to R4 + 0x0 \n\
 /* 0800dd90 */ MOVS R2, 0x7 @ Set R2 to 0x7 \n\
-/* 0800dd92 */ BL func_0804ddb0 \n\
+/* 0800dd92 */ BL sprite_get_data \n\
 /* 0800dd96 */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
 /* 0800dd98 */ LDR R0, [R6] \n\
 /* 0800dd9a */ BL bmp_font_obj_delete_printed_anim \n\
@@ -2347,7 +2347,7 @@ jump_0800dd80: \n\
 /* 0800dda0 */ BEQ branch_0800ddb0 \n\
 /* 0800dda2 */ LDR R0, [R5] \n\
 /* 0800dda4 */ ADDS R1, R4, 0x0 @ Set R1 to R4 + 0x0 \n\
-/* 0800dda6 */ BL func_0804d504 \n\
+/* 0800dda6 */ BL sprite_delete \n\
 /* 0800ddaa */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
@@ -2356,7 +2356,7 @@ branch_0800ddb0: \n\
 /* 0800ddb0 */ LDR R0, [R5] \n\
 /* 0800ddb2 */ ADDS R1, R4, 0x0 @ Set R1 to R4 + 0x0 \n\
 /* 0800ddb4 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 0800ddb6 */ BL func_0804d770 \n\
+/* 0800ddb6 */ BL sprite_set_visible \n\
 /* 0800ddba */ LDR R0, [R5] \n\
 /* 0800ddbc */ LDR R2, =D_089ccbc0 \n\
 /* 0800ddbe */ STR R7, [SP] \n\
@@ -2364,7 +2364,7 @@ branch_0800ddb0: \n\
 /* 0800ddc2 */ STR R7, [SP, 0x8] \n\
 /* 0800ddc4 */ ADDS R1, R4, 0x0 @ Set R1 to R4 + 0x0 \n\
 /* 0800ddc6 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 0800ddc8 */ BL func_0804d8f8 \n\
+/* 0800ddc8 */ BL sprite_set_anim \n\
 /* 0800ddcc */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
@@ -2391,7 +2391,7 @@ jtbl_0800dde8: \n\
 .word jump_0800de70 \n\
 \n\
 jump_0800ddfc: \n\
-/* 0800ddfc */ LDR R0, =D_03005380 \n\
+/* 0800ddfc */ LDR R0, =gSpriteHandler \n\
 /* 0800ddfe */ LDR R0, [R0] \n\
 /* 0800de00 */ LDR R1, [R6] \n\
 /* 0800de02 */ LDR R2, =D_0300558c \n\
@@ -2406,7 +2406,7 @@ jump_0800de18: \n\
 /* 0800de18 */ BL get_current_mem_id \n\
 /* 0800de1c */ LSLS R0, R0, 0x10 \n\
 /* 0800de1e */ LSRS R0, R0, 0x10 \n\
-/* 0800de20 */ LDR R1, =D_03005380 \n\
+/* 0800de20 */ LDR R1, =gSpriteHandler \n\
 /* 0800de22 */ LDR R1, [R1] \n\
 /* 0800de24 */ LDR R2, [R6] \n\
 /* 0800de26 */ LDR R3, =D_0300558c \n\
@@ -2419,7 +2419,7 @@ jump_0800de18: \n\
 .ltorg \n\
 \n\
 jump_0800de3c: \n\
-/* 0800de3c */ LDR R0, =D_03005380 \n\
+/* 0800de3c */ LDR R0, =gSpriteHandler \n\
 /* 0800de3e */ LDR R0, [R0] \n\
 /* 0800de40 */ LDR R1, [R6] \n\
 /* 0800de42 */ LDR R2, =D_0300558c \n\
@@ -2431,7 +2431,7 @@ jump_0800de3c: \n\
 .ltorg \n\
 \n\
 jump_0800de58: \n\
-/* 0800de58 */ LDR R0, =D_03005380 \n\
+/* 0800de58 */ LDR R0, =gSpriteHandler \n\
 /* 0800de5a */ LDR R0, [R0] \n\
 /* 0800de5c */ LDR R1, [R6] \n\
 /* 0800de5e */ LDR R2, =D_0300558c \n\
@@ -2442,7 +2442,7 @@ jump_0800de58: \n\
 .ltorg \n\
 \n\
 jump_0800de70: \n\
-/* 0800de70 */ LDR R0, =D_03005380 \n\
+/* 0800de70 */ LDR R0, =gSpriteHandler \n\
 /* 0800de72 */ LDR R0, [R0] \n\
 /* 0800de74 */ LDR R1, [R6] \n\
 /* 0800de76 */ LDR R2, =D_0300558c \n\
@@ -2468,31 +2468,31 @@ jump_0800de90: \n\
 /* 0800de9e */ MOV R3, R8 @ Set R3 to R8 \n\
 /* 0800dea0 */ CMP R3, 0x0 @ Compare R3 and 0x0 \n\
 /* 0800dea2 */ BLT branch_0800decc \n\
-/* 0800dea4 */ LDR R5, =D_03005380 \n\
+/* 0800dea4 */ LDR R5, =gSpriteHandler \n\
 /* 0800dea6 */ LDR R0, [R5] \n\
 /* 0800dea8 */ LSLS R4, R4, 0x10 \n\
 /* 0800deaa */ ASRS R4, R4, 0x10 \n\
 /* 0800deac */ LSLS R2, R7, 0x10 \n\
 /* 0800deae */ ASRS R2, R2, 0x18 \n\
 /* 0800deb0 */ ADDS R1, R4, 0x0 @ Set R1 to R4 + 0x0 \n\
-/* 0800deb2 */ BL func_0804df4c \n\
+/* 0800deb2 */ BL sprite_set_callback_cel \n\
 /* 0800deb6 */ LDR R0, [R5] \n\
 /* 0800deb8 */ ADDS R1, R4, 0x0 @ Set R1 to R4 + 0x0 \n\
 /* 0800deba */ ADDS R2, R6, 0x0 @ Set R2 to R6 + 0x0 \n\
 /* 0800debc */ MOV R3, R8 @ Set R3 to R8 \n\
-/* 0800debe */ BL func_0804daa8 \n\
+/* 0800debe */ BL sprite_set_callback \n\
 /* 0800dec2 */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
  \n\
 branch_0800decc: \n\
-/* 0800decc */ LDR R0, =D_03005380 \n\
+/* 0800decc */ LDR R0, =gSpriteHandler \n\
 /* 0800dece */ LDR R0, [R0] \n\
 /* 0800ded0 */ LSLS R1, R4, 0x10 \n\
 /* 0800ded2 */ ASRS R1, R1, 0x10 \n\
 /* 0800ded4 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0800ded6 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 0800ded8 */ BL func_0804daa8 \n\
+/* 0800ded8 */ BL sprite_set_callback \n\
 /* 0800dedc */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
@@ -2515,17 +2515,17 @@ jump_0800defc: \n\
 /* 0800defe */ LDR R0, [R0] \n\
 /* 0800df00 */ LSLS R1, R6, 0x1 \n\
 /* 0800df02 */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\
-/* 0800df04 */ LDR R0, =D_03005380 \n\
+/* 0800df04 */ LDR R0, =gSpriteHandler \n\
 /* 0800df06 */ LDR R0, [R0] \n\
 /* 0800df08 */ MOVS R5, 0x0 @ Set R5 to 0x0 \n\
 /* 0800df0a */ LDRSH R1, [R1, R5] \n\
-/* 0800df0c */ BL func_0804d504 \n\
+/* 0800df0c */ BL sprite_delete \n\
 /* 0800df10 */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
 \n\
 jump_0800df1c: \n\
-/* 0800df1c */ LDR R0, =D_03005380 \n\
+/* 0800df1c */ LDR R0, =gSpriteHandler \n\
 /* 0800df1e */ LDR R4, [R0] \n\
 /* 0800df20 */ BL get_current_mem_id \n\
 /* 0800df24 */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
@@ -2533,7 +2533,7 @@ jump_0800df1c: \n\
 /* 0800df28 */ LSRS R1, R1, 0x10 \n\
 /* 0800df2a */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 0800df2c */ MOVS R2, 0x1 @ Set R2 to 0x1 \n\
-/* 0800df2e */ BL func_0804e0f0 \n\
+/* 0800df2e */ BL sprite_id_set_enable_updates \n\
 /* 0800df32 */ B branch_0800df9e \n\
 \n\
 .ltorg \n\
@@ -2579,7 +2579,7 @@ jump_0800df6a: \n\
 /* 0800df7c */ B branch_0800df9e \n\
 \n\
 jump_0800df7e: \n\
-/* 0800df7e */ LDR R0, =D_03005380 \n\
+/* 0800df7e */ LDR R0, =gSpriteHandler \n\
 /* 0800df80 */ LDR R0, [R0] \n\
 /* 0800df82 */ LDR R1, =D_0300558c \n\
 /* 0800df84 */ LDR R2, [R1] \n\
@@ -2593,7 +2593,7 @@ jump_0800df7e: \n\
 /* 0800df94 */ ADDS R2, R3, R4 @ Set R2 to R3 + R4 \n\
 /* 0800df96 */ ADDS R4, 0x2 @ Add 0x2 to R4 \n\
 /* 0800df98 */ ADDS R3, R3, R4 @ Set R3 to R3 + R4 \n\
-/* 0800df9a */ BL func_0804db44 \n\
+/* 0800df9a */ BL sprite_set_origin_x_y \n\
  \n\
 branch_0800df9e: \n\
 /* 0800df9e */ ADD SP, 0x54 \n\

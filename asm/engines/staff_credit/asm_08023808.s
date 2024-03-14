@@ -55,7 +55,7 @@ branch_08023842: \n\
 .ltorg \n\
  \n\
 branch_0802386c: \n\
-/* 0802386c */ LDR R0, =D_03005380 \n\
+/* 0802386c */ LDR R0, =gSpriteHandler \n\
 /* 0802386e */ LDR R0, [R0] \n\
 /* 08023870 */ MOVS R7, 0x0 @ Set R7 to 0x0 \n\
 /* 08023872 */ LDRSH R1, [R3, R7] \n\
@@ -63,7 +63,7 @@ branch_0802386c: \n\
 /* 08023876 */ LDRSH R2, [R3, R7] \n\
 /* 08023878 */ MOVS R7, 0x4 @ Set R7 to 0x4 \n\
 /* 0802387a */ LDRSH R3, [R3, R7] \n\
-/* 0802387c */ BL func_0804d5d4 \n\
+/* 0802387c */ BL sprite_set_x_y \n\
  \n\
 branch_08023880: \n\
 /* 08023880 */ ADDS R5, 0x8 @ Add 0x8 to R5 \n\
