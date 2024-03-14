@@ -41,7 +41,7 @@ branch_080397b4: \n\
 /* 080397cc */ STR R0, [R5, 0x8] \n\
 /* 080397ce */ STR R6, [R5, 0xC] \n\
 /* 080397d0 */ STR R3, [R5, 0x10] \n\
-/* 080397d2 */ LDR R0, =D_03005380 \n\
+/* 080397d2 */ LDR R0, =gSpriteHandler \n\
 /* 080397d4 */ LDR R4, [R0] \n\
 /* 080397d6 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
 /* 080397d8 */ LDRSH R5, [R5, R0] \n\
@@ -52,7 +52,7 @@ branch_080397b4: \n\
 /* 080397e4 */ ASRS R2, R2, 0x18 \n\
 /* 080397e6 */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 080397e8 */ ADDS R1, R5, 0x0 @ Set R1 to R5 + 0x0 \n\
-/* 080397ea */ BL func_0804cebc \n\
+/* 080397ea */ BL sprite_set_anim_cel \n\
  \n\
 branch_080397ee: \n\
 /* 080397ee */ POP {R4-R6} \n\

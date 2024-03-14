@@ -8,7 +8,7 @@ thumb_func_start func_0803c5f8 \n\
 /* 0803c5fc */ MOVS R0, 0x14 @ Set R0 to 0x14 \n\
 /* 0803c5fe */ BL ninja_get_anim \n\
 /* 0803c602 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 0803c604 */ LDR R0, =D_03005380 \n\
+/* 0803c604 */ LDR R0, =gSpriteHandler \n\
 /* 0803c606 */ LDR R0, [R0] \n\
 /* 0803c608 */ LDR R1, =gCurrentEngineData \n\
 /* 0803c60a */ LDR R1, [R1] \n\
@@ -20,7 +20,7 @@ thumb_func_start func_0803c5f8 \n\
 /* 0803c616 */ STR R3, [SP, 0x4] \n\
 /* 0803c618 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 0803c61a */ STR R3, [SP, 0x8] \n\
-/* 0803c61c */ BL func_0804d8f8 \n\
+/* 0803c61c */ BL sprite_set_anim \n\
 /* 0803c620 */ LDR R0, =s_ninja_kamae_seqData \n\
 /* 0803c622 */ BL play_sound \n\
 /* 0803c626 */ ADD SP, 0xC \n\

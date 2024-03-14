@@ -33,7 +33,7 @@ thumb_func_start tap_trial_play_girl_action \n\
 /* 0803da76 */ BLT branch_0803da9e \n\
 /* 0803da78 */ BL tap_trial_get_anim \n\
 /* 0803da7c */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 0803da7e */ LDR R0, =D_03005380 \n\
+/* 0803da7e */ LDR R0, =gSpriteHandler \n\
 /* 0803da80 */ LDR R0, [R0] \n\
 /* 0803da82 */ LSLS R1, R4, 0x10 \n\
 /* 0803da84 */ ASRS R1, R1, 0x10 \n\
@@ -47,7 +47,7 @@ thumb_func_start tap_trial_play_girl_action \n\
 /* 0803da94 */ STR R4, [SP, 0x4] \n\
 /* 0803da96 */ LDRH R4, [R6, 0x6] \n\
 /* 0803da98 */ STR R4, [SP, 0x8] \n\
-/* 0803da9a */ BL func_0804d8f8 \n\
+/* 0803da9a */ BL sprite_set_anim \n\
  \n\
 branch_0803da9e: \n\
 /* 0803da9e */ CMP R7, 0xA @ Compare R7 and 0xA \n\
@@ -77,14 +77,14 @@ branch_0803dacc: \n\
 /* 0803dacc */ MOV R1, R8 @ Set R1 to R8 \n\
 /* 0803dace */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 0803dad0 */ BEQ branch_0803db02 \n\
-/* 0803dad2 */ LDR R0, =D_03005380 \n\
+/* 0803dad2 */ LDR R0, =gSpriteHandler \n\
 /* 0803dad4 */ LDR R0, [R0] \n\
 /* 0803dad6 */ MOV R2, R9 @ Set R2 to R9 \n\
 /* 0803dad8 */ LSLS R5, R2, 0x10 \n\
 /* 0803dada */ ASRS R5, R5, 0x10 \n\
 /* 0803dadc */ ADDS R1, R5, 0x0 @ Set R1 to R5 + 0x0 \n\
 /* 0803dade */ MOVS R2, 0x4 @ Set R2 to 0x4 \n\
-/* 0803dae0 */ BL func_0804ddb0 \n\
+/* 0803dae0 */ BL sprite_get_data \n\
 /* 0803dae4 */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 0803dae6 */ MOVS R0, 0x18 @ Set R0 to 0x18 \n\
 /* 0803dae8 */ BL ticks_to_frames \n\

@@ -19,7 +19,7 @@ thumb_func_start func_0802d250 \n\
 .ltorg \n\
  \n\
 branch_0802d26c: \n\
-/* 0802d26c */ LDR R0, =D_03005380 \n\
+/* 0802d26c */ LDR R0, =gSpriteHandler \n\
 /* 0802d26e */ LDR R0, [R0] \n\
 /* 0802d270 */ MOVS R2, 0xB2 @ Set R2 to 0xB2 \n\
 /* 0802d272 */ LSLS R2, R2, 0x1 \n\
@@ -27,13 +27,13 @@ branch_0802d26c: \n\
 /* 0802d276 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0802d278 */ LDRSH R1, [R1, R2] \n\
 /* 0802d27a */ MOVS R2, 0x1 @ Set R2 to 0x1 \n\
-/* 0802d27c */ BL func_0804d770 \n\
+/* 0802d27c */ BL sprite_set_visible \n\
 /* 0802d280 */ B branch_0802d29c \n\
 \n\
 .ltorg \n\
  \n\
 branch_0802d288: \n\
-/* 0802d288 */ LDR R0, =D_03005380 \n\
+/* 0802d288 */ LDR R0, =gSpriteHandler \n\
 /* 0802d28a */ LDR R0, [R0] \n\
 /* 0802d28c */ MOVS R2, 0xB2 @ Set R2 to 0xB2 \n\
 /* 0802d28e */ LSLS R2, R2, 0x1 \n\
@@ -41,7 +41,7 @@ branch_0802d288: \n\
 /* 0802d292 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0802d294 */ LDRSH R1, [R1, R2] \n\
 /* 0802d296 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 0802d298 */ BL func_0804d770 \n\
+/* 0802d298 */ BL sprite_set_visible \n\
  \n\
 branch_0802d29c: \n\
 /* 0802d29c */ LDR R0, =gCurrentEngineData \n\

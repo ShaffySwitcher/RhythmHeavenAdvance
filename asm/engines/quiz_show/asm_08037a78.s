@@ -45,7 +45,7 @@ jtbl_08037ab8: \n\
 .word jump_08037b7c \n\
 .word jump_08037ba8 \n\
 jump_08037acc: \n\
-/* 08037acc */ LDR R0, =D_03005380 \n\
+/* 08037acc */ LDR R0, =gSpriteHandler \n\
 /* 08037ace */ MOV R9, R0 @ Set R9 to R0 \n\
 /* 08037ad0 */ LDR R0, [R0] \n\
 /* 08037ad2 */ MOVS R2, 0x4 @ Set R2 to 0x4 \n\
@@ -61,7 +61,7 @@ jump_08037acc: \n\
 /* 08037ae6 */ STR R6, [SP, 0x4] \n\
 /* 08037ae8 */ MOVS R5, 0x0 @ Set R5 to 0x0 \n\
 /* 08037aea */ STR R5, [SP, 0x8] \n\
-/* 08037aec */ BL func_0804d8f8 \n\
+/* 08037aec */ BL sprite_set_anim \n\
 /* 08037af0 */ MOV R1, R9 @ Set R1 to R9 \n\
 /* 08037af2 */ LDR R0, [R1] \n\
 /* 08037af4 */ MOVS R2, 0x6 @ Set R2 to 0x6 \n\
@@ -74,12 +74,12 @@ jump_08037acc: \n\
 /* 08037b02 */ STR R6, [SP, 0x4] \n\
 /* 08037b04 */ STR R5, [SP, 0x8] \n\
 /* 08037b06 */ MOVS R3, 0x1 @ Set R3 to 0x1 \n\
-/* 08037b08 */ BL func_0804d8f8 \n\
+/* 08037b08 */ BL sprite_set_anim \n\
 /* 08037b0c */ B branch_08037bc8 \n\
 \n\
 .ltorg \n\
 jump_08037b1c: \n\
-/* 08037b1c */ LDR R0, =D_03005380 \n\
+/* 08037b1c */ LDR R0, =gSpriteHandler \n\
 /* 08037b1e */ MOV R8, R0 @ Set R8 to R0 \n\
 /* 08037b20 */ LDR R0, [R0] \n\
 /* 08037b22 */ MOVS R2, 0x4 @ Set R2 to 0x4 \n\
@@ -95,7 +95,7 @@ jump_08037b1c: \n\
 /* 08037b36 */ STR R4, [SP, 0x4] \n\
 /* 08037b38 */ STR R4, [SP, 0x8] \n\
 /* 08037b3a */ MOVS R3, 0x2 @ Set R3 to 0x2 \n\
-/* 08037b3c */ BL func_0804d8f8 \n\
+/* 08037b3c */ BL sprite_set_anim \n\
 /* 08037b40 */ MOV R3, R8 @ Set R3 to R8 \n\
 /* 08037b42 */ LDR R0, [R3] \n\
 /* 08037b44 */ MOVS R2, 0x6 @ Set R2 to 0x6 \n\
@@ -107,12 +107,12 @@ jump_08037b1c: \n\
 /* 08037b50 */ STR R4, [SP, 0x4] \n\
 /* 08037b52 */ STR R4, [SP, 0x8] \n\
 /* 08037b54 */ MOVS R3, 0x2 @ Set R3 to 0x2 \n\
-/* 08037b56 */ BL func_0804d8f8 \n\
+/* 08037b56 */ BL sprite_set_anim \n\
 /* 08037b5a */ B branch_08037bc8 \n\
 \n\
 .ltorg \n\
 jump_08037b68: \n\
-/* 08037b68 */ LDR R0, =D_03005380 \n\
+/* 08037b68 */ LDR R0, =gSpriteHandler \n\
 /* 08037b6a */ LDR R0, [R0] \n\
 /* 08037b6c */ MOVS R3, 0x2 @ Set R3 to 0x2 \n\
 /* 08037b6e */ LDRSH R1, [R7, R3] \n\
@@ -121,7 +121,7 @@ jump_08037b68: \n\
 \n\
 .ltorg \n\
 jump_08037b7c: \n\
-/* 08037b7c */ LDR R0, =D_03005380 \n\
+/* 08037b7c */ LDR R0, =gSpriteHandler \n\
 /* 08037b7e */ LDR R0, [R0] \n\
 /* 08037b80 */ MOVS R2, 0x2 @ Set R2 to 0x2 \n\
 /* 08037b82 */ LDRSH R1, [R7, R2] \n\
@@ -137,12 +137,12 @@ branch_08037b86: \n\
 /* 08037b92 */ STR R3, [SP, 0x4] \n\
 /* 08037b94 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 08037b96 */ STR R3, [SP, 0x8] \n\
-/* 08037b98 */ BL func_0804d8f8 \n\
+/* 08037b98 */ BL sprite_set_anim \n\
 /* 08037b9c */ B branch_08037bc8 \n\
 \n\
 .ltorg \n\
 jump_08037ba8: \n\
-/* 08037ba8 */ LDR R0, =D_03005380 \n\
+/* 08037ba8 */ LDR R0, =gSpriteHandler \n\
 /* 08037baa */ LDR R0, [R0] \n\
 /* 08037bac */ MOVS R3, 0x2 @ Set R3 to 0x2 \n\
 /* 08037bae */ LDRSH R1, [R7, R3] \n\
@@ -156,7 +156,7 @@ jump_08037ba8: \n\
 /* 08037bbe */ STR R3, [SP, 0x4] \n\
 /* 08037bc0 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 08037bc2 */ STR R3, [SP, 0x8] \n\
-/* 08037bc4 */ BL func_0804d8f8 \n\
+/* 08037bc4 */ BL sprite_set_anim \n\
  \n\
 branch_08037bc8: \n\
 /* 08037bc8 */ ADD SP, 0xC \n\

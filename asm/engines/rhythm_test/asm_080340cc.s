@@ -12,12 +12,12 @@ thumb_func_start rhythm_test_common_beat_animation \n\
 /* 080340d8 */ BGT branch_080340ec \n\
 /* 080340da */ CMP R0, 0x1 @ Compare R0 and 0x1 \n\
 /* 080340dc */ BLT branch_080340ec \n\
-/* 080340de */ LDR R0, =D_03005380 \n\
+/* 080340de */ LDR R0, =gSpriteHandler \n\
 /* 080340e0 */ LDR R0, [R0] \n\
 /* 080340e2 */ LSLS R1, R1, 0x10 \n\
 /* 080340e4 */ ASRS R1, R1, 0x10 \n\
 /* 080340e6 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 080340e8 */ BL func_0804cebc \n\
+/* 080340e8 */ BL sprite_set_anim_cel \n\
  \n\
 branch_080340ec: \n\
 /* 080340ec */ POP {R0} \n\

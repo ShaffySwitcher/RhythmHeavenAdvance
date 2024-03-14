@@ -33,15 +33,15 @@ branch_08042572: \n\
 /* 08042576 */ ADDS R0, R2, R1 @ Set R0 to R2 + R1 \n\
 /* 08042578 */ LDR R0, [R0] \n\
 /* 0804257a */ ADDS R1, R6, 0x0 @ Set R1 to R6 + 0x0 \n\
-/* 0804257c */ BL affine_sprite_play_anim \n\
+/* 0804257c */ BL affine_sprite_set_visible \n\
 /* 08042580 */ LDR R0, [R4] \n\
 /* 08042582 */ MOVS R2, 0xBE @ Set R2 to 0xBE \n\
 /* 08042584 */ LSLS R2, R2, 0x2 \n\
 /* 08042586 */ ADDS R0, R0, R2 @ Set R0 to R0 + R2 \n\
 /* 08042588 */ LDR R0, [R0] \n\
 /* 0804258a */ ADDS R1, R6, 0x0 @ Set R1 to R6 + 0x0 \n\
-/* 0804258c */ BL affine_sprite_play_anim \n\
-/* 08042590 */ LDR R0, =D_03005380 \n\
+/* 0804258c */ BL affine_sprite_set_visible \n\
+/* 08042590 */ LDR R0, =gSpriteHandler \n\
 /* 08042592 */ LDR R0, [R0] \n\
 /* 08042594 */ LDR R1, [R4] \n\
 /* 08042596 */ MOVS R2, 0xBF @ Set R2 to 0xBF \n\
@@ -50,7 +50,7 @@ branch_08042572: \n\
 /* 0804259c */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0804259e */ LDRSH R1, [R1, R2] \n\
 /* 080425a0 */ ADDS R2, R6, 0x0 @ Set R2 to R6 + 0x0 \n\
-/* 080425a2 */ BL func_0804d770 \n\
+/* 080425a2 */ BL sprite_set_visible \n\
 /* 080425a6 */ CMP R6, 0x0 @ Compare R6 and 0x0 \n\
 /* 080425a8 */ BEQ branch_080425c4 \n\
 /* 080425aa */ MOVS R0, 0x3 @ Set R0 to 0x3 \n\
@@ -72,7 +72,7 @@ branch_080425ca: \n\
 /* 080425d4 */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
  \n\
 branch_080425d6: \n\
-/* 080425d6 */ LDR R0, =D_03005380 \n\
+/* 080425d6 */ LDR R0, =gSpriteHandler \n\
 /* 080425d8 */ MOV R9, R0 @ Set R9 to R0 \n\
 /* 080425da */ LDR R0, [R0] \n\
 /* 080425dc */ LDR R1, =gCurrentEngineData \n\
@@ -85,7 +85,7 @@ branch_080425d6: \n\
 /* 080425ea */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 080425ec */ LDRSH R1, [R1, R2] \n\
 /* 080425ee */ LSRS R2, R7, 0x10 \n\
-/* 080425f0 */ BL func_0804d770 \n\
+/* 080425f0 */ BL sprite_set_visible \n\
 /* 080425f4 */ ADDS R4, 0x18 @ Add 0x18 to R4 \n\
 /* 080425f6 */ ADDS R5, 0x1 @ Add 0x1 to R5 \n\
 /* 080425f8 */ CMP R5, 0x3 @ Compare R5 and 0x3 \n\
@@ -147,7 +147,7 @@ branch_080425d6: \n\
 /* 08042670 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08042672 */ LDRSH R1, [R1, R2] \n\
 /* 08042674 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 08042676 */ BL func_0804d770 \n\
+/* 08042676 */ BL sprite_set_visible \n\
  \n\
 branch_0804267a: \n\
 /* 0804267a */ MOVS R0, 0x40 @ Set R0 to 0x40 \n\

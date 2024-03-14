@@ -8,7 +8,7 @@ thumb_func_start tram_pauline_cue_update \n\
 /* 08040a24 */ MOVS R5, 0x0 @ Set R5 to 0x0 \n\
  \n\
 branch_08040a26: \n\
-/* 08040a26 */ LDR R0, =D_03005380 \n\
+/* 08040a26 */ LDR R0, =gSpriteHandler \n\
 /* 08040a28 */ LDR R0, [R0] \n\
 /* 08040a2a */ LDR R1, =gCurrentEngineData \n\
 /* 08040a2c */ LDR R3, [R1] \n\
@@ -30,7 +30,7 @@ branch_08040a26: \n\
 /* 08040a4c */ ADDS R3, R3, R4 @ Set R3 to R3 + R4 \n\
 /* 08040a4e */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
 /* 08040a50 */ LDRSH R3, [R3, R4] \n\
-/* 08040a52 */ BL func_0804d5d4 \n\
+/* 08040a52 */ BL sprite_set_x_y \n\
 /* 08040a56 */ ADDS R0, R5, 0x1 @ Set R0 to R5 + 0x1 \n\
 /* 08040a58 */ LSLS R0, R0, 0x18 \n\
 /* 08040a5a */ LSRS R5, R0, 0x18 \n\

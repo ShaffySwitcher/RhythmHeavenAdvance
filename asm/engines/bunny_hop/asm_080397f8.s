@@ -13,7 +13,7 @@ thumb_func_start func_080397f8 \n\
 /* 08039806 */ ADDS R4, R0, R1 @ Set R4 to R0 + R1 \n\
 /* 08039808 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0803980a */ MOV R8, R2 @ Set R8 to R2 \n\
-/* 0803980c */ LDR R7, =D_03005380 \n\
+/* 0803980c */ LDR R7, =gSpriteHandler \n\
  \n\
 branch_0803980e: \n\
 /* 0803980e */ LDRB R0, [R4, 0x2] \n\
@@ -60,7 +60,7 @@ branch_08039848: \n\
 /* 08039860 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08039862 */ LDRSH R1, [R4, R2] \n\
 /* 08039864 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 08039866 */ BL func_0804d770 \n\
+/* 08039866 */ BL sprite_set_visible \n\
 /* 0803986a */ B branch_0803989c \n\
 \n\
 .ltorg \n\
@@ -78,12 +78,12 @@ branch_08039874: \n\
 /* 08039886 */ SUBS R3, R5, R3 @ Set R3 to R5 - R3 \n\
 /* 08039888 */ LSLS R3, R3, 0x8 \n\
 /* 0803988a */ ASRS R3, R3, 0x10 \n\
-/* 0803988c */ BL func_0804d5d4 \n\
+/* 0803988c */ BL sprite_set_x_y \n\
 /* 08039890 */ LDR R0, [R7] \n\
 /* 08039892 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08039894 */ LDRSH R1, [R4, R2] \n\
 /* 08039896 */ MOVS R2, 0x1 @ Set R2 to 0x1 \n\
-/* 08039898 */ BL func_0804d770 \n\
+/* 08039898 */ BL sprite_set_visible \n\
  \n\
 branch_0803989c: \n\
 /* 0803989c */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\

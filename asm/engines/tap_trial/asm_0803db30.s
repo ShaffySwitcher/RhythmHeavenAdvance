@@ -35,7 +35,7 @@ branch_0803db64: \n\
 /* 0803db66 */ LDRSB R0, [R6, R0] \n\
 /* 0803db68 */ BL tap_trial_get_anim \n\
 /* 0803db6c */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 0803db6e */ LDR R0, =D_03005380 \n\
+/* 0803db6e */ LDR R0, =gSpriteHandler \n\
 /* 0803db70 */ LDR R0, [R0] \n\
 /* 0803db72 */ LDR R1, =gCurrentEngineData \n\
 /* 0803db74 */ LDR R1, [R1] \n\
@@ -54,7 +54,7 @@ branch_0803db64: \n\
 /* 0803db8e */ STR R4, [SP, 0x4] \n\
 /* 0803db90 */ LDRH R4, [R6, 0x6] \n\
 /* 0803db92 */ STR R4, [SP, 0x8] \n\
-/* 0803db94 */ BL func_0804d8f8 \n\
+/* 0803db94 */ BL sprite_set_anim \n\
 /* 0803db98 */ ADDS R7, 0x1 @ Add 0x1 to R7 \n\
 /* 0803db9a */ CMP R7, 0x1 @ Compare R7 and 0x1 \n\
 /* 0803db9c */ BLS branch_0803db64 \n\
@@ -98,7 +98,7 @@ branch_0803dbd0: \n\
 /* 0803dbe2 */ MOV R8, R2 @ Set R8 to R2 \n\
  \n\
 branch_0803dbe4: \n\
-/* 0803dbe4 */ LDR R0, =D_03005380 \n\
+/* 0803dbe4 */ LDR R0, =gSpriteHandler \n\
 /* 0803dbe6 */ LDR R0, [R0] \n\
 /* 0803dbe8 */ MOV R3, R8 @ Set R3 to R8 \n\
 /* 0803dbea */ LDR R1, [R3] \n\
@@ -108,7 +108,7 @@ branch_0803dbe4: \n\
 /* 0803dbf2 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0803dbf4 */ LDRSH R1, [R1, R2] \n\
 /* 0803dbf6 */ MOVS R2, 0x4 @ Set R2 to 0x4 \n\
-/* 0803dbf8 */ BL func_0804ddb0 \n\
+/* 0803dbf8 */ BL sprite_get_data \n\
 /* 0803dbfc */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 0803dbfe */ MOVS R0, 0x18 @ Set R0 to 0x18 \n\
 /* 0803dc00 */ BL ticks_to_frames \n\

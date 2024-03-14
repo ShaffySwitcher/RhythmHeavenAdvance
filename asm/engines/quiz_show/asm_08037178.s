@@ -25,7 +25,7 @@ thumb_func_start func_08037178 \n\
 /* 0803719e */ ADDS R0, R2, 0x0 @ Set R0 to R2 + 0x0 \n\
 /* 080371a0 */ ADDS R0, 0x4C @ Add 0x4C to R0 \n\
 /* 080371a2 */ STRH R1, [R0] \n\
-/* 080371a4 */ LDR R0, =D_03005380 \n\
+/* 080371a4 */ LDR R0, =gSpriteHandler \n\
 /* 080371a6 */ MOV R8, R0 @ Set R8 to R0 \n\
 /* 080371a8 */ LDR R0, [R0] \n\
 /* 080371aa */ LDR R1, =anim_quiz_show_current_score_label \n\
@@ -39,7 +39,7 @@ thumb_func_start func_08037178 \n\
 /* 080371ba */ STR R4, [SP, 0x10] \n\
 /* 080371bc */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 080371be */ MOVS R3, 0xC0 @ Set R3 to 0xC0 \n\
-/* 080371c0 */ BL func_0804d160 \n\
+/* 080371c0 */ BL sprite_create \n\
 /* 080371c4 */ MOV R1, R8 @ Set R1 to R8 \n\
 /* 080371c6 */ LDR R0, [R1] \n\
 /* 080371c8 */ LDR R1, =anim_quiz_show_high_score_label \n\
@@ -50,11 +50,11 @@ thumb_func_start func_08037178 \n\
 /* 080371d2 */ STR R4, [SP, 0x10] \n\
 /* 080371d4 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 080371d6 */ MOVS R3, 0x3A @ Set R3 to 0x3A \n\
-/* 080371d8 */ BL func_0804d160 \n\
+/* 080371d8 */ BL sprite_create \n\
 /* 080371dc */ MOVS R5, 0x0 @ Set R5 to 0x0 \n\
  \n\
 branch_080371de: \n\
-/* 080371de */ LDR R0, =D_03005380 \n\
+/* 080371de */ LDR R0, =gSpriteHandler \n\
 /* 080371e0 */ LDR R0, [R0] \n\
 /* 080371e2 */ LSLS R1, R4, 0x3 \n\
 /* 080371e4 */ MOVS R3, 0xC0 @ Set R3 to 0xC0 \n\
@@ -72,7 +72,7 @@ branch_080371de: \n\
 /* 080371fc */ STR R5, [SP, 0x10] \n\
 /* 080371fe */ LDR R1, =anim_quiz_show_score_num \n\
 /* 08037200 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 08037202 */ BL func_0804d160 \n\
+/* 08037202 */ BL sprite_create \n\
 /* 08037206 */ LDR R1, =gCurrentEngineData \n\
 /* 08037208 */ LDR R1, [R1] \n\
 /* 0803720a */ LSLS R2, R4, 0x1 \n\
@@ -86,7 +86,7 @@ branch_080371de: \n\
 /* 0803721a */ MOVS R5, 0x0 @ Set R5 to 0x0 \n\
  \n\
 branch_0803721c: \n\
-/* 0803721c */ LDR R0, =D_03005380 \n\
+/* 0803721c */ LDR R0, =gSpriteHandler \n\
 /* 0803721e */ LDR R0, [R0] \n\
 /* 08037220 */ LSLS R1, R4, 0x3 \n\
 /* 08037222 */ MOVS R3, 0x3A @ Set R3 to 0x3A \n\
@@ -104,7 +104,7 @@ branch_0803721c: \n\
 /* 0803723a */ STR R5, [SP, 0x10] \n\
 /* 0803723c */ LDR R1, =anim_quiz_show_score_num \n\
 /* 0803723e */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 08037240 */ BL func_0804d160 \n\
+/* 08037240 */ BL sprite_create \n\
 /* 08037244 */ LDR R1, =gCurrentEngineData \n\
 /* 08037246 */ LDR R1, [R1] \n\
 /* 08037248 */ LSLS R2, R4, 0x1 \n\

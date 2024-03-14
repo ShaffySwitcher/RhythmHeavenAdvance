@@ -17,7 +17,7 @@ thumb_func_start func_0803c034 \n\
 /* 0803c04a */ ADDS R5, R1, 0x0 @ Set R5 to R1 + 0x0 \n\
  \n\
 branch_0803c04c: \n\
-/* 0803c04c */ LDR R0, =D_03005380 \n\
+/* 0803c04c */ LDR R0, =gSpriteHandler \n\
 /* 0803c04e */ LDR R0, [R0] \n\
 /* 0803c050 */ LDR R1, [R5] \n\
 /* 0803c052 */ LSLS R2, R4, 0x1 \n\
@@ -31,7 +31,7 @@ branch_0803c04c: \n\
 /* 0803c062 */ STR R2, [SP] \n\
 /* 0803c064 */ MOVS R2, 0x1 @ Set R2 to 0x1 \n\
 /* 0803c066 */ MOVS R3, 0x7F @ Set R3 to 0x7F \n\
-/* 0803c068 */ BL func_0804dae0 \n\
+/* 0803c068 */ BL sprite_set_playback \n\
 /* 0803c06c */ ADDS R4, 0x1 @ Add 0x1 to R4 \n\
 /* 0803c06e */ LDR R0, [R5] \n\
 /* 0803c070 */ MOVS R3, 0xB6 @ Set R3 to 0xB6 \n\

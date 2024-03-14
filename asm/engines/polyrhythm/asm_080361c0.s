@@ -32,7 +32,7 @@ thumb_func_start polyrhythm_spawn_piston \n\
 /* 080361f4 */ MOVS R1, 0x8 @ Set R1 to 0x8 \n\
 /* 080361f6 */ ORRS R0, R1 @ Set R0 to R0 | R1 \n\
 /* 080361f8 */ STRB R0, [R2] \n\
-/* 080361fa */ LDR R0, =D_03005380 \n\
+/* 080361fa */ LDR R0, =gSpriteHandler \n\
 /* 080361fc */ LDR R0, [R0] \n\
 /* 080361fe */ MOVS R3, 0x4 @ Set R3 to 0x4 \n\
 /* 08036200 */ LDRSH R1, [R2, R3] \n\
@@ -47,7 +47,7 @@ thumb_func_start polyrhythm_spawn_piston \n\
 /* 08036212 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 08036214 */ STR R3, [SP, 0x8] \n\
 /* 08036216 */ MOVS R3, 0x1 @ Set R3 to 0x1 \n\
-/* 08036218 */ BL func_0804d8f8 \n\
+/* 08036218 */ BL sprite_set_anim \n\
 /* 0803621c */ LDR R0, =polyrhythm_block_appear_sfx \n\
 /* 0803621e */ ADDS R4, R4, R0 @ Set R4 to R4 + R0 \n\
 /* 08036220 */ LDR R0, [R4] \n\

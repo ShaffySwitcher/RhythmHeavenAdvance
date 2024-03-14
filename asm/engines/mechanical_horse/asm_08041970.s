@@ -137,7 +137,7 @@ branch_08041a0a: \n\
 /* 08041a6e */ BNE branch_08041a90 \n\
  \n\
 branch_08041a70: \n\
-/* 08041a70 */ LDR R0, =D_03005380 \n\
+/* 08041a70 */ LDR R0, =gSpriteHandler \n\
 /* 08041a72 */ LDR R0, [R0] \n\
 /* 08041a74 */ MOVS R4, 0x3C @ Set R4 to 0x3C \n\
 /* 08041a76 */ LDRSH R1, [R1, R4] \n\
@@ -147,7 +147,7 @@ branch_08041a70: \n\
 .ltorg \n\
  \n\
 branch_08041a90: \n\
-/* 08041a90 */ LDR R0, =D_03005380 \n\
+/* 08041a90 */ LDR R0, =gSpriteHandler \n\
 /* 08041a92 */ LDR R0, [R0] \n\
 /* 08041a94 */ MOVS R2, 0x3C @ Set R2 to 0x3C \n\
 /* 08041a96 */ LDRSH R1, [R1, R2] \n\
@@ -159,7 +159,7 @@ branch_08041a90: \n\
 branch_08041aa4: \n\
 /* 08041aa4 */ CMP R0, 0x1 @ Compare R0 and 0x1 \n\
 /* 08041aa6 */ BNE branch_08041ac0 \n\
-/* 08041aa8 */ LDR R0, =D_03005380 \n\
+/* 08041aa8 */ LDR R0, =gSpriteHandler \n\
 /* 08041aaa */ LDR R0, [R0] \n\
 /* 08041aac */ ADDS R1, R1, R7 @ Set R1 to R1 + R7 \n\
 /* 08041aae */ MOVS R4, 0x3C @ Set R4 to 0x3C \n\
@@ -178,7 +178,7 @@ branch_08041ac0: \n\
 /* 08041aca */ LDRB R0, [R0] \n\
 /* 08041acc */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
 /* 08041ace */ BNE branch_08041ae4 \n\
-/* 08041ad0 */ LDR R0, =D_03005380 \n\
+/* 08041ad0 */ LDR R0, =gSpriteHandler \n\
 /* 08041ad2 */ LDR R0, [R0] \n\
 /* 08041ad4 */ MOVS R2, 0x3C @ Set R2 to 0x3C \n\
 /* 08041ad6 */ LDRSH R1, [R1, R2] \n\
@@ -190,7 +190,7 @@ branch_08041ac0: \n\
 branch_08041ae4: \n\
 /* 08041ae4 */ CMP R0, 0x1 @ Compare R0 and 0x1 \n\
 /* 08041ae6 */ BNE branch_08041afc \n\
-/* 08041ae8 */ LDR R0, =D_03005380 \n\
+/* 08041ae8 */ LDR R0, =gSpriteHandler \n\
 /* 08041aea */ LDR R0, [R0] \n\
 /* 08041aec */ MOVS R4, 0x3C @ Set R4 to 0x3C \n\
 /* 08041aee */ LDRSH R1, [R1, R4] \n\
@@ -200,7 +200,7 @@ branch_08041ae4: \n\
 .ltorg \n\
  \n\
 branch_08041afc: \n\
-/* 08041afc */ LDR R0, =D_03005380 \n\
+/* 08041afc */ LDR R0, =gSpriteHandler \n\
 /* 08041afe */ LDR R0, [R0] \n\
 /* 08041b00 */ MOVS R2, 0x3C @ Set R2 to 0x3C \n\
 /* 08041b02 */ LDRSH R1, [R1, R2] \n\
@@ -216,7 +216,7 @@ branch_08041b10: \n\
 /* 08041b16 */ LDRB R0, [R0] \n\
 /* 08041b18 */ CMP R0, 0x2 @ Compare R0 and 0x2 \n\
 /* 08041b1a */ BHI branch_08041b3c \n\
-/* 08041b1c */ LDR R0, =D_03005380 \n\
+/* 08041b1c */ LDR R0, =gSpriteHandler \n\
 /* 08041b1e */ LDR R0, [R0] \n\
 /* 08041b20 */ MOVS R4, 0x3C @ Set R4 to 0x3C \n\
 /* 08041b22 */ LDRSH R1, [R1, R4] \n\
@@ -227,13 +227,13 @@ branch_08041b26: \n\
 /* 08041b28 */ STR R3, [SP, 0x4] \n\
 /* 08041b2a */ STR R3, [SP, 0x8] \n\
 /* 08041b2c */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 08041b2e */ BL func_0804d8f8 \n\
+/* 08041b2e */ BL sprite_set_anim \n\
 /* 08041b32 */ B branch_08041b52 \n\
 \n\
 .ltorg \n\
  \n\
 branch_08041b3c: \n\
-/* 08041b3c */ LDR R0, =D_03005380 \n\
+/* 08041b3c */ LDR R0, =gSpriteHandler \n\
 /* 08041b3e */ LDR R0, [R0] \n\
 /* 08041b40 */ MOVS R2, 0x3C @ Set R2 to 0x3C \n\
 /* 08041b42 */ LDRSH R1, [R1, R2] \n\
@@ -242,10 +242,10 @@ branch_08041b3c: \n\
 /* 08041b48 */ STR R3, [SP, 0x4] \n\
 /* 08041b4a */ STR R3, [SP, 0x8] \n\
 /* 08041b4c */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 08041b4e */ BL func_0804d8f8 \n\
+/* 08041b4e */ BL sprite_set_anim \n\
  \n\
 branch_08041b52: \n\
-/* 08041b52 */ LDR R3, =D_03005380 \n\
+/* 08041b52 */ LDR R3, =gSpriteHandler \n\
 /* 08041b54 */ MOV R8, R3 @ Set R8 to R3 \n\
 /* 08041b56 */ LDR R0, [R3] \n\
 /* 08041b58 */ LDR R6, =gCurrentEngineData \n\
@@ -273,7 +273,7 @@ branch_08041b52: \n\
 /* 08041b84 */ ADDS R4, R4, R5 @ Set R4 to R4 + R5 \n\
 /* 08041b86 */ LDRH R4, [R4] \n\
 /* 08041b88 */ STR R4, [SP] \n\
-/* 08041b8a */ BL func_0804d55c \n\
+/* 08041b8a */ BL sprite_set_x_y_z \n\
 /* 08041b8e */ MOV R4, R8 @ Set R4 to R8 \n\
 /* 08041b90 */ LDR R0, [R4] \n\
 /* 08041b92 */ LDR R1, [R6] \n\
@@ -281,7 +281,7 @@ branch_08041b52: \n\
 /* 08041b96 */ MOVS R2, 0x3C @ Set R2 to 0x3C \n\
 /* 08041b98 */ LDRSH R1, [R1, R2] \n\
 /* 08041b9a */ MOVS R2, 0x1 @ Set R2 to 0x1 \n\
-/* 08041b9c */ BL func_0804d770 \n\
+/* 08041b9c */ BL sprite_set_visible \n\
 /* 08041ba0 */ LDR R0, [R6] \n\
 /* 08041ba2 */ ADDS R0, R0, R5 @ Set R0 to R0 + R5 \n\
 /* 08041ba4 */ ADDS R0, 0x3E @ Add 0x3E to R0 \n\
@@ -318,7 +318,7 @@ jump_08041bb8: \n\
 /* 08041bea */ LDR R0, [R2] \n\
 /* 08041bec */ ADDS R0, 0x20 @ Add 0x20 to R0 \n\
 /* 08041bee */ STR R0, [R2] \n\
-/* 08041bf0 */ LDR R0, =D_03005380 \n\
+/* 08041bf0 */ LDR R0, =gSpriteHandler \n\
 /* 08041bf2 */ MOV R8, R0 @ Set R8 to R0 \n\
 /* 08041bf4 */ LDR R0, [R0] \n\
 /* 08041bf6 */ ADDS R1, R6, R5 @ Set R1 to R6 + R5 \n\
@@ -330,7 +330,7 @@ jump_08041bb8: \n\
 /* 08041c02 */ LDR R3, [R3] \n\
 /* 08041c04 */ LSLS R3, R3, 0x8 \n\
 /* 08041c06 */ ASRS R3, R3, 0x10 \n\
-/* 08041c08 */ BL func_0804d5d4 \n\
+/* 08041c08 */ BL sprite_set_x_y \n\
 /* 08041c0c */ LDR R2, [R7] \n\
 /* 08041c0e */ ADDS R0, R2, 0x0 @ Set R0 to R2 + 0x0 \n\
 /* 08041c10 */ ADDS R0, 0x44 @ Add 0x44 to R0 \n\
@@ -360,7 +360,7 @@ branch_08041c2c: \n\
 /* 08041c3c */ MOVS R4, 0x3C @ Set R4 to 0x3C \n\
 /* 08041c3e */ LDRSH R1, [R1, R4] \n\
 /* 08041c40 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 08041c42 */ BL func_0804d770 \n\
+/* 08041c42 */ BL sprite_set_visible \n\
 /* 08041c46 */ B branch_08041c76 \n\
 \n\
 .ltorg \n\

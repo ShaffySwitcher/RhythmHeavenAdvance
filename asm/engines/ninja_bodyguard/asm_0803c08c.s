@@ -28,7 +28,7 @@ thumb_func_start func_0803c08c \n\
 /* 0803c0ba */ MOVS R0, 0xC @ Set R0 to 0xC \n\
 /* 0803c0bc */ BL ninja_get_anim \n\
 /* 0803c0c0 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 0803c0c2 */ LDR R4, =D_03005380 \n\
+/* 0803c0c2 */ LDR R4, =gSpriteHandler \n\
 /* 0803c0c4 */ LDR R0, [R4] \n\
 /* 0803c0c6 */ LDR R1, [R6] \n\
 /* 0803c0c8 */ LSLS R3, R5, 0x1 \n\
@@ -47,7 +47,7 @@ thumb_func_start func_0803c08c \n\
 /* 0803c0e2 */ STR R3, [SP, 0x4] \n\
 /* 0803c0e4 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 0803c0e6 */ STR R3, [SP, 0x8] \n\
-/* 0803c0e8 */ BL func_0804d8f8 \n\
+/* 0803c0e8 */ BL sprite_set_anim \n\
 /* 0803c0ec */ LDR R1, =s_ninja_yumi_seqData \n\
 /* 0803c0ee */ MOVS R0, 0x4 @ Set R0 to 0x4 \n\
 /* 0803c0f0 */ BL play_sound_in_player \n\
@@ -93,7 +93,7 @@ thumb_func_start func_0803c08c \n\
 /* 0803c148 */ MOVS R0, 0x5 @ Set R0 to 0x5 \n\
 /* 0803c14a */ BL ninja_get_anim \n\
 /* 0803c14e */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 0803c150 */ LDR R1, =D_03005380 \n\
+/* 0803c150 */ LDR R1, =gSpriteHandler \n\
 /* 0803c152 */ LDR R0, [R1] \n\
 /* 0803c154 */ LDR R1, [R6] \n\
 /* 0803c156 */ LSLS R3, R5, 0x1 \n\
@@ -107,7 +107,7 @@ thumb_func_start func_0803c08c \n\
 /* 0803c166 */ STR R3, [SP, 0x4] \n\
 /* 0803c168 */ STR R7, [SP, 0x8] \n\
 /* 0803c16a */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 0803c16c */ BL func_0804d8f8 \n\
+/* 0803c16c */ BL sprite_set_anim \n\
  \n\
 branch_0803c170: \n\
 /* 0803c170 */ ADD SP, 0xC \n\

@@ -14,7 +14,7 @@ thumb_func_start func_0802e078 \n\
 /* 0802e088 */ BCC branch_0802e0dc \n\
 /* 0802e08a */ LDR R0, [R5] \n\
 /* 0802e08c */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
-/* 0802e08e */ BL affine_sprite_play_anim \n\
+/* 0802e08e */ BL affine_sprite_set_visible \n\
 /* 0802e092 */ LDRB R1, [R5, 0x4] \n\
 /* 0802e094 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0802e096 */ NEGS R0, R0 @ Set R0 to -R0 \n\
@@ -31,7 +31,7 @@ branch_0802e0a6: \n\
 /* 0802e0a8 */ LDR R0, [R0] \n\
 /* 0802e0aa */ LDR R0, [R0, 0x3C] \n\
 /* 0802e0ac */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
-/* 0802e0ae */ BL affine_sprite_set_anim_frame \n\
+/* 0802e0ae */ BL affine_sprite_set_anim_cel \n\
 /* 0802e0b2 */ LDRB R0, [R5, 0x4] \n\
 /* 0802e0b4 */ LSLS R0, R0, 0x1A \n\
 /* 0802e0b6 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
@@ -109,7 +109,7 @@ branch_0802e130: \n\
 /* 0802e152 */ ADDS R1, R1, R0 @ Set R1 to R1 + R0 \n\
 /* 0802e154 */ LDR R0, [R1] \n\
 /* 0802e156 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
-/* 0802e158 */ BL affine_sprite_set_anim_frame \n\
+/* 0802e158 */ BL affine_sprite_set_anim_cel \n\
  \n\
 branch_0802e15c: \n\
 /* 0802e15c */ LDRB R1, [R5, 0xE] \n\
@@ -197,7 +197,7 @@ branch_0802e1ba: \n\
 /* 0802e1f4 */ BL affine_sprite_set_scale \n\
 /* 0802e1f8 */ LDR R0, [R5] \n\
 /* 0802e1fa */ MOVS R1, 0x1 @ Set R1 to 0x1 \n\
-/* 0802e1fc */ BL affine_sprite_play_anim \n\
+/* 0802e1fc */ BL affine_sprite_set_visible \n\
  \n\
 branch_0802e200: \n\
 /* 0802e200 */ ADD SP, 0x20 \n\

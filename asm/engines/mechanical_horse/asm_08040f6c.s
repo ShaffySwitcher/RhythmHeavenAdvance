@@ -86,7 +86,7 @@ thumb_func_start mechanical_horse_engine_start \n\
 /* 0804101a */ MOVS R3, 0xF @ Set R3 to 0xF \n\
 /* 0804101c */ BL bmp_font_obj_print_c \n\
 /* 08041020 */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
-/* 08041022 */ LDR R5, =D_03005380 \n\
+/* 08041022 */ LDR R5, =gSpriteHandler \n\
 /* 08041024 */ LDR R0, [R5] \n\
 /* 08041026 */ MOVS R2, 0x90 @ Set R2 to 0x90 \n\
 /* 08041028 */ STR R2, [SP] \n\
@@ -96,7 +96,7 @@ thumb_func_start mechanical_horse_engine_start \n\
 /* 08041030 */ STR R4, [SP, 0x10] \n\
 /* 08041032 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08041034 */ MOVS R3, 0x80 @ Set R3 to 0x80 \n\
-/* 08041036 */ BL func_0804d160 \n\
+/* 08041036 */ BL sprite_create \n\
 /* 0804103a */ LDR R1, [R6] \n\
 /* 0804103c */ MOVS R2, 0xB8 @ Set R2 to 0xB8 \n\
 /* 0804103e */ LSLS R2, R2, 0x2 \n\
@@ -183,7 +183,7 @@ branch_080410a6: \n\
 /* 080410e0 */ STR R7, [SP, 0x10] \n\
 /* 080410e2 */ LDR R1, =anim_horse_still \n\
 /* 080410e4 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 080410e6 */ BL func_0804d160 \n\
+/* 080410e6 */ BL sprite_create \n\
 /* 080410ea */ LDR R1, [R6] \n\
 /* 080410ec */ STRH R0, [R1, 0x4] \n\
 /* 080410ee */ B branch_08041142 \n\
@@ -213,7 +213,7 @@ branch_080410fc: \n\
 /* 08041122 */ STR R5, [SP, 0x10] \n\
 /* 08041124 */ LDR R1, =anim_horse_still \n\
 /* 08041126 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 08041128 */ BL func_0804d160 \n\
+/* 08041128 */ BL sprite_create \n\
 /* 0804112c */ LDR R1, [R6] \n\
 /* 0804112e */ ADDS R1, R1, R4 @ Set R1 to R1 + R4 \n\
 /* 08041130 */ STRH R0, [R1, 0x4] \n\
@@ -223,7 +223,7 @@ branch_080410fc: \n\
 /* 08041138 */ LDRSH R1, [R1, R3] \n\
 /* 0804113a */ MOVS R2, 0x1 @ Set R2 to 0x1 \n\
 /* 0804113c */ NEGS R2, R2 @ Set R2 to -R2 \n\
-/* 0804113e */ BL func_0804d8c4 \n\
+/* 0804113e */ BL sprite_set_base_palette \n\
  \n\
 branch_08041142: \n\
 /* 08041142 */ LDR R0, =gCurrentEngineData \n\
@@ -258,7 +258,7 @@ branch_08041142: \n\
 /* 0804117c */ STR R7, [SP, 0x10] \n\
 /* 0804117e */ LDR R1, =anim_horse_walk_jockey \n\
 /* 08041180 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 08041182 */ BL func_0804d160 \n\
+/* 08041182 */ BL sprite_create \n\
 /* 08041186 */ MOV R3, R8 @ Set R3 to R8 \n\
 /* 08041188 */ LDR R1, [R3] \n\
 /* 0804118a */ STRH R0, [R1, 0x34] \n\
@@ -293,7 +293,7 @@ branch_080411a4: \n\
 /* 080411d2 */ STR R5, [SP, 0x10] \n\
 /* 080411d4 */ LDR R1, =anim_horse_walk_jockey \n\
 /* 080411d6 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 080411d8 */ BL func_0804d160 \n\
+/* 080411d8 */ BL sprite_create \n\
 /* 080411dc */ MOV R2, R8 @ Set R2 to R8 \n\
 /* 080411de */ LDR R1, [R2] \n\
 /* 080411e0 */ ADDS R1, R1, R6 @ Set R1 to R1 + R6 \n\
@@ -304,7 +304,7 @@ branch_080411a4: \n\
 /* 080411ea */ LDRSH R1, [R1, R2] \n\
 /* 080411ec */ MOVS R2, 0x1 @ Set R2 to 0x1 \n\
 /* 080411ee */ NEGS R2, R2 @ Set R2 to -R2 \n\
-/* 080411f0 */ BL func_0804d8c4 \n\
+/* 080411f0 */ BL sprite_set_base_palette \n\
  \n\
 branch_080411f4: \n\
 /* 080411f4 */ ADDS R0, R7, 0x1 @ Set R0 to R7 + 0x1 \n\
@@ -316,7 +316,7 @@ branch_080411f4: \n\
  \n\
 branch_08041200: \n\
 /* 08041200 */ MOVS R7, 0x0 @ Set R7 to 0x0 \n\
-/* 08041202 */ LDR R3, =D_03005380 \n\
+/* 08041202 */ LDR R3, =gSpriteHandler \n\
 /* 08041204 */ MOV R8, R3 @ Set R8 to R3 \n\
 /* 08041206 */ MOVS R6, 0x40 @ Set R6 to 0x40 \n\
 /* 08041208 */ NEGS R6, R6 @ Set R6 to -R6 \n\
@@ -335,7 +335,7 @@ branch_0804120e: \n\
 /* 0804121e */ LDR R1, =anim_horse_text_pak \n\
 /* 08041220 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08041222 */ ADDS R3, R6, 0x0 @ Set R3 to R6 + 0x0 \n\
-/* 08041224 */ BL func_0804d160 \n\
+/* 08041224 */ BL sprite_create \n\
 /* 08041228 */ LDR R1, [R5] \n\
 /* 0804122a */ LSLS R2, R7, 0x3 \n\
 /* 0804122c */ SUBS R2, R2, R7 @ Set R2 to R2 - R7 \n\
@@ -351,7 +351,7 @@ branch_0804120e: \n\
 /* 08041240 */ MOVS R2, 0x3C @ Set R2 to 0x3C \n\
 /* 08041242 */ LDRSH R1, [R1, R2] \n\
 /* 08041244 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 08041246 */ BL func_0804d770 \n\
+/* 08041246 */ BL sprite_set_visible \n\
 /* 0804124a */ ADDS R0, R7, 0x1 @ Set R0 to R7 + 0x1 \n\
 /* 0804124c */ LSLS R0, R0, 0x18 \n\
 /* 0804124e */ LSRS R7, R0, 0x18 \n\
@@ -361,7 +361,7 @@ branch_0804120e: \n\
 /* 08041256 */ LDR R3, =gCurrentEngineData \n\
 /* 08041258 */ MOV R8, R3 @ Set R8 to R3 \n\
 /* 0804125a */ MOVS R6, 0x0 @ Set R6 to 0x0 \n\
-/* 0804125c */ LDR R0, =D_03005380 \n\
+/* 0804125c */ LDR R0, =gSpriteHandler \n\
 /* 0804125e */ MOV R10, R0 @ Set R10 to R0 \n\
 /* 08041260 */ MOVS R1, 0x9B @ Set R1 to 0x9B \n\
 /* 08041262 */ LSLS R1, R1, 0x2 \n\
@@ -414,7 +414,7 @@ branch_08041266: \n\
 /* 080412bc */ STR R6, [SP, 0x10] \n\
 /* 080412be */ LDR R1, =anim_horse_text_pak \n\
 /* 080412c0 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 080412c2 */ BL func_0804d160 \n\
+/* 080412c2 */ BL sprite_create \n\
 /* 080412c6 */ MOV R3, R8 @ Set R3 to R8 \n\
 /* 080412c8 */ LDR R1, [R3] \n\
 /* 080412ca */ ADDS R1, R1, R4 @ Set R1 to R1 + R4 \n\
@@ -445,7 +445,7 @@ branch_08041266: \n\
 /* 080412fc */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 080412fe */ LDRSH R1, [R1, R3] \n\
 /* 08041300 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 08041302 */ BL func_0804d770 \n\
+/* 08041302 */ BL sprite_set_visible \n\
 /* 08041306 */ ADDS R0, R7, 0x1 @ Set R0 to R7 + 0x1 \n\
 /* 08041308 */ LSLS R0, R0, 0x18 \n\
 /* 0804130a */ LSRS R7, R0, 0x18 \n\
@@ -497,7 +497,7 @@ branch_08041266: \n\
 /* 0804136a */ LSLS R3, R3, 0x2 \n\
 /* 0804136c */ ADDS R1, R1, R3 @ Set R1 to R1 + R3 \n\
 /* 0804136e */ STR R0, [R1] \n\
-/* 08041370 */ LDR R0, =D_03005380 \n\
+/* 08041370 */ LDR R0, =gSpriteHandler \n\
 /* 08041372 */ LDR R0, [R0] \n\
 /* 08041374 */ LDR R1, =anim_horse_high_speed_light \n\
 /* 08041376 */ MOVS R2, 0x82 @ Set R2 to 0x82 \n\
@@ -510,7 +510,7 @@ branch_08041266: \n\
 /* 08041384 */ STR R5, [SP, 0x10] \n\
 /* 08041386 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 08041388 */ MOVS R3, 0x5E @ Set R3 to 0x5E \n\
-/* 0804138a */ BL func_0804d160 \n\
+/* 0804138a */ BL sprite_create \n\
 /* 0804138e */ LDR R1, [R6] \n\
 /* 08041390 */ MOVS R2, 0xBF @ Set R2 to 0xBF \n\
 /* 08041392 */ LSLS R2, R2, 0x2 \n\

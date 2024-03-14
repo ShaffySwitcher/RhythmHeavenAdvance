@@ -52,7 +52,7 @@ branch_080396d0: \n\
 /* 080396f2 */ STR R0, [R5, 0x8] \n\
  \n\
 branch_080396f4: \n\
-/* 080396f4 */ LDR R0, =D_03005380 \n\
+/* 080396f4 */ LDR R0, =gSpriteHandler \n\
 /* 080396f6 */ LDR R0, [R0] \n\
 /* 080396f8 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 080396fa */ LDRSH R1, [R5, R2] \n\
@@ -66,7 +66,7 @@ branch_080396f4: \n\
 /* 0803970a */ SUBS R3, R3, R4 @ Set R3 to R3 - R4 \n\
 /* 0803970c */ LSLS R3, R3, 0x8 \n\
 /* 0803970e */ ASRS R3, R3, 0x10 \n\
-/* 08039710 */ BL func_0804d5d4 \n\
+/* 08039710 */ BL sprite_set_x_y \n\
 /* 08039714 */ ADDS R0, R6, 0x1 @ Set R0 to R6 + 0x1 \n\
 /* 08039716 */ LSLS R0, R0, 0x18 \n\
 /* 08039718 */ LSRS R6, R0, 0x18 \n\

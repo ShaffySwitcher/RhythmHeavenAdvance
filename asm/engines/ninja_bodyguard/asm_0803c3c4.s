@@ -9,7 +9,7 @@ thumb_func_start func_0803c3c4 \n\
 /* 0803c3cc */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
  \n\
 branch_0803c3ce: \n\
-/* 0803c3ce */ LDR R0, =D_03005380 \n\
+/* 0803c3ce */ LDR R0, =gSpriteHandler \n\
 /* 0803c3d0 */ LDR R0, [R0] \n\
 /* 0803c3d2 */ LDR R1, =gCurrentEngineData \n\
 /* 0803c3d4 */ LDR R1, [R1] \n\
@@ -21,7 +21,7 @@ branch_0803c3ce: \n\
 /* 0803c3e0 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0803c3e2 */ LDRSH R1, [R1, R2] \n\
 /* 0803c3e4 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 0803c3e6 */ BL func_0804d770 \n\
+/* 0803c3e6 */ BL sprite_set_visible \n\
 /* 0803c3ea */ ADDS R4, 0x1 @ Add 0x1 to R4 \n\
 /* 0803c3ec */ CMP R4, 0x7 @ Compare R4 and 0x7 \n\
 /* 0803c3ee */ BLS branch_0803c3ce \n\

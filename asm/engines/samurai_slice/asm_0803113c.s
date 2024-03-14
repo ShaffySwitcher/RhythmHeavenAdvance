@@ -20,7 +20,7 @@ thumb_func_start func_0803113c \n\
 /* 0803115a */ MOVS R3, 0xC @ Set R3 to 0xC \n\
 /* 0803115c */ BL bmp_font_obj_print_c \n\
 /* 08031160 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 08031162 */ LDR R0, =D_03005380 \n\
+/* 08031162 */ LDR R0, =gSpriteHandler \n\
 /* 08031164 */ LDR R0, [R0] \n\
 /* 08031166 */ LDR R1, [R4] \n\
 /* 08031168 */ ADDS R1, 0x8A @ Add 0x8A to R1 \n\
@@ -31,7 +31,7 @@ thumb_func_start func_0803113c \n\
 /* 08031172 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 08031174 */ STR R3, [SP, 0x4] \n\
 /* 08031176 */ STR R3, [SP, 0x8] \n\
-/* 08031178 */ BL func_0804d8f8 \n\
+/* 08031178 */ BL sprite_set_anim \n\
 /* 0803117c */ ADD SP, 0xC \n\
 /* 0803117e */ POP {R4, R5} \n\
 /* 08031180 */ POP {R0} \n\

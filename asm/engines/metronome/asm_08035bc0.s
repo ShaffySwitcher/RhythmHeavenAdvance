@@ -10,7 +10,7 @@ thumb_func_start metronome_cue_barely \n\
 /* 08035bca */ MOVS R2, 0xA @ Set R2 to 0xA \n\
 /* 08035bcc */ BL clamp_int32 \n\
 /* 08035bd0 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 08035bd2 */ LDR R0, =D_03005380 \n\
+/* 08035bd2 */ LDR R0, =gSpriteHandler \n\
 /* 08035bd4 */ LDR R0, [R0] \n\
 /* 08035bd6 */ LDR R1, =gCurrentEngineData \n\
 /* 08035bd8 */ LDR R1, [R1] \n\
@@ -18,7 +18,7 @@ thumb_func_start metronome_cue_barely \n\
 /* 08035bdc */ LDRSH R1, [R1, R3] \n\
 /* 08035bde */ LSLS R2, R2, 0x18 \n\
 /* 08035be0 */ ASRS R2, R2, 0x18 \n\
-/* 08035be2 */ BL func_0804cebc \n\
+/* 08035be2 */ BL sprite_set_anim_cel \n\
 /* 08035be6 */ POP {R0} \n\
 /* 08035be8 */ BX R0 \n\
 \n\

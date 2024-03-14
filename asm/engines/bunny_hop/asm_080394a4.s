@@ -104,7 +104,7 @@ branch_08039560: \n\
 /* 08039566 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 08039568 */ ADDS R1, R3, 0x0 @ Set R1 to R3 + 0x0 \n\
 /* 0803956a */ BL scene_set_bg_layer_pos \n\
-/* 0803956e */ LDR R0, =D_03005380 \n\
+/* 0803956e */ LDR R0, =gSpriteHandler \n\
 /* 08039570 */ LDR R4, [R0] \n\
 /* 08039572 */ LDR R0, [R5] \n\
 /* 08039574 */ MOVS R2, 0xBC @ Set R2 to 0xBC \n\
@@ -131,7 +131,7 @@ branch_08039594: \n\
 /* 0803959a */ ASRS R2, R2, 0x10 \n\
 /* 0803959c */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 0803959e */ ADDS R1, R3, 0x0 @ Set R1 to R3 + 0x0 \n\
-/* 080395a0 */ BL func_0804d648 \n\
+/* 080395a0 */ BL sprite_set_y \n\
 /* 080395a4 */ LDR R0, [R5] \n\
 /* 080395a6 */ ADDS R0, 0xEC @ Add 0xEC to R0 \n\
 /* 080395a8 */ LDR R0, [R0] \n\

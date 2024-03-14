@@ -8,14 +8,14 @@ thumb_func_start tap_trial_common_display_text \n\
 /* 0803e7ac */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
 /* 0803e7ae */ CMP R1, 0x0 @ Compare R1 and 0x0 \n\
 /* 0803e7b0 */ BNE branch_0803e7d0 \n\
-/* 0803e7b2 */ LDR R0, =D_03005380 \n\
+/* 0803e7b2 */ LDR R0, =gSpriteHandler \n\
 /* 0803e7b4 */ LDR R0, [R0] \n\
 /* 0803e7b6 */ LDR R1, =gCurrentEngineData \n\
 /* 0803e7b8 */ LDR R1, [R1] \n\
 /* 0803e7ba */ MOVS R2, 0x22 @ Set R2 to 0x22 \n\
 /* 0803e7bc */ LDRSH R1, [R1, R2] \n\
 /* 0803e7be */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 0803e7c0 */ BL func_0804d770 \n\
+/* 0803e7c0 */ BL sprite_set_visible \n\
 /* 0803e7c4 */ B branch_0803e814 \n\
 \n\
 .ltorg \n\
@@ -33,7 +33,7 @@ branch_0803e7d0: \n\
 /* 0803e7e4 */ MOVS R2, 0x22 @ Set R2 to 0x22 \n\
 /* 0803e7e6 */ LDRSH R1, [R1, R2] \n\
 /* 0803e7e8 */ BL delete_bmp_font_obj_text_anim \n\
-/* 0803e7ec */ LDR R5, =D_03005380 \n\
+/* 0803e7ec */ LDR R5, =gSpriteHandler \n\
 /* 0803e7ee */ LDR R0, [R5] \n\
 /* 0803e7f0 */ LDR R1, [R4] \n\
 /* 0803e7f2 */ MOVS R2, 0x22 @ Set R2 to 0x22 \n\
@@ -44,13 +44,13 @@ branch_0803e7d0: \n\
 /* 0803e7fc */ STR R2, [SP, 0x8] \n\
 /* 0803e7fe */ ADDS R2, R6, 0x0 @ Set R2 to R6 + 0x0 \n\
 /* 0803e800 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 0803e802 */ BL func_0804d8f8 \n\
+/* 0803e802 */ BL sprite_set_anim \n\
 /* 0803e806 */ LDR R0, [R5] \n\
 /* 0803e808 */ LDR R1, [R4] \n\
 /* 0803e80a */ MOVS R2, 0x22 @ Set R2 to 0x22 \n\
 /* 0803e80c */ LDRSH R1, [R1, R2] \n\
 /* 0803e80e */ MOVS R2, 0x1 @ Set R2 to 0x1 \n\
-/* 0803e810 */ BL func_0804d770 \n\
+/* 0803e810 */ BL sprite_set_visible \n\
  \n\
 branch_0803e814: \n\
 /* 0803e814 */ ADD SP, 0xC \n\

@@ -43,13 +43,13 @@ thumb_func_start func_0803c834 \n\
 /* 0803c87e */ BL affine_sprite_set_x_y \n\
 /* 0803c882 */ LDR R0, [R5] \n\
 /* 0803c884 */ MOV R1, R10 @ Set R1 to R10 \n\
-/* 0803c886 */ BL affine_sprite_set_anim_frame \n\
+/* 0803c886 */ BL affine_sprite_set_anim_cel \n\
 /* 0803c88a */ LDR R0, [R5] \n\
 /* 0803c88c */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 0803c88e */ BL affine_sprite_set_rotation \n\
 /* 0803c892 */ LDR R0, [R5] \n\
 /* 0803c894 */ MOVS R1, 0x1 @ Set R1 to 0x1 \n\
-/* 0803c896 */ BL affine_sprite_play_anim \n\
+/* 0803c896 */ BL affine_sprite_set_visible \n\
 /* 0803c89a */ MOV R1, R9 @ Set R1 to R9 \n\
 /* 0803c89c */ LDR R0, [R1] \n\
 /* 0803c89e */ MOV R2, R8 @ Set R2 to R8 \n\

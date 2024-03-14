@@ -19,7 +19,7 @@ thumb_func_start func_08040064 \n\
 /* 0804007e */ MOV R8, R0 @ Set R8 to R0 \n\
 /* 08040080 */ MOVS R6, 0x1 @ Set R6 to 0x1 \n\
 /* 08040082 */ STRB R6, [R1, 0x6] \n\
-/* 08040084 */ LDR R0, =D_03005380 \n\
+/* 08040084 */ LDR R0, =gSpriteHandler \n\
 /* 08040086 */ LDR R0, [R0] \n\
 /* 08040088 */ LDR R4, [R3] \n\
 /* 0804008a */ ADDS R2, R4, R2 @ Set R2 to R4 + R2 \n\
@@ -42,7 +42,7 @@ thumb_func_start func_08040064 \n\
 /* 080400ac */ MOV R3, R8 @ Set R3 to R8 \n\
 /* 080400ae */ STR R3, [SP, 0x8] \n\
 /* 080400b0 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 080400b2 */ BL func_0804d8f8 \n\
+/* 080400b2 */ BL sprite_set_anim \n\
 /* 080400b6 */ ADD SP, 0xC \n\
 /* 080400b8 */ POP {R3} \n\
 /* 080400ba */ MOV R8, R3 @ Set R8 to R3 \n\

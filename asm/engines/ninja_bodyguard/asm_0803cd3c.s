@@ -23,7 +23,7 @@ branch_0803cd5c: \n\
 /* 0803cd5c */ MOVS R0, 0x11 @ Set R0 to 0x11 \n\
 /* 0803cd5e */ BL ninja_get_anim \n\
 /* 0803cd62 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 0803cd64 */ LDR R4, =D_03005380 \n\
+/* 0803cd64 */ LDR R4, =gSpriteHandler \n\
 /* 0803cd66 */ LDR R0, [R4] \n\
 /* 0803cd68 */ LDR R1, [R7] \n\
 /* 0803cd6a */ MOVS R3, 0x4 @ Set R3 to 0x4 \n\
@@ -34,7 +34,7 @@ branch_0803cd5c: \n\
 /* 0803cd74 */ STR R3, [SP, 0x4] \n\
 /* 0803cd76 */ STR R6, [SP, 0x8] \n\
 /* 0803cd78 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 0803cd7a */ BL func_0804d8f8 \n\
+/* 0803cd7a */ BL sprite_set_anim \n\
 /* 0803cd7e */ MOVS R0, 0xF0 @ Set R0 to 0xF0 \n\
 /* 0803cd80 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 0803cd82 */ BL gameplay_set_input_buttons \n\
@@ -54,7 +54,7 @@ branch_0803cd9c: \n\
 /* 0803cd9c */ MOVS R0, 0x12 @ Set R0 to 0x12 \n\
 /* 0803cd9e */ BL ninja_get_anim \n\
 /* 0803cda2 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 0803cda4 */ LDR R4, =D_03005380 \n\
+/* 0803cda4 */ LDR R4, =gSpriteHandler \n\
 /* 0803cda6 */ LDR R0, [R4] \n\
 /* 0803cda8 */ LDR R1, [R7] \n\
 /* 0803cdaa */ MOVS R3, 0x4 @ Set R3 to 0x4 \n\
@@ -65,7 +65,7 @@ branch_0803cd9c: \n\
 /* 0803cdb4 */ MOVS R5, 0x0 @ Set R5 to 0x0 \n\
 /* 0803cdb6 */ STR R5, [SP, 0x8] \n\
 /* 0803cdb8 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 0803cdba */ BL func_0804d8f8 \n\
+/* 0803cdba */ BL sprite_set_anim \n\
 /* 0803cdbe */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 0803cdc0 */ MOVS R1, 0x0 @ Set R1 to 0x0 \n\
 /* 0803cdc2 */ BL gameplay_set_input_buttons \n\
@@ -79,7 +79,7 @@ branch_0803cd9c: \n\
 /* 0803cdd4 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
  \n\
 branch_0803cdd6: \n\
-/* 0803cdd6 */ BL func_0804cebc \n\
+/* 0803cdd6 */ BL sprite_set_anim_cel \n\
 /* 0803cdda */ LDR R0, [R7] \n\
 /* 0803cddc */ STRB R5, [R0, 0x6] \n\
  \n\

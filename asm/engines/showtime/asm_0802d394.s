@@ -12,7 +12,7 @@ thumb_func_start func_0802d394 \n\
 /* 0802d3a0 */ LDR R0, =gCurrentEngineData \n\
 /* 0802d3a2 */ MOV R8, R0 @ Set R8 to R0 \n\
 /* 0802d3a4 */ MOVS R5, 0x0 @ Set R5 to 0x0 \n\
-/* 0802d3a6 */ LDR R7, =D_03005380 \n\
+/* 0802d3a6 */ LDR R7, =gSpriteHandler \n\
 /* 0802d3a8 */ MOVS R1, 0xBA @ Set R1 to 0xBA \n\
 /* 0802d3aa */ LSLS R1, R1, 0x1 \n\
 /* 0802d3ac */ MOV R9, R1 @ Set R9 to R1 \n\
@@ -37,7 +37,7 @@ branch_0802d3ae: \n\
 /* 0802d3ce */ LDR R1, =anim_showtime_ball \n\
 /* 0802d3d0 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0802d3d2 */ MOVS R3, 0x40 @ Set R3 to 0x40 \n\
-/* 0802d3d4 */ BL func_0804d160 \n\
+/* 0802d3d4 */ BL sprite_create \n\
 /* 0802d3d8 */ MOV R2, R8 @ Set R2 to R8 \n\
 /* 0802d3da */ LDR R1, [R2] \n\
 /* 0802d3dc */ ADDS R2, R1, R4 @ Set R2 to R1 + R4 \n\
@@ -59,7 +59,7 @@ branch_0802d3ae: \n\
 /* 0802d3fc */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 0802d3fe */ LDRSH R1, [R2, R3] \n\
 /* 0802d400 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 0802d402 */ BL func_0804d770 \n\
+/* 0802d402 */ BL sprite_set_visible \n\
 /* 0802d406 */ LDR R0, [R7] \n\
 /* 0802d408 */ MOV R2, R8 @ Set R2 to R8 \n\
 /* 0802d40a */ LDR R1, [R2] \n\
@@ -69,7 +69,7 @@ branch_0802d3ae: \n\
 /* 0802d412 */ LDRSH R1, [R1, R3] \n\
 /* 0802d414 */ MOVS R2, 0x40 @ Set R2 to 0x40 \n\
 /* 0802d416 */ MOVS R3, 0x74 @ Set R3 to 0x74 \n\
-/* 0802d418 */ BL func_0804d5d4 \n\
+/* 0802d418 */ BL sprite_set_x_y \n\
 /* 0802d41c */ ADDS R6, 0x1 @ Add 0x1 to R6 \n\
 /* 0802d41e */ CMP R6, 0x7 @ Compare R6 and 0x7 \n\
 /* 0802d420 */ BLE branch_0802d3ae \n\

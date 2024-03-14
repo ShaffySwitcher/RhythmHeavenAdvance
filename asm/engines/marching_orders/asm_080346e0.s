@@ -25,7 +25,7 @@ branch_08034704: \n\
 /* 08034704 */ MOVS R0, 0x4 @ Set R0 to 0x4 \n\
 /* 08034706 */ BL func_08034100 \n\
 /* 0803470a */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 0803470c */ LDR R0, =D_03005380 \n\
+/* 0803470c */ LDR R0, =gSpriteHandler \n\
 /* 0803470e */ LDR R0, [R0] \n\
 /* 08034710 */ LDR R1, [R7] \n\
 /* 08034712 */ MOVS R3, 0x3C @ Set R3 to 0x3C \n\
@@ -36,7 +36,7 @@ branch_08034704: \n\
 /* 0803471c */ STR R3, [SP, 0x4] \n\
 /* 0803471e */ STR R6, [SP, 0x8] \n\
 /* 08034720 */ MOVS R3, 0x1 @ Set R3 to 0x1 \n\
-/* 08034722 */ BL func_0804d8f8 \n\
+/* 08034722 */ BL sprite_set_anim \n\
 /* 08034726 */ MOVS R0, 0x8 @ Set R0 to 0x8 \n\
 /* 08034728 */ B branch_080347ac \n\
 \n\
@@ -46,7 +46,7 @@ branch_08034730: \n\
 /* 08034730 */ MOVS R0, 0x4 @ Set R0 to 0x4 \n\
 /* 08034732 */ BL func_08034100 \n\
 /* 08034736 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 08034738 */ LDR R4, =D_03005380 \n\
+/* 08034738 */ LDR R4, =gSpriteHandler \n\
 /* 0803473a */ LDR R0, [R4] \n\
 /* 0803473c */ LDR R1, [R7] \n\
 /* 0803473e */ MOVS R3, 0x3C @ Set R3 to 0x3C \n\
@@ -56,7 +56,7 @@ branch_08034730: \n\
 /* 08034746 */ STR R3, [SP, 0x4] \n\
 /* 08034748 */ STR R6, [SP, 0x8] \n\
 /* 0803474a */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 0803474c */ BL func_0804d8f8 \n\
+/* 0803474c */ BL sprite_set_anim \n\
 /* 08034750 */ MOVS R0, 0xC @ Set R0 to 0xC \n\
 /* 08034752 */ BL func_08034100 \n\
 /* 08034756 */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
@@ -71,7 +71,7 @@ branch_08034730: \n\
 /* 08034768 */ STR R2, [SP, 0x10] \n\
 /* 0803476a */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0803476c */ MOVS R3, 0x1E @ Set R3 to 0x1E \n\
-/* 0803476e */ BL func_0804d160 \n\
+/* 0803476e */ BL sprite_create \n\
 /* 08034772 */ LDR R0, =s_guntai_ikari_seqData \n\
 /* 08034774 */ BL play_sound \n\
 /* 08034778 */ B branch_080347aa \n\
@@ -82,7 +82,7 @@ branch_08034788: \n\
 /* 08034788 */ MOVS R0, 0xE @ Set R0 to 0xE \n\
 /* 0803478a */ BL func_08034100 \n\
 /* 0803478e */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 08034790 */ LDR R0, =D_03005380 \n\
+/* 08034790 */ LDR R0, =gSpriteHandler \n\
 /* 08034792 */ LDR R0, [R0] \n\
 /* 08034794 */ LDR R1, [R7] \n\
 /* 08034796 */ MOVS R3, 0x3C @ Set R3 to 0x3C \n\
@@ -93,7 +93,7 @@ branch_08034788: \n\
 /* 080347a0 */ STR R3, [SP, 0x4] \n\
 /* 080347a2 */ STR R6, [SP, 0x8] \n\
 /* 080347a4 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 080347a6 */ BL func_0804d8f8 \n\
+/* 080347a6 */ BL sprite_set_anim \n\
  \n\
 branch_080347aa: \n\
 /* 080347aa */ MOVS R0, 0x18 @ Set R0 to 0x18 \n\

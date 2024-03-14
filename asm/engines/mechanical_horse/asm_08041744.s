@@ -14,7 +14,7 @@ thumb_func_start func_08041744 \n\
 /* 08041754 */ LSLS R7, R5, 0x10 \n\
  \n\
 branch_08041756: \n\
-/* 08041756 */ LDR R0, =D_03005380 \n\
+/* 08041756 */ LDR R0, =gSpriteHandler \n\
 /* 08041758 */ LDR R0, [R0] \n\
 /* 0804175a */ LDR R6, =gCurrentEngineData \n\
 /* 0804175c */ LDR R2, [R6] \n\
@@ -28,7 +28,7 @@ branch_08041756: \n\
 /* 0804176c */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 0804176e */ LDRSH R1, [R2, R3] \n\
 /* 08041770 */ LSRS R2, R7, 0x10 \n\
-/* 08041772 */ BL func_0804d770 \n\
+/* 08041772 */ BL sprite_set_visible \n\
 /* 08041776 */ ADDS R0, R4, 0x1 @ Set R0 to R4 + 0x1 \n\
 /* 08041778 */ LSLS R0, R0, 0x18 \n\
 /* 0804177a */ LSRS R4, R0, 0x18 \n\

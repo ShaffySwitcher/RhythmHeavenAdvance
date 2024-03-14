@@ -16,7 +16,7 @@ thumb_func_start func_080327d4 \n\
 /* 080327e8 */ ADDS R4, R0, R1 @ Set R4 to R0 + R1 \n\
 /* 080327ea */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 080327ec */ MOV R10, R2 @ Set R10 to R2 \n\
-/* 080327ee */ LDR R3, =D_03005380 \n\
+/* 080327ee */ LDR R3, =gSpriteHandler \n\
 /* 080327f0 */ MOV R9, R3 @ Set R9 to R3 \n\
  \n\
 branch_080327f2: \n\
@@ -61,7 +61,7 @@ branch_08032808: \n\
 /* 0803283a */ STR R2, [SP, 0x10] \n\
 /* 0803283c */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0803283e */ ASRS R3, R7, 0x10 \n\
-/* 08032840 */ BL func_0804d160 \n\
+/* 08032840 */ BL sprite_create \n\
 /* 08032844 */ STRH R0, [R4] \n\
 /* 08032846 */ MOV R3, R9 @ Set R3 to R9 \n\
 /* 08032848 */ LDR R0, [R3] \n\
@@ -69,7 +69,7 @@ branch_08032808: \n\
 /* 0803284c */ LDRSH R1, [R4, R2] \n\
 /* 0803284e */ MOVS R2, 0xB0 @ Set R2 to 0xB0 \n\
 /* 08032850 */ LSLS R2, R2, 0x2 \n\
-/* 08032852 */ BL func_0804d890 \n\
+/* 08032852 */ BL sprite_set_base_tile \n\
 /* 08032856 */ MOV R3, R10 @ Set R3 to R10 \n\
 /* 08032858 */ STRB R3, [R4, 0x3] \n\
 /* 0803285a */ LSLS R0, R5, 0x8 \n\

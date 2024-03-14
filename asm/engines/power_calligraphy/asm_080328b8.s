@@ -62,14 +62,14 @@ branch_08032914: \n\
 /* 08032926 */ STR R0, [R4, 0x4] \n\
  \n\
 branch_08032928: \n\
-/* 08032928 */ LDR R0, =D_03005380 \n\
+/* 08032928 */ LDR R0, =gSpriteHandler \n\
 /* 0803292a */ LDR R0, [R0] \n\
 /* 0803292c */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0803292e */ LDRSH R1, [R4, R2] \n\
 /* 08032930 */ LDR R2, [R4, 0x4] \n\
 /* 08032932 */ LSLS R2, R2, 0x8 \n\
 /* 08032934 */ ASRS R2, R2, 0x10 \n\
-/* 08032936 */ BL func_0804d648 \n\
+/* 08032936 */ BL sprite_set_y \n\
 /* 0803293a */ ADDS R4, 0x8 @ Add 0x8 to R4 \n\
 /* 0803293c */ ADDS R5, 0x1 @ Add 0x1 to R5 \n\
 /* 0803293e */ CMP R5, 0x5 @ Compare R5 and 0x5 \n\
@@ -89,14 +89,14 @@ branch_08032946: \n\
 /* 08032956 */ STR R0, [R4, 0x4] \n\
  \n\
 branch_08032958: \n\
-/* 08032958 */ LDR R0, =D_03005380 \n\
+/* 08032958 */ LDR R0, =gSpriteHandler \n\
 /* 0803295a */ LDR R0, [R0] \n\
 /* 0803295c */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0803295e */ LDRSH R1, [R4, R2] \n\
 /* 08032960 */ LDR R2, [R4, 0x4] \n\
 /* 08032962 */ LSLS R2, R2, 0x8 \n\
 /* 08032964 */ ASRS R2, R2, 0x10 \n\
-/* 08032966 */ BL func_0804d648 \n\
+/* 08032966 */ BL sprite_set_y \n\
 /* 0803296a */ ADDS R4, 0x8 @ Add 0x8 to R4 \n\
 /* 0803296c */ ADDS R5, 0x1 @ Add 0x1 to R5 \n\
 /* 0803296e */ CMP R5, 0xB @ Compare R5 and 0xB \n\
@@ -114,7 +114,7 @@ branch_08032972: \n\
 /* 08032982 */ LDR R6, =power_calligraphy_people_dance_anim \n\
  \n\
 branch_08032984: \n\
-/* 08032984 */ LDR R0, =D_03005380 \n\
+/* 08032984 */ LDR R0, =gSpriteHandler \n\
 /* 08032986 */ LDR R0, [R0] \n\
 /* 08032988 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0803298a */ LDRSH R1, [R4, R2] \n\
@@ -135,7 +135,7 @@ branch_08032984: \n\
 /* 080329a8 */ STR R3, [SP, 0x4] \n\
 /* 080329aa */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 080329ac */ STR R3, [SP, 0x8] \n\
-/* 080329ae */ BL func_0804d8f8 \n\
+/* 080329ae */ BL sprite_set_anim \n\
 /* 080329b2 */ ADDS R4, 0x8 @ Add 0x8 to R4 \n\
 /* 080329b4 */ ADDS R5, 0x1 @ Add 0x1 to R5 \n\
 /* 080329b6 */ CMP R5, 0xB @ Compare R5 and 0xB \n\

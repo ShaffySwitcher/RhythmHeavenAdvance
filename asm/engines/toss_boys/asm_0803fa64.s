@@ -45,7 +45,7 @@ branch_0803fa9a: \n\
 /* 0803faaa */ BLT branch_0803fae2 \n\
 /* 0803faac */ BL toss_boys_get_anim \n\
 /* 0803fab0 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 0803fab2 */ LDR R0, =D_03005380 \n\
+/* 0803fab2 */ LDR R0, =gSpriteHandler \n\
 /* 0803fab4 */ LDR R0, [R0] \n\
 /* 0803fab6 */ LDR R1, =gCurrentEngineData \n\
 /* 0803fab8 */ LDR R1, [R1] \n\
@@ -67,7 +67,7 @@ branch_0803fa9a: \n\
 /* 0803fad8 */ STR R4, [SP, 0x4] \n\
 /* 0803fada */ MOVS R4, 0x0 @ Set R4 to 0x0 \n\
 /* 0803fadc */ STR R4, [SP, 0x8] \n\
-/* 0803fade */ BL func_0804d8f8 \n\
+/* 0803fade */ BL sprite_set_anim \n\
  \n\
 branch_0803fae2: \n\
 /* 0803fae2 */ ADD SP, 0xC \n\

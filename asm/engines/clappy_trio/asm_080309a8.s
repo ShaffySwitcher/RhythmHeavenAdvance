@@ -11,7 +11,7 @@ thumb_func_start clappy_trio_cue_barely \n\
 /* 080309b2 */ MOVS R0, 0x4 @ Set R0 to 0x4 \n\
 /* 080309b4 */ BL clappy_trio_get_anim \n\
 /* 080309b8 */ ADDS R2, R0, 0x0 @ Set R2 to R0 + 0x0 \n\
-/* 080309ba */ LDR R0, =D_03005380 \n\
+/* 080309ba */ LDR R0, =gSpriteHandler \n\
 /* 080309bc */ LDR R0, [R0] \n\
 /* 080309be */ MOVS R3, 0x6 @ Set R3 to 0x6 \n\
 /* 080309c0 */ LDRSH R1, [R4, R3] \n\
@@ -22,7 +22,7 @@ thumb_func_start clappy_trio_cue_barely \n\
 /* 080309ca */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 080309cc */ STR R3, [SP, 0x8] \n\
 /* 080309ce */ MOVS R3, 0x2 @ Set R3 to 0x2 \n\
-/* 080309d0 */ BL func_0804d8f8 \n\
+/* 080309d0 */ BL sprite_set_anim \n\
 /* 080309d4 */ LDR R0, =s_tebyoushi_pati_seqData \n\
 /* 080309d6 */ BL play_sound \n\
 /* 080309da */ BL beatscript_enable_loops \n\

@@ -45,7 +45,7 @@ branch_0802ef9e: \n\
 /* 0802efb0 */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
 /* 0802efb2 */ ASRS R1, R1, 0x10 \n\
 /* 0802efb4 */ BL affine_sprite_set_rotation \n\
-/* 0802efb8 */ LDR R3, =D_03005380 \n\
+/* 0802efb8 */ LDR R3, =gSpriteHandler \n\
 /* 0802efba */ MOV R9, R3 @ Set R9 to R3 \n\
 /* 0802efbc */ LDR R4, [R3] \n\
 /* 0802efbe */ LDR R0, [R5, 0x4] \n\
@@ -55,7 +55,7 @@ branch_0802ef9e: \n\
 /* 0802efc8 */ ASRS R1, R1, 0x10 \n\
 /* 0802efca */ ADDS R0, R4, 0x0 @ Set R0 to R4 + 0x0 \n\
 /* 0802efcc */ MOVS R2, 0x2 @ Set R2 to 0x2 \n\
-/* 0802efce */ BL func_0804ddb0 \n\
+/* 0802efce */ BL sprite_get_data \n\
 /* 0802efd2 */ SUBS R0, 0x1 @ Subtract 0x1 from R0 \n\
 /* 0802efd4 */ LDRH R1, [R5, 0x2C] \n\
 /* 0802efd6 */ MULS R0, R1 @ Multiply R0 by R1 \n\
@@ -63,7 +63,7 @@ branch_0802ef9e: \n\
 /* 0802efda */ BL __udivsi3 \n\
 /* 0802efde */ ADDS R1, R0, 0x0 @ Set R1 to R0 + 0x0 \n\
 /* 0802efe0 */ LDR R0, [R5, 0x4] \n\
-/* 0802efe2 */ BL affine_sprite_set_anim_frame \n\
+/* 0802efe2 */ BL affine_sprite_set_anim_cel \n\
 /* 0802efe6 */ MOV R0, R10 @ Set R0 to R10 \n\
 /* 0802efe8 */ BL gameplay_get_cue_marking_criteria \n\
 /* 0802efec */ MOV R10, R0 @ Set R10 to R0 \n\
@@ -102,7 +102,7 @@ branch_0802f012: \n\
 /* 0802f028 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0802f02a */ LDRSH R1, [R3, R2] \n\
 /* 0802f02c */ MOVS R2, 0x1 @ Set R2 to 0x1 \n\
-/* 0802f02e */ BL func_0804cebc \n\
+/* 0802f02e */ BL sprite_set_anim_cel \n\
 /* 0802f032 */ LDR R1, =D_03004b10 \n\
 /* 0802f034 */ MOVS R0, 0x2 @ Set R0 to 0x2 \n\
 /* 0802f036 */ STRH R0, [R1, 0x12] \n\
@@ -112,7 +112,7 @@ branch_0802f012: \n\
 /* 0802f03e */ STR R3, [SP] \n\
 /* 0802f040 */ STR R3, [SP, 0x4] \n\
 /* 0802f042 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 0802f044 */ BL affine_sprite_change_anim \n\
+/* 0802f044 */ BL affine_sprite_set_anim \n\
 /* 0802f048 */ LDR R0, [R5, 0x4] \n\
 /* 0802f04a */ LDR R1, =0xfffffe00 \n\
 /* 0802f04c */ BL affine_sprite_set_rotation \n\
@@ -123,10 +123,10 @@ branch_0802f012: \n\
 /* 0802f058 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0802f05a */ STR R2, [SP, 0x4] \n\
 /* 0802f05c */ MOVS R3, 0x1 @ Set R3 to 0x1 \n\
-/* 0802f05e */ BL affine_sprite_change_anim \n\
+/* 0802f05e */ BL affine_sprite_set_anim \n\
 /* 0802f062 */ LDR R0, [R6, 0x4] \n\
 /* 0802f064 */ MOVS R1, 0x1 @ Set R1 to 0x1 \n\
-/* 0802f066 */ BL affine_sprite_play_anim \n\
+/* 0802f066 */ BL affine_sprite_set_visible \n\
 /* 0802f06a */ MOVS R0, 0x1 @ Set R0 to 0x1 \n\
 /* 0802f06c */ STRB R0, [R7, 0x5] \n\
 /* 0802f06e */ LDRB R1, [R5, 0x1] \n\
@@ -159,14 +159,14 @@ branch_0802f012: \n\
 /* 0802f0aa */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0802f0ac */ STR R2, [SP] \n\
 /* 0802f0ae */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 0802f0b0 */ BL func_0804dae0 \n\
+/* 0802f0b0 */ BL sprite_set_playback \n\
 /* 0802f0b4 */ MOV R3, R9 @ Set R3 to R9 \n\
 /* 0802f0b6 */ LDR R0, [R3] \n\
 /* 0802f0b8 */ MOV R2, R8 @ Set R2 to R8 \n\
 /* 0802f0ba */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
 /* 0802f0bc */ LDRSH R1, [R2, R3] \n\
 /* 0802f0be */ MOVS R2, 0x2 @ Set R2 to 0x2 \n\
-/* 0802f0c0 */ BL func_0804cebc \n\
+/* 0802f0c0 */ BL sprite_set_anim_cel \n\
  \n\
 branch_0802f0c4: \n\
 /* 0802f0c4 */ CMP R4, 0x0 @ Compare R4 and 0x0 \n\
@@ -183,13 +183,13 @@ branch_0802f0c4: \n\
 /* 0802f0dc */ STR R4, [SP, 0x4] \n\
 /* 0802f0de */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0802f0e0 */ MOVS R3, 0x1 @ Set R3 to 0x1 \n\
-/* 0802f0e2 */ BL affine_sprite_change_anim \n\
+/* 0802f0e2 */ BL affine_sprite_set_anim \n\
 /* 0802f0e6 */ LDR R0, [R5, 0x4] \n\
 /* 0802f0e8 */ LDR R1, =0xfffffe00 \n\
 /* 0802f0ea */ BL affine_sprite_set_rotation \n\
 /* 0802f0ee */ LDR R0, [R7] \n\
 /* 0802f0f0 */ MOVS R1, 0x1 @ Set R1 to 0x1 \n\
-/* 0802f0f2 */ BL affine_sprite_play_anim \n\
+/* 0802f0f2 */ BL affine_sprite_set_visible \n\
 /* 0802f0f6 */ LDRB R1, [R5, 0x1] \n\
 /* 0802f0f8 */ MOVS R0, 0x3 @ Set R0 to 0x3 \n\
 /* 0802f0fa */ NEGS R0, R0 @ Set R0 to -R0 \n\

@@ -25,7 +25,7 @@ thumb_func_start func_0800f7c0 \n\
 /* 0800f7e6 */ LDRB R0, [R0] \n\
 /* 0800f7e8 */ CMP R9, R0 @ Compare R9 and R0 \n\
 /* 0800f7ea */ BGE branch_0800f888 \n\
-/* 0800f7ec */ LDR R1, =D_03005380 \n\
+/* 0800f7ec */ LDR R1, =gSpriteHandler \n\
 /* 0800f7ee */ MOV R8, R1 @ Set R8 to R1 \n\
 /* 0800f7f0 */ MOVS R6, 0x0 @ Set R6 to 0x0 \n\
  \n\
@@ -36,14 +36,14 @@ branch_0800f7f2: \n\
 /* 0800f7f8 */ BGE branch_0800f86c \n\
 /* 0800f7fa */ MOV R1, R8 @ Set R1 to R8 \n\
 /* 0800f7fc */ LDR R0, [R1] \n\
-/* 0800f7fe */ BL func_0804e0c0 \n\
+/* 0800f7fe */ BL sprite_handler_get_mem_id \n\
 /* 0800f802 */ ADDS R4, R0, 0x0 @ Set R4 to R0 + 0x0 \n\
 /* 0800f804 */ LSLS R4, R4, 0x10 \n\
 /* 0800f806 */ LSRS R4, R4, 0x10 \n\
 /* 0800f808 */ MOV R2, R8 @ Set R2 to R8 \n\
 /* 0800f80a */ LDR R0, [R2] \n\
 /* 0800f80c */ LDRH R1, [R7] \n\
-/* 0800f80e */ BL func_0804e0bc \n\
+/* 0800f80e */ BL sprite_handler_set_mem_id \n\
 /* 0800f812 */ MOV R1, R8 @ Set R1 to R8 \n\
 /* 0800f814 */ LDR R0, [R1] \n\
 /* 0800f816 */ STR R6, [SP] \n\
@@ -55,14 +55,14 @@ branch_0800f7f2: \n\
 /* 0800f822 */ MOV R1, R10 @ Set R1 to R10 \n\
 /* 0800f824 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0800f826 */ MOVS R3, 0x0 @ Set R3 to 0x0 \n\
-/* 0800f828 */ BL func_0804d160 \n\
+/* 0800f828 */ BL sprite_create \n\
 /* 0800f82c */ STRH R0, [R5] \n\
 /* 0800f82e */ MOV R2, R8 @ Set R2 to R8 \n\
 /* 0800f830 */ LDR R0, [R2] \n\
 /* 0800f832 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
 /* 0800f834 */ LDRSH R1, [R5, R2] \n\
 /* 0800f836 */ MOVS R2, 0x0 @ Set R2 to 0x0 \n\
-/* 0800f838 */ BL func_0804d770 \n\
+/* 0800f838 */ BL sprite_set_visible \n\
 /* 0800f83c */ LDR R0, [SP, 0x18] \n\
 /* 0800f83e */ STR R0, [R5, 0x4] \n\
 /* 0800f840 */ LDR R1, [SP, 0x40] \n\
@@ -79,7 +79,7 @@ branch_0800f7f2: \n\
 /* 0800f856 */ MOV R1, R8 @ Set R1 to R8 \n\
 /* 0800f858 */ LDR R0, [R1] \n\
 /* 0800f85a */ ADDS R1, R4, 0x0 @ Set R1 to R4 + 0x0 \n\
-/* 0800f85c */ BL func_0804e0bc \n\
+/* 0800f85c */ BL sprite_handler_set_mem_id \n\
 /* 0800f860 */ MOV R2, R9 @ Set R2 to R9 \n\
 /* 0800f862 */ LSLS R0, R2, 0x10 \n\
 /* 0800f864 */ ASRS R0, R0, 0x10 \n\
