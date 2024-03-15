@@ -2,6 +2,9 @@
 .SUFFIXES:
 #---------------------------------------------------------------------------------
 
+BASEROM_SHA1 := 67f8adacff79c15d028fffd90de3a77d9ad0602d
+REV1_SHA1 := e0aaca45045e408e7e1072bde5b39278111e1952
+
 ifeq ($(strip $(DEVKITARM)),)
     $(error "Please set DEVKITARM in your environment. export DEVKITARM=<path to>devkitARM")
 endif
@@ -10,14 +13,13 @@ ifeq (,$(wildcard baserom.gba))
     $(error No ROM provided. Please place an unmodified ROM named "baserom.gba" in the root folder)
 endif
 
-ifneq ($(shell sha1sum -t baserom.gba), 67f8adacff79c15d028fffd90de3a77d9ad0602d  baserom.gba)
+ifneq ($(shell sha1sum -t baserom.gba), $(BASEROM_SHA1)  baserom.gba)
     $(error Provided ROM is not correct)
 endif
 
 SHELL := /bin/bash
 
 CPP := $(CC) -E
-CPPFLAGS := -I tools/agbcc -I tools/agbcc/include -I . -iquote include -nostdinc -undef
 
 include $(DEVKITARM)/base_rules
 
@@ -26,7 +28,6 @@ OBJCOPY := $(CROSS)objcopy
 LD := $(CROSS)gcc
 AS := $(CROSS)as
 CC1 := tools/agbcc/bin/agbcc
-CFLAGS := -mthumb-interwork -Wparentheses -O2 -fhex-asm
 
 # Verbose toggle
 V := @
@@ -48,9 +49,26 @@ endef
 # Whether to build a byte-for-byte matching ROM
 NONMATCHING ?= 0
 
+# Revision to build
+REV ?= 0
+
+ifeq ($(REV), 0)
+	TARGET := rhythmtengoku
+	TARGET_SHA1 := $(BASEROM_SHA1)
+else
+	TARGET := rhythmtengoku_rev1
+	TARGET_SHA1 := $(REV1_SHA1)
+endif
+
+# Preprocessor defines
+DEFINES := REV=$(REV)
+C_DEFINES := $(foreach d,$(DEFINES),-D$(d))
+
+CFLAGS := -mthumb-interwork -Wparentheses -O2 -fhex-asm
+CPPFLAGS := -I tools/agbcc -I tools/agbcc/include -I . -iquote include -nostdinc -undef $(C_DEFINES)
+
 #---------------------------------------------------------------------------------
 
-TARGET		   := rhythmtengoku
 BUILD		   := build
 SOURCES		   := src $(shell find src -type d)
 ASM            := asm
@@ -111,13 +129,17 @@ INCLUDE	:=	-I $(foreach dir,$(INCLUDES),$(wildcard $(dir)/*.h)) \
 .SECONDARY:
 #---------------------------------------------------------------------------------
 
-# If matching is 0, print a generic message
+# If nonmatching, print a generic message
 # otherwise check if the ROM matches the official ROM
 default: $(OUTPUT).gba
 	$(V)if [ "$(NONMATCHING)" = "1" ]; then \
 		echo "Build succeeded!"; \
 	else \
-		diff baserom.gba $(OUTPUT).gba && (echo "$(TARGET).gba: OK") || (echo "The build succeeded, but did not match the official ROM."); \
+		if [ "$(shell sha1sum -t $(OUTPUT).gba)" = "$(TARGET_SHA1)  $(OUTPUT).gba" ]; then \
+			echo "$(TARGET).gba: OK"; \
+		else \
+			echo "The build succeeded, but did not match the official ROM."; \
+		fi; \
 	fi \
 
 #---------------------------------------------------------------------------------
@@ -193,12 +215,14 @@ $(BUILD)/%.c.o : %.c | $(BUILD_DIRS)
 # ASM files
 $(BUILD)/%.s.o : %.s | $(BUILD_DIRS)
 	$(call print,Assembling:,$<,$@)
-	$(V)$(AS) -MD $(BUILD)/$*.d -march=armv4t -o $@ $<
+	$(V)$(CPP) $(CPPFLAGS) -x assembler-with-cpp $< -o $(BUILD)/$*.s
+	$(V)$(AS) -MD $(BUILD)/$*.d -march=armv4t -o $@ $(BUILD)/$*.s
 
 # Beatscript
 $(BUILD)/%.bs.o : %.bs | $(BUILD_DIRS)
 	$(call print,Assembling Beatscript:,$<,$@)
-	$(V)$(AS) -MD $(BUILD)/$*.d -march=armv4t -o $@ $<
+	$(V)$(CPP) $(CPPFLAGS) -x assembler-with-cpp $< -o $(BUILD)/$*.bs
+	$(V)$(AS) -MD $(BUILD)/$*.d -march=armv4t -o $@ $(BUILD)/$*.bs
 
 -include $(addprefix $(BUILD)/,$(CFILES:.c=.d))
 
