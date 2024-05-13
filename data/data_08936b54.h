@@ -20,7 +20,7 @@ extern struct TaskMethods integer_sine_interp_task;
 extern struct TaskMethods lcd_blend_mode_interp_task;
 extern char D_08936c64[];
 extern struct TaskMethods D_08936c7c;
-extern struct TaskMethods D_08936c8c;
+extern struct TaskMethods delayed_function_call_task;
 extern struct TaskMethods D_08936c9c;
 
 // ?
@@ -226,10 +226,26 @@ struct BlendControlsInterpolator {
     u16 flip;
 };
 
-struct unk_struct_08008420_init;
-struct unk_struct_08008420;
+struct unk_struct_08008420_init {
+    u32 *unk0;
+    u32 *unk4;
+    u32 unk8;
+    u32 unkC;
+    u32 unk10;
+};
+struct unk_struct_08008420 {
+    u32 *unk0;
+    u32 *unk4;
+    u32 unk8;
+    u32 unkC;
+    u32 unk10;
+};
 
-struct ScheduledFunctionTask;
+struct ScheduledFunctionTask {
+    void (*function)(s32);
+    s32 param;
+    u32 delay;
+};
 
 struct TextureLoaderInputs;
 struct TextureLoader;
