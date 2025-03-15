@@ -66,19 +66,19 @@ void arrival_scene_start(void *sVar, s32 dArg) {
 
     printer = text_printer_create_new(get_current_mem_id(), 1, 240, 32);
     text_printer_set_x_y(printer, 24, 48);
-    text_printer_set_string(printer, "　リズム資料室からお知らせ"); // "Notification from the Rhythm Reference Room"
+    text_printer_set_string(printer, "Notification from the Rhythm Reference Room"); // "Notification from the Rhythm Reference Room"
     text_printer_update(printer);
     text_printer_update(printer);
 
     printer = text_printer_create_new(get_current_mem_id(), 1, 240, 30);
     text_printer_set_x_y(printer, 24, 96);
-    text_printer_set_string(printer, "　　　　　　　　　　　　　　　　　　　　を入荷しました。"); // "You have received [_______]."
+    text_printer_set_string(printer, "　　　　　　　　　　　　　　　　　　　　 Has been received"); // "You have received [_______]."
     text_printer_update(printer);
     text_printer_update(printer);
 
-    memcpy(message, "「　", 5);
+    memcpy(message, "\"", 5);
     strcat(message, title);
-    strcat(message, "　」");
+    strcat(message, "\"");
 
     printer = text_printer_create_new(get_current_mem_id(), 1, 240, 28);
     text_printer_set_x_y(printer, 0, 72);

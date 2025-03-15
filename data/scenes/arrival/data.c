@@ -43,7 +43,7 @@ struct CompressedGraphics *arrival_buffered_textures[] = {
 };
 
 // [D_089cd1f0] "Error" Title
-char arrival_default_title[] = "ÉGÉâÅ[";
+char arrival_default_title[] = "Error[";
 
 // [D_089cd1f8] Animations
 struct Animation *arrival_option_anim[] = {

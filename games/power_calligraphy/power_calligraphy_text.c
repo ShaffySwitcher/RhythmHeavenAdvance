@@ -5,32 +5,32 @@
 /* Game Text - Power Calligraphy */
 
 
-const char D_0805d24c[] = "気合が足りぬ。";
+const char D_0805d24c[] = "You needed more power in your strokes.";
 
 const char D_0805d25c[] = "";
 
-const char D_0805d260[] = "力不足、　だな。";
+const char D_0805d260[] = "You lacked control of your brush.";
 
-const char D_0805d274[] = "たいへん力強い！";
+const char D_0805d274[] = "You gave it a lot of oomph!";
 
-const char D_0805d288[] = "心が　こもってない、　だな。";
+const char D_0805d288[] = "Just...weak.";
 
-const char D_0805d2a8[] = "心が　こもっている！";
+const char D_0805d2a8[] = "You poured your heart into your brush!";
 
-const char D_0805d2c0[] = "ココ一番で　やってくれた！";
+const char D_0805d2c0[] = "You weren't intimidated by the big one!";
 
-const char D_0805d2dc[] = "いざ！　お習字！！";
+const char D_0805d2dc[] = "Get writing!";
 
-const char D_0805d2f0[] = "先生のことば";
+const char D_0805d2f0[] = "Instructor Feedback";
 
-const char D_0805d300[] = "日本語を書きましょう。";
+const char D_0805d300[] = "Welcome to Power Calligraphy 101";
 
-const char D_0805d318[] = "気合がピークの時に、　Ａボタン！！";
+const char D_0805d318[] = "Press ⑭ at your peak power!";
 
-const char D_0805d33c[] = "よくできました。";
+const char D_0805d33c[] = "Excellent penmanship!";
 
-const char D_0805d350[] = "もう　一回、　やってみましょう。";
+const char D_0805d350[] = "Try the next technique.";
 
-const char D_0805d374[] = "ふむ。";
+const char D_0805d374[] = "Good.";
 
-const char D_0805d37c[] = "遊びは、　ここまで．．．";
+const char D_0805d37c[] = "I think you've got it.";

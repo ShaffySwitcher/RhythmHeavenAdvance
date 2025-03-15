@@ -5,40 +5,40 @@
 /* Game Text - Tram & Pauline */
 
 
-const char D_0805dae0[] = "トランくん、やりなおし。";
+const char D_0805dae0[] = "Try harder, Tram.";
 
-const char D_0805dafc[] = "かなり　カッコよかったぞ！";
+const char D_0805dafc[] = "Your tricks were cool!";
 
-const char D_0805db18[] = "ポリンちゃん、やりなおし。";
+const char D_0805db18[] = "Practice more, Pauline.";
 
-const char D_0805db34[] = "とても　ビューティフルだった！";
+const char D_0805db34[] = "Beautiful performance!";
 
-const char D_0805db54[] = "あせったらダメ。集中してね。";
+const char D_0805db54[] = "Try and focus, you two.";
 
-const char D_0805db74[] = "すごい　アクロバティックだ！";
+const char D_0805db74[] = "Amazing acrobatics on both ends!";
 
-const char D_0805db94[] = "団長のゲキ";
+const char D_0805db94[] = "Ringmaster's Advice";
 
-const char D_0805dba0[] = "トラン　と、";
+const char D_0805dba0[] = "Ｈｉ，　Ｉ’ｍ　Ｔｒａｍ．．．";
 
-const char D_0805dbb0[] = "ポリン　の、";
+const char D_0805dbb0[] = "ａｎｄ　Ｉ’ｍ　Ｐａｕｌｉｎｅ．．．";
 
-const char D_0805dbc0[] = "レッツ　トランポリン！";
+const char D_0805dbc0[] = "ａｎｄ　ｔｏｇｅｔｈｅｒ，　ｗｅ　ｔｒａｍｐｏｌｉｎｅ！";
 
-const char D_0805dbd8[] = "てっぺんに　きたときに、";
+const char D_0805dbd8[] = "Ａｔ　ｔｈｅ　ｐｅａｋ　ｏｆ　ｏｕｒ　ｊｕｍｐｓ，";
 
-const char D_0805dbf4[] = "ぼくは　＋ボタンで、";
+const char D_0805dbf4[] = "ｐｒｅｓｓ　＋　ｆｏｒ　ｍｅ，";
 
-const char D_0805dc0c[] = "あたしは　Ａボタンで、";
+const char D_0805dc0c[] = "ａｎｄ　Ａ　ｆｏｒ　ｍｅ，";
 
-const char D_0805dc24[] = "ヘンシン　するよ！";
+const char D_0805dc24[] = "ａｎｄ　ｗｅ’ｌｌ　ｔｒａｎｓｆｏｒｍ！";
 
-const char D_0805dc38[] = "ちょっと　れんしゅう　しよう！";
+const char D_0805dc38[] = "Ｌｅｔ’ｓ　ｐｒａｃｔｉｃｅ　ｆｏｒ　ａ　ｂｉｔ！";
 
-const char D_0805dc58[] = "れんぞく　ジャンプ！";
+const char D_0805dc58[] = "Ｓｕｃｃｅｓｓｉｖｅ　ｊｕｍｐｓ　ｎｏｗ！";
 
-const char D_0805dc70[] = "ふたり　じゅんばんに！";
+const char D_0805dc70[] = "Ｔｗｏ　ｊｕｍｐｓ，　ｉｎ　ｔｕｒｎｓ！";
 
-const char D_0805dc88[] = "ふたり　どうじに！";
+const char D_0805dc88[] = "Ｔｗｏ　ｊｕｍｐｓ，　ｔｏｇｅｔｈｅｒ！";
 
-const char D_0805dc9c[] = "よしっ、　ホンバンいくよ！";
+const char D_0805dc9c[] = "Ｎｏｗ　ｗｅ’ｒｅ　ｒｅａｄｙ　ｔｏ　ｓｔａｒｔ！";

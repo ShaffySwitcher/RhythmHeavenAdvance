@@ -5,36 +5,36 @@
 /* Game Text - Rat Race */
 
 
-const char D_0805d104[] = "キレが　ないよ。";
+const char D_0805d104[] = "You stops need work.";
 
-const char D_0805d118[] = "きっちり　とまってる！";
+const char D_0805d118[] = "You stopped on a dime!";
 
-const char D_0805d130[] = "でだしが　ぐだぐだ・・・";
+const char D_0805d130[] = "You started too slowly...";
 
-const char D_0805d14c[] = "でだしが　バッチリ！";
+const char D_0805d14c[] = "You took off right on cue!";
 
-const char D_0805d164[] = "もう！　ジャマしないでよ！";
+const char D_0805d164[] = "Stop getting in the way!";
 
 const char D_0805d180[] = "";
 
-const char D_0805d184[] = "あいずを　したら";
+const char D_0805d184[] = "Ａｔ　ｔｈｅ　ｆｉｒｓｔ　ｓｉｇｎ，";
 
-const char D_0805d198[] = "Ａを　おしつづけて";
+const char D_0805d198[] = "ｐｒｅｓｓ　ａｎｄ　ｈｏｌｄ　（Ａ）";
 
-const char D_0805d1ac[] = "ストップしろ！";
+const char D_0805d1ac[] = "ｔｏ　ｓｔａｙ　ｓｔｉｌｌ！";
 
-const char D_0805d1bc[] = "つぎの　あいずで";
+const char D_0805d1bc[] = "Ａｎｄ　ａｔ　ｔｈｅ　ｎｅｘｔ　ｓｉｇｎ，";
 
-const char D_0805d1d0[] = "Ａを　はなして";
+const char D_0805d1d0[] = "ｒｅｌｅａｓｅ　Ａ";
 
-const char D_0805d1e0[] = "はしりだせ！";
+const char D_0805d1e0[] = "ｔｏ　ｓｔａｒｔ　ｒｕｎｎｉｎｇ！";
 
-const char D_0805d1f0[] = "んじゃ　いくぞ！";
+const char D_0805d1f0[] = "Ｙｏｕ　ｒｅａｄｙ，　ｎｅｗｂｉｅ？　Ｇｏ！";
 
-const char D_0805d204[] = "もう　あいずは";
+const char D_0805d204[] = "Ｆｒｏｍ　ｈｅｒｅ　ｏｎ　ｏｕｔ，";
 
-const char D_0805d214[] = "しないから";
+const char D_0805d214[] = "ｎｏ　ｍｏｒｅ　ｓｉｇｎｓ！";
 
-const char D_0805d220[] = "しっかりやれよ！";
+const char D_0805d220[] = "Ｔｒｕｓｔ　ｙｏｕｒ　ｉｎｓｔｉｎｃｔｓ！";
 
-const char D_0805d234[] = "なかまから　ひとこと";
+const char D_0805d234[] = "Hushed Whispers";

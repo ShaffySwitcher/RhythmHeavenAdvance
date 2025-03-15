@@ -31,51 +31,51 @@ define_gameplay_scene scene_rap_women_unused, script_rap_women_unused_entry
 @ Rap Women (Unused) - Text
 
 text text_rap_women_unused_juji_desu_ka
-    .asciz ".b:1ＡＭ１０：００　です:0か？"
+    .asciz ".b:1Ｉｔ’ｓ　１０　ＡＭ，　.b:0ｈｕｈ？.8:1"
 endtext
 
 text text_rap_women_unused_oyatsu_desu_ka
-    .asciz ".b:1おやつ　です:0か？"
+    .asciz ".b:1Ｉｔ’ｓ　ｓｎａｃｋ　ｔｉｍｅ，　.b:0ｈｕｈ？.8:1"
 endtext
 
 text text_rap_women_unused_naisho_desu_ka
-    .asciz ".b:1ナイショです:0か？"
+    .asciz ".b:1Ｗｈｏ’ｓ　ｔｏ　ｋｎｏｗ，　.b:0ｈｕｈ？.8:1"
 endtext
 
 text text_rap_women_unused_kare_no_oyatsu_da_ne
-    .asciz ".9:1カレのおやつ　だ:0ね"
+    .asciz ".9:1Ｔｈｅｓｅ　ａｒｅ　ｔｈｅｉｒ　ｓｎａｃｋｓ，　.9:0ｙｏｕ　ｋｎｏｗ？.8:1"
 endtext
 
 text text_rap_women_unused_tabeteii_kamo_ne
-    .asciz ".9:1たべていー　かも:0ネ"
+    .asciz ".9:1Ｅａｔ　’ｅｍ　ａｌｌ　ｕｐ，　.9:0Ｉ　ｓｕｐｐｏｓｅ.8:1．"
 endtext
 
 text text_rap_women_unused_aketeii_kamo_ne
-    .asciz ".9:1あけていー　かも:0ネ"
+    .asciz ".9:1Ｏｐｅｎ　’ｅｍ　ｕｐ，　.9:0Ｉ　ｓｕｐｐｏｓｅ.8:1．"
 endtext
 
 text text_rap_women_unused_oyatsu_wa_saikou
-    .asciz ".a:1おやつは　:0サイコー！！"
+    .asciz ".a:1Ｓｎａｃｋｉｎｇ　ｉｓ　.a:0ｔｈｅ　ＧＲＥＡＴＥＳＴ！.8:1"
 endtext
 
 text text_rap_women_unused_kibun_wa_saikou
-    .asciz ".a:1きぶんは　:0サイコー！！"
+    .asciz ".a:1Ｉ　ｆｅｅｌ　.a:0ｔｈｅ　ＧＲＥＡＴＥＳＴ！.8:1"
 endtext
 
 text text_rap_women_unused_amakute_saikou
-    .asciz ".a:1あまくて　:0サイコー！！"
+    .asciz ".a:1Ｓｗｅｅｔｓ　ａｒｅ　.a:0ｔｈｅ　ＧＲＥＡＴＥＳＴ！.8:1"
 endtext
 
 text text_rap_women_unused_betsubara_saikou
-    .asciz ".a:1べつばら　:0サイコー！！"
+    .asciz ".a:1Ｃａｋｅｓ　ａｒｅ　.a:0ｔｈｅ　ＧＲＥＡＴＥＳＴ！.8:1"
 endtext
 
 text text_rap_women_unused_kare_ni_wa_naisho
-    .asciz ".a:1カレには　:0ナイショー！！"
+    .asciz ".a:1Ｔｈｅｙ　ｗｏｎ’ｔ　ｋｎｏｗ　.a:0ｏｕｒ　ＳＥＣＲＥＴ！.8:1"
 endtext
 
 text text_rap_women_unused_dare_ni_mo_naisho
-    .asciz ".a:1ダレにも　:0ナイショー！！"
+    .asciz ".a:1Ｋｅｅｐ　ｉｔ　ａｌｌ　.a:0ａ　ＳＥＣＲＥＴ！.8:1"
 endtext
 
 

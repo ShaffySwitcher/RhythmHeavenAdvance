@@ -252,7 +252,7 @@ const char *get_campaign_gift_title(s32 id, s32 shortenSongTitle) {
             return reading_material_table[giftID].title;
 
         case CAMPAIGN_GIFT_NEW_GAME:
-            return "新ゲーム"; // New Game
+            return "New Game"; // New Game
     }
 }
 
@@ -282,19 +282,19 @@ void start_campaign_notice(s32 id) {
     notice->y = campaign_gifts_table[id].y;
     level = get_level_data_from_grid_xy(notice->x, notice->y);
     string = notice->text;
-    memcpy(string, "ただいま「", 11); // [Right now]
+    memcpy(string, "If you get a Perfect in ", 40); // [Right now]
     strcat(string, level->name); // "<game_name>"
-    strcat(string, "」でパーフェクトを達成すると"); // Get a perfect on this
+    strcat(string, ", right now, you'll earn"); // Get a perfect on this
     if (!isSpecialSong) {
-        strcat(string, "もれなく"); // game, and you'll receive
+        strcat(string, ""); // game, and you'll receive
     }
-    strcat(string, "「"); // "
+    strcat(string, "\""); // "
     strcat(string, get_campaign_gift_title(id, FALSE)); // "<gift>"
-    strcat(string, "」"); // "
+    strcat(string, "\""); // "
     if (isStandardSong) {
-        strcat(string, "の曲"); // 's song
+        strcat(string, "s song"); // 's song
     }
-    strcat(string, "をプレゼント!!"); // received as a present!!
+    strcat(string, "as a bonus."); // received as a present!!
     text_printer_set_string(notice->printer, string);
 
     sprite_set_visible(gSpriteHandler, gGameSelect->selectionBorderSprite, FALSE);

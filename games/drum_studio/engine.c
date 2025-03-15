@@ -144,17 +144,17 @@ const char D_0805a06c[] = "\nグー！";
 // [D_089e1778] Rank Text
 const char *drum_lessons_rank_text[] = {
     /* RANK_0 */ "\n",
-    /* RANK_C */ "\nまずまずだネ！",
-    /* RANK_B */ "\nなかなかいいヨ！",
-    /* RANK_A */ "\nバッチグー！！",
-    /* RANK_S */ "\nカンペキッス！！",
+    /* RANK_C */ "\nNot bad!",
+    /* RANK_B */ "\nThat's pretty good, man!",
+    /* RANK_A */ "\nVery good!",
+    /* RANK_S */ "\nUnbelievable!",
 };
 
-const char D_0805a0c0[] = "\n評価 ";
+const char D_0805a0c0[] = "\nYou scored ";
 
 const char D_0805a0c8[] = ".";
 
-const char D_0805a0cc[] = " 点";
+const char D_0805a0cc[] = " points.";
 
 // [D_089e178c] Rank SFX
 struct SongHeader *drum_lessons_rank_sfx[] = {

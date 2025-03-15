@@ -5,90 +5,90 @@
 /* Game Text - Toss Boys */
 
 
-const char D_0805d618[] = "練習の成果が　でてないな。";
+const char D_0805d618[] = "You need to practice tossing more.";
 
-const char D_0805d634[] = "きほんが　できている！";
+const char D_0805d634[] = "Your tossing was impressive!";
 
-const char D_0805d64c[] = "あせってないか？";
+const char D_0805d64c[] = "You all seem a bit tense.";
 
-const char D_0805d660[] = "かなり　おちついてる！";
+const char D_0805d660[] = "You kept your cool throughout!";
 
-const char D_0805d678[] = "スピードに　ついてこい。";
+const char D_0805d678[] = "You couldn't keep up to speed.";
 
-const char D_0805d694[] = "速さをモノにしている！！";
+const char D_0805d694[] = "Speed's no problem for you three!";
 
-const char D_0805d6b0[] = "カントクのことば";
+const char D_0805d6b0[] = "Tips From The Referee";
 
 const char D_0805d6c4[] =
     "\n"
-    "いきまーす！";
+    "Tossing time!";
 
 const char D_0805d6d4[] =
     "\n"
-    "おしまい。";
+    "The End.";
 
-const char D_0805d6e0[] = "練習の成果が　でてないな。";
+const char D_0805d6e0[] = "You need to practice tossing more.";
 
-const char D_0805d6fc[] = "きほんが　できている！";
+const char D_0805d6fc[] = "Your tossing was impressive!";
 
-const char D_0805d714[] = "あせってないか？";
+const char D_0805d714[] = "You all seem a bit tense.";
 
-const char D_0805d728[] = "かなり　おちついてる！";
+const char D_0805d728[] = "You kept your cool throughout!";
 
-const char D_0805d740[] = "スピードに　ついてこい。";
+const char D_0805d740[] = "You couldn't keep up to speed.";
 
-const char D_0805d75c[] = "速さをモノにしている！！";
+const char D_0805d75c[] = "Speed's no problem for you three!";
 
-const char D_0805d778[] = "カントクのことば";
+const char D_0805d778[] = "Tips From The Referee";
 
 const char D_0805d78c[] =
     "\n"
-    "ほんばん、　いきまーす！";
+    "Let's try out our routine!";
 
 const char D_0805d7a8[] =
     "\n"
-    "おしまい。";
+    "The End.";
 
 const char D_0805d7b4[] =
     "\n"
-    "なかよく　れんしゅう中";
+    "Alright, you three! Let's get some practice in!";
 
 const char D_0805d7cc[] =
-    "ひっさつワザ　１\n"
-    "\x03\x31" "\x01\x6d" "\x05\x30" "\x01\x34" "ＡＢ　トストス" "\x03\x30" "\x01\x73" "\x05\x34" "\x01\x38";
+    "Toss Technique 1:\n"
+    "\x03\x31" "\x01\x6d" "\x05\x30" "\x01\x34" "Red's A-B Pass-Toss" "\x03\x30" "\x01\x73" "\x05\x34" "\x01\x38";
 
 const char D_0805d7fc[] =
     "\n"
-    "もう　いっかい";
+    "Let's see it one more time!";
 
 const char D_0805d80c[] =
     "\n"
-    "いいね！";
+    "Great Tossing!";
 
 const char D_0805d818[] =
-    "ひっさつワザ　２\n"
-    "\x03\x31" "\x01\x6d" "\x05\x30" "\x01\x34" "セルフ　ブルー" "\x03\x30" "\x01\x73" "\x05\x34" "\x01\x38";
+    "Toss Technique 2:\n"
+    "\x03\x31" "\x01\x6d" "\x05\x30" "\x01\x34" "Blue's Bounce-Toss" "\x03\x30" "\x01\x73" "\x05\x34" "\x01\x38";
 
 const char D_0805d848[] =
     "\n"
-    "もう いっちょ～";
+    "Once again!";
 
 const char D_0805d85c[] =
     "\n"
-    "そうそう！！";
+    "Good job!";
 
 const char D_0805d86c[] =
-    "ひっさつワザ　３\n"
-    "\x03\x31" "\x01\x6d" "\x05\x30" "\x01\x34" "イエロー　クイック" "\x03\x30" "\x01\x73" "\x05\x34" "\x01\x38";
+    "Toss Technique 3:\n"
+    "\x03\x31" "\x01\x6d" "\x05\x30" "\x01\x34" "Yellow's Quick-Toss" "\x03\x30" "\x01\x73" "\x05\x34" "\x01\x38";
 
 const char D_0805d8a0[] =
     "\n"
-    "ワンス　モア";
+    "Once more for good measure!";
 
 const char D_0805d8b0[] =
     "\n"
-    "オーケイ";
+    "Okay!";
 
 const char D_0805d8bc[] =
     "\n"
-    "だいぶ　いい感じなので、";
+    "We've made good time on practice...";

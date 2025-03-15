@@ -464,55 +464,64 @@ quiz_show_endless_table D_08069958, D_08a59cf4
 
 text D_08069960
     .ascii "\n"
-    .asciz "残念！！"
+    .ascii "Aww, too bad!\n"
+    .ascii "\n"
 endtext
 
 
 text D_0806996c
-    .ascii "また挑戦して下さい。\n"
-    .asciz "さようなら。"
+    .ascii "Come back and try\n"
+    .ascii "again next week!\n"
+    .ascii "\n"
 endtext
 
 
 text D_08069990
-    .ascii "こんばんは。\n"
-    .asciz "クイズナンダダ！？の時間です。"
+    .ascii "Good day!\n"
+    .ascii "It's time to\n"
+    .asciz "play the quiz!"
 endtext
 
 
 text D_080699bc
-    .ascii "今回は、　なんと\n"
-    .asciz "スペシャルです！"
+    .ascii "Today, we will\n"
+    .ascii "be playing the\n"
+    .asciz "special round!"
 endtext
 
 
 text D_080699e0
-    .ascii "では　さっそく\n"
-    .asciz "いってみましょう！"
+    .ascii "So with that...\n"
+    .ascii "let's begin!\n"
+    .ascii "\n"
 endtext
 
 
 text D_08069a04
     .ascii "\n"
-    .asciz "そこまで！！"
+    .ascii "Aaaand stop!\n"
+    .ascii "\n"
 endtext
 
 
 text D_08069a14
+    .ascii "And the correct\n"
+    .ascii "answer is...\n"
     .ascii "\n"
-    .asciz "さて、 正解は？"
 endtext
 
 
 text D_08069a28
     .ascii "\n"
-    .asciz "正解！！"
+    .ascii "You are correct!\n"
+    .ascii "\n"
 endtext
 
 
 text D_08069a34
-    .ascii "\n"
-    .asciz "では、　つぎです。"
+    .ascii "Let's move on\n"
+    .ascii "to the next\n"
+    .asciz "question."
 endtext
 
 
