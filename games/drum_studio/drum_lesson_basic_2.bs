@@ -30,10 +30,10 @@ define_gameplay_scene scene_drum_lesson_basic_2, script_drum_lesson_basic_2_entr
 @ Drum Lesson (Basic 2) - Data
 
 text D_08061998
-    .ascii "よくきいてマネしてね。\n"
-    .ascii "好きなタイミングでどうぞ。\n"
-    .ascii "演奏を止めると、\n"
-    .asciz "お手本がきけるヨ！"
+    .ascii "Listen carefully, then play the\n"
+    .ascii "pattern. Start whenever you\n"
+    .ascii "like. If you stop playing,\n"
+    .asciz "I'll show my example again."
 endtext
 
 
