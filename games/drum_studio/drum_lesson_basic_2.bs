@@ -55,8 +55,9 @@ return
 
 text D_08061a68
     .ascii "\n"
-    .ascii "１カ所、音が変わるヨ！\n"
-    .asciz "わかるかな？"
+    .ascii "I swapped a bass beat out\n"
+    .ascii "for a snare beat.\n"
+    .asciz "Hear the difference?"
 endtext
 
 
