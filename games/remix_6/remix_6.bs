@@ -179,11 +179,11 @@ sb_stop
 @ Remix 6 - Rap Men Text
 
 text text_remix_6_honto_desu_ka
-    .asciz ".b:1ほんとです:0か？"
+    .asciz ".b:1Ｍａｙｂｅ　ｓｏ，　.b:0ｈｕｈ？.8:1"
 endtext
 
 text text_remix_6_kimi_tte_saikou
-    .asciz ".a:1キミって　:0サイコー！！"
+    .asciz ".a:1Ｙｏｕ　ａｒｅ　.a:0ｔｈｅ　ＧＲＥＡＴＥＳＴ！.8:0"
 endtext
 
 

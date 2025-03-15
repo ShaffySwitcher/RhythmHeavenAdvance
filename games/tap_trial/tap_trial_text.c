@@ -7,13 +7,13 @@
 
 const char D_0805c0d0[] = "きほんが　できてませんね。";
 
-const char D_0805c0ec[] = "適応能\力　良いです！";
+const char D_0805c0ec[] = "";
 
 const char D_0805c104[] = "判断力が欠けてます。";
 
 const char D_0805c11c[] = "たいした判断力だ！";
 
-const char D_0805c130[] = "もっと集中しよう。";
+const char D_0805c130[] = "You needed to concentrate more.";
 
 const char D_0805c144[] = "すごい集中力ですよ！";
 
@@ -21,60 +21,60 @@ const char D_0805c15c[] = "ツメが甘いです。";
 
 const char D_0805c170[] = "";
 
-const char D_0805c174[] = "ほんばん　スタート！";
+const char D_0805c174[] = "Ｌｅｔ’ｓ　ｄａｎｃｅ！";
 
-const char D_0805c18c[] = "チェックしちゃうもんね。";
+const char D_0805c18c[] = "Ｉ　ｌｏｖｅ　ｔａｐ！";
 
-const char D_0805c1a8[] = "おつかれちゃん。";
+const char D_0805c1a8[] = "Ｗｈａｔ　ａ　ｐｅｒｆｏｒｍａｎｃｅ！";
 
-const char D_0805c1bc[] = "タップしましょ！";
+const char D_0805c1bc[] = "Ｌｅｔ’ｓ　ｔａｐ！";
 
-const char D_0805c1d0[] = "まず、　れんしゅう。";
+const char D_0805c1d0[] = "Ｐｒａｃｔｉｃｅ　ｆｉｒｓｔ！";
 
-const char D_0805c1e8[] = "マネしてね。";
+const char D_0805c1e8[] = "Ｊｕｓｔ　ｃｏｐｙ　ｕｓ！";
 
-const char D_0805c1f8[] = "ＯＫ！　つぎでーす。";
+const char D_0805c1f8[] = "ＯＫ，　ｈｅｒｅ’ｓ　ａｎｏｔｈｅｒ　ｓｔｅｐ！";
 
-const char D_0805c210[] = "ＯＫ！　まだあるヨ。";
+const char D_0805c210[] = "ＯＫ，　ｏｎｅ　ｍｏｒｅ！";
 
-const char D_0805c228[] = "ＯＫ！　ラストです。";
+const char D_0805c228[] = "ＯＫ，　ｌａｓｔ　ｏｎｅ！";
 
-const char D_0805c240[] = "ＯＫ！";
+const char D_0805c240[] = "ＯＫ，　ｎｉｃｅ　ｗｏｒｋ！";
 
-const char D_0805c248[] = "きほんが　できてないかも…";
+const char D_0805c248[] = "Your basics were a little sloppy.";
 
-const char D_0805c264[] = "なじんでるネ！";
+const char D_0805c264[] = "You showed real rhythm potential!";
 
-const char D_0805c274[] = "判断力が　たりないかも…";
+const char D_0805c274[] = "You seemed to be looking for the rhythm.";
 
-const char D_0805c290[] = "たいした　判断力だヨ！";
+const char D_0805c290[] = "You had nice rhythm awareness!";
 
-const char D_0805c2a8[] = "もっと集中しよう。";
+const char D_0805c2a8[] = "You needed to concentrate more.";
 
-const char D_0805c2bc[] = "すごい集中力だヨ～！";
+const char D_0805c2bc[] = "You were clearly concentrating hard.";
 
 const char D_0805c2d4[] = "ツメが甘いかも。";
 
 const char D_0805c2e8[] = "";
 
-const char D_0805c2ec[] = "サルの　ひとこと";
+const char D_0805c2ec[] = "Monkey Feedback";
 
-const char D_0805c300[] = "ほんばん　スタート！";
+const char D_0805c300[] = "Ｌｅｔ’ｓ　ｄａｎｃｅ！";
 
-const char D_0805c318[] = "チェックしちゃうもんね。";
+const char D_0805c318[] = "Ｉ　ｌｏｖｅ　ｔａｐ！";
 
-const char D_0805c334[] = "おつかれちゃん。";
+const char D_0805c334[] = "Ｗｈａｔ　ａ　ｐｅｒｆｏｒｍａｎｃｅ！";
 
-const char D_0805c348[] = "タップしましょ！";
+const char D_0805c348[] = "Ｌｅｔ’ｓ　ｔａｐ！";
 
-const char D_0805c35c[] = "まず、　れんしゅう。";
+const char D_0805c35c[] = "Ｐｒａｃｔｉｃｅ　ｆｉｒｓｔ！";
 
-const char D_0805c374[] = "マネしてね。";
+const char D_0805c374[] = "Ｊｕｓｔ　ｃｏｐｙ　ｕｓ！";
 
-const char D_0805c384[] = "ＯＫ！　つぎでーす。";
+const char D_0805c384[] = "ＯＫ，　ｈｅｒｅ’ｓ　ａｎｏｔｈｅｒ　ｓｔｅｐ！";
 
-const char D_0805c39c[] = "ＯＫ！　まだあるヨ。";
+const char D_0805c39c[] = "ＯＫ，　ｏｎｅ　ｍｏｒｅ！";
 
-const char D_0805c3b4[] = "ＯＫ！　ラストです。";
+const char D_0805c3b4[] = "ＯＫ，　ｌａｓｔ　ｏｎｅ！";
 
-const char D_0805c3cc[] = "ＯＫ！";
+const char D_0805c3cc[] = "ＯＫ，　ｎｉｃｅ　ｗｏｒｋ！";

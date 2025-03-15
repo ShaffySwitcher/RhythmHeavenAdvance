@@ -5,34 +5,38 @@
 /* Game Text - Space Dance */
 
 
-const char D_0805e2ac[] = "なんだか　乱れてるなぁ。";
+const char D_0805e2ac[] = "Your disorganization was visual.";
 
-const char D_0805e2c8[] = "息が　あってるじゃないか！";
+const char D_0805e2c8[] = "You were synched!";
 
-const char D_0805e2e4[] = "ちょっと　あわててたなぁ。";
+const char D_0805e2e4[] = "Panic was expressed.";
 
-const char D_0805e300[] = "よい判断をしてるじゃないか！";
+const char D_0805e300[] = "You possess the skill of good timing!";
 
-const char D_0805e320[] = "サビの手前が　ガタガタだったなぁ。";
+const char D_0805e320[] = "Your rattling was felt before the chorus.";
 
-const char D_0805e344[] = "サビの手前が　キマってたヨ！";
+const char D_0805e344[] = "The part before the chorus had perfection!";
 
-const char D_0805e364[] = "スペースおじさんの意見";
+const char D_0805e364[] = "Space Gramps Says";
 
-const char D_0805e37c[] = "レッツゴー！";
+const char D_0805e37c[] = "Ｃｏｍｍｅｎｃｅ　ｍｏｔｉｏｎｓ！";
 
-const char D_0805e38c[] = "みんなで　ダンスするぞ。";
+const char D_0805e38c[] = "Ｉｔ　ｉｓ　ｔｉｍｅ　ｆｏｒ　ｕｓ　ｔｏ　ｄａｎｃｅ　ｔｏｇｅｔｈｅｒ．";
 
-const char D_0805e3a8[] = "まず、　３つの　アクションを　おぼえるのだ。";
+const char D_0805e3a8[] = "Ｆｉｒｓｔ，　ｌｅａｒｎ　ｔｈｅ　ｍｏｔｉｏｎ　ｆｕｎｄａｍｅｎｔａｌｓ．";
 
-const char D_0805e3d8[] = "では、　１つめ。";
+const char D_0805e3d8[] = "Ｍｏｔｉｏｎ　ｔｈｅ　ｆｉｒｓｔ！";
 
-const char D_0805e3ec[] = "マネするのだ！";
+const char D_0805e3ec[] = "Ｏｂｓｅｒｖｅ　ａｎｄ　ｄｕｐｌｉｃａｔｅ！";
 
-const char D_0805e3fc[] = "ＯＫ！";
+const char D_0805e3fc[] = "Ｓａｔｉｓｆａｃｔｏｒｙ　ｉｓ　ｂｅｉｎｇ！";
 
-const char D_0805e404[] = "つぎ";
+const char D_0805e3fd[] = "Ｙｏｕ　ｈａｖｅ　ｓｑｕａｔｔｅｄ　ａｃｃｅｐｔａｂｌｙ！";
 
-const char D_0805e40c[] = "ラスト";
+const char D_0805e3fe[] = "Ｐｕｎｃｈｉｎｇ　ｔｏ　ｒｅｑｕｉｒｅｄ　ｐｒｏｆｉｃｉｅｎｃｙ！";
 
-const char D_0805e414[] = "では、　ほんばんだ！";
+const char D_0805e404[] = "Ｎｏｗ　ｉｓ　ｔｉｍｅ　ｆｏｒ　ｔｈｅ　ｎｅｘｔ　ｔｅａｃｈｉｎｇ．";
+
+const char D_0805e40c[] = "Ｍｏｖｅｍｅｎｔ　ｔｈｅ　ｆｉｎａｌ！";
+
+const char D_0805e414[] = "Ｔｈｅ　ｔｉｍｅ　ｏｆ　ｔｈｅ　ｄａｎｃｉｎｇｓ　ｓｈａｌｌ　ｂｅｇｉｎ！";

@@ -399,7 +399,7 @@ script script_space_dance_practice
         call space_dance_sub_08a85588
         call space_dance_sub_08a85588
     loop_end
-    print_text_f D_0805e3fc
+    print_text_f D_0805e3fd
     space_dance_event02 0
     space_dance_event07 7
     rest 24
@@ -424,7 +424,7 @@ script script_space_dance_practice
         call space_dance_sub_08a851f8
         call space_dance_sub_08a851f8
     loop_end
-    print_text_f D_0805e3fc
+    print_text_f D_0805e3fe
     space_dance_event02 0
     space_dance_event07 7
     rest 24

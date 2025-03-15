@@ -5,89 +5,117 @@
 /* Game Text - Quiz Show */
 
 
-const char D_0805ec44[] = "次回、がんばって下さいネ。";
+const char D_0805ec44[] = "Try harder next time.";
 
-const char D_0805ec60[] = "おしかったですね～！";
+const char D_0805ec60[] = "You were so close!";
 
 const char D_0805ec78[] = "";
 
-const char D_0805ec7c[] = "全問正解、おめでとうございました～！";
+const char D_0805ec7c[] = "You won! Congratulations!";
 
 const char D_0805eca4[] =
     "\n"
-    "残念！！";
+    "Aww, too bad!\n"
+    "\n";
 
 const char D_0805ecb0[] =
-    "また挑戦して下さい。\n"
-    "さようなら。";
+    "See you again\n"
+    "next week!\n"
+    "\n";
 
-const char D_0805ecd4[] = "司会者の　ひとこと";
+const char D_0805ecd4[] = "A Word from Our Sponsor";
 
 const char D_0805ece8[] =
-    "\n"
-    "最初の問題です";
+    "Here's the\n"
+    "first question.\n"
+    "\n";
 
 const char D_0805ecf8[] =
-    "\n"
-    "では、２問目";
+    "Now, the second\n"
+    "question.\n"
+    "\n";
 
 const char D_0805ed08[] =
-    "\n"
-    "３問目です";
+    "Aaaand third\n"
+    "question.\n"
+    "\n";
 
 const char D_0805ed14[] =
-    "\n"
-    "さあ、４問目です！";
+    "Ready?\n"
+    "Question number!\n"
+    "four\n";
 
 const char D_0805ed28[] =
-    "ここからが、\n"
-    "本番ですぞ！";
+    "This is it!\n"
+    "There's no going\n"
+    "back now!\n";
 
 const char D_0805ed44[] =
-    "とうとう、\n"
-    "５問目です！！";
+    "We have arrived\n"
+    "at question the\n"
+    "fifth!\n";
 
 const char D_0805ed60[] =
-    "\n"
-    "最終問題です！！";
+    "Here it is:\n"
+    "the final question!\n"
+    "\n";
 
 const char D_0805ed74[] =
     "\n"
-    "どうぞ";
+    "Go ahead.\n"
+    "\n";
 
 const char D_0805ed7c[] =
     "\n"
-    "そこまで！！";
+    "Aaaand stop!\n"\
+    "\n";
 
 const char D_0805ed8c[] =
-    "\n"
-    "さて、正解は？";
+    "And the correct\n"
+    "answer is...\n"
+    "\n";
 
 const char D_0805ed9c[] =
     "\n"
-    "正解！！";
+    "You are correct!\n"
+    "\n";
 
 const char D_0805eda8[] =
-    "すばらしい！\n"
-    "全問正解！！\n"
-    "賞金１００万点！！";
+    "Amazing! You aced\n"
+    "the quiz! You score\n"
+    "a mojillion points!";
 
 const char D_0805edd8[] =
-    "ではまた来週、\n"
-    "さようなら。";
+    "See you again\n"
+    "next week!\n"
+    "\n";
 
 const char D_0805edf4[] =
-    "こんばんは。\n"
-    "クイズナンダダ！？の時間です。";
+    "Good day!\n"
+    "It's time to play\n"
+    "the quiz!\n";
 
 const char D_0805ee20[] =
+    "The rules are\n"
+    "simple:\n"
+    "\n";
+
+const char D_0805ee34[] = 
+    "Just count the\n"
+    "number of times I\n"
+    "hit these buttons.\n";
+
+const char D_0805ee5c[] = 
+    "When I say to, hit\n"
+    "your buttons to\n"
+    "match my total.";
+
+const char D_0805ee8c[] = 
+    "⑭ or ⑯, it doesn't\n"
+    "matter. Just focus\n"
+    "on the final total!\n";
+
+const char D_0805eebc[] = 
     "\n"
-    "ルールはかんたん";
-
-const char D_0805ee34[] = "私がボタンをたたいた回数を当てるだけ。";
-
-const char D_0805ee5c[] = "「どうぞ」のあと、同じ数だけたたいて下さい。";
-
-const char D_0805ee8c[] = "Ａボタンと　十\字ボタン、どちらでもＯＫです。";
-
-const char D_0805eebc[] = "では、いってみましょう。";
+    "Let's begin.\n"
+    "\n";

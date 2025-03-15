@@ -30,10 +30,10 @@ define_gameplay_scene scene_drum_lesson_basic_1, script_drum_lesson_basic_1_entr
 @ Drum Lesson (Basic 1) - Data
 
 text D_080613e4
-    .ascii "よくきいてマネしてね。\n"
-    .ascii "好きなタイミングでどうぞ。\n"
-    .ascii "演奏を止めると、\n"
-    .asciz "お手本がきけるヨ！"
+    .ascii "Listen carefully, then copy my\n"
+    .ascii "pattern whenever you're\n"
+    .ascii "ready. If you stop playing,\n"
+    .asciz "I'll show it to you again!"
 endtext
 
 
@@ -57,8 +57,9 @@ return
 
 text D_080614cc
     .ascii "\n"
-    .ascii "１カ所、音がふえるヨ！\n"
-    .asciz "わかるかな？\n"
+    .ascii "Here's a new drumbeat!\n"
+    .ascii "Alternate both ⑯ and ⑭ \n"
+    .asciz "for the fast beats.\n"
 endtext
 
 
@@ -78,9 +79,9 @@ return
 
 text D_08061578
     .ascii "\n"
-    .ascii "さらに１カ所、\n"
-    .ascii "音がふえるヨ！\n"
-    .asciz "わかるかな？\n"
+    .ascii "Let's add another drumbeat!\n"
+    .ascii "Look out for it!\n"
+    .asciz "I know you can handle it.\n"
 endtext
 
 
@@ -94,9 +95,9 @@ return
 
 text D_080615e4
     .ascii "\n"
-    .ascii "またまた１カ所、\n"
-    .ascii "音がふえるヨ！\n"
-    .asciz "わかるかな？\n"
+    .ascii "And now for another\n"
+    .ascii "drumbeat right at the\n"
+    .asciz "end! Can you get it?\n"
 endtext
 
 
@@ -127,90 +128,94 @@ return
 
 
 text D_08061704
-    .ascii "\n"
-    .ascii "今回は、スネアドラムという\n"
-    .asciz "タイコをたたいてみましょう。\n"
+    .ascii "Welcome to Drum Lessons!\n"
+    .ascii "Let's start off simple\n"
+    .ascii "with just the snare drum.\n"
+    .asciz "We'll add more beats later.\n"
 endtext
 
 
 text D_08061740
     .ascii "\n"
-    .ascii "Aボタンと十\字ボタンの左、\n"
-    .ascii "どちらでもスネアドラムを\n"
-    .asciz "たたくことができるヨ！"
+    .ascii "Hit the snare with ⑭ or by\n"
+    .asciz "pressing Left on ⑯!\n"
 endtext
 
 
 text D_0806178c
-    .ascii "\n"
-    .ascii "では　さっそくですが\n"
-    .asciz "レッスンをはじめまーす！\n"
+    .ascii "Don't be discouraged if you\n"
+    .ascii "struggle at first. You can\n"
+    .ascii "try as many times as you need.\n"
+    .asciz "With that, let's begin!\n"
 endtext
 
 
 text D_080617bc
     .ascii "\n"
-    .ascii "上で光っているランプは、\n"
-    .asciz "タイミングランプです。"
+    .ascii "See that light display\n"
+    .ascii "up there? That's the\n"
+    .asciz "Timing Lamp."
 endtext
 
 
 text D_080617f0
-    .ascii "\n"
-    .ascii "まん中のミドリがジャスト！\n"
-    .ascii "それより左はハシリ気味、\n"
-    .asciz "右はモタリ気味です。"
+    .ascii "The left lights blink if you're\n"
+    .ascii "early! The right ones blink if\n"
+    .ascii "you're late. center blinks\n"
+    .asciz "green if your're just right!"
 endtext
 
 
 text D_0806183c
     .ascii "\n"
-    .ascii "うまく　できないときは、\n"
-    .ascii "上のランプを見てズレを\n"
-    .asciz "チェックしてみてネ！"
+    .ascii "If you're struggling to get the\n"
+    .ascii "timing down, look at the lamps\n"
+    .asciz "to help fix your timing."
 endtext
 
 
 text D_08061884
     .ascii "\n"
-    .asciz "では、つぎ行きまーす！"
+    .ascii "Now then, let's get on\n"
+    .asciz "with the lesson!"
 endtext
 
 
 text D_0806189c
-    .ascii "\n"
-    .ascii "演奏が速くて困ったら\n"
-    .ascii "スタートボタンを\n"
-    .asciz "押してネ！すると…"
+    .ascii "If I'm going too fast and\n"
+    .ascii "you're having trouble,\n"
+    .ascii "you can press START.\n"
+    .asciz "\n"
 endtext
 
 
 text D_080618d8
     .ascii "\n"
-    .ascii "演奏が、ゆっくりに\n"
-    .ascii "なるんだヨ！\n"
-    .asciz "参考にしてみてネ。\n"
+    .ascii "That will slow down the tempo.\n"
+    .ascii "This way, you can get a good\n"
+    .asciz "feel for the patterns.\n"
 endtext
 
 
 text D_08061910
     .ascii "\n"
-    .ascii "もとのテンポに戻るには\n"
-    .ascii "再度スタートボタンを\n"
-    .asciz "押せばＯＫです。"
+    .ascii "Press the START Button\n"
+    .ascii "again to speed it back up\n"
+    .asciz "and try it for real."
 endtext
 
 
 text D_08061950
     .ascii "\n"
-    .ascii "ちなみにスロー演奏中は\n"
-    .asciz "レッスンが進まないヨ。"
+    .ascii "The lesson won't continue in\n"
+    .ascii "slow mode, by the way. You'll\n"
+    .asciz "need to do it at normal speed."
 endtext
 
 
 text D_08061980
     .ascii "\n"
-    .asciz "では、次いってみよう！"
+    .asciz "Now, let's finish this lesson!"
 endtext
 
 

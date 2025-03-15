@@ -39,28 +39,27 @@
 const char *cafe_dialogue_first_visit[] = {
     /* ------------------------------------------------ */
         "\n"
-        "いらっしゃいませ。\n"
-        "こちらに　来たのは　はじめてですね？\n"
+        "Welcome to the caf" "\x87\x61"".\n"
+        "This your first time here?\n"
         "\n",
     /* ------------------------------------------------ */
         "\n"
-        "ここは　いわゆる　キッサ店です。\n"
-        "ゲームが　" "\0051" "\0015" "うまくできないとき" "\0054" "\0018" "や\n"
-        "つかれたときにでも　おいで下さい。",
+        "Feel free to come on by anytime you\n"
+        "find the games　" "\0051" "\0015" "too hard to play" "\0054" "\0018" "or\n"
+        "you just need to take a break.",
     /* ------------------------------------------------ */
         "\n"
-        "わたしに　できることが　あれば、\n"
-        "\0051" "\0015" "ちからに　なりますよ" "\0054" "\0018" "。\n"
-        "\n",
+        "If there's anything I can\n"
+        "do the help, well, " "\0051" "\0015" "that's\n"
+        "what I'm here for." "\0054" "\0018" "",
     /* ------------------------------------------------ */
         "\n"
-        "いま　ちょっと　しこみ中なので\n"
-        "また　あとで　きてくださいね。\n"
-        "\n",
+        "I'm a little busy right now,\n"
+        "since I only just opened,\n"
+        "but we'll talk more later.",
     /* ------------------------------------------------ */
         "\n"
-        "\n"
-        "では　また。\n"
+        "Come back soon!\n"
         "\n",
     /* ------------------------------------------------ */
     END_OF_DIALOGUE
@@ -78,8 +77,8 @@ const char *cafe_dialogue_first_visit[] = {
 const char *cafe_dialogue_come_back_later[] = {
     /* ------------------------------------------------ */
         "\n"
-        "\n"
-        "しばらく　してから　きてね～。\n"
+        "I've got some other customers\n"
+        "to deal with. We'll talk later.\n"
         "\n",
     /* ------------------------------------------------ */
     END_OF_DIALOGUE
@@ -107,18 +106,18 @@ const char *cafe_dialogue_come_back_later[] = {
 const char *cafe_dialogue_keep_trying[] = {
     /* ------------------------------------------------ */
         "\n"
-        "なんどか　やるうちに　コツが\n"
-        "つかめると　思いますよ。\n"
+        "Give it some practice and you'll do\n"
+        "fine. I'm sure of it!\n"
         "\n",
     /* ------------------------------------------------ */
         "\n"
-        "それと同時に　音楽に　ノるのが\n"
-        "楽しくなるとも思うんです。\n"
-        "\n",
+        "I'm sure playing together\n"
+        "with the music will be pretty\n"
+        "fun all its own.",
     /* ------------------------------------------------ */
         "\n"
-        "あまり　ムキに　ならずに\n"
-        "楽しんで下さいね…\n"
+        "Try not to get all worked up out\n"
+        "there. Make sure to have a good time.\n"
         "\n",
     /* ------------------------------------------------ */
     END_OF_DIALOGUE
@@ -141,13 +140,13 @@ const char *cafe_dialogue_keep_trying[] = {
 const char *cafe_dialogue_practicing_perfect[] = {
     /* ------------------------------------------------ */
         "\n"
-        "大きい声をだして　すみません。\n"
-        "なんだか　うれしかったものですから…\n"
+        "...Sorry for yelling. I just got a little\n"
+        "excited.\n"
         "\n",
     /* ------------------------------------------------ */
         "\n"
-        "パーフェクト　がんばってくださいね。\n"
-        "ではまた。\n"
+        "Good luck on getting those Perfects!\n"
+        "See you around.\n"
         "\n",
     /* ------------------------------------------------ */
     END_OF_DIALOGUE
@@ -170,13 +169,13 @@ const char *cafe_dialogue_practicing_perfect[] = {
 const char *cafe_dialogue_not_practicing_perfect[] = {
     /* ------------------------------------------------ */
         "\n"
-        "そうですか。\n"
-        "ウワサ話なんて　してしまい\n"
-        "しつれいしました。",
+        "Is that so? My bad then.\n"
+        "Guess that's why you shouldn't put\n"
+        "so much stock in a rumor.",
     /* ------------------------------------------------ */
         "\n"
-        "ゲーム　楽しんでくださいね。\n"
-        "ではまた。\n"
+        "Enjoy the games at your own pace,\n"
+        "alright? See you around.\n"
         "\n",
     /* ------------------------------------------------ */
     END_OF_DIALOGUE
@@ -214,29 +213,29 @@ const char *cafe_dialogue_not_practicing_perfect[] = {
 const char *cafe_dialogue_all_perfects_clear[] = {
     /* ------------------------------------------------ */
         "\n"
-        "もう、そこまで　やりこんだら\n"
-        "リズム感　かなり　良くなって\n"
-        "いるでしょうネ！",
+        "If you've made it this far, then your\n"
+        "sense of rhythm has just got to be\n"
+        "a step above the rest!",
     /* ------------------------------------------------ */
         "\n"
-        "なんだか　私も、すっごく\n"
-        "うれしくって　ウルウルです…\n"
+        "I'm so proud of you. Moved to tears,\n"
+        "even!\n"
         "\n",
     /* ------------------------------------------------ */
         "\n"
-        "そうそう、\n"
-        "お祝いに　ささやかでは　ありますが\n"
-        "スタジオの曲をふやしておきました。\n",
+        "I know it's not much of a gift,\n"
+        "but I've opened up more studio songs for you.\n"
+        "\n",
     /* ------------------------------------------------ */
         "\n"
-        "いやいや、しかし　なんと　まぁ\n"
-        "コンプリートですか。\n"
-        "やりますな～。",
+        "So I guess that means you've collected\n"
+        "everything?\n"
+        "Impressive!",
     /* ------------------------------------------------ */
         "\n"
-        "おつかれでしょう？\n"
-        "少し　休んでくださいネ。\n"
-        "では　また。",
+        "Good work out there, my friend.\n"
+        "You've really earned a break.\n"
+        "\n",
     /* ------------------------------------------------ */
     END_OF_DIALOGUE
 };
@@ -269,23 +268,23 @@ const char *cafe_dialogue_shouts_praise[] = {
     /* ------------------------------------------------ */
     "\0032" "\001l" "\0051" "\0015" "\n"
     "\n"
-    "すごいじゃなーい!!" "\0030" "\001s" "\0054" "\0018",
+    "That's great!" "\0030" "\001s" "\0054" "\0018",
     /* ------------------------------------------------ */
     "\0032" "\001l" "\0051" "\0015" "\n"
     "\n"
-    "やるじゃなーい!!" "\0030" "\001s" "\0054" "\0018",
+    "Amazing!" "\0030" "\001s" "\0054" "\0018",
     /* ------------------------------------------------ */
     "\0032" "\001l" "\0051" "\0015" "\n"
     "\n"
-    "おめでとー!!" "\0030" "\001s" "\0054" "\0018",
+    "Congratulations!" "\0030" "\001s" "\0054" "\0018",
     /* ------------------------------------------------ */
     "\0032" "\001l" "\0051" "\0015" "\n"
     "\n"
-    "グッド　ジョブ!!" "\0030" "\001s" "\0054" "\0018",
+    "Great job!" "\0030" "\001s" "\0054" "\0018",
     /* ------------------------------------------------ */
     "\0032" "\001l" "\0051" "\0015" "\n"
     "\n"
-    "アンビリーバボー!!" "\0030" "\001s" "\0054" "\0018",
+    "I can't believe it!" "\0030" "\001s" "\0054" "\0018",
     /* ------------------------------------------------ */
 };
 
@@ -317,23 +316,23 @@ const char *cafe_dialogue_shouts_cheer[] = {
     /* ------------------------------------------------ */
         "\0032" "\001l" "\0051" "\0015" "\n"
         "\n"
-        "がんばれー！" "\0030" "\001s" "\0054" "\0018",
+        "Go for it!" "\0030" "\001s" "\0054" "\0018",
     /* ------------------------------------------------ */
         "\0032" "\001l" "\0051" "\0015" "\n"
         "\n"
-        "ファイトー！" "\0030" "\001s" "\0054" "\0018",
+        "Give it your all!" "\0030" "\001s" "\0054" "\0018",
     /* ------------------------------------------------ */
         "\0032" "\001l" "\0051" "\0015" "\n"
         "\n"
-        "イケイケー！" "\0030" "\001s" "\0054" "\0018",
+        "Keep going!" "\0030" "\001s" "\0054" "\0018",
     /* ------------------------------------------------ */
         "\0032" "\001l" "\0051" "\0015" "\n"
         "\n"
-        "グッド　ラック！" "\0030" "\001s" "\0054" "\0018",
+        "Good luck!" "\0030" "\001s" "\0054" "\0018",
     /* ------------------------------------------------ */
         "\0032" "\001l" "\0051" "\0015" "\n"
         "\n"
-        "感動したー！" "\0030" "\001s" "\0054" "\0018",
+        "I'm impressed!" "\0030" "\001s" "\0054" "\0018",
     /* ------------------------------------------------ */
 };
 
@@ -364,20 +363,23 @@ const char *cafe_dialogue_shouts_cheer[] = {
 const char *cafe_dialogue_rhythm_sense[] = {
     /* ------------------------------------------------ */
         "\n"
-        "それはそうと、リズム感って　人間にとって　どういうものなんでしょうねぇ。\n"
+        "By the way, is a sense of rhythm any\n"
+        "different for humans?\n"
         "\n",
     /* ------------------------------------------------ */
         "\n"
-        "ま、私なんかは　あんまり\n"
-        "いしきすることも　ないんですがね。\n"
+        "Well, not like my rhythm couldn't do with\n"
+        "a bit of work, but...\n"
         "\n",
     /* ------------------------------------------------ */
         "\n"
-        "でも、リズム感が　よくなると　きっと　ちょっと　ハッピーに　なるんでしょうね。",
+        "When your sense of rhythm",
+        "improves... that's gotta be\n"
+        "euphoric, huh?",
     /* ------------------------------------------------ */
         "\n"
-        "\n"
-        "私も　ゲーム　してみようかな…\n"
+        "Maybe I should try some of those\n"
+        "Rhythm Games myself...\n"
         "\n",
     /* ------------------------------------------------ */
     END_OF_DIALOGUE
@@ -415,28 +417,29 @@ const char *cafe_dialogue_rhythm_sense[] = {
 const char *cafe_dialogue_offbeats[] = {
     /* ------------------------------------------------ */
         "\n"
-        "それはそうと、この世界でよく聞く\n"
-        "「ウラ」って　どういうものか\n"
-        "知ってますか？",
+        "You've probably heard of something\n"
+        "called an offbeat. Do you know what\n"
+        "that is?",
     /* ------------------------------------------------ */
         "\n"
-        "ま、私も　それほど　詳しくはないので　アレなんですけどネ。\n"
+        "I'm no expert myself, but I think\n"
+        "I've got the jist of it.\n"
         "\n",
     /* ------------------------------------------------ */
         "\n"
-        "たとえば、音楽にあわせて\n"
-        "自然に手をたたくとしますね。\n"
+        "So, suppose you're clapping to\n"
+        "the beat of some music, right?\n"
         "\n",
     /* ------------------------------------------------ */
         "\n"
-        "その　手びょうしと手びょうしの\n"
-        "ちょうど　まん中のタイミングが\n"
-        "「ウラ」なんだそうです。",
+        "Well, the offbeat is supposed to be\n"
+        "the exact point right inbetween each\n"
+        "of your claps.",
     /* ------------------------------------------------ */
         "\n"
-        "まぁ、そういうモン　らしいです。\n"
-        "テキトーで　ごめんなさいネ。\n"
-        "では　また。",
+        "At least I think so. I'm not so great at\n"
+        "explaining this stuff, but I hope it helps.\n"
+        "See you around.",
     /* ------------------------------------------------ */
     END_OF_DIALOGUE
 };
@@ -473,27 +476,28 @@ const char *cafe_dialogue_offbeats[] = {
 const char *cafe_dialogue_rhythm_test[] = {
     /* ------------------------------------------------ */
         "\n"
-        "それはそうと、\n"
-        "最近　「リズム感測定」してます？\n"
+        "Say, have you tried doing the\n"
+        "Rhythm Test again?\n"
         "\n",
     /* ------------------------------------------------ */
         "\n"
-        "私も　ときどき　やるんですけど\n"
-        "６５点くらいが　限界なんですよねぇ…\n"
+        "I've been giving it a spin lately.\n"
+        "Seems like 65 points is my limit.\n"
         "\n",
     /* ------------------------------------------------ */
         "\n"
-        "なかなか　どうして　２つめのテストが　うまく　できないんですヨ。\n"
+        "That second test gives me quite\n"
+        "a bit of trouble.\n"
         "\n",
     /* ------------------------------------------------ */
         "\n"
-        "空白を　カウントするってのは\n"
-        "ムズいもんですね～。\n"
+        "Counting those silent beats...\n"
+        "It's tricky, don't you think?\n"
         "\n",
     /* ------------------------------------------------ */
         "\n"
-        "ま、ぼちぼち　やっていきましょうネ。\n"
-        "では　また。\n"
+        "Well, let's take it one step at a time.\n"
+        "See you around.\n"
         "\n",
     /* ------------------------------------------------ */
     END_OF_DIALOGUE
@@ -531,26 +535,29 @@ const char *cafe_dialogue_rhythm_test[] = {
 const char *cafe_dialogue_drum_lessons[] = {
     /* ------------------------------------------------ */
         "\n"
-        "それはそうと、おまけコーナーの　ドラムレッスンって　やったことあります？\n"
+        "You ever check out the Drum\n"
+        "Lessons in the Bonus Corner?\n"
         "\n",
     /* ------------------------------------------------ */
         "\n"
-        "私は　週に１回だけ　レッスンを\n"
-        "うけてるんですが、なかなか\n"
-        "上達しませんねぇ。",
-    /* ------------------------------------------------ */
-        "\n"
-        "先生が、こういうのは　すききらいが\n"
-        "あるから、ムリして　しないでネって\n"
-        "言ってましたけど、",
-    /* ------------------------------------------------ */
-        "\n"
-        "レッスンを　やりだすと　これが\n"
-        "なかなか　やめられないんですよね～。\n"
+        "I've been taking lessons every week,\n"
+        "but I never seem to get any better.\n"
         "\n",
     /* ------------------------------------------------ */
         "\n"
-        "ま、楽器は　すぐには　うまくならないでしょうし、じっくりと　つきあってみましょうかね…",
+        "My teacher told me that I have a\n"
+        "bit of a problem pacing myself, that\n"
+        "I shouldn't push myself so much.",
+    /* ------------------------------------------------ */
+        "\n"
+        "But once you start getting into it,\n"
+        "it's hard to stop.\n"
+        "\n",
+    /* ------------------------------------------------ */
+        "\n"
+        "I guess no one can master the drums\n"
+        "in a day, though. We should take\n"
+        "our time with that stuff.",
     /* ------------------------------------------------ */
     END_OF_DIALOGUE
 };
@@ -582,24 +589,23 @@ const char *cafe_dialogue_drum_lessons[] = {
 const char *cafe_dialogue_adhd[] = {
     /* ------------------------------------------------ */
         "\n"
-        "それはそうと、\n"
-        "なんだか　今　すごく　ねむいのです…\n"
+        "I'm not sure why, but man, am I tired...\n"
         "\n",
     /* ------------------------------------------------ */
         "\n"
-        "\n"
-        "きのう　おそくまで　遊んでたからなぁ…\n"
+        "I was up last night playing until\n"
+        "who-knows-when...\n"
         "\n",
     /* ------------------------------------------------ */
         "\n"
-        "あ、いや、こっちの話です。\n"
-        "ひとりごとですので…　すみませんね。\n"
+        "Oops! Sorry. I'm talking to myself again.\n"
+        "Don't mind me.\n"
         "\n",
     /* ------------------------------------------------ */
         "\n"
-        "こんど　ドライブでも　行きませんか？\n"
-        "ま、よかったら　ですけどネ。\n"
-        "では　また。",
+        "Maybe some other time I can tell\n"
+        "you all about it... if that's fine with you.\n"
+        "See you around.",
     /* ------------------------------------------------ */
     END_OF_DIALOGUE
 };
@@ -631,22 +637,22 @@ const char *cafe_dialogue_adhd[] = {
 const char *cafe_dialogue_coffee[] = {
     /* ------------------------------------------------ */
         "\n"
-        "それはそうと、\n"
-        "コーヒー　入りましたヨ。\n"
+        "So, I made you some coffee.\n"
         "\n",
     /* ------------------------------------------------ */
         "\n"
-        "え？　たのんでないって？　あぁ、これは　おとなりから　なんですが…\n"
-        "\n",
+        "Wait, you didn't order coffee?\n"
+        "Oh, this is from the person\n"
+        "sitting next to you. His treat.",
     /* ------------------------------------------------ */
         "\n"
-        "ま、まぁ　無口な方ですが\n"
-        "なかよくしたいんじゃないですか？\n"
-        "\n",
+        "He's not much for words, but\n"
+        "he's pretty friendly, and I guess\n"
+        "generous too.",
     /* ------------------------------------------------ */
         "\n"
-        "私は、コーヒーを　入れるだけしか\n"
-        "できませんが…　ははは…\n"
+        "Me? I can make coffee, but...\n"
+        "need to work on the rest. Heh...\n"
         "\n",
     /* ------------------------------------------------ */
     END_OF_DIALOGUE
@@ -679,24 +685,23 @@ const char *cafe_dialogue_coffee[] = {
 const char *cafe_dialogue_dog_barista[] = {
     /* ------------------------------------------------ */
         "\n"
-        "それはそうと、\n"
-        "実は　私　犬なんですヨ。\n"
+        "By the way, I'm actually a dog.\n"
         "\n",
     /* ------------------------------------------------ */
         "\n"
-        "かれこれ　９才で　もう　けっこう\n"
-        "いいトシなんです。\n"
+        "I'm nine years old. Pretty spry\n"
+        "for my age if I say so.\n"
         "\n",
     /* ------------------------------------------------ */
         "\n"
-        "いやはや、このトシになると\n"
-        "時がたつのが　はやいですねぇ。\n"
+        "Time goes by pretty fast when you're\n"
+        "as old as I am.\n"
         "\n",
     /* ------------------------------------------------ */
         "\n"
-        "お客さんは　人間ですよね？\n"
-        "まぁ、私は　犬ですが　これからも\n"
-        "なかよくしてくださいネ～。",
+        "You're a human, right? They say I'm\n"
+        "supposed to be your best friend.\n"
+        "We'd better get along then!",
     /* ------------------------------------------------ */
     END_OF_DIALOGUE
 };
@@ -728,21 +733,23 @@ const char *cafe_dialogue_dog_barista[] = {
 const char *cafe_dialogue_healing_with_music[] = {
     /* ------------------------------------------------ */
         "\n"
-        "それはそうと、悲しいときって\n"
-        "どうしてますか？\n"
-        "私は　もっぱら　音楽を　ききますねぇ。",
+        "So, when you're sad, what do\n"
+        "you do to cheer yourself up?\n"
+        "Me, I listen to music.",
     /* ------------------------------------------------ */
         "\n"
-        "けっこう古いレコードなんかを　出してきて　当時を　思い出したりすると、ホッとするんです。",
+        "Dusting off a favorite record of mine\n"
+        "and taking a nostalgia trip...\n"
+        "That never fails to put me at ease.",
     /* ------------------------------------------------ */
         "\n"
-        "音楽って　フシギですよね～。\n"
-        "どうして　あんなにも　心を\n"
-        "ゆさぶるんでしょうね。",
+        "Music's weird like that. Why does\n"
+        "it have such power over our feelings,\n"
+        "do you think?",
     /* ------------------------------------------------ */
         "\n"
-        "まぁ、私には　詳しい理屈なんて\n"
-        "わからないですけどネ。ははは。\n"
+        "Maybe if I studied this stuff I'd know,\n"
+        "but I don't! Sorry! Heh.\n"
         "\n",
     /* ------------------------------------------------ */
     END_OF_DIALOGUE
@@ -780,28 +787,29 @@ const char *cafe_dialogue_healing_with_music[] = {
 const char *cafe_dialogue_speaking_with_music[] = {
     /* ------------------------------------------------ */
         "\n"
-        "それはそうと、リズムで\n"
-        "会話ができるって　知ってました？\n"
+        "I heard you can hold a conversation\n"
+        "with only rhythm.\n"
         "\n",
     /* ------------------------------------------------ */
         "\n"
-        "リズムパターンに　言葉や　意味を　対応させて、会話をするんだそうです。\n"
-        "\n",
+        "You can put words and meanings\n"
+        "behind different rhythms like morse\n"
+        "code and talk without speaking.",
     /* ------------------------------------------------ */
         "\n"
-        "タイコの大きな音で　リズムをきざんで\n"
-        "はなれた人と　コミュニケーションを\n"
-        "とるらしいんですヨ。",
+        "Like, bang out a message into one\n"
+        "of those taiko drums, and you could\n"
+        "communicate acres apart.",
     /* ------------------------------------------------ */
         "\n"
-        "このまえ　いらっしゃった　お客さんが\n"
-        "教えてくれたんですけど、ちょっと\n"
-        "面白そうじゃないですか？",
+        "At least that's what a customer\n"
+        "once told me. Doesn't that sound\n"
+        "fun?",
     /* ------------------------------------------------ */
         "\n"
-        "でも　もし、ドラムで　選挙演説とか\n"
-        "ボンゴで　夫婦ゲンカとかあったら\n"
-        "やかましそうですネ。ははは。",
+        "But if you had percussive election\n"
+        "speeches or bongo arguments...\n"
+        "Expect a lot of noise. Ahahaha!",
     /* ------------------------------------------------ */
     END_OF_DIALOGUE
 };
@@ -838,28 +846,29 @@ const char *cafe_dialogue_speaking_with_music[] = {
 const char *cafe_dialogue_ranks_and_medals[] = {
     /* ------------------------------------------------ */
         "\n"
-        "それはそうと、ゲームで\n"
-        "「ハイレベル」っていう成績を\n"
-        "とったことありますか？",
-    /* ------------------------------------------------ */
-        "\n"
-        "ゲームの成績は「やりなおし」「平凡」「ハイレベル」の３つが、あるんですヨ。\n"
+        "By the way, have you ever gotten a\n"
+        "Superb rank on a game?\n"
         "\n",
     /* ------------------------------------------------ */
         "\n"
-        "で、「ハイレベル」をとると\n"
-        "メダルが　もらえるんです。\n"
+        "There are three ranks you can get:\n"
+        "Try Again, OK, and Superb.\n"
         "\n",
     /* ------------------------------------------------ */
         "\n"
-        "メダルを　集めると　いろいろな\n"
-        "おまけが　遊べるようになるので\n"
-        "がんばって　集めてくださいネ。",
+        "And, if you get a Superb,\n"
+        "you also get a medal.\n"
+        "\n",
     /* ------------------------------------------------ */
         "\n"
-        "ご存知でしたら　つまらない話でしたネ。\n"
-        "すみません。ではまた。\n"
-        "\n",
+        "And those medals let you unlock\n"
+        "some prizes. Sounds like it\n"
+        "would be worth your while.",
+    /* ------------------------------------------------ */
+        "\n"
+        "But you probably already knew that,\n"
+        "right? Sorry if I bored you.\n"
+        "See you around.",
     /* ------------------------------------------------ */
     END_OF_DIALOGUE
 };

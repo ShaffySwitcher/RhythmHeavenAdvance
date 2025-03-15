@@ -7,6 +7,7 @@
 #include "src/scenes/game_select.h"
 
 
+
 /* RESULTS */
 
 
@@ -544,7 +545,7 @@ void results_render_skill_screen(void) {
     char numString[0x20];
     u32 badInputScore, score, level;
 
-    textAnim = bmp_font_obj_print_c(gResults->objFont, ":1" "＊＊＊＊" ":0" "　　さいてん　　" ":1" "＊＊＊＊", 0, 7);
+    textAnim = bmp_font_obj_print_c(gResults->objFont, ":1" "＊＊＊＊" ":0" "　　Ｇｒａｄｅ　　" ":1" "＊＊＊＊", 0, 7);
     sprite_create(gSpriteHandler, textAnim->frames, 0, 120, 16, 0x4800, 1, 0, 0);
 
     results_tracker_calculate_skill_averages();
@@ -676,8 +677,8 @@ u32 results_get_negative_comments(void) {
 // [D_089d7b34] Rank Comment Pool (Try Again)
 const char *results_try_again_comment_pool[] = {
     "",
-    "また、",
-    "あと、"
+    "Likewise,",
+    "Also..."
 };
 
 
@@ -735,23 +736,38 @@ s24_8 results_get_positive_comments(void) {
         }
 
         if (gResults->totalNegativeComments > 0) {
-            memcpy(commentsText, "…でも、", 9); // ("...but,")
+            memcpy(commentsText, "... but, ", 9); // ("...but,")
             strcat(commentsText, criteria->positiveRemark);
+            // Convert the first character of the statement to lowercase if it's uppercase
+            if (commentsText[9] >= 'A' && commentsText[9] <= 'Z') {
+                commentsText[9] += 32;
+            }
             anim = results_get_comment_anim(commentsText, TEXT_ANCHOR_BOTTOM_RIGHT, 3);
             palette = EXTRA_COMMENT_PALETTE;
         } else {
+            size_t prefixLength = 0;
             switch (totalPassed) {
                 case 0:
                     memcpy(commentsText, "", 1);
                     break;
                 case 1:
-                    memcpy(commentsText, "しかも、", 9); // ("moreover,")
+                    memcpy(commentsText, "And ", 9); // ("moreover,")
                     break;
                 default:
-                    memcpy(commentsText, "さらに、", 9); // ("also,")
+                    memcpy(commentsText, "Plus, ", 9); // ("also,")
                     break;
             }
             strcat(commentsText, criteria->positiveRemark);
+            palette = COMMENT_PALETTE;
+            if (totalPassed > 0) {
+                prefixLength = strlen(commentsText) - strlen(criteria->positiveRemark);
+        
+                // Convert the first character of the statement to lowercase if it's uppercase
+                if (commentsText[prefixLength] >= 'A' && commentsText[prefixLength] <= 'Z') {
+                    commentsText[prefixLength] += 32;
+                }
+            }
+
             anim = results_get_comment_anim(commentsText, TEXT_ANCHOR_BOTTOM_LEFT, 3);
             palette = COMMENT_PALETTE;
         }
@@ -788,10 +804,10 @@ s24_8 results_get_positive_comments(void) {
 
 // [D_089d7b40] Rank Comment Pool (OK)
 const char *results_ok_comment_pool[] = {
-    "よしと　します。",
-    "とりあえず．．．",
-    "まぁまぁ、　かな。",
-    "う～ん．．．"
+    "I guess that was all right.",
+    "Good enough...",
+    "I don't know...",
+    "Hm..."
 };
 
 

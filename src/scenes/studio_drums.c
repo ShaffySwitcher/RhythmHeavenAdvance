@@ -8,21 +8,21 @@
 
 // [D_089d83d0] Drum Kit Names
 const char *studio_drum_kit_names[] = {
-    /* DEFAULT */ "フツーなドラム",
-    /* DRY     */ "ドライなドラム",
-    /* POWER   */ "パワーなドラム",
-    /* TECHNO  */ "テクノなドラム",
-    /* MATTE   */ "マットなドラム",
-    /* ASIAN   */ "アジアなドラム",
-    /* LIGHT   */ "ライトなドラム",
-    /* HEAVY   */ "ハードなドラム",
-    /* HIHAT   */ "ハットテクなドラム",
-    /* HEEL1   */ "カカトテクなドラム １",
-    /* HEEL2   */ "カカトテクなドラム ２",
-    /* SFX     */ "音効なドラム",
-    /* TAP     */ "タップなドラム",
-    /* AIR     */ "風切るドラム",
-    /* SAMURAI */ "さむらいドラム"
+    /* DEFAULT */ "Standard Drum",
+    /* DRY     */ "Dry Drum",
+    /* POWER   */ "Power Drum",
+    /* TECHNO  */ "Techno Drum",
+    /* MATTE   */ "Matte Drum",
+    /* ASIAN   */ "Asian Drum",
+    /* LIGHT   */ "Light Drum",
+    /* HEAVY   */ "Heavy Drum",
+    /* HIHAT   */ "Hi-Hat Drum",
+    /* HEEL1   */ "Heel Drop Drum 2",
+    /* HEEL2   */ "Heel Drop Drum 1",
+    /* SFX     */ "Sound FX Drum",
+    /* TAP     */ "Tap Drum",
+    /* AIR     */ "Swift Drum",
+    /* SAMURAI */ "Samurai Drum"
 };
 
 
@@ -100,18 +100,18 @@ const char *studio_mem_warnings_text[] = {
     /* NO MEMORY -------------------------------------- */
         // [ You can't save any more data. ]
         // [ Perform without saving? ]
-        "メモリがいっぱいです。\n"
-        "データは残らないけど演奏する？",
+        "Your memory is full.\n"
+        "Perform anyway?",
     /* TOO MANY REPLAYS ------------------------------- */
         // [ You can only save 10 recitals. ]
         // [ Perform without saving? ]
-        "演奏データは10コしか残せません。\n"
-        "データは残らないけど演奏する？",
+        "There's no more room for\n"
+        "saving. Perform anyway?",
     /* LOW MEMORY ------------------------------------- */
         // [ There's not much memory left. ]
         // [ Perform anyway? ]
-        "メモリが少なくなってきてます。\n"
-        "このまま演奏する？"
+        "Save memory is running low.\n"
+        "Do you want to perform anyway?"
     /* ------------------------------------------------ */
 };
 

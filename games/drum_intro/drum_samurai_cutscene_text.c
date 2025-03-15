@@ -6,61 +6,56 @@
 
 
 const char D_0805df4c[] =
-    "Welcome to\n"
-    "this funky game,\n"
-    "the RHYTHM TEN-\n"
-    "GOKU world!!";
+    "Welcome to the\n"
+    "funky world of\n"
+    "Rhythm Heaven Advance!";
 
 const char D_0805df88[] =
-    "リズム天国へ ようこそ！\n"
-    "ファンキーなひとときを\n"
-    "楽しんでくださいネ!";
+    "I hope you enjoy your time\n"
+    "with this game!";
 
 const char D_0805dfcc[] =
-    "では、　またのちほど\n"
-    "お会いしましょう！\n"
-    "see you!";
+    "\n"
+    "Well, see you later!";
 
 
 /* Game Text - Drumming Intro (Part 1) */
 
 
 const char D_0805e000[] =
-    "リズム感\n"
-    "それは潜在的に\n"
-    "みんなが持っている\n"
-    "ものなんです。";
+    "A sense of rhythm--\n"
+    "Everyone has it in some\n"
+    "form or fashion.";
 
 const char D_0805e03c[] =
-    "リズム感は\n"
-    "意識していれば\n"
-    "どんどん良くなります。";
+    "And with some mindfulness,\n"
+    "that sense of rhythm can\n"
+    "be sharpened like any skill.";
 
 const char D_0805e070[] =
-    "さて、まずは\n"
-    "あなたのリズム感を\n"
-    "かるく見てみましょう。";
+    "Why don't we take a\n"
+    "quick look at your\n"
+    "sense of rhythm?";
 
 
 /* Game Text - Drumming Intro (Part 2) */
 
 
 const char D_0805e0a8[] =
-    "どうでしたか？\n"
-    "納得のいく結果が\n"
-    "出せましたか？";
+    "How did you do? Are you\n"
+    "happy with the\n"
+    "score that you got?";
 
 const char D_0805e0d8[] =
-    "潜在的なリズム感は\n"
-    "訓練によって\n"
-    "成長するんです。";
+    "Well, your sense of\n"
+    "rhythm can only grow\n"
+    "with some practice, so...";
 
 const char D_0805e10c[] =
-    "このあと出てくる\n"
-    "リズミカルなゲームで\n"
-    "楽しくリズム感を\n"
-    "みがいてみてください。";
+    "Leap into some of these\n"
+    "games and you just might\n"
+    "just find it getting\n"
+    "sharper and sharper!";
 
 const char D_0805e15c[] =
-    "では、またあとで\n"
-    "お会いしましょう。";
+    "With that, I'll see you around!";

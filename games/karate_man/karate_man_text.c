@@ -5,51 +5,55 @@
 /* Game Text - Karate Man */
 
 
-const char D_0805ab50[] = "きほんが　できてない。";
+const char D_0805ab50[] = "You needed to focus on the basics.";
 
 const char D_0805ab68[] = "";
 
-const char D_0805ab6c[] = "つづけざまは　ニガテみたいだね。";
+const char D_0805ab6c[] = "Your sequential punches were just sad.";
 
-const char D_0805ab90[] = "れんぞくパンチに　キレがある！";
+const char D_0805ab90[] = "Stellar sequential punches!";
 
-const char D_0805abb0[] = "さいご キマってた！";
+const char D_0805abb0[] = "You nailed the ending!";
 
 const char D_0805abc4[] =
     "\n"
-    "ノるのを　忘れずにネ！";
+    "Remember to feel the flow!";
 
-const char D_0805abdc[] = "師匠のおことば";
+const char D_0805abdc[] = "The Master speaks...";
 
 const char D_0805abec[] =
-    "ようこそ！\n"
-    "カラテ家のゲームへ。";
+    "Welcome to karate \n"
+    "training!";
 
-const char D_0805ac0c[] = "このゲームは、Aボタンで「モノ」をパンチするだけだけどもタイミングが超シビアです。";
+const char D_0805ac0c[] = 
+    "Press ⑭ to punch the\n"
+    "objects that are flying\n"
+    "your way.\n"
+    "The timing's a little tricky!";
 
 const char D_0805ac60[] =
-    "まずは、とんでくる\n"
-    "「モノ」を　ビシッ　と\n"
-    "パンチしてみよう。";
+    "Here, why don't you give\n"
+    "it a shot?";
 
 const char D_0805aca0[] =
-    "どう？\n"
-    "タイミングのシビアさ、\n"
-    "わかってもらえたかな？";
+    "See?\n"
+    "The timing is pretty\n"
+    "strict, isn't it?";
 
 const char D_0805acd8[] =
-    "つぎは、音楽にあわせて\n"
-    "パンチしてみよう！";
+    "Now try punching to\n"
+    "the beat of some music!";
 
 const char D_0805ad04[] =
-    "どうですか？\n"
-    "音楽にノると、やりやすくないですか？";
+    "How was that?\n"
+    "Much easier with the\n"
+    "music, right?";
 
 const char D_0805ad38[] =
-    "では、そんなカンジで\n"
-    "音楽にノッて「モノ」を\n"
-    "ビシビシ　たたきましょう！";
+    "Well, there you have it!\n"
+    "Just flow with the music\n"
+    "and punch away!";
 
 const char D_0805ad80[] =
     "\n"
-    "本番、スタート！！";
+    "Ready, set, punch!";

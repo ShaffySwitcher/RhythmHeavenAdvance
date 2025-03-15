@@ -390,13 +390,19 @@ script script_showtime_practice
         rest 24
         print_text_f D_0805e21c
         beat_anim
-        rest 24
+        rest 23
+        print_text_f D_0805e218
+        rest 1
         print_text_f D_0805e220
         beat_anim
-        rest 24
+        rest 23
+        print_text_f D_0805e218
+        rest 1
         print_text_f D_0805e224
         beat_anim
-        rest 24
+        rest 23
+        print_text_f D_0805e218
+        rest 1
         print_text_f D_0805e218
         beat_anim
         rest 24
@@ -412,13 +418,19 @@ script script_showtime_practice
         rest 24
         print_text_f D_0805e21c
         beat_anim
-        rest 24
+        rest 23
+        print_text_f D_0805e218
+        rest 1
         print_text_f D_0805e220
         beat_anim
-        rest 24
+        rest 23
+        print_text_f D_0805e218
+        rest 1
         print_text_f D_0805e224
         beat_anim
-        rest 24
+        rest 23
+        print_text_f D_0805e218
+        rest 1
         print_text_f D_0805e218
     loop_end
     print_text_f D_0805e22c
@@ -465,15 +477,21 @@ script script_showtime_practice
         beat_anim
         rest 24
         beat_anim
-        rest 24
+        rest 23
+        print_text_f D_0805e218
+        rest 1
         print_text_f D_0805e220
         beat_anim
         rest 24
         beat_anim
-        rest 24
+        rest 23
+        print_text_f D_0805e218
+        rest 1
         print_text_f D_0805e224
         beat_anim
-        rest 24
+        rest 23
+        print_text_f D_0805e218
+        rest 1
         print_text_f D_0805e218
         beat_anim
         rest 24
@@ -487,15 +505,21 @@ script script_showtime_practice
         beat_anim
         rest 24
         beat_anim
-        rest 24
+        rest 23
+        print_text_f D_0805e218
+        rest 1
         print_text_f D_0805e220
         beat_anim
         rest 24
         beat_anim
-        rest 24
+        rest 23
+        print_text_f D_0805e218
+        rest 1
         print_text_f D_0805e224
         beat_anim
-        rest 24
+        rest 23
+        print_text_f D_0805e218
+        rest 1
         print_text_f D_0805e218
         beat_anim
         rest 24
@@ -554,11 +578,17 @@ script script_showtime_practice
         print_text_f D_0805e21c
         spawn_cue CUE_WHITE
         beat_anim
-        rest 24
+        rest 23
+        print_text_f D_0805e218
+        rest 1
         print_text_f D_0805e220
-        rest 24
+        rest 23
+        print_text_f D_0805e218
+        rest 1
         print_text_f D_0805e224
-        rest 24
+        rest 23
+        print_text_f D_0805e218
+        rest 1
         print_text_f D_0805e218
         beat_anim
         rest 24
@@ -574,11 +604,17 @@ script script_showtime_practice
         print_text_f D_0805e21c
         spawn_cue CUE_WHITE
         beat_anim
-        rest 24
+        rest 23
+        print_text_f D_0805e218
+        rest 1
         print_text_f D_0805e220
-        rest 24
+        rest 23
+        print_text_f D_0805e218
+        rest 1
         print_text_f D_0805e224
-        rest 24
+        rest 23
+        print_text_f D_0805e218
+        rest 1
         print_text_f D_0805e218
     loop_end
     beat_anim

@@ -2,786 +2,794 @@
 struct LevelData level_data_table[] = {
     /* KARATE_MAN */ {
         /* Entry Scene   */ &scene_karate_man,
-        /* Level Name    */ "カラテ家",
-        /* Level Desc.   */ "とんでくるモノを\n"
-                            "Aボタンでパンチ！\n"
-                            "よくあるゲーム？\n"
-                            "…かもね。",
+        /* Level Name    */ "Karate Man",
+        /* Level Desc.   */ "The key to karate,\n"
+                            "like all things, is rhythm.\n"
+                            "Now, let us throw some\n"
+                            "stuff for you to punch.",
         /* Level Icon    */ 8,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_karate_man_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "明日が あるさ。",
-            /* OK        */ "とりあえず、ごはん 食べとこう！",
-            /* SUPERB    */ "こんなに ブッとばしちゃった！！"
+            /* TRY_AGAIN */ "There's always tomorrow...",
+            /* OK        */ "Let's break for lunch now!",
+            /* SUPERB    */ "Look at all this stuff I punched away!"
         }
     },
     /* KARATE_MAN_2 */ {
         /* Entry Scene   */ &scene_karate_man_2,
-        /* Level Name    */ "カラテ家 ２",
-        /* Level Desc.   */ "とんでくるモノを\n"
-                            "Aボタンでパンチ！\n"
-                            "でも、 スピードが\n"
-                            "ヘンテコだヨ。",
+        /* Level Name    */ "Karate Man 2",
+        /* Level Desc.   */ "Something's up with\n"
+                            "the speed! Take care\n"
+                            "as we throw you some\n"
+                            "more stuff to punch.",
         /* Level Icon    */ 0,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_karate_man_2_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "テンポが なんだー！！",
-            /* OK        */ "ま、さておき。 ごはん 食べよう！",
-            /* SUPERB    */ "ざっと こんなモンだぜー！！"
+            /* TRY_AGAIN */ "What's wrong with the speed?!",
+            /* OK        */ "Well, that's that. Let's eat!",
+            /* SUPERB    */ "I think we went through everything!"
         }
     },
     /* CLAPPY_TRIO */ {
         /* Entry Scene   */ &scene_clappy_trio,
-        /* Level Name    */ "パチパチ三人衆",
-        /* Level Desc.   */ "順番に拍手をするヨ！\n"
-                            "あなたは３番目。\n"
-                            "前の2人をよく見てネ！",
+        /* Level Name    */ "The Clappy Trio",
+        /* Level Desc.   */ "Clap your hands in\n"
+                            "order! You're the third\n"
+                            "clapper. Keep an eye\n"
+							"on ther other two!",
         /* Level Icon    */ 4,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_clappy_trio_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "仲間が帰っちゃった！",
-            /* OK        */ "満足するのは まだ早いかもね。",
-            /* SUPERB    */ "この三人衆、 息ピッタリだ！！"
+            /* TRY_AGAIN */ "The trio just went solo!",
+            /* OK        */ "You need to make it to more of our practice sessions...",
+            /* SUPERB    */ "Trio-riffic!"
         }
     },
     /* SNAPPY_TRIO */ {
         /* Entry Scene   */ &scene_snappy_trio,
-        /* Level Name    */ "バリバリ三人衆",
-        /* Level Desc.   */ "ラフだった彼らが\n"
-                            "バリっとスーツを\n"
-                            "着てきたヨ！\n"
-                            "カッコイイ！！",
+        /* Level Name    */ "The Snappy Trio",
+        /* Level Desc.   */ "Look at the trio in their\n"
+                            "Western outfits!\n"
+                            "So cool! Dare we say\n"
+                            "they look... snappy?",
         /* Level Icon    */ 10,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_snappy_trio_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "キャー！ ゆるしてー！！",
-            /* OK        */ "あとチョットなんだけどね…",
-            /* SUPERB    */ "息ピッタリでーす！ イェーイ！"
+            /* TRY_AGAIN */ "I spent everything I had on this outfit!",
+            /* OK        */ "We were so close...",
+            /* SUPERB    */ "Perfect sync! It's gotta be the outfits, right?"
         }
     },
     /* POLYRHYTHM */ {
         /* Entry Scene   */ &scene_polyrhythm,
-        /* Level Name    */ "ポリリズム",
-        /* Level Desc.   */ "十\字ボタンとＡボタンの同時押しをマスターだ！けっこうカンタンだ。たぶん…",
+        /* Level Name    */ "Polyrhythm",
+        /* Level Desc.   */ "Manage the ⑯ and ⑭\n"
+							"paths at the same time\n"
+							"to keep the red things\n"
+							"rolling! Simple enough?",
         /* Level Icon    */ 3,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_polyrhythm_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "赤いモノ、量産は たいへんだなぁ…",
-            /* OK        */ "どんどん 赤いモノを 生産だ！",
-            /* SUPERB    */ "赤いモノを 生産しまくりだネ！！"
+            /* TRY_AGAIN */ "Mass producing these will be harder than I thought...",
+            /* OK        */ "Still getting the hang of making these red things!",
+            /* SUPERB    */ "We've produced more of these than we can stock!"
         }
     },
     /* POLYRHYTHM_2 */ {
         /* Entry Scene   */ &scene_polyrhythm_2,
-        /* Level Name    */ "ポリリズム ２",
-        /* Level Desc.   */ "これぞ左右独立！\n"
-                            "テンポよく こなして\n"
-                            "レッツ ポリリズム！\n"
-                            "イェーイ！",
+        /* Level Name    */ "Polyrhythm 2",
+        /* Level Desc.   */ "The left and right paths\n"
+                            "have unique patterns!\n"
+                            "Mind the tempo and\n"
+                            "play to the polyrhythm!",
         /* Level Icon    */ 51,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_polyrhythm_2_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "赤いモノ、もっと生産しなきゃ…",
-            /* OK        */ "もっともっと 赤いモノを 生産だ！",
-            /* SUPERB    */ "赤いモノを じゃんじゃん生産しちゃうヨ！！"
+            /* TRY_AGAIN */ "We need to produce a whole lot more red things...",
+            /* OK        */ "Producing more of these red things woudn't hurt!",
+            /* SUPERB    */ "Red thing production is at an all time high!"
         }
     },
     /* NIGHT_WALK */ {
         /* Entry Scene   */ &scene_night_walk,
-        /* Level Name    */ "ナイトウォーク",
-        /* Level Desc.   */ "音楽にあわせて\n"
-                            "ジャンプしてネ！\n"
-                            "星たちが あつまって\n"
-                            "あなたも夜空へ…",
+        /* Level Name    */ "Night Walk",
+        /* Level Desc.   */ "What's better than a\n"
+                            "stroll in the starlight?\n"
+                            "How about a series of\n"
+                            "jumps in the starlight?",
         /* Level Icon    */ 7,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_night_walk_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "つぎは もっと がんばってネ…",
-            /* OK        */ "夜空の おさんぽ、 たのしいな。",
-            /* SUPERB    */ "星たちが かんげいしてるヨ！"
+            /* TRY_AGAIN */ "Didn't see that hole in the dark!",
+            /* OK        */ "Nothing like a stroll at night.",
+            /* SUPERB    */ "You followed us up here!"
         }
     },
     /* NIGHT_WALK_2 */ {
         /* Entry Scene   */ &scene_night_walk_2,
-        /* Level Name    */ "ナイトウォーク ２",
-        /* Level Desc.   */ "音楽にあわせて\n"
-                            "ジャンプしてネ！\n"
-                            "ビリビリウオに\n"
-                            "気をつけよう。",
+        /* Level Name    */ "Night Walk 2",
+        /* Level Desc.   */ "Time to jump in the\n"
+                            "starlight again!\n"
+                            "Keep a look out\n"
+                            "for the electric fish.",
         /* Level Icon    */ 41,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_night_walk_2_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "うひゃー！ しっぱいしちゃった！！",
-            /* OK        */ "夜風が とっても きもちいいな。",
-            /* SUPERB    */ "星たちと おともだちだヨ！"
+            /* TRY_AGAIN */ "No! You fell!",
+            /* OK        */ "The night breeze feels so cool...",
+            /* SUPERB    */ "You made friends with the stars!"
         }
     },
     /* RHYTHM_TWEEZERS */ {
         /* Entry Scene   */ &scene_rhythm_tweezers,
-        /* Level Name    */ "リズム脱毛",
-        /* Level Desc.   */ "どんどん生えてくる\n"
-                            "うっとうしい「毛」！\n"
-                            "ぬいちゃえ、 \n"
-                            "ぬいちゃえ！",
+        /* Level Name    */ "Rhythm Tweezers",
+        /* Level Desc.   */ "The roots on my\n"
+                            "veggies are showing!\n"
+                            "Can you pluck them off?\n",
         /* Level Icon    */ 14,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_rhythm_tweezers_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "これじゃ 売りものに ならん！",
-            /* OK        */ "なんで うちのヤサイは 毛がはえるんだ？",
-            /* SUPERB    */ "スッキリそうかい！ 空気がうまい！！"
+            /* TRY_AGAIN */ "I can't sell these!",
+            /* OK        */ "Wh-why do my vegetables grow hair?",
+            /* SUPERB    */ "So fresh and clean! Even the air tastes delicious!"
         }
     },
     /* RHYTHM_TWEEZERS_2 */ {
         /* Entry Scene   */ &scene_rhythm_tweezers_2,
-        /* Level Name    */ "リズム脱毛 ２",
-        /* Level Desc.   */ "またしても生えてくる\n"
-                            "うっとうしい「毛」！\n"
-                            "ぬいちゃえ、 \n"
-                            "ぬいちゃえ！",
+        /* Level Name    */ "Rhythm Tweezers 2",
+        /* Level Desc.   */ "My veggie's roots\n"
+                            "are growing back!\n"
+                            "Please pluck\n"
+                            "them off again!",
         /* Level Icon    */ 25,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_rhythm_tweezers_2_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "なんで 毛が はえるんだー！？",
-            /* OK        */ "しかしなんで うちのヤサイだけに 毛が…？",
-            /* SUPERB    */ "スッキリそうかい！ 空気がうますぎ！！"
+            /* TRY_AGAIN */ "Why do you have to be so hairy!?",
+            /* OK        */ "Why do only our vegetables grow hair, anyway...?",
+            /* SUPERB    */ "How refreshing! Even the air is nice and crisp!"
         }
     },
     /* SICK_BEATS */ {
         /* Entry Scene   */ &scene_sick_beats,
-        /* Level Name    */ "バイキン はかせ",
-        /* Level Desc.   */ "助手からの知らせ\n"
-                            "「大変です！\n"
-                            "バイキン発生です！！\n"
-                            "先生、たすけて～」",
+        /* Level Name    */ "Sick Beats",
+        /* Level Desc.   */ "\0023" "Assistant's memo:\n"
+                            "\"We have an outbreak\n"
+                            "of an unknown virus!\n"
+                            "Help us, Dr. Cutlery!\"",
         /* Level Icon    */ 13,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_sick_beats_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "研究は失敗だ。",
-            /* OK        */ "失敗は成功のもとカモ！",
-            /* SUPERB    */ "ものすごいクスリができた！！"
+            /* TRY_AGAIN */ "All our research... amounted to nothing...",
+            /* OK        */ "Failure may be key to success!",
+            /* SUPERB    */ "We've finally found our cure!"
         }
     },
     /* BOUNCY_ROAD */ {
         /* Entry Scene   */ &scene_bouncy_road,
-        /* Level Name    */ "ホッピングロード",
-        /* Level Desc.   */ "とんでくる丸い玉。\n"
-                            "あれはイイやつです。\n"
-                            "落とさないでネ！",
+        /* Level Name    */ "Bouncy Road",
+        /* Level Desc.   */ "See that ball bouncing\n"
+                            "down the road?\n"
+                            "You wouldn't want to\n"
+							"let it fall...would you?",
         /* Level Icon    */ 12,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_bouncy_road_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "なかなか ムズカシー！",
-            /* OK        */ "けっこうな コンビネーションだったネ！",
-            /* SUPERB    */ "かんたん かんたん♪"
+            /* TRY_AGAIN */ "Ow! That was hard...",
+            /* OK        */ "Nice combo!",
+            /* SUPERB    */ "Where's the challenge?"
         }
     },
     /* BOUNCY_ROAD_2 */ {
         /* Entry Scene   */ &scene_bouncy_road_2,
-        /* Level Name    */ "ホッピングロード２",
-        /* Level Desc.   */ "とんでくる丸い玉。\n"
-                            "ほんとにイイやつ\n"
-                            "なんですヨ～。\n"
-                            "落とさないでネ！",
+        /* Level Name    */ "Bouncy Road 2",
+        /* Level Desc.   */ "See that ball bouncing\n"
+                            "down the road?\n"
+                            "It's a rather nice ball,\n"
+                            "so dont let it fall!",
         /* Level Icon    */ 50,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_bouncy_road_2_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "エーン！ しっぱい！！",
-            /* OK        */ "なかなか がんばっていたネ！",
-            /* SUPERB    */ "らくちん らくちん♪"
+            /* TRY_AGAIN */ "Ow! We failed!",
+            /* OK        */ "We're working our hardest!",
+            /* SUPERB    */ "Easy come, easy go."
         }
     },
     /* NINJA_BODYGUARD */ {
         /* Entry Scene   */ &scene_ninja_bodyguard,
-        /* Level Name    */ "忍者",
-        /* Level Desc.   */ "敵襲(てきしゅう)だ！\n"
-                            "十\字ボタンとAボタンで応戦(おうせん)だ！\n"
-                            "フジヤマ（ふじさん）！！",
+        /* Level Name    */ "Ninja Bodyguard",
+        /* Level Desc.   */ "An enemy is attacking\n"
+                            "your lord! Block the\n"
+                            "arrows with your sword\n"
+							"using ⑯ and ⑭!",
         /* Level Icon    */ 5,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_ninja_bodyguard_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "ゲッ！ トノが きぜつしてる！！",
-            /* OK        */ "トノ！ ごめんなさ～い。",
-            /* SUPERB    */ "アッパレって 言われちゃったゼ！！"
+            /* TRY_AGAIN */ "I cannot apologize enough, my lord!",
+            /* OK        */ "Sorry...",
+            /* SUPERB    */ "Not a scratch!"
         }
     },
     /* NINJA_REINCARNATE */ {
         /* Entry Scene   */ &scene_ninja_reincarnate,
-        /* Level Name    */ "忍者の子孫",
-        /* Level Desc.   */ "オレのじいちゃんの\n"
-                            "じいちゃんの\n"
-                            "じいちゃんは\n"
-                            "忍者なんだぜ。",
+        /* Level Name    */ "Ninja Reincarnate",
+        /* Level Desc.   */ "You know, my family's\n"
+                            "ancestors came from\n"
+                            "a long lineage of ninjas.\n"
+                            "Cool, right?",
         /* Level Icon    */ 38,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_ninja_reincarnate_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "まけるな！ おまえが頼りなのだー！！",
-            /* OK        */ "うむ、スジは良いな。がんばれ！",
-            /* SUPERB    */ "オヌシは強い。お幸せに…！"
+            /* TRY_AGAIN */ "Don't give up! We're counting on you!",
+            /* OK        */ "You are... strong. Don't give up yet.",
+            /* SUPERB    */ "You have proven your worth! You have our blessing..."
         }
     },
     /* SNEAKY_SPIRITS */ {
         /* Entry Scene   */ &scene_sneaky_spirits,
-        /* Level Name    */ "しろいおばけ",
-        /* Level Desc.   */ "白いヤツが こちらを\n"
-                            "バカにしている！\n"
-                            "ムキーッ！！\n"
-                            "こらしめちゃおう！",
+        /* Level Name    */ "Sneaky Spirits",
+        /* Level Desc.   */ "These spirits aren't\n"
+                            "exactly evil, but they\n"
+                            "ARE mean; they'll laugh\n"
+                            "at you if you miss.",
         /* Level Icon    */ 1,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_sneaky_spirits_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "逃げたヤツにイタズラされた！",
-            /* OK        */ "しとめた！",
-            /* SUPERB    */ "いっぱい しとめた！！"
+            /* TRY_AGAIN */ "Escaped ghosts are nothing but trouble.",
+            /* OK        */ "This one's not going anywhere!",
+            /* SUPERB    */ "No ghost escapes on your watch!"
         }
     },
     /* SNEAKY_SPIRITS_2 */ {
         /* Entry Scene   */ &scene_sneaky_spirits_2,
-        /* Level Name    */ "しろいおばけ ２",
-        /* Level Desc.   */ "白いヤツが こちらを\n"
-                            "ナメきっている！\n"
-                            "ムカムカーッ！！\n"
-                            "こらしめちゃおう！",
+        /* Level Name    */ "Sneaky Spirits 2",
+        /* Level Desc.   */ "Those spirits are\n"
+                            "acting up again!\n"
+                            "Let them have it,\n"
+                            "archery style!",
         /* Level Icon    */ 53,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_sneaky_spirits_2_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "うわー！ やられほうだいだ！",
-            /* OK        */ "おばけ「ナ、ナンダヨ～」",
-            /* SUPERB    */ "みんな、反省してネ！"
+            /* TRY_AGAIN */ "Gah! They slipped right past you!",
+            /* OK        */ "\"L-Let me go! Please!\"",
+            /* SUPERB    */ "You ghosts stay and think about what you've done!"
         }
     },
     /* SAMURAI_SLICE */ {
         /* Entry Scene   */ &scene_samurai_slice,
-        /* Level Name    */ "ゐあひ斬り",
-        /* Level Desc.   */ "そこのけ そこのけ\n"
-                            "奴らが通る。\n"
-                            "おぬしは サムライ、\n"
-                            "斬り捨て 御免！",
+        /* Level Name    */ "Samurai Slice",
+        /* Level Desc.   */ "Demons have put\n"
+                            "the town in a panic!\n"
+                            "Look out! Samurai--\n"
+                            "slice them all！",
         /* Level Icon    */ 18,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_samurai_slice_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "刃こぼれしちまった！",
-            /* OK        */ "さらに精進（しょうじん）すべし！",
-            /* SUPERB    */ "切れあじ、 サイコーだ！！"
+            /* TRY_AGAIN */ "I've broken my blade!",
+            /* OK        */ "I shall push myself harder!",
+            /* SUPERB    */ "Have you ever seen a sword this sharp?"
         }
     },
     /* SPACEBALL */ {
         /* Entry Scene   */ &scene_spaceball,
-        /* Level Name    */ "エアーバッター",
-        /* Level Desc.   */ "ズームをきにするな！\n"
-                            "心でボールを打て！\n"
-                            "視覚に頼るな！\n"
-                            "どんと行け～！",
+        /* Level Name    */ "Spaceball",
+        /* Level Desc.   */ "Ignore the camera's\n"
+                            "zooms! Make the ball\n"
+                            "zoom away! Don't blink!\n"
+                            "Don't wipe your tears!",
         /* Level Icon    */ 9,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_spaceball_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "これで ゆるしてください。",
-            /* OK        */ "さらに上を目指して練習だ！",
-            /* SUPERB    */ "こんなの もらっちゃったー！"
+            /* TRY_AGAIN */ "Can I have my ball back? I'll give you my last rice ball...",
+            /* OK        */ "Must... train... harder...",
+            /* SUPERB    */ "I won first \"space\"!"
         }
     },
     /* SPACEBALL_2 */ {
         /* Entry Scene   */ &scene_spaceball_2,
-        /* Level Name    */ "エアーバッター ２",
-        /* Level Desc.   */ "ズームをきにするな！\n"
-                            "心でボールを打て！\n"
-                            "視覚に頼るな！\n"
-                            "涙もふくな～！",
+        /* Level Name    */ "Spaceball 2",
+        /* Level Desc.   */ "Ignore the camera's\n"
+                            "zooms! Just believe\n"
+                            "in yourself and\n"
+                            "send the ball flying!",
         /* Level Icon    */ 52,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_spaceball_2_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "ナニスルノデスカー！",
-            /* OK        */ "こんなところで 終われない！",
-            /* SUPERB    */ "みんな、見て見てー！"
+            /* TRY_AGAIN */ "Next time, swing your bat somewhere else!",
+            /* OK        */ "I can't give up now!",
+            /* SUPERB    */ "Guys, guys, look at what I've won!"
         }
     },
     /* TAP_TRIAL */ {
         /* Entry Scene   */ &scene_tap_trial,
-        /* Level Name    */ "タップダンズ",
-        /* Level Desc.   */ "あなたは女の子。\n"
-                            "となりのサルたちに\n"
-                            "合わせてタップを\n"
-                            "きざむッス！",
+        /* Level Name    */ "Tap Trial",
+        /* Level Desc.   */ "You are the girl.\n"
+                            "They are the monkeys.\n"
+                            "Follow them to tap\n"
+                            "stardom!",
         /* Level Icon    */ 6,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_tap_trial_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "無念だわ。",
-            /* OK        */ "ちょっと、 ヘンなトコあったけどネ！",
-            /* SUPERB    */ "気分は もう、サイコー！！"
+            /* TRY_AGAIN */ "Gotta tap out.",
+            /* OK        */ "You were ALMOST as good as a monkey...",
+            /* SUPERB    */ "Tap loves you too, Giraffe!"
         }
     },
     /* TAP_TRIAL_2 */ {
         /* Entry Scene   */ &scene_tap_trial_2,
-        /* Level Name    */ "スーパータップ",
-        /* Level Desc.   */ "サルがパワーアップ！\n"
-                            "あなたは かれらに\n"
-                            "ついていけるか！？\n"
-                            "まけるな～！",
+        /* Level Name    */ "Turbo Tap Trial",
+        /* Level Desc.   */ "The monkeys are \n"
+                            "bringing their A game!\n"
+                            "Can you keep up? Don't\n"
+                            "let them out-tap you!",
         /* Level Icon    */ 11,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_tap_trial_2_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "ガーン！",
-            /* OK        */ "う～ん… すこし ちがうカンジ…",
-            /* SUPERB    */ "この気持ち、とまらなーい！"
+            /* TRY_AGAIN */ "Looks like we tapped TOO hard!",
+            /* OK        */ "Hey... Where'd our rhythm go?",
+            /* SUPERB    */ "Monkeys are the key to tappiness!"
         }
     },
     /* MARCHING_ORDERS */ {
         /* Entry Scene   */ &scene_marching_orders,
-        /* Level Name    */ "マーチャ",
-        /* Level Desc.   */ "行進をするのだ。\n"
-                            "かってな行動はチームをダメにする！\n"
-                            "がんばりたまえ。",
+        /* Level Name    */ "Marching Orders",
+        /* Level Desc.   */ "Ready, march! Following\n"
+                            "orders as a unit builds\n"
+                            "your camaraderie.\n"
+							"Also, rhythm.",
         /* Level Icon    */ 21,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_marching_orders_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "わぁっ！おいてけぼりされた！",
-            /* OK        */ "今日の任務は、おそうじでーす♪",
-            /* SUPERB    */ "宇宙人の救出、大成功！！"
+            /* TRY_AGAIN */ "Wait! You left without us!",
+            /* OK        */ "Today's mission: Cleaning. ",
+            /* SUPERB    */ "Mission success! We rescued the alien!"
         }
     },
     /* MARCHING_ORDERS_2 */ {
         /* Entry Scene   */ &scene_marching_orders_2,
-        /* Level Name    */ "マーチャ ２",
-        /* Level Desc.   */ "行進をするのだ。\n"
-                            "こんどのは ちょっと\n"
-                            "テクニカルだ！\n"
-                            "がんばりたまえ。",
+        /* Level Name    */ "Marching Orders 2",
+        /* Level Desc.   */ "Ready, march!\n"
+                            "This mission requires\n"
+                            "finesse and technique,\n"
+                            "so march your best!",
         /* Level Icon    */ 20,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_marching_orders_2_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "こ、これでは、イカン！う～む…",
-            /* OK        */ "ぐっ！ もっとカッコよくおどらなければ！",
-            /* SUPERB    */ "ごほうびに、こんなのもらってしまった！！"
+            /* TRY_AGAIN */ "This is unacceptable...",
+            /* OK        */ "I know we can perform better than that!",
+            /* SUPERB    */ "Now THIS is a reward!"
         }
     },
     /* WIZARDS_WALTZ */ {
         /* Entry Scene   */ &scene_wizards_waltz,
-        /* Level Name    */ "まほうつかい",
-        /* Level Desc.   */ "あなたはまほう使い。\n"
-                            "さみしがりやの\n"
-                            "おじょうちゃんに花を\n"
-                            "プレゼントしよう。",
+        /* Level Name    */ "Wizards Waltz",
+        /* Level Desc.   */ "There's a lonely girl\n"
+                            "over there. Put your\n"
+                            "flower power to good\n"
+                            "use to cheer her up!",
         /* Level Icon    */ 23,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_wizards_waltz_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "こんなのヤダ～、 こわいヨ～！",
-            /* OK        */ "もっと 花がさくと うれしいな～。",
-            /* SUPERB    */ "わーい、 わたし もう さみしくないヨ！"
+            /* TRY_AGAIN */ "... I'm scared!",
+            /* OK        */ "These will look SO lovely when they bloom!",
+            /* SUPERB    */ "Who could feel lonely with all these flowers?"
         }
     },
     /* BUNNY_HOP */ {
         /* Entry Scene   */ &scene_bunny_hop,
-        /* Level Name    */ "ウサギとび",
-        /* Level Desc.   */ "ジャンプが得意な\n"
-                            "白いウサギさん。\n"
-                            "ビートにのって\n"
-                            "海をわたろう！",
+        /* Level Name    */ "Bunny Hop",
+        /* Level Desc.   */ "This rabbit has an\n"
+                            "impossible goal: to jump\n"
+                            "to the moon! Can you\n"
+                            "make his dream reality?",
         /* Level Icon    */ 24,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_bunny_hop_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "月に帰りた～い！",
-            /* OK        */ "着地は失敗しちゃった…",
-            /* SUPERB    */ "まん点！！"
+            /* TRY_AGAIN */ "I'm not sure I thought this through...",
+            /* OK        */ "Didn't quite stick the landing...",
+            /* SUPERB    */ "A perfect landing! Who needs rockets?!"
         }
     },
     /* FIREWORKS */ {
         /* Entry Scene   */ &scene_fireworks,
-        /* Level Name    */ "花火",
-        /* Level Desc.   */ "夏といえばさ、\n"
-                            "やっぱ花火かな？\n"
-                            "色あざやかに\n"
-                            "打ち上げよう！",
+        /* Level Name    */ "Fireworks",
+        /* Level Desc.   */ "It's not summertime\n"
+                            "without fireworks!\n"
+                            "Light them up to fill the\n"
+                            "sky with pretty colors!",
         /* Level Icon    */ 26,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_fireworks_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "ゲホゲホッ… 失敗。",
-            /* OK        */ "なかなかのデキだぜ！",
-            /* SUPERB    */ "花火のことならオレにまかせろ！！"
+            /* TRY_AGAIN */ "Cough, cough... I think I blew it...",
+            /* OK        */ "That wasn't half bad!",
+            /* SUPERB    */ "I am THE go-to fireworks guy!"
         }
     },
     /* POWER_CALLIGRAPHY */ {
         /* Entry Scene   */ &scene_power_calligraphy,
-        /* Level Name    */ "リズムお習字",
-        /* Level Desc.   */ "筆を使って日本語を\n"
-                            "書きます。\n"
-                            "あなたがするのは\n"
-                            "オイシイとこだけ。",
+        /* Level Name    */ "Power Calligraphy",
+        /* Level Desc.   */ "Japanese calligraphy\n"
+                            "requires grace, finesse,\n"
+                            "and a shocking amount\n"
+                            "of upper body strength.",
         /* Level Icon    */ 28,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_power_power_calligraphy_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "ふ～…  アカンわ。",
-            /* OK        */ "お習字を もっと楽しもう！",
-            /* SUPERB    */ "お習字って ノリノリだネ！！"
+            /* TRY_AGAIN */ "Maybe I should stick with pencils...",
+            /* OK        */ "Precision! Grace! What's not to like?",
+            /* SUPERB    */ "Woo! Calligraphy party!"
         }
     },
     /* POWER_CALLIGRAPHY_2 */ {
         /* Entry Scene   */ &scene_power_calligraphy,
-        /* Level Name    */ "リズムお習字 ２",
-        /* Level Desc.   */ "筆を使って日本語を\n"
-                            "書きます。\n"
-                            "あなたがするのは\n"
-                            "オイシイとこだけ。",
+        /* Level Name    */ "",
+        /* Level Desc.   */ "\n"
+                            "\n"
+                            "\n"
+                            "",
         /* Level Icon    */ 28,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_power_calligraphy_2_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "ふ～…  アカンわ。",
-            /* OK        */ "お習字を もっと楽しもう！",
-            /* SUPERB    */ "お習字って ノリノリだネ！！"
+            /* TRY_AGAIN */ "",
+            /* OK        */ "",
+            /* SUPERB    */ ""
         }
     },
     /* TOSS_BOYS */ {
         /* Entry Scene   */ &scene_toss_boys,
-        /* Level Name    */ "トスボーイズ",
-        /* Level Desc.   */ "なかよし３人組、\n"
-                            "声をかけあいながら\n"
-                            "いつも楽しくトスの\n"
-                            "練習してます。",
+        /* Level Name    */ "Toss Team",
+        /* Level Desc.   */ "This trio of friends love\n"
+                            "practicing volleyball.\n"
+                            "Listen for their names\n"
+                            "as they pass their ball!",
         /* Level Icon    */ 30,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_toss_boys_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "ダメダメだァ～！",
-            /* OK        */ "まだまだもっと上手にできるはず！",
-            /* SUPERB    */ "目標は、 トス世界選手権 優勝だー！！"
+            /* TRY_AGAIN */ "We've been tossed out!",
+            /* OK        */ "Next time, we'll toss better than the best!",
+            /* SUPERB    */ "Toss World Championship, here we come!"
         }
     },
     /* TOSS_BOYS_2 */ {
         /* Entry Scene   */ &scene_toss_boys_2,
-        /* Level Name    */ "トスボーイズ ２",
-        /* Level Desc.   */ "なかよし３人組、\n"
-                            "声をかけあいながら\n"
-                            "いつも楽しくトスの\n"
-                            "練習してます。",
+        /* Level Name    */ "Toss Team 2",
+        /* Level Desc.   */ "This trio of friends love\n"
+                            "practicing volleyball.\n"
+                            "Today, they're training\n"
+                            "harder than ever!",
         /* Level Icon    */ 29,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_toss_boys_2_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "ボロボロだァ～！",
-            /* OK        */ "こんなところで 終われない！",
-            /* SUPERB    */ "最強メンバーのたんじょうだー！！"
+            /* TRY_AGAIN */ "Our spirits have been deflated...",
+            /* OK        */ "We still have a long way to go!",
+            /* SUPERB    */ "Three cheers for our star tosser!"
         }
     },
     /* RAT_RACE */ {
         /* Entry Scene   */ &scene_rat_race,
-        /* Level Name    */ "こっそり ラット",
-        /* Level Desc.   */ "あなたはネズミ。\n"
-                            "大スキなチーズを\n"
-                            "めざして\n"
-                            "ストップ＆ゴー！！",
+        /* Level Name    */ "Rat Race",
+        /* Level Desc.   */ "You are a rat. She is\n"
+                            "a cat. You love cheese;\n"
+                            "All the ingredients of a\n"
+                            "tense encounter.",
         /* Level Icon    */ 31,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_rat_race_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "チーズ 食べたいよ～…",
-            /* OK        */ "チーズ おいしいね。",
-            /* SUPERB    */ "みんな、 よかったネ！"
+            /* TRY_AGAIN */ "I guess we could try to eat the plate...",
+            /* OK        */ "You know, I really like cheese. Like, a LOT.",
+            /* SUPERB    */ "We'll have to start a family to eat all this!"
         }
     },
     /* TRAM_PAULINE */ {
         /* Entry Scene   */ &scene_tram_pauline,
-        /* Level Name    */ "トランとポリン",
-        /* Level Desc.   */ "こぎつねトラン、\n"
-                            "そしてポリンの\n"
-                            "アクロバティックショーがはじまるヨ！",
+        /* Level Name    */ "Tram & Pauline",
+        /* Level Desc.   */ "Gather round, one and\n"
+                            "all! Tram and Pauline's\n"
+                            "acrobatic fox show\n"
+							"is about to begin!",
         /* Level Icon    */ 32,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_tram_pauline_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "大しっぱいだ～！！",
-            /* OK        */ "ちゅうとハンパでした…",
-            /* SUPERB    */ "コンビネーション バッチシ！！"
+            /* TRY_AGAIN */ "We've transformed the show into a failure!",
+            /* OK        */ "At least we only messed up half the show...",
+            /* SUPERB    */ "We're the perfect duo!"
         }
     },
     /* SHOWTIME */ {
         /* Entry Scene   */ &scene_showtime,
-        /* Level Name    */ "ショータイム",
-        /* Level Desc.   */ "ペンギン君たちの\n"
-                            "ショータイムが\n"
-                            "はじまるヨ！\n"
-                            "わーいわーい！",
+        /* Level Name    */ "Showtime",
+        /* Level Desc.   */ "It's showtime!\n"
+                            "Our plucky penguins\n"
+                            "are ready to start\n"
+                            "their routine!",
         /* Level Icon    */ 36,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_showtime_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "お客さん、 おこってたネ…",
-            /* OK        */ "ボクたち こんなもんじゃないはず…",
-            /* SUPERB    */ "やった！！ お客さん 楽しんでくれたー！！"
+            /* TRY_AGAIN */ "We've betrayed our audience...",
+            /* OK        */ "I know we're capable of more than this...",
+            /* SUPERB    */ "They loved us out there!"
         }
     },
     /* SPACE_DANCE */ {
         /* Entry Scene   */ &scene_space_dance,
-        /* Level Name    */ "スペースダンス",
-        /* Level Desc.   */ "ここは無重力の宇宙。\n"
-                            "でも、 おどろうヨ！\n"
-                            "レッツスペースダンス！",
+        /* Level Name    */ "Space Dance",
+        /* Level Desc.   */ "You want a dancing\n"
+                            "challenge? Try dancing\n"
+                            "in zero gravity!\n"
+							"IN SPAAAAAAAAAACE!",
         /* Level Icon    */ 40,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_space_dance_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "ブ、 ブラックホールだー！！",
-            /* OK        */ "あの星のように かがやきたいな…",
-            /* SUPERB    */ "ボクたちは スペーススーパースター！！"
+            /* TRY_AGAIN */ "Our despair has lead us into a black hole!",
+            /* OK        */ "Let us aim for the stars!",
+            /* SUPERB    */ "We are space superstars!"
         }
     },
     /* COSMIC_DANCE */ {
         /* Entry Scene   */ &scene_cosmic_dance,
-        /* Level Name    */ "コスモダンス",
-        /* Level Desc.   */ "宇宙を代表\する\n"
-                            "ダンサーたち！\n"
-                            "キレた動きに\n"
-                            "くぎづけです！！",
+        /* Level Name    */ "Cosmic Dance",
+        /* Level Desc.   */ "These paragons of\n"
+                            "dancing have mastered\n"
+                            "their Zero-G moves\n"
+                            "and want to show off!",
         /* Level Icon    */ 16,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_cosmic_dance_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "お、おわりだー！！",
-            /* OK        */ "あなたたちって こんなものなの？",
-            /* SUPERB    */ "ボクたちは スーパーコスモスターさ！！"
+            /* TRY_AGAIN */ "We cannot go on like THIS!",
+            /* OK        */ "Is that the best you guys can do?",
+            /* SUPERB    */ "We are cosmic superstars!"
         }
     },
     /* RAP_MEN */ {
         /* Entry Scene   */ &scene_rap_men,
-        /* Level Name    */ "ラップメン",
-        /* Level Desc.   */ "クールなふたり組が\n"
-                            "やってきた！\n"
-                            "アツいラップで\n"
-                            "大コーフンだぜ！",
+        /* Level Name    */ "RAPMEN",
+        /* Level Desc.   */ "The coolest rapping\n"
+                            "duo has arrived! Their\n"
+                            "hot rapping skills are\n"
+                            "the talk of the town!",
         /* Level Icon    */ 42,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_rap_men_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "オレたち、 ダサいやん…",
-            /* OK        */ "チェッ。 なんか 調子わるいわぁ。",
-            /* SUPERB    */ "これからも よろしく たのんまっせー！！"
+            /* TRY_AGAIN */ "We need more practice...",
+            /* OK        */ "I think our tone was off.",
+            /* SUPERB    */ "We're looking forward to hearing you again!"
         }
     },
     /* RAP_WOMEN */ {
         /* Entry Scene   */ &scene_rap_women,
-        /* Level Name    */ "ラップウイメン",
-        /* Level Desc.   */ "あのラップメンに\n"
-                            "ライバルが登場だ！\n"
-                            "キュートなボイスに\n"
-                            "もう メロメロ！",
+        /* Level Name    */ "RAPWOMEN",
+        /* Level Desc.   */ "The RAPMEN have\n"
+                            "some new rivals!\n"
+                            "Don't be distracted\n"
+                            "by their cute voices!",
         /* Level Icon    */ 15,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_rap_women_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "こんなん ちゃうわぁ…",
-            /* OK        */ "なんか ちょっと イマイチかも…！",
-            /* SUPERB    */ "そうそう コレコレ、これやわー！！イェーイ！"
+            /* TRY_AGAIN */ "No... This isn't right.",
+            /* OK        */ "I know we can rap better than this!",
+            /* SUPERB    */ "Yes, yes, YES! We've got it!"
         }
     },
     /* QUIZ_SHOW */ {
         /* Entry Scene   */ &scene_quiz_show,
-        /* Level Name    */ "クイズ",
-        /* Level Desc.   */ "司会者の、\n"
-                            "「たたいた回数」を\n"
-                            "当てるカンタンな\n"
-                            "クイズです。",
+        /* Level Name    */ "Quiz Show",
+        /* Level Desc.   */ "Play a quiz where you\n"
+                            "copy the host's pattern.\n"
+                            "Seems simple, right?\n"
+                            "Simple, but not easy.",
         /* Level Icon    */ 43,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_quiz_show_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "ま、 こんなものさ。",
-            /* OK        */ "次回に向けて 勉強、勉強…Zzz",
-            /* SUPERB    */ "世界旅行 もらっちゃった！"
+            /* TRY_AGAIN */ "I can do better... I can do better...",
+            /* OK        */ "I have to study... for next time... Zzz...",
+            /* SUPERB    */ "I won the grand prize! A world tour!"
         }
     },
     /* BON_ODORI */ {
         /* Entry Scene   */ &scene_bon_odori,
-        /* Level Name    */ "ザ☆ぼんおどり",
-        /* Level Desc.   */ "ぼんおどりの\n"
-                            "うたに あわせて\n"
-                            "パンッと 手を\n"
-                            "たたきましょう。",
+        /* Level Name    */ "The☆Bon Odori",
+        /* Level Desc.   */ "Let's celebrate the\n"
+                            "Japanese Bon Festival!\n"
+                            "Clap along as they sing\n"
+                            "their traditional song!",
         /* Level Icon    */ 35,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_bon_odori_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "さむいわ…",
-            /* OK        */ "せんこう花火って、せつないね。",
-            /* SUPERB    */ "あー、楽しかった！"
+            /* TRY_AGAIN */ "I feel so cold...",
+            /* OK        */ "Oh... the quaint fizzle of a sparkler...",
+            /* SUPERB    */ "That was so much fun! I can't wait for next year!"
         }
     },
     /* BON_DANCE */ {
         /* Entry Scene   */ &scene_bon_dance,
-        /* Level Name    */ "ボンダンス",
-        /* Level Desc.   */ "これが いまどきの\n"
-                            "ぼんおどり！\n"
-                            "ノリノリだヨ！\n"
-                            "イェーイ！",
+        /* Level Name    */ "Bon Dance",
+        /* Level Desc.   */ "The Bon Festival has\n"
+                            "a new, modern look!\n"
+                            "Clap along to the\n"
+                            "groovy tune! Yay!",
         /* Level Icon    */ 17,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_bon_dance_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "もういや…",
-            /* OK        */ "うーん、雨がふってきちゃった。",
-            /* SUPERB    */ "ボンダンスって すごく楽しいよネー！"
+            /* TRY_AGAIN */ "It's over...",
+            /* OK        */ "When did it start raining?",
+            /* SUPERB    */ "Our new Bon Dance is a lot of fun!"
         }
     },
     /* REMIX_1 */ {
         /* Entry Scene   */ &scene_remix_1,
-        /* Level Name    */ "リミックス １",
-        /* Level Desc.   */ "キミの実力を\n"
-                            "試してみてみる？\n"
-                            "これまでの経験が\n"
-                            "モノを言うヨ～！",
+        /* Level Name    */ "Remix １",
+        /* Level Desc.   */ "Let's test your skills!\n"
+                            "Stage 1's games have\n"
+                            "all been remixed!\n"
+                            "Think you can beat it?",
         /* Level Icon    */ 22,
         /* Level Type    */ LEVEL_TYPE_REMIX,
         /* Epilogue GFX  */ epilogue_remix1_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "今回のデキ ： 猫のおやつクラス",
-            /* OK        */ "今回のデキ ： 朝食クラス",
-            /* SUPERB    */ "今回のデキ ： なんと、 ディナークラス！！"
+            /* TRY_AGAIN */ "Your performance was like... a cat's snack.",
+            /* OK        */ "Your preformance was like... an ordinary breakfast.",
+            /* SUPERB    */ "Your performance was like... why, a delicious dinner!"
         }
     },
     /* REMIX_2 */ {
         /* Entry Scene   */ &scene_remix_2,
-        /* Level Name    */ "リミックス ２",
-        /* Level Desc.   */ "キミの実力を\n"
-                            "試してみてみる？\n"
-                            "これまでの経験が\n"
-                            "モノを言うヨ～！",
+        /* Level Name    */ "Remix ２",
+        /* Level Desc.   */ "Let's test your skills!\n"
+                            "This one's got a lively\n"
+                            "atmosphere perfect\n"
+                            "for dance lessons!",
         /* Level Icon    */ 27,
         /* Level Type    */ LEVEL_TYPE_REMIX,
         /* Epilogue GFX  */ epilogue_remix2_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "今回の熱気 ： ひとりで練習レベル",
-            /* OK        */ "今回の熱気 ： 楽しくキャッチボールレベル",
-            /* SUPERB    */ "今回の熱気 ： すごい大会レベル！！"
+            /* TRY_AGAIN */ "That was as lively as... playing ball by yourself.",
+            /* OK        */ "That was as lively as... a pleasant game of catch.",
+            /* SUPERB    */ "That was as lively as... a huge baseball tournament!"
         }
     },
     /* REMIX_3 */ {
         /* Entry Scene   */ &scene_remix_3,
-        /* Level Name    */ "リミックス ３",
-        /* Level Desc.   */ "キミの実力を\n"
-                            "試してみてみる？\n"
-                            "これまでの経験が\n"
-                            "モノを言うヨ～！",
+        /* Level Name    */ "Remix ３",
+        /* Level Desc.   */ "Let's test your skills!\n"
+                            "This one's got an\n"
+                            "adorable love song with\n"
+                            "adorable love lyrics!",
         /* Level Icon    */ 33,
         /* Level Type    */ LEVEL_TYPE_REMIX,
         /* Epilogue GFX  */ epilogue_remix3_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "今回のラブ ： ブロークンハートかも…",
-            /* OK        */ "今回のラブ ： とってもフレンドリーな感じ♪",
-            /* SUPERB    */ "今回のラブ ： ラブラブでーす！！"
+            /* TRY_AGAIN */ "Their love ended in... heartbreak...",
+            /* OK        */ "Their love ended in... a good friendship.",
+            /* SUPERB    */ "Their love ended in... a tender marriage!"
         }
     },
     /* REMIX_4 */ {
         /* Entry Scene   */ &scene_remix_4,
-        /* Level Name    */ "リミックス ４",
-        /* Level Desc.   */ "キミの実力を\n"
-                            "試してみてみる？\n"
-                            "これまでの経験が\n"
-                            "モノを言うヨ～！",
+        /* Level Name    */ "Remix ４",
+        /* Level Desc.   */ "Let's test your skills!\n"
+                            "This one's got a casual,\n"
+                            "easygoing vibe, like a\n"
+                            "nice, pleasant stroll...",
         /* Level Icon    */ 34,
         /* Level Type    */ LEVEL_TYPE_REMIX,
         /* Epilogue GFX  */ epilogue_remix4_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "今回の天気 ： 雨",
-            /* OK        */ "今回の天気 ： くもり",
-            /* SUPERB    */ "今回の天気 ： ハッピーな晴れ！！"
+            /* TRY_AGAIN */ "Today's forecast... raining buckets.",
+            /* OK        */ "Today's forecast... very cloudy.",
+            /* SUPERB    */ "Today's forecast... clear skies all day!"
         }
     },
     /* REMIX_5 */ {
         /* Entry Scene   */ &scene_remix_5,
-        /* Level Name    */ "リミックス ５",
-        /* Level Desc.   */ "キミの実力を\n"
-                            "試してみてみる？\n"
-                            "これまでの経験が\n"
-                            "モノを言うヨ～！",
+        /* Level Name    */ "Remix ５",
+        /* Level Desc.   */ "Let's test your skills!\n"
+                            "This one's got some\n"
+                            "melancholic lyrics.\n"
+                            "Try to keep your cool!",
         /* Level Icon    */ 39,
         /* Level Type    */ LEVEL_TYPE_REMIX,
         /* Epilogue GFX  */ epilogue_remix5_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "今回のふたり ： ジャマされてしまった！",
-            /* OK        */ "今回のふたり ： このさき、チョット不安かも…",
-            /* SUPERB    */ "今回のふたり ： 幸せになりました♪"
+            /* TRY_AGAIN */ "This couple is... in trouble!",
+            /* OK        */ "This couple is... a little nervous...",
+            /* SUPERB    */ "This couple is... living their happy-ever-after!"
         }
     },
     /* REMIX_6 */ {
         /* Entry Scene   */ &scene_remix_6,
-        /* Level Name    */ "リミックス ６",
-        /* Level Desc.   */ "キミの実力を\n"
-                            "試してみてみる？\n"
-                            "これまでの経験が\n"
-                            "モノを言うヨ～！",
+        /* Level Name    */ "Remix ６",
+        /* Level Desc.   */ "Let's test your skills!\n"
+                            "Every game you've\n"
+                            "played is here! Show\n"
+                            "us what you've learned!",
         /* Level Icon    */ 2,
         /* Level Type    */ LEVEL_TYPE_REMIX,
         /* Epilogue GFX  */ epilogue_remix6_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "今回の内容 ： ややさみしいカンジ",
-            /* OK        */ "今回の内容 ： 意外なカンジ",
-            /* SUPERB    */ "今回の内容 ： アンビリーバボーなカンジ！！"
+            /* TRY_AGAIN */ "Your fish tank is... pretty sparse.",
+            /* OK        */ "Your fish tank is... unique for sure!",
+            /* SUPERB    */ "Your fish tank is... unbelievable!"
         }
     },
     /* REMIX_7 */ {
         /* Entry Scene   */ &scene_remix_7,
-        /* Level Name    */ "リミックス ７",
-        /* Level Desc.   */ "キミの実力を\n"
-                            "試してみてみる？\n"
-                            "これまでの経験が\n"
-                            "モノを言うヨ～！",
+        /* Level Name    */ "Remix ７",
+        /* Level Desc.   */ "Let's test your skills!\n"
+                            "A lot of the Remixes\n"
+                            "make a comeback here!\n"
+                            "It's a Remix Remix!",
         /* Level Icon    */ 19,
         /* Level Type    */ LEVEL_TYPE_REMIX,
         /* Epilogue GFX  */ epilogue_remix7_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "今回のきょうりゅう ： いじわる",
-            /* OK        */ "今回のきょうりゅう ： ほのぼの",
-            /* SUPERB    */ "今回のきょうりゅう ： 楽しすぎ～！！"
+            /* TRY_AGAIN */ "Your Jurassic visit was... terrifying!",
+            /* OK        */ "Your Jurassic visit was... rather tame.",
+            /* SUPERB    */ "Your Jurassic visit was... too much fun!"
         }
     },
     /* REMIX_8 */ {
         /* Entry Scene   */ &scene_remix_8,
-        /* Level Name    */ "リミックス ８",
-        /* Level Desc.   */ "キミの実力を\n"
-                            "試してみてみる？\n"
-                            "これまでの経験が\n"
-                            "モノを言うヨ～！",
+        /* Level Name    */ "Remix ８",
+        /* Level Desc.   */ "Let's test your skills!\n"
+                            "This final remix is a？n"
+                            "real challenge! Show\n"
+                            "us what you've learned!",
         /* Level Icon    */ 37,
         /* Level Type    */ LEVEL_TYPE_REMIX,
         /* Epilogue GFX  */ epilogue_remix8_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "今回のドライブ ： んもぅ…",
-            /* OK        */ "今回のドライブ ： まだまだかかるなぁ",
-            /* SUPERB    */ "今回のドライブ ： とっても爽快！！"
+            /* TRY_AGAIN */ "Your road trip was... oh boy...",
+            /* OK        */ "Your road trip was... a little long.",
+            /* SUPERB    */ "Your road trip was... absolutely spectacular!"
         }
     },
     /* CAFE */ {
         /* Entry Scene   */ &scene_cafe,
-        /* Level Name    */ "喫茶カウンセル",
-        /* Level Desc.   */ "最近の調子 どう？\n"
-                            "なにか気になれば\n"
-                            "ここで相談を\n"
-                            "してみよう。",
+        /* Level Name    */ "Caf" "\x87\x61"" Counselling",
+        /* Level Desc.   */ "How are you feeling?\n"
+                            "If something's on your\n"
+                            "mind, feel free to\n"
+                            "come and talk.",
         /* Level Icon    */ 45,
         /* Level Type    */ LEVEL_TYPE_BONUS,
         /* Epilogue GFX  */ epilogue_cafe_gfx_tables,
@@ -793,11 +801,11 @@ struct LevelData level_data_table[] = {
     },
     /* RHYTHM_TOYS */ {
         /* Entry Scene   */ &scene_toys_menu,
-        /* Level Name    */ "おもちゃ",
-        /* Level Desc.   */ "メダルを あつめて\n"
-                            "音のでるおもちゃで\n"
-                            "あそんでみてネ！\n"
-                            "いくつかあるヨ。",
+        /* Level Name    */ "Rhythm Toys",
+        /* Level Desc.   */ "Collect medals to\n"
+                            "play with some\n"
+                            "Rhythm Toys!\n"
+                            "Check them out!",
         /* Level Icon    */ 46,
         /* Level Type    */ LEVEL_TYPE_BONUS,
         /* Epilogue GFX  */ epilogue_toys_menu_gfx_tables,
@@ -809,11 +817,11 @@ struct LevelData level_data_table[] = {
     },
     /* ENDLESS_GAMES */ {
         /* Entry Scene   */ &scene_endless_menu,
-        /* Level Name    */ "ゲーム",
-        /* Level Desc.   */ "メダルを あつめて\n"
-                            "とくべつなゲームに\n"
-                            "挑戦してみてネ！\n"
-                            "いくつかあるヨ。",
+        /* Level Name    */ "Endless Games",
+        /* Level Desc.   */ "Collect medals to\n"
+                            "unlock special\n"
+                            "Endless Games!\n"
+                            "Check them out!",
         /* Level Icon    */ 47,
         /* Level Type    */ LEVEL_TYPE_BONUS,
         /* Epilogue GFX  */ epilogue_endless_menu_gfx_tables,
@@ -825,11 +833,11 @@ struct LevelData level_data_table[] = {
     },
     /* DRUM_LESSONS */ {
         /* Entry Scene   */ &scene_lessons_menu,
-        /* Level Name    */ "ドラムレッスン",
-        /* Level Desc.   */ "メダルを あつめて\n"
-                            "ドラムのレッスンを\n"
-                            "うけてみよう。\n"
-                            "上手になってネ！",
+        /* Level Name    */ "Drum Lessons",
+        /* Level Desc.   */ "Collect medals to take\n"
+                            "some Drum Lessons.\n"
+                            "You could become\n"
+                            "a master drummer!",
         /* Level Icon    */ 48,
         /* Level Type    */ LEVEL_TYPE_BONUS,
         /* Epilogue GFX  */ epilogue_lessons_menu_gfx_tables,
@@ -841,11 +849,11 @@ struct LevelData level_data_table[] = {
     },
     /* STAFF_CREDIT */ {
         /* Entry Scene   */ &scene_staff_credit,
-        /* Level Name    */ "スタッフ",
-        /* Level Desc.   */ "もし よかったら\n"
-                            "見てみてネ。\n"
-                            "このゲームの\n"
-                            "スタッフたちです。",
+        /* Level Name    */ "Staff Credits",
+        /* Level Desc.   */ "Here's the staff who\n"
+                            "helped develop\n"
+                            "this game. Feel free\n"
+                            "to take a look!",
         /* Level Icon    */ 49,
         /* Level Type    */ LEVEL_TYPE_BONUS,
         /* Epilogue GFX  */ epilogue_staff_credit_gfx_tables,
@@ -857,18 +865,18 @@ struct LevelData level_data_table[] = {
     },
     /* LIVE_MENU */ {
         /* Entry Scene   */ &scene_drum_live,
-        /* Level Name    */ "ライブ",
-        /* Level Desc.   */ "ライブに出演だ！\n"
-                            "キミのリズム感は\n"
-                            "よいと思うから\n"
-                            "どうぞお気楽に～",
+        /* Level Name    */ "Concert",
+        /* Level Desc.   */ "We're hosting a\n"
+                            "concert! We think\n"
+                            "you've got good rhythm,\n"
+                            "so give it a try!",
         /* Level Icon    */ 44,
         /* Level Type    */ LEVEL_TYPE_BONUS,
         /* Epilogue GFX  */ epilogue_drum_live_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "おばちゃん「またつぎ、がんばりなよ！」",
-            /* OK        */ "オーナー「キミ、なかなか スジあるヨ」",
-            /* SUPERB    */ "プロデューサー「うちで、ガンバってみない？」"
+            /* TRY_AGAIN */ "The cleaner says... \"I know you can do it, keep it up!\"",
+            /* OK        */ "The owner says... \"You've got great skills, you know!\"",
+            /* SUPERB    */ "The producer says... \"You should play at our place, too!\""
         }
     }
 };

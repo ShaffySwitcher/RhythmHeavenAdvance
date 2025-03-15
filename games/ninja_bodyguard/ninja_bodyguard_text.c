@@ -5,32 +5,32 @@
 /* Game Text - Ninja Bodyguard */
 
 
-const char D_0805b8e0[] = "ちゃんと　守ってよネ…";
+const char D_0805b8e0[] = "I hired you to protect me.";
 
 const char D_0805b8f8[] = "";
 
-const char D_0805b8fc[] = "すばやい　剣さばきが　みじゅくである。";
+const char D_0805b8fc[] = "Your swordplay skills were lacking.";
 
-const char D_0805b924[] = "すばやい　剣さばきであった！";
+const char D_0805b924[] = "You're quite nimble with a sword!";
 
-const char D_0805b944[] = "「四連矢」　に　コテンパンである。";
+const char D_0805b944[] = "Their four-arrow barrage overwhelmed you.";
 
-const char D_0805b968[] = "「四連矢返し」　が　おみごと！";
+const char D_0805b968[] = "You blocked their four-arrow barrage!";
 
-const char D_0805b988[] = "トノから　ひとこと";
+const char D_0805b988[] = "My Lord Solemnly Intones";
 
-const char D_0805b99c[] = "ちゃんと　守ってよネ…";
+const char D_0805b99c[] = "I thought you were trying to protect me...";
 
 const char D_0805b9b4[] = "";
 
-const char D_0805b9b8[] = "すばやい　棒さばきが　みじゅくね。";
+const char D_0805b9b8[] = "Your stick swipes weren't quick enough.";
 
-const char D_0805b9dc[] = "すばやい　棒さばきだったわ！";
+const char D_0805b9dc[] = "You're pretty quick with a stick!";
 
-const char D_0805b9fc[] = "「五連石」　に　コテンパンね。";
+const char D_0805b9fc[] = "Their five-rock barrage overwhelmed you.";
 
-const char D_0805ba1c[] = "「五連石返し」　が　おみごとよ！";
+const char D_0805ba1c[] = "You blocked their five-rock barrage!";
 
-const char D_0805ba40[] = "すごい！　いっしゅんで２コの石を！！";
+const char D_0805ba40[] = "You deflected two rocks in one go! Brilliant!";
 
-const char D_0805ba68[] = "カノジョの　ひとこと";
+const char D_0805ba68[] = "My Girlfriend Calmly Comments...";

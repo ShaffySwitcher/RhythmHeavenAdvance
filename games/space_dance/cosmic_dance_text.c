@@ -5,18 +5,18 @@
 /* Game Text - Cosmic Dance */
 
 
-const char D_0806824c[] = "なんだか　乱れてたなぁ。";
+const char D_0806824c[] = "Your routine was disorganized.";
 
-const char D_08068268[] = "息が　あってたネ！";
+const char D_08068268[] = "What lively dance moves!";
 
-const char D_0806827c[] = "ちょっと　あわててたなぁ。";
+const char D_0806827c[] = "You seemed panicked throughout.";
 
-const char D_08068298[] = "よい判断をしてるネ！";
+const char D_08068298[] = "Your timing was terrific!";
 
-const char D_080682b0[] = "サビの手前が　ガタガタだったなぁ。";
+const char D_080682b0[] = "You were trembling before the chorus began.";
 
-const char D_080682d4[] = "サビの手前が　キマってたネ！";
+const char D_080682d4[] = "You pre-chorus performance was perfect!";
 
-const char D_080682f4[] = "スペースおねえさんの意見";
+const char D_080682f4[] = "Cosmic Girl Says";
 
-const char D_08068310[] = "レッツゴー！";
+const char D_08068310[] = "Ｌｅｔ’ｓ　ｂｅｇｉｎ！";

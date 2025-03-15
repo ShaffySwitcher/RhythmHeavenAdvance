@@ -32,9 +32,9 @@ const char *results_skill_text_accuracy[] = {
     // Adaptability
     // Reflexes
 const char *results_skill_text_barely_trk2[] = {
-    "テクニック　レベル",
-    "てきおう　のうりょく",
-    "あたまの　かいてん　スピード",
+    "Ｔｅｃｈｎｉｑｕｅ　Ｌｅｖｅｌ",
+    "Ａｄａｐｔａｂｉｌｉｔｙ",
+    "Reflexes",
     NULL
 };
 

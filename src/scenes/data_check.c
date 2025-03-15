@@ -53,7 +53,7 @@ void data_check_scene_start(void *sVar, s32 dArg) {
         gDataCheck->textLineSprites[i] = -1;
     }
 
-    data_check_print_line(0, 1, "ƒQ[ƒ€ƒvƒŒƒC—š—ğ"); // Gameplay Logs
+    data_check_print_line(0, 1, "Gameplay Logs"); // Gameplay Logs
     gDataCheck->currentPage = 0;
     gDataCheck->totalPages = game_select_get_total_levels();
     data_check_print_page(gDataCheck->currentPage);
@@ -164,11 +164,11 @@ void data_check_print_page(s32 id) {
     }
 
     memcpy(string, "  ", 3);
-    strcat(string, "•½‹Ï“_ "); // Average Points:
+    strcat(string, "Average Points "); // Average Points:
     strcat(string, number);
 
     if (avgPoints != DEFAULT_LEVEL_SCORE) {
-        strcat(string, " (1000“_–“_)"); // (Out of 1000 Points)
+        strcat(string, " Out of 1000 Points"); // (Out of 1000 Points)
     }
 
     data_check_print_line(3, 0, string);
@@ -178,32 +178,32 @@ void data_check_print_page(s32 id) {
     firstSuperb = saveData->levelFirstSuperb[id];
 
     memcpy(string, "  ", 3);
-    strcat(string, "—V‚ñ‚¾‰ñ” "); // Number of Times Played:
+    strcat(string, "Number of Times Played "); // Number of Times Played:
     strintf(number, totalPlays);
     strcat(string, number);
-    strcat(string, "‰ñ"); // [x] Times
+    strcat(string, "Times"); // [x] Times
     data_check_print_line(4, 0, string);
 
     if (totalPlays > 0) {
         memcpy(string, "  ", 3);
-        strcat(string, "  ( ‰‡Ši: "); // ( First OK:
+        strcat(string, "  ( First OK: "); // ( First OK:
 
         if (firstOK == 0) {
-            strcat(string, "‚Ü‚¾"); // Not Yet
+            strcat(string, "Not Yet"); // Not Yet
         } else {
             strintf(number, firstOK);
             strcat(string, number);
-            strcat(string, "‰ñ–Ú"); // [x]th Time
+            strcat(string, "th Time"); // [x]th Time
         }
 
-        strcat(string, "  ‰‘å‡Ši: "); // First Superb:
+        strcat(string, "  First Superb: "); // First Superb:
 
         if (firstSuperb == 0) {
-            strcat(string, "‚Ü‚¾ )"); // Not Yet )
+            strcat(string, "Not Yet )"); // Not Yet )
         } else {
             strintf(number, firstSuperb);
             strcat(string, number);
-            strcat(string, "‰ñ–Ú )"); // [x]th Time )
+            strcat(string, "th Time )"); // [x]th Time )
         }
 
         data_check_print_line(5, 0, string);

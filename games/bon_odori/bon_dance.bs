@@ -754,7 +754,7 @@ script script_bon_dance_main
     beat_anim
     rest 24
     rest 24
-    bon_odori_lyrics_start_highlight 3, 106
+    bon_odori_lyrics_start_highlight 3, 130
     beat_anim
     rest 24
     rest 24

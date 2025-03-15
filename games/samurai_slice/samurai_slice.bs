@@ -210,7 +210,9 @@ script samurai_slice_sub_08a04934
     beat_anim
     rest 24
     beat_anim
-    rest 24
+    rest 23
+    samurai_slice_event05 D_0805bcc4
+    rest 1
     samurai_slice_event05 D_0805bd88
     beat_anim
     rest 24
@@ -268,7 +270,9 @@ script samurai_slice_sub_08a04b5c
     beat_anim
     rest 24
     beat_anim
-    rest 24
+    rest 23
+    samurai_slice_event05 D_0805bcc4
+    rest 1
     samurai_slice_event05 D_0805bda4
     beat_anim
     rest 24

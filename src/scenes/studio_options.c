@@ -8,19 +8,19 @@
 
 // [D_089d841c] Options
 const char *studio_options_no_replay[] = {
-    /* LISTEN */ "リスニング",
-    /* DRUM   */ "ドラミング",
-    /* SORT   */ "ならびかえ",
-    /* MARK   */ "チェック"
+    /* LISTEN */ "Play",
+    /* DRUM   */ "Drum",
+    /* SORT   */ "Sort",
+    /* MARK   */ "Bookmark"
 };
 
 
 // [D_089d842c] Options (Replay)
 const char *studio_options_is_replay[] = {
-    /* LISTEN */ "リスニング",
-    /* DELETE */ "データ消去",
-    /* SORT   */ "ならびかえ",
-    /* MARK   */ "チェック"
+    /* LISTEN */ "Play",
+    /* DELETE */ "Erase Data",
+    /* SORT   */ "Sort",
+    /* MARK   */ "Bookmark"
 };
 
 
@@ -182,8 +182,8 @@ void studio_option_list_update(void) {
                             STUDIO_WARNING_OPT_DISMISS,
                             // Not even one song has
                             // a check mark on it.
-                            "チェックのついている曲が、\n"
-                            "ひとつもありません。",
+                            "There are currently\n"
+                            "no songs selected.",
                             studio_option_list_warning_no_checks_result, 0,
                             &s_menu_kettei2_seqData);
                     play_sound_in_player(MUSIC_PLAYER_2, &s_menu_kettei2_seqData);
@@ -195,7 +195,7 @@ void studio_option_list_update(void) {
                                 STUDIO_WARNING_OPT_Y,
                                 // In listening mode, only the songs
                                 // with a check mark will be played.
-                                "リスニングではチェックのある曲だけ再生します。　よろしいですか～？",
+                                "Only selected songs will be played. Is that OK?",
                                 studio_option_list_warning_unchecked_result, 0,
                                 &s_menu_se24_seqData);
                         play_sound_in_player(MUSIC_PLAYER_2, &s_menu_kettei2_seqData);
@@ -219,8 +219,8 @@ void studio_option_list_update(void) {
                             STUDIO_WARNING_OPT_N,
                             // You'll erase this performance
                             // data! Is that really OK?
-                            "この演奏データを削除するヨ！\n"
-                            "ホントにOK？",
+                            "Delete this drum performance!\n"
+                            "Are you sure?",
                             studio_option_list_warning_deletion_result, 0,
                             &s_menu_se13_seqData);
                 }

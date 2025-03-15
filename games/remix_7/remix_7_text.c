@@ -5,9 +5,9 @@
 /* Game Text - Remix 7 */
 
 
-const char D_0806a16c[] = "まだまだです。";
+const char D_0806a16c[] = "Try a little harder.";
 
-const char D_0806a17c[] = "かなり、　サイコーでーす！";
+const char D_0806a17c[] = "That was really great!";
 
 const char D_0806a198[] = "はんだん　りょくが　かけてます。";
 

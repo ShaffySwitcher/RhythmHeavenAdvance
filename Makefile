@@ -47,7 +47,7 @@ define print
 endef
 
 # Whether to build a byte-for-byte matching ROM
-NONMATCHING ?= 0
+NONMATCHING ?= 1
 
 # Revision to build
 REV ?= 0
