@@ -57,7 +57,7 @@ text D_08061a68
     .ascii "\n"
     .ascii "I swapped a bass beat out\n"
     .ascii "for a snare beat.\n"
-    .asciz "Hear the difference?"
+    .asciz "Hear the differences"
 endtext
 
 
