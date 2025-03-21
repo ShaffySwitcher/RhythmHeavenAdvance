@@ -113,12 +113,12 @@ void perfect_scene_start(void *sVar, s32 dArg) {
                 break;
 
             default:
-                strcat(gPerfect->string, "'s song");
+                strcat(gPerfect->string, "s song");
                 break;
         }
     }
 
-    strcat(gPerfect->string, "\0020" "\0010" "You've earned a gift!\n"); // You've earned a gift!
+    strcat(gPerfect->string, "\0020" "\0010" "\nYou've earned a gift! "); // You've earned a gift!
     strcat(gPerfect->string, perfect_gift_directive_text[giftType]);
 
     if (campaignsLeft > 0) {
