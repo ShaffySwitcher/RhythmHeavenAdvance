@@ -17,7 +17,7 @@ const char D_0805caa8[] = "もっと　ウデを　みがこう。";
 
 const char D_0805cac4[] = "とても　テクニカルだ！";
 
-const char D_0805cadc[] = "なぞのリズム組織から通達";
+const char D_0805cadc[] = "Rhythm League notes:";
 
 
 /* Game Text - Remix 1 */
@@ -35,4 +35,4 @@ const char D_0805cb6c[] = "もっと　ウデを　みがこう。";
 
 const char D_0805cb88[] = "とても　テクニカルだ！";
 
-const char D_0805cba0[] = "なぞのリズム組織から通達";
+const char D_0805cba0[] = "Rhythm League notes:";
