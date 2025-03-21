@@ -10,19 +10,19 @@
 // [D_089dda68] Graphics Table
 struct GraphicsTable warning_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08d1ad4c,
+        /* Src.  */ &D1AD4C_healthsafety_tile_bin,
         /* Dest. */ BG_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 12992
     },
     /* BG Map */ {
-        /* Src.  */ &D_08d1b00c,
+        /* Src.  */ &D1AD4C_healthsafety_tile_map_bin,
         /* Dest. */ BG_MAP_BASE(0xE800),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 3172
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08d1ad4c,
+        /* Src.  */ &D1AD4C_healthsafety_tile_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 12992
     },
     /* BG Palette */ {
         /* Src.  */ warning_pal,
