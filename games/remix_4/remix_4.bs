@@ -162,11 +162,11 @@ text text_remix_4_kimi_tte_saikou
 endtext
 
 text text_remix_4_oyatsu_ga_nai_yo
-    .asciz ".a:1‚g‚…‚™I@‚v‚ˆ‚@.a:0‚`‚s‚d@‚s‚g‚d‚lIH.8:1"
+    .asciz ".a:1‚g‚…‚™I@‚v‚ˆ‚@.a:0‚`‚s‚d@‚h‚sIH.8:1"
 endtext
 
 text text_remix_4_ore_shiranai_yo
-    .asciz ".a:1‚h@‚‹‚‚‚—@‚“‚‚‚…‚‚‚…@.a:0‚`‚s‚d@‚s‚g‚d‚lI.8:1"
+    .asciz ".a:1‚h@‚‹‚‚‚—@‚“‚‚‚…‚‚‚…@.a:0‚`‚s‚d@‚h‚sIH.8:1"
 endtext
 
 
