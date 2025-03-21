@@ -75,33 +75,39 @@ struct Animation anim_title_stars_appear[] = {
     /* End */ END_ANIMATION
 };
 
-// [D_0890d4a0] Logo - Éä
+// [D_0890d4a0] Logo - ÔøΩÔøΩ
 struct Animation anim_title_logo_ri[] = {
     /* 000 */ { title_cel015, 4 },
     /* End */ END_ANIMATION
 };
 
-// [D_0890d4b0] Logo - ÉY
+// [D_0890d4b0] Logo - ÔøΩY
 struct Animation anim_title_logo_zu[] = {
     /* 000 */ { title_cel016, 4 },
     /* End */ END_ANIMATION
 };
 
-// [D_0890d4c0] Logo - ÉÄ
+// [D_0890d4c0] Logo - ÔøΩÔøΩ
 struct Animation anim_title_logo_mu[] = {
     /* 000 */ { title_cel017, 4 },
     /* End */ END_ANIMATION
 };
 
-// [D_0890d4d0] Logo - ìV
+// [D_0890d4d0] Logo - ÔøΩV
 struct Animation anim_title_logo_ten[] = {
     /* 000 */ { title_cel018, 4 },
     /* End */ END_ANIMATION
 };
 
-// [D_0890d4e0] Logo - çë
+// [D_0890d4e0] Logo - ÔøΩÔøΩ
 struct Animation anim_title_logo_goku[] = {
     /* 000 */ { title_cel019, 4 },
+    /* End */ END_ANIMATION
+};
+
+// [D_0890d4e0] Logo - ÔøΩÔøΩ
+struct Animation anim_title_logo_av[] = {
+    /* 000 */ { title_cel100, 4 },
     /* End */ END_ANIMATION
 };
 
@@ -114,6 +120,24 @@ struct Animation anim_title_logo_bubble_inner[] = {
 // [D_0890d500] Logo - Bubble (White Outline)
 struct Animation anim_title_logo_bubble_outer[] = {
     /* 000 */ { title_cel014, 4 },
+    /* End */ END_ANIMATION
+};
+
+// [D_0890d4e0] Logo - ÔøΩÔøΩ
+struct Animation anim_empty[] = {
+    /* 000 */ { title_cel101, 4 },
+    /* End */ END_ANIMATION
+};
+
+// [D_0890d4e0] Logo - ÔøΩÔøΩ
+struct Animation anim_empty_2[] = {
+    /* 000 */ { title_cel103, 4 },
+    /* End */ END_ANIMATION
+};
+
+// [D_0890d4e0] Logo - ÔøΩÔøΩ
+struct Animation anim_title_logo_advance[] = {
+    /* 000 */ { title_cel102, 4 },
     /* End */ END_ANIMATION
 };
 
