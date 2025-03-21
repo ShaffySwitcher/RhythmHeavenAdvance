@@ -17,4 +17,4 @@ const char D_0806a1e0[] = "もっと　ウデを　みがこう。";
 
 const char D_0806a1fc[] = "とても　テクニカルだ！";
 
-const char D_0806a214[] = "なぞのリズム組織から通達";
+const char D_0806a214[] = "Rhythm League notes:";
