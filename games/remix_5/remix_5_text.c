@@ -17,7 +17,7 @@ const char D_0806a2a4[] = "もっと　ウデを　みがこう。";
 
 const char D_0806a2c0[] = "とても　テクニカルだ！";
 
-const char D_0806a2d8[] = "なぞのリズム組織から通達";
+const char D_0806a2d8[] = "Rhythm League notes:";
 
 const char D_0806a2f4[] =
     "\x01\x52" "\x05\x31" "\x01\x35" "♪ WISH - Can't Wait for You　";
