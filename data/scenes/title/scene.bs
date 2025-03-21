@@ -25,16 +25,70 @@ script script_scene_title_loop
     rest 24
     run title_scene_beat_anim
     rest 24
-    rest 6
     run title_logo_bounce_bubble, 0
     rest 6
-    run title_logo_bounce_bubble, -1
+    run title_logo_bounce_bubble, 1
     rest 6
-    run title_logo_bounce_bubble, -1
+    run title_logo_bounce_bubble, 2
     rest 6
-    run title_logo_bounce_bubble, -1
+    run title_logo_bounce_bubble, 3
     rest 6
-    run title_logo_bounce_bubble, -1
+    run title_logo_bounce_bubble, 4
+    rest 6
+    run title_logo_bounce_bubble, 5
+    rest 6
+    rest 6
+    rest 6
+    run title_scene_beat_anim
+    rest 24
+    run title_scene_beat_anim
+    rest 24
+    run title_scene_beat_anim
+    rest 24
+    run title_scene_beat_anim
+    rest 24
+    run title_logo_bounce_bubble, 0
+    run title_logo_bounce_bubble, 3
+    rest 12
+    run title_logo_bounce_bubble, 1
+    run title_logo_bounce_bubble, 4
+    rest 12
+    run title_logo_bounce_bubble, 2
+    run title_logo_bounce_bubble, 5
+    rest 12
+    run title_logo_bounce_bubble, 0
+    run title_logo_bounce_bubble, 1
+    run title_logo_bounce_bubble, 2
+    run title_logo_bounce_bubble, 3
+    run title_logo_bounce_bubble, 4
+    run title_logo_bounce_bubble, 5
+    rest 12
+    rest 24
+    run title_scene_beat_anim
+    rest 24
+    run title_scene_beat_anim
+    rest 24
+    run title_scene_beat_anim
+    rest 24
+    run title_scene_beat_anim
+    rest 24
+    run title_scene_beat_anim
+    rest 24
+    run title_scene_beat_anim
+    rest 24
+    run title_scene_beat_anim
+    rest 24
+    run title_logo_bounce_bubble, 5
+    rest 6
+    run title_logo_bounce_bubble, 4
+    rest 6
+    run title_logo_bounce_bubble, 3
+    rest 6
+    run title_logo_bounce_bubble, 2
+    rest 6
+    run title_logo_bounce_bubble, 1
+    rest 6
+    run title_logo_bounce_bubble, 0
     rest 6
     rest 6
     rest 6
@@ -47,14 +101,20 @@ script script_scene_title_loop
     run title_scene_beat_anim
     rest 24
     run title_logo_bounce_bubble, 2
+    run title_logo_bounce_bubble, 5
     rest 12
     run title_logo_bounce_bubble, 1
+    run title_logo_bounce_bubble, 4
+    rest 12
+    run title_logo_bounce_bubble, 0
     run title_logo_bounce_bubble, 3
     rest 12
     run title_logo_bounce_bubble, 0
+    run title_logo_bounce_bubble, 1
+    run title_logo_bounce_bubble, 2
+    run title_logo_bounce_bubble, 3
     run title_logo_bounce_bubble, 4
-    rest 12
-    run title_scene_beat_anim
+    run title_logo_bounce_bubble, 5
     rest 12
     rest 24
     run title_scene_beat_anim
@@ -88,8 +148,6 @@ script script_scene_title_main
     loop_start
         call script_scene_title_loop
         call script_scene_title_loop
-        call script_scene_title_loop
-        call script_scene_title_loop
         run title_scene_beat_anim
         rest 24
         run title_scene_beat_anim
@@ -98,14 +156,54 @@ script script_scene_title_main
         rest 24
         run title_scene_beat_anim
         rest 24
-        run title_logo_bounce_bubble, 3
-        rest 24
-        run title_logo_bounce_bubble, 0
-        rest 24
-        run title_logo_bounce_bubble, 2
-        rest 24
-        run title_logo_bounce_bubble, 4
-        rest 24
+        switch_random 2
+        case 0
+            run title_logo_bounce_bubble, 0
+            rest 24
+            run title_logo_bounce_bubble, 4
+            rest 24
+            run title_logo_bounce_bubble, 2
+            rest 24
+            break
+        case 1
+            run title_logo_bounce_bubble, 3
+            rest 24
+            run title_logo_bounce_bubble, 1
+            rest 24
+            run title_logo_bounce_bubble, 5
+            rest 24
+            break
+        end_switch
+        switch_random 2
+        case 0
+            run title_logo_bounce_bubble, 0
+            rest 1
+            run title_logo_bounce_bubble, 1
+            rest 1
+            run title_logo_bounce_bubble, 2
+            rest 1
+            run title_logo_bounce_bubble, 3
+            rest 1
+            run title_logo_bounce_bubble, 4
+            rest 1
+            run title_logo_bounce_bubble, 5
+            rest 17
+            break
+        case 1
+            run title_logo_bounce_bubble, 5
+            rest 1
+            run title_logo_bounce_bubble, 4
+            rest 1
+            run title_logo_bounce_bubble, 3
+            rest 1
+            run title_logo_bounce_bubble, 2
+            rest 1
+            run title_logo_bounce_bubble, 1
+            rest 1
+            run title_logo_bounce_bubble, 0
+            rest 17
+            break
+        end_switch
     loop_end
     stop
 
@@ -124,7 +222,7 @@ struct scene_title
     /* Start  */ .word func_0801d86c, sub_scene_title
     /* Update */ .word func_0801d8d8, 0
     /* Stop   */ .word NULL,          0
-    /* Memory */ .word 0xA4
+    /* Memory */ .word 0xFFFF
 endstruct
 
 .end
