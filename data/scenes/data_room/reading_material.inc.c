@@ -103,7 +103,7 @@ struct ReadingMaterial reading_material_table[] = {
             "Okay, time for a quiz!\n"
             "His name is...\n"
             "\n"
-            "\001C" "\0031" "\001m" "‡@‡A‡B‡C‡D\n"
+            "\001C" "\0031" "\001m" "‡@‡A‡B‡C-‡C‡B‡D\n"
             "\001L" "\0030" "\001s" "\n"
             "Answer which letters go in each of the numbers!\n"
             "If you answer correctly, you'll be able to read the\n"

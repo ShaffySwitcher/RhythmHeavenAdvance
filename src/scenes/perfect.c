@@ -102,9 +102,9 @@ void perfect_scene_start(void *sVar, s32 dArg) {
 
     campaignsLeft = TOTAL_PERFECT_CAMPAIGNS - D_030046a8->data.totalPerfects;
     strint(count, campaignsLeft);
-    memcpy(gPerfect->string, "\0021" "\0011" "\001C" "\0030" "\001s" "\0054" "\0018" "\"", 25);
+    memcpy(gPerfect->string, "\0021" "\0011" "\001C" "\0030" "\001s" "\0054" "\0018" "", 25);
     strcat(gPerfect->string, get_campaign_gift_title(gPerfect->campaignID, FALSE));
-    strcat(gPerfect->string, "\"");
+    strcat(gPerfect->string, "");
 
     if (giftType == CAMPAIGN_GIFT_SONG) {
         switch (giftID) {
