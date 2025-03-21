@@ -20,10 +20,15 @@ extern struct Animation anim_title_logo_zu[];
 extern struct Animation anim_title_logo_mu[];
 extern struct Animation anim_title_logo_ten[];
 extern struct Animation anim_title_logo_goku[];
+extern struct Animation anim_title_logo_av[];
+extern struct Animation anim_title_logo_advance[];
+extern struct Animation anim_empty[];
+extern struct Animation anim_empty_2[];
 extern struct Animation anim_title_logo_bubble_inner[];
 extern struct Animation anim_title_logo_bubble_outer[];
 extern struct Animation anim_title_logo_test[];
 extern struct Animation anim_title_shooting_star[];
+extern const u8 CD7948_titlescreen_obj_bin;
 
 /* TITLE - COMPRESSED GRAPHICS */
 
