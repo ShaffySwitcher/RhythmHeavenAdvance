@@ -30,10 +30,10 @@ define_gameplay_scene scene_drum_lesson_hi_tech_1, script_drum_lesson_hi_tech_1_
 @ Drum Lesson (Hi-Tech 1) - Data
 
 text D_0806557c
-    .ascii "よくきいてマネしてね。\n"
-    .ascii "好きなタイミングでどうぞ。\n"
-    .ascii "演奏を止めると、\n"
-    .asciz "お手本がきけるヨ！"
+    .ascii "Listen carefully, then copy my\n"
+    .ascii "pattern whenever you're\n"
+    .ascii "ready. If you stop playing,\n"
+    .asciz "I'll show it to you again!"
 endtext
 
 
@@ -95,8 +95,8 @@ return
 
 text D_0806582c
     .ascii "\n"
-    .ascii "ハイハットをいれて\n"
-    .asciz "カッコよくするヨ！\n"
+    .ascii "Let's add some groove\n"
+    .asciz "with a little bit of hi-hat!\n"
 endtext
 
 
@@ -160,10 +160,10 @@ return
 
 
 text D_08065ad0
-    .ascii "\n"
-    .ascii "さらに、もう少し\n"
-    .ascii "ハイハットをいれて\n"
-    .asciz "カッコよくするヨ！\n"
+    .ascii "If a little hi-hat adds some\n"
+    .ascii "groove, then even more\n"
+    .ascii "hi-hats should add\n"
+    .asciz "even more, right?\n"
 endtext
 
 
@@ -218,9 +218,9 @@ return
 
 text D_08065d34
     .ascii "\n"
-    .ascii "さいごにスネアを\n"
-    .ascii "１つ追加しちゃうヨ！\n"
-    .asciz "わかるかな？"
+    .ascii "Let's add a snare\n"
+    .ascii "to end it all off!\n"
+    .asciz "Think you've got this?"
 endtext
 
 

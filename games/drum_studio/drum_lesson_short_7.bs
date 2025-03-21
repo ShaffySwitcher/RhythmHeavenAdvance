@@ -30,10 +30,10 @@ define_gameplay_scene scene_drum_lesson_short_7, script_drum_lesson_short_7_entr
 @ Drum Lesson (Short 7) - Data
 
 text D_08060310
-    .ascii "よくきいてマネしてね。\n"
-    .ascii "好きなタイミングでどうぞ。\n"
-    .ascii "演奏を止めると、\n"
-    .asciz "お手本がきけるヨ！"
+    .ascii "Listen carefully, then copy my\n"
+    .ascii "pattern whenever you're\n"
+    .ascii "ready. If you stop playing,\n"
+    .asciz "I'll show it to you again!"
 endtext
 
 
@@ -56,9 +56,9 @@ return
 
 text D_080603ec
     .ascii "\n"
-    .ascii "１カ所、音がふえるヨ！\n"
-    .ascii "わかるかな？\n"
-    .asciz "ヒント：Rボタン"
+    .ascii "Add a cymbal crash with ⑬\n"
+    .ascii "Hit it at the same time\n"
+    .asciz "as the bass."
 endtext
 
 
@@ -71,9 +71,9 @@ return
 
 text D_08060454
     .ascii "\n"
-    .ascii "さらに１カ所、\n"
-    .ascii "音がふえるヨ！\n"
-    .asciz "わかるかな？\n"
+    .ascii "Now let's add more snares!\n"
+    .ascii "This should be getting easy\n"
+    .asciz "for you by now!"
 endtext
 
 
@@ -91,9 +91,9 @@ return
 
 text D_080604f0
     .ascii "\n"
-    .ascii "またまた１カ所、\n"
-    .ascii "音がふえるヨ！\n"
-    .asciz "わかるかな？\n"
+    .ascii "Lets add another bass beat!\n"
+    .ascii "This shouldn't be a problem\n"
+    .asciz "for you, either."
 endtext
 
 
@@ -107,10 +107,10 @@ return
 
 
 text D_08060568
-    .ascii "\n"
-    .ascii "そしてまたなんと！\n"
-    .ascii "１カ所、音がふえるヨ！\n"
-    .asciz "わかるかな？\n"
+    .ascii "What a surprise!\n"
+    .ascii "Yet another bass beat!\n"
+    .ascii "It's starting to get a bit\n"
+    .asciz "more tricky, now"
 endtext
 
 
@@ -130,9 +130,9 @@ return
 
 text D_08060628
     .ascii "\n"
-    .ascii "これまたなんと！！\n"
-    .ascii "１カ所、音がふえるヨ！\n"
-    .asciz "わかるかな？\n"
+    .ascii "Okay, let's add one more beat\n"
+    .ascii "on that bass!\n"
+    .asciz "You're doing great, keep it up!"
 endtext
 
 
@@ -154,9 +154,8 @@ return
 
 text D_08060700
     .ascii "\n"
-    .ascii "またまたなんと！！\n"
-    .ascii "１カ所、音がふえるヨ！\n"
-    .asciz "わかるかな？\n"
+    .ascii "Let's add another one!\n"
+    .asciz "Keep it going!"
 endtext
 
 
@@ -179,10 +178,10 @@ return
 
 
 text D_080607f0
-    .ascii "これでさいご！！\n"
-    .ascii "１カ所、音がふえるヨ！\n"
-    .ascii "わかるかな？\n"
-    .asciz "ヒント：両手"
+    .ascii "Time for the final beat!\n"
+    .ascii "This time, it's on the snare.\n"
+    .ascii "You'll need both hands\n"
+    .asciz "for this!\n"
 endtext
 
 

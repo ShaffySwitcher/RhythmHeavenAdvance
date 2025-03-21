@@ -30,10 +30,10 @@ define_gameplay_scene scene_drum_lesson_long_4, script_drum_lesson_long_4_entry
 @ Drum Lesson (Long 4) - Data
 
 text D_08062634
-    .ascii "よくきいてマネしてね。\n"
-    .ascii "好きなタイミングでどうぞ。\n"
-    .ascii "演奏を止めると、\n"
-    .asciz "お手本がきけるヨ！"
+    .ascii "Listen carefully, then copy my\n"
+    .ascii "pattern whenever you're\n"
+    .ascii "ready. If you stop playing,\n"
+    .asciz "I'll show it to you again!"
 endtext
 
 
@@ -67,9 +67,9 @@ return
 
 text D_08062794
     .ascii "\n"
-    .ascii "シンバルとスネアで\n"
-    .ascii "キメてみよう！\n"
-    .asciz "できるかな？"
+    .ascii "Let's tack on some cymbals\n"
+    .ascii "and snares!\n"
+    .asciz "Just follow my lead."
 endtext
 
 
@@ -105,10 +105,10 @@ return
 
 
 text D_080628f0
-    .ascii "たったの１つ、音がふえるヨ。\n"
-    .ascii "でも　わりと　フクザツな\n"
-    .ascii "カンジに　なるんだ！\n"
-    .asciz "ついてこれるかな？"
+    .ascii "One more funky beat!\n"
+    .ascii "It sounds complicated,\n"
+    .ascii "but it's really not!\n"
+    .asciz "Can you keep up?"
 endtext
 
 
@@ -139,10 +139,10 @@ return
 
 
 text D_08062a64
-    .ascii "\n"
-    .ascii "おわりのところを\n"
-    .ascii "カッコよくしてみるネ！\n"
-    .asciz "がんばってみて！\n"
+    .ascii "Let's see if we can keep\n"
+    .ascii "the ending just as cool,\n"
+    .ascii "alright? Follow as well\n"
+    .asciz "as you can!"
 endtext
 
 
@@ -177,10 +177,10 @@ return
 
 
 text D_08062be4
-    .ascii "\n"
-    .ascii "アクセントをつけるヨ。\n"
-    .ascii "けっこうシブいかも～！\n"
-    .asciz "やるしかない！！"
+    .ascii "Lastly, let's add a cymbal.\n"
+    .ascii "The beat's getting real\n"
+    .ascii "groovy! There's no going\n"
+    .asciz "back now, so follow my lead!"
 endtext
 
 

@@ -30,10 +30,10 @@ define_gameplay_scene scene_drum_lesson_long_5, script_drum_lesson_long_5_entry
 @ Drum Lesson (Long 5) - Data
 
 text D_08063e10
-    .ascii "よくきいてマネしてね。\n"
-    .ascii "好きなタイミングでどうぞ。\n"
-    .ascii "演奏を止めると、\n"
-    .asciz "お手本がきけるヨ！"
+    .ascii "Listen carefully, then copy my\n"
+    .ascii "pattern whenever you're\n"
+    .ascii "ready. If you stop playing,\n"
+    .asciz "I'll show it to you again!"
 endtext
 
 
@@ -96,10 +96,10 @@ return
 
 
 text D_080640d8
-    .ascii "\n"
-    .ascii "スネアとシンバルで\n"
-    .ascii "きっちり、まとめよう！\n"
-    .asciz "がんばって！\n"
+    .ascii "Now, some more snares and\n"
+    .ascii "cymbals!\n"
+    .ascii "I'm sure you won't lose your\n"
+    .asciz "head over this.\n"
 endtext
 
 
@@ -165,9 +165,9 @@ return
 
 text D_0806439c
     .ascii "\n"
-    .ascii "１ヵ所だけ、スネアを\n"
-    .ascii "タムにかえてみるヨ。\n"
-    .asciz "わかるかな？"
+    .ascii "Let's switch the snare with\n"
+    .ascii "a tom. Just flow with the beat\n"
+    .asciz "and you'll be good to go!\n"
 endtext
 
 
@@ -221,10 +221,10 @@ return
 
 
 text D_080645fc
-    .ascii "\n"
-    .ascii "さいごにスネアをもう１つ！\n"
-    .ascii "手順をよく考えてみてネ。\n"
-    .asciz "がんばれ～！"
+    .ascii "To end it off, one last snare!\n"
+    .ascii "Pay attention to the order\n"
+    .ascii "you hit the drums.\n"
+    .asciz "You've got this!\n"
 endtext
 
 

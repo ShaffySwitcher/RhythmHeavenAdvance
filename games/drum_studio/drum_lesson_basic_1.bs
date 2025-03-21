@@ -145,7 +145,7 @@ endtext
 text D_0806178c
     .ascii "Don't be discouraged if you\n"
     .ascii "struggle at first. You can\n"
-    .ascii "try as many times as you need.\n"
+    .ascii "try as much as you need.\n"
     .asciz "With that, let's begin!\n"
 endtext
 

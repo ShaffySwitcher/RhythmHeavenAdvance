@@ -30,10 +30,10 @@ define_gameplay_scene scene_drum_lesson_short_1, script_drum_lesson_short_1_entr
 @ Drum Lesson (Short 1) - Data
 
 text D_0805f114
-    .ascii "よくきいてマネしてね。\n"
-    .ascii "好きなタイミングでどうぞ。\n"
-    .ascii "演奏を止めると、\n"
-    .asciz "お手本がきけるヨ！"
+    .ascii "Listen carefully, then copy my\n"
+    .ascii "pattern whenever you're\n"
+    .ascii "ready. If you stop playing,\n"
+    .asciz "I'll show it to you again!"
 endtext
 
 
@@ -54,9 +54,10 @@ return
 
 
 text D_0805f1e4
-    .ascii "\n"
-    .ascii "１カ所、音がふえるヨ！\n"
-    .asciz "わかるかな？\n"
+    .ascii "Now let's swap a beat\n"
+    .ascii "on the bass for a beat\n"
+    .ascii "on the drum.\n"
+    .asciz "You know what to do!\n"
 endtext
 
 
@@ -74,9 +75,8 @@ return
 
 text D_0805f278
     .ascii "\n"
-    .ascii "さらに１カ所、\n"
-    .ascii "音がふえるヨ！\n"
-    .asciz "わかるかな？\n"
+    .ascii "New snare beat incoming!\n"
+    .asciz "Think you've got it?\n"
 endtext
 
 
@@ -96,9 +96,9 @@ return
 
 text D_0805f32c
     .ascii "\n"
-    .ascii "またまた１カ所、\n"
-    .ascii "音がふえるヨ！\n"
-    .asciz "わかるかな？\n"
+    .ascii "Another snare at the end!\n"
+    .ascii "This is starting to sound\n"
+    .asciz "professional!\n"
 endtext
 
 
@@ -119,10 +119,10 @@ return
 
 
 text D_0805f3f8
-    .ascii "\n"
-    .ascii "そしてまたなんと！\n"
-    .ascii "１カ所、音がふえるヨ！\n"
-    .asciz "わかるかな？\n"
+    .ascii "Let's round this out by\n"
+    .ascii "squeezing in a bass beat\n"
+    .ascii "at the start!\n"
+    .asciz "You've got this!\n"
 endtext
 
 
@@ -136,9 +136,9 @@ return
 
 text D_0805f470
     .ascii "\n"
-    .ascii "これまたなんと！！\n"
-    .ascii "１カ所、音がふえるヨ！\n"
-    .asciz "わかるかな？\n"
+    .ascii "Surprise! We've got a\n"
+    .ascii "triple beat at the end!\n"
+    .asciz "Ready?\n"
 endtext
 
 

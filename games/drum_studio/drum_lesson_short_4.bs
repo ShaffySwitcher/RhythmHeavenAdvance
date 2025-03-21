@@ -30,10 +30,10 @@ define_gameplay_scene scene_drum_lesson_short_4, script_drum_lesson_short_4_entr
 @ Drum Lesson (Short 4) - Data
 
 text D_0805f560
-    .ascii "よくきいてマネしてね。\n"
-    .ascii "好きなタイミングでどうぞ。\n"
-    .ascii "演奏を止めると、\n"
-    .asciz "お手本がきけるヨ！"
+    .ascii "Listen carefully, then copy my\n"
+    .ascii "pattern whenever you're\n"
+    .ascii "ready. If you stop playing,\n"
+    .asciz "I'll show it to you again!"
 endtext
 
 
@@ -57,8 +57,9 @@ return
 
 text D_0805f648
     .ascii "\n"
-    .ascii "１カ所、音がふえるヨ！\n"
-    .asciz "わかるかな？\n"
+    .ascii "I slipped in another bass beat!\n"
+    .ascii "We're only just starting!\n"
+    .asciz "Can you guess what it is?\n"
 endtext
 
 
@@ -70,10 +71,10 @@ script D_0805f670
 return
 
 text D_0805f6ac
-    .ascii "さらに１つ、\n"
-    .ascii "音がふえるヨ！\n"
-    .ascii "わかるかな？\n"
-    .asciz "ヒント：十\字ボタン上"
+    .ascii "There's a new addition to the\n"
+    .ascii "drum set! Can you guess what\n"
+    .ascii "it is?\n"
+    .asciz "Press Up on ⑯ to find out!"
 endtext
 
 
@@ -89,9 +90,9 @@ return
 
 text D_0805f740
     .ascii "\n"
-    .ascii "またまた１カ所、\n"
-    .ascii "音がふえるヨ！\n"
-    .asciz "わかるかな？\n"
+    .ascii "Let's put some syncopation\n"
+    .ascii "at the end here. This one's a\n"
+    .asciz "little technical!\n"
 endtext
 
 
@@ -110,10 +111,10 @@ return
 
 
 text D_0805f7f4
-    .ascii "そしてまたなんと！\n"
-    .ascii "１カ所、音がふえるヨ！\n"
-    .ascii "わかるかな？\n"
-    .asciz "ヒント：十\字ボタン右"
+    .ascii "Now for a tom beat at the\n"
+    .ascii "very end!\n"
+    .ascii "You remember where that is?\n"
+    .asciz "Use Right on ⑯ to get it."
 endtext
 
 
@@ -135,9 +136,9 @@ return
 
 text D_0805f8dc
     .ascii "\n"
-    .ascii "これまたなんと！！\n"
-    .ascii "１カ所、音がふえるヨ！\n"
-    .asciz "わかるかな？\n"
+    .ascii "Surprise! One final snare\n"
+    .ascii "here in the middle!\n"
+    .asciz "It's all coming together!\n"
 endtext
 
 
@@ -160,24 +161,26 @@ return
 
 
 text D_0805f9cc
-    .ascii "十\字ボタンの上で\n"
-    .ascii "たたいたパーツは\n"
-    .ascii "ハイハットっていう\n"
-    .asciz "シンバルです。"
+    .ascii "\n"
+    .ascii "That just now was a hi-hat\n"
+    .ascii "cymbal! The one you press\n"
+    .asciz "Up on ⑯ to use it!\n"
 endtext
 
 
 text D_0805fa10
-    .ascii "ドラムセットによって\n"
-    .ascii "十\字ボタンの上は\n"
-    .ascii "ハイハットだったり\n"
-    .asciz "ロールだったりします。"
+    .ascii "\n"
+    .ascii "Up on ⑯ can be either the\n"
+    .ascii "hi-hat or the roll, depending\n"
+    .asciz "on the drum set we're using.\n"
 endtext
 
 
 text D_0805fa60
     .ascii "\n"
-    .asciz "では、つぎ行きまーす！"
+    .ascii "You can unlock\n"
+    .ascii "different drums to\n"
+    .asciz "play in the Studio!"
 endtext
 
 
