@@ -31,8 +31,9 @@ define_gameplay_scene scene_drum_lesson_hi_tech_2, script_drum_lesson_hi_tech_2_
 
 text D_08065f9c
     .ascii "\n"
-    .ascii "まずは、おさらいです。\n"
-    .asciz "がんばってネ！"
+    .ascii "Let's start with a review\n"
+    .ascii "of the last lesson.\n"
+    .asciz "Do your best!"
 endtext
 
 
@@ -99,9 +100,9 @@ return
 
 text D_08066258
     .ascii "\n"
-    .ascii "ここからが勝負です！\n"
-    .ascii "よ～くきいて、\n"
-    .asciz "ちゃんとマネしてネ！\n"
+    .ascii "Now let's start the real thing!\n"
+    .ascii "Listen carefully and\n"
+    .asciz "follow along closely!"
 endtext
 
 
@@ -151,9 +152,9 @@ return
 
 text D_08066480
     .ascii "\n"
-    .ascii "バスとスネアを\n"
-    .ascii "ちょっと　たすヨ！\n"
-    .asciz "できるかな？"
+    .ascii "Let's add a little more\n"
+    .ascii "bass and snare!\n"
+    .asciz "Think you've got this?"
 endtext
 
 
@@ -205,10 +206,10 @@ return
 
 
 text D_080666c0
-    .ascii "\n"
-    .ascii "バスドラムを１つ\n"
-    .ascii "ふやしてみるヨ。\n"
-    .asciz "がんばって！"
+    .ascii "Let's throw in another\n"
+    .ascii "bass drum beat!\n"
+    .ascii "It's in a really tricky spot, so\n"
+    .asciz "try your best to get this one!"
 endtext
 
 
@@ -262,10 +263,10 @@ return
 
 
 text D_08066918
-    .ascii "さらに、またまた\n"
-    .ascii "バスとスネアを追加！！\n"
-    .ascii "キミならできる！\n"
-    .asciz "がんばれ～！！\n"
+    .ascii "Here comes some more\n"
+    .ascii "bass and snare beats!\n"
+    .ascii "I know you can do this!\n"
+    .asciz "Put your heart into it!"
 endtext
 
 
@@ -322,9 +323,9 @@ return
 
 text D_08066ba4
     .ascii "\n"
-    .ascii "バスドラムを１つ\n"
-    .ascii "ふやしてみるヨ。\n"
-    .asciz "キメてネ！！"
+    .ascii "Now add one bass beat!\n"
+    .ascii "Focus and hit it like there's\n"
+    .asciz "no tomorrow!"
 endtext
 
 
@@ -381,10 +382,10 @@ return
 
 
 text D_08066e20
-    .ascii "さっきのバスドラに\n"
-    .ascii "シンバルをかさねるヨ！\n"
-    .ascii "これは、ムズイ！！\n"
-    .asciz "ファイトー！！"
+    .ascii "Let's stack some cymbals\n"
+    .ascii "to the mix, keep up the\n"
+    .ascii "pattern of the bass drum!\n"
+    .asciz "Don't give up!"
 endtext
 
 
@@ -442,10 +443,10 @@ return
 
 
 text D_080670c4
-    .ascii "\n"
-    .ascii "これまたムズイところに\n"
-    .ascii "スネアを１つ追加！！\n"
-    .asciz "もう、いくしかない！！！"
+    .ascii "Another snare's been added\n"
+    .ascii "to the pattern!\n"
+    .ascii "We're closing in on the grand\n"
+    .asciz "finale!"
 endtext
 
 
@@ -504,10 +505,10 @@ return
 
 
 text D_08067370
-    .ascii "これで　さいご！\n"
-    .ascii "タムを１つ追加するヨ！\n"
-    .ascii "流れるようなイカした\n"
-    .asciz "プレイをよろしくです！！"
+    .ascii "This is the final pattern!\n"
+    .ascii "Let's add just one more \n"
+    .ascii "tom beat. Feel the rhythm flow\n"
+    .asciz "within your soul as you play!"
 endtext
 
 
@@ -568,23 +569,24 @@ return
 
 text D_08067638
     .ascii "\n"
-    .ascii "今回は、\n"
-    .ascii "１つ前のレッスンを\n"
-    .asciz "応用してみます。"
+    .ascii "This final lesson will use the\n"
+    .ascii "techniques you learned in the\n"
+    .asciz "previous lessons!\n"
 endtext
 
 
 text D_08067668
     .ascii "\n"
-    .ascii "１つ前のレッスンを\n"
-    .ascii "クリアしてから、\n"
-    .asciz "挑戦してネ！"
+    .ascii "This could be really hard,\n"
+    .ascii "especially if you haven't\n"
+    .asciz "cleared the previous lesson!"
 endtext
 
 
 text D_0806769c
     .ascii "\n"
-    .asciz "では、はじめまーす！"
+    .ascii "Are you all set?\n"
+    .asciz "Then let's get started!"
 endtext
 
 

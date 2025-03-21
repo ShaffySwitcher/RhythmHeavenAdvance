@@ -30,10 +30,10 @@ define_gameplay_scene scene_drum_lesson_long_3, script_drum_lesson_long_3_entry
 @ Drum Lesson (Long 3) - Data
 
 text D_08063308
-    .ascii "よくきいてマネしてね。\n"
-    .ascii "好きなタイミングでどうぞ。\n"
-    .ascii "演奏を止めると、\n"
-    .asciz "お手本がきけるヨ！"
+    .ascii "Listen carefully, then copy my\n"
+    .ascii "pattern whenever you're\n"
+    .ascii "ready. If you stop playing,\n"
+    .asciz "I'll show it to you again!"
 endtext
 
 
@@ -62,10 +62,10 @@ return
 
 
 text D_08063438
-    .ascii "\n"
-    .ascii "スネアドラムを\n"
-    .ascii "かさねてみるネ！\n"
-    .asciz "ノリノリだヨ！"
+    .ascii "Keep the bass going, while\n"
+    .ascii "adding some snares\n"
+    .ascii "to the mix!\n"
+    .asciz "This has a good groove!"
 endtext
 
 
@@ -93,9 +93,9 @@ return
 
 text D_0806354c
     .ascii "\n"
-    .ascii "シンバルでキッチリと\n"
-    .ascii "まとめておこうネ！\n"
-    .asciz "これは、できるよネ？\n"
+    .ascii "Let's keep the beat tight\n"
+    .ascii "with a cymbal crash!\n"
+    .asciz "We're still warming up!"
 endtext
 
 
@@ -107,10 +107,10 @@ return
 
 
 text D_080635bc
-    .ascii "スネアのパターンを\n"
-    .ascii "ちょっとかえるネ。\n"
-    .ascii "できると楽しいヨ！\n"
-    .asciz "きっと。\n"
+    .ascii "Now to shake up the end of the\n"
+    .ascii "snare drum's pattern a bit.\n"
+    .ascii "Doesn't this make it sound\n"
+    .asciz "even more cool?"
 endtext
 
 
@@ -140,10 +140,10 @@ return
 
 
 text D_08063708
-    .ascii "\n"
-    .ascii "１つだけ、音がふえるヨ。\n"
-    .ascii "いがいとムズい！！\n"
-    .asciz "がんばってネ！"
+    .ascii "Let's add just one more beat\n"
+    .ascii "on top of the last pattern.\n"
+    .ascii "It's a little tricky,\n"
+    .asciZ "but don't give up!\n"
 endtext
 
 
@@ -176,10 +176,10 @@ return
 
 
 text D_08063870
-    .ascii "\n"
-    .ascii "またまた１つ、\n"
-    .ascii "音がふえるヨ！\n"
-    .asciz "できたらカッコよすぎ！"
+    .ascii "This is the last change\n"
+    .ascii "for today! If you can pull\n"
+    .ascii "this pattern off, you're in\n"
+    .asciz "the professional league!"
 endtext
 
 

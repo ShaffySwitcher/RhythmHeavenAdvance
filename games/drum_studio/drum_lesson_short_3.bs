@@ -30,10 +30,10 @@ define_gameplay_scene scene_drum_lesson_short_3, script_drum_lesson_short_3_entr
 @ Drum Lesson (Short 3) - Data
 
 text D_080622d8
-    .ascii "よくきいてマネしてね。\n"
-    .ascii "好きなタイミングでどうぞ。\n"
-    .ascii "演奏を止めると、\n"
-    .asciz "お手本がきけるヨ！"
+    .ascii "Listen carefully, then copy my\n"
+    .ascii "pattern whenever you're\n"
+    .ascii "ready. If you stop playing,\n"
+    .asciz "I'll show it to you again!"
 endtext
 
 
@@ -56,10 +56,10 @@ return
 
 
 text D_080623c0
-    .ascii "タムっていうのを\n"
-    .ascii "たたいてみよう！\n"
-    .ascii "十\字ボタンの右で\n"
-    .asciz "タムをたたくヨ！"
+    .ascii "\n"
+    .ascii "Let's try using a new drum:\n"
+    .ascii "This is what we call a tom!\n"
+    .asciz "Hit it by pressing Right on ⑯!\n"
 endtext
 
 
@@ -78,10 +78,10 @@ return
 
 
 text D_08062488
-    .ascii "タムだったところを\n"
-    .ascii "十\字ボタンの上に\n"
-    .ascii "かえてみるヨ！\n"
-    .asciz "(ロールっていうみたい)"
+    .ascii "Now, let's replace\n"
+    .ascii "the tom beat! Instead\n"
+    .ascii "you'll do a drum roll!\n"
+    .asciz "Press Up on ⑯ to perform it!\n"
 endtext
 
 
@@ -101,9 +101,9 @@ return
 
 text D_08062558
     .ascii "\n"
-    .ascii "さっきと　ちがうところに\n"
-    .ascii "タムを１つ、ふやすヨ！\n"
-    .asciz "わかるかな？\n"
+    .ascii "Let's work the tom back in,\n"
+    .ascii "but at the end instead.\n"
+    .asciz "Try not to get mixed up!\n"
 endtext
 
 
