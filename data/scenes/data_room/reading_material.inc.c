@@ -199,7 +199,7 @@ struct ReadingMaterial reading_material_table[] = {
 
     /* MARCHING_ORDERS ("Marcher's Diary") */ {
         /* TITLE ---------------------------------------------------------- */
-            "Marching Orders Activity Log",
+            "Squadmate Activity Log",
         /* BODY ----------------------------------------------------------- */
             "April 16: I enlisted in the Marcher group!\n"
             "I'm gonna give it my all and help everybody I can!\n"
