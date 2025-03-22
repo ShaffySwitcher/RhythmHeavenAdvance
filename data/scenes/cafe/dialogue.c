@@ -45,7 +45,7 @@ const char *cafe_dialogue_first_visit[] = {
     /* ------------------------------------------------ */
         "\n"
         "Feel free to come on by anytime you\n"
-        "find the gamesÅ@" "\0051" "\0015" "too hard to play" "\0054" "\0018" "or\n"
+        "find the games " "\0051" "\0015" "too hard to play " "\0054" "\0018" "or\n"
         "you just need to take a break.",
     /* ------------------------------------------------ */
         "\n"
