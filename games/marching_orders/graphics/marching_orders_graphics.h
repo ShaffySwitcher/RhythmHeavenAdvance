@@ -4,8 +4,8 @@
 #include "graphics.h"
 
 /* MARCHING ORDERS - ANIMATIONS */
-extern const u8 ma2_bin;
-extern const u8 ma_bin;
+extern const u8 mo2_bin;
+extern const u8 mo_bin;
 
 extern struct Animation anim_marching1_test[];
 extern struct Animation anim_marching1_turn_l[];
