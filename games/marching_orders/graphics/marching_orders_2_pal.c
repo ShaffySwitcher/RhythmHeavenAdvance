@@ -74,7 +74,7 @@ Palette marching_orders_2_bg_pal[] = {
         /* 09 */ TO_RGB555(0xD8D8D8),
         /* 10 */ TO_RGB555(0x000000),
         /* 11 */ TO_RGB555(0x000000),
-        /* 12 */ TO_RGB555(0xF880F0),
+        /* 12 */ TO_RGB555(0xFFFFFF),
         /* 13 */ TO_RGB555(0x000000),
         /* 14 */ TO_RGB555(0x000000),
         /* 15 */ TO_RGB555(0x000000)

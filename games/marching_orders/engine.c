@@ -50,9 +50,9 @@ struct CompressedGraphics *marching_buffered_textures[] = {
 // [D_089e5208] Graphics Table (Marching Orders)
 struct GraphicsTable marching_orders_1_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c6c89c,
+        /* Src.  */ &ma_bin,
         /* Dest. */ BG_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 8192 
     },
     /* BG Map */ {
         /* Src.  */ &D_08c6cc98,
@@ -145,13 +145,18 @@ struct GraphicsTable marching_orders_remix_7_gfx_table[] = {
 // [D_089e52ec] Graphics Table (Marching Orders 2)
 struct GraphicsTable marching_orders_2_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c6eae0,
+        /* Src.  */ &ma2_bin,
         /* Dest. */ BG_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 8192 
     },
     /* BG Map */ {
         /* Src.  */ &D_08c6eedc,
         /* Dest. */ BG_MAP_BASE(0xE800),
+        /* Size  */ COMPRESSED_GFX_SOURCE
+    },
+    /* BG Map */ {
+        /* Src.  */ &D_08c6cde0,
+        /* Dest. */ BG_MAP_BASE(0xF000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {

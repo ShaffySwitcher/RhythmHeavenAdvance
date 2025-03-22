@@ -493,10 +493,7 @@ void cafe_print_dialogue(void) {
                               "for a Perfect in ");
                     strcat(s, "\0051" "\0015");
                     strcat(s, levelName);
-                    strcat(s, "\0054" "\0018" ".\n"
-                              "I think you've got a good\n"
-                              "chance of clearing it.\n"
-                              "I'll be rooting for you!");
+                    strcat(s, "\0054" "\0018" ".\n");
                     string = s;
                     dialogueTask = CAFE_EV_UPCOMING_CAMPAIGN_00;
                     D_030046a8->data.unk291 = TRUE;
