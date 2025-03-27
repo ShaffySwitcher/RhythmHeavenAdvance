@@ -4,6 +4,10 @@
 #include "graphics.h"
 
 /* MANNEQUIN FACTORY - ANIMATIONS */
+extern const u8 mannequin_factory_map_bin;
+extern const u8 mannequin_factory_practice_map_bin;
+extern const u8 mannequin_factory_bg_bin;
+extern const u8 test_bin;
 
 extern struct Animation anim_mannequin_base[];
 extern struct Animation anim_mannequin_head[];

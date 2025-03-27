@@ -32,19 +32,19 @@ struct CompressedGraphics *mannequin_buffered_textures[] = {
 // [D_089df3b0] Graphics Table
 struct GraphicsTable mannequin_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c34478,
+        /* Src.  */ &test_bin,
         /* Dest. */ BG_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 8192
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c35f18,
+        /* Src.  */ &mannequin_factory_map_bin,
         /* Dest. */ BG_MAP_BASE(0xE800),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 2048
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c360b0,
+        /* Src.  */ &mannequin_factory_practice_map_bin,
         /* Dest. */ BG_MAP_BASE(0xF000),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 2048
     },
     /* OBJ Tileset */ {
         /* Src.  */ &D_08c35c9c,
