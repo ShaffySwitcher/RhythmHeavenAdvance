@@ -37,9 +37,9 @@ struct GraphicsTable quiz_show_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c7c8e0,
+        /* Src.  */ &quiz_show_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 27648
     },
     /* BG Palette */ {
         /* Src.  */ quiz_show_bg_pal,

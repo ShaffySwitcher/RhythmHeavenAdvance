@@ -3,7 +3,7 @@
 // [D_088f6950]
 AnimationCel quiz_show_cel000[] = {
     /* Len */ 1,
-    /* 000 */ 0x00f8, 0x0000, 0x0351
+    /* 000 */ 0x00f8, 0x0020, 0x0351
 };
 
 // [D_088f6958]
@@ -1695,72 +1695,72 @@ AnimationCel quiz_show_cel163[] = {
 // [D_088f7f08]
 AnimationCel quiz_show_cel164[] = {
     /* Len */ 1,
-    /* 000 */ 0x4000, 0x800b, 0x7215
+    /* 000 */ 0x4000, 0x81fd, 0x7215
 };
 
 // [D_088f7f10]
 AnimationCel quiz_show_cel165[] = {
     /* Len */ 2,
     /* 000 */ 0x4000, 0x81cd, 0x7219,
-    /* 001 */ 0x0000, 0x41ed, 0x7306
+    /* 001 */ 0x4000, 0x81e4, 0x7215
 };
 
 // [D_088f7f1e]
 AnimationCel quiz_show_cel166[] = {
     /* Len */ 1,
-    /* 000 */ 0x8000, 0x0000, 0x730b
+    /* 000 */ 0x8000, 0x0020, 0x730b
 };
 
 // [D_088f7f26]
 AnimationCel quiz_show_cel167[] = {
     /* Len */ 1,
-    /* 000 */ 0x8000, 0x0000, 0x730f
+    /* 000 */ 0x8000, 0x0020, 0x730f
 };
 
 // [D_088f7f2e]
 AnimationCel quiz_show_cel168[] = {
     /* Len */ 1,
-    /* 000 */ 0x8000, 0x0000, 0x730e
+    /* 000 */ 0x8000, 0x0020, 0x730e
 };
 
 // [D_088f7f36]
 AnimationCel quiz_show_cel169[] = {
     /* Len */ 1,
-    /* 000 */ 0x8000, 0x0000, 0x725f
+    /* 000 */ 0x8000, 0x0020, 0x725f
 };
 
 // [D_088f7f3e]
 AnimationCel quiz_show_cel170[] = {
     /* Len */ 1,
-    /* 000 */ 0x0000, 0x4000, 0x72d6
+    /* 000 */ 0x0000, 0x4020, 0x72d6
 };
 
 // [D_088f7f46]
 AnimationCel quiz_show_cel171[] = {
     /* Len */ 1,
-    /* 000 */ 0x8000, 0x0000, 0x721f
+    /* 000 */ 0x8000, 0x0020, 0x721f
 };
 
 // [D_088f7f4e]
 AnimationCel quiz_show_cel172[] = {
     /* Len */ 1,
-    /* 000 */ 0x8000, 0x0000, 0x7309
+    /* 000 */ 0x8000, 0x0020, 0x7309
 };
 
 // [D_088f7f56]
 AnimationCel quiz_show_cel173[] = {
     /* Len */ 1,
-    /* 000 */ 0x8000, 0x0000, 0x7318
+    /* 000 */ 0x8000, 0x0020, 0x7318
 };
 
 // [D_088f7f5e]
 AnimationCel quiz_show_cel174[] = {
     /* Len */ 1,
-    /* 000 */ 0x8000, 0x0000, 0x731a
+    /* 000 */ 0x8000, 0x0020, 0x731a
 };
 
 // [D_088f7f66]
 AnimationCel quiz_show_cel175[] = {
     /* Len */ 1,
-    /* 000 */ 0x8000, 0x0000, 0x7313
+    /* 000 */ 0x8000, 0x0020, 0x7313
 };
