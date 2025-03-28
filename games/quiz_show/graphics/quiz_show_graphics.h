@@ -4,6 +4,7 @@
 #include "graphics.h"
 
 /* QUIZ SHOW - ANIMATIONS */
+extern const u8 quiz_show_obj_bin;
 
 extern struct Animation anim_quiz_show_player_press_button_l[];
 extern struct Animation anim_quiz_show_player_press_button_r[];

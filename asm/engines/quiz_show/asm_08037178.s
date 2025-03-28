@@ -89,7 +89,7 @@ branch_0803721c: \n\
 /* 0803721c */ LDR R0, =gSpriteHandler \n\
 /* 0803721e */ LDR R0, [R0] \n\
 /* 08037220 */ LSLS R1, R4, 0x3 \n\
-/* 08037222 */ MOVS R3, 0x3A @ Set R3 to 0x3A \n\
+/* 08037222 */ MOVS R3, 0x27 @ Set R3 to 0x27 \n\
 /* 08037224 */ SUBS R3, R3, R1 @ Set R3 to R3 - R1 \n\
 /* 08037226 */ LSLS R3, R3, 0x10 \n\
 /* 08037228 */ ASRS R3, R3, 0x10 \n\
