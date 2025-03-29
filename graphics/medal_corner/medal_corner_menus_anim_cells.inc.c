@@ -3,7 +3,7 @@
 // [D_0890d9b8]
 AnimationCel medal_corner_menus_cel000[] = {
     /* Len */ 1,
-    /* 000 */ 0x00fc, 0x01fc, 0x801c
+    /* 000 */ 0x00fc, 0x0016, 0x801c
 };
 
 // [D_0890d9c0]
@@ -27,61 +27,61 @@ AnimationCel medal_corner_menus_cel003[] = {
 // [D_0890d9d8]
 AnimationCel medal_corner_menus_cel004[] = {
     /* Len */ 1,
-    /* 000 */ 0x80f8, 0x01fc, 0x800a
+    /* 000 */ 0x80f8, 0x0016, 0x800a
 };
 
 // [D_0890d9e0]
 AnimationCel medal_corner_menus_cel005[] = {
     /* Len */ 1,
-    /* 000 */ 0x80f8, 0x01fc, 0x800b
+    /* 000 */ 0x80f8, 0x0016, 0x800b
 };
 
 // [D_0890d9e8]
 AnimationCel medal_corner_menus_cel006[] = {
     /* Len */ 1,
-    /* 000 */ 0x80f8, 0x01fc, 0x8009
+    /* 000 */ 0x80f8, 0x0016, 0x8009
 };
 
 // [D_0890d9f0]
 AnimationCel medal_corner_menus_cel007[] = {
     /* Len */ 1,
-    /* 000 */ 0x80f8, 0x01fc, 0x800e
+    /* 000 */ 0x80f8, 0x0016, 0x800e
 };
 
 // [D_0890d9f8]
 AnimationCel medal_corner_menus_cel008[] = {
     /* Len */ 1,
-    /* 000 */ 0x80f8, 0x01fc, 0x800c
+    /* 000 */ 0x80f8, 0x0016, 0x800c
 };
 
 // [D_0890da00]
 AnimationCel medal_corner_menus_cel009[] = {
     /* Len */ 1,
-    /* 000 */ 0x80f8, 0x01fc, 0x800d
+    /* 000 */ 0x80f8, 0x0016, 0x800d
 };
 
 // [D_0890da08]
 AnimationCel medal_corner_menus_cel010[] = {
     /* Len */ 1,
-    /* 000 */ 0x80f8, 0x01fc, 0x8008
+    /* 000 */ 0x80f8, 0x0016, 0x8008
 };
 
 // [D_0890da10]
 AnimationCel medal_corner_menus_cel011[] = {
     /* Len */ 1,
-    /* 000 */ 0x80f8, 0x01fc, 0x8005
+    /* 000 */ 0x80f8, 0x0016, 0x8005
 };
 
 // [D_0890da18]
 AnimationCel medal_corner_menus_cel012[] = {
     /* Len */ 1,
-    /* 000 */ 0x80f8, 0x01fc, 0x8006
+    /* 000 */ 0x80f8, 0x0016, 0x8006
 };
 
 // [D_0890da20]
 AnimationCel medal_corner_menus_cel013[] = {
     /* Len */ 1,
-    /* 000 */ 0x80f8, 0x01fc, 0x8007
+    /* 000 */ 0x80f8, 0x0016, 0x8007
 };
 
 // [D_0890da28]
@@ -146,12 +146,14 @@ AnimationCel medal_corner_menus_cel023[] = {
 
 // [D_0890da78]
 AnimationCel medal_corner_menus_cel024[] = {
-    /* Len */ 5,
-    /* 000 */ 0x4010, 0x41de, 0x800f,
-    /* 001 */ 0x4010, 0x41fe, 0x8013,
-    /* 002 */ 0x0010, 0x001e, 0x8017,
-    /* 003 */ 0x80ec, 0x81f6, 0x8000,
-    /* 004 */ 0x80ec, 0x4006, 0x8002
+    /* Len */ 7,
+    0x400c, 0x41e6, 0x8032,
+0x400c, 0x4006, 0x8036,
+0x4014, 0x4006, 0x8056,
+0x4014, 0x41f1, 0x803a,
+0x4014, 0x41f9, 0x803b,
+0x80ec, 0x81f6, 0x8000,
+0x80ec, 0x4006, 0x8002
 };
 
 // [D_0890da98]

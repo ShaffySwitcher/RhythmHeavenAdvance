@@ -15,6 +15,7 @@ extern struct Animation anim_medal_corner_count_zero[];
 /* MEDAL CORNER MENU - COMPRESSED GRAPHICS */
 
 extern struct CompressedGraphics D_08cd8fa4;
+extern const u8 medalcorner_obj_bin;
 
 /* DRUM LESSONS MENU - ANIMATIONS */
 
