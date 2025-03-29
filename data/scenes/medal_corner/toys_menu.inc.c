@@ -30,24 +30,24 @@ struct MedalCornerLevel toys_menu_levels[] = {
 // [D_089dd4e4] Rhythm Toys Menu - Graphics Table
 struct GraphicsTable toys_menu_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08cd8da0,
+        /* Src.  */ &rhythmtoys_bg_bin,
         /* Dest. */ BG_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 14336
     },
     /* BG Map */ {
-        /* Src.  */ &D_08cd931c,
+        /* Src.  */ &rhythmtoys_bg_map_bin,
         /* Dest. */ BG_MAP_BASE(0xE800),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 2048
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08cd8388,
+        /* Src.  */ &rhythmtoys_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 7424
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08cd8fa4,
+        /* Src.  */ &medalcorner_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0x5000),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 3136
     },
     /* BG Palette */ {
         /* Src.  */ toys_menu_pal,
