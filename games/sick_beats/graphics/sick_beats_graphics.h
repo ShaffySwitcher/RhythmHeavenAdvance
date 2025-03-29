@@ -5,6 +5,8 @@
 
 /* SICK BEATS - ANIMATIONS */
 
+extern const u8 sick_beats_obj_bin;
+
 extern struct Animation anim_virus_appear[];
 extern struct Animation anim_virus_ready[];
 extern struct Animation anim_yellow_microbe_beat[];

@@ -66,9 +66,9 @@ struct GraphicsTable gfx_table_sick_beats[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08d198bc,
+        /* Src.  */ &sick_beats_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 23584
     },
     /* BG Palette */ {
         /* Src.  */ sick_beats_pal,

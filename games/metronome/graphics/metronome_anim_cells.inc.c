@@ -160,9 +160,11 @@ AnimationCel metronome_cel012[] = {
 
 // [D_088f2ed4]
 AnimationCel metronome_cel013[] = {
-    /* Len */ 2,
+    /* Len */ 4,
     /* 000 */ 0x00f0, 0x81f0, 0x0010,
-    /* 001 */ 0x400f, 0x41ec, 0x0208
+    /* 001 */ 0x400f, 0x01e8, 0x01be,
+    /* 002 */ 0x400f, 0x01f8, 0x0209,
+    /* 003 */ 0x400f, 0x0000, 0x020a
 };
 
 // [D_088f2ee2]
