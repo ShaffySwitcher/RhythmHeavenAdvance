@@ -1,4 +1,10 @@
-# Rhythm Tengoku
+# Project Description:
+This project aims to faithfully port the work done on "Rhythm Heaven Advance" to the WIP decompilation of Rhythm Tengoku.
+"Rhythm Heaven Advance" is the brand new and improved translation patch for Rhythm Tengoku, translating all the text and graphics to be as faithful as possible to the original source, while making changes befitting a localization.
+This project (as well as the decompilation itself) is a WIP, meaning its not done yet, therefore no download link is available.
+However, instruction on how to build the decomp, therefore the project, are available below. And when theres enough of the project done to felicitate a release, a patch dowload will be available
+
+# Original Rhythm Tengoku Description And Installation Guide
 
 This is a decompilation of Rhythm Tengoku for the Gameboy Advance. It can build either a fully byte-for-byte matching ROM from scratch, or rebuild a different functionally equivalent ROM with a different memory layout to be easier to mod with. This can be controlled with the `NONMATCHING` parameter when building.
 
