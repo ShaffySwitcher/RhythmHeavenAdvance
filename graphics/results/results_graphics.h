@@ -33,6 +33,7 @@ extern struct Animation anim_score_results_dec_num[];
 /* RESULTS (SCORE) - COMPRESSED GRAPHICS */
 
 extern struct CompressedGraphics D_08cd4f58;
+extern const u8 results_obj_bin;
 
 /* RESULTS (SCORE) - PALETTES */
 

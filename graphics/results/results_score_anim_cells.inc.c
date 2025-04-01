@@ -155,9 +155,11 @@ AnimationCel results_score_cel009[] = {
 
 // [D_0890ba92]
 AnimationCel results_score_cel010[] = {
-    /* Len */ 2,
-    /* 000 */ 0x00f8, 0x41ee, 0x0014,
-    /* 001 */ 0x00f8, 0x4002, 0x0012
+    /* Len */ 4,
+            0x00f2, 0x01e4, 0x005a,
+            0x40f8, 0x81c5, 0x0068,
+            0x40f8, 0x81e6, 0x006c,
+            0x40f8, 0x81f6, 0x006e
 };
 
 // [D_0890baa0]

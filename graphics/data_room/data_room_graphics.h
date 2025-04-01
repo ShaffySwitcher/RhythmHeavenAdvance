@@ -17,6 +17,9 @@ extern struct Animation anim_data_room_user_fall_asleep[];
 extern struct CompressedGraphics D_08cc77a4;
 extern struct CompressedGraphics D_08cc7a40;
 extern struct CompressedGraphics D_08cc7330;
+extern const u8 archives_bgtile_bin;
+extern const u8 archives_bgmap_bin;
+
 
 /* DATA ROOM (MENU) - PALETTES */
 

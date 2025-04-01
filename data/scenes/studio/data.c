@@ -10,14 +10,14 @@
 // [D_089d8448] Graphics Table
 struct GraphicsTable studio_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08cd5d64,
+        /* Src.  */ &studio_bgtile_bin,
         /* Dest. */ BG_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 7136
     },
     /* BG Map */ {
-        /* Src.  */ &D_08cd62ec,
+        /* Src.  */ &studio_bgmap_bin,
         /* Dest. */ BG_MAP_BASE(0xE800),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 4096
     },
     /* BG Map */ {
         /* Src.  */ &D_08cd6434,
@@ -25,9 +25,9 @@ struct GraphicsTable studio_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08cd5288,
+        /* Src.  */ &studio_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 2804
     },
     /* BG Palette */ {
         /* Src.  */ studio_bg_pal,

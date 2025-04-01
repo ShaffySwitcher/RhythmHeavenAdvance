@@ -26,6 +26,9 @@ extern struct CompressedGraphics D_08cd5d64;
 extern struct CompressedGraphics D_08cd62ec;
 extern struct CompressedGraphics D_08cd6434;
 extern struct CompressedGraphics D_08cd5288;
+extern const u8 studio_bgmap_bin;
+extern const u8 studio_bgtile_bin;
+extern const u8 studio_obj_bin;
 
 /* STUDIO - PALETTES */
 

@@ -10,14 +10,14 @@
 // [D_089cdaf4] Graphics Table
 struct GraphicsTable data_room_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08cc77a4,
+        /* Src.  */ &archives_bgtile_bin,
         /* Dest. */ BG_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 4704
     },
     /* BG Map */ {
-        /* Src.  */ &D_08cc7a40,
+        /* Src.  */ &archives_bgmap_bin,
         /* Dest. */ BG_MAP_BASE(0xE800),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 2048
     },
     /* OBJ Tileset */ {
         /* Src.  */ &D_08cc7330,
