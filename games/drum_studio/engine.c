@@ -228,9 +228,9 @@ struct CompressedGraphics *drum_studio_buffered_textures[] = {
 // [D_089e2a08] Graphics Table (Studio Drumming)
 struct GraphicsTable drum_studio_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c4fc44,
+        /* Src.  */ &drum_lesson_bg_bin,
         /* Dest. */ BG_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 5664
     },
     /* BG Map */ {
         /* Src.  */ &D_08c51344,
@@ -238,9 +238,9 @@ struct GraphicsTable drum_studio_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c4efe4,
+        /* Src.  */ &drum_lesson_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 19192
     },
     /* BG Palette */ {
         /* Src.  */ drum_lessons_bg_screen_pal,
@@ -258,9 +258,9 @@ struct GraphicsTable drum_studio_gfx_table[] = {
 // [D_089e2a50] Graphics Table (Drum Lessons)
 struct GraphicsTable drum_lessons_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c4fc44,
+        /* Src.  */ &drum_lesson_bg_bin,
         /* Dest. */ BG_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 5664
     },
     /* BG Map */ {
         /* Src.  */ &D_08c515bc,
@@ -288,9 +288,9 @@ struct GraphicsTable drum_lessons_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c4efe4,
+        /* Src.  */ &drum_lesson_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 19192
     },
     /* BG Palette */ {
         /* Src.  */ drum_lessons_bg_screen_pal,

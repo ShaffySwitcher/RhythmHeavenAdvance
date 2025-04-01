@@ -100,6 +100,8 @@ extern struct CompressedGraphics D_08c4f5ac;
 extern struct CompressedGraphics D_08c50f54;
 extern struct CompressedGraphics D_08c510d4;
 extern struct CompressedGraphics D_08c50e04;
+extern const u8 drum_lesson_bg_bin;
+extern const u8 drum_lesson_obj_bin;
 
 // BG Monitor
 extern struct CompressedGraphics D_08c71ed4;

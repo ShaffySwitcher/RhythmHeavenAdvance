@@ -373,7 +373,7 @@ const char *cafe_dialogue_rhythm_sense[] = {
         "\n",
     /* ------------------------------------------------ */
         "\n"
-        "When your sense of rhythm",
+        "When your sense of rhythm"
         "improves... that's gotta be\n"
         "euphoric, huh?",
     /* ------------------------------------------------ */
