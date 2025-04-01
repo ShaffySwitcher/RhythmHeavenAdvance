@@ -24,6 +24,7 @@ extern struct Animation anim_main_menu_blank3[];
 extern struct CompressedGraphics D_08ccb374;
 extern struct CompressedGraphics D_08ccb840;
 extern struct CompressedGraphics D_08ccb298;
+extern const u8 mainmenu_obj_bin;
 
 /* MAIN MENU - PALETTES */
 

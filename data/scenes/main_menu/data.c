@@ -26,9 +26,9 @@ struct GraphicsTable main_menu_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08ccb298,
+        /* Src.  */ &mainmenu_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 22500
     },
     /* BG Palette */ {
         /* Src.  */ main_menu_pal,
