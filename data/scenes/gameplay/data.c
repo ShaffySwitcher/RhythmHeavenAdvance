@@ -10,9 +10,9 @@
 // [D_089cfd7c] Graphics Table
 struct GraphicsTable gameplay_common_gfx_table[] = {
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08ccca5c,
+        /* Src.  */ &common_tiles_bin,
         /* Dest. */ OBJ_TILESET_BASE(0x7800),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 2048
     },
     /* OBJ Palette */ {
         /* Src.  */ gameplay_obj_pal,
