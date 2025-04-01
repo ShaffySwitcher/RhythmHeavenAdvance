@@ -20,9 +20,9 @@ struct GraphicsTable options_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c76ca4,
+        /* Src.  */ &options_tile_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 13120
     },
     /* BG Palette */ {
         /* Src.  */ options_pal,
