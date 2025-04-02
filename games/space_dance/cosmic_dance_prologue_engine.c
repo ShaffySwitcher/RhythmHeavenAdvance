@@ -22,9 +22,9 @@ struct GraphicsTable cosmic_dance_prologue_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08beaf78,
+        /* Src.  */ &cosmicdance_intro_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 10896
     },
     /* BG Palette */ {
         /* Src.  */ cosmic_dance_prologue_bg_pal,

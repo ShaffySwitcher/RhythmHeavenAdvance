@@ -12,9 +12,9 @@ struct CompressedGraphics *quiz_show_buffered_textures[] = {
 // [D_089e5d30] Graphics Table
 struct GraphicsTable quiz_show_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c7d2ac,
+        /* Src.  */ &quiz_show_bg_bin,
         /* Dest. */ BG_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 7104
     },
     /* BG Map */ {
         /* Src.  */ &D_08c7db1c,
@@ -27,9 +27,9 @@ struct GraphicsTable quiz_show_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c7d524,
+        /* Src.  */ &quiz_show_bg_map_bin,
         /* Dest. */ BG_MAP_BASE(0xF000),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 2048
     },
     /* BG Map */ {
         /* Src.  */ &D_08c7d9d0,

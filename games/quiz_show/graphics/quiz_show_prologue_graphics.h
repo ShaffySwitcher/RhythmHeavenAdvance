@@ -12,6 +12,7 @@ extern struct Animation anim_quiz_show_prologue_title[];
 extern struct CompressedGraphics D_08c04434;
 extern struct CompressedGraphics D_08c04940;
 extern struct CompressedGraphics D_08c02a34;
+extern const u8 quizshow_intro_obj_bin;
 
 /* PROLOGUE (QUIZ SHOW) - PALETTES */
 

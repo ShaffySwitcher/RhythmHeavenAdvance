@@ -337,7 +337,7 @@ struct LevelData level_data_table[] = {
     },
     /* TAP_TRIAL_2 */ {
         /* Entry Scene   */ &scene_tap_trial_2,
-        /* Level Name    */ "Turbo Tap Trial",
+        /* Level Name    */ "Tap Trial 2",
         /* Level Desc.   */ "The monkeys are \n"
                             "bringing their A game!\n"
                             "Can you keep up? Don't\n"

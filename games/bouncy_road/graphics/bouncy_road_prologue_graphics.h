@@ -15,6 +15,7 @@ extern struct Animation anim_bouncy_road_prologue_title[];
 extern struct CompressedGraphics D_08bee468;
 extern struct CompressedGraphics D_08bee52c;
 extern struct CompressedGraphics D_08bee430;
+extern const u8 bouncy_intro_bin;
 
 /* PROLOGUE (BOUNCY ROAD) - PALETTES */
 
