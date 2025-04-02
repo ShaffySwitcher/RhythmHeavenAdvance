@@ -16,6 +16,7 @@ extern struct Animation anim_rank_results_comment_append[];
 /* RESULTS (RANK) - COMPRESSED GRAPHICS */
 
 extern struct CompressedGraphics D_08cd4a50;
+extern const u8 result_tile_bin;
 
 /* RESULTS (RANK) - PALETTES */
 
