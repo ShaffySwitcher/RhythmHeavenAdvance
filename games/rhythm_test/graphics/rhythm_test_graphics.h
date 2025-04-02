@@ -23,6 +23,9 @@ extern struct CompressedGraphics D_08c6a830;
 extern struct CompressedGraphics D_08c6a9c4;
 extern struct CompressedGraphics D_08c6ab24;
 extern struct CompressedGraphics D_08c6a350;
+extern const u8 rtest_obj_bin;
+extern const u8 rtest_bg_bin;
+extern const u8 rtest_bg_map_bin;
 
 /* RHYTHM TEST - PALETTES */
 
