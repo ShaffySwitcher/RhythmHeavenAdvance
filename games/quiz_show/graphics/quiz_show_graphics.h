@@ -4,7 +4,6 @@
 #include "graphics.h"
 
 /* QUIZ SHOW - ANIMATIONS */
-extern const u8 quiz_show_obj_bin;
 
 extern struct Animation anim_quiz_show_player_press_button_l[];
 extern struct Animation anim_quiz_show_player_press_button_r[];
@@ -57,6 +56,9 @@ extern struct CompressedGraphics D_08c7da68;
 extern struct CompressedGraphics D_08c7d524;
 extern struct CompressedGraphics D_08c7d9d0;
 extern struct CompressedGraphics D_08c7c8e0;
+extern const u8 quiz_show_obj_bin;
+extern const u8 quiz_show_bg_bin;
+extern const u8 quiz_show_bg_map_bin;
 
 /* QUIZ SHOW - PALETTES */
 

@@ -22,9 +22,9 @@ struct GraphicsTable quiz_show_prologue_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c02a34,
+        /* Src.  */ &quizshow_intro_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 7168
     },
     /* BG Palette */ {
         /* Src.  */ quiz_show_prologue_pal,

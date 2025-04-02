@@ -22,9 +22,9 @@ struct GraphicsTable bunny_hop_prologue_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c1f214,
+        /* Src.  */ &bunnyhop_intro_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 19936
     },
     /* BG Palette */ {
         /* Src.  */ bunny_hop_prologue_pal,

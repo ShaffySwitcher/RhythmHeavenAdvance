@@ -29,6 +29,7 @@ extern struct Animation anim_cosmic_dance_prologue_dancer[];
 extern struct CompressedGraphics D_08beb2f8;
 extern struct CompressedGraphics D_08beb48c;
 extern struct CompressedGraphics D_08beaf78;
+extern const u8 cosmicdance_intro_obj_bin;
 
 /* PROLOGUE (COSMIC DANCE) - PALETTES */
 

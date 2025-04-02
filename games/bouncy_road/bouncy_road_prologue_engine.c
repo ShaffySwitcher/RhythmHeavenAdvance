@@ -22,9 +22,9 @@ struct GraphicsTable bouncy_road_prologue_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08bee430,
+        /* Src.  */ &bouncy_intro_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 17600
     },
     /* BG Palette */ {
         /* Src.  */ bouncy_road_prologue_pal,

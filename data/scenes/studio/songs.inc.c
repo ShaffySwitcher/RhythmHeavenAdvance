@@ -113,7 +113,7 @@ struct StudioEntry studio_song_table[] = {
         /* Drum Script */ script_studio_snappy_trio
     },
     /* TAP_TRIAL_2 */ {
-        /* Full Title  */ "Turbo Tap Trial",
+        /* Full Title  */ "Tap Trial 2",
         /* Short Title */ NULL,
         /* Drum Script */ script_studio_tap_trial_2
     },
