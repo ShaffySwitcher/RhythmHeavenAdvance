@@ -41,6 +41,9 @@ extern struct CompressedGraphics D_08cc9854;
 extern struct CompressedGraphics D_08cc9d14;
 extern struct CompressedGraphics D_08cc9e14;
 extern struct CompressedGraphics D_08cc9148;
+extern const u8 gameselect_bg_bin;
+extern const u8 gameselect_bg_map_bin;
+extern const u8 gameselect_obj_bin;
 
 /* GAME SELECT - PALETTES */
 
