@@ -13,6 +13,7 @@ extern struct Animation anim_fireworks_prologue_unused[];
 extern struct CompressedGraphics D_08bf0eb8;
 extern struct CompressedGraphics D_08bf12dc;
 extern struct CompressedGraphics D_08bef660;
+extern const u8 fireworks_obj_bin;
 
 /* PROLOGUE (FIREWORKS) - PALETTES */
 

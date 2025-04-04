@@ -22,9 +22,9 @@ struct GraphicsTable karate_man_prologue_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08be9f5c,
+        /* Src.  */ &karateman_intro_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 25520
     },
     /* BG Palette */ {
         /* Src.  */ karate_man_prologue_bg_pal,
