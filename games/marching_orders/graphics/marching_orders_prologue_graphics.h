@@ -12,7 +12,7 @@ extern struct Animation anim_marching_orders_prologue_title[];
 extern struct CompressedGraphics D_08bfbe68;
 extern struct CompressedGraphics D_08bfc1f8;
 extern struct CompressedGraphics D_08bfa204;
-
+extern const u8 marching_intro_bin;
 /* PROLOGUE (MARCHING ORDERS) - PALETTES */
 
 extern Palette marching_orders_prologue_obj_pal[];

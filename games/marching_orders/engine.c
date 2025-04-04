@@ -70,9 +70,9 @@ struct GraphicsTable marching_orders_1_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c6c658,
+        /* Src.  */ &marching_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 20384
     },
     /* BG Palette */ {
         /* Src.  */ marching_orders_bg_pal,
@@ -100,14 +100,19 @@ struct GraphicsTable marching_orders_1_gfx_table[] = {
 // [D_089e5280] Graphics Table (Remix 7, Remix 8)
 struct GraphicsTable marching_orders_remix_7_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08ce5db0,
+        /* Src.  */ &mo_again_bin,
         /* Dest. */ BG_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 8192
     },
     /* BG Map */ {
         /* Src.  */ &D_08ce615c,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
+    },
+    /* BG Map */ {
+        /* Src.  */ &mo_map_bin,
+        /* Dest. */ BG_MAP_BASE(0xF000),
+        /* Size  */ 2048
     },
     /* BG Map */ {
         /* Src.  */ &D_08ce6278,
