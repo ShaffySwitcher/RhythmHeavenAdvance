@@ -39,6 +39,7 @@ extern struct CompressedGraphics D_08be0ce8; // BG Map (Serious Mode)
 extern struct CompressedGraphics D_08bdc938; // BG Textures
 extern struct CompressedGraphics D_08be08e0; // BG Map
 extern struct CompressedGraphics D_08be0480; // OBJ Textures
+extern const u8 karateman_tiles_bin;
 
 /* KARATE MAN - PALETTES */
 

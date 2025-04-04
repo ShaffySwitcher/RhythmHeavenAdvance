@@ -76,9 +76,9 @@ struct GraphicsTable karate_man_faces_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08be0480,
+        /* Src.  */ &karateman_tiles_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 26624
     },
     /* BG Palette */ {
         /* Src.  */ karate_man_pal,
@@ -121,9 +121,9 @@ struct GraphicsTable karate_man_remix_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08be0480,
+        /* Src.  */ &karateman_tiles_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 26624
     },
     /* BG Palette */ {
         /* Src.  */ karate_man_pal,
@@ -161,9 +161,9 @@ struct GraphicsTable karate_man_2_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08be0480,
+        /* Src.  */ &karateman_tiles_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 26624
     },
     /* BG Palette */ {
         /* Src.  */ karate_man_2_pal,
