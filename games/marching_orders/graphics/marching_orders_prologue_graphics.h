@@ -27,6 +27,7 @@ extern struct Animation anim_marching_orders_2_prologue_title[];
 extern struct CompressedGraphics D_08bff238;
 extern struct CompressedGraphics D_08bff704;
 extern struct CompressedGraphics D_08bfc8f4;
+extern const u8 marching2_intro_bin;
 
 /* PROLOGUE (MARCHING ORDERS 2) - PALETTES */
 

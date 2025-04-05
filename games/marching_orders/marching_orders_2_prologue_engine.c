@@ -22,9 +22,9 @@ struct GraphicsTable marching_orders_2_prologue_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08bfc8f4,
+        /* Src.  */ &marching2_intro_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 20256
     },
     /* BG Palette */ {
         /* Src.  */ marching_orders_2_prologue_bg_pal,
