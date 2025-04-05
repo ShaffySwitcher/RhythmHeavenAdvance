@@ -14,6 +14,7 @@ extern struct Animation anim_night_walk_prologue_title[];
 extern struct CompressedGraphics D_08bebaa4;
 extern struct CompressedGraphics D_08bebbd4;
 extern struct CompressedGraphics D_08beba58;
+extern const u8 night_intro_bin;
 
 /* PROLOGUE (NIGHT WALK) - PALETTES */
 

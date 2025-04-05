@@ -3,10 +3,28 @@
 
 // [D_088ae2f8] Palette
 Palette night_walk_prologue_pal[] = {
-    /* PALETTE 00 */ {
+    /* PALETTE 01 */ {
+        /* 00 */ TO_RGB555(0x5a0029),
+        /* 01 */ TO_RGB555(0x0018FF),
+        /* 02 */ TO_RGB555(0xFFFFFF),
+        /* 03 */ TO_RGB555(0x000000),
+        /* 04 */ TO_RGB555(0xFF0800),
+        /* 05 */ TO_RGB555(0x29FF18),
+        /* 06 */ TO_RGB555(0x7be7FF),
+        /* 07 */ TO_RGB555(0xf7FF18),
+        /* 08 */ TO_RGB555(0xFF7BE7),
+        /* 09 */ TO_RGB555(0x001063),
+        /* 10 */ TO_RGB555(0x080894),
+        /* 11 */ TO_RGB555(0x0008C6),
+        /* 12 */ TO_RGB555(0x636363),
+        /* 13 */ TO_RGB555(0x636363),
+        /* 14 */ TO_RGB555(0x636363),
+        /* 15 */ TO_RGB555(0x636363)
+    },
+       /* PALETTE 00 */ {
         /* 00 */ TO_RGB555(0x580028),
         /* 01 */ TO_RGB555(0x000000),
-        /* 02 */ TO_RGB555(0x000000),
+        /* 02 */ TO_RGB555(0xFFFFFF),
         /* 03 */ TO_RGB555(0x000000),
         /* 04 */ TO_RGB555(0x000000),
         /* 05 */ TO_RGB555(0xF0F818),
@@ -22,3 +40,5 @@ Palette night_walk_prologue_pal[] = {
         /* 15 */ TO_RGB555(0xF8F8F8)
     }
 };
+
+

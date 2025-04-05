@@ -22,9 +22,9 @@ struct GraphicsTable night_walk_prologue_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08beba58,
+        /* Src.  */ &night_intro_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 10240
     },
     /* BG Palette */ {
         /* Src.  */ night_walk_prologue_pal,

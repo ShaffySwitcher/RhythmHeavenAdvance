@@ -50,14 +50,14 @@ struct TitleLogoCharData title_logo_char_data[TOTAL_TITLE_LOGO_BUBBLES] = {
 // [D_089dcfa4] Graphics Table
 struct GraphicsTable title_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08cd663c,
+        /* Src.  */ &bg_tiles_bin,
         /* Dest. */ BG_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 2592
     },
     /* BG Map */ {
-        /* Src.  */ &D_08cd7ae0,
+        /* Src.  */ &titlescreen_map_bin,
         /* Dest. */ BG_MAP_BASE(0xE800),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 2048
     },
     /* OBJ Tileset */ {
         /* Src.  */ &CD7948_titlescreen_obj_bin,

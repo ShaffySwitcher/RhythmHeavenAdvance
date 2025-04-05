@@ -45,9 +45,9 @@ struct GraphicsTable night_walk_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c52420,
+        /* Src.  */ &nightwalk_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 12288
     },
     /* BG Palette */ {
         /* Src.  */ night_walk_pal,
