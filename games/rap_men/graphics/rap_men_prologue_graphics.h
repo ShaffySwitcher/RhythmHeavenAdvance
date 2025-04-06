@@ -26,6 +26,9 @@ extern struct Animation anim_rap_women_prologue_title[];
 extern struct CompressedGraphics D_08c20f8c;
 extern struct CompressedGraphics D_08c21254;
 extern struct CompressedGraphics D_08c209cc;
+extern const u8 rapmen_intro_obj_bin;
+extern const u8 rapwomen_intro_obj_bin;
+
 
 /* PROLOGUE (RAP WOMEN) - PALETTES */
 

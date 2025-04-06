@@ -8,10 +8,11 @@ AnimationCel power_calligraphy_prologue_cel000[] = {
 
 // [D_088b0060]
 AnimationCel power_calligraphy_prologue_cel001[] = {
-    /* Len */ 3,
-    /* 000 */ 0x40e0, 0xc1b8, 0x0100,
-    /* 001 */ 0x40e0, 0xc1f8, 0x0108,
-    /* 002 */ 0x80e0, 0x8038, 0x0110
+    4,
+    0x40e0, 0xc1b5, 0x0100,
+    0x40e0, 0xc1f5, 0x0108,
+    0x80e0, 0x8035, 0x0110,
+    0x00e3, 0x8045, 0x0160
 };
 
 // [D_088b0074]
