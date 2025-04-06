@@ -45,6 +45,7 @@ extern struct CompressedGraphics D_08c88168;
 extern struct CompressedGraphics D_08c88420;
 extern struct CompressedGraphics D_08c88530;
 extern struct CompressedGraphics D_08c86e74;
+extern const u8 ratrace_obj_bin;
 
 /* RAT RACE - PALETTES */
 

@@ -22,9 +22,9 @@ struct GraphicsTable rap_women_prologue_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c209cc,
+        /* Src.  */ &rapwomen_intro_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 6576
     },
     /* BG Palette */ {
         /* Src.  */ rap_women_prologue_pal,

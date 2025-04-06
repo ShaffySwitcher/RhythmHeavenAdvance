@@ -42,9 +42,9 @@ struct GraphicsTable rat_race_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c86e74,
+        /* Src.  */ &ratrace_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 24572
     },
     /* BG Palette */ {
         /* Src.  */ rat_race_pal,

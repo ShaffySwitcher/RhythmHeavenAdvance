@@ -25,6 +25,8 @@ extern struct CompressedGraphics D_08c82710;
 extern struct CompressedGraphics D_08c84f54;
 extern struct CompressedGraphics D_08c852c8;
 extern struct CompressedGraphics D_08c84ce4;
+extern const u8 rapmen_obj_bin;
+extern const u8 rapwomen_obj_bin;
 
 /* RAP MEN - PALETTES */
 

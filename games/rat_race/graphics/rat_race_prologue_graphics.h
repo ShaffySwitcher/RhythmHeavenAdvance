@@ -13,6 +13,7 @@ extern struct Animation anim_rat_race_prologue_title[];
 extern struct CompressedGraphics D_08c22764;
 extern struct CompressedGraphics D_08c229b4;
 extern struct CompressedGraphics D_08c21f88;
+extern const u8 ratrace_intro_obj_bin;
 
 /* PROLOGUE (RAT RACE) - PALETTES */
 

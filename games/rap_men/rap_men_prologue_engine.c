@@ -22,9 +22,9 @@ struct GraphicsTable rap_men_prologue_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c1f4b4,
+        /* Src.  */ &rapmen_intro_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 4096
     },
     /* BG Palette */ {
         /* Src.  */ rap_men_prologue_pal,

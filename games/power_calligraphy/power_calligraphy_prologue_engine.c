@@ -22,9 +22,9 @@ struct GraphicsTable power_calligraphy_prologue_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08bf8a30,
+        /* Src.  */ &power_intro_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 14768
     },
     /* BG Palette */ {
         /* Src.  */ power_calligraphy_prologue_pal,

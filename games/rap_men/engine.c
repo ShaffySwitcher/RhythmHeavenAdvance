@@ -52,9 +52,9 @@ struct GraphicsTable rap_men_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c82710,
+        /* Src.  */ &rapmen_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 26422
     },
     /* BG Palette */ {
         /* Src.  */ rap_men_bg_pal,
@@ -102,9 +102,9 @@ struct GraphicsTable rap_women_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c84ce4,
+        /* Src.  */ &rapwomen_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 26326
     },
     /* BG Palette */ {
         /* Src.  */ rap_women_bg_pal,
