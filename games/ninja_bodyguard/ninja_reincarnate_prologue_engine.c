@@ -22,9 +22,9 @@ struct GraphicsTable ninja_reincarnate_prologue_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c24200,
+        /* Src.  */ &ninjadescendant_intro_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 9664
     },
     /* BG Palette */ {
         /* Src.  */ ninja_reincarnate_prologue_pal,

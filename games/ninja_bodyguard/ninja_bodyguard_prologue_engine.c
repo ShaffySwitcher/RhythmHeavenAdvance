@@ -12,19 +12,19 @@ struct CompressedGraphics *ninja_bodyguard_prologue_buffered_textures[] = {
 // [D_089ed18c] Graphics Table
 struct GraphicsTable ninja_bodyguard_prologue_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c23a3c,
+        /* Src.  */ &bodyguard_intro_bg_bin,
         /* Dest. */ BG_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 7106
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c23cd0,
+        /* Src.  */ &bodyguard_intro_bg_map_bin,
         /* Dest. */ BG_MAP_BASE(0xE800),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 2048
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c22ee4,
+        /* Src.  */ &bodyguard_intro_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 9056
     },
     /* BG Palette */ {
         /* Src.  */ ninja_bodyguard_prologue_pal,

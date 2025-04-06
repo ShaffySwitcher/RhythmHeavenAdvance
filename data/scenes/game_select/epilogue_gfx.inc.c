@@ -16,7 +16,24 @@
         },                                                                  \
         END_OF_GRAPHICS_TABLE                                               \
     }
-
+    #define INLINE_GFX_TABLE_ninja(tiles, map, palette) (struct GraphicsTable[]) {    \
+        /* BG Tileset */ {                                                  \
+            /* Src.  */ tiles,                                              \
+            /* Dest. */ BG_TILESET_BASE(0),                                 \
+            /* Size  */ 9856                               \
+        },                                                                  \
+        /* BG Map */ {                                                      \
+            /* Src.  */ map,                                                \
+            /* Dest. */ BG_MAP_BASE(0xE800),                                \
+            /* Size  */ 2048                               \
+        },                                                                  \
+        /* BG Palette */ {                                                  \
+            /* Src.  */ palette,                                            \
+            /* Dest. */ BG_PALETTE_BUFFER(0),                               \
+            /* Size  */ 0x140                                               \
+        },                                                                  \
+        END_OF_GRAPHICS_TABLE                                               \
+    }
 
 // [D_089ce0b0] Karate Man
 const struct GraphicsTable *epilogue_karate_man_gfx_tables[] = {
@@ -112,7 +129,7 @@ const struct GraphicsTable *epilogue_bouncy_road_2_gfx_tables[] = {
 // [D_089ce14c] Ninja Bodyguard
 const struct GraphicsTable *epilogue_ninja_bodyguard_gfx_tables[] = {
     /* TRY AGAIN */ INLINE_GFX_TABLE(&D_08cb28a4, &D_08cb2a08, epilogue_ninja_bodyguard_bg_pal),
-    /* JUST OK   */ INLINE_GFX_TABLE(&D_08cb28a4, &D_08cb2b54, epilogue_ninja_bodyguard_bg_pal),
+    /* JUST OK   */ INLINE_GFX_TABLE_ninja(&bodyguard_prologue_bin, &bodyguard_prologue_map_bin, epilogue_ninja_bodyguard_bg_pal),
     /* SUPERB    */ INLINE_GFX_TABLE(&D_08cb28a4, &D_08cb2ccc, epilogue_ninja_bodyguard_bg_pal)
 };
 

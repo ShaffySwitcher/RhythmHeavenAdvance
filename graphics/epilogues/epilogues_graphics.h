@@ -201,6 +201,8 @@ extern struct CompressedGraphics D_08cb28a4;
 extern struct CompressedGraphics D_08cb2ccc;
 extern struct CompressedGraphics D_08cb2b54;
 extern struct CompressedGraphics D_08cb2a08;
+extern const u8 bodyguard_prologue_bin;
+extern const u8 bodyguard_prologue_map_bin;
 extern Palette epilogue_ninja_bodyguard_bg_pal[];
 
 extern struct CompressedGraphics D_08cb38ac;

@@ -12,9 +12,9 @@ struct CompressedGraphics *polyrhythm_buffered_textures[] = {
 // [D_089e596c] Graphics Table (Polyrhythm, Remix 4)
 struct GraphicsTable polyrhythm_1_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c781ac,
+        /* Src.  */ &polyrhythm_obj_bin,
         /* Dest. */ BG_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 18448
     },
     /* BG Map */ {
         /* Src.  */ &D_08c78a04,
@@ -22,9 +22,9 @@ struct GraphicsTable polyrhythm_1_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c781ac,
+        /* Src.  */ &polyrhythm_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 18448
     },
     /* BG Palette */ {
         /* Src.  */ polyrhythm_pal,
@@ -42,9 +42,9 @@ struct GraphicsTable polyrhythm_1_gfx_table[] = {
 // [D_089e59b4] Graphics Table (Polyrhythm 2)
 struct GraphicsTable polyrhythm_2_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c781ac,
+        /* Src.  */ &polyrhythm_obj_bin,
         /* Dest. */ BG_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 18448
     },
     /* BG Map */ {
         /* Src.  */ &D_08c78a04,
@@ -52,9 +52,9 @@ struct GraphicsTable polyrhythm_2_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c781ac,
+        /* Src.  */ &polyrhythm_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 18448
     },
     /* BG Palette */ {
         /* Src.  */ polyrhythm_2_pal,
