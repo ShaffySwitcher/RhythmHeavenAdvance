@@ -176,7 +176,7 @@ void title_scene_start(void *sVar, s32 dArg) {
     func_08007324(FALSE);
     func_080073f0();
 
-    gTitle->directiveText = sprite_create(gSpriteHandler, anim_title_text, 0, 120, 132, 0x800, 1, 0x7f, 0x8000);
+    gTitle->directiveText = sprite_create(gSpriteHandler, anim_title_text, 0, 120, 129, 0x800, 1, 0x7f, 0x8000);
     gTitle->stars = sprite_create(gSpriteHandler, anim_title_stars_appear, 0, 120, 64, 0x4864, 1, 0x7f, 0x8000);
     textPrinter = text_printer_create_new(get_current_mem_id(), 1, 240, 32);
     text_printer_set_x_y(textPrinter, 0, 8);

@@ -35,6 +35,8 @@ extern const u8 CD7948_titlescreen_obj_bin;
 extern struct CompressedGraphics D_08cd663c;
 extern struct CompressedGraphics D_08cd7ae0;
 extern struct CompressedGraphics D_08cd7948;
+extern const u8 bg_tiles_bin;
+extern const u8 titlescreen_map_bin;
 
 /* TITLE - PALETTES */
 
