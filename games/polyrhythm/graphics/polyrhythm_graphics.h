@@ -28,6 +28,7 @@ extern struct CompressedGraphics D_08c781ac;
 extern struct CompressedGraphics D_08c78a04;
 extern struct CompressedGraphics D_08c781ac;
 extern struct CompressedGraphics D_08c78a04;
+extern const u8 polyrhythm_obj_bin;
 
 /* POLYRHYTHM - PALETTES */
 
