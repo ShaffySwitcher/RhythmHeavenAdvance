@@ -30,6 +30,8 @@ extern struct CompressedGraphics D_08c5c134; // BG Map - Potato
 extern struct CompressedGraphics D_08c5915c; // OBJ Tiles
 extern struct CompressedGraphics D_08c5badc; // BG Tiles - Mask
 extern struct CompressedGraphics D_08c5c3a0; // BG Map - Mask
+extern const u8 mask_bg_bin;
+extern const u8 mask_bg_map_bin;
 
 /* RHYTHM TWEEZERS - PALETTES */
 

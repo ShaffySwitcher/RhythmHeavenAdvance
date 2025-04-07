@@ -12,6 +12,7 @@ extern struct Animation anim_remix_8_prologue_title[];
 extern struct CompressedGraphics D_08c1e7d0;
 extern struct CompressedGraphics D_08c1ece8;
 extern struct CompressedGraphics D_08c1a47c;
+extern const u8 remix8_intro_obj_bin;
 
 /* PROLOGUE (REMIX 8) - PALETTES */
 

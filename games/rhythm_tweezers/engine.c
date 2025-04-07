@@ -51,14 +51,14 @@ struct GraphicsTable rhythm_tweezers_1_onion_gfx_table[] = {
         /* Size  */ 0x140
     },
     /* BG Tileset */ {
-        /* Src.  */ &D_08c5badc,
+        /* Src.  */ &mask_bg_bin,
         /* Dest. */ BG_TILESET_BASE(0x8000),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 7168
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c5c3a0,
+        /* Src.  */ &mask_bg_map_bin,
         /* Dest. */ BG_MAP_BASE(0xE000),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 4096
     },
     END_OF_GRAPHICS_TABLE
 };
@@ -91,14 +91,14 @@ struct GraphicsTable rhythm_tweezers_1_turnip_gfx_table[] = {
         /* Size  */ 0x140
     },
     /* BG Tileset */ {
-        /* Src.  */ &D_08c5badc,
+        /* Src.  */ &mask_bg_bin,
         /* Dest. */ BG_TILESET_BASE(0x8000),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 7168
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c5c3a0,
+        /* Src.  */ &mask_bg_map_bin,
         /* Dest. */ BG_MAP_BASE(0xE000),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 4096
     },
     END_OF_GRAPHICS_TABLE
 };
@@ -131,14 +131,14 @@ struct GraphicsTable rhythm_tweezers_1_potato_gfx_table[] = {
         /* Size  */ 0x140
     },
     /* BG Tileset */ {
-        /* Src.  */ &D_08c5badc,
+        /* Src.  */ &mask_bg_bin,
         /* Dest. */ BG_TILESET_BASE(0x8000),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 7168
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c5c3a0,
+        /* Src.  */ &mask_bg_map_bin,
         /* Dest. */ BG_MAP_BASE(0xE000),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 4096
     },
     END_OF_GRAPHICS_TABLE
 };
@@ -171,14 +171,14 @@ struct GraphicsTable rhythm_tweezers_2_onion_gfx_table[] = {
         /* Size  */ 0x140
     },
     /* BG Tileset */ {
-        /* Src.  */ &D_08c5badc,
+        /* Src.  */ &mask_bg_bin,
         /* Dest. */ BG_TILESET_BASE(0x8000),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 7168
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c5c3a0,
+        /* Src.  */ &mask_bg_map_bin,
         /* Dest. */ BG_MAP_BASE(0xE000),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 4096
     },
     END_OF_GRAPHICS_TABLE
 };
@@ -211,14 +211,14 @@ struct GraphicsTable rhythm_tweezers_2_turnip_gfx_table[] = {
         /* Size  */ 0x140
     },
     /* BG Tileset */ {
-        /* Src.  */ &D_08c5badc,
+        /* Src.  */ &mask_bg_bin,
         /* Dest. */ BG_TILESET_BASE(0x8000),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 7168
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c5c3a0,
+        /* Src.  */ &mask_bg_map_bin,
         /* Dest. */ BG_MAP_BASE(0xE000),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 4096
     },
     END_OF_GRAPHICS_TABLE
 };
@@ -251,14 +251,14 @@ struct GraphicsTable rhythm_tweezers_2_potato_gfx_table[] = {
         /* Size  */ 0x140
     },
     /* BG Tileset */ {
-        /* Src.  */ &D_08c5badc,
+        /* Src.  */ &mask_bg_bin,
         /* Dest. */ BG_TILESET_BASE(0x8000),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 7168
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c5c3a0,
+        /* Src.  */ &mask_bg_map_bin,
         /* Dest. */ BG_MAP_BASE(0xE000),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 4096
     },
     END_OF_GRAPHICS_TABLE
 };

@@ -12,6 +12,7 @@ extern struct Animation anim_rhythm_tweezers_prologue_title[];
 extern struct CompressedGraphics D_08beefac;
 extern struct CompressedGraphics D_08bef2ac;
 extern struct CompressedGraphics D_08bee62c;
+extern const u8 tweezers_intro_obj_bin;
 
 /* PROLOGUE (RHYTHM TWEEZERS) - PALETTES */
 

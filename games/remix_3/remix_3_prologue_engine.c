@@ -22,9 +22,9 @@ struct GraphicsTable remix_3_prologue_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c092e0,
+        /* Src.  */ &remix3_intro_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 13609
     },
     /* BG Palette */ {
         /* Src.  */ remix_3_prologue_pal,
