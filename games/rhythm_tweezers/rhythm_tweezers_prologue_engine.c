@@ -22,9 +22,9 @@ struct GraphicsTable rhythm_tweezers_prologue_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08bee62c,
+        /* Src.  */ &tweezers_intro_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 5248
     },
     /* BG Palette */ {
         /* Src.  */ rhythm_tweezers_prologue_bg_pal,
