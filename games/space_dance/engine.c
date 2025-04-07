@@ -88,9 +88,9 @@ struct GraphicsTable space_dance_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08ce296c,
+        /* Src.  */ &spacedance_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 25600
     },
     /* BG Palette */ {
         /* Src.  */ space_dance_bg_pal,

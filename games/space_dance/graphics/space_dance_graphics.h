@@ -54,6 +54,8 @@ extern struct CompressedGraphics D_08c38f60;
 extern struct CompressedGraphics D_08ce3978;
 extern struct CompressedGraphics D_08ce426c;
 extern struct CompressedGraphics D_08ce296c;
+extern const u8 spacedance_obj_bin;
+extern const u8 test_bin;
 
 /* SPACE DANCE - PALETTES */
 
