@@ -22,9 +22,9 @@ struct GraphicsTable space_dance_prologue_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c24f60,
+        /* Src.  */ &spacedance_intro_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 9264
     },
     /* BG Palette */ {
         /* Src.  */ space_dance_prologue_pal,

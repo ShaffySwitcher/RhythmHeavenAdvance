@@ -14,6 +14,7 @@ extern struct Animation anim_space_dance_prologue_faces[];
 extern struct CompressedGraphics D_08c2575c;
 extern struct CompressedGraphics D_08c25aa8;
 extern struct CompressedGraphics D_08c24f60;
+extern const u8 spacedance_intro_obj_bin;
 
 /* PROLOGUE (SPACE DANCE) - PALETTES */
 
