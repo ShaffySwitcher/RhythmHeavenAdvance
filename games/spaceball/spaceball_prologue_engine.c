@@ -22,9 +22,9 @@ struct GraphicsTable spaceball_prologue_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08be2298,
+        /* Src.  */ &spaceball_intro_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 6608
     },
     /* BG Palette */ {
         /* Src.  */ spaceball_prologue_bg_pal,

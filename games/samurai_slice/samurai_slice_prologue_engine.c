@@ -27,9 +27,9 @@ struct GraphicsTable samurai_slice_prologue_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08bf6678,
+        /* Src.  */ &samurai_intro_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 19760
     },
     /* BG Palette */ {
         /* Src.  */ samurai_slice_prologue_pal,

@@ -22,9 +22,9 @@ struct GraphicsTable sneaky_spirits_prologue_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08be0ff8,
+        /* Src.  */ &sneaky_intro_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 16316
     },
     /* BG Palette */ {
         /* Src.  */ sneaky_spirits_prologue_pal,

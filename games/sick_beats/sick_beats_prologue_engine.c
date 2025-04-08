@@ -22,9 +22,9 @@ struct GraphicsTable sick_beats_prologue_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c31e6c,
+        /* Src.  */ &sickbeats_intro_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 12592
     },
     /* BG Palette */ {
         /* Src.  */ sick_beats_prologue_pal,

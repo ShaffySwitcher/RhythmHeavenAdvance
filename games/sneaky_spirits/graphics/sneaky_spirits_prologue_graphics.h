@@ -12,6 +12,7 @@ extern struct Animation anim_sneaky_spirits_prologue_title[];
 extern struct CompressedGraphics D_08be1c50;
 extern struct CompressedGraphics D_08be1dfc;
 extern struct CompressedGraphics D_08be0ff8;
+extern const u8 sneaky_intro_bin;
 
 /* PROLOGUE (SNEAKY SPIRITS) - PALETTES */
 

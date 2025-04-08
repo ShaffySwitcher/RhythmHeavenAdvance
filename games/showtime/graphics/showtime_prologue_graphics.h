@@ -13,6 +13,7 @@ extern struct Animation anim_showtime_prologue_penguin[];
 extern struct CompressedGraphics D_08bed0ec;
 extern struct CompressedGraphics D_08bed4e4;
 extern struct CompressedGraphics D_08bec134;
+extern const u8 showtime_intro_obj_bin;
 
 /* PROLOGUE (SHOWTIME) - PALETTES */
 
