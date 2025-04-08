@@ -13,6 +13,7 @@ extern struct CompressedGraphics D_08bf7aa4;
 extern struct CompressedGraphics D_08bf7f04;
 extern struct CompressedGraphics D_08bf7d5c;
 extern struct CompressedGraphics D_08bf6678;
+extern const u8 samurai_intro_obj_bin;
 
 /* PROLOGUE (SAMURAI SLICE) - PALETTES */
 

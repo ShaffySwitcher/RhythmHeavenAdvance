@@ -22,9 +22,9 @@ struct GraphicsTable showtime_prologue_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08bec134,
+        /* Src.  */ &showtime_intro_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 4096
     },
     /* BG Palette */ {
         /* Src.  */ showtime_prologue_pal,

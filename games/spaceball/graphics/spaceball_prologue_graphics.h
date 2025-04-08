@@ -12,6 +12,7 @@ extern struct Animation anim_spaceball_prologue_title[];
 extern struct CompressedGraphics D_08be2fd8;
 extern struct CompressedGraphics D_08be3398;
 extern struct CompressedGraphics D_08be2298;
+extern const u8 spaceball_intro_obj_bin;
 
 /* PROLOGUE (SPACEBALL) - PALETTES */
 

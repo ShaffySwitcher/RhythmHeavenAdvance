@@ -14,6 +14,7 @@ extern struct Animation anim_sick_beats_prologue_unused[];
 extern struct CompressedGraphics D_08c33214;
 extern struct CompressedGraphics D_08c3355c;
 extern struct CompressedGraphics D_08c31e6c;
+extern const u8 sickbeats_intro_obj_bin;
 
 /* PROLOGUE (SICK BEATS) - PALETTES */
 
