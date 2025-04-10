@@ -22,9 +22,9 @@ struct GraphicsTable bon_dance_prologue_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08be3e20,
+        /* Src.  */ &bondance_intro_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 20608
     },
     /* BG Palette */ {
         /* Src.  */ bon_dance_prologue_bg_pal,
