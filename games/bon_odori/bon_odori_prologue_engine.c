@@ -22,9 +22,9 @@ struct GraphicsTable bon_odori_prologue_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08be75b8,
+        /* Src.  */ &bonodori_intro_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 6144
     },
     /* BG Palette */ {
         /* Src.  */ bon_odori_prologue_bg_pal,
