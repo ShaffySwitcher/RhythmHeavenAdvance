@@ -22,9 +22,9 @@ struct GraphicsTable wizards_waltz_prologue_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c33640,
+        /* Src.  */ &wizard_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 22240
     },
     /* BG Palette */ {
         /* Src.  */ wizards_waltz_prologue_pal,

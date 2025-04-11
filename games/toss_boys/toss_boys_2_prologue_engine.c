@@ -22,9 +22,9 @@ struct GraphicsTable toss_boys_2_prologue_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c2de80,
+        /* Src.  */ &tossteam2_intro_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 8448
     },
     /* BG Palette */ {
         /* Src.  */ toss_boys_2_prologue_bg_pal,
