@@ -13,6 +13,7 @@ extern struct Animation anim_tram_pauline_prologue_title[];
 extern struct CompressedGraphics D_08c3106c;
 extern struct CompressedGraphics D_08c3153c;
 extern struct CompressedGraphics D_08c30910;
+extern const u8 tramp_intro_obj_bin;
 
 /* PROLOGUE (TRAM AND PAULINE) - PALETTES */
 

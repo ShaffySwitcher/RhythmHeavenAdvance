@@ -22,9 +22,9 @@ struct GraphicsTable tram_pauline_prologue_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c30910,
+        /* Src.  */ &tramp_intro_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 10512
     },
     /* BG Palette */ {
         /* Src.  */ tram_pauline_prologue_pal,
