@@ -22,9 +22,9 @@ struct GraphicsTable snappy_trio_prologue_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08bf374c,
+        /* Src.  */ &snappy_intro_tiles_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 16384
     },
     /* BG Palette */ {
         /* Src.  */ snappy_trio_prologue_pal,

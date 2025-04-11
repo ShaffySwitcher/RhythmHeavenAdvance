@@ -22,6 +22,8 @@ extern struct Animation anim_clappy_trio_text_box[];
 extern struct CompressedGraphics D_08c61e18; // BG Tiles - The Clappy Trio
 extern struct CompressedGraphics D_08c6214c; // BG Map - The Clappy Trio
 extern struct CompressedGraphics D_08c61654; // OBJ Tiles - The Clappy Trio
+extern const u8 clappy_obj_bin;
+extern const u8 snappy_obj_bin;
 
 /* THE CLAPPY TRIO - PALETTES */
 

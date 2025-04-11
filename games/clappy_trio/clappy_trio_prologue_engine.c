@@ -22,9 +22,9 @@ struct GraphicsTable clappy_trio_prologue_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08bf16b4,
+        /* Src.  */ &clappy_intro_tiles_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 8192
     },
     /* BG Palette */ {
         /* Src.  */ clappy_trio_prologue_bg_pal,

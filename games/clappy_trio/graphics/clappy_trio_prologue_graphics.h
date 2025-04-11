@@ -12,6 +12,7 @@ extern struct Animation anim_clappy_trio_prologue_title[];
 extern struct CompressedGraphics D_08bf2f64;
 extern struct CompressedGraphics D_08bf33cc;
 extern struct CompressedGraphics D_08bf16b4;
+extern const u8 clappy_intro_tiles_bin;
 
 /* PROLOGUE (THE CLAPPY TRIO) - PALETTES */
 
@@ -27,6 +28,7 @@ extern struct Animation anim_snappy_trio_prologue_title[];
 extern struct CompressedGraphics D_08bf5ce8;
 extern struct CompressedGraphics D_08bf60c8;
 extern struct CompressedGraphics D_08bf374c;
+extern const u8 snappy_intro_tiles_bin;
 
 /* PROLOGUE (THE SNAPPY TRIO) - PALETTES */
 

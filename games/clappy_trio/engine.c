@@ -46,9 +46,9 @@ struct GraphicsTable clappy_trio_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c61654,
+        /* Src.  */ &clappy_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 16448
     },
     /* BG Palette */ {
         /* Src.  */ clappy_trio_bg_pal,
@@ -76,9 +76,9 @@ struct GraphicsTable snappy_trio_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c62d18,
+        /* Src.  */ &snappy_obj_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 12320
     },
     /* BG Palette */ {
         /* Src.  */ snappy_trio_bg_pal,
