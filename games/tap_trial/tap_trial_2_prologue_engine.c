@@ -22,9 +22,9 @@ struct GraphicsTable tap_trial_2_prologue_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c28814,
+        /* Src.  */ &tap2_intro_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 10016
     },
     /* BG Palette */ {
         /* Src.  */ tap_trial_2_prologue_bg_pal,

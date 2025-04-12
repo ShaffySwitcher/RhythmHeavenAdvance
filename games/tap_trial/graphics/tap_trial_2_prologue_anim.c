@@ -23,8 +23,5 @@ struct Animation anim_tap_trial_2_prologue_title[] = {
     /* 009 */ { tap_trial_2_prologue_cel010, 5 },
     /* 010 */ { tap_trial_2_prologue_cel011, 1 },
     /* 011 */ { tap_trial_2_prologue_cel012, 2 },
-    /* 012 */ { tap_trial_2_prologue_cel013, 3 },
-    /* 013 */ { tap_trial_2_prologue_cel014, 4 },
-    /* 014 */ { tap_trial_2_prologue_cel015, 5 },
     /* End */ END_ANIMATION
 };

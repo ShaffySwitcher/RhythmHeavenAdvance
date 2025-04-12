@@ -30,6 +30,7 @@ extern struct Animation anim_tap_trial_2_prologue_title[];
 extern struct CompressedGraphics D_08c2990c;
 extern struct CompressedGraphics D_08c29ce8;
 extern struct CompressedGraphics D_08c28814;
+extern const u8 tap2_intro_bin;
 
 /* PROLOGUE (TAP TRIAL 2) - PALETTES */
 
