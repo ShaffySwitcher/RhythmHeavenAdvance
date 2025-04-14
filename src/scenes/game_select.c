@@ -284,17 +284,17 @@ void start_campaign_notice(s32 id) {
     string = notice->text;
     memcpy(string, "\001C" "If you get a Perfect in\n\"", 45); // [Right now]
     strcat(string, level->name); // "<game_name>"
-    strcat(string, "\"\n"); // Get a perfect on this
+    strcat(string, "\"\nright now, you'll get the gift:\n"); // Get a perfect on this
     if (!isSpecialSong) {
-        strcat(string, "right now, you'll earn\n"); // game, and you'll receive
+        strcat(string, ""); // game, and you'll receive
     }
     strcat(string, "\""); // "
     strcat(string, get_campaign_gift_title(id, FALSE)); // "<gift>"
-    strcat(string, "\""); // "
+    strcat(string, "\n"); // "
     if (isStandardSong) {
         strcat(string, "'s song"); // 's song
     }
-    strcat(string, ""); // received as a present!!
+    strcat(string, "."); // received as a present!!
     text_printer_set_string(notice->printer, string);
 
     sprite_set_visible(gSpriteHandler, gGameSelect->selectionBorderSprite, FALSE);
