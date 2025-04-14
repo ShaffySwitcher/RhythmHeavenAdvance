@@ -284,13 +284,13 @@ void start_campaign_notice(s32 id) {
     string = notice->text;
     memcpy(string, "\001C" "If you get a Perfect in\n\"", 45); // [Right now]
     strcat(string, level->name); // "<game_name>"
-    strcat(string, "\"\nright now, you'll get the gift:\n"); // Get a perfect on this
+    strcat(string, "\"\nright now, you'll earn:\n"); // Get a perfect on this
     if (!isSpecialSong) {
         strcat(string, ""); // game, and you'll receive
     }
     strcat(string, "\""); // "
     strcat(string, get_campaign_gift_title(id, FALSE)); // "<gift>"
-    strcat(string, "\n"); // "
+    strcat(string, "\"\n"); // "
     if (isStandardSong) {
         strcat(string, "'s song"); // 's song
     }
