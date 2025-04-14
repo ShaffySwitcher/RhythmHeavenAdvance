@@ -21,6 +21,7 @@ extern struct Animation anim_horse_text_pak[];
 extern struct Animation anim_horse_text_ka[];
 extern struct Animation anim_horse_text_rap[];
 extern struct Animation anim_horse_text_tot[];
+extern struct Animation anim_horse_text_ta[];
 extern struct Animation anim_horse_text_dod[];
 extern struct Animation anim_horse_text_blank[];
 extern struct Animation anim_horse_text_pa[];
@@ -49,6 +50,7 @@ extern struct CompressedGraphics D_08d0bfc8;
 extern struct CompressedGraphics D_08d16998;
 extern struct CompressedGraphics D_08d0af74;
 extern struct CompressedGraphics D_08d16648;
+extern const u8 horse_machine_obj_bin;
 
 /* MECHANICAL HORSE - PALETTES */
 

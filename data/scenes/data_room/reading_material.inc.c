@@ -128,7 +128,7 @@ struct ReadingMaterial reading_material_table[] = {
             "Spaceball Report",
         /* BODY ----------------------------------------------------------- */
             "We're here in outer space for an exclusive interview\n"
-            "with the space faring baseball player, the\n"
+            "with the spacefaring baseball player, the\n"
             "Space Batter!\n"
             "\n"
             "Q. How is this season looking so far?\n"
@@ -165,7 +165,7 @@ struct ReadingMaterial reading_material_table[] = {
         /* TITLE ---------------------------------------------------------- */
             "Horse Machine's Development",
         /* BODY ----------------------------------------------------------- */
-            "We were given the chance to interview \"Mr. F\",\n"
+            "We were given the chance to interview \"Mr. F,\"\n"
             "inventor of the Horse Machine in the Rhythm Toys\n"
             "section, about its development.\n"
             "\n"
@@ -464,7 +464,7 @@ struct ReadingMaterial reading_material_table[] = {
             "this scroll by chance. I used the powers of ninjutsu\n"
             "to ensure that it would reach you. Do you understand?\n"
             "Indeed, the writer of this scroll is not only a ninja\n"
-            "but your ancestor.\n"
+            "but your ancestor as well.\n"
             "The other day, I protected my lord from a\n"
             "storm of arrows.\n"
             "I risked my life. The night following this daunting task,\n"
@@ -490,7 +490,7 @@ struct ReadingMaterial reading_material_table[] = {
 
     /* TOSS_BOYS ("Rhythm Stand-Up") */ {
         /* TITLE ---------------------------------------------------------- */
-            "Rhythm Manzai",
+            "Rhythm Comedy",
         /* BODY ----------------------------------------------------------- */
             "Yellow: \"Hello, I'm Yellow!\"\n"
             "Blue: \"Hello, I'm Blue!\"\n"
@@ -517,8 +517,8 @@ struct ReadingMaterial reading_material_table[] = {
             "Yellow: \"Oop! Blue, your fly is down!\"\n"
             "Blue: \"Huh!? Wait, really?\"\n"
             "Yellow: \"No, I lied.\"\n"
-            "Blue: \"Why I outta...!\"\n"
-            "Yellow: \"Why I outta- Man, that's kind of a cheesy line,\n"
+            "Blue: \"Why I oughta...!\"\n"
+            "Yellow: \"Why I oughta- Man, that's kind of a cheesy line,\n"
             "don't you think?\"\n"
             "Blue: \"Ugh... Leave me alone.\"\n"
             "Yellow: \"GRAAAGH!\"\n"
