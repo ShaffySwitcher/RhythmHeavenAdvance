@@ -162,6 +162,13 @@ struct Animation anim_horse_text_do[] = {
     /* End */ END_ANIMATION
 };
 
+// [D_08930550] Indicator - "ta"
+struct Animation anim_horse_text_ta[] = {
+    /* 000 */ { mechanical_horse_cel043, 4 },
+    /* 001 */ { mechanical_horse_cel044, 4 },
+    /* End */ END_ANIMATION
+};
+
 // [D_08930618] Tachometer Hand
 struct Animation anim_horse_tachometer_hand[] = {
     /* 000 */ { mechanical_horse_cel040, 4 },
