@@ -282,19 +282,23 @@ void start_campaign_notice(s32 id) {
     notice->y = campaign_gifts_table[id].y;
     level = get_level_data_from_grid_xy(notice->x, notice->y);
     string = notice->text;
-    memcpy(string, "\001C" "If you get a Perfect in\n\"", 45); // [Right now]
+    memcpy(string, "\001C" "If you get a Perfect in\n", 45); // [Right now]
     strcat(string, level->name); // "<game_name>"
-    strcat(string, "\"\nright now, you'll earn:\n"); // Get a perfect on this
-    if (!isSpecialSong) {
-        strcat(string, ""); // game, and you'll receive
+    if (giftType == CAMPAIGN_GIFT_DRUM_KIT || giftType == CAMPAIGN_GIFT_READING_MATERIAL) {
+        strcat(string, ",\nright now, you'll earn the:\n"); // game, and you'll receive
     }
-    strcat(string, "\""); // "
+    else{
+        strcat(string, ",\nright now, you'll earn:\n"); // Get a perfect on this
+    }
+    strcat(string, ""); // "
     strcat(string, get_campaign_gift_title(id, FALSE)); // "<gift>"
-    strcat(string, "\"\n"); // "
+    strcat(string, ""); // "
     if (isStandardSong) {
-        strcat(string, "'s song"); // 's song
+        strcat(string, "'s song."); // 's song
     }
-    strcat(string, "."); // received as a present!!
+    if (giftType == CAMPAIGN_GIFT_DRUM_KIT || giftType == CAMPAIGN_GIFT_READING_MATERIAL) {
+        strcat(string, " gift."); // received as a present!!
+    }
     text_printer_set_string(notice->printer, string);
 
     sprite_set_visible(gSpriteHandler, gGameSelect->selectionBorderSprite, FALSE);

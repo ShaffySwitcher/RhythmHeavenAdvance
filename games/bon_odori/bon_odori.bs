@@ -211,7 +211,7 @@ script script_bon_odori_main
     beat_anim
     rest 24
     bon_odori_start_input_check
-    bon_odori_lyrics_start_highlight 2, 93
+    bon_odori_lyrics_start_highlight 2, 88
     bon_odori_animate_all ANIM_BOW
     beat_anim
     rest 24
@@ -227,7 +227,7 @@ script script_bon_odori_main
     rest 24
     bon_odori_lyrics_clear_line 0
     bon_odori_lyrics_clear_line 1
-    bon_odori_lyrics_start_highlight 3, 60
+    bon_odori_lyrics_start_highlight 3, 54
     spawn_cue CUE_FORWARD_CLAP
     beat_anim
     rest 24
@@ -266,7 +266,7 @@ script script_bon_odori_main
     beat_anim
     rest 24
     bon_odori_start_input_check
-    bon_odori_lyrics_start_highlight 2, 93
+    bon_odori_lyrics_start_highlight 2, 88
     bon_odori_animate_all ANIM_BOW
     beat_anim
     rest 24
@@ -282,7 +282,7 @@ script script_bon_odori_main
     rest 24
     bon_odori_lyrics_clear_line 0
     bon_odori_lyrics_clear_line 1
-    bon_odori_lyrics_start_highlight 3, 60
+    bon_odori_lyrics_start_highlight 3, 54
     spawn_cue CUE_FORWARD_CLAP
     beat_anim
     rest 24
@@ -321,7 +321,7 @@ script script_bon_odori_main
     beat_anim
     rest 24
     bon_odori_start_input_check
-    bon_odori_lyrics_start_highlight 2, 93
+    bon_odori_lyrics_start_highlight 2, 88
     bon_odori_animate_all ANIM_BOW
     beat_anim
     rest 24
@@ -337,7 +337,7 @@ script script_bon_odori_main
     rest 24
     bon_odori_lyrics_clear_line 0
     bon_odori_lyrics_clear_line 1
-    bon_odori_lyrics_start_highlight 3, 60
+    bon_odori_lyrics_start_highlight 3, 54
     spawn_cue CUE_FORWARD_CLAP
     beat_anim
     rest 24
@@ -376,7 +376,7 @@ script script_bon_odori_main
     beat_anim
     rest 24
     bon_odori_start_input_check
-    bon_odori_lyrics_start_highlight 2, 93
+    bon_odori_lyrics_start_highlight 2, 88
     bon_odori_animate_all ANIM_BOW
     beat_anim
     rest 24
@@ -392,7 +392,7 @@ script script_bon_odori_main
     rest 24
     bon_odori_lyrics_clear_line 0
     bon_odori_lyrics_clear_line 1
-    bon_odori_lyrics_start_highlight 3, 60
+    bon_odori_lyrics_start_highlight 3, 54
     spawn_cue CUE_FORWARD_CLAP
     beat_anim
     rest 24
@@ -421,7 +421,7 @@ script script_bon_odori_main
     rest 24
     bon_odori_start_input_check
     bon_odori_animate_all ANIM_BOW
-    bon_odori_lyrics_start_highlight 3, 93
+    bon_odori_lyrics_start_highlight 3, 86
     spawn_cue CUE_SIDE_CLAP
     beat_anim
     rest 8
@@ -462,7 +462,7 @@ script script_bon_odori_main
     rest 24
     bon_odori_start_input_check
     bon_odori_animate_all ANIM_BOW
-    bon_odori_lyrics_start_highlight 3, 60
+    bon_odori_lyrics_start_highlight 3, 57
     beat_anim
     rest 24
     bon_odori_lyrics_clear_line 1
@@ -490,7 +490,7 @@ script script_bon_odori_main
     rest 24
     bon_odori_start_input_check
     bon_odori_animate_all ANIM_BOW
-    bon_odori_lyrics_start_highlight 3, 60
+    bon_odori_lyrics_start_highlight 3, 54
     spawn_cue CUE_FORWARD_CLAP
     beat_anim
     rest 24
@@ -519,7 +519,7 @@ script script_bon_odori_main
     rest 24
     rest 24
     bon_odori_start_input_check
-    bon_odori_lyrics_start_highlight 1, 45
+    bon_odori_lyrics_start_highlight 1, 43
     spawn_cue CUE_SIDE_CLAP
     beat_anim
     rest 8
@@ -533,7 +533,7 @@ script script_bon_odori_main
     rest 8
     bon_odori_animate_npc ANIM_CLAP_F
     rest 8
-    bon_odori_lyrics_start_highlight 2, 45
+    bon_odori_lyrics_start_highlight 2, 43
     spawn_cue CUE_SIDE_CLAP
     beat_anim
     rest 8
@@ -547,7 +547,7 @@ script script_bon_odori_main
     bon_odori_animate_npc ANIM_CLAP_F
     rest 8
     bon_odori_animate_all ANIM_BOW
-    bon_odori_lyrics_start_highlight 3, 60
+    bon_odori_lyrics_start_highlight 3, 54
     spawn_cue CUE_FORWARD_CLAP
     beat_anim
     rest 24
@@ -606,7 +606,7 @@ script script_bon_odori_main
     beat_anim
     rest 24
     bon_odori_start_input_check
-    bon_odori_lyrics_start_highlight 2, 93
+    bon_odori_lyrics_start_highlight 2, 88
     bon_odori_animate_all ANIM_BOW
     beat_anim
     rest 24
@@ -622,7 +622,7 @@ script script_bon_odori_main
     rest 24
     bon_odori_lyrics_clear_line 0
     bon_odori_lyrics_clear_line 1
-    bon_odori_lyrics_start_highlight 3, 60
+    bon_odori_lyrics_start_highlight 3, 54
     spawn_cue CUE_FORWARD_CLAP
     beat_anim
     rest 24
@@ -661,7 +661,7 @@ script script_bon_odori_main
     beat_anim
     rest 24
     bon_odori_start_input_check
-    bon_odori_lyrics_start_highlight 2, 93
+    bon_odori_lyrics_start_highlight 2, 88
     bon_odori_animate_all ANIM_BOW
     beat_anim
     rest 24
@@ -677,7 +677,7 @@ script script_bon_odori_main
     rest 24
     bon_odori_lyrics_clear_line 0
     bon_odori_lyrics_clear_line 1
-    bon_odori_lyrics_start_highlight 3, 60
+    bon_odori_lyrics_start_highlight 3, 54
     spawn_cue CUE_FORWARD_CLAP
     beat_anim
     rest 24
@@ -706,7 +706,7 @@ script script_bon_odori_main
     rest 24
     bon_odori_start_input_check
     bon_odori_animate_all ANIM_BOW
-    bon_odori_lyrics_start_highlight 3, 84
+    bon_odori_lyrics_start_highlight 3, 86
     spawn_cue CUE_SIDE_CLAP
     beat_anim
     rest 8
@@ -780,7 +780,7 @@ script script_bon_odori_main
     rest 24
     bon_odori_start_input_check
     bon_odori_animate_all ANIM_BOW
-    bon_odori_lyrics_start_highlight 3, 60
+    bon_odori_lyrics_start_highlight 3, 54
     spawn_cue CUE_FORWARD_CLAP
     beat_anim
     rest 24
@@ -809,7 +809,7 @@ script script_bon_odori_main
     rest 24
     rest 24
     bon_odori_start_input_check
-    bon_odori_lyrics_start_highlight 1, 45
+    bon_odori_lyrics_start_highlight 1, 43
     spawn_cue CUE_SIDE_CLAP
     beat_anim
     rest 8
@@ -823,7 +823,7 @@ script script_bon_odori_main
     rest 8
     bon_odori_animate_npc ANIM_CLAP_F
     rest 8
-    bon_odori_lyrics_start_highlight 2, 45
+    bon_odori_lyrics_start_highlight 2, 43
     spawn_cue CUE_SIDE_CLAP
     beat_anim
     rest 8
@@ -837,7 +837,7 @@ script script_bon_odori_main
     bon_odori_animate_npc ANIM_CLAP_F
     rest 8
     bon_odori_animate_all ANIM_BOW
-    bon_odori_lyrics_start_highlight 3, 60
+    bon_odori_lyrics_start_highlight 3, 54
     spawn_cue CUE_FORWARD_CLAP
     beat_anim
     rest 24
@@ -859,7 +859,7 @@ script script_bon_odori_main
     bon_odori_lyrics_print_right 3, text_bon_odori_don_pan_pan
     rest 12
     bon_odori_start_input_check
-    bon_odori_lyrics_start_highlight 1, 45
+    bon_odori_lyrics_start_highlight 1, 43
     spawn_cue CUE_SIDE_CLAP
     beat_anim
     rest 8
@@ -873,7 +873,7 @@ script script_bon_odori_main
     rest 8
     bon_odori_animate_npc ANIM_CLAP_F
     rest 8
-    bon_odori_lyrics_start_highlight 2, 45
+    bon_odori_lyrics_start_highlight 2, 43
     spawn_cue CUE_SIDE_CLAP
     beat_anim
     rest 8
@@ -887,7 +887,7 @@ script script_bon_odori_main
     bon_odori_animate_npc ANIM_CLAP_F
     rest 8
     bon_odori_animate_all ANIM_BOW
-    bon_odori_lyrics_start_highlight 3, 60
+    bon_odori_lyrics_start_highlight 3, 54
     spawn_cue CUE_FORWARD_CLAP
     beat_anim
     rest 24
@@ -920,7 +920,7 @@ script script_bon_odori_main
     spawn_cue CUE_FORWARD_CLAP
     beat_anim
     rest 24
-    bon_odori_lyrics_start_highlight 1, 36
+    bon_odori_lyrics_start_highlight 1, 34
     bon_odori_animate_npc ANIM_CLAP_S
     spawn_cue CUE_FORWARD_CLAP
     beat_anim
@@ -949,7 +949,7 @@ script bon_odori_sub_08a47db0
     play_sfx s_bon_dondon1_seqData
     rest 12
     bon_odori_animate_all ANIM_BOW
-    bon_odori_lyrics_start_highlight 0, 93
+    bon_odori_lyrics_start_highlight 0, 88
     rest 24
     spawn_cue CUE_FORWARD_CLAP
     rest 24
@@ -959,7 +959,7 @@ script bon_odori_sub_08a47db0
     rest 24
     bon_odori_animate_npc ANIM_CLAP_S
     rest 24
-    bon_odori_lyrics_start_highlight 1, 60
+    bon_odori_lyrics_start_highlight 1, 54
     spawn_cue CUE_FORWARD_CLAP
     rest 24
     bon_odori_animate_npc ANIM_CLAP_S
