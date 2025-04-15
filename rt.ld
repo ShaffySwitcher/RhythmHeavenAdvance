@@ -20,15 +20,6 @@ SECTIONS {
         *libgcc.a:*.o(.text*);
         *libc.a:*.o(.text*);
 
-<<<<<<< HEAD
-        build/src/*.o(.*);
-        build/asm/*.o(.*);
-        build/data/*.o(.*);
-        build/games/*.o(.*);
-        build/graphics/*.o(.*);
-        build/bin/*.o(.*);
-        build/audio/*.o(.*);
-=======
         # Some of these are likely rodata sections of src/ files
         build/asm/boot.s.o(.rodata);
         build/data/bitmap_font_data.c.o(.rodata);
@@ -2331,7 +2322,6 @@ SECTIONS {
         build/games/ninja_bodyguard/graphics/ninja_reincarnate_graphics_08d1fab0.c.o(.data*);
         build/games/ninja_bodyguard/graphics/ninja_reincarnate_graphics_08d1fb70.c.o(.data*);
         build/graphics/unknown/unknown_graphics_08d20534.c.o(.data*);
->>>>>>> upstream/master
     }
 
     _end = . ;
