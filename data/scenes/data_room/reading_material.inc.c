@@ -163,7 +163,7 @@ struct ReadingMaterial reading_material_table[] = {
 
     /* MECHANICAL_HORSE ("Mechanical Horse's Story") */ {
         /* TITLE ---------------------------------------------------------- */
-            "Horse Machine's Development",
+            "Horse Machine's Story",
         /* BODY ----------------------------------------------------------- */
             "We were given the chance to interview \"Mr. F,\"\n"
             "inventor of the Horse Machine in the Rhythm Toys\n"
