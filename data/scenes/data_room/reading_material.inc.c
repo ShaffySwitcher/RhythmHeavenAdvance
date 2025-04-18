@@ -267,7 +267,7 @@ struct ReadingMaterial reading_material_table[] = {
             "RM: \"Uh... Yeah! How do you know that?\"\n"
             "DJ: \"Because I've been playing Rhythm Heaven\n"
             "Advance! Roll the commercial!\"\n"
-            "CM: \"UP your flow with Rhythm Heaven Advance!\n"
+            "AD: \"UP your flow with Rhythm Heaven Advance!\n"
             "Available now! Game and system sold separately.\"\n"
             "End.",
         /* STYLE ---------------------------------------------------------- */
