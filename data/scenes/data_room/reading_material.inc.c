@@ -42,14 +42,14 @@ struct ReadingMaterial reading_material_table[] = {
         /* TITLE ---------------------------------------------------------- */
             "From the Barista",
         /* BODY ----------------------------------------------------------- */
-            "I own and operate a Caf" "\x87\x61"".\n"
+            "I own and operate a Caf" "\x87\x51"".\n"
             "Or, to put it simple, I'm the barista.\n"
             "It's going well thanks to the regulars\n"
             "And, uh, just to let you know, I'm a dog.\n"
             "Many of my customers love listening to music.\n"
-            "A lot of them even achived Perfect Campagins!\n"
+            "A lot of them even achieved Perfect Campaigns!\n"
             "I was pretty surprised to learn that.\n"
-            "I may look all professional when I run my Caf" "\x87\x61""\n"
+            "I may look all professional when I run my Caf" "\x87\x51""\n"
             "but I'll be honest, I'm really putting on a front.\n"
             "See, it's a little embarrassing, but when I'm off the\n"
             "clock, I'm always jamming out with these little\n"
@@ -322,7 +322,7 @@ struct ReadingMaterial reading_material_table[] = {
 
     /* REMIX3 ("Lyrics - Honey Sweet Angel of Love") */ {
         /* TITLE ---------------------------------------------------------- */
-            "Lyric Card ‡A",
+            "Lyrics Card ‡A",
         /* BODY ----------------------------------------------------------- */
             "Honey Sweet Angel of Love\n"
             "Song: Ami Tokito\n"
@@ -390,7 +390,7 @@ struct ReadingMaterial reading_material_table[] = {
             "\n"
             "All my dreams clouded in a haze\n"
             "All of you clouded in a haze\n"
-            "Its so hot, can't ignore\n"
+            "It's so hot, can't ignore\n"
             "I'm so hurt, to the core\n"
             "I can't take it anymore\n"
             "\n"
@@ -546,7 +546,7 @@ struct ReadingMaterial reading_material_table[] = {
         /* TITLE ---------------------------------------------------------- */
             "Joyful Voices",
         /* BODY ----------------------------------------------------------- */
-            "We've recieved many letters from\n"
+            "We've received many letters from\n"
             "satisfied players of Rhythm Heaven Advance.\n"
             "So, SO many in fact(!), that we can't\n"
             "show all of them, but here are just a few\n"
@@ -739,7 +739,7 @@ struct ReadingMaterial reading_material_table[] = {
             "-13-\n"
             "\n"
             "I think that rhythm and\n"
-            "every day life are unrelated.\n"
+            "everyday life are unrelated.\n"
             "\n"
             "\n"
             "Yes - Go to Page 23!\n"
@@ -849,20 +849,20 @@ struct ReadingMaterial reading_material_table[] = {
             "\001C" "\0031" "\001m" "\"Karate Rhythm\"\n"
             "\001C" "\0030" "\001s" "\n"
             "Hey! Baby! How's it going?\n"
-            "This beat is non stop.\n"
+            "This beat is non-stop.\n"
             "Hey! Baby! Listen to my phrase.\n"
             "I can give you\n"
             "the sense of rhythm.\n"
-            "Oh, Yeah.\n"
-            "Awake,baby! Trust me!\n"
-            "This beat is non stop!\n"
+            "Oh, yeah.\n"
+            "Awake, baby! Trust me!\n"
+            "This beat is non-stop!\n"
             "New groove in your soul.\n"
-            "Oh, Yeah!\n"
+            "Oh, yeah!\n"
             "This beat!\n"
             "You are growing up well.\n"
-            "Hey, Baby!\n"
+            "Hey, baby!\n"
             "Hold onto your ambition.\n"
-            "Hey! Oh, Yeah!\n",
+            "Hey! Oh, yeah!\n",
         /* STYLE ---------------------------------------------------------- */
             /* GFX */ reading_style_sea_gfx_table,
             /* BGM */ &reading_style_sea_bgm

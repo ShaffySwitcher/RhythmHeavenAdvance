@@ -12,7 +12,6 @@ extern struct Animation anim_karate_man_prologue_kick[];
 
 extern struct CompressedGraphics D_08bea934;
 extern struct CompressedGraphics D_08beab8c;
-extern struct CompressedGraphics D_08be9f5c;
 extern const u8 karateman_intro_bin;
 
 /* PROLOGUE (KARATE MAN) - PALETTES */

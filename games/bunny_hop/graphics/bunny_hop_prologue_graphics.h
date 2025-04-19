@@ -12,7 +12,6 @@ extern struct Animation anim_bunny_hop_prologue_title[];
 
 extern struct CompressedGraphics D_08c1f24c;
 extern struct CompressedGraphics D_08c1f308;
-extern struct CompressedGraphics D_08c1f214;
 extern const u8 bunnyhop_intro_obj_bin;
 
 /* PROLOGUE (BUNNY HOP) - PALETTES */
