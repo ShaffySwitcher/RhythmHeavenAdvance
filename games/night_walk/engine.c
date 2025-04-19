@@ -35,9 +35,9 @@ struct CompressedGraphics *night_walk_buffered_textures[] = {
 // [D_089e3384] Graphics Table
 struct GraphicsTable night_walk_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c52420,
+        /* Src.  */ &nightwalk_obj_bin,
         /* Dest. */ BG_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 12288
     },
     /* BG Map */ {
         /* Src.  */ &D_08c524fc,

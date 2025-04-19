@@ -118,7 +118,7 @@ struct StudioEntry studio_song_table[] = {
         /* Drum Script */ script_studio_tap_trial_2
     },
     /* WIZARDS_WALTZ */ {
-        /* Full Title  */ "Wizards Waltz",
+        /* Full Title  */ "Wizard's Waltz",
         /* Short Title */ NULL,
         /* Drum Script */ script_studio_wizards_waltz
     },
@@ -248,7 +248,7 @@ struct StudioEntry studio_song_table[] = {
         /* Drum Script */ script_studio_game_select_2
     },
     /* CAFE */ {
-        /* Full Title  */ "Caf" "\x87\x61" " Counselling",
+        /* Full Title  */ "Caf" "\x87\x51" " Counselling",
         /* Short Title */ NULL,
         /* Drum Script */ script_studio_cafe
     },

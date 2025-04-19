@@ -38,7 +38,7 @@ struct LevelData level_data_table[] = {
         /* Level Desc.   */ "Clap your hands in\n"
                             "order! You're the third\n"
                             "clapper. Keep an eye\n"
-							"on ther other two!",
+							"on the other two!",
         /* Level Icon    */ 4,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_clappy_trio_gfx_tables,
@@ -385,7 +385,7 @@ struct LevelData level_data_table[] = {
     },
     /* WIZARDS_WALTZ */ {
         /* Entry Scene   */ &scene_wizards_waltz,
-        /* Level Name    */ "Wizards Waltz",
+        /* Level Name    */ "Wizard's Waltz",
         /* Level Desc.   */ "There's a lonely girl\n"
                             "over there. Put your\n"
                             "flower power to good\n"
@@ -785,7 +785,7 @@ struct LevelData level_data_table[] = {
     },
     /* CAFE */ {
         /* Entry Scene   */ &scene_cafe,
-        /* Level Name    */ "Caf" "\x87\x61"" Counselling",
+        /* Level Name    */ "Caf" "\x87\x51"" Counselling",
         /* Level Desc.   */ "How are you feeling?\n"
                             "If something's on your\n"
                             "mind, feel free to\n"

@@ -388,7 +388,7 @@ AnimationCel mechanical_horse_cel037[] = {
 // [D_08930386]
 AnimationCel mechanical_horse_cel038[] = {
     2,
-    0x00fc, 0x01fb, 0x7337,
+    0x00fc, 0x01fb, 0x730e,
     0x00fd, 0x0000, 0x7309
 };
 

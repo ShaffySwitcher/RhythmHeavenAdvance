@@ -43,7 +43,7 @@ const char *drum_live_menu_poster_desc[] = {
     "\x03\x31" "\x01\x6d" "\x05\x30" "\x01\x34" "Drum Boys LIVE!\n"
     "\n"
     "\x03\x30" "\x01\x73" "\x05\x31" "\x01\x35" "♪　The Clappy Trio\n"
-    "\x03\x30" "\x01\x73" "\x05\x31" "\x01\x35" "♪　Tap Tria\n"
+    "\x03\x30" "\x01\x73" "\x05\x31" "\x01\x35" "♪　Tap Trial\n"
     "\x03\x30" "\x01\x73" "\x05\x31" "\x01\x35" "♪　WISH - Can't Wait for You\n"
     "\n",
 

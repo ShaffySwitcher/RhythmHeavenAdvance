@@ -661,9 +661,16 @@ u32 results_get_negative_comments(void) {
     for (i = 0; i < totalFailed; i++) {
         struct Animation *anim;
         u16 sprite;
+        size_t prefixLength = 0;
 
         strcpy(commentsText, results_try_again_comment_pool[clamp_int32(i, 0, 2)]);
         strcat(commentsText, comments[i]);
+        prefixLength = strlen(commentsText) - strlen(comments[i]);
+        
+        // Convert the first character of the statement to lowercase if it's uppercase
+        if (commentsText[prefixLength] >= 'A' && commentsText[prefixLength] <= 'Z' && results_try_again_comment_pool[i] == "Likewise, " && commentsText[prefixLength] != 'I') {
+            commentsText[prefixLength] += 32;
+        }
         anim = results_get_comment_anim(commentsText, TEXT_ANCHOR_BOTTOM_LEFT, 3);
         sprite = sprite_create(gSpriteHandler, anim, 0, 0, 0, 0x800, 0, 0, 0);
         sprite_set_base_palette(gSpriteHandler, sprite, COMMENT_PALETTE);
@@ -677,8 +684,8 @@ u32 results_get_negative_comments(void) {
 // [D_089d7b34] Rank Comment Pool (Try Again)
 const char *results_try_again_comment_pool[] = {
     "",
-    "Likewise,",
-    "Also..."
+    "Likewise, ",
+    "Also... "
 };
 
 
@@ -736,11 +743,14 @@ s24_8 results_get_positive_comments(void) {
         }
 
         if (gResults->totalNegativeComments > 0) {
-            memcpy(commentsText, "... but, ", 9); // ("...but,")
+            size_t prefixLength = 0;
+            memcpy(commentsText, "...but, ", 8); // ("...but,")
             strcat(commentsText, criteria->positiveRemark);
+            prefixLength = strlen(commentsText) - strlen(criteria->positiveRemark);
+        
             // Convert the first character of the statement to lowercase if it's uppercase
-            if (commentsText[9] >= 'A' && commentsText[9] <= 'Z') {
-                commentsText[9] += 32;
+            if (commentsText[prefixLength] >= 'A' && commentsText[prefixLength] <= 'Z' && commentsText[prefixLength] != 'I') {
+                commentsText[prefixLength] += 32;
             }
             anim = results_get_comment_anim(commentsText, TEXT_ANCHOR_BOTTOM_RIGHT, 3);
             palette = EXTRA_COMMENT_PALETTE;
@@ -763,7 +773,7 @@ s24_8 results_get_positive_comments(void) {
                 prefixLength = strlen(commentsText) - strlen(criteria->positiveRemark);
         
                 // Convert the first character of the statement to lowercase if it's uppercase
-                if (commentsText[prefixLength] >= 'A' && commentsText[prefixLength] <= 'Z') {
+                if (commentsText[prefixLength] >= 'A' && commentsText[prefixLength] <= 'Z' && commentsText[prefixLength] != 'I') {
                     commentsText[prefixLength] += 32;
                 }
             }
