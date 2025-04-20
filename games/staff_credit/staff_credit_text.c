@@ -61,7 +61,7 @@ const char D_08069b80[] = "\0023" "Music";
 
 const char D_08069b88[] = "\0023" "Music Arrangement";
 
-const char D_08069b9c[] = "K. Yausa";
+const char D_08069b9c[] = "K. Yuasa";
 
 const char D_08069ba4[] = "H. D. Suzuki";
 
