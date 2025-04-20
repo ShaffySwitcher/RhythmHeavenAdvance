@@ -640,7 +640,7 @@ void cafe_print_dialogue(void) {
             // Crazy awesome!!
             string = "\0032" "\001l" "\0051" "\0015" "\n"
                      "\n"
-                     "Now, that's perfect!" "\0030" "\001s" "\0054" "\0018";
+                     "Now,\nthat's perfect!" "\0030" "\001s" "\0054" "\0018";
             gCafe->bgEvent = CAFE_BG_EV_CHEER_02;
             gCafe->textAdvHold = 4;
             dialogue = cafe_dialogue_all_perfects_clear;

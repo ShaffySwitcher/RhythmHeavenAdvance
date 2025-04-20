@@ -23,7 +23,6 @@ extern struct Animation anim_ninja_reincarnate_prologue_title[];
 
 extern struct CompressedGraphics D_08c24604;
 extern struct CompressedGraphics D_08c24804;
-extern struct CompressedGraphics D_08c24200;
 extern const u8 bodyguard_intro_obj_bin;
 extern const u8 bodyguard_intro_bg_bin;
 extern const u8 bodyguard_intro_bg_map_bin;
