@@ -185,3 +185,5 @@ extern struct CompressedGraphics D_08c4241c; // Drum Boys - OBJ Textures
 extern struct CompressedGraphics D_08bd7c30; // Drum Samurai Band - BG Textures
 extern struct CompressedGraphics D_08bd8060; // Drum Samurai Band - BG Map
 extern struct CompressedGraphics D_08bd6c44; // Drum Samurai Band - OBJ Textures
+extern const u8 samurai_drummer_bg_bin;
+extern const u8 samurai_drummer_map_bin;

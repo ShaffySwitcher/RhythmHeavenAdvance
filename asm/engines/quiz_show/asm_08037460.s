@@ -56,13 +56,13 @@ thumb_func_start quiz_show_engine_start \n\
 /* 080374d2 */ LSLS R0, R0, 0x10 \n\
 /* 080374d4 */ LSRS R0, R0, 0x10 \n\
 /* 080374d6 */ MOVS R1, 0x3 @ Set R1 to 0x3 \n\
-/* 080374d8 */ MOVS R2, 0x50 @ Set R2 to 0x50 \n\
+/* 080374d8 */ MOVS R2, 0x58 @ Set R2 to 0x50 \n\
 /* 080374da */ MOVS R3, 0x1E @ Set R3 to 0x1E \n\
 /* 080374dc */ BL text_printer_create_new \n\
 /* 080374e0 */ LDR R2, =gCurrentEngineData \n\
 /* 080374e2 */ LDR R1, [R2] \n\
 /* 080374e4 */ STR R0, [R1, 0x4] \n\
-/* 080374e6 */ MOVS R1, 0x54 @ Set R1 to 0x54 \n\
+/* 080374e6 */ MOVS R1, 0x50 @ Set R1 to 0x54 \n\
 /* 080374e8 */ MOVS R2, 0x24 @ Set R2 to 0x24 \n\
 /* 080374ea */ BL text_printer_set_x_y \n\
 /* 080374ee */ LDR R1, =gCurrentEngineData \n\

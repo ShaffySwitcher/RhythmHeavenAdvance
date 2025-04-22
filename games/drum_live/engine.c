@@ -312,14 +312,14 @@ struct GraphicsTable gfx_table_drum_boys_live[] = {
 // [D_089e0a44] Graphics Table (Drum Samurai's Band LIVE)
 struct GraphicsTable gfx_table_drum_samurai_band_live[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08bd7c30,
+        /* Src.  */ &samurai_drummer_bg_bin,
         /* Dest. */ BG_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 7168
     },
     /* BG Map */ {
-        /* Src.  */ &D_08bd8060,
+        /* Src.  */ &samurai_drummer_map_bin,
         /* Dest. */ BG_MAP_BASE(0xE800),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 2048
     },
     /* OBJ Tileset */ {
         /* Src.  */ &D_08bd6c44,
