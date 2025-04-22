@@ -12,9 +12,9 @@ struct CompressedGraphics *drum_live_menu_buffered_textures[] = {
 // [D_089e5c44] Graphics Table
 struct GraphicsTable drum_live_menu_gfx_table[] = {
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c79bb0,
+        /* Src.  */ &drum_samurai_bin,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 12288
     },
     /* BG Palette */ {
         /* Src.  */ drum_live_menu_pal,
@@ -48,7 +48,7 @@ const char *drum_live_menu_poster_desc[] = {
     "\n",
 
     /* DRUM BAND  */
-    "\x03\x31" "\x01\x6d" "\x05\x30" "\x01\x34" "Drum Samurai's\n"
+    "\x03\x31" "\x01\x6d" "\x05\x30" "\x01\x34" "Samurai Drummer's\n"
     "\x03\x31" "\x01\x6d" "\x05\x30" "\x01\x34" "\x01\x52" "Band LIVE! \n"
     "\n"
     "\x03\x30" "\x01\x73" "\x05\x31" "\x01\x35" "\x01\x4c" "ÅÙÅ@Cosmic Dance\n"
