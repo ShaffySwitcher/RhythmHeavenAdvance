@@ -744,7 +744,7 @@ s24_8 results_get_positive_comments(void) {
 
         if (gResults->totalNegativeComments > 0) {
             size_t prefixLength = 0;
-            memcpy(commentsText, "...but, ", 8); // ("...but,")
+            memcpy(commentsText, "...but ", 7); // ("...but,")
             strcat(commentsText, criteria->positiveRemark);
             prefixLength = strlen(commentsText) - strlen(criteria->positiveRemark);
         
