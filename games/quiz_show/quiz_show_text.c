@@ -96,8 +96,8 @@ const char D_0805edf4[] =
     "the quiz!\n";
 
 const char D_0805ee20[] =
-    "\n"
-    "The rules are simple:\n"
+    "The rules\n"
+    "are simple:\n"
     "\n";
 
 const char D_0805ee34[] = 
