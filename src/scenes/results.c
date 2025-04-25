@@ -743,15 +743,16 @@ s24_8 results_get_positive_comments(void) {
         }
 
         if (gResults->totalNegativeComments > 0) {
-            size_t prefixLength = 0;
-            memcpy(commentsText, "...but ", 7); // ("...but,")
-            strcat(commentsText, criteria->positiveRemark);
-            prefixLength = strlen(commentsText) - strlen(criteria->positiveRemark);
-        
-            // Convert the first character of the statement to lowercase if it's uppercase
-            if (commentsText[prefixLength] >= 'A' && commentsText[prefixLength] <= 'Z' && commentsText[prefixLength] != 'I') {
-                commentsText[prefixLength] += 32;
+            char modifiedRemark[0x100];
+            strcpy(modifiedRemark, criteria->positiveRemark);
+
+            // Convert the first character of the positive remark to lowercase if it's uppercase
+            if (modifiedRemark[0] >= 'A' && modifiedRemark[0] <= 'Z' && modifiedRemark[0] != 'I') {
+                modifiedRemark[0] += 32;
             }
+            
+            memcpy(commentsText, "...but ", 8);
+            strcat(commentsText, modifiedRemark);
             anim = results_get_comment_anim(commentsText, TEXT_ANCHOR_BOTTOM_RIGHT, 3);
             palette = EXTRA_COMMENT_PALETTE;
         } else {
