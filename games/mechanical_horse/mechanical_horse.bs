@@ -86,11 +86,15 @@ script script_mechanical_horse_main
     mechanical_horse_event02 D_0805c684
     rest 24
     enable_pause_menu
-    rest 24
+    rest 23
+    mechanical_horse_event02 D_0805c6d4
+    rest 1
     enable_play_inputs
     mechanical_horse_event02 D_0805c69c
     rest 24
-    rest 24
+    rest 23
+    mechanical_horse_event02 D_0805c6d4
+    rest 1
     mechanical_horse_event02 D_0805c6b8
     mechanical_horse_event01 0
     stop_tracking_inputs
@@ -155,7 +159,9 @@ script script_mechanical_horse_main
     rest 24
     spawn_cue CUE_GALLOP
     beat_anim
-    rest 24
+    rest 23
+    mechanical_horse_event02 D_0805c6d4
+    rest 1
     mechanical_horse_event02 D_0805c6f0
     spawn_cue CUE_WALK
     beat_anim
@@ -213,7 +219,9 @@ script script_mechanical_horse_main
     spawn_cue CUE_CANTER
     beat_anim
     rest 12
-    rest 12
+    rest 11
+    mechanical_horse_event02 D_0805c6d4
+    rest 1
     mechanical_horse_event02 D_0805c70c
     spawn_cue CUE_WALK
     rest 12
@@ -262,7 +270,9 @@ script script_mechanical_horse_main
     rest 12
     spawn_cue CUE_WALK
     rest 12
-    rest 12
+    rest 11
+    mechanical_horse_event02 D_0805c6d4
+    rest 1
     mechanical_horse_event02 D_0805c740
     spawn_cue CUE_WALK
     rest 12

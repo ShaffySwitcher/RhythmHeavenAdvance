@@ -33,7 +33,7 @@ const char D_0805cc9c[] = "３";
 
 const char D_0805cca0[] = "４";
 
-const char D_0805cca4[] = "ｒｅｓｔ　ｆｏｒ　ａ　ｅｉｇｈｔ－ｃｏｕｎｔ．";
+const char D_0805cca4[] = "ｒｅｓｔ　ｆｏｒ　ａｎ　ｅｉｇｈｔ－ｃｏｕｎｔ．";
 
 const char D_0805ccb4[] = "Sea Friends' Report";
 
