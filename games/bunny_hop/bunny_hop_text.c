@@ -19,11 +19,11 @@ const char D_0805cc48[] = "You nailed the breaks!";
 
 const char D_0805cc68[] = "Ｎｅｘｔ．．．";
 
-const char D_0805cc70[] = "ｒｅｓｔ　ｆｏｒ　ａ　ｔｗｏ－ｃｏｕｎｔ．";
+const char D_0805cc70[] = "Ｒｅｓｔ　ｆｏｒ　ａ　ｔｗｏ－ｃｏｕｎｔ．";
 
 const char D_0805cc80[] = "";
 
-const char D_0805cc84[] = "ｒｅｓｔ　ｆｏｒ　ａ　ｆｏｕｒ－ｃｏｕｎｔ．";
+const char D_0805cc84[] = "Ｒｅｓｔ　ｆｏｒ　ａ　ｆｏｕｒ－ｃｏｕｎｔ．";
 
 const char D_0805cc94[] = "１";
 
@@ -33,7 +33,7 @@ const char D_0805cc9c[] = "３";
 
 const char D_0805cca0[] = "４";
 
-const char D_0805cca4[] = "ｒｅｓｔ　ｆｏｒ　ａｎ　ｅｉｇｈｔ－ｃｏｕｎｔ．";
+const char D_0805cca4[] = "Ｒｅｓｔ　ｆｏｒ　ａｎ　ｅｉｇｈｔ－ｃｏｕｎｔ．";
 
 const char D_0805ccb4[] = "Sea Friends' Report";
 
