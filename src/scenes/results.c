@@ -668,7 +668,8 @@ u32 results_get_negative_comments(void) {
         prefixLength = strlen(commentsText) - strlen(comments[i]);
         
         // Convert the first character of the statement to lowercase if it's uppercase
-        if (commentsText[prefixLength] >= 'A' && commentsText[prefixLength] <= 'Z' && results_try_again_comment_pool[i] == "Likewise, " && commentsText[prefixLength] != 'I') {
+        // An exception is made for sentences starting in the word "I" and contractions like "I'm"
+        if (commentsText[prefixLength] >= 'A' && commentsText[prefixLength] <= 'Z' && results_try_again_comment_pool[i] == "Likewise, " && !(commentsText[prefixLength] == 'I' && (commentsText[prefixLength+1] == ' ' || commentsText[prefixLength+1]  == '\''))) {
             commentsText[prefixLength] += 32;
         }
         anim = results_get_comment_anim(commentsText, TEXT_ANCHOR_BOTTOM_LEFT, 3);
@@ -747,10 +748,11 @@ s24_8 results_get_positive_comments(void) {
             strcpy(modifiedRemark, criteria->positiveRemark);
 
             // Convert the first character of the positive remark to lowercase if it's uppercase
-            if (modifiedRemark[0] >= 'A' && modifiedRemark[0] <= 'Z' && modifiedRemark[0] != 'I') {
+            // An exception is made for sentences starting in the word "I" and contractions like "I'm"
+            if (modifiedRemark[0] >= 'A' && modifiedRemark[0] <= 'Z' && !(modifiedRemark[0] == 'I' && (modifiedRemark[1] == ' ' || modifiedRemark[1] == '\''))) {
                 modifiedRemark[0] += 32;
             }
-            
+
             memcpy(commentsText, "...but ", 8);
             strcat(commentsText, modifiedRemark);
             anim = results_get_comment_anim(commentsText, TEXT_ANCHOR_BOTTOM_RIGHT, 3);
@@ -774,7 +776,8 @@ s24_8 results_get_positive_comments(void) {
                 prefixLength = strlen(commentsText) - strlen(criteria->positiveRemark);
         
                 // Convert the first character of the statement to lowercase if it's uppercase
-                if (commentsText[prefixLength] >= 'A' && commentsText[prefixLength] <= 'Z' && commentsText[prefixLength] != 'I') {
+                // An exception is made for sentences starting in the word "I" and contractions like "I'm"
+                if (commentsText[prefixLength] >= 'A' && commentsText[prefixLength] <= 'Z' && !(commentsText[prefixLength] == 'I' && (commentsText[prefixLength+1] == ' ' || commentsText[prefixLength+1]  == '\''))) {
                     commentsText[prefixLength] += 32;
                 }
             }
