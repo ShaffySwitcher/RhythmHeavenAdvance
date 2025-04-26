@@ -489,7 +489,7 @@ void cafe_print_dialogue(void) {
                     // Hey, here's a tip! Soon [...] is going to be having a perfect campaign.
                     s = gCafe->string;
                     memcpy(s, "", 1);
-                    strcat(s, "\nSay, I heard tell that there's a chance\n"
+                    strcat(s, "\nSay, I heard that there's a chance\n"
                               "for a Perfect in ");
                     strcat(s, "\0051" "\0015");
                     strcat(s, levelName);
