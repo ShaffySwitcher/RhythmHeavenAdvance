@@ -437,7 +437,7 @@ void cafe_print_dialogue(void) {
                     strcat(s, "Has ");
                     strcat(s, "\0051" "\0015");
                     strcat(s, levelName);
-                    strcat(s, "been giving you some trouble?\n" "\n");
+                    strcat(s, "\0054" "\0018" "\nbeen giving you some trouble?\n" "\n");
                     string = s;
                     gCafe->levelToClear = activity->levelID;
                     activity->levelID = LEVEL_NULL;
@@ -489,11 +489,11 @@ void cafe_print_dialogue(void) {
                     // Hey, here's a tip! Soon [...] is going to be having a perfect campaign.
                     s = gCafe->string;
                     memcpy(s, "", 1);
-                    strcat(s, "Say, I heard tell that there's a chance\n"
+                    strcat(s, "\nSay, I heard tell that there's a chance\n"
                               "for a Perfect in ");
                     strcat(s, "\0051" "\0015");
                     strcat(s, levelName);
-                    strcat(s, "\0054" "\0018" ".\n");
+                    strcat(s, "\0054" "\0018" ".\n\n");
                     string = s;
                     dialogueTask = CAFE_EV_UPCOMING_CAMPAIGN_00;
                     D_030046a8->data.unk291 = TRUE;
@@ -529,11 +529,10 @@ void cafe_print_dialogue(void) {
             // "Please skip it."
             // "No, thank you."
             string = "Because I can make it so you can\n"
-                     "just ""\0051" "\0015" "skip that\n"
-                     "\0051" "\0015" "game altogether." "\0054" "\0018" "What do you say?\n"
-                     "\n"
-                     "　　　　　　　　\"Please!\"\n"
-                     "　　　　　　　　\"No, thanks.\"";
+                     "just ""\0051" "\0015" "skip that game altogether.\n"
+                     "\0054" "\0018" "What do you say?\n"
+                     "　　　　　　　　　　　　　　\"Please!\"\n"
+                     "　　　　　　　　　　　　　　\"No, thanks.\"";
             gCafe->queryEnabled = TRUE;
             gCafe->queryResult = CAFE_OPT_YES;
             dialogueTask++;
@@ -560,7 +559,8 @@ void cafe_print_dialogue(void) {
                 // You're determined to beat
                 // it with your own strength.
                 // Excellent!
-                string = "That's the spirit! Stay\n"
+                string = "\n"
+                         "That's the spirit! Stay\n"
                          "confident, and stick\n"
                          "to it.";
                 dialogueTask = CAFE_EV_OFFER_CLEAR_02_N;
@@ -597,8 +597,8 @@ void cafe_print_dialogue(void) {
             string = "\0054" "\0018" "Are you just practicing so\n"
                      "\0054" "\0018" "you can have a go " "\0051" "\0015" "at\n"
                      "\0051" "\0015" "getting a Perfect?" "\0054" "\0018" "\n"
-                     "　　　　　　　　\"That's right!\"\n"
-                     "　　　　　　　　\"I haven't.\"";
+                     "　　　　　　　　　　　　　\"That's right!\"\n"
+                     "　　　　　　　　　　　　　\"I haven't.\"";
             gCafe->queryEnabled = TRUE;
             gCafe->queryResult = CAFE_OPT_YES;
             dialogueTask++;
@@ -639,8 +639,8 @@ void cafe_print_dialogue(void) {
         case CAFE_EV_ALL_CAMPAIGNS_CLEAR_01:
             // Crazy awesome!!
             string = "\0032" "\001l" "\0051" "\0015" "\n"
-                     "\n"
-                     "Now,\nthat's perfect!" "\0030" "\001s" "\0054" "\0018";
+                     "Now,\n"
+                     "that's perfect!" "\0030" "\001s" "\0054" "\0018";
             gCafe->bgEvent = CAFE_BG_EV_CHEER_02;
             gCafe->textAdvHold = 4;
             dialogue = cafe_dialogue_all_perfects_clear;
