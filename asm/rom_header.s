@@ -48,7 +48,7 @@
 /* 0800009c */ .byte 0x21, 0xD4, 0xF8, 0x07
 
 @ Game Title
-/* 080000a0 */ .ascii "RHYTHMTENGOK"
+/* 080000a0 */ .ascii "RHYTHMADVANC"
 
 @ Game Code
 /* 080000ac */ .ascii "BRIJ"
