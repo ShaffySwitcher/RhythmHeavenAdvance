@@ -15,7 +15,7 @@ const char D_0805b4d0[] = "The long hairs were no match for you!";
 
 const char D_0805b4ec[] = "You couldn't quite pluck the hairiest areas.";
 
-const char D_0805b510[] = "Even the hairest ones were plucked perfectly!";
+const char D_0805b510[] = "Even the hairiest ones were plucked perfectly!";
 
 const char D_0805b530[] = "Unwanted-Hair Check";
 
@@ -41,7 +41,7 @@ const char D_0805b654[] = "The long hairs were no match for you!";
 
 const char D_0805b670[] = "You couldn't quite pluck the hairiest areas.";
 
-const char D_0805b694[] = "Even the hairest ones were plucked perfectly!";
+const char D_0805b694[] = "Even the hairiest ones were plucked perfectly!";
 
 const char D_0805b6b8[] = "You were plucking a mile a minute!";
 

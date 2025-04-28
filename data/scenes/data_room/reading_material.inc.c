@@ -79,7 +79,8 @@ struct ReadingMaterial reading_material_table[] = {
             "Before I knew it, I found myself plucking to the beat.\n"
             "And... I plucked them clean! And it's even a little fun!\n"
             "The power of music is really something else!\n"
-            "You've got to try plucking hairs off of your vegetables!\n"
+            "You've got to try plucking hairs off of your\n"
+            "vegetables!\n"
             "I can't recommend it enough!",
         /* STYLE ---------------------------------------------------------- */
             /* GFX */ reading_style_train_gfx_table,
@@ -175,7 +176,7 @@ struct ReadingMaterial reading_material_table[] = {
             "development sort of revolved around that idea.\"\n"
             "\n"
             "Mr. F's comments were as simple as they were\n"
-            "passionate\n"
+            "passionate.\n"
             "\n"
             "Mr. F: \"But in trying to make a game out of it, I found\n"
             "myself losing sight of that end goal. I considered\n"
