@@ -499,7 +499,7 @@ struct LevelData level_data_table[] = {
         /* Entry Scene   */ &scene_rat_race,
         /* Level Name    */ "Rat Race",
         /* Level Desc.   */ "You are a rat. She is\n"
-                            "a cat. You love cheese;\n"
+                            "a cat. You love cheese.\n"
                             "All the ingredients of a\n"
                             "tense encounter.",
         /* Level Icon    */ 31,
