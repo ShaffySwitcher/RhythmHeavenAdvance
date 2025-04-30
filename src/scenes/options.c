@@ -131,6 +131,16 @@ void options_scene_update_main(void) {
         event = OPTIONS_EV_CANCEL;
     }
 
+    if (D_030053b8 & RIGHT_SHOULDER_BUTTON) {
+        TOGGLE_ADVANCE_FLAG(D_030046a8->data.advanceFlags, ADVANCE_FLAG_USE_ALT_GAME_SELECT_MUSIC);
+        flush_save_buffer_to_sram();
+        if(CHECK_ADVANCE_FLAG(D_030046a8->data.advanceFlags, ADVANCE_FLAG_USE_ALT_GAME_SELECT_MUSIC)) {
+            play_sound(&s_menu_kettei1_seqData);
+        } else {
+            play_sound(&s_menu_cancel3_seqData);
+        }
+    }
+
     switch (event) {
         case OPTIONS_EV_CURSOR_UP:
             gOptionsMenu->cursorPos = OPTIONS_BUTTON_SOUND_MODE;
