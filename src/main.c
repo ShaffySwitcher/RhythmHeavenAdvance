@@ -103,7 +103,8 @@ void agb_main(void) {
 
 	func_0801d860(FALSE); // Init. Script Operator (Init. Static Variables)
 	init_scenes(&scene_warning);
-	set_scene_trans_target(&scene_warning, D_08935fac); // Title Screen
+	set_scene_trans_target(&scene_warning, &scene_disclamer);
+	set_scene_trans_target(&scene_disclamer, &scene_title);
 	update_key_listener();
 
 	while (TRUE) {
