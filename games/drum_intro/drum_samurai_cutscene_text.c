@@ -23,12 +23,12 @@ const char D_0805dfcc[] =
 
 
 const char D_0805e000[] =
-    "A sense of rhythm--\n"
-    "Everyone has it in some\n"
-    "form or fashion.";
+    "Everyone's got a\n"
+    "sense of rhythm in\n"
+    "some form or fashion.";
 
 const char D_0805e03c[] =
-    "And with some mindfulness,\n"
+    "And if you pay attention to it,\n"
     "that sense of rhythm can\n"
     "be sharpened like any skill.";
 
@@ -42,9 +42,9 @@ const char D_0805e070[] =
 
 
 const char D_0805e0a8[] =
-    "How did you do? Are you\n"
-    "happy with the\n"
-    "score that you got?";
+    "How did you do? Did you get\n"
+    "a score you're happy with?\n"
+    "";
 
 const char D_0805e0d8[] =
     "Well, your sense of\n"
@@ -52,9 +52,9 @@ const char D_0805e0d8[] =
     "with some practice, so...";
 
 const char D_0805e10c[] =
-    "Leap into some of these\n"
-    "games and you just might\n"
-    "just find it getting\n"
+    "...how about trying out\n"
+    "some Rhythm Games? You\n"
+    "might find it getting\n"
     "sharper and sharper!";
 
 const char D_0805e15c[] =
