@@ -5,6 +5,18 @@
 
 #define SAVE_BUFFER_SIZE sizeof(struct SaveBuffer)
 
+// helper functions
+#define SET_ADVANCE_FLAG(flags, flag) (flags |= (1 << flag))
+#define CLEAR_ADVANCE_FLAG(flags, flag) (flags &= ~(1 << flag))
+#define CHECK_ADVANCE_FLAG(flags, flag) ((flags >> flag) & 1)
+#define TOGGLE_ADVANCE_FLAG(flags, flag) (flags ^= (1 << flag))
+
+enum AdvanceFlagsEnum {
+    /* 00 */ ADVANCE_FLAG_SAVE_CONVERTED            = (1 << 0),
+    /* 01 */ ADVANCE_FLAG_USE_ALT_GAME_SELECT_MUSIC = (1 << 1),
+    /* 02 */ ADVANCE_FLAG_SEEN_DISCLAMER            = (1 << 2),
+};
+
 extern struct SaveBuffer {
     /* [0x000] Header */
     struct SaveBufferHeader {
@@ -23,7 +35,8 @@ extern struct SaveBuffer {
         u16 recentLevelScore;
         u16 levelScores[TOTAL_LEVELS];
         u16 currentFlow;
-        u16 unkB0;
+        u8 unkB0;
+        u8 advanceFlags;
         u8 totalSongs;
         u8 unkB3; // above
         struct StudioSongData {
