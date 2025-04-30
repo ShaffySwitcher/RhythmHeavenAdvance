@@ -265,7 +265,7 @@ struct DebugMenuEntry debug_menu_entry_table[] = {
     },
     /* Wizard's Waltz */ {
         /* Scene */ &scene_wizards_waltz,
-        /* Label */ "‚v‚‰‚š‚‚’‚„'‚“@‚v‚‚Œ‚”‚š"
+        /* Label */ "‚v‚‰‚š‚‚’‚„f‚“@‚v‚‚Œ‚”‚š"
     },
     /* Marching Orders */ {
         /* Scene */ &scene_marching_orders,
