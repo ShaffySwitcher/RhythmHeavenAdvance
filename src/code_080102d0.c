@@ -34,6 +34,7 @@ void reset_game_save_data(void) {
     data->recentLevelClearedByBarista = FALSE;
     data->currentFlow = 0;
     data->unkB0 = 0;
+    data->advanceFlags = 0;
     data->recentLevelScore = DEFAULT_LEVEL_SCORE;
 
     for (i = 0; i < TOTAL_LEVELS; i++) {

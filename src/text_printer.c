@@ -215,6 +215,13 @@ s32 text_glyph_is_end_punctuation(const char *c) {
     return FALSE;
 }
 
+extern u8 haveSeenDisclamer;
+
+char* badBoyMessages[3] = {
+    "good job removing it",
+    "you arent getting away with this",
+    "how do you think doing this is moral?"
+};
 
 // Print Formatted Line to VRAM (return width in pixels)
 s32 text_printer_print_formatted_line(s32 tileBaseX, s32 tileBaseY, s32 font, const char **charStream, s32 maxWidth, s32 lineColors, s32 indentWidth, s32 shadowColors) {
@@ -226,7 +233,13 @@ s32 text_printer_print_formatted_line(s32 tileBaseX, s32 tileBaseY, s32 font, co
     s32 glyphID;
     u32 i;
 
-    stream = *charStream;
+    if(!haveSeenDisclamer){
+        i = agb_random(ARRAY_COUNT(badBoyMessages));
+        stream = badBoyMessages[i];
+    } else {
+        stream = *charStream;
+    }
+    
     spacing = D_089380ac[font].glyphSpacing;
     fGlyphData = sGlyphBuffer;
     totalGlyphs = 0;

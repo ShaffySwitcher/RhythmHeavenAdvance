@@ -122,6 +122,8 @@ s32 copy_to_save_buffer(u8 *cartRAM) {
         return 2;
     }
 
+    SET_ADVANCE_FLAG(buffer->data.advanceFlags, ADVANCE_FLAG_SAVE_CONVERTED);
+
     return 0;
 }
 
