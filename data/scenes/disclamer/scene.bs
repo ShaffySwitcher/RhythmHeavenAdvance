@@ -10,7 +10,6 @@ script script_scene_disclamer
     rest 12
     rest 48
     set_tempo 120
-    run disclamer_scene_render_anim
     scene_set_byte 0, TRUE
     pause_scene
 
