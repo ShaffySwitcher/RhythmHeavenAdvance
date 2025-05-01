@@ -180,8 +180,8 @@ void init_campaign_notice(void) {
     notice->textAdvSprite = sprite_create(gSpriteHandler, anim_game_select_text_button, 0, 64, 64, 0x800, 1, 0, 0x8000);
     sprite_set_origin_x_y(gSpriteHandler, notice->textAdvSprite, &vector->x, &vector->y);
 
-    notice->printer = text_printer_create_new(get_current_mem_id(), 4, 120, 26);
-    text_printer_set_x_y(notice->printer, 104, 320);
+    notice->printer = text_printer_create_new(get_current_mem_id(), 5, 120, 26);
+    text_printer_set_x_y(notice->printer, 104, 310);
     text_printer_set_layer(notice->printer, 0x800);
     text_printer_set_colors(notice->printer, 0);
     text_printer_set_palette(notice->printer, 1);
@@ -284,20 +284,15 @@ void start_campaign_notice(s32 id) {
     string = notice->text;
     memcpy(string, "\001C" "If you get a Perfect in\n", 45); // [Right now]
     strcat(string, level->name); // "<game_name>"
-    if (giftType == CAMPAIGN_GIFT_DRUM_KIT || giftType == CAMPAIGN_GIFT_READING_MATERIAL) {
-        strcat(string, ",\nright now, you'll earn the:\n"); // game, and you'll receive
-    }
-    else{
-        strcat(string, ",\nright now, you'll earn:\n"); // Get a perfect on this
-    }
+    strcat(string, ",\nright now, you'll earn:\n"); // Get a perfect on this
     strcat(string, ""); // "
     strcat(string, get_campaign_gift_title(id, FALSE)); // "<gift>"
-    strcat(string, ""); // "
+    strcat(string, "\n"); // "
     if (isStandardSong) {
-        strcat(string, "'s song."); // 's song
+        strcat(string, "as a song."); // 's song
     }
     if (giftType == CAMPAIGN_GIFT_DRUM_KIT || giftType == CAMPAIGN_GIFT_READING_MATERIAL) {
-        strcat(string, " gift."); // received as a present!!
+        strcat(string, "as a gift."); // received as a present!!
     }
     text_printer_set_string(notice->printer, string);
 
