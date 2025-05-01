@@ -17,12 +17,7 @@ struct GraphicsTable disclamer_gfx_table[] = {
     /* BG Map */ {
         /* Src.  */ &disclamer_tile_map_bin,
         /* Dest. */ BG_MAP_BASE(0xE800),
-        /* Size  */ 3172
-    },
-    /* OBJ Tileset */ {
-        /* Src.  */ &disclamer_tile_bin,
-        /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ 12992
+        /* Size  */ 2048
     },
     /* BG Palette */ {
         /* Src.  */ disclamer_pal,
