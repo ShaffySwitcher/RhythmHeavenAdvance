@@ -170,10 +170,7 @@ struct Huffman {
 };
 
 struct CompressedGraphics {
-    union {
-        const struct Huffman *huffman;
-        const u16 *raw;
-    } data;
+    const void *data;
     const u8 *rleData;
     u16 rleSize;
     u16 rleOffset;

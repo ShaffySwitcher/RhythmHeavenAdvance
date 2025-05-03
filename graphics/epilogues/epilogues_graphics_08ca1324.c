@@ -15,7 +15,7 @@ u8 D_08ca1324_rledata[] = {
 
 // [D_08CA1324] D_08CA1324 Graphics
 struct CompressedGraphics D_08ca1324 = {
-	/* Data */				{.raw = D_08ca1324_data},
+	/* Data */				D_08ca1324_data,
 	/* RLE Data */			D_08ca1324_rledata,
 	/* RLE Size */			0x18,
 	/* RLE Offset */		0x400,
