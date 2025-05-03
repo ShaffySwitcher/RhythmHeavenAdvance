@@ -15,7 +15,7 @@ u8 D_08cbde58_rledata[] = {
 
 // [D_08CBDE58] D_08CBDE58 Graphics
 struct CompressedGraphics D_08cbde58 = {
-	/* Data */				{.raw = D_08cbde58_data},
+	/* Data */				D_08cbde58_data,
 	/* RLE Data */			D_08cbde58_rledata,
 	/* RLE Size */			0x28,
 	/* RLE Offset */		0x400,

@@ -122,9 +122,9 @@ void func_08002b10(struct GfxTableLoader *info) {
                 } else {
                     D_030053b0 = FALSE;
                     comp = info->src;
-                    src = comp->data.raw;
+                    src = comp->data;
                     if (comp->doubleCompressed) {
-                        src = info->dest + comp->rleOffset - comp->data.huffman->size;
+                        src = info->dest + comp->rleOffset - ((struct Huffman *)comp->data)->size;
                     }
                     size = D_03004af0(src, info->dest, comp->rleData, (comp->rleSize << 16) | (info->limit / 4));
                 }
@@ -154,9 +154,9 @@ void func_08002b10(struct GfxTableLoader *info) {
                     comp = info->src;
                     info->decompressingHuffman = TRUE;
                     // Fake-match below:
-                    size = (u32)comp->data.huffman;
+                    size = (u32)comp->data;
                     // <audible booing>
-                    finished = func_08008594(comp->data.huffman, (info->dest + comp->rleOffset - comp->data.huffman->size), info->limit, info->huffmanSaveState);
+                    finished = func_08008594(comp->data, (info->dest + comp->rleOffset - ((struct Huffman *)comp->data)->size), info->limit, info->huffmanSaveState);
                 }
                 info->size -= info->limit;
                 if (info->size < 0) {
