@@ -25,19 +25,19 @@ extern struct Animation anim_marching1_commander_annoyed[];
 
 /* MARCHING ORDERS - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics D_08c6c89c;
-extern struct CompressedGraphics D_08c6cc98;
-extern struct CompressedGraphics D_08c6cde0;
-extern struct CompressedGraphics D_08c6cd78;
-extern struct CompressedGraphics D_08c6c658;
-extern struct CompressedGraphics D_08ce5db0;
-extern struct CompressedGraphics D_08ce615c;
-extern struct CompressedGraphics D_08ce6278;
-extern struct CompressedGraphics D_08ce5b3c;
-extern struct CompressedGraphics D_08c6eae0;
-extern struct CompressedGraphics D_08c6eedc;
-extern struct CompressedGraphics D_08c6efbc;
-extern struct CompressedGraphics D_08c6e8d4;
+extern struct CompressedGraphics marching_orders_graphics_08c6c89c;
+extern struct CompressedGraphics marching_orders_graphics_08c6cc98;
+extern struct CompressedGraphics marching_orders_graphics_08c6cde0;
+extern struct CompressedGraphics marching_orders_graphics_08c6cd78;
+extern struct CompressedGraphics marching_orders_graphics_08c6c658;
+extern struct CompressedGraphics marching_orders_remix_7_graphics_08ce5db0;
+extern struct CompressedGraphics marching_orders_remix_7_graphics_08ce615c;
+extern struct CompressedGraphics marching_orders_remix_7_graphics_08ce6278;
+extern struct CompressedGraphics marching_orders_remix_7_graphics_08ce5b3c;
+extern struct CompressedGraphics marching_orders_graphics_08c6eae0;
+extern struct CompressedGraphics marching_orders_graphics_08c6eedc;
+extern struct CompressedGraphics marching_orders_graphics_08c6efbc;
+extern struct CompressedGraphics marching_orders_graphics_08c6e8d4;
 
 /* MARCHING ORDERS - PALETTES */
 

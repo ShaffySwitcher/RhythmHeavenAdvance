@@ -9,9 +9,9 @@ extern struct Animation anim_marching_orders_prologue_title[];
 
 /* PROLOGUE (MARCHING ORDERS) - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics D_08bfbe68;
-extern struct CompressedGraphics D_08bfc1f8;
-extern struct CompressedGraphics D_08bfa204;
+extern struct CompressedGraphics marching_orders_prologue_graphics_08bfbe68;
+extern struct CompressedGraphics marching_orders_prologue_graphics_08bfc1f8;
+extern struct CompressedGraphics marching_orders_prologue_graphics_08bfa204;
 
 /* PROLOGUE (MARCHING ORDERS) - PALETTES */
 
@@ -24,9 +24,9 @@ extern struct Animation anim_marching_orders_2_prologue_title[];
 
 /* PROLOGUE (MARCHING ORDERS 2) - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics D_08bff238;
-extern struct CompressedGraphics D_08bff704;
-extern struct CompressedGraphics D_08bfc8f4;
+extern struct CompressedGraphics marching_orders_prologue_graphics_08bff238;
+extern struct CompressedGraphics marching_orders_prologue_graphics_08bff704;
+extern struct CompressedGraphics marching_orders_prologue_graphics_08bfc8f4;
 
 /* PROLOGUE (MARCHING ORDERS 2) - PALETTES */
 

@@ -648,7 +648,7 @@ struct GraphicsTable rhythm_test_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c6ab24,
+        /* Src.  */ &marching_orders_graphics_08c6ab24,
         /* Dest. */ BG_MAP_BASE(0xF800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
