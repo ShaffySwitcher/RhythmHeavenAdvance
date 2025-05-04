@@ -2251,6 +2251,7 @@ SECTIONS {
         build/games/polyrhythm/graphics/polyrhythm_graphics_08c781ac.c.o(.data*);
         build/games/polyrhythm/graphics/polyrhythm_graphics_08c78a04.c.o(.data*);
         build/games/drum_live/graphics/drum_live_menu_graphics_08c79bb0.c.o(.data*);
+        build/games/drum_live/graphics/drum_live_menu_unused_08c79bc0.c.o(.data*);
         build/games/quiz_show/graphics/quiz_show_graphics_08c7c8e0.c.o(.data*);
         build/games/quiz_show/graphics/quiz_show_graphics_08c7d2ac.c.o(.data*);
         build/games/quiz_show/graphics/quiz_show_graphics_08c7d524.c.o(.data*);
