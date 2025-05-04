@@ -12,17 +12,17 @@ struct CompressedGraphics *bunny_hop_prologue_buffered_textures[] = {
 // [D_089ecb64] Graphics Table
 struct GraphicsTable bunny_hop_prologue_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c1f24c,
+        /* Src.  */ &bunny_hop_prologue_graphics_08c1f24c,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c1f308,
+        /* Src.  */ &bunny_hop_prologue_graphics_08c1f308,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c1f214,
+        /* Src.  */ &bunny_hop_prologue_graphics_08c1f214,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },

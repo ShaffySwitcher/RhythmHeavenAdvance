@@ -132,5 +132,31 @@
     "showtime_graphics_08c56bd8": [
         12931576,
         12931524
+    ],
+    "bunny_hop_prologue_graphics_08c1f214": [
+        12709112,
+        12709060
+    ],
+    "bunny_hop_graphics_08c7fda8": [
+        13106120,
+        13106068
+    ],
+    "bunny_hop_graphics_08c7fbb8": [
+        13097772,
+        13097720
+    ],
+    "bunny_hop_prologue_graphics_08c1f24c": [
+        12710436,
+        12710384
+    ],
+    "bunny_hop_prologue_graphics_08c1f308": [
+        12710500,
+        12710448,
+        8
+    ],
+    "bunny_hop_graphics_08c7fe58": [
+        13106696,
+        13106644,
+        80
     ]
 }
