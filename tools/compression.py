@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 import sys, json, os, array
 
-baserom = open("baserom.gba", "rb")
 def read_from_rom(start, size):
     baserom.seek(start)
     data = baserom.read(size)
@@ -313,7 +312,7 @@ def compress_file(input, output, double, revision):
     with open("tools/compression_offsets.json", "r") as f:
         offsets = json.load(f)
         if symbol in offsets:
-            address = offsets[symbol][int(revision)]
+            address = offsets[symbol][revision]
             if not double:
                 unusedData = read_from_rom(address - offsets[symbol][2], offsets[symbol][2])
 
@@ -329,6 +328,11 @@ def compress_file(input, output, double, revision):
 if __name__ == "__main__":
     inputFile = sys.argv[1]
     outputFile = sys.argv[2]
-    revision = sys.argv[3]
+    revision = int(sys.argv[3])
     double = (inputFile.endswith(".4bpp"))
+
+    if (revision < 1):
+        baserom = open("baserom.gba", "rb")
+    else:
+        baserom = open("baserom_rev1.gba", "rb")
     compress_file(inputFile, outputFile, double, revision)
