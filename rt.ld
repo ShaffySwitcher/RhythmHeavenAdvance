@@ -1997,9 +1997,9 @@ SECTIONS {
         build/games/samurai_slice/graphics/samurai_slice_prologue_graphics_08bf7aa4.c.o(.data*);
         build/games/samurai_slice/graphics/samurai_slice_prologue_graphics_08bf7d5c.c.o(.data*);
         build/games/samurai_slice/graphics/samurai_slice_prologue_graphics_08bf7f04.c.o(.data*);
-        build/games/power_calligraphy/graphics/power_calligraphy_prologue_graphics_08bf8a30.c.o(.data*);
-        build/games/power_calligraphy/graphics/power_calligraphy_prologue_graphics_08bf984c.c.o(.data*);
-        build/games/power_calligraphy/graphics/power_calligraphy_prologue_graphics_08bf9b14.c.o(.data*);
+        build/games/power_calligraphy/graphics/power_calligraphy_prologue_graphics_08bf8a30.4bpp.c.o(.data*);
+        build/games/power_calligraphy/graphics/power_calligraphy_prologue_graphics_08bf984c.4bpp.c.o(.data*);
+        build/games/power_calligraphy/graphics/power_calligraphy_prologue_graphics_08bf9b14.tilemap.c.o(.data*);
         build/games/marching_orders/graphics/marching_orders_prologue_graphics_08bfa204.4bpp.c.o(.data*);
         build/games/marching_orders/graphics/marching_orders_prologue_graphics_08bfbe68.4bpp.c.o(.data*);
         build/games/marching_orders/graphics/marching_orders_prologue_graphics_08bfc1f8.tilemap.c.o(.data*);
@@ -2181,10 +2181,10 @@ SECTIONS {
         build/games/samurai_slice/graphics/samurai_slice_graphics_08c66d24.c.o(.data*);
         build/games/samurai_slice/graphics/samurai_slice_graphics_08c66fbc.c.o(.data*);
         build/games/samurai_slice/graphics/samurai_slice_graphics_08c67314.c.o(.data*);
-        build/games/power_calligraphy/graphics/power_calligraphy_graphics_08c68d1c.c.o(.data*);
-        build/games/power_calligraphy/graphics/power_calligraphy_graphics_08c68d64.c.o(.data*);
-        build/games/power_calligraphy/graphics/power_calligraphy_graphics_08c69698.c.o(.data*);
-        build/games/power_calligraphy/graphics/power_calligraphy_graphics_08c69844.c.o(.data*);
+        build/games/power_calligraphy/graphics/power_calligraphy_graphics_08c68d1c.4bpp.c.o(.data*);
+        build/games/power_calligraphy/graphics/power_calligraphy_graphics_08c68d64.4bpp.c.o(.data*);
+        build/games/power_calligraphy/graphics/power_calligraphy_graphics_08c69698.4bpp.c.o(.data*);
+        build/games/power_calligraphy/graphics/power_calligraphy_graphics_08c69844.tilemap.c.o(.data*);
         build/games/rhythm_test/graphics/rhythm_test_graphics_08c6a350.c.o(.data*);
         build/games/rhythm_test/graphics/rhythm_test_graphics_08c6a638.c.o(.data*);
         build/games/rhythm_test/graphics/rhythm_test_graphics_08c6a830.c.o(.data*);
