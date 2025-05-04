@@ -74,32 +74,32 @@ struct CompressedGraphics *ninja_bodyguard_buffered_textures[] = {
 // [D_089e69f0] Graphics Table (Ninja Bodyguard)
 struct GraphicsTable ninja_bodyguard_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08cde4e0,
+        /* Src.  */ &ninja_bodyguard_graphics_08cde4e0,
         /* Dest. */ BG_TILESET_BASE(0x8000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08ce015c,
+        /* Src.  */ &ninja_bodyguard_graphics_08ce015c,
         /* Dest. */ BG_MAP_BASE(0xE000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Tileset */ {
-        /* Src.  */ &D_08cdd9d4,
+        /* Src.  */ &ninja_bodyguard_graphics_08cdd9d4,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08cdfc38,
+        /* Src.  */ &ninja_bodyguard_graphics_08cdfc38,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08cdfd48,
+        /* Src.  */ &ninja_bodyguard_graphics_08cdfd48,
         /* Dest. */ BG_MAP_BASE(0xF000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08cdfaa4,
+        /* Src.  */ &ninja_bodyguard_graphics_08cdfaa4,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -119,22 +119,22 @@ struct GraphicsTable ninja_bodyguard_gfx_table[] = {
 // [D_089e6a5c] Graphics Table (Ninja Reincarnate)
 struct GraphicsTable ninja_reincarnate_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08d1e358,
+        /* Src.  */ &ninja_reincarnate_graphics_08d1e358,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08d1fab0,
+        /* Src.  */ &ninja_reincarnate_graphics_08d1fab0,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08d1fb70,
+        /* Src.  */ &ninja_reincarnate_graphics_08d1fb70,
         /* Dest. */ BG_MAP_BASE(0xF000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08d1f700,
+        /* Src.  */ &ninja_reincarnate_graphics_08d1f700,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },

@@ -644,5 +644,61 @@
     "night_walk_prologue_graphics_08beba58": [
         12498076,
         12498028
+    ],
+    "ninja_reincarnate_graphics_08d1e358": [
+        13752552,
+        13752500
+    ],
+    "ninja_bodyguard_graphics_08cdfaa4": [
+        13493488,
+        13493436
+    ],
+    "ninja_bodyguard_prologue_graphics_08c23cd0": [
+        12728912,
+        12728860,
+        4
+    ],
+    "ninja_bodyguard_prologue_graphics_08c22ee4": [
+        12724676,
+        12724624
+    ],
+    "ninja_bodyguard_graphics_08cdfc38": [
+        13499180,
+        13499128,
+        120
+    ],
+    "ninja_reincarnate_graphics_08d1f700": [
+        13755240,
+        13755188
+    ],
+    "ninja_bodyguard_prologue_graphics_08c23a3c": [
+        12726004,
+        12725952
+    ],
+    "ninja_bodyguard_graphics_08cde4e0": [
+        13490660,
+        13490608
+    ],
+    "ninja_bodyguard_graphics_08cdd9d4": [
+        13489608,
+        13489556
+    ],
+    "ninja_reincarnate_graphics_08d1fab0": [
+        13760392,
+        13760340,
+        120
+    ],
+    "ninja_bodyguard_prologue_graphics_08c24804": [
+        12731928,
+        12731876,
+        4
+    ],
+    "ninja_bodyguard_prologue_graphics_08c24604": [
+        12730896,
+        12730844
+    ],
+    "ninja_bodyguard_prologue_graphics_08c24200": [
+        12729568,
+        12729516
     ]
 }
