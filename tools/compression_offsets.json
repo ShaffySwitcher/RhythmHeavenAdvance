@@ -415,5 +415,43 @@
     "drum_studio_bg_monitor_graphics_08c71ed4": [
         13049460,
         13049408
+    ],
+    "fireworks_graphics_08c5fd10": [
+        12974800,
+        12974748,
+        64
+    ],
+    "fireworks_graphics_08c5da78": [
+        12960688,
+        12960636
+    ],
+    "fireworks_graphics_08c5f27c": [
+        12970972,
+        12970920
+    ],
+    "fireworks_prologue_graphics_08bef660": [
+        12513980,
+        12513932
+    ],
+    "fireworks_graphics_08c5fa80": [
+        12972684,
+        12972632
+    ],
+    "fireworks_prologue_graphics_08bf12dc": [
+        12521168,
+        12521120,
+        8
+    ],
+    "fireworks_graphics_08c5ebcc": [
+        12968476,
+        12968424
+    ],
+    "fireworks_prologue_graphics_08bf0eb8": [
+        12514928,
+        12514880
+    ],
+    "fireworks_graphics_08c5e20c": [
+        12966536,
+        12966484
     ]
 }

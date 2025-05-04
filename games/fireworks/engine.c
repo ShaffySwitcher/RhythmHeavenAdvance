@@ -12,17 +12,17 @@ struct CompressedGraphics *fireworks_buffered_textures[] = {
 // [D_089e4218] Graphics Table (Fireworks)
 struct GraphicsTable fireworks_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c5da78,
+        /* Src.  */ &fireworks_graphics_08c5da78,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c5fd10,
+        /* Src.  */ &fireworks_graphics_08c5fd10,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c5da78,
+        /* Src.  */ &fireworks_graphics_08c5da78,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -57,17 +57,17 @@ struct GraphicsTable fireworks_gfx_table[] = {
 // [D_089e4284] Graphics Table (Remix 5 [1])
 struct GraphicsTable fireworks_remix_5_gfx_table_1[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c5e20c,
+        /* Src.  */ &fireworks_graphics_08c5e20c,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c60044,
+        /* Src.  */ &fireworks_graphics_08c60044,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c5da78,
+        /* Src.  */ &fireworks_graphics_08c5da78,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -92,17 +92,17 @@ struct GraphicsTable fireworks_remix_5_gfx_table_1[] = {
 // [D_089e42d8] Graphics Table (Remix 5 [2])
 struct GraphicsTable fireworks_remix_5_gfx_table_2[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c5ebcc,
+        /* Src.  */ &fireworks_graphics_08c5ebcc,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c60410,
+        /* Src.  */ &fireworks_graphics_08c60410,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c5da78,
+        /* Src.  */ &fireworks_graphics_08c5da78,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -127,17 +127,17 @@ struct GraphicsTable fireworks_remix_5_gfx_table_2[] = {
 // [D_089e432c] Graphics Table (Remix 5 [3])
 struct GraphicsTable fireworks_remix_5_gfx_table_3[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c5f27c,
+        /* Src.  */ &fireworks_graphics_08c5f27c,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c606ec,
+        /* Src.  */ &fireworks_graphics_08c606ec,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c5da78,
+        /* Src.  */ &fireworks_graphics_08c5da78,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -162,17 +162,17 @@ struct GraphicsTable fireworks_remix_5_gfx_table_3[] = {
 // [D_089e4380] Graphics Table (Remix 5 [4])
 struct GraphicsTable fireworks_remix_5_gfx_table_4[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c5fa80,
+        /* Src.  */ &fireworks_graphics_08c5fa80,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c609a4,
+        /* Src.  */ &fireworks_graphics_08c609a4,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c5da78,
+        /* Src.  */ &fireworks_graphics_08c5da78,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
