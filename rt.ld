@@ -2079,10 +2079,10 @@ SECTIONS {
         build/games/wizards_waltz/graphics/wizards_waltz_prologue_graphics_08c339dc.c.o(.data*);
         build/games/wizards_waltz/graphics/wizards_waltz_prologue_graphics_08c33c14.c.o(.data*);
         build/graphics/unknown/unknown_graphics_08c33f60.c.o(.data*);
-        build/games/mannequin_factory/graphics/mannequin_factory_graphics_08c34478.c.o(.data*);
-        build/games/mannequin_factory/graphics/mannequin_factory_graphics_08c35c9c.c.o(.data*);
-        build/games/mannequin_factory/graphics/mannequin_factory_graphics_08c35f18.c.o(.data*);
-        build/games/mannequin_factory/graphics/mannequin_factory_graphics_08c360b0.c.o(.data*);
+        build/games/mannequin_factory/graphics/mannequin_factory_graphics_08c34478.4bpp.c.o(.data*);
+        build/games/mannequin_factory/graphics/mannequin_factory_graphics_08c35c9c.4bpp.c.o(.data*);
+        build/games/mannequin_factory/graphics/mannequin_factory_graphics_08c35f18.tilemap.c.o(.data*);
+        build/games/mannequin_factory/graphics/mannequin_factory_graphics_08c360b0.tilemap.c.o(.data*);
         build/games/space_dance/graphics/space_dance_graphics_08c38f60.c.o(.data*);
         build/games/space_dance/graphics/space_dance_graphics_08c38fcc.c.o(.data*);
         build/games/space_dance/graphics/space_dance_graphics_08c39888.c.o(.data*);
