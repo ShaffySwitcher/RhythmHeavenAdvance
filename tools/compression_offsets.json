@@ -214,5 +214,31 @@
     "bon_odori_prologue_graphics_08be75b8": [
         12479872,
         12479824
+    ],
+    "bouncy_road_prologue_graphics_08bee430": [
+        12506356,
+        12506308
+    ],
+    "bouncy_road_graphics_08c585a4": [
+        12944348,
+        12944296,
+        16
+    ],
+    "bouncy_road_graphics_08c57a14": [
+        12941288,
+        12941236
+    ],
+    "bouncy_road_graphics_08c583bc": [
+        12941860,
+        12941808
+    ],
+    "bouncy_road_prologue_graphics_08bee52c": [
+        12510344,
+        12510296,
+        16
+    ],
+    "bouncy_road_prologue_graphics_08bee468": [
+        12510272,
+        12510224
     ]
 }

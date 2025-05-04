@@ -90,12 +90,11 @@ class SlidingWindow:
 
 class CompressedData:
     segmentCount: int = 0
-    decompressedSize: int = 0
     window1: SlidingWindow = SlidingWindow()
     window2: SlidingWindow = SlidingWindow()
 
     def __init__(self, data, address):
-        self.decompressed = []
+        self.compressed = []
         self.address = address
         self.compress(data)
     
@@ -125,7 +124,7 @@ class CompressedData:
 
                 while len(mode2NibbleList) <= 2:
                     hword = mode_2_encode(mode2NibbleList, data[i:i+4])
-                    #print(data[i:i+4], " -> ", "0x%04X" % hword)
+                    #print("%x, %x, %x, %x" % (data[i], data[i+1], data[i+2], data[i+3]), " -> ", "0x%04X" % hword)
                     newEncodedData.append(hword)
                     count += 1
                     i += 4
@@ -133,8 +132,8 @@ class CompressedData:
                         break
                     append_unique_nibbles(data[i:i+4], mode2NibbleList)
 
-                self.decompressed.append((count - 1) << 8 | mode2NibbleList[1] << 4 | mode2NibbleList[0])
-                self.decompressed.extend(newEncodedData)
+                self.compressed.append((count - 1) << 8 | mode2NibbleList[1] << 4 | mode2NibbleList[0])
+                self.compressed.extend(newEncodedData)
                 self.window1.append_bit(1)
                 self.window2.append_bit(0)
                 self.segmentCount += 1
@@ -152,13 +151,13 @@ class CompressedData:
                     newEncodedData = []
                     count = 0
                     startingByte = mode_1_encode(mode1NibbleList, data[i])
-                    #print(data[i:i+1], " -> ", "0x%02X" % startingByte)
+                    #print("%x" % data[i], " -> ", "0x%02X" % startingByte)
                     i += 1
 
                     while len(mode1NibbleList) <= 4:
                         byte1 = mode_1_encode(mode1NibbleList, data[i])
                         byte2 = mode_1_encode(mode1NibbleList, data[i+1])
-                        #print(data[i:i+2], " -> ", "0x%04X" % (byte1 << 8 | byte2))
+                        #print("%x, %x" % (data[i], data[i+1]), " -> ", "0x%04X" % (byte1 << 8 | byte2))
                         newEncodedData.append(byte1 | byte2 << 8)
                         count += 1
                         i += 2
@@ -170,12 +169,12 @@ class CompressedData:
                         append_unique_nibbles(data[i:i+2], mode1NibbleList)
 
                     while len(mode1NibbleList) < 4:
-                        mode1NibbleList.append(self.get_nibble_from_rom(len(self.decompressed)*2+1, len(mode1NibbleList) & 1))
+                        mode1NibbleList.append(self.get_nibble_from_rom(len(self.compressed)*2+1, len(mode1NibbleList) & 1))
                         
 
-                    self.decompressed.append(mode1NibbleList[3] << 12 | mode1NibbleList[2] << 8 | mode1NibbleList[1] << 4 | mode1NibbleList[0])
-                    self.decompressed.append((count - 1) | startingByte << 8)
-                    self.decompressed.extend(newEncodedData)
+                    self.compressed.append(mode1NibbleList[3] << 12 | mode1NibbleList[2] << 8 | mode1NibbleList[1] << 4 | mode1NibbleList[0])
+                    self.compressed.append((count - 1) | startingByte << 8)
+                    self.compressed.extend(newEncodedData)
                     self.window1.append_bit(1)
                     self.window2.append_bit(1)
                     self.segmentCount += 1
@@ -185,20 +184,20 @@ class CompressedData:
                 break
 
             # Copy mode (no compression)
-            #print("Copy mode:  ", data[i])
-            self.decompressed.append(data[i])
+            #print("Copy mode: %x" % data[i])
+            self.compressed.append(data[i])
             self.window1.append_bit(0)
             i += 1
             self.segmentCount += 1
 
         if self.address is not None:
-            self.window1.fill_rest(pad4(self.address + len(self.decompressed)*2))
-            self.window2.fill_rest(pad4(self.address + len(self.decompressed)*2) + len(self.window1.data)*4)
+            self.window1.fill_rest(pad4(self.address + len(self.compressed)*2))
+            self.window2.fill_rest(pad4(self.address + len(self.compressed)*2) + len(self.window1.data)*4)
 
     def output_to_file(self, f, symbol):
         # f is a currently open file object
         f.write("u16 %s_data[] = {\n\t" % symbol)
-        output_array(f, self.decompressed, "0x%04x", 16)
+        output_array(f, self.compressed, "0x%04x", 16)
         f.write("\n};\n\n")
         f.write("u32 %s_window1[] = {\n\t" % symbol)
         output_array(f, self.window1.data, "0x%08x", 8)
@@ -222,7 +221,7 @@ class RleCompressedData:
     offset: int = 0
 
     def __init__(self, data):
-        self.decompressed = []
+        self.compressed = []
         self.counts = []
         self.compress(data)
 
@@ -239,12 +238,12 @@ class RleCompressedData:
             count = 1
             self.size += 1
             curValue = data[i]
-            self.decompressed.append(curValue)
-            while (data[i+1] != curValue or data[min(i+2, self.offset-1)] != curValue or data[min(i+3, self.offset-1)] != curValue):
+            self.compressed.append(curValue)
+            while (data[i+1] != curValue or i+3 >= self.offset or  data[i+2] != curValue or data[i+3] != curValue):
                 i += 1
                 count += 1
                 curValue = data[i]
-                self.decompressed.append(curValue)
+                self.compressed.append(curValue)
                 if (i+1 >= self.offset):
                     break
             self.add_count(count)
@@ -271,7 +270,7 @@ class RleCompressedData:
                 output_array(f, unusedData, "0x%02x", 16)
                 f.write("\n};\n\n")
             f.write("u16 %s_data[] = {\n\t" % symbol)
-            output_array(f, self.decompressed, "0x%04x", 16)
+            output_array(f, self.compressed, "0x%04x", 16)
             f.write("\n};\n\n")
 
         f.write("u8 %s_rle_segments[] = {\n\t" % symbol)
@@ -321,7 +320,7 @@ def compress_file(input, output, double, revision):
 
     rleData = RleCompressedData(data)
     if double:
-        compressedData = CompressedData(rleData.decompressed, address)
+        compressedData = CompressedData(rleData.compressed, address)
         compressedData.output_to_file(outputFile, symbol)
     rleData.output_to_file(outputFile, symbol, double, unusedData)
 
