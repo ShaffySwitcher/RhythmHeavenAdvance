@@ -205,7 +205,8 @@ class CompressedData:
         output_array(f, self.window1.data, "0x%08x", 8)
         f.write("\n};\n\n")
         f.write("u32 %s_window2[] = {\n\t" % symbol)
-        output_array(f, self.window2.data, "0x%08x", 8)
+        if len(self.window2.data) != 1 or self.window2.index != 0:
+            output_array(f, self.window2.data, "0x%08x", 8)
         f.write("\n};\n\n")
 
         f.write("struct Huffman %s_compressed = {\n" % symbol)
