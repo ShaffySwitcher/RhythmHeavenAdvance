@@ -228,17 +228,17 @@ struct CompressedGraphics *drum_studio_buffered_textures[] = {
 // [D_089e2a08] Graphics Table (Studio Drumming)
 struct GraphicsTable drum_studio_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c4fc44,
+        /* Src.  */ &drum_studio_graphics_08c4fc44,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c51344,
+        /* Src.  */ &drum_studio_graphics_08c51344,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c4efe4,
+        /* Src.  */ &drum_studio_graphics_08c4efe4,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -258,37 +258,37 @@ struct GraphicsTable drum_studio_gfx_table[] = {
 // [D_089e2a50] Graphics Table (Drum Lessons)
 struct GraphicsTable drum_lessons_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c4fc44,
+        /* Src.  */ &drum_studio_graphics_08c4fc44,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c515bc,
+        /* Src.  */ &drum_studio_graphics_08c515bc,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Tileset */ {
-        /* Src.  */ &D_08c4f5ac,
+        /* Src.  */ &drum_studio_graphics_08c4f5ac,
         /* Dest. */ BG_TILESET_BASE(0x8000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c50f54,
+        /* Src.  */ &drum_studio_graphics_08c50f54,
         /* Dest. */ BG_MAP_BASE(0xF000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c510d4,
+        /* Src.  */ &drum_studio_graphics_08c510d4,
         /* Dest. */ BG_MAP_BASE(0xF800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c50e04,
+        /* Src.  */ &drum_studio_graphics_08c50e04,
         /* Dest. */ OBJ_TILESET_BASE(0x5000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c4efe4,
+        /* Src.  */ &drum_studio_graphics_08c4efe4,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
