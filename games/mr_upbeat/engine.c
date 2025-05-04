@@ -36,7 +36,7 @@ struct CompressedGraphics *mr_upbeat_buffered_textures[] = {
 // [D_089e56ec] Graphics Table
 struct GraphicsTable mr_upbeat_gfx_table[] = {
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c702d0,
+        /* Src.  */ &metronome_graphics_08c702d0,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
