@@ -71,11 +71,11 @@ class SlidingWindow:
         self.data = [0]
 
     def append_bit(self, bit):
-        self.data[-1] = self.data[-1] | (bit << self.index)
-        self.index += 1
         if self.index >= 32:
             self.index = 0
             self.data.append(0)
+        self.data[-1] = self.data[-1] | (bit << self.index)
+        self.index += 1
     
     def fill_rest(self, address):
         # Fill in all unused bits with the data from the ROM
