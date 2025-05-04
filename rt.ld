@@ -2199,7 +2199,8 @@ SECTIONS {
         build/games/marching_orders/graphics/marching_orders_graphics_08c6eae0.4bpp.c.o(.data*);
         build/games/marching_orders/graphics/marching_orders_graphics_08c6eedc.tilemap.c.o(.data*);
         build/games/marching_orders/graphics/marching_orders_graphics_08c6efbc.tilemap.c.o(.data*);
-        build/games/metronome/graphics/metronome_graphics_08c702d0.c.o(.data*);
+        build/games/metronome/graphics/metronome_graphics_08c702d0.4bpp.c.o(.data*);
+        build/games/metronome/graphics/metronome_unused_08c702e0.c.o(.data*);
         build/games/drum_studio/graphics/drum_studio_bg_monitor_graphics_08c703a8.4bpp.c.o(.data*);
         build/games/drum_studio/graphics/drum_studio_bg_monitor_graphics_08c70490.4bpp.c.o(.data*);
         build/games/drum_studio/graphics/drum_studio_bg_monitor_graphics_08c704e8.4bpp.c.o(.data*);
