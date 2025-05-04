@@ -93,13 +93,13 @@ extern Palette tanuki_and_monkey_bg_pal[];
 
 /* DRUM INTRO - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics D_08c4cca8;
-extern struct CompressedGraphics D_08c4cf00;
-extern struct CompressedGraphics D_08c4d040;
-extern struct CompressedGraphics D_08c4af00;
-extern struct CompressedGraphics D_08c4b164;
-extern struct CompressedGraphics D_08c4a970;
-extern struct CompressedGraphics D_08ce6ebc;
-extern struct CompressedGraphics D_08ce707c;
-extern struct CompressedGraphics D_08ce7188;
-extern struct CompressedGraphics D_08ce6cbc;
+extern struct CompressedGraphics drum_intro_graphics_08c4cca8;
+extern struct CompressedGraphics drum_intro_graphics_08c4cf00;
+extern struct CompressedGraphics drum_intro_graphics_08c4d040;
+extern struct CompressedGraphics drum_intro_graphics_08c4af00;
+extern struct CompressedGraphics drum_intro_graphics_08c4b164;
+extern struct CompressedGraphics drum_intro_graphics_08c4a970;
+extern struct CompressedGraphics tanuki_and_monkey_graphics_08ce6ebc;
+extern struct CompressedGraphics tanuki_and_monkey_graphics_08ce707c;
+extern struct CompressedGraphics tanuki_and_monkey_graphics_08ce7188;
+extern struct CompressedGraphics tanuki_and_monkey_graphics_08ce6cbc;

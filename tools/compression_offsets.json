@@ -240,5 +240,48 @@
     "bouncy_road_prologue_graphics_08bee468": [
         12510272,
         12510224
+    ],
+    "drum_intro_graphics_08c4a970": [
+        12881164,
+        12881112
+    ],
+    "drum_intro_graphics_08c4aff8": [
+        12889872,
+        12889820
+    ],
+    "tanuki_and_monkey_graphics_08ce707c": [
+        13528828,
+        13528776,
+        48
+    ],
+    "tanuki_and_monkey_graphics_08ce6ebc": [
+        13528268,
+        13528216
+    ],
+    "drum_intro_graphics_08c4cf00": [
+        12897464,
+        12897412
+    ],
+    "drum_intro_graphics_08c4cca8": [
+        12890900,
+        12890848
+    ],
+    "tanuki_and_monkey_graphics_08ce6cbc": [
+        13525640,
+        13525588
+    ],
+    "drum_intro_graphics_08c4af00": [
+        12888448,
+        12888396
+    ],
+    "drum_intro_graphics_08c4d040": [
+        12898168,
+        12898116,
+        104
+    ],
+    "drum_intro_graphics_08c4b164": [
+        12890232,
+        12890180,
+        112
     ]
 }
