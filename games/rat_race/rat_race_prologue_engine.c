@@ -12,17 +12,17 @@ struct CompressedGraphics *rat_race_prologue_buffered_textures[] = {
 // [D_089ecfc0] Graphics Table
 struct GraphicsTable rat_race_prologue_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c22764,
+        /* Src.  */ &rat_race_prologue_graphics_08c22764,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c229b4,
+        /* Src.  */ &rat_race_prologue_graphics_08c229b4,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c21f88,
+        /* Src.  */ &rat_race_prologue_graphics_08c21f88,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
