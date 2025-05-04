@@ -752,5 +752,31 @@
     "power_calligraphy_graphics_08c68d1c": [
         13005604,
         13005552
+    ],
+    "quiz_show_graphics_08c7d524": [
+        13095780,
+        13095728,
+        168
+    ],
+    "quiz_show_graphics_08c7c8e0": [
+        13081552,
+        13081500
+    ],
+    "quiz_show_prologue_graphics_08c02a34": [
+        12592696,
+        12592644
+    ],
+    "quiz_show_prologue_graphics_08c04434": [
+        12593732,
+        12593680
+    ],
+    "quiz_show_prologue_graphics_08c04940": [
+        12600392,
+        12600340,
+        4
+    ],
+    "quiz_show_graphics_08c7d2ac": [
+        13093104,
+        13093052
     ]
 }
