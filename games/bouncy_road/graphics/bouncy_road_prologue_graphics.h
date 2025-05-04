@@ -12,9 +12,9 @@ extern struct Animation anim_bouncy_road_prologue_title[];
 
 /* PROLOGUE (BOUNCY ROAD) - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics D_08bee468;
-extern struct CompressedGraphics D_08bee52c;
-extern struct CompressedGraphics D_08bee430;
+extern struct CompressedGraphics bouncy_road_prologue_graphics_08bee468;
+extern struct CompressedGraphics bouncy_road_prologue_graphics_08bee52c;
+extern struct CompressedGraphics bouncy_road_prologue_graphics_08bee430;
 
 /* PROLOGUE (BOUNCY ROAD) - PALETTES */
 
