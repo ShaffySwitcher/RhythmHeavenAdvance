@@ -36,22 +36,22 @@ struct CompressedGraphics *power_calligraphy_buffered_textures[] = {
 // [D_089e4994] Graphics Table (Power Calligraphy)
 struct GraphicsTable power_calligraphy_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c68d64,
+        /* Src.  */ &power_calligraphy_graphics_08c68d64,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c69844,
+        /* Src.  */ &power_calligraphy_graphics_08c69844,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c68d1c,
+        /* Src.  */ &power_calligraphy_graphics_08c68d1c,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c69698,
+        /* Src.  */ &power_calligraphy_graphics_08c69698,
         /* Dest. */ OBJ_TILESET_BASE(0x5800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
