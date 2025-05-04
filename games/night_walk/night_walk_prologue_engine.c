@@ -12,17 +12,17 @@ struct CompressedGraphics *night_walk_prologue_buffered_textures[] = {
 // [D_089ea98c] Graphics Table
 struct GraphicsTable night_walk_prologue_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08bebaa4,
+        /* Src.  */ &night_walk_prologue_graphics_08bebaa4,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08bebbd4,
+        /* Src.  */ &night_walk_prologue_graphics_08bebbd4,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08beba58,
+        /* Src.  */ &night_walk_prologue_graphics_08beba58,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
