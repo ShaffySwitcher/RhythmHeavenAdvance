@@ -38,13 +38,13 @@ extern struct Animation anim_rat_stumble[];
 
 /* RAT RACE - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics D_08c87fb0;
-extern struct CompressedGraphics D_08c880b8;
-extern struct CompressedGraphics D_08c88148;
-extern struct CompressedGraphics D_08c88168;
-extern struct CompressedGraphics D_08c88420;
-extern struct CompressedGraphics D_08c88530;
-extern struct CompressedGraphics D_08c86e74;
+extern struct CompressedGraphics rat_race_graphics_08c87fb0;
+extern struct CompressedGraphics rat_race_graphics_08c880b8;
+extern struct CompressedGraphics rat_race_graphics_08c88148;
+extern struct CompressedGraphics rat_race_graphics_08c88168;
+extern struct CompressedGraphics rat_race_graphics_08c88420;
+extern struct CompressedGraphics rat_race_graphics_08c88530;
+extern struct CompressedGraphics rat_race_graphics_08c86e74;
 
 /* RAT RACE - PALETTES */
 

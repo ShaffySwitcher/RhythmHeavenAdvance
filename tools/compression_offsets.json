@@ -778,5 +778,31 @@
     "quiz_show_graphics_08c7d2ac": [
         13093104,
         13093052
+    ],
+    "rat_race_graphics_08c86e74": [
+        13128408,
+        13128356
+    ],
+    "rat_race_graphics_08c87fb0": [
+        13135492,
+        13135440
+    ],
+    "rat_race_prologue_graphics_08c22764": [
+        12722072,
+        12722020
+    ],
+    "rat_race_prologue_graphics_08c229b4": [
+        12724092,
+        12724040,
+        8
+    ],
+    "rat_race_graphics_08c880b8": [
+        13140024,
+        13139972,
+        120
+    ],
+    "rat_race_prologue_graphics_08c21f88": [
+        12718692,
+        12718640
     ]
 }
