@@ -52,7 +52,7 @@ extern struct Animation anim_sick_beats_endless_particle[];
 extern struct CompressedGraphics D_08d19fb4;
 extern struct CompressedGraphics D_08d1a320;
 extern struct CompressedGraphics D_08d1a280;
-extern struct CompressedGraphics D_08d198bc;
+extern struct CompressedGraphics mechanical_horse_graphics_08d198bc;
 
 /* SICK BEATS - PALETTES */
 

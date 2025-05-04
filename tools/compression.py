@@ -169,7 +169,7 @@ class CompressedData:
                         append_unique_nibbles(data[i:i+2], mode1NibbleList)
 
                     while len(mode1NibbleList) < 4:
-                        mode1NibbleList.append(self.get_nibble_from_rom(len(self.compressed)*2+1, len(mode1NibbleList) & 1))
+                        mode1NibbleList.append(self.get_nibble_from_rom(len(self.compressed)*2+(len(mode1NibbleList) >> 1), len(mode1NibbleList) & 1))
                         
 
                     self.compressed.append(mode1NibbleList[3] << 12 | mode1NibbleList[2] << 8 | mode1NibbleList[1] << 4 | mode1NibbleList[0])
