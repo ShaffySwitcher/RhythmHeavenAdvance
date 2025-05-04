@@ -2006,9 +2006,9 @@ SECTIONS {
         build/games/marching_orders/graphics/marching_orders_prologue_graphics_08bfc8f4.4bpp.c.o(.data*);
         build/games/marching_orders/graphics/marching_orders_prologue_graphics_08bff238.4bpp.c.o(.data*);
         build/games/marching_orders/graphics/marching_orders_prologue_graphics_08bff704.tilemap.c.o(.data*);
-        build/games/polyrhythm/graphics/polyrhythm_prologue_graphics_08c00010.c.o(.data*);
-        build/games/polyrhythm/graphics/polyrhythm_prologue_graphics_08c0212c.c.o(.data*);
-        build/games/polyrhythm/graphics/polyrhythm_prologue_graphics_08c02628.c.o(.data*);
+        build/games/polyrhythm/graphics/polyrhythm_prologue_graphics_08c00010.4bpp.c.o(.data*);
+        build/games/polyrhythm/graphics/polyrhythm_prologue_graphics_08c0212c.4bpp.c.o(.data*);
+        build/games/polyrhythm/graphics/polyrhythm_prologue_graphics_08c02628.tilemap.c.o(.data*);
         build/games/quiz_show/graphics/quiz_show_prologue_graphics_08c02a34.c.o(.data*);
         build/games/quiz_show/graphics/quiz_show_prologue_graphics_08c04434.c.o(.data*);
         build/games/quiz_show/graphics/quiz_show_prologue_graphics_08c04940.c.o(.data*);
@@ -2249,8 +2249,8 @@ SECTIONS {
         build/graphics/options/options_graphics_08c76ca4.c.o(.data*);
         build/graphics/options/options_graphics_08c76d80.c.o(.data*);
         build/graphics/options/options_graphics_08c77244.c.o(.data*);
-        build/games/polyrhythm/graphics/polyrhythm_graphics_08c781ac.c.o(.data*);
-        build/games/polyrhythm/graphics/polyrhythm_graphics_08c78a04.c.o(.data*);
+        build/games/polyrhythm/graphics/polyrhythm_graphics_08c781ac.4bpp.c.o(.data*);
+        build/games/polyrhythm/graphics/polyrhythm_graphics_08c78a04.tilemap.c.o(.data*);
         build/games/drum_live/graphics/drum_live_menu_graphics_08c79bb0.4bpp.c.o(.data*);
         build/games/drum_live/graphics/drum_live_menu_unused_08c79bc0.c.o(.data*);
         build/games/quiz_show/graphics/quiz_show_graphics_08c7c8e0.c.o(.data*);

@@ -700,5 +700,27 @@
     "ninja_bodyguard_prologue_graphics_08c24200": [
         12729568,
         12729516
+    ],
+    "polyrhythm_prologue_graphics_08c0212c": [
+        12582944,
+        12582892
+    ],
+    "polyrhythm_prologue_graphics_08c02628": [
+        12591424,
+        12591372,
+        4
+    ],
+    "polyrhythm_graphics_08c781ac": [
+        13070932,
+        13070880
+    ],
+    "polyrhythm_graphics_08c78a04": [
+        13074940,
+        13074888,
+        64
+    ],
+    "polyrhythm_prologue_graphics_08c00010": [
+        12580628,
+        12580576
     ]
 }

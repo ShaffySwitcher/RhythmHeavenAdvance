@@ -12,17 +12,17 @@ struct CompressedGraphics *polyrhythm_buffered_textures[] = {
 // [D_089e596c] Graphics Table (Polyrhythm, Remix 4)
 struct GraphicsTable polyrhythm_1_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c781ac,
+        /* Src.  */ &polyrhythm_graphics_08c781ac,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c78a04,
+        /* Src.  */ &polyrhythm_graphics_08c78a04,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c781ac,
+        /* Src.  */ &polyrhythm_graphics_08c781ac,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -42,17 +42,17 @@ struct GraphicsTable polyrhythm_1_gfx_table[] = {
 // [D_089e59b4] Graphics Table (Polyrhythm 2)
 struct GraphicsTable polyrhythm_2_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c781ac,
+        /* Src.  */ &polyrhythm_graphics_08c781ac,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c78a04,
+        /* Src.  */ &polyrhythm_graphics_08c78a04,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c781ac,
+        /* Src.  */ &polyrhythm_graphics_08c781ac,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
