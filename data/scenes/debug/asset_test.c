@@ -17,17 +17,17 @@ union SceneObject asset_test_scene_objects[] = {
 // [D_089de0e8] Graphics Table
 struct GraphicsTable asset_test_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c4fc44,
+        /* Src.  */ &drum_studio_graphics_08c4fc44,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c51344,
+        /* Src.  */ &drum_studio_graphics_08c51344,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c4efe4,
+        /* Src.  */ &drum_studio_graphics_08c4efe4,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -54,17 +54,17 @@ struct CompressedGraphics *asset_test_buffered_textures[] = {
 // [D_089de134] Graphics Table
 struct GraphicsTable asset_test_gfx_table_dupe[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c4fc44,
+        /* Src.  */ &drum_studio_graphics_08c4fc44,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c51344,
+        /* Src.  */ &drum_studio_graphics_08c51344,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c4efe4,
+        /* Src.  */ &drum_studio_graphics_08c4efe4,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
