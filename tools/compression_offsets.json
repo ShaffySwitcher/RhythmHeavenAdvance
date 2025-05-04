@@ -622,5 +622,27 @@
     "metronome_graphics_08c702d0": [
         13037516,
         13037464
+    ],
+    "night_walk_prologue_graphics_08bebaa4": [
+        12499560,
+        12499512
+    ],
+    "night_walk_graphics_08c52420": [
+        12916172,
+        12916120
+    ],
+    "night_walk_prologue_graphics_08bebbd4": [
+        12499648,
+        12499600,
+        12
+    ],
+    "night_walk_graphics_08c524fc": [
+        12920032,
+        12919980,
+        176
+    ],
+    "night_walk_prologue_graphics_08beba58": [
+        12498076,
+        12498028
     ]
 }

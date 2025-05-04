@@ -1972,9 +1972,9 @@ SECTIONS {
         build/games/space_dance/graphics/cosmic_dance_prologue_graphics_08beaf78.c.o(.data*);
         build/games/space_dance/graphics/cosmic_dance_prologue_graphics_08beb2f8.c.o(.data*);
         build/games/space_dance/graphics/cosmic_dance_prologue_graphics_08beb48c.c.o(.data*);
-        build/games/night_walk/graphics/night_walk_prologue_graphics_08beba58.c.o(.data*);
-        build/games/night_walk/graphics/night_walk_prologue_graphics_08bebaa4.c.o(.data*);
-        build/games/night_walk/graphics/night_walk_prologue_graphics_08bebbd4.c.o(.data*);
+        build/games/night_walk/graphics/night_walk_prologue_graphics_08beba58.4bpp.c.o(.data*);
+        build/games/night_walk/graphics/night_walk_prologue_graphics_08bebaa4.4bpp.c.o(.data*);
+        build/games/night_walk/graphics/night_walk_prologue_graphics_08bebbd4.tilemap.c.o(.data*);
         build/games/showtime/graphics/showtime_prologue_graphics_08bec134.4bpp.c.o(.data*);
         build/games/showtime/graphics/showtime_prologue_graphics_08bed0ec.4bpp.c.o(.data*);
         build/games/showtime/graphics/showtime_prologue_graphics_08bed4e4.tilemap.c.o(.data*);
@@ -2139,8 +2139,8 @@ SECTIONS {
         build/games/drum_studio/graphics/drum_studio_graphics_08c510d4.tilemap.c.o(.data*);
         build/games/drum_studio/graphics/drum_studio_graphics_08c51344.tilemap.c.o(.data*);
         build/games/drum_studio/graphics/drum_studio_graphics_08c515bc.tilemap.c.o(.data*);
-        build/games/night_walk/graphics/night_walk_graphics_08c52420.c.o(.data*);
-        build/games/night_walk/graphics/night_walk_graphics_08c524fc.c.o(.data*);
+        build/games/night_walk/graphics/night_walk_graphics_08c52420.4bpp.c.o(.data*);
+        build/games/night_walk/graphics/night_walk_graphics_08c524fc.tilemap.c.o(.data*);
         build/games/showtime/graphics/showtime_graphics_08c54f7c.4bpp.c.o(.data*);
         build/games/showtime/graphics/showtime_graphics_08c551e8.4bpp.c.o(.data*);
         build/games/showtime/graphics/showtime_graphics_08c56bd8.4bpp.c.o(.data*);
