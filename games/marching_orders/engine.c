@@ -50,27 +50,27 @@ struct CompressedGraphics *marching_buffered_textures[] = {
 // [D_089e5208] Graphics Table (Marching Orders)
 struct GraphicsTable marching_orders_1_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c6c89c,
+        /* Src.  */ &marching_orders_graphics_08c6c89c,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c6cc98,
+        /* Src.  */ &marching_orders_graphics_08c6cc98,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c6cde0,
+        /* Src.  */ &marching_orders_graphics_08c6cde0,
         /* Dest. */ BG_MAP_BASE(0xF000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c6cd78,
+        /* Src.  */ &marching_orders_graphics_08c6cd78,
         /* Dest. */ BG_MAP_BASE(0xF800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c6c658,
+        /* Src.  */ &marching_orders_graphics_08c6c658,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -100,22 +100,22 @@ struct GraphicsTable marching_orders_1_gfx_table[] = {
 // [D_089e5280] Graphics Table (Remix 7, Remix 8)
 struct GraphicsTable marching_orders_remix_7_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08ce5db0,
+        /* Src.  */ &marching_orders_remix_7_graphics_08ce5db0,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08ce615c,
+        /* Src.  */ &marching_orders_remix_7_graphics_08ce615c,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08ce6278,
+        /* Src.  */ &marching_orders_remix_7_graphics_08ce6278,
         /* Dest. */ BG_MAP_BASE(0xF800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08ce5b3c,
+        /* Src.  */ &marching_orders_remix_7_graphics_08ce5b3c,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -145,22 +145,22 @@ struct GraphicsTable marching_orders_remix_7_gfx_table[] = {
 // [D_089e52ec] Graphics Table (Marching Orders 2)
 struct GraphicsTable marching_orders_2_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c6eae0,
+        /* Src.  */ &marching_orders_graphics_08c6eae0,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c6eedc,
+        /* Src.  */ &marching_orders_graphics_08c6eedc,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c6efbc,
+        /* Src.  */ &marching_orders_graphics_08c6efbc,
         /* Dest. */ BG_MAP_BASE(0xF800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c6e8d4,
+        /* Src.  */ &marching_orders_graphics_08c6e8d4,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
