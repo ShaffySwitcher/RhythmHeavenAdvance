@@ -89,6 +89,7 @@ C_DIRS         := $(sort $(C_DIRS)) # remove duplicates
 
 ASM_DIRS       := $(ASM) $(DATA) $(SCENE_DATA) $(LEVEL_DATA)
 BS_DIRS        := $(GAME_DATA) $(SCENE_DATA)
+GFX_DIRS       := $(GRAPHICS)
 
 ALL_DIRS       := $(BIN) $(ASM_DIRS) $(C_DIRS) $(MUSIC) $(SFX)
 ALL_DIRS       := $(sort $(ALL_DIRS)) # remove duplicates
@@ -109,16 +110,21 @@ CFILES		:=	$(foreach dir,$(C_DIRS),$(wildcard $(dir)/*.c))
 SFILES		:=	$(foreach dir,$(ASM_DIRS),$(wildcard $(dir)/*.s)) $(foreach dir,$(BS_DIRS),$(wildcard $(dir)/*.bs))
 BINFILES	:=	$(foreach dir,$(BIN),$(wildcard $(dir)/*.bin)) $(foreach dir,$(MUSIC),$(wildcard $(dir)/*.mid)) $(foreach dir,$(GRAPHICS),$(wildcard $(dir)/*.bin))
 WAVFILES    :=  $(foreach dir,$(SFX),$(wildcard $(dir)/*.wav))
+4BPPFILES   :=  $(foreach dir,$(GFX_DIRS),$(wildcard $(dir)/*.4bpp))
+TILEMAPS	:=  $(foreach dir,$(GFX_DIRS),$(wildcard $(dir)/*.tilemap))
 JSONFILES   :=  $(foreach dir,$(AUDIO),$(wildcard $(dir)/*.json))
 
 CFILES := $(filter-out %.inc.c, $(CFILES))
 
-PCMFILES    := $(addprefix $(BUILD)/,$(WAVFILES:.wav=.pcm))
-OFILES_JSON := $(addprefix $(BUILD)/,$(JSONFILES:.json=.json.c.o))
-OFILES_BIN  := $(addprefix $(BUILD)/,$(addsuffix .o,$(BINFILES)))
-OFILES_SOURCES := $(addprefix $(BUILD)/,$(addsuffix .o,$(SFILES))) $(addprefix $(BUILD)/,$(addsuffix .o,$(CFILES)))
+PCMFILES       := $(addprefix $(BUILD)/,$(WAVFILES:.wav=.pcm))
+OFILES_JSON    := $(addprefix $(BUILD)/,$(JSONFILES:.json=.json.c.o)) \
+				  $(addprefix $(BUILD)/,$(4BPPFILES:.4bpp=.4bpp.c.o)) \
+				  $(addprefix $(BUILD)/,$(TILEMAPS:.tilemap=.tilemap.c.o))
+OFILES_SOURCES := $(addprefix $(BUILD)/,$(addsuffix .o,$(SFILES)))   \
+				  $(addprefix $(BUILD)/,$(addsuffix .o,$(CFILES)))   \
+				  $(addprefix $(BUILD)/,$(addsuffix .o,$(BINFILES)))
 
-OFILES := $(OFILES_BIN) $(OFILES_SOURCES) $(OFILES_JSON)
+OFILES := $(OFILES_SOURCES) $(OFILES_JSON)
 
 INCLUDE	:=	-I $(foreach dir,$(INCLUDES),$(wildcard $(dir)/*.h)) \
 			-I $(foreach dir,$(LIBDIRS),-I $(dir)/include) \
@@ -205,9 +211,17 @@ $(BUILD)/%.json.c : %.json $(PCMFILES) | $(BUILD_DIRS)
 	$(call print,Generating data table from JSON:,$<,$@)
 	$(V)python3 tools/sample_parser.py $< $@
 
+$(BUILD)/%.4bpp.c : %.4bpp | $(BUILD_DIRS)
+	$(call print,Compressing graphics:,$<,$@)
+	$(V)python3 tools/compression.py $< $@ $(REV)
+
+$(BUILD)/%.tilemap.c : %.tilemap | $(BUILD_DIRS)
+	$(call print,Compressing tilemap:,$<,$@)
+	$(V)python3 tools/compression.py $< $@ $(REV)
+
 $(OFILES_JSON): $(BUILD)/%.c.o : $(BUILD)/%.c | $(BUILD_DIRS)
 	$(call build_c_file)
-	
+
 # C files
 $(BUILD)/%.c.o : %.c | $(BUILD_DIRS)
 	$(call build_c_file)

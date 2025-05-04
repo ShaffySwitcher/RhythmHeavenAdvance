@@ -9,9 +9,9 @@ extern struct Animation anim_rap_men_prologue_title[];
 
 /* PROLOGUE (RAP MEN) - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics D_08c2052c;
-extern struct CompressedGraphics D_08c207cc;
-extern struct CompressedGraphics D_08c1f4b4;
+extern struct CompressedGraphics rap_men_prologue_graphics_08c2052c;
+extern struct CompressedGraphics rap_men_prologue_graphics_08c207cc;
+extern struct CompressedGraphics rap_men_prologue_graphics_08c1f4b4;
 
 /* PROLOGUE (RAP MEN) - PALETTES */
 
@@ -23,9 +23,9 @@ extern struct Animation anim_rap_women_prologue_title[];
 
 /* PROLOGUE (RAP WOMEN) - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics D_08c20f8c;
-extern struct CompressedGraphics D_08c21254;
-extern struct CompressedGraphics D_08c209cc;
+extern struct CompressedGraphics rap_men_prologue_graphics_08c20f8c;
+extern struct CompressedGraphics rap_men_prologue_graphics_08c21254;
+extern struct CompressedGraphics rap_men_prologue_graphics_08c209cc;
 
 /* PROLOGUE (RAP WOMEN) - PALETTES */
 

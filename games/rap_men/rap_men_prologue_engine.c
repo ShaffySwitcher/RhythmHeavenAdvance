@@ -12,17 +12,17 @@ struct CompressedGraphics *rap_men_prologue_buffered_textures[] = {
 // [D_089ecd48] Graphics Table
 struct GraphicsTable rap_men_prologue_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c2052c,
+        /* Src.  */ &rap_men_prologue_graphics_08c2052c,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c207cc,
+        /* Src.  */ &rap_men_prologue_graphics_08c207cc,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c1f4b4,
+        /* Src.  */ &rap_men_prologue_graphics_08c1f4b4,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
