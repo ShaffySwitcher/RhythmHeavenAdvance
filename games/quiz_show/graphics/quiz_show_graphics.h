@@ -50,12 +50,12 @@ extern struct Animation anim_quiz_show_player_head_endless4[];
 
 /* QUIZ SHOW - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics D_08c7d2ac;
-extern struct CompressedGraphics D_08c7db1c;
-extern struct CompressedGraphics D_08c7da68;
-extern struct CompressedGraphics D_08c7d524;
-extern struct CompressedGraphics D_08c7d9d0;
-extern struct CompressedGraphics D_08c7c8e0;
+extern struct CompressedGraphics quiz_show_graphics_08c7d2ac;
+extern struct CompressedGraphics quiz_show_graphics_08c7db1c;
+extern struct CompressedGraphics quiz_show_graphics_08c7da68;
+extern struct CompressedGraphics quiz_show_graphics_08c7d524;
+extern struct CompressedGraphics quiz_show_graphics_08c7d9d0;
+extern struct CompressedGraphics quiz_show_graphics_08c7c8e0;
 
 /* QUIZ SHOW - PALETTES */
 
