@@ -1924,10 +1924,10 @@ SECTIONS {
         build/audio/sequences/s_f_marcher2_v_hidari.mid.o(.rodata*);
         
         build/graphics/unknown/unknown_graphics.c.o(.data*);
-        build/games/sneaky_spirits/graphics/sneaky_spirits_graphics_08bd245c.c.o(.data*);
-        build/games/sneaky_spirits/graphics/sneaky_spirits_graphics_08bd2a00.c.o(.data*);
-        build/games/sneaky_spirits/graphics/sneaky_spirits_graphics_08bd2b58.c.o(.data*);
-        build/games/sneaky_spirits/graphics/sneaky_spirits_graphics_08bd2cf8.c.o(.data*);
+        build/games/sneaky_spirits/graphics/sneaky_spirits_graphics_08bd245c.4bpp.c.o(.data*);
+        build/games/sneaky_spirits/graphics/sneaky_spirits_graphics_08bd2a00.4bpp.c.o(.data*);
+        build/games/sneaky_spirits/graphics/sneaky_spirits_graphics_08bd2b58.tilemap.c.o(.data*);
+        build/games/sneaky_spirits/graphics/sneaky_spirits_graphics_08bd2cf8.tilemap.c.o(.data*);
         build/games/spaceball/graphics/spaceball_graphics_08bd4e70.c.o(.data*);
         build/games/spaceball/graphics/spaceball_graphics_08bd5524.c.o(.data*);
         build/games/spaceball/graphics/spaceball_graphics_08bd5878.c.o(.data*);
@@ -1954,9 +1954,9 @@ SECTIONS {
         build/games/karate_man/graphics/karate_man_graphics_08be08e0.tilemap.c.o(.data*);
         build/games/karate_man/graphics/karate_man_graphics_08be0aec.tilemap.c.o(.data*);
         build/games/karate_man/graphics/karate_man_graphics_08be0ce8.tilemap.c.o(.data*);
-        build/games/sneaky_spirits/graphics/sneaky_spirits_prologue_graphics_08be0ff8.c.o(.data*);
-        build/games/sneaky_spirits/graphics/sneaky_spirits_prologue_graphics_08be1c50.c.o(.data*);
-        build/games/sneaky_spirits/graphics/sneaky_spirits_prologue_graphics_08be1dfc.c.o(.data*);
+        build/games/sneaky_spirits/graphics/sneaky_spirits_prologue_graphics_08be0ff8.4bpp.c.o(.data*);
+        build/games/sneaky_spirits/graphics/sneaky_spirits_prologue_graphics_08be1c50.4bpp.c.o(.data*);
+        build/games/sneaky_spirits/graphics/sneaky_spirits_prologue_graphics_08be1dfc.tilemap.c.o(.data*);
         build/games/spaceball/graphics/spaceball_prologue_graphics_08be2298.c.o(.data*);
         build/games/spaceball/graphics/spaceball_prologue_graphics_08be2fd8.c.o(.data*);
         build/games/spaceball/graphics/spaceball_prologue_graphics_08be3398.c.o(.data*);
