@@ -12,17 +12,17 @@ struct CompressedGraphics *bon_odori_prologue_buffered_textures[] = {
 // [D_089ea518] Graphics Table
 struct GraphicsTable bon_odori_prologue_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &bon_odori_prologue_graphics_08be854c,
+        /* Src.  */ &bon_odori_prologue_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &bon_odori_prologue_graphics_08be8828,
+        /* Src.  */ &bon_odori_prologue_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &bon_odori_prologue_graphics_08be75b8,
+        /* Src.  */ &bon_odori_prologue_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
