@@ -1962,22 +1962,22 @@ struct CompressedGraphics *tap_trial_buffered_textures[] = {
 // [D_089e7e18] Graphics Table (Tap Trial)
 struct GraphicsTable gfx_table_tap_trial[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08ce9bc8,
+        /* Src.  */ &tap_trial_graphics_08ce9bc8,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08cea0a0,
+        /* Src.  */ &tap_trial_graphics_08cea0a0,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08cea104,
+        /* Src.  */ &tap_trial_graphics_08cea104,
         /* Dest. */ BG_MAP_BASE(0xF000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08ce989c,
+        /* Src.  */ &tap_trial_graphics_08ce989c,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -2007,22 +2007,22 @@ struct GraphicsTable gfx_table_tap_trial[] = {
 // [D_089e7e84] Graphics Table (Remix 7, Remix 8)
 struct GraphicsTable gfx_table_tap_trial_remix_8[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08cecba0,
+        /* Src.  */ &tap_trial_graphics_08cecba0,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08cecdd0,
+        /* Src.  */ &tap_trial_graphics_08cecdd0,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08cece34,
+        /* Src.  */ &tap_trial_graphics_08cece34,
         /* Dest. */ BG_MAP_BASE(0xF000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08cec8d8,
+        /* Src.  */ &tap_trial_graphics_08cec8d8,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -2052,22 +2052,22 @@ struct GraphicsTable gfx_table_tap_trial_remix_8[] = {
 // [D_089e7ef0] Graphics Table (Remix 7)
 struct GraphicsTable gfx_table_tap_trial_remix_7[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08cf01e0,
+        /* Src.  */ &tap_trial_graphics_08cf01e0,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08cf067c,
+        /* Src.  */ &tap_trial_graphics_08cf067c,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08cf06f4,
+        /* Src.  */ &tap_trial_graphics_08cf06f4,
         /* Dest. */ BG_MAP_BASE(0xF000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08cef378,
+        /* Src.  */ &tap_trial_graphics_08cef378,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -2097,32 +2097,32 @@ struct GraphicsTable gfx_table_tap_trial_remix_7[] = {
 // [D_089e7f5c] Graphics Table (Tap Trial 2)
 struct GraphicsTable gfx_table_tap_trial_2[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08cf6048,
+        /* Src.  */ &tap_trial_graphics_08cf6048,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08cf623c,
+        /* Src.  */ &tap_trial_graphics_08cf623c,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08cf6a30,
+        /* Src.  */ &tap_trial_graphics_08cf6a30,
         /* Dest. */ BG_MAP_BASE(0xF800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08cf7288,
+        /* Src.  */ &tap_trial_graphics_08cf7288,
         /* Dest. */ BG_MAP_BASE(0xF000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08cf7224,
+        /* Src.  */ &tap_trial_graphics_08cf7224,
         /* Dest. */ BG_MAP_BASE(0xE000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08cf5d0c,
+        /* Src.  */ &tap_trial_graphics_08cf5d0c,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -2152,17 +2152,17 @@ struct GraphicsTable gfx_table_tap_trial_2[] = {
 // [D_089e7fe0] Graphics Table (Remix 5)
 struct GraphicsTable gfx_table_tap_trial_remix_5[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08cf0ed0,
+        /* Src.  */ &tap_trial_graphics_08cf0ed0,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08cf3444,
+        /* Src.  */ &tap_trial_graphics_08cf3444,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08cf3088,
+        /* Src.  */ &tap_trial_graphics_08cf3088,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },

@@ -1137,5 +1137,96 @@
     "staff_credit_graphics_08c3be64": [
         12825900,
         12825848
+    ],
+    "tap_trial_graphics_08ce989c": [
+        13529496,
+        13529444
+    ],
+    "tap_trial_graphics_08cf067c": [
+        13566584,
+        13566532,
+        136
+    ],
+    "tap_trial_prologue_graphics_08c27e24": [
+        12745208,
+        12745156,
+        8
+    ],
+    "tap_trial_graphics_08cf5d0c": [
+        13579348,
+        13579296
+    ],
+    "tap_trial_graphics_08cf3444": [
+        13578528,
+        13578476,
+        136
+    ],
+    "tap_trial_graphics_08cf6048": [
+        13589788,
+        13589736
+    ],
+    "tap_trial_prologue_graphics_08c29ce8": [
+        12753188,
+        12753136,
+        8
+    ],
+    "tap_trial_prologue_graphics_08c279e0": [
+        12739408,
+        12739356
+    ],
+    "tap_trial_graphics_08ce9bc8": [
+        13539500,
+        13539448
+    ],
+    "tap_trial_graphics_08cea0a0": [
+        13540448,
+        13540396,
+        136
+    ],
+    "tap_trial_prologue_graphics_08c26340": [
+        12737208,
+        12737156
+    ],
+    "tap_trial_graphics_08cef378": [
+        13553220,
+        13553168
+    ],
+    "tap_trial_graphics_08cf623c": [
+        13590752,
+        13590700,
+        136
+    ],
+    "tap_trial_graphics_08cec8d8": [
+        13541652,
+        13541600
+    ],
+    "tap_trial_prologue_graphics_08c28814": [
+        12746292,
+        12746240
+    ],
+    "tap_trial_graphics_08cecdd0": [
+        13552696,
+        13552644,
+        136
+    ],
+    "tap_trial_graphics_08cecba0": [
+        13551848,
+        13551796
+    ],
+    "tap_trial_prologue_graphics_08c2990c": [
+        12748836,
+        12748784
+    ],
+    "tap_trial_graphics_08cf0ed0": [
+        13567748,
+        13567696
+    ],
+    "tap_trial_graphics_08cf3088": [
+        13569760,
+        13569708
+    ],
+    "tap_trial_graphics_08cf01e0": [
+        13562760,
+        13562708
     ]
 }
