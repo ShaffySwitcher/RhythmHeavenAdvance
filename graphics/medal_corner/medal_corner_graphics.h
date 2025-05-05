@@ -14,7 +14,7 @@ extern struct Animation anim_medal_corner_count_zero[];
 
 /* MEDAL CORNER MENU - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics D_08cd8fa4;
+extern struct CompressedGraphics rhythm_toys_menu_graphics_08cd8fa4;
 
 /* DRUM LESSONS MENU - ANIMATIONS */
 
@@ -44,9 +44,9 @@ extern struct Animation anim_lessons_menu_basic_3[];
 
 /* DRUM LESSONS MENU - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics D_08cc6914;
-extern struct CompressedGraphics D_08cc6ccc;
-extern struct CompressedGraphics D_08cc5e8c;
+extern struct CompressedGraphics drum_lessons_menu_graphics_08cc6914;
+extern struct CompressedGraphics drum_lessons_menu_graphics_08cc6ccc;
+extern struct CompressedGraphics drum_lessons_menu_graphics_08cc5e8c;
 
 /* DRUM LESSONS MENU - PALETTES */
 
@@ -61,9 +61,9 @@ extern struct Animation anim_endless_menu_sick_beats[];
 
 /* ENDLESS GAMES MENU - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics D_08cc4670;
-extern struct CompressedGraphics D_08cc4a00;
-extern struct CompressedGraphics D_08cc3b7c;
+extern struct CompressedGraphics endless_games_menu_graphics_08cc4670;
+extern struct CompressedGraphics endless_games_menu_graphics_08cc4a00;
+extern struct CompressedGraphics endless_games_menu_graphics_08cc3b7c;
 
 /* ENDLESS GAMES MENU - PALETTES */
 
@@ -78,9 +78,9 @@ extern struct Animation anim_toys_menu_rap_machine[];
 
 /* RHYTHM TOYS MENU - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics D_08cd8da0;
-extern struct CompressedGraphics D_08cd931c;
-extern struct CompressedGraphics D_08cd8388;
+extern struct CompressedGraphics rhythm_toys_menu_graphics_08cd8da0;
+extern struct CompressedGraphics rhythm_toys_menu_graphics_08cd931c;
+extern struct CompressedGraphics rhythm_toys_menu_graphics_08cd8388;
 
 /* RHYTHM TOYS MENU - PALETTES */
 
