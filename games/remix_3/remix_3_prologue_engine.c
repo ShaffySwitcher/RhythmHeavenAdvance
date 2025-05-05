@@ -12,17 +12,17 @@ struct CompressedGraphics *remix_3_prologue_buffered_textures[] = {
 // [D_089ec048] Graphics Table
 struct GraphicsTable remix_3_prologue_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c0ab00,
+        /* Src.  */ &remix_3_prologue_graphics_08c0ab00,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c0af50,
+        /* Src.  */ &remix_3_prologue_graphics_08c0af50,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c092e0,
+        /* Src.  */ &remix_3_prologue_graphics_08c092e0,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
