@@ -1023,5 +1023,61 @@
     "sneaky_spirits_prologue_graphics_08be0ff8": [
         12455160,
         12455112
+    ],
+    "cosmic_dance_prologue_graphics_08beb48c": [
+        12497680,
+        12497632,
+        8
+    ],
+    "cosmic_dance_prologue_graphics_08beb2f8": [
+        12496776,
+        12496728
+    ],
+    "cosmic_dance_graphics_08ce296c": [
+        13500780,
+        13500728
+    ],
+    "space_dance_graphics_08c38fcc": [
+        12816240,
+        12816188
+    ],
+    "space_dance_prologue_graphics_08c24f60": [
+        12732436,
+        12732384
+    ],
+    "cosmic_dance_prologue_graphics_08beaf78": [
+        12495772,
+        12495724
+    ],
+    "space_dance_prologue_graphics_08c2575c": [
+        12734320,
+        12734268
+    ],
+    "space_dance_graphics_08c38f60": [
+        12804288,
+        12804236
+    ],
+    "cosmic_dance_graphics_08ce3978": [
+        13511872,
+        13511820
+    ],
+    "cosmic_dance_graphics_08ce2cb0": [
+        13511036,
+        13510984
+    ],
+    "space_dance_prologue_graphics_08c25aa8": [
+        12736376,
+        12736324,
+        12
+    ],
+    "space_dance_graphics_08c39888": [
+        12816512,
+        12816460,
+        164
+    ],
+    "cosmic_dance_graphics_08ce3ccc": [
+        13515288,
+        13515236,
+        144
     ]
 }
