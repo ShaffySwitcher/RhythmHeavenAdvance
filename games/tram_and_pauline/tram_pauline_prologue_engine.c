@@ -12,17 +12,17 @@ struct CompressedGraphics *tram_pauline_prologue_buffered_textures[] = {
 // [D_089edbbc] Graphics Table
 struct GraphicsTable tram_pauline_prologue_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c3106c,
+        /* Src.  */ &tram_pauline_prologue_graphics_08c3106c,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c3153c,
+        /* Src.  */ &tram_pauline_prologue_graphics_08c3153c,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c30910,
+        /* Src.  */ &tram_pauline_prologue_graphics_08c30910,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },

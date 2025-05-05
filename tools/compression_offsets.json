@@ -1228,5 +1228,48 @@
     "tap_trial_graphics_08cf01e0": [
         13562760,
         13562708
+    ],
+    "tram_pauline_graphics_08d02cb4": [
+        13642300,
+        13642248,
+        140
+    ],
+    "tram_pauline_prologue_graphics_08c3153c": [
+        12783748,
+        12783696,
+        8
+    ],
+    "tram_pauline_prologue_graphics_08c30910": [
+        12779608,
+        12779556
+    ],
+    "tram_pauline_graphics_08d02100": [
+        13631848,
+        13631796
+    ],
+    "tram_pauline_graphics_08d052d0": [
+        13643568,
+        13643516
+    ],
+    "tram_pauline_graphics_08d058c4": [
+        13652704,
+        13652652
+    ],
+    "tram_pauline_prologue_graphics_08c3106c": [
+        12781856,
+        12781804
+    ],
+    "tram_pauline_graphics_08d02864": [
+        13639952,
+        13639900
+    ],
+    "tram_pauline_graphics_08d029a0": [
+        13641844,
+        13641792
+    ],
+    "tram_pauline_graphics_08d05e78": [
+        13654384,
+        13654332,
+        156
     ]
 }

@@ -12,7 +12,7 @@ struct CompressedGraphics *tram_pauline_buffered_textures[] = {
 // [D_089e8a2c] Graphics Table (Tutorial)
 struct GraphicsTable gfx_table_tram_pauline_tutorial[] = {
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08d02100,
+        /* Src.  */ &tram_pauline_graphics_08d02100,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -37,22 +37,22 @@ struct GraphicsTable gfx_table_tram_pauline_tutorial[] = {
 // [D_089e8a68] Graphics Table (Tram & Pauline)
 struct GraphicsTable gfx_table_tram_pauline[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08d058c4,
+        /* Src.  */ &tram_pauline_graphics_08d058c4,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08d05e78,
+        /* Src.  */ &tram_pauline_graphics_08d05e78,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08d062c0,
+        /* Src.  */ &tram_pauline_graphics_08d062c0,
         /* Dest. */ BG_MAP_BASE(0xF800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08d052d0,
+        /* Src.  */ &tram_pauline_graphics_08d052d0,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -77,17 +77,17 @@ struct GraphicsTable gfx_table_tram_pauline[] = {
 // [D_089e8ac8] Graphics Table (Remix 3)
 struct GraphicsTable gfx_table_tram_pauline_remix_3[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08d02864,
+        /* Src.  */ &tram_pauline_graphics_08d02864,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08d02f20,
+        /* Src.  */ &tram_pauline_graphics_08d02f20,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08d02100,
+        /* Src.  */ &tram_pauline_graphics_08d02100,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
