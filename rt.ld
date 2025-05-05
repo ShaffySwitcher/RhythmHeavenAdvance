@@ -2620,8 +2620,8 @@ SECTIONS {
         build/games/sick_beats/graphics/sick_beats_graphics_08d19fb4.4bpp.c.o(.data*);
         build/games/sick_beats/graphics/sick_beats_graphics_08d1a280.tilemap.c.o(.data*);
         build/games/sick_beats/graphics/sick_beats_graphics_08d1a320.tilemap.c.o(.data*);
-        build/graphics/warning/warning_graphics_08d1ad4c.c.o(.data*);
-        build/graphics/warning/warning_graphics_08d1b00c.c.o(.data*);
+        build/graphics/warning/warning_graphics_08d1ad4c.4bpp.c.o(.data*);
+        build/graphics/warning/warning_graphics_08d1b00c.tilemap.c.o(.data*);
         build/games/wizards_waltz/graphics/wizards_waltz_graphics_08d1d3c4.4bpp.c.o(.data*);
         build/games/wizards_waltz/graphics/wizards_waltz_graphics_08d1d750.4bpp.c.o(.data*);
         build/games/wizards_waltz/graphics/wizards_waltz_graphics_08d1d8d8.tilemap.c.o(.data*);
