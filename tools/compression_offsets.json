@@ -116,7 +116,7 @@
         12424716,
         144
     ],
-    "bon_odori_blank_bg_tiles": [
+    "bon_odori_bg_tiles_blank": [
         12435704,
         12435656,
         144
@@ -151,20 +151,20 @@
         12479872,
         12479824
     ],
-    "bouncy_road_prologue_graphics_08bee430": [
+    "bouncy_road_prologue_obj": [
         12506356,
         12506308
     ],
-    "bouncy_road_graphics_08c57a14": [
+    "bouncy_road_obj": [
         12941288,
         12941236
     ],
-    "bouncy_road_graphics_08c583bc": [
+    "bouncy_road_remix_5_bg_tiles": [
         12941860,
         12941808,
         16
     ],
-    "bouncy_road_prologue_graphics_08bee468": [
+    "bouncy_road_prologue_bg_tiles": [
         12510272,
         12510224,
         16

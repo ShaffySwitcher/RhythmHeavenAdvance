@@ -44,10 +44,10 @@ extern struct Animation anim_bon_odori_yagura_frown[];
 
 /* BON ODORI - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics bon_odori_blank_bg_tiles; // BG Textures (Text Window?)
-extern struct CompressedGraphics bon_odori_blank_bg_map; // BG Map (Text Window?)
+extern struct CompressedGraphics bon_odori_bg_tiles_blank; // BG Textures (Text Window?)
+extern struct CompressedGraphics bon_odori_bg_map_blank; // BG Map (Text Window?)
 extern struct CompressedGraphics bon_odori_bg_tiles; // BG Textures (The Bon Odori)
-extern struct CompressedGraphics bon_odori_lanterns_bg_map; // BG Map (The Bon Odori)
+extern struct CompressedGraphics bon_odori_bg_map_lanterns; // BG Map (The Bon Odori)
 extern struct CompressedGraphics bon_odori_bg_map; // BG Map (The Bon Odori)
 extern struct CompressedGraphics bon_odori_obj; // OBJ Textures (The Bon Odori)
 
@@ -98,7 +98,7 @@ extern struct Animation anim_bon_dance_yagura_frown[];
 /* BON DANCE - COMPRESSED GRAPHICS */
 
 extern struct CompressedGraphics bon_dance_bg_tiles; // BG Textures (Bon Dance)
-extern struct CompressedGraphics bon_dance_lanterns_bg_map; // BG Map (Bon Dance)
+extern struct CompressedGraphics bon_dance_bg_map_lanterns; // BG Map (Bon Dance)
 extern struct CompressedGraphics bon_dance_bg_map; // BG Map (Bon Dance)
 extern struct CompressedGraphics bon_dance_obj; // OBJ Textures (Bon Dance)
 
