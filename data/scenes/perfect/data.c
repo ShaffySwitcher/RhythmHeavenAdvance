@@ -11,12 +11,12 @@
 // [D_089cfc38] Graphics Table
 struct GraphicsTable perfect_certificate_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08ccc138,
+        /* Src.  */ &perfect_certificate_graphics_08ccc138,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08ccc39c,
+        /* Src.  */ &perfect_certificate_graphics_08ccc39c,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
