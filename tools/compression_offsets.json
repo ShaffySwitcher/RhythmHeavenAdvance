@@ -1686,5 +1686,48 @@
         13415352,
         13415300,
         52
+    ],
+    "endless_games_menu_graphics_08cc4670": [
+        13384588,
+        13384536
+    ],
+    "drum_lessons_menu_graphics_08cc6914": [
+        13393564,
+        13393512
+    ],
+    "rhythm_toys_menu_graphics_08cd8fa4": [
+        13471152,
+        13471100
+    ],
+    "endless_games_menu_graphics_08cc4a00": [
+        13387408,
+        13387356,
+        16
+    ],
+    "drum_lessons_menu_graphics_08cc5e8c": [
+        13388772,
+        13388720
+    ],
+    "endless_games_menu_graphics_08cc3b7c": [
+        13381808,
+        13381756
+    ],
+    "rhythm_toys_menu_graphics_08cd931c": [
+        13471708,
+        13471656,
+        40
+    ],
+    "rhythm_toys_menu_graphics_08cd8da0": [
+        13468568,
+        13468516
+    ],
+    "rhythm_toys_menu_graphics_08cd8388": [
+        13466352,
+        13466300
+    ],
+    "drum_lessons_menu_graphics_08cc6ccc": [
+        13396352,
+        13396300,
+        92
     ]
 }
