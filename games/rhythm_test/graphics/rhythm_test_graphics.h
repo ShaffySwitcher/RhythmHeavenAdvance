@@ -18,11 +18,11 @@ extern struct Animation anim_rhythm_test_cowbell[];
 
 /* RHYTHM TEST - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics D_08c6a638;
-extern struct CompressedGraphics D_08c6a830;
-extern struct CompressedGraphics D_08c6a9c4;
+extern struct CompressedGraphics rhythm_test_graphics_08c6a638;
+extern struct CompressedGraphics rhythm_test_graphics_08c6a830;
+extern struct CompressedGraphics rhythm_test_graphics_08c6a9c4;
 extern struct CompressedGraphics marching_orders_graphics_08c6ab24;
-extern struct CompressedGraphics D_08c6a350;
+extern struct CompressedGraphics rhythm_test_graphics_08c6a350;
 
 /* RHYTHM TEST - PALETTES */
 
