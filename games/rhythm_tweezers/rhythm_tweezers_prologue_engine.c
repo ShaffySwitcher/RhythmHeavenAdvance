@@ -12,17 +12,17 @@ struct CompressedGraphics *rhythm_tweezers_prologue_buffered_textures[] = {
 // [D_089ead58] Graphics Table
 struct GraphicsTable rhythm_tweezers_prologue_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08beefac,
+        /* Src.  */ &rhythm_tweezers_prologue_graphics_08beefac,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08bef2ac,
+        /* Src.  */ &rhythm_tweezers_prologue_graphics_08bef2ac,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08bee62c,
+        /* Src.  */ &rhythm_tweezers_prologue_graphics_08bee62c,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
