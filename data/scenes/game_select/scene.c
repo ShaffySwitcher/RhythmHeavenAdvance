@@ -90,7 +90,8 @@ const char *game_select_rank_text[] = {
     /* CLOSED    */ "",
     /* UNCLEARED */ "",
     /* CLEARED   */ "\0020" "\0010" "\0051" "\0015" "Rank:                     " "\x87\x52" "\0022" "\0012" "\0053" "\0017" "OK",
-    /* HAS_MEDAL */ "\0020" "\0010" "\0051" "\0015" "Rank:            " "\x87\x53" "\0022" "\0012" "\0053" "\0017" "Superb"
+    /* HAS_MEDAL */ "\0020" "\0010" "\0051" "\0015" "Rank:            " "\x87\x53" "\0022" "\0012" "\0053" "\0017" "Superb",
+    /* PERFECT   */ "\0020" "\0010" "\0051" "\0015" "Rank:            " "\x87\x53" "\0022" "\0012" "\0053" "\0017" "Perfect"
 };
 
 
@@ -101,5 +102,6 @@ u8 game_select_rank_palette[] = {
     /* CLOSED    */ 0,
     /* UNCLEARED */ 0,
     /* CLEARED   */ 9,
-    /* HAS_MEDAL */ 10
+    /* HAS_MEDAL */ 10,
+    /* PERFECT   */ 10
 };
