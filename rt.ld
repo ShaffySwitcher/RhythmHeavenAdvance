@@ -1994,13 +1994,13 @@ SECTIONS {
         build/games/clappy_trio/graphics/clappy_trio_prologue_graphics_08bf5ce8.4bpp.c.o(.data*);
         build/games/clappy_trio/graphics/clappy_trio_prologue_graphics_08bf60c8.tilemap.c.o(.data*);
 #if REV < 1
-        build/games/samurai_slice/graphics/samurai_slice_prologue_graphics_08bf6678.c.o(.data*);
+        build/games/samurai_slice/graphics/samurai_slice_prologue_graphics_08bf6678.4bpp.c.o(.data*);
 #else
-        build/games/samurai_slice/graphics/samurai_slice_prologue_graphics_08bf6678_rev1.c.o(.data*);
+        build/games/samurai_slice/graphics/samurai_slice_prologue_graphics_08bf6678_rev1.4bpp.c.o(.data*);
 #endif
-        build/games/samurai_slice/graphics/samurai_slice_prologue_graphics_08bf7aa4.c.o(.data*);
-        build/games/samurai_slice/graphics/samurai_slice_prologue_graphics_08bf7d5c.c.o(.data*);
-        build/games/samurai_slice/graphics/samurai_slice_prologue_graphics_08bf7f04.c.o(.data*);
+        build/games/samurai_slice/graphics/samurai_slice_prologue_graphics_08bf7aa4.4bpp.c.o(.data*);
+        build/games/samurai_slice/graphics/samurai_slice_prologue_graphics_08bf7d5c.tilemap.c.o(.data*);
+        build/games/samurai_slice/graphics/samurai_slice_prologue_graphics_08bf7f04.tilemap.c.o(.data*);
         build/games/power_calligraphy/graphics/power_calligraphy_prologue_graphics_08bf8a30.4bpp.c.o(.data*);
         build/games/power_calligraphy/graphics/power_calligraphy_prologue_graphics_08bf984c.4bpp.c.o(.data*);
         build/games/power_calligraphy/graphics/power_calligraphy_prologue_graphics_08bf9b14.tilemap.c.o(.data*);
@@ -2180,11 +2180,11 @@ SECTIONS {
         build/games/clappy_trio/graphics/clappy_trio_graphics_08c62d18.4bpp.c.o(.data*);
         build/games/clappy_trio/graphics/clappy_trio_graphics_08c635bc.4bpp.c.o(.data*);
         build/games/clappy_trio/graphics/clappy_trio_graphics_08c638e0.tilemap.c.o(.data*);
-        build/games/samurai_slice/graphics/samurai_slice_graphics_08c658dc.c.o(.data*);
-        build/games/samurai_slice/graphics/samurai_slice_graphics_08c66b54.c.o(.data*);
-        build/games/samurai_slice/graphics/samurai_slice_graphics_08c66d24.c.o(.data*);
-        build/games/samurai_slice/graphics/samurai_slice_graphics_08c66fbc.c.o(.data*);
-        build/games/samurai_slice/graphics/samurai_slice_graphics_08c67314.c.o(.data*);
+        build/games/samurai_slice/graphics/samurai_slice_graphics_08c658dc.4bpp.c.o(.data*);
+        build/games/samurai_slice/graphics/samurai_slice_graphics_08c66b54.4bpp.c.o(.data*);
+        build/games/samurai_slice/graphics/samurai_slice_graphics_08c66d24.tilemap.c.o(.data*);
+        build/games/samurai_slice/graphics/samurai_slice_graphics_08c66fbc.tilemap.c.o(.data*);
+        build/games/samurai_slice/graphics/samurai_slice_graphics_08c67314.tilemap.c.o(.data*);
         build/games/power_calligraphy/graphics/power_calligraphy_graphics_08c68d1c.4bpp.c.o(.data*);
         build/games/power_calligraphy/graphics/power_calligraphy_graphics_08c68d64.4bpp.c.o(.data*);
         build/games/power_calligraphy/graphics/power_calligraphy_graphics_08c69698.4bpp.c.o(.data*);

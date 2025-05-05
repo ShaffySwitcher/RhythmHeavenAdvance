@@ -12,25 +12,25 @@ struct CompressedGraphics *samurai_slice_prologue_buffered_textures[] = {
 // [D_089eb380] Graphics Table
 struct GraphicsTable samurai_slice_prologue_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08bf7aa4,
+        /* Src.  */ &samurai_slice_prologue_graphics_08bf7aa4,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08bf7f04,
+        /* Src.  */ &samurai_slice_prologue_graphics_08bf7f04,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08bf7d5c,
+        /* Src.  */ &samurai_slice_prologue_graphics_08bf7d5c,
         /* Dest. */ BG_MAP_BASE(0xF000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
 #if REV < 1
-        /* Src.  */ &D_08bf6678,
+        /* Src.  */ &samurai_slice_prologue_graphics_08bf6678,
 #else
-        /* Src.  */ &D_08bf6678_rev1,
+        /* Src.  */ &samurai_slice_prologue_graphics_08bf6678_rev1,
 #endif
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
