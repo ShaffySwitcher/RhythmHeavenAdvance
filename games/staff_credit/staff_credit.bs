@@ -53,11 +53,11 @@ define_gameplay_scene scene_staff_credit, script_staff_credit_entry
 @ Staff Credit - Graphics Tables
 
 struct D_08a5dd8c
-    .word D_08c3a8b0
+    .word staff_credit_graphics_08c3a8b0
     .word VRAMBase
     .word -1
 
-    .word D_08c3f16c
+    .word staff_credit_graphics_08c3f16c
     .word VRAMBase + 0xE800
     .word -1
 
@@ -71,11 +71,11 @@ struct D_08a5dd8c
 endstruct
 
 struct D_08a5ddbc
-    .word D_08c3b51c
+    .word staff_credit_graphics_08c3b51c
     .word VRAMBase
     .word -1
 
-    .word D_08c3f364
+    .word staff_credit_graphics_08c3f364
     .word VRAMBase + 0xE800
     .word -1
 
@@ -89,11 +89,11 @@ struct D_08a5ddbc
 endstruct
 
 struct D_08a5ddec
-    .word D_08c3be64
+    .word staff_credit_graphics_08c3be64
     .word VRAMBase
     .word -1
 
-    .word D_08c3f580
+    .word staff_credit_graphics_08c3f580
     .word VRAMBase + 0xE800
     .word -1
 
@@ -107,11 +107,11 @@ struct D_08a5ddec
 endstruct
 
 struct D_08a5de1c
-    .word D_08c3ca50
+    .word staff_credit_graphics_08c3ca50
     .word VRAMBase
     .word -1
 
-    .word D_08c3f798
+    .word staff_credit_graphics_08c3f798
     .word VRAMBase + 0xE800
     .word -1
 
@@ -125,11 +125,11 @@ struct D_08a5de1c
 endstruct
 
 struct D_08a5de4c
-    .word D_08c3d6f4
+    .word staff_credit_graphics_08c3d6f4
     .word VRAMBase
     .word -1
 
-    .word D_08c3f9cc
+    .word staff_credit_graphics_08c3f9cc
     .word VRAMBase + 0xE800
     .word -1
 
@@ -143,11 +143,11 @@ struct D_08a5de4c
 endstruct
 
 struct D_08a5de7c
-    .word D_08c3e508
+    .word staff_credit_graphics_08c3e508
     .word VRAMBase
     .word -1
 
-    .word D_08c3fc00
+    .word staff_credit_graphics_08c3fc00
     .word VRAMBase + 0xE800
     .word -1
 
@@ -161,11 +161,11 @@ struct D_08a5de7c
 endstruct
 
 struct D_08a5deac
-    .word D_08c3eb4c
+    .word staff_credit_graphics_08c3eb4c
     .word VRAMBase
     .word -1
 
-    .word D_08c3fde4
+    .word staff_credit_graphics_08c3fde4
     .word VRAMBase + 0xE800
     .word -1
 
@@ -179,11 +179,11 @@ struct D_08a5deac
 endstruct
 
 struct D_08a5dedc
-    .word D_08c3ef78
+    .word staff_credit_graphics_08c3ef78
     .word VRAMBase
     .word -1
 
-    .word D_08c3fe9c
+    .word staff_credit_graphics_08c3fe9c
     .word VRAMBase + 0xE800
     .word -1
 
