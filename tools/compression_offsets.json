@@ -1079,5 +1079,31 @@
         13515288,
         13515236,
         144
+    ],
+    "spaceball_prologue_graphics_08be2298": [
+        12459532,
+        12459484
+    ],
+    "spaceball_graphics_08bd5524": [
+        12406400,
+        12406352
+    ],
+    "spaceball_prologue_graphics_08be2fd8": [
+        12460712,
+        12460664
+    ],
+    "spaceball_prologue_graphics_08be3398": [
+        12464108,
+        12464060,
+        4
+    ],
+    "spaceball_graphics_08bd5878": [
+        12408204,
+        12408156,
+        88
+    ],
+    "spaceball_graphics_08bd4e70": [
+        12397832,
+        12397784
     ]
 }

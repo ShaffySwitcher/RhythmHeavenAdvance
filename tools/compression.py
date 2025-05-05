@@ -116,7 +116,7 @@ class CompressedData:
             # possible.
 
             mode2NibbleList = get_unique_nibbles(data[i:i+4])
-            if len(mode2NibbleList) <= 2 and i+4 < len(data):
+            if len(mode2NibbleList) <= 2 and i+4 <= len(data):
                 # 1:4 ratio encoding
                 #print("Mode 2 encode:   ", mode2NibbleList)
                 newEncodedData = []
@@ -142,7 +142,7 @@ class CompressedData:
             # Even if the immediate next 6 bytes can be done with 1:2 compression,
             # the algorithm will copy up to 4 bytes uncompressed if 1:4 compression
             # is possible after.
-            if (i+6 > len(data) or not mode_2_available(data[i+1:i+6])):
+            if (i+5 > len(data) or not mode_2_available(data[i+1:i+6])):
                 # Scan 6 bytes ahead
                 mode1NibbleList = get_unique_nibbles(data[i:i+3])
                 if len(mode1NibbleList) <= 4 and i+3 <= len(data):
