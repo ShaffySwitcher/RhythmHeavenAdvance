@@ -46,22 +46,22 @@ extern struct Animation anim_toss_boys_arrow_y[];
 
 /* TOSS BOYS - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics D_08cf961c;
-extern struct CompressedGraphics D_08cfa60c;
-extern struct CompressedGraphics D_08cf8918;
-extern struct CompressedGraphics D_08cf97d0;
-extern struct CompressedGraphics D_08cf86dc;
-extern struct CompressedGraphics D_08cff0bc;
-extern struct CompressedGraphics D_08d00158;
-extern struct CompressedGraphics D_08cfe3b8;
-extern struct CompressedGraphics D_08cff31c;
-extern struct CompressedGraphics D_08cfdcc4;
-extern struct CompressedGraphics D_08cf961c;
-extern struct CompressedGraphics D_08cfa60c;
-extern struct CompressedGraphics D_08cfa810;
-extern struct CompressedGraphics D_08cfcb9c;
-extern struct CompressedGraphics D_08cfc9e8;
-extern struct CompressedGraphics D_08cfc9e8_rev1;
+extern struct CompressedGraphics toss_boys_graphics_08cf961c;
+extern struct CompressedGraphics toss_boys_graphics_08cfa60c;
+extern struct CompressedGraphics toss_boys_graphics_08cf8918;
+extern struct CompressedGraphics toss_boys_graphics_08cf97d0;
+extern struct CompressedGraphics toss_boys_graphics_08cf86dc;
+extern struct CompressedGraphics toss_boys_graphics_08cff0bc;
+extern struct CompressedGraphics toss_boys_graphics_08d00158;
+extern struct CompressedGraphics toss_boys_graphics_08cfe3b8;
+extern struct CompressedGraphics toss_boys_graphics_08cff31c;
+extern struct CompressedGraphics toss_boys_graphics_08cfdcc4;
+extern struct CompressedGraphics toss_boys_graphics_08cf961c;
+extern struct CompressedGraphics toss_boys_graphics_08cfa60c;
+extern struct CompressedGraphics toss_boys_graphics_08cfa810;
+extern struct CompressedGraphics toss_boys_graphics_08cfcb9c;
+extern struct CompressedGraphics toss_boys_graphics_08cfc9e8;
+extern struct CompressedGraphics toss_boys_graphics_08cfc9e8_rev1;
 
 /* TOSS BOYS - PALETTES */
 
