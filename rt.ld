@@ -1987,12 +1987,12 @@ SECTIONS {
         build/games/fireworks/graphics/fireworks_prologue_graphics_08bef660.4bpp.c.o(.data*);
         build/games/fireworks/graphics/fireworks_prologue_graphics_08bf0eb8.4bpp.c.o(.data*);
         build/games/fireworks/graphics/fireworks_prologue_graphics_08bf12dc.tilemap.c.o(.data*);
-        build/games/clappy_trio/graphics/clappy_trio_prologue_graphics_08bf16b4.4bpp.c.o(.data*);
-        build/games/clappy_trio/graphics/clappy_trio_prologue_graphics_08bf2f64.4bpp.c.o(.data*);
-        build/games/clappy_trio/graphics/clappy_trio_prologue_graphics_08bf33cc.tilemap.c.o(.data*);
-        build/games/clappy_trio/graphics/clappy_trio_prologue_graphics_08bf374c.4bpp.c.o(.data*);
-        build/games/clappy_trio/graphics/clappy_trio_prologue_graphics_08bf5ce8.4bpp.c.o(.data*);
-        build/games/clappy_trio/graphics/clappy_trio_prologue_graphics_08bf60c8.tilemap.c.o(.data*);
+        build/games/clappy_trio/graphics/clappy_trio_prologue_obj.4bpp.c.o(.data*);
+        build/games/clappy_trio/graphics/clappy_trio_prologue_bg_tiles.4bpp.c.o(.data*);
+        build/games/clappy_trio/graphics/clappy_trio_prologue_bg_map.tilemap.c.o(.data*);
+        build/games/clappy_trio/graphics/snappy_trio_prologue_obj.4bpp.c.o(.data*);
+        build/games/clappy_trio/graphics/snappy_trio_prologue_bg_tiles.4bpp.c.o(.data*);
+        build/games/clappy_trio/graphics/snappy_trio_prologue_bg_map.tilemap.c.o(.data*);
 #if REV < 1
         build/games/samurai_slice/graphics/samurai_slice_prologue_graphics_08bf6678.4bpp.c.o(.data*);
 #else
@@ -2174,12 +2174,12 @@ SECTIONS {
         build/games/fireworks/graphics/fireworks_graphics_08c60410.tilemap.c.o(.data*);
         build/games/fireworks/graphics/fireworks_graphics_08c606ec.tilemap.c.o(.data*);
         build/games/fireworks/graphics/fireworks_graphics_08c609a4.tilemap.c.o(.data*);
-        build/games/clappy_trio/graphics/clappy_trio_graphics_08c61654.4bpp.c.o(.data*);
-        build/games/clappy_trio/graphics/clappy_trio_graphics_08c61e18.4bpp.c.o(.data*);
-        build/games/clappy_trio/graphics/clappy_trio_graphics_08c6214c.tilemap.c.o(.data*);
-        build/games/clappy_trio/graphics/clappy_trio_graphics_08c62d18.4bpp.c.o(.data*);
-        build/games/clappy_trio/graphics/clappy_trio_graphics_08c635bc.4bpp.c.o(.data*);
-        build/games/clappy_trio/graphics/clappy_trio_graphics_08c638e0.tilemap.c.o(.data*);
+        build/games/clappy_trio/graphics/clappy_trio_obj.4bpp.c.o(.data*);
+        build/games/clappy_trio/graphics/clappy_trio_bg_tiles.4bpp.c.o(.data*);
+        build/games/clappy_trio/graphics/clappy_trio_bg_map.tilemap.c.o(.data*);
+        build/games/clappy_trio/graphics/snappy_trio_obj.4bpp.c.o(.data*);
+        build/games/clappy_trio/graphics/snappy_trio_bg_tiles.4bpp.c.o(.data*);
+        build/games/clappy_trio/graphics/snappy_trio_bg_map.tilemap.c.o(.data*);
         build/games/samurai_slice/graphics/samurai_slice_graphics_08c658dc.4bpp.c.o(.data*);
         build/games/samurai_slice/graphics/samurai_slice_graphics_08c66b54.4bpp.c.o(.data*);
         build/games/samurai_slice/graphics/samurai_slice_graphics_08c66d24.tilemap.c.o(.data*);
