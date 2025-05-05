@@ -181,7 +181,7 @@ void data_check_print_page(s32 id) {
     strcat(string, "Number of Times Played "); // Number of Times Played:
     strintf(number, totalPlays);
     strcat(string, number);
-    strcat(string, "Times"); // [x] Times
+    strcat(string, " Times"); // [x] Times
     data_check_print_line(4, 0, string);
 
     if (totalPlays > 0) {
