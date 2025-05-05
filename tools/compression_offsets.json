@@ -1297,5 +1297,35 @@
         12794352,
         12794300,
         4
+    ],
+    "samurai_slice_graphics_08c658dc": [
+        12990704,
+        12990652
+    ],
+    "samurai_slice_prologue_graphics_08bf7d5c": [
+        12548792,
+        12548740,
+        4
+    ],
+    "samurai_slice_prologue_graphics_08bf7aa4": [
+        12543624,
+        12543572
+    ],
+    "samurai_slice_graphics_08c66d24": [
+        13003748,
+        13003696,
+        128
+    ],
+    "samurai_slice_prologue_graphics_08bf6678": [
+        12542168,
+        12542120
+    ],
+    "samurai_slice_graphics_08c66b54": [
+        12998892,
+        12998840
+    ],
+    "samurai_slice_prologue_graphics_08bf6678_rev1": [
+        12542168,
+        12542120
     ]
 }
