@@ -10,17 +10,17 @@
 // [D_089cd1a4] Graphics Table
 struct GraphicsTable arrival_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08cbed78,
+        /* Src.  */ &arrival_graphics_08cbed78,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08cbefe4,
+        /* Src.  */ &arrival_graphics_08cbefe4,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08cbed78,
+        /* Src.  */ &arrival_graphics_08cbed78,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },

@@ -2453,8 +2453,8 @@ SECTIONS {
         build/graphics/epilogues/epilogues_graphics_08cbe54c.c.o(.data*);
         build/graphics/epilogues/epilogues_graphics_08cbe634.c.o(.data*);
         build/graphics/epilogues/epilogues_graphics_08cbe730.c.o(.data*);
-        build/graphics/arrival/arrival_graphics_08cbed78.c.o(.data*);
-        build/graphics/arrival/arrival_graphics_08cbefe4.c.o(.data*);
+        build/graphics/arrival/arrival_graphics_08cbed78.4bpp.c.o(.data*);
+        build/graphics/arrival/arrival_graphics_08cbefe4.tilemap.c.o(.data*);
         build/graphics/cafe/cafe_graphics_08cbf0e8.c.o(.data*);
         build/graphics/cafe/cafe_graphics_08cc0c30.c.o(.data*);
         build/graphics/cafe/cafe_graphics_08cc0cf0.c.o(.data*);

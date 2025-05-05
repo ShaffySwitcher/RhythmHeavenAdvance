@@ -1404,5 +1404,14 @@
     "toss_boys_prologue_graphics_08c2fc5c": [
         12770960,
         12770908
+    ],
+    "arrival_graphics_08cbefe4": [
+        13364624,
+        13364572,
+        8
+    ],
+    "arrival_graphics_08cbed78": [
+        13363008,
+        13362956
     ]
 }
