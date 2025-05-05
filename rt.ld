@@ -2481,9 +2481,9 @@ SECTIONS {
         build/graphics/game_select/game_select_graphics_08cc9d14.tilemap.c.o(.data*);
         build/graphics/game_select/game_select_graphics_08cc9e14.tilemap.c.o(.data*);
         build/graphics/unknown/unknown_graphics_08cc9e2c.c.o(.data*);
-        build/graphics/main_menu/main_menu_graphics_08ccb298.c.o(.data*);
-        build/graphics/main_menu/main_menu_graphics_08ccb374.c.o(.data*);
-        build/graphics/main_menu/main_menu_graphics_08ccb840.c.o(.data*);
+        build/graphics/main_menu/main_menu_graphics_08ccb298.4bpp.c.o(.data*);
+        build/graphics/main_menu/main_menu_graphics_08ccb374.4bpp.c.o(.data*);
+        build/graphics/main_menu/main_menu_graphics_08ccb840.tilemap.c.o(.data*);
         build/graphics/perfect/perfect_certificate_graphics_08ccc138.c.o(.data*);
         build/graphics/perfect/perfect_certificate_graphics_08ccc39c.c.o(.data*);
         build/graphics/gameplay/gameplay_graphics_08ccca5c.tilemap.c.o(.data*);
