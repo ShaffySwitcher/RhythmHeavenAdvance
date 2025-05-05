@@ -2072,9 +2072,9 @@ SECTIONS {
         build/games/tram_and_pauline/graphics/tram_pauline_prologue_graphics_08c30910.c.o(.data*);
         build/games/tram_and_pauline/graphics/tram_pauline_prologue_graphics_08c3106c.c.o(.data*);
         build/games/tram_and_pauline/graphics/tram_pauline_prologue_graphics_08c3153c.c.o(.data*);
-        build/games/sick_beats/graphics/sick_beats_prologue_graphics_08c31e6c.c.o(.data*);
-        build/games/sick_beats/graphics/sick_beats_prologue_graphics_08c33214.c.o(.data*);
-        build/games/sick_beats/graphics/sick_beats_prologue_graphics_08c3355c.c.o(.data*);
+        build/games/sick_beats/graphics/sick_beats_prologue_graphics_08c31e6c.4bpp.c.o(.data*);
+        build/games/sick_beats/graphics/sick_beats_prologue_graphics_08c33214.4bpp.c.o(.data*);
+        build/games/sick_beats/graphics/sick_beats_prologue_graphics_08c3355c.tilemap.c.o(.data*);
         build/games/wizards_waltz/graphics/wizards_waltz_prologue_graphics_08c33640.c.o(.data*);
         build/games/wizards_waltz/graphics/wizards_waltz_prologue_graphics_08c339dc.c.o(.data*);
         build/games/wizards_waltz/graphics/wizards_waltz_prologue_graphics_08c33c14.c.o(.data*);
@@ -2611,9 +2611,9 @@ SECTIONS {
         build/games/mechanical_horse/graphics/mechanical_horse_graphics_08d17c24.tilemap.c.o(.data*);
         build/games/mechanical_horse/graphics/mechanical_horse_graphics_08d17d24.tilemap.c.o(.data*);
         build/games/mechanical_horse/graphics/mechanical_horse_graphics_08d198bc.4bpp.c.o(.data*);
-        build/games/sick_beats/graphics/sick_beats_graphics_08d19fb4.c.o(.data*);
-        build/games/sick_beats/graphics/sick_beats_graphics_08d1a280.c.o(.data*);
-        build/games/sick_beats/graphics/sick_beats_graphics_08d1a320.c.o(.data*);
+        build/games/sick_beats/graphics/sick_beats_graphics_08d19fb4.4bpp.c.o(.data*);
+        build/games/sick_beats/graphics/sick_beats_graphics_08d1a280.tilemap.c.o(.data*);
+        build/games/sick_beats/graphics/sick_beats_graphics_08d1a320.tilemap.c.o(.data*);
         build/graphics/warning/warning_graphics_08d1ad4c.c.o(.data*);
         build/graphics/warning/warning_graphics_08d1b00c.c.o(.data*);
         build/games/wizards_waltz/graphics/wizards_waltz_graphics_08d1d3c4.c.o(.data*);
