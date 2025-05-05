@@ -1659,5 +1659,18 @@
     "epilogues_graphics_08cb38ac": [
         13315292,
         13315240
+    ],
+    "game_select_graphics_08cc9854": [
+        13406552,
+        13406500
+    ],
+    "game_select_graphics_08cc9148": [
+        13400656,
+        13400604
+    ],
+    "game_select_graphics_08cc9a58": [
+        13408472,
+        13408420,
+        116
     ]
 }

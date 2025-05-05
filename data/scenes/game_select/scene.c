@@ -19,22 +19,22 @@ union SceneObject game_select_scene_objects[] = {
 // [D_089cf948] Graphics Table
 struct GraphicsTable game_select_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08cc9854,
+        /* Src.  */ &game_select_graphics_08cc9854,
         /* Dest. */ BG_TILESET_BASE(0x8000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08cc9d14,
+        /* Src.  */ &game_select_graphics_08cc9d14,
         /* Dest. */ BG_MAP_BASE(0xB000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08cc9e14,
+        /* Src.  */ &game_select_graphics_08cc9e14,
         /* Dest. */ BG_MAP_BASE(0xB800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08cc9148,
+        /* Src.  */ &game_select_graphics_08cc9148,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },

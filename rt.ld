@@ -2474,12 +2474,12 @@ SECTIONS {
         build/graphics/data_room/data_room_menu_graphics_08cc7330.4bpp.c.o(.data*);
         build/graphics/data_room/data_room_menu_graphics_08cc77a4.4bpp.c.o(.data*);
         build/graphics/data_room/data_room_menu_graphics_08cc7a40.tilemap.c.o(.data*);
-        build/graphics/game_select/game_select_graphics_08cc9148.c.o(.data*);
-        build/graphics/game_select/game_select_graphics_08cc9854.c.o(.data*);
-        build/graphics/game_select/game_select_graphics_08cc9a58.c.o(.data*);
-        build/graphics/game_select/game_select_graphics_08cc9bf4.c.o(.data*);
-        build/graphics/game_select/game_select_graphics_08cc9d14.c.o(.data*);
-        build/graphics/game_select/game_select_graphics_08cc9e14.c.o(.data*);
+        build/graphics/game_select/game_select_graphics_08cc9148.4bpp.c.o(.data*);
+        build/graphics/game_select/game_select_graphics_08cc9854.4bpp.c.o(.data*);
+        build/graphics/game_select/game_select_graphics_08cc9a58.tilemap.c.o(.data*);
+        build/graphics/game_select/game_select_graphics_08cc9bf4.tilemap.c.o(.data*);
+        build/graphics/game_select/game_select_graphics_08cc9d14.tilemap.c.o(.data*);
+        build/graphics/game_select/game_select_graphics_08cc9e14.tilemap.c.o(.data*);
         build/graphics/unknown/unknown_graphics_08cc9e2c.c.o(.data*);
         build/graphics/main_menu/main_menu_graphics_08ccb298.c.o(.data*);
         build/graphics/main_menu/main_menu_graphics_08ccb374.c.o(.data*);
