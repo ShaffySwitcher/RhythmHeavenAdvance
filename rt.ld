@@ -2520,12 +2520,15 @@ SECTIONS {
         build/graphics/medal_corner/rhythm_toys_menu_graphics_08cd931c.c.o(.data*);
         build/games/rhythm_toys/graphics/rhythm_toys_graphics_08cd9a44.c.o(.data*);
         build/games/rhythm_toys/graphics/rhythm_toys_graphics_08cda118.c.o(.data*);
+        build/games/rhythm_toys/graphics/rhythm_toys_unk_08cda128.c.o(.data*);
         build/games/rhythm_toys/graphics/rhythm_toys_graphics_08cda400.c.o(.data*);
         build/games/rhythm_toys/graphics/rhythm_toys_graphics_08cdae78.c.o(.data*);
         build/games/rhythm_toys/graphics/rhythm_toys_graphics_08cdbacc.c.o(.data*);
+        build/games/rhythm_toys/graphics/rhythm_toys_unk_08cdbadc.c.o(.data*);
         build/games/rhythm_toys/graphics/rhythm_toys_graphics_08cdbe6c.c.o(.data*);
         build/games/rhythm_toys/graphics/rhythm_toys_graphics_08cdc884.c.o(.data*);
         build/games/rhythm_toys/graphics/rhythm_toys_graphics_08cdd0d4.c.o(.data*);
+        build/games/rhythm_toys/graphics/rhythm_toys_unk_08cdd0e4.c.o(.data*);
         build/games/rhythm_toys/graphics/rhythm_toys_graphics_08cdd5b8.c.o(.data*);
         build/games/ninja_bodyguard/graphics/ninja_bodyguard_graphics_08cdd9d4.4bpp.c.o(.data*);
         build/games/ninja_bodyguard/graphics/ninja_bodyguard_graphics_08cde4e0.4bpp.c.o(.data*);
