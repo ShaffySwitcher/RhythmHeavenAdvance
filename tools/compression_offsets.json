@@ -1706,7 +1706,8 @@
     ],
     "drum_lessons_menu_graphics_08cc5e8c": [
         13388772,
-        13388720
+        13388720,
+        8
     ],
     "endless_games_menu_graphics_08cc3b7c": [
         13381808,
@@ -1746,5 +1747,28 @@
     "perfect_certificate_graphics_08ccc138": [
         13416528,
         13416476
+    ],
+    "results_graphics_08cd4f58": [
+        13453948,
+        13453896,
+        28
+    ],
+    "results_graphics_08cd4a50": [
+        13448320,
+        13448268
+    ],
+    "studio_graphics_08cd5288": [
+        13455232,
+        13455180,
+        24
+    ],
+    "studio_graphics_08cd62ec": [
+        13458860,
+        13458808,
+        56
+    ],
+    "studio_graphics_08cd5d64": [
+        13456024,
+        13455972
     ]
 }
