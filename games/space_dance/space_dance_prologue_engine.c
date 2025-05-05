@@ -12,17 +12,17 @@ struct CompressedGraphics *space_dance_prologue_buffered_textures[] = {
 // [D_089ed404] Graphics Table
 struct GraphicsTable space_dance_prologue_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c2575c,
+        /* Src.  */ &space_dance_prologue_graphics_08c2575c,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c25aa8,
+        /* Src.  */ &space_dance_prologue_graphics_08c25aa8,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c24f60,
+        /* Src.  */ &space_dance_prologue_graphics_08c24f60,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },

@@ -239,6 +239,9 @@ class RleCompressedData:
             self.size += 1
             curValue = data[i]
             self.compressed.append(curValue)
+            if (i+1 >= self.offset):
+                self.add_count(count)
+                break
             while (data[i+1] != curValue or i+3 >= self.offset or  data[i+2] != curValue or data[i+3] != curValue):
                 i += 1
                 count += 1
@@ -260,8 +263,9 @@ class RleCompressedData:
                     break
             self.add_count(count)
             i += 1
-            if (i+1 >= self.offset):
+            if (i >= self.offset):
                 break
+            
 
     def output_to_file(self, f, symbol, double, unusedData):
         if not double:
