@@ -138,15 +138,15 @@ u8 drum_live_brg_targets[] = {
 BgMapAnim D_089e06c4[] = {
     BG_ANIM_SET_DELAY(INT_TO_FIXED(20)),
     BG_ANIM_WRITE_COMP(&drum_live_graphics_08c47ed4),
-    BG_ANIM_WRITE_COMP(&D_08c47fdc),
+    BG_ANIM_WRITE_COMP(&unknown_graphics_08c47fdc),
     BG_ANIM_GOTO(D_089e06c4)
 };
 
 // [D_089e06d4] Crowd BG Map Beat Anim (excitement == 1)
 BgMapAnim D_089e06d4[] = {
     BG_ANIM_SET_DELAY(INT_TO_FIXED(5)),
-    BG_ANIM_WRITE_COMP(&D_08c480e4),
-    BG_ANIM_WRITE_COMP(&D_08c47fdc),
+    BG_ANIM_WRITE_COMP(&unknown_graphics_08c480e4),
+    BG_ANIM_WRITE_COMP(&unknown_graphics_08c47fdc),
     BG_ANIM_WRITE_COMP(&drum_live_graphics_08c47ed4),
     BG_ANIM_GOTO(D_089e06c4)
 };
@@ -154,9 +154,9 @@ BgMapAnim D_089e06d4[] = {
 // [D_089e06e8] Crowd BG Map Beat Anim (excitement == 2)
 BgMapAnim D_089e06e8[] = {
     BG_ANIM_SET_DELAY(INT_TO_FIXED(5)),
-    BG_ANIM_WRITE_COMP(&D_08c481f4),
-    BG_ANIM_WRITE_COMP(&D_08c480e4),
-    BG_ANIM_WRITE_COMP(&D_08c47fdc),
+    BG_ANIM_WRITE_COMP(&unknown_graphics_08c481f4),
+    BG_ANIM_WRITE_COMP(&unknown_graphics_08c480e4),
+    BG_ANIM_WRITE_COMP(&unknown_graphics_08c47fdc),
     BG_ANIM_WRITE_COMP(&drum_live_graphics_08c47ed4),
     BG_ANIM_GOTO(D_089e06c4)
 };
@@ -164,38 +164,38 @@ BgMapAnim D_089e06e8[] = {
 // [D_089e0700] Crowd BG Map Beat Anim
 BgMapAnim D_089e0700[] = {
     BG_ANIM_SET_DELAY(INT_TO_FIXED(20)),
-    BG_ANIM_WRITE_COMP(&D_08c48458),
-    BG_ANIM_WRITE_COMP(&D_08c48328),
+    BG_ANIM_WRITE_COMP(&unknown_graphics_08c48458),
+    BG_ANIM_WRITE_COMP(&unknown_graphics_08c48328),
     BG_ANIM_GOTO(D_089e0700)
 };
 
 // [D_089e0710] Crowd BG Map Beat Anim (excitement == 3)
 BgMapAnim D_089e0710[] = {
     BG_ANIM_SET_DELAY(INT_TO_FIXED(5)),
-    BG_ANIM_WRITE_COMP(&D_08c486f4),
-    BG_ANIM_WRITE_COMP(&D_08c485a4),
-    BG_ANIM_WRITE_COMP(&D_08c48458),
+    BG_ANIM_WRITE_COMP(&unknown_graphics_08c486f4),
+    BG_ANIM_WRITE_COMP(&unknown_graphics_08c485a4),
+    BG_ANIM_WRITE_COMP(&unknown_graphics_08c48458),
     BG_ANIM_SET_DELAY(INT_TO_FIXED(40)),
-    BG_ANIM_WRITE_COMP(&D_08c48328),
+    BG_ANIM_WRITE_COMP(&unknown_graphics_08c48328),
     BG_ANIM_GOTO(D_089e0700)
 };
 
 // [D_089e072c] Crowd BG Map Beat Anim
 BgMapAnim D_089e072c[] = {
     BG_ANIM_SET_DELAY(INT_TO_FIXED(20)),
-    BG_ANIM_WRITE_COMP(&D_08c489fc),
-    BG_ANIM_WRITE_COMP(&D_08c48874),
+    BG_ANIM_WRITE_COMP(&unknown_graphics_08c489fc),
+    BG_ANIM_WRITE_COMP(&unknown_graphics_08c48874),
     BG_ANIM_GOTO(D_089e072c)
 };
 
 // [D_089e073c] Crowd BG Map Beat Anim (excitement >= 4)
 BgMapAnim D_089e073c[] = {
     BG_ANIM_SET_DELAY(INT_TO_FIXED(5)),
-    BG_ANIM_WRITE_COMP(&D_08c48cfc),
-    BG_ANIM_WRITE_COMP(&D_08c48b84),
-    BG_ANIM_WRITE_COMP(&D_08c489fc),
+    BG_ANIM_WRITE_COMP(&unknown_graphics_08c48cfc),
+    BG_ANIM_WRITE_COMP(&unknown_graphics_08c48b84),
+    BG_ANIM_WRITE_COMP(&unknown_graphics_08c489fc),
     BG_ANIM_SET_DELAY(INT_TO_FIXED(40)),
-    BG_ANIM_WRITE_COMP(&D_08c48874),
+    BG_ANIM_WRITE_COMP(&unknown_graphics_08c48874),
     BG_ANIM_GOTO(D_089e072c)
 };
 
