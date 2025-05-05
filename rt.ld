@@ -1928,9 +1928,9 @@ SECTIONS {
         build/games/sneaky_spirits/graphics/sneaky_spirits_graphics_08bd2a00.4bpp.c.o(.data*);
         build/games/sneaky_spirits/graphics/sneaky_spirits_graphics_08bd2b58.tilemap.c.o(.data*);
         build/games/sneaky_spirits/graphics/sneaky_spirits_graphics_08bd2cf8.tilemap.c.o(.data*);
-        build/games/spaceball/graphics/spaceball_graphics_08bd4e70.c.o(.data*);
-        build/games/spaceball/graphics/spaceball_graphics_08bd5524.c.o(.data*);
-        build/games/spaceball/graphics/spaceball_graphics_08bd5878.c.o(.data*);
+        build/games/spaceball/graphics/spaceball_graphics_08bd4e70.4bpp.c.o(.data*);
+        build/games/spaceball/graphics/spaceball_graphics_08bd5524.4bpp.c.o(.data*);
+        build/games/spaceball/graphics/spaceball_graphics_08bd5878.tilemap.c.o(.data*);
         build/games/drum_live/graphics/drum_samurai_band_graphics_08bd6c44.4bpp.c.o(.data*);
         build/games/drum_live/graphics/drum_samurai_band_graphics_08bd7c30.4bpp.c.o(.data*);
         build/games/drum_live/graphics/drum_samurai_band_graphics_08bd8060.tilemap.c.o(.data*);
@@ -1957,9 +1957,9 @@ SECTIONS {
         build/games/sneaky_spirits/graphics/sneaky_spirits_prologue_graphics_08be0ff8.4bpp.c.o(.data*);
         build/games/sneaky_spirits/graphics/sneaky_spirits_prologue_graphics_08be1c50.4bpp.c.o(.data*);
         build/games/sneaky_spirits/graphics/sneaky_spirits_prologue_graphics_08be1dfc.tilemap.c.o(.data*);
-        build/games/spaceball/graphics/spaceball_prologue_graphics_08be2298.c.o(.data*);
-        build/games/spaceball/graphics/spaceball_prologue_graphics_08be2fd8.c.o(.data*);
-        build/games/spaceball/graphics/spaceball_prologue_graphics_08be3398.c.o(.data*);
+        build/games/spaceball/graphics/spaceball_prologue_graphics_08be2298.4bpp.c.o(.data*);
+        build/games/spaceball/graphics/spaceball_prologue_graphics_08be2fd8.4bpp.c.o(.data*);
+        build/games/spaceball/graphics/spaceball_prologue_graphics_08be3398.tilemap.c.o(.data*);
         build/games/bon_odori/graphics/bon_odori_prologue_graphics_08be3e20.4bpp.c.o(.data*);
         build/games/bon_odori/graphics/bon_odori_prologue_graphics_08be694c.4bpp.c.o(.data*);
         build/games/bon_odori/graphics/bon_odori_prologue_graphics_08be6d70.tilemap.c.o(.data*);

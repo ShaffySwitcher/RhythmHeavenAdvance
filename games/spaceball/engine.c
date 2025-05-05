@@ -13,17 +13,17 @@ struct CompressedGraphics *spaceball_buffered_textures[] = {
 // [D_089de940] Graphics Table
 struct GraphicsTable spaceball_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08bd5524,
+        /* Src.  */ &spaceball_graphics_08bd5524,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08bd5878,
+        /* Src.  */ &spaceball_graphics_08bd5878,
         /* Dest. */ BG_MAP_BASE(0xF000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08bd4e70,
+        /* Src.  */ &spaceball_graphics_08bd4e70,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
