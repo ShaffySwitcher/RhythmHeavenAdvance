@@ -111,43 +111,43 @@
         12710384,
         8
     ],
-    "bon_odori_graphics_08bd9f1c": [
+    "bon_dance_bg_tiles": [
         12424764,
         12424716,
         144
     ],
-    "bon_odori_graphics_08bdc118": [
+    "bon_odori_blank_bg_tiles": [
         12435704,
         12435656,
         144
     ],
-    "bon_odori_graphics_08bdc0e8": [
+    "bon_odori_bg_tiles": [
         12434608,
         12434560
     ],
-    "bon_odori_prologue_graphics_08be854c": [
+    "bon_odori_prologue_bg_tiles": [
         12481992,
         12481944,
         4
     ],
-    "bon_odori_graphics_08bd962c": [
+    "bon_dance_obj": [
         12419184,
         12419136
     ],
-    "bon_odori_prologue_graphics_08be3e20": [
+    "bon_dance_prologue_obj": [
         12465064,
         12465016
     ],
-    "bon_odori_graphics_08bdbca0": [
+    "bon_odori_obj": [
         12428372,
         12428324
     ],
-    "bon_odori_prologue_graphics_08be694c": [
+    "bon_dance_prologue_bg_tiles": [
         12467760,
         12467712,
         4
     ],
-    "bon_odori_prologue_graphics_08be75b8": [
+    "bon_odori_prologue_obj": [
         12479872,
         12479824
     ],

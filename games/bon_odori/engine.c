@@ -168,32 +168,32 @@ FontPalette bon_odori_font_pal_highlight[] = {
 // [D_089ded44] Graphics Table (Bon Odori)
 struct GraphicsTable bon_odori_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &bon_odori_graphics_08bdc118,
+        /* Src.  */ &bon_odori_blank_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0x8000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &bon_odori_graphics_08bdc520,
+        /* Src.  */ &bon_odori_blank_bg_map,
         /* Dest. */ BG_TILESET_BASE(0xC000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Tileset */ {
-        /* Src.  */ &bon_odori_graphics_08bdc0e8,
+        /* Src.  */ &bon_odori_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &bon_odori_graphics_08bdc4f0,
+        /* Src.  */ &bon_odori_lanterns_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &bon_odori_graphics_08bdc3ac,
+        /* Src.  */ &bon_odori_bg_map,
         /* Dest. */ BG_MAP_BASE(0xF000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &bon_odori_graphics_08bdbca0,
+        /* Src.  */ &bon_odori_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -248,32 +248,32 @@ struct GraphicsTable bon_odori_gfx_table[] = {
 // [D_089dee04] Graphics Table (Bon Dance)
 struct GraphicsTable bon_dance_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &bon_odori_graphics_08bdc118,
+        /* Src.  */ &bon_odori_blank_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0x8000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &bon_odori_graphics_08bdc520,
+        /* Src.  */ &bon_odori_blank_bg_map,
         /* Dest. */ BG_TILESET_BASE(0xC000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Tileset */ {
-        /* Src.  */ &bon_odori_graphics_08bd9f1c,
+        /* Src.  */ &bon_dance_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &bon_odori_graphics_08bda444,
+        /* Src.  */ &bon_dance_lanterns_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &bon_odori_graphics_08bda300,
+        /* Src.  */ &bon_dance_bg_map,
         /* Dest. */ BG_MAP_BASE(0xF000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &bon_odori_graphics_08bd962c,
+        /* Src.  */ &bon_dance_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
