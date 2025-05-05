@@ -2082,7 +2082,7 @@ SECTIONS {
         build/games/wizards_waltz/graphics/wizards_waltz_prologue_graphics_08c33640.4bpp.c.o(.data*);
         build/games/wizards_waltz/graphics/wizards_waltz_prologue_graphics_08c339dc.4bpp.c.o(.data*);
         build/games/wizards_waltz/graphics/wizards_waltz_prologue_graphics_08c33c14.tilemap.c.o(.data*);
-        build/graphics/unknown/unknown_graphics_08c33f60.c.o(.data*);
+        build/graphics/unknown/unknown_graphics_08c33f60.4bpp.c.o(.data*);
         build/games/mannequin_factory/graphics/mannequin_factory_graphics_08c34478.4bpp.c.o(.data*);
         build/games/mannequin_factory/graphics/mannequin_factory_graphics_08c35c9c.4bpp.c.o(.data*);
         build/games/mannequin_factory/graphics/mannequin_factory_graphics_08c35f18.tilemap.c.o(.data*);
@@ -2115,17 +2115,17 @@ SECTIONS {
         build/games/drum_live/graphics/drum_live_graphics_08c47930.4bpp.c.o(.data*);
         build/games/drum_live/graphics/drum_live_graphics_08c47dc4.tilemap.c.o(.data*);
         build/games/drum_live/graphics/drum_live_graphics_08c47ed4.tilemap.c.o(.data*);
-        build/graphics/unknown/unknown_graphics_08c47fdc.c.o(.data*);
-        build/graphics/unknown/unknown_graphics_08c480e4.c.o(.data*);
-        build/graphics/unknown/unknown_graphics_08c481f4.c.o(.data*);
-        build/graphics/unknown/unknown_graphics_08c48328.c.o(.data*);
-        build/graphics/unknown/unknown_graphics_08c48458.c.o(.data*);
-        build/graphics/unknown/unknown_graphics_08c485a4.c.o(.data*);
-        build/graphics/unknown/unknown_graphics_08c486f4.c.o(.data*);
-        build/graphics/unknown/unknown_graphics_08c48874.c.o(.data*);
-        build/graphics/unknown/unknown_graphics_08c489fc.c.o(.data*);
-        build/graphics/unknown/unknown_graphics_08c48b84.c.o(.data*);
-        build/graphics/unknown/unknown_graphics_08c48cfc.c.o(.data*);
+        build/graphics/unknown/unknown_graphics_08c47fdc.tilemap.c.o(.data*);
+        build/graphics/unknown/unknown_graphics_08c480e4.tilemap.c.o(.data*);
+        build/graphics/unknown/unknown_graphics_08c481f4.tilemap.c.o(.data*);
+        build/graphics/unknown/unknown_graphics_08c48328.tilemap.c.o(.data*);
+        build/graphics/unknown/unknown_graphics_08c48458.tilemap.c.o(.data*);
+        build/graphics/unknown/unknown_graphics_08c485a4.tilemap.c.o(.data*);
+        build/graphics/unknown/unknown_graphics_08c486f4.tilemap.c.o(.data*);
+        build/graphics/unknown/unknown_graphics_08c48874.tilemap.c.o(.data*);
+        build/graphics/unknown/unknown_graphics_08c489fc.tilemap.c.o(.data*);
+        build/graphics/unknown/unknown_graphics_08c48b84.tilemap.c.o(.data*);
+        build/graphics/unknown/unknown_graphics_08c48cfc.tilemap.c.o(.data*);
         build/games/drum_intro/graphics/drum_intro_graphics_08c4a970.4bpp.c.o(.data*);
         build/games/drum_intro/graphics/drum_intro_graphics_08c4af00.4bpp.c.o(.data*);
         build/games/drum_intro/graphics/drum_intro_graphics_08c4aff8.4bpp.c.o(.data*);
@@ -2457,13 +2457,13 @@ SECTIONS {
         build/graphics/cafe/cafe_graphics_08cc0c30.4bpp.c.o(.data*);
         build/graphics/cafe/cafe_graphics_08cc0cf0.tilemap.c.o(.data*);
         build/graphics/cafe/cafe_graphics_08cc1158.tilemap.c.o(.data*);
-        build/graphics/unknown/unknown_graphics_08cc15c4.c.o(.data*);
-        build/graphics/unknown/unknown_graphics_08cc1a30.c.o(.data*);
-        build/graphics/unknown/unknown_graphics_08cc1e9c.c.o(.data*);
-        build/graphics/unknown/unknown_graphics_08cc2308.c.o(.data*);
-        build/graphics/unknown/unknown_graphics_08cc2790.c.o(.data*);
-        build/graphics/unknown/unknown_graphics_08cc2c18.c.o(.data*);
-        build/graphics/unknown/unknown_graphics_08cc30a0.c.o(.data*);
+        build/graphics/unknown/unknown_graphics_08cc15c4.tilemap.c.o(.data*);
+        build/graphics/unknown/unknown_graphics_08cc1a30.tilemap.c.o(.data*);
+        build/graphics/unknown/unknown_graphics_08cc1e9c.tilemap.c.o(.data*);
+        build/graphics/unknown/unknown_graphics_08cc2308.tilemap.c.o(.data*);
+        build/graphics/unknown/unknown_graphics_08cc2790.tilemap.c.o(.data*);
+        build/graphics/unknown/unknown_graphics_08cc2c18.tilemap.c.o(.data*);
+        build/graphics/unknown/unknown_graphics_08cc30a0.tilemap.c.o(.data*);
         build/graphics/medal_corner/endless_games_menu_graphics_08cc3b7c.4bpp.c.o(.data*);
         build/graphics/medal_corner/endless_games_menu_graphics_08cc4670.4bpp.c.o(.data*);
         build/graphics/medal_corner/endless_games_menu_graphics_08cc4a00.tilemap.c.o(.data*);
@@ -2480,7 +2480,7 @@ SECTIONS {
         build/graphics/game_select/game_select_graphics_08cc9bf4.tilemap.c.o(.data*);
         build/graphics/game_select/game_select_graphics_08cc9d14.tilemap.c.o(.data*);
         build/graphics/game_select/game_select_graphics_08cc9e14.tilemap.c.o(.data*);
-        build/graphics/unknown/unknown_graphics_08cc9e2c.c.o(.data*);
+        build/graphics/unknown/unknown_graphics_08cc9e2c.tilemap.c.o(.data*);
         build/graphics/main_menu/main_menu_graphics_08ccb298.4bpp.c.o(.data*);
         build/graphics/main_menu/main_menu_graphics_08ccb374.4bpp.c.o(.data*);
         build/graphics/main_menu/main_menu_graphics_08ccb840.tilemap.c.o(.data*);
@@ -2629,7 +2629,7 @@ SECTIONS {
         build/games/ninja_bodyguard/graphics/ninja_reincarnate_graphics_08d1f700.4bpp.c.o(.data*);
         build/games/ninja_bodyguard/graphics/ninja_reincarnate_graphics_08d1fab0.tilemap.c.o(.data*);
         build/games/ninja_bodyguard/graphics/ninja_reincarnate_graphics_08d1fb70.tilemap.c.o(.data*);
-        build/graphics/unknown/unknown_graphics_08d20534.c.o(.data*);
+        build/graphics/unknown/unknown_graphics_08d20534.tilemap.c.o(.data*);
     }
 
     _end = . ;
