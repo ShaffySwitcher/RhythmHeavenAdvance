@@ -93,20 +93,20 @@
         12931524,
         112
     ],
-    "bunny_hop_prologue_graphics_08c1f214": [
+    "bunny_hop_prologue_obj": [
         12709112,
         12709060
     ],
-    "bunny_hop_graphics_08c7fda8": [
+    "bunny_hop_bg_tiles": [
         13106120,
         13106068,
         80
     ],
-    "bunny_hop_graphics_08c7fbb8": [
+    "bunny_hop_obj": [
         13097772,
         13097720
     ],
-    "bunny_hop_prologue_graphics_08c1f24c": [
+    "bunny_hop_prologue_bg_tiles": [
         12710436,
         12710384,
         8
