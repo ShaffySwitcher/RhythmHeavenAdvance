@@ -491,7 +491,7 @@ struct ReadingMaterial reading_material_table[] = {
 
     /* TOSS_BOYS ("Rhythm Stand-Up") */ {
         /* TITLE ---------------------------------------------------------- */
-            "Rhythm Comedy",
+            "Rhythm Stand-Up",
         /* BODY ----------------------------------------------------------- */
             "Yellow: \"Hello, I'm Yellow!\"\n"
             "Blue: \"Hello, I'm Blue!\"\n"

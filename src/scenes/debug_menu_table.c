@@ -73,7 +73,7 @@ struct DebugMenuEntry debug_menu_entry_table[] = {
     },
     /* Rhythm Toys (Confession Machine) */ {
         /* Scene */ &scene_love_machine,
-        /* Label */ "‚k‚‚–‚…@‚b‚‚‚†‚…‚“‚“‚‚’"
+        /* Label */ "‚k‚‚–‚…@‚l‚‚ƒ‚ˆ‚‰‚‚…"
     },
     /* Rhythm Toys (Rap Machine) */ {
         /* Scene */ &scene_rap_machine,
@@ -205,7 +205,7 @@ struct DebugMenuEntry debug_menu_entry_table[] = {
     },
     /* Showtime */ {
         /* Scene */ &scene_showtime,
-        /* Label */ "‚r‚ˆ‚‚—‚”‚‰‚‚…I"
+        /* Label */ "‚r‚ˆ‚‚—‚”‚‰‚‚…"
     },
     /* RIQ Data Check */ {
         /* Scene */ &scene_data_check,
