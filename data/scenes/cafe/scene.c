@@ -38,22 +38,22 @@ u8 cafe_barista_denied_levels[] = {
 // [D_089cd48c] Graphics Table
 struct GraphicsTable cafe_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08cc0c30,
+        /* Src.  */ &cafe_graphics_08cc0c30,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08cc0cf0,
+        /* Src.  */ &cafe_graphics_08cc0cf0,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08cc1158,
+        /* Src.  */ &cafe_graphics_08cc1158,
         /* Dest. */ BG_MAP_BASE(0xF000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08cbf0e8,
+        /* Src.  */ &cafe_graphics_08cbf0e8,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
