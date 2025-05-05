@@ -997,5 +997,31 @@
     "sick_beats_graphics_08d19fb4": [
         13736140,
         13736088
+    ],
+    "sneaky_spirits_graphics_08bd2b58": [
+        12397152,
+        12397104,
+        80
+    ],
+    "sneaky_spirits_graphics_08bd245c": [
+        12389592,
+        12389544
+    ],
+    "sneaky_spirits_prologue_graphics_08be1c50": [
+        12455944,
+        12455896
+    ],
+    "sneaky_spirits_prologue_graphics_08be1dfc": [
+        12459108,
+        12459060,
+        4
+    ],
+    "sneaky_spirits_graphics_08bd2a00": [
+        12395628,
+        12395580
+    ],
+    "sneaky_spirits_prologue_graphics_08be0ff8": [
+        12455160,
+        12455112
     ]
 }
