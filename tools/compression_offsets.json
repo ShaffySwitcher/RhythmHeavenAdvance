@@ -169,34 +169,34 @@
         12510224,
         16
     ],
-    "drum_intro_graphics_08c4a970": [
+    "drum_intro_play_obj": [
         12881164,
         12881112
     ],
-    "drum_intro_graphics_08c4aff8": [
+    "drum_intro_unused_bg_tiles": [
         12889872,
         12889820,
         112
     ],
-    "tanuki_and_monkey_graphics_08ce6ebc": [
+    "tanuki_and_monkey_bg_tiles": [
         13528268,
         13528216,
         48
     ],
-    "drum_intro_graphics_08c4cf00": [
+    "drum_intro_talk_bg_tiles": [
         12897464,
         12897412,
         104
     ],
-    "drum_intro_graphics_08c4cca8": [
+    "drum_intro_talk_obj": [
         12890900,
         12890848
     ],
-    "tanuki_and_monkey_graphics_08ce6cbc": [
+    "tanuki_and_monkey_obj": [
         13525640,
         13525588
     ],
-    "drum_intro_graphics_08c4af00": [
+    "drum_intro_play_bg_tiles": [
         12888448,
         12888396
     ],
