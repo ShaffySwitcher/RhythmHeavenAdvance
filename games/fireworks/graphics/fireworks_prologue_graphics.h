@@ -10,9 +10,9 @@ extern struct Animation anim_fireworks_prologue_unused[];
 
 /* PROLOGUE (FIREWORKS) - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics fireworks_prologue_graphics_08bf0eb8;
-extern struct CompressedGraphics fireworks_prologue_graphics_08bf12dc;
-extern struct CompressedGraphics fireworks_prologue_graphics_08bef660;
+extern struct CompressedGraphics fireworks_prologue_bg_tiles;
+extern struct CompressedGraphics fireworks_prologue_bg_map;
+extern struct CompressedGraphics fireworks_prologue_obj;
 
 /* PROLOGUE (FIREWORKS) - PALETTES */
 
