@@ -15,7 +15,7 @@
 // [D_089d7fb4] Graphics Table
 struct GraphicsTable reading_gfx_table[] = {
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08cccb04,
+        /* Src.  */ &data_room_graphics_08cccb04,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -52,12 +52,12 @@ struct ReadingMaterial reading_material_error = {
     /* STYLE ---------------------------------------------------------- */
         /* GFX */ (struct GraphicsTable[]) {
             /* BG Tileset */ {
-                /* Src.  */ &D_08cd29ac,
+                /* Src.  */ &data_room_graphics_08cd29ac,
                 /* Dest. */ BG_TILESET_BASE(0),
                 /* Size  */ COMPRESSED_GFX_SOURCE
             },
             /* BG Map */ {
-                /* Src.  */ &D_08cd2cec,
+                /* Src.  */ &data_room_graphics_08cd2cec,
                 /* Dest. */ BG_MAP_BASE(0xE800),
                 /* Size  */ COMPRESSED_GFX_SOURCE
             },
