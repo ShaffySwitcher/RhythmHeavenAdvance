@@ -168,12 +168,12 @@ FontPalette bon_odori_font_pal_highlight[] = {
 // [D_089ded44] Graphics Table (Bon Odori)
 struct GraphicsTable bon_odori_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &bon_odori_blank_bg_tiles,
+        /* Src.  */ &bon_odori_bg_tiles_blank,
         /* Dest. */ BG_TILESET_BASE(0x8000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &bon_odori_blank_bg_map,
+        /* Src.  */ &bon_odori_bg_map_blank,
         /* Dest. */ BG_TILESET_BASE(0xC000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -183,7 +183,7 @@ struct GraphicsTable bon_odori_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &bon_odori_lanterns_bg_map,
+        /* Src.  */ &bon_odori_bg_map_lanterns,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -248,12 +248,12 @@ struct GraphicsTable bon_odori_gfx_table[] = {
 // [D_089dee04] Graphics Table (Bon Dance)
 struct GraphicsTable bon_dance_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &bon_odori_blank_bg_tiles,
+        /* Src.  */ &bon_odori_bg_tiles_blank,
         /* Dest. */ BG_TILESET_BASE(0x8000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &bon_odori_blank_bg_map,
+        /* Src.  */ &bon_odori_bg_map_blank,
         /* Dest. */ BG_TILESET_BASE(0xC000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -263,7 +263,7 @@ struct GraphicsTable bon_dance_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &bon_dance_lanterns_bg_map,
+        /* Src.  */ &bon_dance_bg_map_lanterns,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
