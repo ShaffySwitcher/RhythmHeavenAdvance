@@ -50,6 +50,9 @@ extern u32 D_03005590; // Unused
 extern u32 D_030055d4; // Unused
 
 
+#define LEVEL_STATE_PERFECT 6 // New state for perfected levels
+
+
 // Clear sPlayAltBGM
 void disable_game_select_2_bgm(void) {
     sPlayAltBGM = FALSE;
@@ -1790,7 +1793,7 @@ void game_select_init_info_pane(void) {
     text_printer_center_by_content(gGameSelect->infoPaneDesc, 1);
     text_printer_set_x_y_controller(gGameSelect->infoPaneDesc, &bgOfs->x, &bgOfs->y);
     text_printer_set_shadow_colors(gGameSelect->infoPaneDesc, -1);
-    gGameSelect->perfectClearedSprite = sprite_create(gSpriteHandler, anim_game_select_perfect_rank, 0, 138, 115, 0x80A, 1, 0, 0x8000);
+    gGameSelect->perfectClearedSprite = sprite_create(gSpriteHandler, anim_game_select_perfect_rank, 0, 187, 115, 0x80A, 1, 0, 0x8000);
     sprite_set_origin_x_y(gSpriteHandler, gGameSelect->perfectClearedSprite, &bgOfs->x, &bgOfs->y);
     gGameSelect->infoPaneIsClear = TRUE;
     gGameSelect->infoPaneTask = INFO_PANE_TASK_NONE;
@@ -1854,6 +1857,11 @@ void game_select_print_level_rank(s32 levelState) {
 
     if (D_030046a8->data.levelScores[gGameSelect->infoPaneLevelID] == DEFAULT_LEVEL_SCORE) {
         levelState = LEVEL_STATE_OPEN;
+    }
+
+    // Check if the game has been perfected
+    if (D_030046a8->data.campaignsCleared[get_campaign_from_level_id(gGameSelect->infoPaneLevelID)]) {
+        levelState = LEVEL_STATE_PERFECT; // Use the new "perfect" rank
     }
 
     text_printer_fill_vram_tiles(16, 26, 16, 2, 0);
