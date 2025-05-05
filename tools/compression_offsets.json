@@ -1426,5 +1426,64 @@
     "cafe_graphics_08cc0c30": [
         13365496,
         13365444
+    ],
+    "data_room_graphics_08cce92c": [
+        13428108,
+        13428056
+    ],
+    "data_room_graphics_08cccb04": [
+        13421200,
+        13421148
+    ],
+    "data_room_graphics_08cd0a10": [
+        13433452,
+        13433400
+    ],
+    "data_room_graphics_08cd1d28": [
+        13438216,
+        13438164
+    ],
+    "data_room_graphics_08cceda8": [
+        13429608,
+        13429556
+    ],
+    "data_room_menu_graphics_08cc77a4": [
+        13398848,
+        13398796
+    ],
+    "data_room_graphics_08cd2cec": [
+        13445572,
+        13445520,
+        8
+    ],
+    "data_room_graphics_08cd29ac": [
+        13443548,
+        13443496
+    ],
+    "data_room_graphics_08ccd074": [
+        13421344,
+        13421292,
+        12
+    ],
+    "data_room_graphics_08cce120": [
+        13423456,
+        13423404
+    ],
+    "data_room_menu_graphics_08cc7a40": [
+        13400012,
+        13399960,
+        24
+    ],
+    "data_room_graphics_08ccf798": [
+        13430652,
+        13430600
+    ],
+    "data_room_graphics_08cd31d8": [
+        13446428,
+        13446376
+    ],
+    "data_room_menu_graphics_08cc7330": [
+        13397212,
+        13397160
     ]
 }

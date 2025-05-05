@@ -267,12 +267,8 @@ class RleCompressedData:
                 break
             
 
-    def output_to_file(self, f, symbol, double, unusedData):
+    def output_to_file(self, f, symbol, double):
         if not double:
-            if unusedData is not None:
-                f.write("u8 %s_unused[%d] = {\n\t" % (symbol, len(unusedData)))
-                output_array(f, unusedData, "0x%02x", 16)
-                f.write("\n};\n\n")
             f.write("u16 %s_data[] = {\n\t" % symbol)
             output_array(f, self.compressed, "0x%04x", 16)
             f.write("\n};\n\n")
@@ -316,17 +312,22 @@ def compress_file(input, output, double, revision):
         offsets = json.load(f)
         if symbol in offsets:
             address = offsets[symbol][revision]
-            if not double:
+            if len(offsets[symbol]) > 2:
                 unusedData = read_from_rom(address - offsets[symbol][2], offsets[symbol][2])
 
     outputFile = open(output, 'w')
     outputFile.write('#include "global.h"\n#include "graphics.h"\n\n')
 
+    if unusedData is not None:
+        outputFile.write("u8 %s_unused[%d] = {\n\t" % (symbol, len(unusedData)))
+        output_array(outputFile, unusedData, "0x%02x", 16)
+        outputFile.write("\n};\n\n")
+
     rleData = RleCompressedData(data)
     if double:
         compressedData = CompressedData(rleData.compressed, address)
         compressedData.output_to_file(outputFile, symbol)
-    rleData.output_to_file(outputFile, symbol, double, unusedData)
+    rleData.output_to_file(outputFile, symbol, double)
 
 if __name__ == "__main__":
     inputFile = sys.argv[1]
