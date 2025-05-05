@@ -2185,10 +2185,10 @@ SECTIONS {
         build/games/power_calligraphy/graphics/power_calligraphy_graphics_08c68d64.4bpp.c.o(.data*);
         build/games/power_calligraphy/graphics/power_calligraphy_graphics_08c69698.4bpp.c.o(.data*);
         build/games/power_calligraphy/graphics/power_calligraphy_graphics_08c69844.tilemap.c.o(.data*);
-        build/games/rhythm_test/graphics/rhythm_test_graphics_08c6a350.c.o(.data*);
-        build/games/rhythm_test/graphics/rhythm_test_graphics_08c6a638.c.o(.data*);
-        build/games/rhythm_test/graphics/rhythm_test_graphics_08c6a830.c.o(.data*);
-        build/games/rhythm_test/graphics/rhythm_test_graphics_08c6a9c4.c.o(.data*);
+        build/games/rhythm_test/graphics/rhythm_test_graphics_08c6a350.4bpp.c.o(.data*);
+        build/games/rhythm_test/graphics/rhythm_test_graphics_08c6a638.4bpp.c.o(.data*);
+        build/games/rhythm_test/graphics/rhythm_test_graphics_08c6a830.tilemap.c.o(.data*);
+        build/games/rhythm_test/graphics/rhythm_test_graphics_08c6a9c4.tilemap.c.o(.data*);
         build/games/marching_orders/graphics/marching_orders_graphics_08c6ab24.tilemap.c.o(.data*);
         build/games/marching_orders/graphics/marching_orders_graphics_08c6c658.4bpp.c.o(.data*);
         build/games/marching_orders/graphics/marching_orders_graphics_08c6c89c.4bpp.c.o(.data*);
