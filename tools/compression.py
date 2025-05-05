@@ -67,9 +67,11 @@ class SlidingWindow:
     index: int = 0
 
     def __init__(self):
-        self.data = [0]
+        self.data = []
 
     def append_bit(self, bit):
+        if len(self.data) == 0:
+            self.data.append(0)
         if self.index >= 32:
             self.index = 0
             self.data.append(0)
@@ -77,6 +79,8 @@ class SlidingWindow:
         self.index += 1
     
     def fill_rest(self, address):
+        if len(self.data) == 0:
+            return
         # Fill in all unused bits with the data from the ROM
         bytes = read_from_rom(address + (len(self.data)-1)*4, 4)
         # Unpack 4 bytes into one number
@@ -203,8 +207,7 @@ class CompressedData:
         output_array(f, self.window1.data, "0x%08x", 8)
         f.write("\n};\n\n")
         f.write("u32 %s_window2[] = {\n\t" % symbol)
-        if len(self.window2.data) != 1 or self.window2.index != 0:
-            output_array(f, self.window2.data, "0x%08x", 8)
+        output_array(f, self.window2.data, "0x%08x", 8)
         f.write("\n};\n\n")
 
         f.write("struct Huffman %s_compressed = {\n" % symbol)
@@ -214,6 +217,8 @@ class CompressedData:
         f.write("\t/* Window 1 */          %s_window1,\n" % symbol)
         f.write("\t/* Window 2 */          %s_window2,\n" % symbol)
         f.write("};\n\n")
+
+        self.dataSize = pad4(self.address + len(self.compressed)*2) + len(self.window1.data)*4 + len(self.window2.data)*4 + 16 - self.address
 
 
 class RleCompressedData:
@@ -307,27 +312,33 @@ def compress_file(input, output, double, revision):
         data = array.array("H", f.read())
     
     address = None
-    unusedData = None
+    unusedDataLength = None
     with open("tools/compression_offsets.json", "r") as f:
         offsets = json.load(f)
         if symbol in offsets:
             address = offsets[symbol][revision]
             if len(offsets[symbol]) > 2:
-                unusedData = read_from_rom(address - offsets[symbol][2], offsets[symbol][2])
+                unusedDataLength = offsets[symbol][2]
 
     outputFile = open(output, 'w')
     outputFile.write('#include "global.h"\n#include "graphics.h"\n\n')
-
-    if unusedData is not None:
-        outputFile.write("u8 %s_unused[%d] = {\n\t" % (symbol, len(unusedData)))
-        output_array(outputFile, unusedData, "0x%02x", 16)
-        outputFile.write("\n};\n\n")
 
     rleData = RleCompressedData(data)
     if double:
         compressedData = CompressedData(rleData.compressed, address)
         compressedData.output_to_file(outputFile, symbol)
     rleData.output_to_file(outputFile, symbol, double)
+
+    if unusedDataLength is not None:
+        if double:
+            startAddress = address + compressedData.dataSize
+        else:
+            startAddress = address + len(rleData.compressed)*2
+        startAddress = pad4(startAddress + len(rleData.counts)) + 16
+        unusedData = read_from_rom(startAddress, offsets[symbol][2])
+        outputFile.write("u8 %s_unused[%d] = {\n\t" % (symbol, len(unusedData)))
+        output_array(outputFile, unusedData, "0x%02x", 16)
+        outputFile.write("\n};\n\n")
 
 if __name__ == "__main__":
     inputFile = sys.argv[1]
