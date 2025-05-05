@@ -2204,7 +2204,6 @@ SECTIONS {
         build/games/marching_orders/graphics/marching_orders_graphics_08c6eedc.tilemap.c.o(.data*);
         build/games/marching_orders/graphics/marching_orders_graphics_08c6efbc.tilemap.c.o(.data*);
         build/games/metronome/graphics/metronome_graphics_08c702d0.4bpp.c.o(.data*);
-        build/games/metronome/graphics/metronome_unused_08c702e0.c.o(.data*);
         build/games/drum_studio/graphics/drum_studio_bg_monitor_graphics_08c703a8.4bpp.c.o(.data*);
         build/games/drum_studio/graphics/drum_studio_bg_monitor_graphics_08c70490.4bpp.c.o(.data*);
         build/games/drum_studio/graphics/drum_studio_bg_monitor_graphics_08c704e8.4bpp.c.o(.data*);
@@ -2256,7 +2255,6 @@ SECTIONS {
         build/games/polyrhythm/graphics/polyrhythm_graphics_08c781ac.4bpp.c.o(.data*);
         build/games/polyrhythm/graphics/polyrhythm_graphics_08c78a04.tilemap.c.o(.data*);
         build/games/drum_live/graphics/drum_live_menu_graphics_08c79bb0.4bpp.c.o(.data*);
-        build/games/drum_live/graphics/drum_live_menu_unused_08c79bc0.c.o(.data*);
         build/games/quiz_show/graphics/quiz_show_graphics_08c7c8e0.4bpp.c.o(.data*);
         build/games/quiz_show/graphics/quiz_show_graphics_08c7d2ac.4bpp.c.o(.data*);
         build/games/quiz_show/graphics/quiz_show_graphics_08c7d524.tilemap.c.o(.data*);
