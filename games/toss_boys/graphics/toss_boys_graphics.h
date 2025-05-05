@@ -61,6 +61,7 @@ extern struct CompressedGraphics D_08cfa60c;
 extern struct CompressedGraphics D_08cfa810;
 extern struct CompressedGraphics D_08cfcb9c;
 extern struct CompressedGraphics D_08cfc9e8;
+extern struct CompressedGraphics D_08cfc9e8_rev1;
 
 /* TOSS BOYS - PALETTES */
 

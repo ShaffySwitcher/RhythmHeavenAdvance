@@ -185,9 +185,9 @@ $(OUTPUT).gba	:	$(OUTPUT).elf
 	$(V)$(OBJCOPY) --pad-to=0x1000000 --gap-fill=0x00 -O binary $< $@
 	$(V)echo "ROM Assembled!"
 
-$(OUTPUT).elf	:	$(OFILES)
+$(OUTPUT).elf	:	$(OFILES) | $(BUILD)/$(LD_SCRIPT)
 	$(V)echo "Building ROM..."
-	$(V)$(LD) $(OFILES) tools/agbcc/lib/libgcc.a tools/agbcc/lib/libc.a -T $(LD_SCRIPT) -T $(UNDEFINED_SYMS) -Wl,--no-warn-rwx-segments,-Map $(@:.elf=.map) -nostartfiles -o $@
+	$(V)$(LD) $(OFILES) tools/agbcc/lib/libgcc.a tools/agbcc/lib/libc.a -T $(BUILD)/$(LD_SCRIPT) -T $(UNDEFINED_SYMS) -Wl,--no-warn-rwx-segments,-Map $(@:.elf=.map) -nostartfiles -o $@
 
 
 # Binary data
@@ -246,6 +246,12 @@ $(BUILD)/%.bs.o : %.bs | $(BUILD_DIRS)
 	$(call print,Assembling Beatscript:,$<,$@)
 	$(V)$(CPP) $(CPPFLAGS) -x assembler-with-cpp $< -o $(BUILD)/$*.bs
 	$(V)$(AS) -MD $(BUILD)/$*.d -march=armv4t -o $@ $(BUILD)/$*.bs
+
+# Preprocessed linker script
+$(BUILD)/$(LD_SCRIPT): $(LD_SCRIPT)
+	$(call print,Preprocessing linker script:,$<,$@)
+	$(V)$(CPP) $(CPPFLAGS) -x c $< -o $@
+
 
 -include $(addprefix $(BUILD)/,$(CFILES:.c=.d))
 

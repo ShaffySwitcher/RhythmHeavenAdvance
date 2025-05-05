@@ -13,6 +13,7 @@ extern struct CompressedGraphics D_08bf7aa4;
 extern struct CompressedGraphics D_08bf7f04;
 extern struct CompressedGraphics D_08bf7d5c;
 extern struct CompressedGraphics D_08bf6678;
+extern struct CompressedGraphics D_08bf6678_rev1;
 
 /* PROLOGUE (SAMURAI SLICE) - PALETTES */
 

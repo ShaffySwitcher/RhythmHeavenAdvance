@@ -402,7 +402,11 @@ struct GraphicsTable gfx_table_toss_boys_remix_5[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
+#if REV < 1
         /* Src.  */ &D_08cfc9e8,
+#else
+        /* Src.  */ &D_08cfc9e8_rev1,
+#endif
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
