@@ -8,14 +8,6 @@
         12711056,
         4
     ],
-    "rap_men_graphics_08c852c8": [
-        13127568,
-        13127516
-    ],
-    "rap_men_prologue_graphics_08c21254": [
-        12717984,
-        12717932
-    ],
     "rap_men_prologue_graphics_08c1f4b4": [
         12710680,
         12710628
@@ -24,10 +16,6 @@
         13126900,
         13126848,
         44
-    ],
-    "rap_men_prologue_graphics_08c207cc": [
-        12715328,
-        12715276
     ],
     "rap_men_prologue_graphics_08c209cc": [
         12715996,
@@ -47,14 +35,6 @@
         13117164,
         44
     ],
-    "rap_men_graphics_08c82cf4": [
-        13117884,
-        13117832
-    ],
-    "clappy_trio_graphics_08c638e0": [
-        12989944,
-        12989892
-    ],
     "clappy_trio_prologue_graphics_08bf16b4": [
         12522220,
         12522172
@@ -64,17 +44,9 @@
         12531500,
         4
     ],
-    "clappy_trio_prologue_graphics_08bf60c8": [
-        12541180,
-        12541132
-    ],
     "clappy_trio_graphics_08c62d18": [
         12984668,
         12984616
-    ],
-    "clappy_trio_graphics_08c6214c": [
-        12983892,
-        12983840
     ],
     "clappy_trio_graphics_08c61654": [
         12978612,
@@ -89,10 +61,6 @@
         12987688,
         12987636,
         44
-    ],
-    "clappy_trio_prologue_graphics_08bf33cc": [
-        12529528,
-        12529480
     ],
     "clappy_trio_prologue_graphics_08bf374c": [
         12530652,
@@ -114,14 +82,6 @@
     "showtime_graphics_08c54f7c": [
         12920076,
         12920024
-    ],
-    "showtime_graphics_08c57038": [
-        12938328,
-        12938276
-    ],
-    "showtime_prologue_graphics_08bed4e4": [
-        12505348,
-        12505300
     ],
     "showtime_prologue_graphics_08bed0ec": [
         12501316,
@@ -151,35 +111,15 @@
         12710384,
         8
     ],
-    "bunny_hop_prologue_graphics_08c1f308": [
-        12710500,
-        12710448
-    ],
-    "bunny_hop_graphics_08c7fe58": [
-        13106696,
-        13106644
-    ],
     "bon_odori_graphics_08bd9f1c": [
         12424764,
         12424716,
         144
     ],
-    "bon_odori_prologue_graphics_08be6d70": [
-        12478816,
-        12478768
-    ],
     "bon_odori_graphics_08bdc118": [
         12435704,
         12435656,
         144
-    ],
-    "bon_odori_graphics_08bda300": [
-        12427196,
-        12427148
-    ],
-    "bon_odori_prologue_graphics_08be8828": [
-        12485984,
-        12485936
     ],
     "bon_odori_graphics_08bdc0e8": [
         12434608,
@@ -202,10 +142,6 @@
         12428372,
         12428324
     ],
-    "bon_odori_graphics_08bdc3ac": [
-        12435896,
-        12435848
-    ],
     "bon_odori_prologue_graphics_08be694c": [
         12467760,
         12467712,
@@ -219,10 +155,6 @@
         12506356,
         12506308
     ],
-    "bouncy_road_graphics_08c585a4": [
-        12944348,
-        12944296
-    ],
     "bouncy_road_graphics_08c57a14": [
         12941288,
         12941236
@@ -231,10 +163,6 @@
         12941860,
         12941808,
         16
-    ],
-    "bouncy_road_prologue_graphics_08bee52c": [
-        12510344,
-        12510296
     ],
     "bouncy_road_prologue_graphics_08bee468": [
         12510272,
@@ -249,10 +177,6 @@
         12889872,
         12889820,
         112
-    ],
-    "tanuki_and_monkey_graphics_08ce707c": [
-        13528828,
-        13528776
     ],
     "tanuki_and_monkey_graphics_08ce6ebc": [
         13528268,
@@ -275,18 +199,6 @@
     "drum_intro_graphics_08c4af00": [
         12888448,
         12888396
-    ],
-    "drum_intro_graphics_08c4d040": [
-        12898168,
-        12898116
-    ],
-    "drum_intro_graphics_08c4b164": [
-        12890232,
-        12890180
-    ],
-    "drum_live_graphics_08c47dc4": [
-        12876272,
-        12876220
     ],
     "drum_samurai_band_graphics_08bd7c30": [
         12414036,
@@ -320,17 +232,9 @@
         12873748,
         176
     ],
-    "drum_live_graphics_08c439d0": [
-        12858924,
-        12858872
-    ],
     "drum_live_graphics_08c47038": [
         12869408,
         12869356
-    ],
-    "drum_samurai_band_graphics_08bd8060": [
-        12418296,
-        12418248
     ],
     "drum_studio_bg_monitor_graphics_08c709a8": [
         13043372,
@@ -371,10 +275,6 @@
     "drum_studio_bg_monitor_graphics_08c71b6c": [
         13048088,
         13048036
-    ],
-    "drum_studio_graphics_08c50f54": [
-        12914508,
-        12914456
     ],
     "drum_studio_bg_monitor_graphics_08c7069c": [
         13043088,
@@ -417,10 +317,6 @@
         13049460,
         13049408
     ],
-    "fireworks_graphics_08c5fd10": [
-        12974800,
-        12974748
-    ],
     "fireworks_graphics_08c5da78": [
         12960688,
         12960636
@@ -437,10 +333,6 @@
         12972684,
         12972632,
         64
-    ],
-    "fireworks_prologue_graphics_08bf12dc": [
-        12521168,
-        12521120
     ],
     "fireworks_graphics_08c5ebcc": [
         12968476,
@@ -464,10 +356,6 @@
         12492604,
         8
     ],
-    "karate_man_prologue_graphics_08beab8c": [
-        12495180,
-        12495132
-    ],
     "karate_man_graphics_08bde0d4": [
         12442780,
         12442732
@@ -479,10 +367,6 @@
     "karate_man_prologue_graphics_08be9f5c": [
         12486712,
         12486664
-    ],
-    "karate_man_graphics_08be08e0": [
-        12453100,
-        12453052
     ],
     "karate_man_graphics_08be0480": [
         12443876,
@@ -510,26 +394,10 @@
         12797012,
         132
     ],
-    "mannequin_factory_graphics_08c35f18": [
-        12803376,
-        12803324
-    ],
-    "marching_orders_remix_7_graphics_08ce615c": [
-        13524508,
-        13524456
-    ],
     "marching_orders_prologue_graphics_08bfbe68": [
         12558868,
         12558816,
         4
-    ],
-    "marching_orders_graphics_08c6eedc": [
-        13036340,
-        13036288
-    ],
-    "marching_orders_graphics_08c6cc98": [
-        13027568,
-        13027516
     ],
     "marching_orders_graphics_08c6c89c": [
         13026920,
@@ -550,10 +418,6 @@
         12568784,
         4
     ],
-    "marching_orders_prologue_graphics_08bfc1f8": [
-        12566140,
-        12566088
-    ],
     "marching_orders_graphics_08c6eae0": [
         13035748,
         13035696,
@@ -566,10 +430,6 @@
     "marching_orders_prologue_graphics_08bfc8f4": [
         12567048,
         12566996
-    ],
-    "marching_orders_prologue_graphics_08bff704": [
-        12579404,
-        12579352
     ],
     "marching_orders_graphics_08c6e8d4": [
         13028848,
@@ -608,10 +468,6 @@
         13692804,
         13692752
     ],
-    "mechanical_horse_graphics_08d16648": [
-        13722240,
-        13722188
-    ],
     "mechanical_horse_graphics_08d0af74": [
         13664792,
         13664740
@@ -635,14 +491,6 @@
         12916120,
         176
     ],
-    "night_walk_prologue_graphics_08bebbd4": [
-        12499648,
-        12499600
-    ],
-    "night_walk_graphics_08c524fc": [
-        12920032,
-        12919980
-    ],
     "night_walk_prologue_graphics_08beba58": [
         12498076,
         12498028
@@ -656,17 +504,9 @@
         13493436,
         120
     ],
-    "ninja_bodyguard_prologue_graphics_08c23cd0": [
-        12728912,
-        12728860
-    ],
     "ninja_bodyguard_prologue_graphics_08c22ee4": [
         12724676,
         12724624
-    ],
-    "ninja_bodyguard_graphics_08cdfc38": [
-        13499180,
-        13499128
     ],
     "ninja_reincarnate_graphics_08d1f700": [
         13755240,
@@ -686,14 +526,6 @@
         13489608,
         13489556
     ],
-    "ninja_reincarnate_graphics_08d1fab0": [
-        13760392,
-        13760340
-    ],
-    "ninja_bodyguard_prologue_graphics_08c24804": [
-        12731928,
-        12731876
-    ],
     "ninja_bodyguard_prologue_graphics_08c24604": [
         12730896,
         12730844,
@@ -708,18 +540,10 @@
         12582892,
         4
     ],
-    "polyrhythm_prologue_graphics_08c02628": [
-        12591424,
-        12591372
-    ],
     "polyrhythm_graphics_08c781ac": [
         13070932,
         13070880,
         64
-    ],
-    "polyrhythm_graphics_08c78a04": [
-        13074940,
-        13074888
     ],
     "polyrhythm_prologue_graphics_08c00010": [
         12580628,
@@ -734,14 +558,6 @@
         12549908,
         12549856
     ],
-    "power_calligraphy_graphics_08c69844": [
-        13014856,
-        13014804
-    ],
-    "power_calligraphy_prologue_graphics_08bf9b14": [
-        12556392,
-        12556340
-    ],
     "power_calligraphy_prologue_graphics_08bf984c": [
         12552768,
         12552716,
@@ -755,10 +571,6 @@
         13005604,
         13005552
     ],
-    "quiz_show_graphics_08c7d524": [
-        13095780,
-        13095728
-    ],
     "quiz_show_graphics_08c7c8e0": [
         13081552,
         13081500
@@ -771,10 +583,6 @@
         12593732,
         12593680,
         4
-    ],
-    "quiz_show_prologue_graphics_08c04940": [
-        12600392,
-        12600340
     ],
     "quiz_show_graphics_08c7d2ac": [
         13093104,
@@ -795,14 +603,6 @@
         12722020,
         8
     ],
-    "rat_race_prologue_graphics_08c229b4": [
-        12724092,
-        12724040
-    ],
-    "rat_race_graphics_08c880b8": [
-        13140024,
-        13139972
-    ],
     "rat_race_prologue_graphics_08c21f88": [
         12718692,
         12718640
@@ -812,17 +612,9 @@
         12603336,
         4
     ],
-    "remix_1_prologue_graphics_08c06888": [
-        12608408,
-        12608356
-    ],
     "remix_1_prologue_graphics_08c04fec": [
         12601680,
         12601628
-    ],
-    "remix_2_prologue_graphics_08c08bf8": [
-        12617460,
-        12617408
     ],
     "remix_2_prologue_graphics_08c06f74": [
         12609688,
@@ -832,10 +624,6 @@
         12611460,
         12611408,
         4
-    ],
-    "remix_3_prologue_graphics_08c0af50": [
-        12626708,
-        12626656
     ],
     "remix_3_prologue_graphics_08c0ab00": [
         12620528,
@@ -855,26 +643,14 @@
         12629536,
         4
     ],
-    "remix_4_prologue_graphics_08c0e168": [
-        12639388,
-        12639336
-    ],
     "remix_5_prologue_graphics_08c0e864": [
         12640632,
         12640580
-    ],
-    "remix_5_prologue_graphics_08c12cfc": [
-        12658680,
-        12658628
     ],
     "remix_5_prologue_graphics_08c127e4": [
         12642420,
         12642368,
         4
-    ],
-    "remix_6_prologue_graphics_08c16d10": [
-        12675084,
-        12675032
     ],
     "remix_6_prologue_graphics_08c167f8": [
         12661776,
@@ -894,10 +670,6 @@
         12676384,
         12676332
     ],
-    "remix_7_prologue_graphics_08c19d54": [
-        12687440,
-        12687388
-    ],
     "remix_8_prologue_graphics_08c1e7d0": [
         12690572,
         12690520,
@@ -907,10 +679,6 @@
         12688740,
         12688688
     ],
-    "remix_8_prologue_graphics_08c1ece8": [
-        12707812,
-        12707760
-    ],
     "rhythm_test_graphics_08c6a350": [
         13015124,
         13015072
@@ -919,10 +687,6 @@
         13017952,
         13017900,
         40
-    ],
-    "rhythm_test_graphics_08c6a830": [
-        13018736,
-        13018684
     ],
     "rhythm_toys_graphics_08cda118": [
         13474388,
@@ -958,17 +722,9 @@
         12955360,
         60
     ],
-    "rhythm_tweezers_prologue_graphics_08bef2ac": [
-        12513216,
-        12513168
-    ],
     "rhythm_tweezers_graphics_08c5915c": [
         12945744,
         12945692
-    ],
-    "rhythm_tweezers_graphics_08c5bd6c": [
-        12958504,
-        12958452
     ],
     "rhythm_tweezers_graphics_08c5af04": [
         12947820,
@@ -982,14 +738,6 @@
         12784972,
         12784920
     ],
-    "sick_beats_graphics_08d1a280": [
-        13738088,
-        13738036
-    ],
-    "sick_beats_prologue_graphics_08c3355c": [
-        12792368,
-        12792316
-    ],
     "sick_beats_prologue_graphics_08c33214": [
         12787324,
         12787272,
@@ -1000,10 +748,6 @@
         13736088,
         164
     ],
-    "sneaky_spirits_graphics_08bd2b58": [
-        12397152,
-        12397104
-    ],
     "sneaky_spirits_graphics_08bd245c": [
         12389592,
         12389544
@@ -1013,10 +757,6 @@
         12455896,
         4
     ],
-    "sneaky_spirits_prologue_graphics_08be1dfc": [
-        12459108,
-        12459060
-    ],
     "sneaky_spirits_graphics_08bd2a00": [
         12395628,
         12395580,
@@ -1025,10 +765,6 @@
     "sneaky_spirits_prologue_graphics_08be0ff8": [
         12455160,
         12455112
-    ],
-    "cosmic_dance_prologue_graphics_08beb48c": [
-        12497680,
-        12497632
     ],
     "cosmic_dance_prologue_graphics_08beb2f8": [
         12496776,
@@ -1070,18 +806,6 @@
         13511036,
         13510984
     ],
-    "space_dance_prologue_graphics_08c25aa8": [
-        12736376,
-        12736324
-    ],
-    "space_dance_graphics_08c39888": [
-        12816512,
-        12816460
-    ],
-    "cosmic_dance_graphics_08ce3ccc": [
-        13515288,
-        13515236
-    ],
     "spaceball_prologue_graphics_08be2298": [
         12459532,
         12459484
@@ -1095,14 +819,6 @@
         12460712,
         12460664,
         4
-    ],
-    "spaceball_prologue_graphics_08be3398": [
-        12464108,
-        12464060
-    ],
-    "spaceball_graphics_08bd5878": [
-        12408204,
-        12408156
     ],
     "spaceball_graphics_08bd4e70": [
         12397832,
@@ -1144,30 +860,14 @@
         13529496,
         13529444
     ],
-    "tap_trial_graphics_08cf067c": [
-        13566584,
-        13566532
-    ],
-    "tap_trial_prologue_graphics_08c27e24": [
-        12745208,
-        12745156
-    ],
     "tap_trial_graphics_08cf5d0c": [
         13579348,
         13579296
-    ],
-    "tap_trial_graphics_08cf3444": [
-        13578528,
-        13578476
     ],
     "tap_trial_graphics_08cf6048": [
         13589788,
         13589736,
         136
-    ],
-    "tap_trial_prologue_graphics_08c29ce8": [
-        12753188,
-        12753136
     ],
     "tap_trial_prologue_graphics_08c279e0": [
         12739408,
@@ -1179,10 +879,6 @@
         13539448,
         136
     ],
-    "tap_trial_graphics_08cea0a0": [
-        13540448,
-        13540396
-    ],
     "tap_trial_prologue_graphics_08c26340": [
         12737208,
         12737156
@@ -1191,10 +887,6 @@
         13553220,
         13553168
     ],
-    "tap_trial_graphics_08cf623c": [
-        13590752,
-        13590700
-    ],
     "tap_trial_graphics_08cec8d8": [
         13541652,
         13541600
@@ -1202,10 +894,6 @@
     "tap_trial_prologue_graphics_08c28814": [
         12746292,
         12746240
-    ],
-    "tap_trial_graphics_08cecdd0": [
-        13552696,
-        13552644
     ],
     "tap_trial_graphics_08cecba0": [
         13551848,
@@ -1230,14 +918,6 @@
         13562760,
         13562708,
         136
-    ],
-    "tram_pauline_graphics_08d02cb4": [
-        13642300,
-        13642248
-    ],
-    "tram_pauline_prologue_graphics_08c3153c": [
-        12783748,
-        12783696
     ],
     "tram_pauline_prologue_graphics_08c30910": [
         12779608,
@@ -1270,14 +950,6 @@
         13641792,
         140
     ],
-    "tram_pauline_graphics_08d05e78": [
-        13654384,
-        13654332
-    ],
-    "wizards_waltz_graphics_08d1d8d8": [
-        13752232,
-        13752180
-    ],
     "wizards_waltz_prologue_graphics_08c33640": [
         12793196,
         12793144
@@ -1296,26 +968,14 @@
         13751200,
         72
     ],
-    "wizards_waltz_prologue_graphics_08c33c14": [
-        12794352,
-        12794300
-    ],
     "samurai_slice_graphics_08c658dc": [
         12990704,
         12990652
-    ],
-    "samurai_slice_prologue_graphics_08bf7d5c": [
-        12548792,
-        12548740
     ],
     "samurai_slice_prologue_graphics_08bf7aa4": [
         12543624,
         12543572,
         4
-    ],
-    "samurai_slice_graphics_08c66d24": [
-        13003748,
-        13003696
     ],
     "samurai_slice_prologue_graphics_08bf6678": [
         12542168,
@@ -1334,10 +994,6 @@
         13600492,
         13600440
     ],
-    "toss_boys_graphics_08cf97d0": [
-        13604548,
-        13604496
-    ],
     "toss_boys_prologue_graphics_08c2d448": [
         12755480,
         12755428,
@@ -1347,30 +1003,14 @@
         12769648,
         12769596
     ],
-    "toss_boys_prologue_graphics_08c30048": [
-        12778608,
-        12778556
-    ],
     "toss_boys_graphics_08cff0bc": [
         13624264,
         13624212,
         164
     ],
-    "toss_boys_graphics_08cff31c": [
-        13627760,
-        13627708
-    ],
     "toss_boys_prologue_graphics_08c2a208": [
         12754168,
         12754116
-    ],
-    "toss_boys_graphics_08cfcb9c": [
-        13617836,
-        13617784
-    ],
-    "toss_boys_prologue_graphics_08c2d960": [
-        12768348,
-        12768296
     ],
     "toss_boys_graphics_08cfc9e8_rev1": [
         13608992,
@@ -1408,18 +1048,10 @@
         12770908,
         4
     ],
-    "arrival_graphics_08cbefe4": [
-        13364624,
-        13364572
-    ],
     "arrival_graphics_08cbed78": [
         13363008,
         13362956,
         8
-    ],
-    "cafe_graphics_08cc0cf0": [
-        13372496,
-        13372444
     ],
     "cafe_graphics_08cbf0e8": [
         13365236,
@@ -1456,10 +1088,6 @@
         13398796,
         24
     ],
-    "data_room_graphics_08cd2cec": [
-        13445572,
-        13445520
-    ],
     "data_room_graphics_08cd29ac": [
         13443548,
         13443496,
@@ -1472,10 +1100,6 @@
     "data_room_graphics_08cce120": [
         13423456,
         13423404
-    ],
-    "data_room_menu_graphics_08cc7a40": [
-        13400012,
-        13399960
     ],
     "data_room_graphics_08ccf798": [
         13430652,
@@ -1670,10 +1294,6 @@
         13400656,
         13400604
     ],
-    "game_select_graphics_08cc9a58": [
-        13408472,
-        13408420
-    ],
     "main_menu_graphics_08ccb298": [
         13409852,
         13409800
@@ -1682,10 +1302,6 @@
         13415080,
         13415028,
         52
-    ],
-    "main_menu_graphics_08ccb840": [
-        13415352,
-        13415300
     ],
     "endless_games_menu_graphics_08cc4670": [
         13384588,
@@ -1702,10 +1318,6 @@
         13471100,
         40
     ],
-    "endless_games_menu_graphics_08cc4a00": [
-        13387408,
-        13387356
-    ],
     "drum_lessons_menu_graphics_08cc5e8c": [
         13388772,
         13388720
@@ -1713,10 +1325,6 @@
     "endless_games_menu_graphics_08cc3b7c": [
         13381808,
         13381756
-    ],
-    "rhythm_toys_menu_graphics_08cd931c": [
-        13471708,
-        13471656
     ],
     "rhythm_toys_menu_graphics_08cd8da0": [
         13468568,
@@ -1726,10 +1334,6 @@
         13466352,
         13466300
     ],
-    "drum_lessons_menu_graphics_08cc6ccc": [
-        13396352,
-        13396300
-    ],
     "options_graphics_08c76ca4": [
         13067024,
         13066972
@@ -1738,10 +1342,6 @@
         13069492,
         13069440,
         44
-    ],
-    "options_graphics_08c77244": [
-        13069756,
-        13069704
     ],
     "perfect_certificate_graphics_08ccc138": [
         13416528,
@@ -1761,10 +1361,6 @@
         13455232,
         13455180
     ],
-    "studio_graphics_08cd62ec": [
-        13458860,
-        13458808
-    ],
     "studio_graphics_08cd5d64": [
         13456024,
         13455972,
@@ -1773,10 +1369,6 @@
     "title_graphics_08cd663c": [
         13460548,
         13460496
-    ],
-    "title_graphics_08cd7ae0": [
-        13466020,
-        13465968
     ],
     "title_graphics_08cd7948": [
         13461068,
