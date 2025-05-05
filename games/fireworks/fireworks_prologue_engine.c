@@ -12,17 +12,17 @@ struct CompressedGraphics *fireworks_prologue_buffered_textures[] = {
 // [D_089eae88] Graphics Table
 struct GraphicsTable fireworks_prologue_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &fireworks_prologue_graphics_08bf0eb8,
+        /* Src.  */ &fireworks_prologue_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &fireworks_prologue_graphics_08bf12dc,
+        /* Src.  */ &fireworks_prologue_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &fireworks_prologue_graphics_08bef660,
+        /* Src.  */ &fireworks_prologue_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
