@@ -12,7 +12,7 @@ extern struct Animation anim_drum_live_menu_poster[];
 
 /* CONCERT HALL - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics drum_live_menu_graphics_08c79bb0;
+extern struct CompressedGraphics drum_live_menu_obj;
 
 /* CONCERT HALL - PALETTES */
 

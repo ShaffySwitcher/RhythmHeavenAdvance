@@ -12,7 +12,7 @@ struct CompressedGraphics *drum_live_menu_buffered_textures[] = {
 // [D_089e5c44] Graphics Table
 struct GraphicsTable drum_live_menu_gfx_table[] = {
     /* OBJ Tileset */ {
-        /* Src.  */ &drum_live_menu_graphics_08c79bb0,
+        /* Src.  */ &drum_live_menu_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
