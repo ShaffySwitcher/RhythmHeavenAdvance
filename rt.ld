@@ -2467,7 +2467,7 @@ SECTIONS {
         build/graphics/medal_corner/endless_games_menu_graphics_08cc3b7c.4bpp.c.o(.data*);
         build/graphics/medal_corner/endless_games_menu_graphics_08cc4670.4bpp.c.o(.data*);
         build/graphics/medal_corner/endless_games_menu_graphics_08cc4a00.tilemap.c.o(.data*);
-        build/graphics/studio/studio_memory_usage_graph_graphics_08cc4bcc.c.o(.data*);
+        build/graphics/studio/studio_memory_usage_graph_graphics_08cc4bcc.tilemap.c.o(.data*);
         build/graphics/medal_corner/drum_lessons_menu_graphics_08cc5e8c.4bpp.c.o(.data*);
         build/graphics/medal_corner/drum_lessons_menu_graphics_08cc6914.4bpp.c.o(.data*);
         build/graphics/medal_corner/drum_lessons_menu_graphics_08cc6ccc.tilemap.c.o(.data*);
@@ -2507,12 +2507,12 @@ SECTIONS {
         build/graphics/data_room/data_room_graphics_08cd2d0c.tilemap.c.o(.data*);
         build/graphics/data_room/data_room_graphics_08cd31d8.4bpp.c.o(.data*);
         build/graphics/data_room/data_room_graphics_08cd3470.tilemap.c.o(.data*);
-        build/graphics/results/results_graphics_08cd4a50.c.o(.data*);
-        build/graphics/results/results_graphics_08cd4f58.c.o(.data*);
-        build/graphics/studio/studio_graphics_08cd5288.c.o(.data*);
-        build/graphics/studio/studio_graphics_08cd5d64.c.o(.data*);
-        build/graphics/studio/studio_graphics_08cd62ec.c.o(.data*);
-        build/graphics/studio/studio_graphics_08cd6434.c.o(.data*);
+        build/graphics/results/results_graphics_08cd4a50.4bpp.c.o(.data*);
+        build/graphics/results/results_graphics_08cd4f58.4bpp.c.o(.data*);
+        build/graphics/studio/studio_graphics_08cd5288.4bpp.c.o(.data*);
+        build/graphics/studio/studio_graphics_08cd5d64.4bpp.c.o(.data*);
+        build/graphics/studio/studio_graphics_08cd62ec.tilemap.c.o(.data*);
+        build/graphics/studio/studio_graphics_08cd6434.tilemap.c.o(.data*);
         build/graphics/title/title_graphics_08cd663c.c.o(.data*);
         build/graphics/title/title_graphics_08cd7948.c.o(.data*);
         build/graphics/title/title_graphics_08cd7ae0.c.o(.data*);

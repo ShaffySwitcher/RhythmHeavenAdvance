@@ -17,7 +17,7 @@ union SceneObject score_results_scene_objects[] = {
 // [D_089d7804] Graphics Table
 struct GraphicsTable score_results_gfx_table[] = {
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08cd4f58,
+        /* Src.  */ &results_graphics_08cd4f58,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
