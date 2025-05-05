@@ -137,7 +137,7 @@ u8 drum_live_brg_targets[] = {
 // [D_089e06c4] Crowd BG Map Beat Anim (excitement <= 0)
 BgMapAnim D_089e06c4[] = {
     BG_ANIM_SET_DELAY(INT_TO_FIXED(20)),
-    BG_ANIM_WRITE_COMP(&drum_live_graphics_08c47ed4),
+    BG_ANIM_WRITE_COMP(&drum_live_bg_map),
     BG_ANIM_WRITE_COMP(&unknown_graphics_08c47fdc),
     BG_ANIM_GOTO(D_089e06c4)
 };
@@ -147,7 +147,7 @@ BgMapAnim D_089e06d4[] = {
     BG_ANIM_SET_DELAY(INT_TO_FIXED(5)),
     BG_ANIM_WRITE_COMP(&unknown_graphics_08c480e4),
     BG_ANIM_WRITE_COMP(&unknown_graphics_08c47fdc),
-    BG_ANIM_WRITE_COMP(&drum_live_graphics_08c47ed4),
+    BG_ANIM_WRITE_COMP(&drum_live_bg_map),
     BG_ANIM_GOTO(D_089e06c4)
 };
 
@@ -157,7 +157,7 @@ BgMapAnim D_089e06e8[] = {
     BG_ANIM_WRITE_COMP(&unknown_graphics_08c481f4),
     BG_ANIM_WRITE_COMP(&unknown_graphics_08c480e4),
     BG_ANIM_WRITE_COMP(&unknown_graphics_08c47fdc),
-    BG_ANIM_WRITE_COMP(&drum_live_graphics_08c47ed4),
+    BG_ANIM_WRITE_COMP(&drum_live_bg_map),
     BG_ANIM_GOTO(D_089e06c4)
 };
 
@@ -232,17 +232,17 @@ struct CompressedGraphics *drum_live_buffered_textures[] = {
 // [D_089e0984] Graphics Table (Drum Girls LIVE)
 struct GraphicsTable gfx_table_drum_girls_live[] = {
     /* BG Tileset */ {
-        /* Src.  */ &drum_live_graphics_08c47038,
+        /* Src.  */ &drum_girls_live_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &drum_live_graphics_08c47dc4,
+        /* Src.  */ &drum_girls_live_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &drum_live_graphics_08c45f10,
+        /* Src.  */ &drum_girls_live_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -257,12 +257,12 @@ struct GraphicsTable gfx_table_drum_girls_live[] = {
         /* Size  */ 0x140
     },
     /* BG Tileset */ {
-        /* Src.  */ &drum_live_graphics_08c47930,
+        /* Src.  */ &drum_live_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0x8000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &drum_live_graphics_08c47ed4,
+        /* Src.  */ &drum_live_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -272,17 +272,17 @@ struct GraphicsTable gfx_table_drum_girls_live[] = {
 // [D_089e09e4] Graphics Table (Drum Boys LIVE)
 struct GraphicsTable gfx_table_drum_boys_live[] = {
     /* BG Tileset */ {
-        /* Src.  */ &drum_live_graphics_08c4356c,
+        /* Src.  */ &drum_boys_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &drum_live_graphics_08c439d0,
+        /* Src.  */ &drum_boys_live_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &drum_live_graphics_08c4241c,
+        /* Src.  */ &drum_boys_live_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -297,12 +297,12 @@ struct GraphicsTable gfx_table_drum_boys_live[] = {
         /* Size  */ 0x140
     },
     /* BG Tileset */ {
-        /* Src.  */ &drum_live_graphics_08c47930,
+        /* Src.  */ &drum_live_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0x8000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &drum_live_graphics_08c47ed4,
+        /* Src.  */ &drum_live_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -312,17 +312,17 @@ struct GraphicsTable gfx_table_drum_boys_live[] = {
 // [D_089e0a44] Graphics Table (Drum Samurai's Band LIVE)
 struct GraphicsTable gfx_table_drum_samurai_band_live[] = {
     /* BG Tileset */ {
-        /* Src.  */ &drum_samurai_band_graphics_08bd7c30,
+        /* Src.  */ &drum_samurai_live_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &drum_samurai_band_graphics_08bd8060,
+        /* Src.  */ &drum_samurai_live_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &drum_samurai_band_graphics_08bd6c44,
+        /* Src.  */ &drum_samurai_live_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -337,12 +337,12 @@ struct GraphicsTable gfx_table_drum_samurai_band_live[] = {
         /* Size  */ 0x140
     },
     /* BG Tileset */ {
-        /* Src.  */ &drum_live_graphics_08c47930,
+        /* Src.  */ &drum_live_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0x8000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &drum_live_graphics_08c47ed4,
+        /* Src.  */ &drum_live_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
