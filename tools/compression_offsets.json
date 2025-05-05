@@ -1413,5 +1413,18 @@
     "arrival_graphics_08cbed78": [
         13363008,
         13362956
+    ],
+    "cafe_graphics_08cc0cf0": [
+        13372496,
+        13372444,
+        16
+    ],
+    "cafe_graphics_08cbf0e8": [
+        13365236,
+        13365184
+    ],
+    "cafe_graphics_08cc0c30": [
+        13365496,
+        13365444
     ]
 }

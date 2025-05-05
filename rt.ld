@@ -2455,10 +2455,10 @@ SECTIONS {
         build/graphics/epilogues/epilogues_graphics_08cbe730.c.o(.data*);
         build/graphics/arrival/arrival_graphics_08cbed78.4bpp.c.o(.data*);
         build/graphics/arrival/arrival_graphics_08cbefe4.tilemap.c.o(.data*);
-        build/graphics/cafe/cafe_graphics_08cbf0e8.c.o(.data*);
-        build/graphics/cafe/cafe_graphics_08cc0c30.c.o(.data*);
-        build/graphics/cafe/cafe_graphics_08cc0cf0.c.o(.data*);
-        build/graphics/cafe/cafe_graphics_08cc1158.c.o(.data*);
+        build/graphics/cafe/cafe_graphics_08cbf0e8.4bpp.c.o(.data*);
+        build/graphics/cafe/cafe_graphics_08cc0c30.4bpp.c.o(.data*);
+        build/graphics/cafe/cafe_graphics_08cc0cf0.tilemap.c.o(.data*);
+        build/graphics/cafe/cafe_graphics_08cc1158.tilemap.c.o(.data*);
         build/graphics/unknown/unknown_graphics_08cc15c4.c.o(.data*);
         build/graphics/unknown/unknown_graphics_08cc1a30.c.o(.data*);
         build/graphics/unknown/unknown_graphics_08cc1e9c.c.o(.data*);
