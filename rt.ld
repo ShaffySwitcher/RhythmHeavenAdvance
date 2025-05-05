@@ -2075,9 +2075,9 @@ SECTIONS {
         build/games/sick_beats/graphics/sick_beats_prologue_graphics_08c31e6c.4bpp.c.o(.data*);
         build/games/sick_beats/graphics/sick_beats_prologue_graphics_08c33214.4bpp.c.o(.data*);
         build/games/sick_beats/graphics/sick_beats_prologue_graphics_08c3355c.tilemap.c.o(.data*);
-        build/games/wizards_waltz/graphics/wizards_waltz_prologue_graphics_08c33640.c.o(.data*);
-        build/games/wizards_waltz/graphics/wizards_waltz_prologue_graphics_08c339dc.c.o(.data*);
-        build/games/wizards_waltz/graphics/wizards_waltz_prologue_graphics_08c33c14.c.o(.data*);
+        build/games/wizards_waltz/graphics/wizards_waltz_prologue_graphics_08c33640.4bpp.c.o(.data*);
+        build/games/wizards_waltz/graphics/wizards_waltz_prologue_graphics_08c339dc.4bpp.c.o(.data*);
+        build/games/wizards_waltz/graphics/wizards_waltz_prologue_graphics_08c33c14.tilemap.c.o(.data*);
         build/graphics/unknown/unknown_graphics_08c33f60.c.o(.data*);
         build/games/mannequin_factory/graphics/mannequin_factory_graphics_08c34478.4bpp.c.o(.data*);
         build/games/mannequin_factory/graphics/mannequin_factory_graphics_08c35c9c.4bpp.c.o(.data*);
@@ -2616,9 +2616,9 @@ SECTIONS {
         build/games/sick_beats/graphics/sick_beats_graphics_08d1a320.tilemap.c.o(.data*);
         build/graphics/warning/warning_graphics_08d1ad4c.c.o(.data*);
         build/graphics/warning/warning_graphics_08d1b00c.c.o(.data*);
-        build/games/wizards_waltz/graphics/wizards_waltz_graphics_08d1d3c4.c.o(.data*);
-        build/games/wizards_waltz/graphics/wizards_waltz_graphics_08d1d750.c.o(.data*);
-        build/games/wizards_waltz/graphics/wizards_waltz_graphics_08d1d8d8.c.o(.data*);
+        build/games/wizards_waltz/graphics/wizards_waltz_graphics_08d1d3c4.4bpp.c.o(.data*);
+        build/games/wizards_waltz/graphics/wizards_waltz_graphics_08d1d750.4bpp.c.o(.data*);
+        build/games/wizards_waltz/graphics/wizards_waltz_graphics_08d1d8d8.tilemap.c.o(.data*);
         build/games/ninja_bodyguard/graphics/ninja_reincarnate_graphics_08d1e358.4bpp.c.o(.data*);
         build/games/ninja_bodyguard/graphics/ninja_reincarnate_graphics_08d1f700.4bpp.c.o(.data*);
         build/games/ninja_bodyguard/graphics/ninja_reincarnate_graphics_08d1fab0.tilemap.c.o(.data*);
