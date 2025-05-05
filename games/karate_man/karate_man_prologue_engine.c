@@ -12,17 +12,17 @@ struct CompressedGraphics *karate_man_prologue_buffered_textures[] = {
 // [D_089ea654] Graphics Table
 struct GraphicsTable karate_man_prologue_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &karate_man_prologue_graphics_08bea934,
+        /* Src.  */ &karate_man_prologue_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &karate_man_prologue_graphics_08beab8c,
+        /* Src.  */ &karate_man_prologue_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &karate_man_prologue_graphics_08be9f5c,
+        /* Src.  */ &karate_man_prologue_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
