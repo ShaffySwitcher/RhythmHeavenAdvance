@@ -27,7 +27,11 @@ struct GraphicsTable samurai_slice_prologue_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
+#if REV < 1
         /* Src.  */ &D_08bf6678,
+#else
+        /* Src.  */ &D_08bf6678_rev1,
+#endif
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },

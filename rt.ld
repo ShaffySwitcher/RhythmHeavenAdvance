@@ -317,7 +317,7 @@ SECTIONS {
         *libc.a:strcpy.o(.text);
         *libc.a:strlen.o(.text);
 
-        # Some of these are likely rodata sections of src/ files
+        // Some of these are likely rodata sections of src/ files
         build/asm/boot.s.o(.rodata);
         build/data/bitmap_font_data.c.o(.rodata);
         build/data/beatscript_scene_data.c.o(.rodata);
@@ -351,7 +351,7 @@ SECTIONS {
         build/src/scenes/debug_menu.c.o(.rodata);
         build/src/scenes/debug_menu_table.c.o(.rodata);
 
-        # Rodata section of engines. Some of these are likely rodata sections of src/ files
+        // Rodata section of engines. Some of these are likely rodata sections of src/ files
         build/games/sneaky_spirits/engine.c.o(.rodata);
         build/games/drum_studio/engine.c.o(.rodata);
         build/src/engines/drum_studio.c.o(.rodata);
@@ -1993,7 +1993,11 @@ SECTIONS {
         build/games/clappy_trio/graphics/clappy_trio_prologue_graphics_08bf374c.4bpp.c.o(.data*);
         build/games/clappy_trio/graphics/clappy_trio_prologue_graphics_08bf5ce8.4bpp.c.o(.data*);
         build/games/clappy_trio/graphics/clappy_trio_prologue_graphics_08bf60c8.tilemap.c.o(.data*);
+#if REV < 1
         build/games/samurai_slice/graphics/samurai_slice_prologue_graphics_08bf6678.c.o(.data*);
+#else
+        build/games/samurai_slice/graphics/samurai_slice_prologue_graphics_08bf6678_rev1.c.o(.data*);
+#endif
         build/games/samurai_slice/graphics/samurai_slice_prologue_graphics_08bf7aa4.c.o(.data*);
         build/games/samurai_slice/graphics/samurai_slice_prologue_graphics_08bf7d5c.c.o(.data*);
         build/games/samurai_slice/graphics/samurai_slice_prologue_graphics_08bf7f04.c.o(.data*);
@@ -2577,7 +2581,11 @@ SECTIONS {
         build/games/toss_boys/graphics/toss_boys_graphics_08cf97d0.c.o(.data*);
         build/games/toss_boys/graphics/toss_boys_graphics_08cfa60c.c.o(.data*);
         build/games/toss_boys/graphics/toss_boys_graphics_08cfa810.c.o(.data*);
+#if REV < 1
         build/games/toss_boys/graphics/toss_boys_graphics_08cfc9e8.c.o(.data*);
+#else
+        build/games/toss_boys/graphics/toss_boys_graphics_08cfc9e8_rev1.c.o(.data*);
+#endif
         build/games/toss_boys/graphics/toss_boys_graphics_08cfcb9c.c.o(.data*);
         build/games/toss_boys/graphics/toss_boys_graphics_08cfdcc4.c.o(.data*);
         build/games/toss_boys/graphics/toss_boys_graphics_08cfe3b8.c.o(.data*);
