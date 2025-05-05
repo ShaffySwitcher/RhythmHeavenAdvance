@@ -10,17 +10,17 @@
 // [D_089cfac8] Graphics Table
 struct GraphicsTable options_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c76d80,
+        /* Src.  */ &options_graphics_08c76d80,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c77244,
+        /* Src.  */ &options_graphics_08c77244,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c76ca4,
+        /* Src.  */ &options_graphics_08c76ca4,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },

@@ -2249,9 +2249,9 @@ SECTIONS {
         build/games/drum_studio/graphics/drum_studio_bg_monitor_graphics_08c75ad0.tilemap.c.o(.data*);
         build/games/drum_studio/graphics/drum_studio_bg_monitor_graphics_08c762e8.tilemap.c.o(.data*);
         build/games/drum_studio/graphics/drum_studio_bg_monitor_graphics_08c76300.tilemap.c.o(.data*);
-        build/graphics/options/options_graphics_08c76ca4.c.o(.data*);
-        build/graphics/options/options_graphics_08c76d80.c.o(.data*);
-        build/graphics/options/options_graphics_08c77244.c.o(.data*);
+        build/graphics/options/options_graphics_08c76ca4.4bpp.c.o(.data*);
+        build/graphics/options/options_graphics_08c76d80.4bpp.c.o(.data*);
+        build/graphics/options/options_graphics_08c77244.tilemap.c.o(.data*);
         build/games/polyrhythm/graphics/polyrhythm_graphics_08c781ac.4bpp.c.o(.data*);
         build/games/polyrhythm/graphics/polyrhythm_graphics_08c78a04.tilemap.c.o(.data*);
         build/games/drum_live/graphics/drum_live_menu_graphics_08c79bb0.4bpp.c.o(.data*);
