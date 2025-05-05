@@ -12,17 +12,17 @@ struct CompressedGraphics *snappy_trio_prologue_buffered_textures[] = {
 // [D_089eb1cc] Graphics Table
 struct GraphicsTable snappy_trio_prologue_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &clappy_trio_prologue_graphics_08bf5ce8,
+        /* Src.  */ &snappy_trio_prologue_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &clappy_trio_prologue_graphics_08bf60c8,
+        /* Src.  */ &snappy_trio_prologue_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &clappy_trio_prologue_graphics_08bf374c,
+        /* Src.  */ &snappy_trio_prologue_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },

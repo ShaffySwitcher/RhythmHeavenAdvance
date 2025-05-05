@@ -12,17 +12,17 @@ struct CompressedGraphics *clappy_trio_prologue_buffered_textures[] = {
 // [D_089eb018] Graphics Table
 struct GraphicsTable clappy_trio_prologue_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &clappy_trio_prologue_graphics_08bf2f64,
+        /* Src.  */ &clappy_trio_prologue_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &clappy_trio_prologue_graphics_08bf33cc,
+        /* Src.  */ &clappy_trio_prologue_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &clappy_trio_prologue_graphics_08bf16b4,
+        /* Src.  */ &clappy_trio_prologue_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
