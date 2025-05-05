@@ -19,21 +19,21 @@
         END_OF_GRAPHICS_TABLE                                                   \
     }
 
-#define BG_GFX_TABLE_LINES          INLINE_BG_GFX_TABLE(&drum_studio_bg_monitor_graphics_08c71ed4, &drum_studio_bg_monitor_graphics_08c762e8, &drum_studio_bg_monitor_graphics_08c76300)
-#define BG_GFX_TABLE_STARS          INLINE_BG_GFX_TABLE(&drum_studio_bg_monitor_graphics_08c71340, &drum_studio_bg_monitor_graphics_08c745e0, &drum_studio_bg_monitor_graphics_08c74754)
-#define BG_GFX_TABLE_CLOUDS         INLINE_BG_GFX_TABLE(&drum_studio_bg_monitor_graphics_08c7069c, &drum_studio_bg_monitor_graphics_08c737a4, &drum_studio_bg_monitor_graphics_08c73978)
-#define BG_GFX_TABLE_FLOWERS        INLINE_BG_GFX_TABLE(&drum_studio_bg_monitor_graphics_08c71908, &drum_studio_bg_monitor_graphics_08c74ef8, &drum_studio_bg_monitor_graphics_08c75100)
-#define BG_GFX_TABLE_STATIONARY     INLINE_BG_GFX_TABLE(&drum_studio_bg_monitor_graphics_08c71c8c, &drum_studio_bg_monitor_graphics_08c756bc, &drum_studio_bg_monitor_graphics_08c758bc)
-#define BG_GFX_TABLE_SPARKLES       INLINE_BG_GFX_TABLE(&drum_studio_bg_monitor_graphics_08c70b4c, &drum_studio_bg_monitor_graphics_08c73ea4, &drum_studio_bg_monitor_graphics_08c7408c)
-#define BG_GFX_TABLE_FRUIT          INLINE_BG_GFX_TABLE(&drum_studio_bg_monitor_graphics_08c71b6c, &drum_studio_bg_monitor_graphics_08c7534c, &drum_studio_bg_monitor_graphics_08c75478)
-#define BG_GFX_TABLE_FISH           INLINE_BG_GFX_TABLE(&drum_studio_bg_monitor_graphics_08c71658, &drum_studio_bg_monitor_graphics_08c749d4, &drum_studio_bg_monitor_graphics_08c74bb0)
-#define BG_GFX_TABLE_JAPAN          INLINE_BG_GFX_TABLE(&drum_studio_bg_monitor_graphics_08c710e8, &drum_studio_bg_monitor_graphics_08c74210, &drum_studio_bg_monitor_graphics_08c74404)
-#define BG_GFX_TABLE_BEACH          INLINE_BG_GFX_TABLE(&drum_studio_bg_monitor_graphics_08c71e64, &drum_studio_bg_monitor_graphics_08c759cc, &drum_studio_bg_monitor_graphics_08c75ad0)
-#define BG_GFX_TABLE_HEARTS         INLINE_BG_GFX_TABLE(&drum_studio_bg_monitor_graphics_08c709a8, &drum_studio_bg_monitor_graphics_08c73b6c, &drum_studio_bg_monitor_graphics_08c73cf8)
-#define BG_GFX_TABLE_CIRCLES        INLINE_BG_GFX_TABLE(&drum_studio_bg_monitor_graphics_08c70580, &drum_studio_bg_monitor_graphics_08c73544, &drum_studio_bg_monitor_graphics_08c73618)
-#define BG_GFX_TABLE_CITY           INLINE_BG_GFX_TABLE(&drum_studio_bg_monitor_graphics_08c70490, &drum_studio_bg_monitor_graphics_08c72518, &drum_studio_bg_monitor_graphics_08c72634)
-#define BG_GFX_TABLE_CHECKERBOARD   INLINE_BG_GFX_TABLE(&drum_studio_bg_monitor_graphics_08c704e8, &drum_studio_bg_monitor_graphics_08c72e4c, &drum_studio_bg_monitor_graphics_08c7346c)
-#define BG_GFX_TABLE_SQUARES        INLINE_BG_GFX_TABLE(&drum_studio_bg_monitor_graphics_08c703a8, &drum_studio_bg_monitor_graphics_08c720a0, &drum_studio_bg_monitor_graphics_08c72400)
+#define BG_GFX_TABLE_LINES          INLINE_BG_GFX_TABLE(&drum_studio_lines_bg_tiles,        &drum_studio_lines_bg_map_1,        &drum_studio_lines_bg_map_2)
+#define BG_GFX_TABLE_STARS          INLINE_BG_GFX_TABLE(&drum_studio_stars_bg_tiles,        &drum_studio_stars_bg_map_1,        &drum_studio_stars_bg_map_2)
+#define BG_GFX_TABLE_CLOUDS         INLINE_BG_GFX_TABLE(&drum_studio_clouds_bg_tiles,       &drum_studio_clouds_bg_map_1,       &drum_studio_clouds_bg_map_2)
+#define BG_GFX_TABLE_FLOWERS        INLINE_BG_GFX_TABLE(&drum_studio_flowers_bg_tiles,      &drum_studio_flowers_bg_map_1,      &drum_studio_flowers_bg_map_2)
+#define BG_GFX_TABLE_STATIONERY     INLINE_BG_GFX_TABLE(&drum_studio_stationery_bg_tiles,   &drum_studio_stationery_bg_map_1,   &drum_studio_stationery_bg_map_2)
+#define BG_GFX_TABLE_SPARKLES       INLINE_BG_GFX_TABLE(&drum_studio_sparkles_bg_tiles,     &drum_studio_sparkles_bg_map_1,     &drum_studio_sparkles_bg_map_2)
+#define BG_GFX_TABLE_FRUIT          INLINE_BG_GFX_TABLE(&drum_studio_fruit_bg_tiles,        &drum_studio_fruit_bg_map_1,        &drum_studio_fruit_bg_map_2)
+#define BG_GFX_TABLE_FISH           INLINE_BG_GFX_TABLE(&drum_studio_fish_bg_tiles,         &drum_studio_fish_bg_map_1,         &drum_studio_fish_bg_map_2)
+#define BG_GFX_TABLE_JAPAN          INLINE_BG_GFX_TABLE(&drum_studio_japan_bg_tiles,        &drum_studio_japan_bg_map_1,        &drum_studio_japan_bg_map_2)
+#define BG_GFX_TABLE_BEACH          INLINE_BG_GFX_TABLE(&drum_studio_beach_bg_tiles,        &drum_studio_beach_bg_map_1,        &drum_studio_beach_bg_map_2)
+#define BG_GFX_TABLE_HEARTS         INLINE_BG_GFX_TABLE(&drum_studio_hearts_bg_tiles,       &drum_studio_hearts_bg_map_1,       &drum_studio_hearts_bg_map_2)
+#define BG_GFX_TABLE_CIRCLES        INLINE_BG_GFX_TABLE(&drum_studio_circles_bg_tiles,      &drum_studio_circles_bg_map_1,      &drum_studio_circles_bg_map_2)
+#define BG_GFX_TABLE_CITY           INLINE_BG_GFX_TABLE(&drum_studio_city_bg_tiles,         &drum_studio_city_bg_map_1,         &drum_studio_city_bg_map_2)
+#define BG_GFX_TABLE_CHECKERBOARD   INLINE_BG_GFX_TABLE(&drum_studio_checkerboard_bg_tiles, &drum_studio_checkerboard_bg_map_1, &drum_studio_checkerboard_bg_map_2)
+#define BG_GFX_TABLE_SQUARES        INLINE_BG_GFX_TABLE(&drum_studio_squares_bg_tiles,      &drum_studio_squares_bg_map_1,      &drum_studio_squares_bg_map_2)
 
 
 // [D_089e17a0] Scrolling Background Data
@@ -136,7 +136,7 @@ struct DrumStudioMonitorData drum_studio_bg_table[] = {
     },
     /* SPACEBALL */ {
         /* Palette   */ studio_bg_monitor_38_pal,
-        /* GFX Table */ BG_GFX_TABLE_STATIONARY,
+        /* GFX Table */ BG_GFX_TABLE_STATIONERY,
         /* BG2 Vel.  */ 0x100, -0x100,
         /* BG3 Vel.  */ 0x100, 0x100
     },
@@ -160,7 +160,7 @@ struct DrumStudioMonitorData drum_studio_bg_table[] = {
     },
     /* SICK_BEATS */ {
         /* Palette   */ studio_bg_monitor_37_pal,
-        /* GFX Table */ BG_GFX_TABLE_STATIONARY,
+        /* GFX Table */ BG_GFX_TABLE_STATIONERY,
         /* BG2 Vel.  */ 0x100, -0x100,
         /* BG3 Vel.  */ 0x100,  0x100
     },
@@ -244,7 +244,7 @@ struct DrumStudioMonitorData drum_studio_bg_table[] = {
     },
     /* MAIN_MENU */ {
         /* Palette   */ studio_bg_monitor_36_pal,
-        /* GFX Table */ BG_GFX_TABLE_STATIONARY,
+        /* GFX Table */ BG_GFX_TABLE_STATIONERY,
         /* BG2 Vel.  */ 0x100, -0x100,
         /* BG3 Vel.  */ 0x100,  0x100
     },
