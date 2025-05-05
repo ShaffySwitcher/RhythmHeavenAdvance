@@ -27,9 +27,9 @@ extern struct Animation anim_title_shooting_star[];
 
 /* TITLE - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics D_08cd663c;
-extern struct CompressedGraphics D_08cd7ae0;
-extern struct CompressedGraphics D_08cd7948;
+extern struct CompressedGraphics title_graphics_08cd663c;
+extern struct CompressedGraphics title_graphics_08cd7ae0;
+extern struct CompressedGraphics title_graphics_08cd7948;
 
 /* TITLE - PALETTES */
 

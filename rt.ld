@@ -2513,9 +2513,9 @@ SECTIONS {
         build/graphics/studio/studio_graphics_08cd5d64.4bpp.c.o(.data*);
         build/graphics/studio/studio_graphics_08cd62ec.tilemap.c.o(.data*);
         build/graphics/studio/studio_graphics_08cd6434.tilemap.c.o(.data*);
-        build/graphics/title/title_graphics_08cd663c.c.o(.data*);
-        build/graphics/title/title_graphics_08cd7948.c.o(.data*);
-        build/graphics/title/title_graphics_08cd7ae0.c.o(.data*);
+        build/graphics/title/title_graphics_08cd663c.4bpp.c.o(.data*);
+        build/graphics/title/title_graphics_08cd7948.4bpp.c.o(.data*);
+        build/graphics/title/title_graphics_08cd7ae0.tilemap.c.o(.data*);
         build/graphics/medal_corner/rhythm_toys_menu_graphics_08cd8388.4bpp.c.o(.data*);
         build/graphics/medal_corner/rhythm_toys_menu_graphics_08cd8da0.4bpp.c.o(.data*);
         build/graphics/medal_corner/rhythm_toys_menu_graphics_08cd8fa4.4bpp.c.o(.data*);
