@@ -2067,12 +2067,12 @@ SECTIONS {
         build/games/tap_trial/graphics/tap_trial_prologue_graphics_08c28814.4bpp.c.o(.data*);
         build/games/tap_trial/graphics/tap_trial_prologue_graphics_08c2990c.4bpp.c.o(.data*);
         build/games/tap_trial/graphics/tap_trial_prologue_graphics_08c29ce8.tilemap.c.o(.data*);
-        build/games/toss_boys/graphics/toss_boys_prologue_graphics_08c2a208.c.o(.data*);
-        build/games/toss_boys/graphics/toss_boys_prologue_graphics_08c2d448.c.o(.data*);
-        build/games/toss_boys/graphics/toss_boys_prologue_graphics_08c2d960.c.o(.data*);
-        build/games/toss_boys/graphics/toss_boys_prologue_graphics_08c2de80.c.o(.data*);
-        build/games/toss_boys/graphics/toss_boys_prologue_graphics_08c2fc5c.c.o(.data*);
-        build/games/toss_boys/graphics/toss_boys_prologue_graphics_08c30048.c.o(.data*);
+        build/games/toss_boys/graphics/toss_boys_prologue_graphics_08c2a208.4bpp.c.o(.data*);
+        build/games/toss_boys/graphics/toss_boys_prologue_graphics_08c2d448.4bpp.c.o(.data*);
+        build/games/toss_boys/graphics/toss_boys_prologue_graphics_08c2d960.tilemap.c.o(.data*);
+        build/games/toss_boys/graphics/toss_boys_prologue_graphics_08c2de80.4bpp.c.o(.data*);
+        build/games/toss_boys/graphics/toss_boys_prologue_graphics_08c2fc5c.4bpp.c.o(.data*);
+        build/games/toss_boys/graphics/toss_boys_prologue_graphics_08c30048.tilemap.c.o(.data*);
         build/games/tram_and_pauline/graphics/tram_pauline_prologue_graphics_08c30910.4bpp.c.o(.data*);
         build/games/tram_and_pauline/graphics/tram_pauline_prologue_graphics_08c3106c.4bpp.c.o(.data*);
         build/games/tram_and_pauline/graphics/tram_pauline_prologue_graphics_08c3153c.tilemap.c.o(.data*);
@@ -2575,23 +2575,23 @@ SECTIONS {
         build/games/tap_trial/graphics/tap_trial_graphics_08cf6a30.tilemap.c.o(.data*);
         build/games/tap_trial/graphics/tap_trial_graphics_08cf7224.tilemap.c.o(.data*);
         build/games/tap_trial/graphics/tap_trial_graphics_08cf7288.tilemap.c.o(.data*);
-        build/games/toss_boys/graphics/toss_boys_graphics_08cf86dc.c.o(.data*);
-        build/games/toss_boys/graphics/toss_boys_graphics_08cf8918.c.o(.data*);
-        build/games/toss_boys/graphics/toss_boys_graphics_08cf961c.c.o(.data*);
-        build/games/toss_boys/graphics/toss_boys_graphics_08cf97d0.c.o(.data*);
-        build/games/toss_boys/graphics/toss_boys_graphics_08cfa60c.c.o(.data*);
-        build/games/toss_boys/graphics/toss_boys_graphics_08cfa810.c.o(.data*);
+        build/games/toss_boys/graphics/toss_boys_graphics_08cf86dc.4bpp.c.o(.data*);
+        build/games/toss_boys/graphics/toss_boys_graphics_08cf8918.4bpp.c.o(.data*);
+        build/games/toss_boys/graphics/toss_boys_graphics_08cf961c.4bpp.c.o(.data*);
+        build/games/toss_boys/graphics/toss_boys_graphics_08cf97d0.tilemap.c.o(.data*);
+        build/games/toss_boys/graphics/toss_boys_graphics_08cfa60c.tilemap.c.o(.data*);
+        build/games/toss_boys/graphics/toss_boys_graphics_08cfa810.4bpp.c.o(.data*);
 #if REV < 1
-        build/games/toss_boys/graphics/toss_boys_graphics_08cfc9e8.c.o(.data*);
+        build/games/toss_boys/graphics/toss_boys_graphics_08cfc9e8.4bpp.c.o(.data*);
 #else
-        build/games/toss_boys/graphics/toss_boys_graphics_08cfc9e8_rev1.c.o(.data*);
+        build/games/toss_boys/graphics/toss_boys_graphics_08cfc9e8_rev1.4bpp.c.o(.data*);
 #endif
-        build/games/toss_boys/graphics/toss_boys_graphics_08cfcb9c.c.o(.data*);
-        build/games/toss_boys/graphics/toss_boys_graphics_08cfdcc4.c.o(.data*);
-        build/games/toss_boys/graphics/toss_boys_graphics_08cfe3b8.c.o(.data*);
-        build/games/toss_boys/graphics/toss_boys_graphics_08cff0bc.c.o(.data*);
-        build/games/toss_boys/graphics/toss_boys_graphics_08cff31c.c.o(.data*);
-        build/games/toss_boys/graphics/toss_boys_graphics_08d00158.c.o(.data*);
+        build/games/toss_boys/graphics/toss_boys_graphics_08cfcb9c.tilemap.c.o(.data*);
+        build/games/toss_boys/graphics/toss_boys_graphics_08cfdcc4.4bpp.c.o(.data*);
+        build/games/toss_boys/graphics/toss_boys_graphics_08cfe3b8.4bpp.c.o(.data*);
+        build/games/toss_boys/graphics/toss_boys_graphics_08cff0bc.4bpp.c.o(.data*);
+        build/games/toss_boys/graphics/toss_boys_graphics_08cff31c.tilemap.c.o(.data*);
+        build/games/toss_boys/graphics/toss_boys_graphics_08d00158.tilemap.c.o(.data*);
         build/games/tram_and_pauline/graphics/tram_pauline_graphics_08d02100.4bpp.c.o(.data*);
         build/games/tram_and_pauline/graphics/tram_pauline_graphics_08d02864.4bpp.c.o(.data*);
         build/games/tram_and_pauline/graphics/tram_pauline_graphics_08d029a0.4bpp.c.o(.data*);
