@@ -2484,8 +2484,8 @@ SECTIONS {
         build/graphics/main_menu/main_menu_graphics_08ccb298.4bpp.c.o(.data*);
         build/graphics/main_menu/main_menu_graphics_08ccb374.4bpp.c.o(.data*);
         build/graphics/main_menu/main_menu_graphics_08ccb840.tilemap.c.o(.data*);
-        build/graphics/perfect/perfect_certificate_graphics_08ccc138.c.o(.data*);
-        build/graphics/perfect/perfect_certificate_graphics_08ccc39c.c.o(.data*);
+        build/graphics/perfect/perfect_certificate_graphics_08ccc138.4bpp.c.o(.data*);
+        build/graphics/perfect/perfect_certificate_graphics_08ccc39c.tilemap.c.o(.data*);
         build/graphics/gameplay/gameplay_graphics_08ccca5c.tilemap.c.o(.data*);
         build/graphics/data_room/data_room_graphics_08cccb04.4bpp.c.o(.data*);
         build/graphics/data_room/data_room_graphics_08ccd074.4bpp.c.o(.data*);
