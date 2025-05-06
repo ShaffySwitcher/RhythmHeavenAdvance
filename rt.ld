@@ -1972,9 +1972,9 @@ SECTIONS {
         build/games/space_dance/graphics/cosmic_dance_prologue_graphics_08beaf78.4bpp.c.o(.data*);
         build/games/space_dance/graphics/cosmic_dance_prologue_graphics_08beb2f8.4bpp.c.o(.data*);
         build/games/space_dance/graphics/cosmic_dance_prologue_graphics_08beb48c.tilemap.c.o(.data*);
-        build/games/night_walk/graphics/night_walk_prologue_graphics_08beba58.4bpp.c.o(.data*);
-        build/games/night_walk/graphics/night_walk_prologue_graphics_08bebaa4.4bpp.c.o(.data*);
-        build/games/night_walk/graphics/night_walk_prologue_graphics_08bebbd4.tilemap.c.o(.data*);
+        build/games/night_walk/graphics/night_walk_prologue_obj.4bpp.c.o(.data*);
+        build/games/night_walk/graphics/night_walk_prologue_bg_tiles.4bpp.c.o(.data*);
+        build/games/night_walk/graphics/night_walk_prologue_bg_map.tilemap.c.o(.data*);
         build/games/showtime/graphics/showtime_prologue_graphics_08bec134.4bpp.c.o(.data*);
         build/games/showtime/graphics/showtime_prologue_graphics_08bed0ec.4bpp.c.o(.data*);
         build/games/showtime/graphics/showtime_prologue_graphics_08bed4e4.tilemap.c.o(.data*);
@@ -2052,12 +2052,12 @@ SECTIONS {
         build/games/rat_race/graphics/rat_race_prologue_graphics_08c21f88.4bpp.c.o(.data*);
         build/games/rat_race/graphics/rat_race_prologue_graphics_08c22764.4bpp.c.o(.data*);
         build/games/rat_race/graphics/rat_race_prologue_graphics_08c229b4.tilemap.c.o(.data*);
-        build/games/ninja_bodyguard/graphics/ninja_bodyguard_prologue_graphics_08c22ee4.4bpp.c.o(.data*);
-        build/games/ninja_bodyguard/graphics/ninja_bodyguard_prologue_graphics_08c23a3c.4bpp.c.o(.data*);
-        build/games/ninja_bodyguard/graphics/ninja_bodyguard_prologue_graphics_08c23cd0.tilemap.c.o(.data*);
-        build/games/ninja_bodyguard/graphics/ninja_bodyguard_prologue_graphics_08c24200.4bpp.c.o(.data*);
-        build/games/ninja_bodyguard/graphics/ninja_bodyguard_prologue_graphics_08c24604.4bpp.c.o(.data*);
-        build/games/ninja_bodyguard/graphics/ninja_bodyguard_prologue_graphics_08c24804.tilemap.c.o(.data*);
+        build/games/ninja_bodyguard/graphics/ninja_bodyguard_prologue_obj.4bpp.c.o(.data*);
+        build/games/ninja_bodyguard/graphics/ninja_bodyguard_prologue_bg_tiles.4bpp.c.o(.data*);
+        build/games/ninja_bodyguard/graphics/ninja_bodyguard_prologue_bg_map.tilemap.c.o(.data*);
+        build/games/ninja_bodyguard/graphics/ninja_reincarnate_prologue_obj.4bpp.c.o(.data*);
+        build/games/ninja_bodyguard/graphics/ninja_reincarnate_prologue_bg_tiles.4bpp.c.o(.data*);
+        build/games/ninja_bodyguard/graphics/ninja_reincarnate_prologue_bg_map.tilemap.c.o(.data*);
         build/games/space_dance/graphics/space_dance_prologue_graphics_08c24f60.4bpp.c.o(.data*);
         build/games/space_dance/graphics/space_dance_prologue_graphics_08c2575c.4bpp.c.o(.data*);
         build/games/space_dance/graphics/space_dance_prologue_graphics_08c25aa8.tilemap.c.o(.data*);
@@ -2143,8 +2143,8 @@ SECTIONS {
         build/games/drum_studio/graphics/drum_lessons_bg_map_level_up.tilemap.c.o(.data*);
         build/games/drum_studio/graphics/drum_studio_bg_map.tilemap.c.o(.data*);
         build/games/drum_studio/graphics/drum_studio_bg_map_lessons.tilemap.c.o(.data*);
-        build/games/night_walk/graphics/night_walk_graphics_08c52420.4bpp.c.o(.data*);
-        build/games/night_walk/graphics/night_walk_graphics_08c524fc.tilemap.c.o(.data*);
+        build/games/night_walk/graphics/night_walk_obj.4bpp.c.o(.data*);
+        build/games/night_walk/graphics/night_walk_bg_map.tilemap.c.o(.data*);
         build/games/showtime/graphics/showtime_graphics_08c54f7c.4bpp.c.o(.data*);
         build/games/showtime/graphics/showtime_graphics_08c551e8.4bpp.c.o(.data*);
         build/games/showtime/graphics/showtime_graphics_08c56bd8.4bpp.c.o(.data*);
@@ -2203,7 +2203,7 @@ SECTIONS {
         build/games/marching_orders/graphics/marching_orders_2_bg_tiles.4bpp.c.o(.data*);
         build/games/marching_orders/graphics/marching_orders_2_bg_map.tilemap.c.o(.data*);
         build/games/marching_orders/graphics/marching_orders_2_bg_map_floor.tilemap.c.o(.data*);
-        build/games/metronome/graphics/metronome_graphics_08c702d0.4bpp.c.o(.data*);
+        build/games/metronome/graphics/metronome_obj.4bpp.c.o(.data*);
         build/games/drum_studio/graphics/drum_studio_squares_bg_tiles.4bpp.c.o(.data*);
         build/games/drum_studio/graphics/drum_studio_city_bg_tiles.4bpp.c.o(.data*);
         build/games/drum_studio/graphics/drum_studio_checkerboard_bg_tiles.4bpp.c.o(.data*);
@@ -2532,13 +2532,13 @@ SECTIONS {
         build/games/rhythm_toys/graphics/rhythm_toys_graphics_08cdd0d4.4bpp.c.o(.data*);
         build/games/rhythm_toys/graphics/rhythm_toys_unk_08cdd0e4.c.o(.data*);
         build/games/rhythm_toys/graphics/rhythm_toys_graphics_08cdd5b8.tilemap.c.o(.data*);
-        build/games/ninja_bodyguard/graphics/ninja_bodyguard_graphics_08cdd9d4.4bpp.c.o(.data*);
-        build/games/ninja_bodyguard/graphics/ninja_bodyguard_graphics_08cde4e0.4bpp.c.o(.data*);
-        build/games/ninja_bodyguard/graphics/ninja_bodyguard_graphics_08cdfaa4.4bpp.c.o(.data*);
-        build/games/ninja_bodyguard/graphics/ninja_bodyguard_graphics_08cdfc38.tilemap.c.o(.data*);
-        build/games/ninja_bodyguard/graphics/ninja_bodyguard_graphics_08cdfd48.tilemap.c.o(.data*);
-        build/games/ninja_bodyguard/graphics/ninja_bodyguard_graphics_08cdfeb0.tilemap.c.o(.data*);
-        build/games/ninja_bodyguard/graphics/ninja_bodyguard_graphics_08ce015c.tilemap.c.o(.data*);
+        build/games/ninja_bodyguard/graphics/ninja_bodyguard_bg_tiles.4bpp.c.o(.data*);
+        build/games/ninja_bodyguard/graphics/ninja_bodyguard_intro_bg_tiles.4bpp.c.o(.data*);
+        build/games/ninja_bodyguard/graphics/ninja_bodyguard_obj.4bpp.c.o(.data*);
+        build/games/ninja_bodyguard/graphics/ninja_bodyguard_bg_map_r.tilemap.c.o(.data*);
+        build/games/ninja_bodyguard/graphics/ninja_bodyguard_bg_map_l.tilemap.c.o(.data*);
+        build/games/ninja_bodyguard/graphics/ninja_bodyguard_bg_map_unused.tilemap.c.o(.data*);
+        build/games/ninja_bodyguard/graphics/ninja_bodyguard_intro_bg_map.tilemap.c.o(.data*);
         build/games/space_dance/graphics/cosmic_dance_graphics_08ce296c.4bpp.c.o(.data*);
         build/games/space_dance/graphics/cosmic_dance_graphics_08ce2cb0.4bpp.c.o(.data*);
         build/games/space_dance/graphics/cosmic_dance_graphics_08ce3978.4bpp.c.o(.data*);
@@ -2625,10 +2625,10 @@ SECTIONS {
         build/games/wizards_waltz/graphics/wizards_waltz_graphics_08d1d3c4.4bpp.c.o(.data*);
         build/games/wizards_waltz/graphics/wizards_waltz_graphics_08d1d750.4bpp.c.o(.data*);
         build/games/wizards_waltz/graphics/wizards_waltz_graphics_08d1d8d8.tilemap.c.o(.data*);
-        build/games/ninja_bodyguard/graphics/ninja_reincarnate_graphics_08d1e358.4bpp.c.o(.data*);
-        build/games/ninja_bodyguard/graphics/ninja_reincarnate_graphics_08d1f700.4bpp.c.o(.data*);
-        build/games/ninja_bodyguard/graphics/ninja_reincarnate_graphics_08d1fab0.tilemap.c.o(.data*);
-        build/games/ninja_bodyguard/graphics/ninja_reincarnate_graphics_08d1fb70.tilemap.c.o(.data*);
+        build/games/ninja_bodyguard/graphics/ninja_reincarnate_bg_tiles.4bpp.c.o(.data*);
+        build/games/ninja_bodyguard/graphics/ninja_reincarnate_obj.4bpp.c.o(.data*);
+        build/games/ninja_bodyguard/graphics/ninja_reincarnate_bg_map_r.tilemap.c.o(.data*);
+        build/games/ninja_bodyguard/graphics/ninja_reincarnate_bg_map_l.tilemap.c.o(.data*);
         build/graphics/unknown/unknown_graphics_08d20534.tilemap.c.o(.data*);
     }
 

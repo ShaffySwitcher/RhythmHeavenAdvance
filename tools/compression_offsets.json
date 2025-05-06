@@ -476,62 +476,62 @@
         13699952,
         13699900
     ],
-    "metronome_graphics_08c702d0": [
+    "metronome_obj": [
         13037516,
         13037464,
         112
     ],
-    "night_walk_prologue_graphics_08bebaa4": [
+    "night_walk_prologue_bg_tiles": [
         12499560,
         12499512,
         12
     ],
-    "night_walk_graphics_08c52420": [
+    "night_walk_obj": [
         12916172,
         12916120,
         176
     ],
-    "night_walk_prologue_graphics_08beba58": [
+    "night_walk_prologue_obj": [
         12498076,
         12498028
     ],
-    "ninja_reincarnate_graphics_08d1e358": [
+    "ninja_reincarnate_bg_tiles": [
         13752552,
         13752500
     ],
-    "ninja_bodyguard_graphics_08cdfaa4": [
+    "ninja_bodyguard_obj": [
         13493488,
         13493436,
         120
     ],
-    "ninja_bodyguard_prologue_graphics_08c22ee4": [
+    "ninja_bodyguard_prologue_obj": [
         12724676,
         12724624
     ],
-    "ninja_reincarnate_graphics_08d1f700": [
+    "ninja_reincarnate_obj": [
         13755240,
         13755188,
         120
     ],
-    "ninja_bodyguard_prologue_graphics_08c23a3c": [
+    "ninja_bodyguard_prologue_bg_tiles": [
         12726004,
         12725952,
         4
     ],
-    "ninja_bodyguard_graphics_08cde4e0": [
+    "ninja_bodyguard_intro_bg_tiles": [
         13490660,
         13490608
     ],
-    "ninja_bodyguard_graphics_08cdd9d4": [
+    "ninja_bodyguard_bg_tiles": [
         13489608,
         13489556
     ],
-    "ninja_bodyguard_prologue_graphics_08c24604": [
+    "ninja_reincarnate_prologue_bg_tiles": [
         12730896,
         12730844,
         4
     ],
-    "ninja_bodyguard_prologue_graphics_08c24200": [
+    "ninja_reincarnate_prologue_obj": [
         12729568,
         12729516
     ],

@@ -52,8 +52,8 @@ extern struct Animation anim_play_yan_violent_electrocution[];
 
 /* NIGHT WALK - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics night_walk_graphics_08c52420;
-extern struct CompressedGraphics night_walk_graphics_08c524fc;
+extern struct CompressedGraphics night_walk_obj;
+extern struct CompressedGraphics night_walk_bg_map;
 
 /* NIGHT WALK - PALETTES */
 

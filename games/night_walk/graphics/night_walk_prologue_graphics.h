@@ -11,9 +11,9 @@ extern struct Animation anim_night_walk_prologue_title[];
 
 /* PROLOGUE (NIGHT WALK) - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics night_walk_prologue_graphics_08bebaa4;
-extern struct CompressedGraphics night_walk_prologue_graphics_08bebbd4;
-extern struct CompressedGraphics night_walk_prologue_graphics_08beba58;
+extern struct CompressedGraphics night_walk_prologue_bg_tiles;
+extern struct CompressedGraphics night_walk_prologue_bg_map;
+extern struct CompressedGraphics night_walk_prologue_obj;
 
 /* PROLOGUE (NIGHT WALK) - PALETTES */
 
