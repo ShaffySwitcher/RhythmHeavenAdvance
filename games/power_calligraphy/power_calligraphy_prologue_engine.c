@@ -12,17 +12,17 @@ struct CompressedGraphics *power_calligraphy_prologue_buffered_textures[] = {
 // [D_089eb534] Graphics Table
 struct GraphicsTable power_calligraphy_prologue_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &power_calligraphy_prologue_graphics_08bf984c,
+        /* Src.  */ &power_calligraphy_prologue_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &power_calligraphy_prologue_graphics_08bf9b14,
+        /* Src.  */ &power_calligraphy_prologue_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &power_calligraphy_prologue_graphics_08bf8a30,
+        /* Src.  */ &power_calligraphy_prologue_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },

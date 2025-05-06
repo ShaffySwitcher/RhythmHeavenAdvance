@@ -535,56 +535,56 @@
         12729568,
         12729516
     ],
-    "polyrhythm_prologue_graphics_08c0212c": [
+    "polyrhythm_prologue_bg_tiles": [
         12582944,
         12582892,
         4
     ],
-    "polyrhythm_graphics_08c781ac": [
+    "polyrhythm_obj": [
         13070932,
         13070880,
         64
     ],
-    "polyrhythm_prologue_graphics_08c00010": [
+    "polyrhythm_prologue_obj": [
         12580628,
         12580576
     ],
-    "power_calligraphy_graphics_08c69698": [
+    "power_calligraphy_obj_dancers": [
         13012340,
         13012288,
         160
     ],
-    "power_calligraphy_prologue_graphics_08bf8a30": [
+    "power_calligraphy_prologue_obj": [
         12549908,
         12549856
     ],
-    "power_calligraphy_prologue_graphics_08bf984c": [
+    "power_calligraphy_prologue_bg_tiles": [
         12552768,
         12552716,
         12
     ],
-    "power_calligraphy_graphics_08c68d64": [
+    "power_calligraphy_bg_tiles": [
         13012268,
         13012216
     ],
-    "power_calligraphy_graphics_08c68d1c": [
+    "power_calligraphy_obj": [
         13005604,
         13005552
     ],
-    "quiz_show_graphics_08c7c8e0": [
+    "quiz_show_obj": [
         13081552,
         13081500
     ],
-    "quiz_show_prologue_graphics_08c02a34": [
+    "quiz_show_prologue_obj": [
         12592696,
         12592644
     ],
-    "quiz_show_prologue_graphics_08c04434": [
+    "quiz_show_prologue_bg_tiles": [
         12593732,
         12593680,
         4
     ],
-    "quiz_show_graphics_08c7d2ac": [
+    "quiz_show_bg_tiles": [
         13093104,
         13093052,
         168
