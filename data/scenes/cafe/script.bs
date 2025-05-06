@@ -61,7 +61,7 @@ script script_scene_cafe
                 rest 12
                 run cafe_load_bg_event_map, unknown_graphics_08cc1a30
                 rest 12
-                run cafe_load_bg_event_map, cafe_graphics_08cc1158
+                run cafe_load_bg_event_map, cafe_bg_map
                 rest 12
                 rest 12
                 break
@@ -98,12 +98,12 @@ script script_scene_cafe
                 rest 12
                 run cafe_load_bg_event_map, unknown_graphics_08cc2308
                 rest 48
-                run cafe_load_bg_event_map, cafe_graphics_08cc1158
+                run cafe_load_bg_event_map, cafe_bg_map
                 rest 12
                 rest 12
                 break
             default
-                run cafe_load_bg_event_map, cafe_graphics_08cc1158
+                run cafe_load_bg_event_map, cafe_bg_map
                 rest 12
         end_switch
     loop_end
