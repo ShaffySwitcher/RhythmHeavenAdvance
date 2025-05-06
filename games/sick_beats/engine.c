@@ -46,22 +46,22 @@ struct CompressedGraphics *sick_beats_buffered_textures[] = {
 // [D_089e9104] Graphics Table
 struct GraphicsTable gfx_table_sick_beats[] = {
     /* BG Tileset */ {
-        /* Src.  */ &sick_beats_graphics_08d19fb4,
+        /* Src.  */ &sick_beats_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &sick_beats_graphics_08d1a320,
+        /* Src.  */ &sick_beats_bg_map_foreground,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Tileset */ {
-        /* Src.  */ &sick_beats_graphics_08d19fb4,
+        /* Src.  */ &sick_beats_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &sick_beats_graphics_08d1a280,
+        /* Src.  */ &sick_beats_bg_map,
         /* Dest. */ BG_MAP_BASE(0xF000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },

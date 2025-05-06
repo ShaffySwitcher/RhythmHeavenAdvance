@@ -78,17 +78,17 @@ struct CompressedGraphics *space_dance_buffered_textures[] = {
 // [D_089e6d78] Graphics Table (Space Dance)
 struct GraphicsTable space_dance_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &cosmic_dance_graphics_08ce2cb0,
+        /* Src.  */ &space_dance_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &cosmic_dance_graphics_08ce3ccc,
+        /* Src.  */ &space_dance_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &cosmic_dance_graphics_08ce296c,
+        /* Src.  */ &space_dance_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -113,22 +113,22 @@ struct GraphicsTable space_dance_gfx_table[] = {
 // [D_089e6dcc] Graphics Table (Cosmic Dance)
 struct GraphicsTable cosmic_dance_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &space_dance_graphics_08c38fcc,
+        /* Src.  */ &cosmic_dance_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &space_dance_graphics_08c39888,
+        /* Src.  */ &cosmic_dance_bg_map_1,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &space_dance_graphics_08c3a0a0,
+        /* Src.  */ &cosmic_dance_bg_map_2,
         /* Dest. */ BG_MAP_BASE(0xF000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &space_dance_graphics_08c38f60,
+        /* Src.  */ &cosmic_dance_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -153,17 +153,17 @@ struct GraphicsTable cosmic_dance_gfx_table[] = {
 // [D_089e6e2c] Graphics Table (Remix 3)
 struct GraphicsTable space_dance_remix_3_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &cosmic_dance_graphics_08ce3978,
+        /* Src.  */ &space_dance_remix_3_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &cosmic_dance_graphics_08ce426c,
+        /* Src.  */ &space_dance_remix_3_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &cosmic_dance_graphics_08ce296c,
+        /* Src.  */ &space_dance_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },

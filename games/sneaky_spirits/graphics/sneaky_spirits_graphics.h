@@ -28,10 +28,10 @@ extern struct Animation anim_sneaky_spirit_tutorial[];
 
 /* SNEAKY SPIRITS - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics sneaky_spirits_graphics_08bd2a00; // BG Textures
-extern struct CompressedGraphics sneaky_spirits_graphics_08bd2b58; // BG Map
-extern struct CompressedGraphics sneaky_spirits_graphics_08bd2cf8; // BG Map
-extern struct CompressedGraphics sneaky_spirits_graphics_08bd245c; // OBJ Textures
+extern struct CompressedGraphics sneaky_spirits_bg_tiles; // BG Textures
+extern struct CompressedGraphics sneaky_spirits_bg_map_foreground; // BG Map
+extern struct CompressedGraphics sneaky_spirits_bg_map; // BG Map
+extern struct CompressedGraphics sneaky_spirits_obj; // OBJ Textures
 
 /* SNEAKY SPIRITS - PALETTES */
 

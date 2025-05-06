@@ -743,12 +743,12 @@
         12787272,
         12
     ],
-    "sick_beats_graphics_08d19fb4": [
+    "sick_beats_bg_tiles": [
         13736140,
         13736088,
         164
     ],
-    "sneaky_spirits_graphics_08bd245c": [
+    "sneaky_spirits_obj": [
         12389592,
         12389544
     ],
@@ -757,7 +757,7 @@
         12455896,
         4
     ],
-    "sneaky_spirits_graphics_08bd2a00": [
+    "sneaky_spirits_bg_tiles": [
         12395628,
         12395580,
         80
@@ -771,11 +771,11 @@
         12496728,
         8
     ],
-    "cosmic_dance_graphics_08ce296c": [
+    "space_dance_obj": [
         13500780,
         13500728
     ],
-    "space_dance_graphics_08c38fcc": [
+    "cosmic_dance_bg_tiles": [
         12816240,
         12816188,
         164
@@ -793,16 +793,16 @@
         12734268,
         12
     ],
-    "space_dance_graphics_08c38f60": [
+    "cosmic_dance_obj": [
         12804288,
         12804236
     ],
-    "cosmic_dance_graphics_08ce3978": [
+    "space_dance_remix_3_bg_tiles": [
         13511872,
         13511820,
         144
     ],
-    "cosmic_dance_graphics_08ce2cb0": [
+    "space_dance_bg_tiles": [
         13511036,
         13510984
     ],
@@ -810,7 +810,7 @@
         12459532,
         12459484
     ],
-    "spaceball_graphics_08bd5524": [
+    "spaceball_bg_tiles": [
         12406400,
         12406352,
         88
@@ -820,7 +820,7 @@
         12460664,
         4
     ],
-    "spaceball_graphics_08bd4e70": [
+    "spaceball_obj": [
         12397832,
         12397784
     ],

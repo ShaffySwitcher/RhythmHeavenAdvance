@@ -12,22 +12,22 @@ struct CompressedGraphics *sneaky_spirits_buffered_textures[] = {
 // [D_089de6e4] Graphics Table (Sneaky Spirits)
 struct GraphicsTable sneaky_spirits_1_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &sneaky_spirits_graphics_08bd2a00,
+        /* Src.  */ &sneaky_spirits_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &sneaky_spirits_graphics_08bd2b58,
+        /* Src.  */ &sneaky_spirits_bg_map_foreground,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &sneaky_spirits_graphics_08bd2cf8,
+        /* Src.  */ &sneaky_spirits_bg_map,
         /* Dest. */ BG_MAP_BASE(0xF000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &sneaky_spirits_graphics_08bd245c,
+        /* Src.  */ &sneaky_spirits_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -52,22 +52,22 @@ struct GraphicsTable sneaky_spirits_1_gfx_table[] = {
 // [D_089de744] Graphics Table (Sneaky Spirits 2)
 struct GraphicsTable sneaky_spirits_2_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &sneaky_spirits_graphics_08bd2a00,
+        /* Src.  */ &sneaky_spirits_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &sneaky_spirits_graphics_08bd2b58,
+        /* Src.  */ &sneaky_spirits_bg_map_foreground,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &sneaky_spirits_graphics_08bd2cf8,
+        /* Src.  */ &sneaky_spirits_bg_map,
         /* Dest. */ BG_MAP_BASE(0xF000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &sneaky_spirits_graphics_08bd245c,
+        /* Src.  */ &sneaky_spirits_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
