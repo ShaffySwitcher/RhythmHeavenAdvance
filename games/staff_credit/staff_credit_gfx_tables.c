@@ -3,12 +3,12 @@
 // [D_08a5dd8c] Graphics Table
 struct GraphicsTable D_08a5dd8c[] = {
     /* BG Tileset */ {
-        /* Src.  */ &staff_credit_graphics_08c3a8b0,
+        /* Src.  */ &staff_credit_karate_man_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &staff_credit_graphics_08c3f16c,
+        /* Src.  */ &staff_credit_karate_man_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -23,12 +23,12 @@ struct GraphicsTable D_08a5dd8c[] = {
 // [D_08a5ddbc] Graphics Table
 struct GraphicsTable D_08a5ddbc[] = {
     /* BG Tileset */ {
-        /* Src.  */ &staff_credit_graphics_08c3b51c,
+        /* Src.  */ &staff_credit_clappy_trio_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &staff_credit_graphics_08c3f364,
+        /* Src.  */ &staff_credit_clappy_trio_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -43,12 +43,12 @@ struct GraphicsTable D_08a5ddbc[] = {
 // [D_08a5ddec] Graphics Table
 struct GraphicsTable D_08a5ddec[] = {
     /* BG Tileset */ {
-        /* Src.  */ &staff_credit_graphics_08c3be64,
+        /* Src.  */ &staff_credit_spaceball_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &staff_credit_graphics_08c3f580,
+        /* Src.  */ &staff_credit_spaceball_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -63,12 +63,12 @@ struct GraphicsTable D_08a5ddec[] = {
 // [D_08a5de1c] Graphics Table
 struct GraphicsTable D_08a5de1c[] = {
     /* BG Tileset */ {
-        /* Src.  */ &staff_credit_graphics_08c3ca50,
+        /* Src.  */ &staff_credit_toss_boys_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &staff_credit_graphics_08c3f798,
+        /* Src.  */ &staff_credit_toss_boys_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -83,12 +83,12 @@ struct GraphicsTable D_08a5de1c[] = {
 // [D_08a5de4c] Graphics Table
 struct GraphicsTable D_08a5de4c[] = {
     /* BG Tileset */ {
-        /* Src.  */ &staff_credit_graphics_08c3d6f4,
+        /* Src.  */ &staff_credit_tap_trial_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &staff_credit_graphics_08c3f9cc,
+        /* Src.  */ &staff_credit_tap_trial_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -103,12 +103,12 @@ struct GraphicsTable D_08a5de4c[] = {
 // [D_08a5de7c] Graphics Table
 struct GraphicsTable D_08a5de7c[] = {
     /* BG Tileset */ {
-        /* Src.  */ &staff_credit_graphics_08c3e508,
+        /* Src.  */ &staff_credit_bon_odori_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &staff_credit_graphics_08c3fc00,
+        /* Src.  */ &staff_credit_bon_odori_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -123,12 +123,12 @@ struct GraphicsTable D_08a5de7c[] = {
 // [D_08a5deac] Graphics Table
 struct GraphicsTable D_08a5deac[] = {
     /* BG Tileset */ {
-        /* Src.  */ &staff_credit_graphics_08c3eb4c,
+        /* Src.  */ &staff_credit_drums_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &staff_credit_graphics_08c3fde4,
+        /* Src.  */ &staff_credit_drums_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -143,12 +143,12 @@ struct GraphicsTable D_08a5deac[] = {
 // [D_08a5dedc] Graphics Table
 struct GraphicsTable D_08a5dedc[] = {
     /* BG Tileset */ {
-        /* Src.  */ &staff_credit_graphics_08c3ef78,
+        /* Src.  */ &staff_credit_drums_2_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &staff_credit_graphics_08c3fe9c,
+        /* Src.  */ &staff_credit_drums_2_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
