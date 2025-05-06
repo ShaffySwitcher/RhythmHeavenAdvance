@@ -263,17 +263,17 @@ struct CompressedGraphics *rhythm_toys_buffered_textures[] = {
 // [D_089e9d50] Graphics Table (Cat Machine)
 struct GraphicsTable gfx_table_cat_machine[] = {
     /* BG Tileset */ {
-        /* Src.  */ &rhythm_toys_graphics_08cda118,
+        /* Src.  */ &cat_machine_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &rhythm_toys_graphics_08cda400,
+        /* Src.  */ &cat_machine_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &rhythm_toys_graphics_08cd9a44,
+        /* Src.  */ &cat_machine_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -293,17 +293,17 @@ struct GraphicsTable gfx_table_cat_machine[] = {
 // [D_089e9d98] Graphics Table (Confession Machine)
 struct GraphicsTable gfx_table_love_machine[] = {
     /* BG Tileset */ {
-        /* Src.  */ &rhythm_toys_graphics_08cdd0d4,
+        /* Src.  */ &love_machine_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &rhythm_toys_graphics_08cdd5b8,
+        /* Src.  */ &love_machine_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &rhythm_toys_graphics_08cdc884,
+        /* Src.  */ &love_machine_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -323,17 +323,17 @@ struct GraphicsTable gfx_table_love_machine[] = {
 // [D_089e9de0] Graphics Table (Rap Machine)
 struct GraphicsTable gfx_table_rap_machine[] = {
     /* BG Tileset */ {
-        /* Src.  */ &rhythm_toys_graphics_08cdbacc,
+        /* Src.  */ &rap_machine_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &rhythm_toys_graphics_08cdbe6c,
+        /* Src.  */ &rap_machine_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &rhythm_toys_graphics_08cdae78,
+        /* Src.  */ &rap_machine_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },

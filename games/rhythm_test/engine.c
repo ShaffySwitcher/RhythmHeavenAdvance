@@ -633,27 +633,27 @@ struct CompressedGraphics *rhythm_test_buffered_textures[] = {
 // [D_089e4f74] Graphics Table
 struct GraphicsTable rhythm_test_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &rhythm_test_graphics_08c6a638,
+        /* Src.  */ &rhythm_test_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &rhythm_test_graphics_08c6a830,
+        /* Src.  */ &rhythm_test_bg_map_chart,
         /* Dest. */ BG_MAP_BASE(0xE000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &rhythm_test_graphics_08c6a9c4,
+        /* Src.  */ &rhythm_test_bg_map_foreground,
         /* Dest. */ BG_MAP_BASE(0xF000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &rhythm_test_graphics_08c6ab24,
+        /* Src.  */ &rhythm_test_bg_map,
         /* Dest. */ BG_MAP_BASE(0xF800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &rhythm_test_graphics_08c6a350,
+        /* Src.  */ &rhythm_test_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },

@@ -679,36 +679,36 @@
         12688740,
         12688688
     ],
-    "rhythm_test_graphics_08c6a350": [
+    "rhythm_test_obj": [
         13015124,
         13015072
     ],
-    "rhythm_test_graphics_08c6a638": [
+    "rhythm_test_bg_tiles": [
         13017952,
         13017900,
         40
     ],
-    "rhythm_toys_graphics_08cda118": [
+    "cat_machine_bg_tiles": [
         13474388,
         13474336
     ],
-    "rhythm_toys_graphics_08cdae78": [
+    "rap_machine_obj": [
         13476880,
         13476828
     ],
-    "rhythm_toys_graphics_08cd9a44": [
+    "cat_machine_obj": [
         13472556,
         13472504
     ],
-    "rhythm_toys_graphics_08cdc884": [
+    "love_machine_obj": [
         13483644,
         13483592
     ],
-    "rhythm_toys_graphics_08cdd0d4": [
+    "love_machine_bg_tiles": [
         13486228,
         13486176
     ],
-    "rhythm_toys_graphics_08cdbacc": [
+    "rap_machine_bg_tiles": [
         13479560,
         13479508
     ],
