@@ -12,22 +12,22 @@ struct CompressedGraphics *showtime_buffered_textures[] = {
 // [D_089e3850] Graphics Table (Showtime)
 struct GraphicsTable showtime_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &showtime_graphics_08c551e8,
+        /* Src.  */ &showtime_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &showtime_graphics_08c57038,
+        /* Src.  */ &showtime_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &showtime_graphics_08c571c0,
+        /* Src.  */ &showtime_bg_map_water,
         /* Dest. */ BG_MAP_BASE(0xF000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &showtime_graphics_08c54f7c,
+        /* Src.  */ &showtime_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -52,22 +52,22 @@ struct GraphicsTable showtime_gfx_table[] = {
 // [D_089e38b0] Graphics Table (Remix 3)
 struct GraphicsTable showtime_remix_3_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &showtime_graphics_08c56bd8,
+        /* Src.  */ &showtime_remix_3_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &showtime_graphics_08c57650,
+        /* Src.  */ &showtime_remix_3_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &showtime_graphics_08c577d8,
+        /* Src.  */ &showtime_remix_3_bg_map_water,
         /* Dest. */ BG_MAP_BASE(0xF000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &showtime_graphics_08c54f7c,
+        /* Src.  */ &showtime_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },

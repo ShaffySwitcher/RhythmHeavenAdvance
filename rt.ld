@@ -1975,9 +1975,9 @@ SECTIONS {
         build/games/night_walk/graphics/night_walk_prologue_obj.4bpp.c.o(.data*);
         build/games/night_walk/graphics/night_walk_prologue_bg_tiles.4bpp.c.o(.data*);
         build/games/night_walk/graphics/night_walk_prologue_bg_map.tilemap.c.o(.data*);
-        build/games/showtime/graphics/showtime_prologue_graphics_08bec134.4bpp.c.o(.data*);
-        build/games/showtime/graphics/showtime_prologue_graphics_08bed0ec.4bpp.c.o(.data*);
-        build/games/showtime/graphics/showtime_prologue_graphics_08bed4e4.tilemap.c.o(.data*);
+        build/games/showtime/graphics/showtime_prologue_obj.4bpp.c.o(.data*);
+        build/games/showtime/graphics/showtime_prologue_bg_tiles.4bpp.c.o(.data*);
+        build/games/showtime/graphics/showtime_prologue_bg_map.tilemap.c.o(.data*);
         build/games/bouncy_road/graphics/bouncy_road_prologue_obj.4bpp.c.o(.data*);
         build/games/bouncy_road/graphics/bouncy_road_prologue_bg_tiles.4bpp.c.o(.data*);
         build/games/bouncy_road/graphics/bouncy_road_prologue_bg_map.tilemap.c.o(.data*);
@@ -1994,13 +1994,13 @@ SECTIONS {
         build/games/clappy_trio/graphics/snappy_trio_prologue_bg_tiles.4bpp.c.o(.data*);
         build/games/clappy_trio/graphics/snappy_trio_prologue_bg_map.tilemap.c.o(.data*);
 #if REV < 1
-        build/games/samurai_slice/graphics/samurai_slice_prologue_graphics_08bf6678.4bpp.c.o(.data*);
+        build/games/samurai_slice/graphics/samurai_slice_prologue_obj.4bpp.c.o(.data*);
 #else
-        build/games/samurai_slice/graphics/samurai_slice_prologue_graphics_08bf6678_rev1.4bpp.c.o(.data*);
+        build/games/samurai_slice/graphics/samurai_slice_prologue_obj_rev1.4bpp.c.o(.data*);
 #endif
-        build/games/samurai_slice/graphics/samurai_slice_prologue_graphics_08bf7aa4.4bpp.c.o(.data*);
-        build/games/samurai_slice/graphics/samurai_slice_prologue_graphics_08bf7d5c.tilemap.c.o(.data*);
-        build/games/samurai_slice/graphics/samurai_slice_prologue_graphics_08bf7f04.tilemap.c.o(.data*);
+        build/games/samurai_slice/graphics/samurai_slice_prologue_bg_tiles.4bpp.c.o(.data*);
+        build/games/samurai_slice/graphics/samurai_slice_prologue_bg_map_slice.tilemap.c.o(.data*);
+        build/games/samurai_slice/graphics/samurai_slice_prologue_bg_map.tilemap.c.o(.data*);
         build/games/power_calligraphy/graphics/power_calligraphy_prologue_obj.4bpp.c.o(.data*);
         build/games/power_calligraphy/graphics/power_calligraphy_prologue_bg_tiles.4bpp.c.o(.data*);
         build/games/power_calligraphy/graphics/power_calligraphy_prologue_bg_map.tilemap.c.o(.data*);
@@ -2145,13 +2145,13 @@ SECTIONS {
         build/games/drum_studio/graphics/drum_studio_bg_map_lessons.tilemap.c.o(.data*);
         build/games/night_walk/graphics/night_walk_obj.4bpp.c.o(.data*);
         build/games/night_walk/graphics/night_walk_bg_map.tilemap.c.o(.data*);
-        build/games/showtime/graphics/showtime_graphics_08c54f7c.4bpp.c.o(.data*);
-        build/games/showtime/graphics/showtime_graphics_08c551e8.4bpp.c.o(.data*);
-        build/games/showtime/graphics/showtime_graphics_08c56bd8.4bpp.c.o(.data*);
-        build/games/showtime/graphics/showtime_graphics_08c57038.tilemap.c.o(.data*);
-        build/games/showtime/graphics/showtime_graphics_08c571c0.tilemap.c.o(.data*);
-        build/games/showtime/graphics/showtime_graphics_08c57650.tilemap.c.o(.data*);
-        build/games/showtime/graphics/showtime_graphics_08c577d8.tilemap.c.o(.data*);
+        build/games/showtime/graphics/showtime_obj.4bpp.c.o(.data*);
+        build/games/showtime/graphics/showtime_bg_tiles.4bpp.c.o(.data*);
+        build/games/showtime/graphics/showtime_remix_3_bg_tiles.4bpp.c.o(.data*);
+        build/games/showtime/graphics/showtime_bg_map.tilemap.c.o(.data*);
+        build/games/showtime/graphics/showtime_bg_map_water.tilemap.c.o(.data*);
+        build/games/showtime/graphics/showtime_remix_3_bg_map.tilemap.c.o(.data*);
+        build/games/showtime/graphics/showtime_remix_3_bg_map_water.tilemap.c.o(.data*);
         build/games/bouncy_road/graphics/bouncy_road_obj.4bpp.c.o(.data*);
         build/games/bouncy_road/graphics/bouncy_road_remix_5_bg_tiles.4bpp.c.o(.data*);
         build/games/bouncy_road/graphics/bouncy_road_remix_5_bg_map_1.tilemap.c.o(.data*);
@@ -2180,11 +2180,11 @@ SECTIONS {
         build/games/clappy_trio/graphics/snappy_trio_obj.4bpp.c.o(.data*);
         build/games/clappy_trio/graphics/snappy_trio_bg_tiles.4bpp.c.o(.data*);
         build/games/clappy_trio/graphics/snappy_trio_bg_map.tilemap.c.o(.data*);
-        build/games/samurai_slice/graphics/samurai_slice_graphics_08c658dc.4bpp.c.o(.data*);
-        build/games/samurai_slice/graphics/samurai_slice_graphics_08c66b54.4bpp.c.o(.data*);
-        build/games/samurai_slice/graphics/samurai_slice_graphics_08c66d24.tilemap.c.o(.data*);
-        build/games/samurai_slice/graphics/samurai_slice_graphics_08c66fbc.tilemap.c.o(.data*);
-        build/games/samurai_slice/graphics/samurai_slice_graphics_08c67314.tilemap.c.o(.data*);
+        build/games/samurai_slice/graphics/samurai_slice_obj.4bpp.c.o(.data*);
+        build/games/samurai_slice/graphics/samurai_slice_bg_tiles.4bpp.c.o(.data*);
+        build/games/samurai_slice/graphics/samurai_slice_bg_map_fog_top.tilemap.c.o(.data*);
+        build/games/samurai_slice/graphics/samurai_slice_bg_map_fog_bottom.tilemap.c.o(.data*);
+        build/games/samurai_slice/graphics/samurai_slice_bg_map.tilemap.c.o(.data*);
         build/games/power_calligraphy/graphics/power_calligraphy_obj.4bpp.c.o(.data*);
         build/games/power_calligraphy/graphics/power_calligraphy_bg_tiles.4bpp.c.o(.data*);
         build/games/power_calligraphy/graphics/power_calligraphy_obj_dancers.4bpp.c.o(.data*);
