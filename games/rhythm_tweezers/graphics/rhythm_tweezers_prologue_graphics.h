@@ -9,9 +9,9 @@ extern struct Animation anim_rhythm_tweezers_prologue_title[];
 
 /* PROLOGUE (RHYTHM TWEEZERS) - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics rhythm_tweezers_prologue_graphics_08beefac;
-extern struct CompressedGraphics rhythm_tweezers_prologue_graphics_08bef2ac;
-extern struct CompressedGraphics rhythm_tweezers_prologue_graphics_08bee62c;
+extern struct CompressedGraphics rhythm_tweezers_prologue_bg_tiles;
+extern struct CompressedGraphics rhythm_tweezers_prologue_bg_map;
+extern struct CompressedGraphics rhythm_tweezers_prologue_obj;
 
 /* PROLOGUE (RHYTHM TWEEZERS) - PALETTES */
 
