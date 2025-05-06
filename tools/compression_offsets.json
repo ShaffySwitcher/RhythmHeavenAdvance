@@ -1,36 +1,36 @@
 {
-    "rap_men_graphics_08c84ce4": [
+    "rap_women_obj": [
         13118724,
         13118672
     ],
-    "rap_men_prologue_graphics_08c2052c": [
+    "rap_men_prologue_bg_tiles": [
         12711108,
         12711056,
         4
     ],
-    "rap_men_prologue_graphics_08c1f4b4": [
+    "rap_men_prologue_obj": [
         12710680,
         12710628
     ],
-    "rap_men_graphics_08c84f54": [
+    "rap_women_bg_tiles": [
         13126900,
         13126848,
         44
     ],
-    "rap_men_prologue_graphics_08c209cc": [
+    "rap_women_prologue_obj": [
         12715996,
         12715944
     ],
-    "rap_men_prologue_graphics_08c20f8c": [
+    "rap_women_prologue_bg_tiles": [
         12716508,
         12716456,
         4
     ],
-    "rap_men_graphics_08c82710": [
+    "rap_men_obj": [
         13107808,
         13107756
     ],
-    "rap_men_graphics_08c82980": [
+    "rap_men_bg_tiles": [
         13117216,
         13117164,
         44
@@ -589,21 +589,21 @@
         13093052,
         168
     ],
-    "rat_race_graphics_08c86e74": [
+    "rat_race_obj": [
         13128408,
         13128356
     ],
-    "rat_race_graphics_08c87fb0": [
+    "rat_race_bg_tiles": [
         13135492,
         13135440,
         120
     ],
-    "rat_race_prologue_graphics_08c22764": [
+    "rat_race_prologue_bg_tiles": [
         12722072,
         12722020,
         8
     ],
-    "rat_race_prologue_graphics_08c21f88": [
+    "rat_race_prologue_obj": [
         12718692,
         12718640
     ],

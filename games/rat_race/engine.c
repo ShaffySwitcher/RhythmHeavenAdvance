@@ -12,37 +12,37 @@ struct CompressedGraphics *rat_race_buffered_textures[] = {
 // [D_089e6638] Graphics Table
 struct GraphicsTable rat_race_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &rat_race_graphics_08c87fb0,
+        /* Src.  */ &rat_race_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &rat_race_graphics_08c880b8,
+        /* Src.  */ &rat_race_bg_map_near,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &rat_race_graphics_08c88148,
+        /* Src.  */ &rat_race_bg_map_middle,
         /* Dest. */ BG_MAP_BASE(0xF000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &rat_race_graphics_08c88168,
+        /* Src.  */ &rat_race_bg_map_far,
         /* Dest. */ BG_MAP_BASE(0xF800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
-    /* BG Tileset */ {
-        /* Src.  */ &rat_race_graphics_08c88420,
-        /* Dest. */ BG_TILESET_BASE(0xC000),
+    /* BG Map */ {
+        /* Src.  */ &rat_race_bg_map_cheese,
+        /* Dest. */ BG_MAP_BASE(0xC000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &rat_race_graphics_08c88530,
+        /* Src.  */ &rat_race_bg_map_cat,
         /* Dest. */ BG_MAP_BASE(0xD000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &rat_race_graphics_08c86e74,
+        /* Src.  */ &rat_race_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
