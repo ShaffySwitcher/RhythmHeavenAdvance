@@ -12,17 +12,17 @@ struct CompressedGraphics *quiz_show_prologue_buffered_textures[] = {
 // [D_089ebb80] Graphics Table
 struct GraphicsTable quiz_show_prologue_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &quiz_show_prologue_graphics_08c04434,
+        /* Src.  */ &quiz_show_prologue_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &quiz_show_prologue_graphics_08c04940,
+        /* Src.  */ &quiz_show_prologue_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &quiz_show_prologue_graphics_08c02a34,
+        /* Src.  */ &quiz_show_prologue_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },

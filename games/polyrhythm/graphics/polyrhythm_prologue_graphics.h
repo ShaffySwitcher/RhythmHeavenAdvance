@@ -9,9 +9,9 @@ extern struct Animation anim_polyrhythm_prologue_title[];
 
 /* PROLOGUE (POLYRHYTHM) - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics polyrhythm_prologue_graphics_08c0212c;
-extern struct CompressedGraphics polyrhythm_prologue_graphics_08c02628;
-extern struct CompressedGraphics polyrhythm_prologue_graphics_08c00010;
+extern struct CompressedGraphics polyrhythm_prologue_bg_tiles;
+extern struct CompressedGraphics polyrhythm_prologue_bg_map;
+extern struct CompressedGraphics polyrhythm_prologue_obj;
 
 /* PROLOGUE (POLYRHYTHM) - PALETTES */
 

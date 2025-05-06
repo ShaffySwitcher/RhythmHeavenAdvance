@@ -12,32 +12,32 @@ struct CompressedGraphics *quiz_show_buffered_textures[] = {
 // [D_089e5d30] Graphics Table
 struct GraphicsTable quiz_show_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &quiz_show_graphics_08c7d2ac,
+        /* Src.  */ &quiz_show_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &quiz_show_graphics_08c7db1c,
+        /* Src.  */ &quiz_show_bg_map_spotlight,
         /* Dest. */ BG_MAP_BASE(0xE000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &quiz_show_graphics_08c7da68,
+        /* Src.  */ &quiz_show_bg_map_text_bubble,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &quiz_show_graphics_08c7d524,
+        /* Src.  */ &quiz_show_bg_map_stands,
         /* Dest. */ BG_MAP_BASE(0xF000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &quiz_show_graphics_08c7d9d0,
+        /* Src.  */ &quiz_show_bg_map,
         /* Dest. */ BG_MAP_BASE(0xF800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &quiz_show_graphics_08c7c8e0,
+        /* Src.  */ &quiz_show_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
