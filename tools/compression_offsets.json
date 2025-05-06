@@ -856,15 +856,15 @@
         12825900,
         12825848
     ],
-    "tap_trial_graphics_08ce989c": [
+    "tap_trial_obj": [
         13529496,
         13529444
     ],
-    "tap_trial_graphics_08cf5d0c": [
+    "tap_trial_2_obj": [
         13579348,
         13579296
     ],
-    "tap_trial_graphics_08cf6048": [
+    "tap_trial_2_bg_tiles": [
         13589788,
         13589736,
         136
@@ -874,7 +874,7 @@
         12739356,
         8
     ],
-    "tap_trial_graphics_08ce9bc8": [
+    "tap_trial_bg_tiles": [
         13539500,
         13539448,
         136
@@ -883,11 +883,11 @@
         12737208,
         12737156
     ],
-    "tap_trial_graphics_08cef378": [
+    "tap_trial_remix_7_obj": [
         13553220,
         13553168
     ],
-    "tap_trial_graphics_08cec8d8": [
+    "tap_trial_remix_8_obj": [
         13541652,
         13541600
     ],
@@ -895,7 +895,7 @@
         12746292,
         12746240
     ],
-    "tap_trial_graphics_08cecba0": [
+    "tap_trial_remix_8_bg_tiles": [
         13551848,
         13551796,
         136
@@ -905,16 +905,16 @@
         12748784,
         8
     ],
-    "tap_trial_graphics_08cf0ed0": [
+    "tap_trial_remix_5_bg_tiles": [
         13567748,
         13567696
     ],
-    "tap_trial_graphics_08cf3088": [
+    "tap_trial_remix_5_obj": [
         13569760,
         13569708,
         136
     ],
-    "tap_trial_graphics_08cf01e0": [
+    "tap_trial_remix_7_bg_tiles": [
         13562760,
         13562708,
         136
