@@ -12,10 +12,10 @@ extern struct Animation anim_cafe_text_adv_icon[];
 
 /* CAFE - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics cafe_graphics_08cc0c30;
-extern struct CompressedGraphics cafe_graphics_08cc0cf0;
-extern struct CompressedGraphics cafe_graphics_08cc1158;
-extern struct CompressedGraphics cafe_graphics_08cbf0e8;
+extern struct CompressedGraphics cafe_bg_tiles;
+extern struct CompressedGraphics cafe_bg_map_text_bubble;
+extern struct CompressedGraphics cafe_bg_map;
+extern struct CompressedGraphics cafe_obj;
 
 /* CAFE - PALETTES */
 
