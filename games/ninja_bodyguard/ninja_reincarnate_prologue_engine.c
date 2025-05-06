@@ -12,17 +12,17 @@ struct CompressedGraphics *ninja_reincarnate_prologue_buffered_textures[] = {
 // [D_089ed2c8] Graphics Table
 struct GraphicsTable ninja_reincarnate_prologue_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &ninja_bodyguard_prologue_graphics_08c24604,
+        /* Src.  */ &ninja_reincarnate_prologue_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &ninja_bodyguard_prologue_graphics_08c24804,
+        /* Src.  */ &ninja_reincarnate_prologue_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &ninja_bodyguard_prologue_graphics_08c24200,
+        /* Src.  */ &ninja_reincarnate_prologue_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
