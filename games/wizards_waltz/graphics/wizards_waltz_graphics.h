@@ -26,9 +26,9 @@ extern struct Animation anim_wizards_waltz_sprout_appear_tutorial[];
 
 /* WIZARD'S WALTZ - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics wizards_waltz_graphics_08d1d750;
-extern struct CompressedGraphics wizards_waltz_graphics_08d1d8d8;
-extern struct CompressedGraphics wizards_waltz_graphics_08d1d3c4;
+extern struct CompressedGraphics wizards_waltz_bg_tiles;
+extern struct CompressedGraphics wizards_waltz_bg_map;
+extern struct CompressedGraphics wizards_waltz_obj;
 
 /* WIZARD'S WALTZ - PALETTES */
 

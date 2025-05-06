@@ -2623,9 +2623,9 @@ SECTIONS {
         build/games/sick_beats/graphics/sick_beats_bg_map_foreground.tilemap.c.o(.data*);
         build/graphics/warning/warning_graphics_08d1ad4c.4bpp.c.o(.data*);
         build/graphics/warning/warning_graphics_08d1b00c.tilemap.c.o(.data*);
-        build/games/wizards_waltz/graphics/wizards_waltz_graphics_08d1d3c4.4bpp.c.o(.data*);
-        build/games/wizards_waltz/graphics/wizards_waltz_graphics_08d1d750.4bpp.c.o(.data*);
-        build/games/wizards_waltz/graphics/wizards_waltz_graphics_08d1d8d8.tilemap.c.o(.data*);
+        build/games/wizards_waltz/graphics/wizards_waltz_obj.4bpp.c.o(.data*);
+        build/games/wizards_waltz/graphics/wizards_waltz_bg_tiles.4bpp.c.o(.data*);
+        build/games/wizards_waltz/graphics/wizards_waltz_bg_map.tilemap.c.o(.data*);
         build/games/ninja_bodyguard/graphics/ninja_reincarnate_bg_tiles.4bpp.c.o(.data*);
         build/games/ninja_bodyguard/graphics/ninja_reincarnate_obj.4bpp.c.o(.data*);
         build/games/ninja_bodyguard/graphics/ninja_reincarnate_bg_map_r.tilemap.c.o(.data*);

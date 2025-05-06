@@ -12,17 +12,17 @@ struct CompressedGraphics *wizards_waltz_buffered_textures[] = {
 // [D_089e9f14] Graphics Table
 struct GraphicsTable gfx_table_wizards_waltz[] = {
     /* BG Tileset */ {
-        /* Src.  */ &wizards_waltz_graphics_08d1d750,
+        /* Src.  */ &wizards_waltz_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &wizards_waltz_graphics_08d1d8d8,
+        /* Src.  */ &wizards_waltz_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &wizards_waltz_graphics_08d1d3c4,
+        /* Src.  */ &wizards_waltz_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
