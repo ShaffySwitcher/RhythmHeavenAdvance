@@ -36,13 +36,13 @@ extern struct Animation anim_showtime_monkey_sad_swing[];
 
 /* SHOWTIME - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics showtime_graphics_08c551e8;
-extern struct CompressedGraphics showtime_graphics_08c57038;
-extern struct CompressedGraphics showtime_graphics_08c571c0;
-extern struct CompressedGraphics showtime_graphics_08c54f7c;
-extern struct CompressedGraphics showtime_graphics_08c56bd8;
-extern struct CompressedGraphics showtime_graphics_08c57650;
-extern struct CompressedGraphics showtime_graphics_08c577d8;
+extern struct CompressedGraphics showtime_bg_tiles;
+extern struct CompressedGraphics showtime_bg_map;
+extern struct CompressedGraphics showtime_bg_map_water;
+extern struct CompressedGraphics showtime_obj;
+extern struct CompressedGraphics showtime_remix_3_bg_tiles;
+extern struct CompressedGraphics showtime_remix_3_bg_map;
+extern struct CompressedGraphics showtime_remix_3_bg_map_water;
 
 /* SHOWTIME - PALETTES */
 

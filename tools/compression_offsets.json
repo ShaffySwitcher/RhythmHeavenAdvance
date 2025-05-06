@@ -71,24 +71,24 @@
         12981808,
         44
     ],
-    "showtime_prologue_graphics_08bec134": [
+    "showtime_prologue_obj": [
         12499940,
         12499892
     ],
-    "showtime_graphics_08c551e8": [
+    "showtime_bg_tiles": [
         12930956,
         12930904
     ],
-    "showtime_graphics_08c54f7c": [
+    "showtime_obj": [
         12920076,
         12920024
     ],
-    "showtime_prologue_graphics_08bed0ec": [
+    "showtime_prologue_bg_tiles": [
         12501316,
         12501268,
         8
     ],
-    "showtime_graphics_08c56bd8": [
+    "showtime_remix_3_bg_tiles": [
         12931576,
         12931524,
         112
@@ -968,25 +968,25 @@
         13751200,
         72
     ],
-    "samurai_slice_graphics_08c658dc": [
+    "samurai_slice_obj": [
         12990704,
         12990652
     ],
-    "samurai_slice_prologue_graphics_08bf7aa4": [
+    "samurai_slice_prologue_bg_tiles": [
         12543624,
         12543572,
         4
     ],
-    "samurai_slice_prologue_graphics_08bf6678": [
+    "samurai_slice_prologue_obj": [
         12542168,
         12542120
     ],
-    "samurai_slice_graphics_08c66b54": [
+    "samurai_slice_bg_tiles": [
         12998892,
         12998840,
         128
     ],
-    "samurai_slice_prologue_graphics_08bf6678_rev1": [
+    "samurai_slice_prologue_obj_rev1": [
         12542168,
         12542120
     ],
