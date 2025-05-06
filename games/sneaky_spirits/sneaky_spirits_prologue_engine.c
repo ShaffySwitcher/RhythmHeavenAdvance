@@ -12,17 +12,17 @@ struct CompressedGraphics *sneaky_spirits_prologue_buffered_textures[] = {
 // [D_089ea08c] Graphics Table
 struct GraphicsTable sneaky_spirits_prologue_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &sneaky_spirits_prologue_graphics_08be1c50,
+        /* Src.  */ &sneaky_spirits_prologue_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &sneaky_spirits_prologue_graphics_08be1dfc,
+        /* Src.  */ &sneaky_spirits_prologue_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &sneaky_spirits_prologue_graphics_08be0ff8,
+        /* Src.  */ &sneaky_spirits_prologue_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },

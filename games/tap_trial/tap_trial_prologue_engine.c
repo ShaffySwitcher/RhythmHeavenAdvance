@@ -12,17 +12,17 @@ struct CompressedGraphics *tap_trial_prologue_buffered_textures[] = {
 // [D_089ed54c] Graphics Table
 struct GraphicsTable tap_trial_prologue_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &tap_trial_prologue_graphics_08c279e0,
+        /* Src.  */ &tap_trial_prologue_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &tap_trial_prologue_graphics_08c27e24,
+        /* Src.  */ &tap_trial_prologue_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &tap_trial_prologue_graphics_08c26340,
+        /* Src.  */ &tap_trial_prologue_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },

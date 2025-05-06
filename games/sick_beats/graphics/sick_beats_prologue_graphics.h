@@ -11,9 +11,9 @@ extern struct Animation anim_sick_beats_prologue_unused[];
 
 /* PROLOGUE (SICK BEATS) - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics sick_beats_prologue_graphics_08c33214;
-extern struct CompressedGraphics sick_beats_prologue_graphics_08c3355c;
-extern struct CompressedGraphics sick_beats_prologue_graphics_08c31e6c;
+extern struct CompressedGraphics sick_beats_prologue_bg_tiles;
+extern struct CompressedGraphics sick_beats_prologue_bg_map;
+extern struct CompressedGraphics sick_beats_prologue_obj;
 
 /* PROLOGUE (SICK BEATS) - PALETTES */
 

@@ -10,9 +10,9 @@ extern struct Animation anim_tram_pauline_prologue_title[];
 
 /* PROLOGUE (TRAM AND PAULINE) - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics tram_pauline_prologue_graphics_08c3106c;
-extern struct CompressedGraphics tram_pauline_prologue_graphics_08c3153c;
-extern struct CompressedGraphics tram_pauline_prologue_graphics_08c30910;
+extern struct CompressedGraphics tram_pauline_prologue_bg_tiles;
+extern struct CompressedGraphics tram_pauline_prologue_bg_map;
+extern struct CompressedGraphics tram_pauline_prologue_obj;
 
 /* PROLOGUE (TRAM AND PAULINE) - PALETTES */
 
