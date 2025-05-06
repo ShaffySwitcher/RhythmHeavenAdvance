@@ -12,17 +12,17 @@ struct CompressedGraphics *toss_boys_2_prologue_buffered_textures[] = {
 // [D_089ed9f0] Graphics Table
 struct GraphicsTable toss_boys_2_prologue_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &toss_boys_prologue_graphics_08c2fc5c,
+        /* Src.  */ &toss_boys_2_prologue_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &toss_boys_prologue_graphics_08c30048,
+        /* Src.  */ &toss_boys_2_prologue_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &toss_boys_prologue_graphics_08c2de80,
+        /* Src.  */ &toss_boys_2_prologue_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },

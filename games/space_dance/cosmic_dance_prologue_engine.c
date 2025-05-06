@@ -12,17 +12,17 @@ struct CompressedGraphics *cosmic_dance_prologue_buffered_textures[] = {
 // [D_089ea868] Graphics Table
 struct GraphicsTable cosmic_dance_prologue_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &cosmic_dance_prologue_graphics_08beb2f8,
+        /* Src.  */ &cosmic_dance_prologue_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &cosmic_dance_prologue_graphics_08beb48c,
+        /* Src.  */ &cosmic_dance_prologue_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &cosmic_dance_prologue_graphics_08beaf78,
+        /* Src.  */ &cosmic_dance_prologue_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },

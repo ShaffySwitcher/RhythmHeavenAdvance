@@ -11,9 +11,9 @@ extern struct Animation anim_space_dance_prologue_faces[];
 
 /* PROLOGUE (SPACE DANCE) - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics space_dance_prologue_graphics_08c2575c;
-extern struct CompressedGraphics space_dance_prologue_graphics_08c25aa8;
-extern struct CompressedGraphics space_dance_prologue_graphics_08c24f60;
+extern struct CompressedGraphics space_dance_prologue_bg_tiles;
+extern struct CompressedGraphics space_dance_prologue_bg_map;
+extern struct CompressedGraphics space_dance_prologue_obj;
 
 /* PROLOGUE (SPACE DANCE) - PALETTES */
 
@@ -26,9 +26,9 @@ extern struct Animation anim_cosmic_dance_prologue_dancer[];
 
 /* PROLOGUE (COSMIC DANCE) - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics cosmic_dance_prologue_graphics_08beb2f8;
-extern struct CompressedGraphics cosmic_dance_prologue_graphics_08beb48c;
-extern struct CompressedGraphics cosmic_dance_prologue_graphics_08beaf78;
+extern struct CompressedGraphics cosmic_dance_prologue_bg_tiles;
+extern struct CompressedGraphics cosmic_dance_prologue_bg_map;
+extern struct CompressedGraphics cosmic_dance_prologue_obj;
 
 /* PROLOGUE (COSMIC DANCE) - PALETTES */
 

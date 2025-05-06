@@ -734,11 +734,11 @@
         12510524,
         12510476
     ],
-    "sick_beats_prologue_graphics_08c31e6c": [
+    "sick_beats_prologue_obj": [
         12784972,
         12784920
     ],
-    "sick_beats_prologue_graphics_08c33214": [
+    "sick_beats_prologue_bg_tiles": [
         12787324,
         12787272,
         12
@@ -752,7 +752,7 @@
         12389592,
         12389544
     ],
-    "sneaky_spirits_prologue_graphics_08be1c50": [
+    "sneaky_spirits_prologue_bg_tiles": [
         12455944,
         12455896,
         4
@@ -762,11 +762,11 @@
         12395580,
         80
     ],
-    "sneaky_spirits_prologue_graphics_08be0ff8": [
+    "sneaky_spirits_prologue_obj": [
         12455160,
         12455112
     ],
-    "cosmic_dance_prologue_graphics_08beb2f8": [
+    "cosmic_dance_prologue_bg_tiles": [
         12496776,
         12496728,
         8
@@ -780,15 +780,15 @@
         12816188,
         164
     ],
-    "space_dance_prologue_graphics_08c24f60": [
+    "space_dance_prologue_obj": [
         12732436,
         12732384
     ],
-    "cosmic_dance_prologue_graphics_08beaf78": [
+    "cosmic_dance_prologue_obj": [
         12495772,
         12495724
     ],
-    "space_dance_prologue_graphics_08c2575c": [
+    "space_dance_prologue_bg_tiles": [
         12734320,
         12734268,
         12
@@ -806,7 +806,7 @@
         13511036,
         13510984
     ],
-    "spaceball_prologue_graphics_08be2298": [
+    "spaceball_prologue_obj": [
         12459532,
         12459484
     ],
@@ -815,7 +815,7 @@
         12406352,
         88
     ],
-    "spaceball_prologue_graphics_08be2fd8": [
+    "spaceball_prologue_bg_tiles": [
         12460712,
         12460664,
         4
@@ -869,7 +869,7 @@
         13589736,
         136
     ],
-    "tap_trial_prologue_graphics_08c279e0": [
+    "tap_trial_prologue_bg_tiles": [
         12739408,
         12739356,
         8
@@ -879,7 +879,7 @@
         13539448,
         136
     ],
-    "tap_trial_prologue_graphics_08c26340": [
+    "tap_trial_prologue_obj": [
         12737208,
         12737156
     ],
@@ -891,7 +891,7 @@
         13541652,
         13541600
     ],
-    "tap_trial_prologue_graphics_08c28814": [
+    "tap_trial_2_prologue_obj": [
         12746292,
         12746240
     ],
@@ -900,7 +900,7 @@
         13551796,
         136
     ],
-    "tap_trial_prologue_graphics_08c2990c": [
+    "tap_trial_2_prologue_bg_tiles": [
         12748836,
         12748784,
         8
@@ -919,7 +919,7 @@
         13562708,
         136
     ],
-    "tram_pauline_prologue_graphics_08c30910": [
+    "tram_pauline_prologue_obj": [
         12779608,
         12779556
     ],
@@ -936,7 +936,7 @@
         13652652,
         156
     ],
-    "tram_pauline_prologue_graphics_08c3106c": [
+    "tram_pauline_prologue_bg_tiles": [
         12781856,
         12781804,
         8
@@ -950,11 +950,11 @@
         13641792,
         140
     ],
-    "wizards_waltz_prologue_graphics_08c33640": [
+    "wizards_waltz_prologue_obj": [
         12793196,
         12793144
     ],
-    "wizards_waltz_prologue_graphics_08c339dc": [
+    "wizards_waltz_prologue_bg_tiles": [
         12793424,
         12793372,
         4
@@ -994,12 +994,12 @@
         13600492,
         13600440
     ],
-    "toss_boys_prologue_graphics_08c2d448": [
+    "toss_boys_prologue_bg_tiles": [
         12755480,
         12755428,
         4
     ],
-    "toss_boys_prologue_graphics_08c2de80": [
+    "toss_boys_2_prologue_obj": [
         12769648,
         12769596
     ],
@@ -1008,7 +1008,7 @@
         13624212,
         164
     ],
-    "toss_boys_prologue_graphics_08c2a208": [
+    "toss_boys_prologue_obj": [
         12754168,
         12754116
     ],
@@ -1043,7 +1043,7 @@
         13622484,
         13622432
     ],
-    "toss_boys_prologue_graphics_08c2fc5c": [
+    "toss_boys_2_prologue_bg_tiles": [
         12770960,
         12770908,
         4
