@@ -990,7 +990,7 @@
         12542168,
         12542120
     ],
-    "toss_boys_graphics_08cf8918": [
+    "toss_boys_bg_tiles": [
         13600492,
         13600440
     ],
@@ -1003,7 +1003,7 @@
         12769648,
         12769596
     ],
-    "toss_boys_graphics_08cff0bc": [
+    "toss_boys_2_action_lines_bg_tiles": [
         13624264,
         13624212,
         164
@@ -1012,34 +1012,34 @@
         12754168,
         12754116
     ],
-    "toss_boys_graphics_08cfc9e8_rev1": [
+    "toss_boys_remix_5_obj_rev1": [
         13608992,
         13608940,
         180
     ],
-    "toss_boys_graphics_08cfc9e8": [
+    "toss_boys_remix_5_obj": [
         13608992,
         13608940,
         180
     ],
-    "toss_boys_graphics_08cf86dc": [
+    "toss_boys_obj": [
         13595288,
         13595236
     ],
-    "toss_boys_graphics_08cfa810": [
+    "toss_boys_remix_5_bg_tiles": [
         13608476,
         13608424
     ],
-    "toss_boys_graphics_08cf961c": [
+    "toss_boys_action_lines_bg_tiles": [
         13601064,
         13601012,
         152
     ],
-    "toss_boys_graphics_08cfdcc4": [
+    "toss_boys_2_obj": [
         13618092,
         13618040
     ],
-    "toss_boys_graphics_08cfe3b8": [
+    "toss_boys_2_bg_tiles": [
         13622484,
         13622432
     ],
