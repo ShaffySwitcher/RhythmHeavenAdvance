@@ -1048,68 +1048,68 @@
         12770908,
         4
     ],
-    "arrival_graphics_08cbed78": [
+    "arrival_bg_tiles": [
         13363008,
         13362956,
         8
     ],
-    "cafe_graphics_08cbf0e8": [
+    "cafe_obj": [
         13365236,
         13365184
     ],
-    "cafe_graphics_08cc0c30": [
+    "cafe_bg_tiles": [
         13365496,
         13365444,
         16
     ],
-    "data_room_graphics_08cce92c": [
+    "reading_style_cooking_bg_tiles": [
         13428108,
         13428056
     ],
-    "data_room_graphics_08cccb04": [
+    "reading_obj": [
         13421200,
         13421148,
         12
     ],
-    "data_room_graphics_08cd0a10": [
+    "reading_style_classroom_bg_tiles": [
         13433452,
         13433400
     ],
-    "data_room_graphics_08cd1d28": [
+    "reading_style_train_bg_tiles": [
         13438216,
         13438164
     ],
-    "data_room_graphics_08cceda8": [
+    "reading_style_mail_bg_tiles": [
         13429608,
         13429556
     ],
-    "data_room_menu_graphics_08cc77a4": [
+    "data_room_bg_tiles": [
         13398848,
         13398796,
         24
     ],
-    "data_room_graphics_08cd29ac": [
+    "reading_style_cherry_bg_tiles": [
         13443548,
         13443496,
         8
     ],
-    "data_room_graphics_08ccd074": [
+    "reading_style_bulletin_bg_tiles": [
         13421344,
         13421292
     ],
-    "data_room_graphics_08cce120": [
+    "reading_style_manzai_bg_tiles": [
         13423456,
         13423404
     ],
-    "data_room_graphics_08ccf798": [
+    "reading_style_haiku_bg_tiles": [
         13430652,
         13430600
     ],
-    "data_room_graphics_08cd31d8": [
+    "reading_style_sea_bg_tiles": [
         13446428,
         13446376
     ],
-    "data_room_menu_graphics_08cc7330": [
+    "data_room_obj": [
         13397212,
         13397160
     ],

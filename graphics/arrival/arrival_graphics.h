@@ -10,8 +10,8 @@ extern struct Animation anim_arrival_option2[];
 
 /* LIBRARY - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics arrival_graphics_08cbed78;
-extern struct CompressedGraphics arrival_graphics_08cbefe4;
+extern struct CompressedGraphics arrival_bg_tiles;
+extern struct CompressedGraphics arrival_bg_map;
 
 /* LIBRARY - PALETTES */
 
