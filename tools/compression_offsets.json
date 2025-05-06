@@ -923,15 +923,15 @@
         12779608,
         12779556
     ],
-    "tram_pauline_graphics_08d02100": [
+    "tram_pauline_remix_3_obj": [
         13631848,
         13631796
     ],
-    "tram_pauline_graphics_08d052d0": [
+    "tram_pauline_obj": [
         13643568,
         13643516
     ],
-    "tram_pauline_graphics_08d058c4": [
+    "tram_pauline_bg_tiles": [
         13652704,
         13652652,
         156
@@ -941,11 +941,11 @@
         12781804,
         8
     ],
-    "tram_pauline_graphics_08d02864": [
+    "tram_pauline_remix_3_bg_tiles": [
         13639952,
         13639900
     ],
-    "tram_pauline_graphics_08d029a0": [
+    "tram_pauline_unused_bg_tiles": [
         13641844,
         13641792,
         140
