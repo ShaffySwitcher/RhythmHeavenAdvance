@@ -5,260 +5,260 @@
 
 /* EPILOGUES - COMPRESSED GRAPHICS / PALETTES */
 
-extern struct CompressedGraphics epilogues_graphics_08c89a70;
-extern struct CompressedGraphics epilogues_graphics_08c89dd4;
-extern struct CompressedGraphics epilogues_graphics_08c89cb0;
-extern struct CompressedGraphics epilogues_graphics_08c89ba4;
+extern struct CompressedGraphics sneaky_spirits_epilogue_bg_tiles;
+extern struct CompressedGraphics sneaky_spirits_epilogue_bg_map_superb;
+extern struct CompressedGraphics sneaky_spirits_epilogue_bg_map_ok;
+extern struct CompressedGraphics sneaky_spirits_epilogue_bg_map_try_again;
 extern Palette epilogue_sneaky_spirits_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08c8ac68;
-extern struct CompressedGraphics epilogues_graphics_08c8b14c;
-extern struct CompressedGraphics epilogues_graphics_08c8afd0;
-extern struct CompressedGraphics epilogues_graphics_08c8ae7c;
+extern struct CompressedGraphics spaceball_epilogue_bg_tiles;
+extern struct CompressedGraphics spaceball_epilogue_bg_map_superb;
+extern struct CompressedGraphics spaceball_epilogue_bg_map_ok;
+extern struct CompressedGraphics spaceball_epilogue_bg_map_try_again;
 extern Palette epilogue_spaceball_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08c8c564;
-extern struct CompressedGraphics epilogues_graphics_08c8c95c;
-extern struct CompressedGraphics epilogues_graphics_08c8c7e4;
-extern struct CompressedGraphics epilogues_graphics_08c8c694;
+extern struct CompressedGraphics bon_dance_epilogue_bg_tiles;
+extern struct CompressedGraphics bon_dance_epilogue_bg_map_superb;
+extern struct CompressedGraphics bon_dance_epilogue_bg_map_ok;
+extern struct CompressedGraphics bon_dance_epilogue_bg_map_try_again;
 extern Palette epilogue_bon_dance_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08c8d650;
-extern struct CompressedGraphics epilogues_graphics_08c8da08;
-extern struct CompressedGraphics epilogues_graphics_08c8d8a8;
-extern struct CompressedGraphics epilogues_graphics_08c8d7d0;
+extern struct CompressedGraphics bon_odori_epilogue_bg_tiles;
+extern struct CompressedGraphics bon_odori_epilogue_bg_map_superb;
+extern struct CompressedGraphics bon_odori_epilogue_bg_map_ok;
+extern struct CompressedGraphics bon_odori_epilogue_bg_map_try_again;
 extern Palette epilogue_bon_odori_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08c8ede0;
-extern struct CompressedGraphics epilogues_graphics_08c8f214;
-extern struct CompressedGraphics epilogues_graphics_08c8f094;
-extern struct CompressedGraphics epilogues_graphics_08c8ef24;
+extern struct CompressedGraphics karate_man_epilogue_bg_tiles;
+extern struct CompressedGraphics karate_man_epilogue_bg_map_superb;
+extern struct CompressedGraphics karate_man_epilogue_bg_map_ok;
+extern struct CompressedGraphics karate_man_epilogue_bg_map_try_again;
 extern Palette epilogue_karate_man_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08c904a0;
-extern struct CompressedGraphics epilogues_graphics_08c90910;
-extern struct CompressedGraphics epilogues_graphics_08c907a0;
-extern struct CompressedGraphics epilogues_graphics_08c90620;
+extern struct CompressedGraphics cosmic_dance_epilogue_bg_tiles;
+extern struct CompressedGraphics cosmic_dance_epilogue_bg_map_superb;
+extern struct CompressedGraphics cosmic_dance_epilogue_bg_map_ok;
+extern struct CompressedGraphics cosmic_dance_epilogue_bg_map_try_again;
 extern Palette epilogue_cosmic_dance_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08c9113c;
-extern struct CompressedGraphics epilogues_graphics_08c913b4;
-extern struct CompressedGraphics epilogues_graphics_08c912dc;
-extern struct CompressedGraphics epilogues_graphics_08c91208;
+extern struct CompressedGraphics drum_live_epilogue_bg_tiles;
+extern struct CompressedGraphics drum_live_epilogue_bg_map_superb;
+extern struct CompressedGraphics drum_live_epilogue_bg_map_ok;
+extern struct CompressedGraphics drum_live_epilogue_bg_map_try_again;
 extern Palette epilogue_drum_live_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08c91cd0;
-extern struct CompressedGraphics epilogues_graphics_08c92084;
-extern struct CompressedGraphics epilogues_graphics_08c91f04;
-extern struct CompressedGraphics epilogues_graphics_08c91e20;
+extern struct CompressedGraphics night_walk_epilogue_bg_tiles;
+extern struct CompressedGraphics night_walk_epilogue_bg_map_superb;
+extern struct CompressedGraphics night_walk_epilogue_bg_map_ok;
+extern struct CompressedGraphics night_walk_epilogue_bg_map_try_again;
 extern Palette epilogue_night_walk_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08c92fc0;
-extern struct CompressedGraphics epilogues_graphics_08c93340;
-extern struct CompressedGraphics epilogues_graphics_08c931c0;
-extern struct CompressedGraphics epilogues_graphics_08c930c4;
+extern struct CompressedGraphics showtime_epilogue_bg_tiles;
+extern struct CompressedGraphics showtime_epilogue_bg_map_superb;
+extern struct CompressedGraphics showtime_epilogue_bg_map_ok;
+extern struct CompressedGraphics showtime_epilogue_bg_map_try_again;
 extern Palette epilogue_showtime_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08c93cfc;
-extern struct CompressedGraphics epilogues_graphics_08c94064;
-extern struct CompressedGraphics epilogues_graphics_08c93f48;
-extern struct CompressedGraphics epilogues_graphics_08c93e18;
+extern struct CompressedGraphics bouncy_road_epilogue_bg_tiles;
+extern struct CompressedGraphics bouncy_road_epilogue_bg_map_superb;
+extern struct CompressedGraphics bouncy_road_epilogue_bg_map_ok;
+extern struct CompressedGraphics bouncy_road_epilogue_bg_map_try_again;
 extern Palette epilogue_bouncy_road_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08c9582c;
-extern struct CompressedGraphics epilogues_graphics_08c95c8c;
-extern struct CompressedGraphics epilogues_graphics_08c95b24;
-extern struct CompressedGraphics epilogues_graphics_08c959ac;
+extern struct CompressedGraphics rhythm_tweezers_epilogue_bg_tiles;
+extern struct CompressedGraphics rhythm_tweezers_epilogue_bg_map_superb;
+extern struct CompressedGraphics rhythm_tweezers_epilogue_bg_map_ok;
+extern struct CompressedGraphics rhythm_tweezers_epilogue_bg_map_try_again;
 extern Palette epilogue_rhythm_tweezers_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08c96e80;
-extern struct CompressedGraphics epilogues_graphics_08c972dc;
-extern struct CompressedGraphics epilogues_graphics_08c9715c;
-extern struct CompressedGraphics epilogues_graphics_08c96ff4;
+extern struct CompressedGraphics fireworks_epilogue_bg_tiles;
+extern struct CompressedGraphics fireworks_epilogue_bg_map_superb;
+extern struct CompressedGraphics fireworks_epilogue_bg_map_ok;
+extern struct CompressedGraphics fireworks_epilogue_bg_map_try_again;
 extern Palette epilogue_fireworks_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08c98078;
-extern struct CompressedGraphics epilogues_graphics_08c98448;
-extern struct CompressedGraphics epilogues_graphics_08c982d0;
-extern struct CompressedGraphics epilogues_graphics_08c98188;
+extern struct CompressedGraphics clappy_trio_epilogue_bg_tiles;
+extern struct CompressedGraphics clappy_trio_epilogue_bg_map_superb;
+extern struct CompressedGraphics clappy_trio_epilogue_bg_map_ok;
+extern struct CompressedGraphics clappy_trio_epilogue_bg_map_try_again;
 extern Palette epilogue_clappy_trio_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08c992d8;
-extern struct CompressedGraphics epilogues_graphics_08c996f4;
-extern struct CompressedGraphics epilogues_graphics_08c99580;
-extern struct CompressedGraphics epilogues_graphics_08c99420;
+extern struct CompressedGraphics snappy_trio_epilogue_bg_tiles;
+extern struct CompressedGraphics snappy_trio_epilogue_bg_map_superb;
+extern struct CompressedGraphics snappy_trio_epilogue_bg_map_ok;
+extern struct CompressedGraphics snappy_trio_epilogue_bg_map_try_again;
 extern Palette epilogue_snappy_trio_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08c9a4d4;
-extern struct CompressedGraphics epilogues_graphics_08c9a890;
-extern struct CompressedGraphics epilogues_graphics_08c9a71c;
-extern struct CompressedGraphics epilogues_graphics_08c9a610;
+extern struct CompressedGraphics samurai_slice_epilogue_bg_tiles;
+extern struct CompressedGraphics samurai_slice_epilogue_bg_map_superb;
+extern struct CompressedGraphics samurai_slice_epilogue_bg_map_ok;
+extern struct CompressedGraphics samurai_slice_epilogue_bg_map_try_again;
 extern Palette epilogue_samurai_slice_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08c9b9fc;
-extern struct CompressedGraphics epilogues_graphics_08c9be48;
-extern struct CompressedGraphics epilogues_graphics_08c9bcd0;
-extern struct CompressedGraphics epilogues_graphics_08c9bb60;
+extern struct CompressedGraphics power_calligraphy_epilogue_bg_tiles;
+extern struct CompressedGraphics power_calligraphy_epilogue_bg_map_superb;
+extern struct CompressedGraphics power_calligraphy_epilogue_bg_map_ok;
+extern struct CompressedGraphics power_calligraphy_epilogue_bg_map_try_again;
 extern Palette epilogue_power_calligraphy_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08c9d2e8;
-extern struct CompressedGraphics epilogues_graphics_08c9d740;
-extern struct CompressedGraphics epilogues_graphics_08c9d5c0;
-extern struct CompressedGraphics epilogues_graphics_08c9d450;
+extern struct CompressedGraphics marching_orders_epilogue_bg_tiles;
+extern struct CompressedGraphics marching_orders_epilogue_bg_map_superb;
+extern struct CompressedGraphics marching_orders_epilogue_bg_map_ok;
+extern struct CompressedGraphics marching_orders_epilogue_bg_map_try_again;
 extern Palette epilogue_marching_orders_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08c9e338;
-extern struct CompressedGraphics epilogues_graphics_08c9e744;
-extern struct CompressedGraphics epilogues_graphics_08c9e5c4;
-extern struct CompressedGraphics epilogues_graphics_08c9e484;
+extern struct CompressedGraphics marching_orders_2_epilogue_bg_tiles;
+extern struct CompressedGraphics marching_orders_2_epilogue_bg_map_superb;
+extern struct CompressedGraphics marching_orders_2_epilogue_bg_map_ok;
+extern struct CompressedGraphics marching_orders_2_epilogue_bg_map_try_again;
 extern Palette epilogue_marching_orders_2_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08c9f1e0;
-extern struct CompressedGraphics epilogues_graphics_08c9f4e4;
-extern struct CompressedGraphics epilogues_graphics_08c9f394;
-extern struct CompressedGraphics epilogues_graphics_08c9f2a0;
+extern struct CompressedGraphics polyrhythm_epilogue_bg_tiles;
+extern struct CompressedGraphics polyrhythm_epilogue_bg_map_superb;
+extern struct CompressedGraphics polyrhythm_epilogue_bg_map_ok;
+extern struct CompressedGraphics polyrhythm_epilogue_bg_map_try_again;
 extern Palette epilogue_polyrhythm_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08ca0ee0;
-extern struct CompressedGraphics epilogues_graphics_08ca1324;
-extern struct CompressedGraphics epilogues_graphics_08ca11a8;
-extern struct CompressedGraphics epilogues_graphics_08ca103c;
+extern struct CompressedGraphics quiz_show_epilogue_bg_tiles;
+extern struct CompressedGraphics quiz_show_epilogue_bg_map_superb;
+extern struct CompressedGraphics quiz_show_epilogue_bg_map_ok;
+extern struct CompressedGraphics quiz_show_epilogue_bg_map_try_again;
 extern Palette epilogue_quiz_show_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08ca23c0;
-extern struct CompressedGraphics epilogues_graphics_08ca29f0;
-extern struct CompressedGraphics epilogues_graphics_08ca27d0;
-extern struct CompressedGraphics epilogues_graphics_08ca25b4;
+extern struct CompressedGraphics bunny_hop_epilogue_bg_tiles;
+extern struct CompressedGraphics bunny_hop_epilogue_bg_map_superb;
+extern struct CompressedGraphics bunny_hop_epilogue_bg_map_ok;
+extern struct CompressedGraphics bunny_hop_epilogue_bg_map_try_again;
 extern Palette epilogue_bunny_hop_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08ca37cc;
-extern struct CompressedGraphics epilogues_graphics_08ca3b88;
-extern struct CompressedGraphics epilogues_graphics_08ca3a08;
-extern struct CompressedGraphics epilogues_graphics_08ca38fc;
+extern struct CompressedGraphics rap_men_epilogue_bg_tiles;
+extern struct CompressedGraphics rap_men_epilogue_bg_map_superb;
+extern struct CompressedGraphics rap_men_epilogue_bg_map_ok;
+extern struct CompressedGraphics rap_men_epilogue_bg_map_try_again;
 extern Palette epilogue_rap_men_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08ca48dc;
-extern struct CompressedGraphics epilogues_graphics_08ca4c84;
-extern struct CompressedGraphics epilogues_graphics_08ca4b08;
-extern struct CompressedGraphics epilogues_graphics_08ca4a00;
+extern struct CompressedGraphics rap_women_epilogue_bg_tiles;
+extern struct CompressedGraphics rap_women_epilogue_bg_map_superb;
+extern struct CompressedGraphics rap_women_epilogue_bg_map_ok;
+extern struct CompressedGraphics rap_women_epilogue_bg_map_try_again;
 extern Palette epilogue_rap_women_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08ca5684;
-extern struct CompressedGraphics epilogues_graphics_08ca59d0;
-extern struct CompressedGraphics epilogues_graphics_08ca5884;
-extern struct CompressedGraphics epilogues_graphics_08ca5784;
+extern struct CompressedGraphics rat_race_epilogue_bg_tiles;
+extern struct CompressedGraphics rat_race_epilogue_bg_map_superb;
+extern struct CompressedGraphics rat_race_epilogue_bg_map_ok;
+extern struct CompressedGraphics rat_race_epilogue_bg_map_try_again;
 extern Palette epilogue_rat_race_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08ca66dc;
-extern struct CompressedGraphics epilogues_graphics_08ca69c8;
-extern struct CompressedGraphics epilogues_graphics_08ca6868;
-extern struct CompressedGraphics epilogues_graphics_08ca676c;
+extern struct CompressedGraphics remix_1_epilogue_bg_tiles;
+extern struct CompressedGraphics remix_1_epilogue_bg_map_superb;
+extern struct CompressedGraphics remix_1_epilogue_bg_map_ok;
+extern struct CompressedGraphics remix_1_epilogue_bg_map_try_again;
 extern Palette epilogue_remix1_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08ca7cbc;
-extern struct CompressedGraphics epilogues_graphics_08ca82dc;
-extern struct CompressedGraphics epilogues_graphics_08ca80c0;
-extern struct CompressedGraphics epilogues_graphics_08ca7ecc;
+extern struct CompressedGraphics remix_2_epilogue_bg_tiles;
+extern struct CompressedGraphics remix_2_epilogue_bg_map_superb;
+extern struct CompressedGraphics remix_2_epilogue_bg_map_ok;
+extern struct CompressedGraphics remix_2_epilogue_bg_map_try_again;
 extern Palette epilogue_remix2_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08ca94f0;
-extern struct CompressedGraphics epilogues_graphics_08ca9afc;
-extern struct CompressedGraphics epilogues_graphics_08ca98f8;
-extern struct CompressedGraphics epilogues_graphics_08ca96e4;
+extern struct CompressedGraphics remix_3_epilogue_bg_tiles;
+extern struct CompressedGraphics remix_3_epilogue_bg_map_superb;
+extern struct CompressedGraphics remix_3_epilogue_bg_map_ok;
+extern struct CompressedGraphics remix_3_epilogue_bg_map_try_again;
 extern Palette epilogue_remix3_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08caaf8c;
-extern struct CompressedGraphics epilogues_graphics_08cab5bc;
-extern struct CompressedGraphics epilogues_graphics_08cab3ac;
-extern struct CompressedGraphics epilogues_graphics_08cab1a8;
+extern struct CompressedGraphics remix_4_epilogue_bg_tiles;
+extern struct CompressedGraphics remix_4_epilogue_bg_map_superb;
+extern struct CompressedGraphics remix_4_epilogue_bg_map_ok;
+extern struct CompressedGraphics remix_4_epilogue_bg_map_try_again;
 extern Palette epilogue_remix4_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08cac550;
-extern struct CompressedGraphics epilogues_graphics_08cac908;
-extern struct CompressedGraphics epilogues_graphics_08cac7e0;
-extern struct CompressedGraphics epilogues_graphics_08cac6ac;
+extern struct CompressedGraphics remix_5_epilogue_bg_tiles;
+extern struct CompressedGraphics remix_5_epilogue_bg_map_superb;
+extern struct CompressedGraphics remix_5_epilogue_bg_map_ok;
+extern struct CompressedGraphics remix_5_epilogue_bg_map_try_again;
 extern Palette epilogue_remix5_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08cad9f4;
-extern struct CompressedGraphics epilogues_graphics_08cadff0;
-extern struct CompressedGraphics epilogues_graphics_08caddf8;
-extern struct CompressedGraphics epilogues_graphics_08cadbe0;
+extern struct CompressedGraphics remix_6_epilogue_bg_tiles;
+extern struct CompressedGraphics remix_6_epilogue_bg_map_superb;
+extern struct CompressedGraphics remix_6_epilogue_bg_map_ok;
+extern struct CompressedGraphics remix_6_epilogue_bg_map_try_again;
 extern Palette epilogue_remix6_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08caf878;
-extern struct CompressedGraphics epilogues_graphics_08cafce8;
-extern struct CompressedGraphics epilogues_graphics_08cafb68;
-extern struct CompressedGraphics epilogues_graphics_08caf9f4;
+extern struct CompressedGraphics remix_7_epilogue_bg_tiles;
+extern struct CompressedGraphics remix_7_epilogue_bg_map_superb;
+extern struct CompressedGraphics remix_7_epilogue_bg_map_ok;
+extern struct CompressedGraphics remix_7_epilogue_bg_map_try_again;
 extern Palette epilogue_remix7_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08cb14f8;
-extern struct CompressedGraphics epilogues_graphics_08cb1b08;
-extern struct CompressedGraphics epilogues_graphics_08cb18ec;
-extern struct CompressedGraphics epilogues_graphics_08cb16f0;
+extern struct CompressedGraphics remix_8_epilogue_bg_tiles;
+extern struct CompressedGraphics remix_8_epilogue_bg_map_superb;
+extern struct CompressedGraphics remix_8_epilogue_bg_map_ok;
+extern struct CompressedGraphics remix_8_epilogue_bg_map_try_again;
 extern Palette epilogue_remix8_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08cb28a4;
-extern struct CompressedGraphics epilogues_graphics_08cb2ccc;
-extern struct CompressedGraphics epilogues_graphics_08cb2b54;
-extern struct CompressedGraphics epilogues_graphics_08cb2a08;
+extern struct CompressedGraphics ninja_bodyguard_epilogue_bg_tiles;
+extern struct CompressedGraphics ninja_bodyguard_epilogue_bg_map_superb;
+extern struct CompressedGraphics ninja_bodyguard_epilogue_bg_map_ok;
+extern struct CompressedGraphics ninja_bodyguard_epilogue_bg_map_try_again;
 extern Palette epilogue_ninja_bodyguard_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08cb38ac;
-extern struct CompressedGraphics epilogues_graphics_08cb3c48;
-extern struct CompressedGraphics epilogues_graphics_08cb3b10;
-extern struct CompressedGraphics epilogues_graphics_08cb39d0;
+extern struct CompressedGraphics ninja_reincarnate_epilogue_bg_tiles;
+extern struct CompressedGraphics ninja_reincarnate_epilogue_bg_map_superb;
+extern struct CompressedGraphics ninja_reincarnate_epilogue_bg_map_ok;
+extern struct CompressedGraphics ninja_reincarnate_epilogue_bg_map_try_again;
 extern Palette epilogue_ninja_reincarnate_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08cb4fbc;
-extern struct CompressedGraphics epilogues_graphics_08cb542c;
-extern struct CompressedGraphics epilogues_graphics_08cb52ac;
-extern struct CompressedGraphics epilogues_graphics_08cb513c;
+extern struct CompressedGraphics space_dance_epilogue_bg_tiles;
+extern struct CompressedGraphics space_dance_epilogue_bg_map_superb;
+extern struct CompressedGraphics space_dance_epilogue_bg_map_ok;
+extern struct CompressedGraphics space_dance_epilogue_bg_map_try_again;
 extern Palette epilogue_space_dance_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08cb5fdc;
-extern struct CompressedGraphics epilogues_graphics_08cb6394;
-extern struct CompressedGraphics epilogues_graphics_08cb6244;
-extern struct CompressedGraphics epilogues_graphics_08cb60f0;
+extern struct CompressedGraphics tap_trial_epilogue_bg_tiles;
+extern struct CompressedGraphics tap_trial_epilogue_bg_map_superb;
+extern struct CompressedGraphics tap_trial_epilogue_bg_map_ok;
+extern struct CompressedGraphics tap_trial_epilogue_bg_map_try_again;
 extern Palette epilogue_tap_trial_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08cb7644;
-extern struct CompressedGraphics epilogues_graphics_08cb7ab8;
-extern struct CompressedGraphics epilogues_graphics_08cb793c;
-extern struct CompressedGraphics epilogues_graphics_08cb77bc;
+extern struct CompressedGraphics tap_trial_2_epilogue_bg_tiles;
+extern struct CompressedGraphics tap_trial_2_epilogue_bg_map_superb;
+extern struct CompressedGraphics tap_trial_2_epilogue_bg_map_ok;
+extern struct CompressedGraphics tap_trial_2_epilogue_bg_map_try_again;
 extern Palette epilogue_tap_trial_2_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08cb8de4;
-extern struct CompressedGraphics epilogues_graphics_08cb9264;
-extern struct CompressedGraphics epilogues_graphics_08cb90e4;
-extern struct CompressedGraphics epilogues_graphics_08cb8f64;
+extern struct CompressedGraphics toss_boys_epilogue_bg_tiles;
+extern struct CompressedGraphics toss_boys_epilogue_bg_map_superb;
+extern struct CompressedGraphics toss_boys_epilogue_bg_map_ok;
+extern struct CompressedGraphics toss_boys_epilogue_bg_map_try_again;
 extern Palette epilogue_toss_boys_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08cb9fd8;
-extern struct CompressedGraphics epilogues_graphics_08cba3ec;
-extern struct CompressedGraphics epilogues_graphics_08cba28c;
-extern struct CompressedGraphics epilogues_graphics_08cba154;
+extern struct CompressedGraphics toss_boys_2_epilogue_bg_tiles;
+extern struct CompressedGraphics toss_boys_2_epilogue_bg_map_superb;
+extern struct CompressedGraphics toss_boys_2_epilogue_bg_map_ok;
+extern struct CompressedGraphics toss_boys_2_epilogue_bg_map_try_again;
 extern Palette epilogue_toss_boys_2_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08cbb530;
-extern struct CompressedGraphics epilogues_graphics_08cbb938;
-extern struct CompressedGraphics epilogues_graphics_08cbb7bc;
-extern struct CompressedGraphics epilogues_graphics_08cbb67c;
+extern struct CompressedGraphics tram_pauline_epilogue_bg_tiles;
+extern struct CompressedGraphics tram_pauline_epilogue_bg_map_superb;
+extern struct CompressedGraphics tram_pauline_epilogue_bg_map_ok;
+extern struct CompressedGraphics tram_pauline_epilogue_bg_map_try_again;
 extern Palette epilogue_tram_pauline_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08cbcbd8;
-extern struct CompressedGraphics epilogues_graphics_08cbcf98;
-extern struct CompressedGraphics epilogues_graphics_08cbce60;
-extern struct CompressedGraphics epilogues_graphics_08cbcd28;
+extern struct CompressedGraphics sick_beats_epilogue_bg_tiles;
+extern struct CompressedGraphics sick_beats_epilogue_bg_map_superb;
+extern struct CompressedGraphics sick_beats_epilogue_bg_map_ok;
+extern struct CompressedGraphics sick_beats_epilogue_bg_map_try_again;
 extern Palette epilogue_sick_beats_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08cbdd28;
-extern struct CompressedGraphics epilogues_graphics_08cbe0f8;
-extern struct CompressedGraphics epilogues_graphics_08cbdf84;
-extern struct CompressedGraphics epilogues_graphics_08cbde58;
+extern struct CompressedGraphics wizards_waltz_epilogue_bg_tiles;
+extern struct CompressedGraphics wizards_waltz_epilogue_bg_map_superb;
+extern struct CompressedGraphics wizards_waltz_epilogue_bg_map_ok;
+extern struct CompressedGraphics wizards_waltz_epilogue_bg_map_try_again;
 extern Palette epilogue_wizards_waltz_bg_pal[];
 
-extern struct CompressedGraphics epilogues_graphics_08cbe458;
-extern struct CompressedGraphics epilogues_graphics_08cbe730;
-extern struct CompressedGraphics epilogues_graphics_08cbe634;
-extern struct CompressedGraphics epilogues_graphics_08cbe54c;
+extern struct CompressedGraphics placeholder_epilogue_bg_tiles;
+extern struct CompressedGraphics placeholder_epilogue_bg_map_superb;
+extern struct CompressedGraphics placeholder_epilogue_bg_map_ok;
+extern struct CompressedGraphics placeholder_epilogue_bg_map_try_again;
 extern Palette epilogue_placeholder_bg_pal[];
