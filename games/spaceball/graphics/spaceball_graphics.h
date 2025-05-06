@@ -30,9 +30,9 @@ extern struct Animation anim_spaceball_flower_hide[];
 
 /* SPACEBALL - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics spaceball_graphics_08bd5524;
-extern struct CompressedGraphics spaceball_graphics_08bd5878;
-extern struct CompressedGraphics spaceball_graphics_08bd4e70;
+extern struct CompressedGraphics spaceball_bg_tiles;
+extern struct CompressedGraphics spaceball_bg_map;
+extern struct CompressedGraphics spaceball_obj;
 
 /* SPACEBALL - PALETTES */
 
