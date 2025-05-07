@@ -16,17 +16,17 @@ union SceneObject main_menu_scene_objects[] = {
 // [D_089cdc44] Graphics Table
 struct GraphicsTable main_menu_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &main_menu_graphics_08ccb374,
+        /* Src.  */ &main_menu_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &main_menu_graphics_08ccb840,
+        /* Src.  */ &main_menu_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &main_menu_graphics_08ccb298,
+        /* Src.  */ &main_menu_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },

@@ -1285,20 +1285,20 @@
         13315292,
         13315240
     ],
-    "game_select_graphics_08cc9854": [
+    "game_select_bg_tiles": [
         13406552,
         13406500,
         116
     ],
-    "game_select_graphics_08cc9148": [
+    "game_select_obj": [
         13400656,
         13400604
     ],
-    "main_menu_graphics_08ccb298": [
+    "main_menu_obj": [
         13409852,
         13409800
     ],
-    "main_menu_graphics_08ccb374": [
+    "main_menu_bg_tiles": [
         13415080,
         13415028,
         52
@@ -1375,7 +1375,7 @@
         13461016,
         76
     ],
-    "gameplay_graphics_08ccca5c": [
+    "gameplay_obj": [
         13419436,
         13419384,
         36
