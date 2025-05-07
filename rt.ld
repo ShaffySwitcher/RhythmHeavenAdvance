@@ -771,8 +771,8 @@ SECTIONS {
         build/games/wizards_waltz/graphics/wizards_waltz_pal.c.o(.data);
         build/games/ninja_bodyguard/graphics/ninja_reincarnate_anim.c.o(.data);
         build/games/ninja_bodyguard/graphics/ninja_reincarnate_pal.c.o(.data);
-        build/graphics/unknown/unknown_anim.c.o(.data);
-        build/graphics/unknown/unknown_pal.c.o(.data);
+        build/graphics/gameplay/gameplay_unused_warioware_anim.c.o(.data);
+        build/graphics/gameplay/gameplay_unused_warioware_pal.c.o(.data);
 
         build/data/__clz_tab.c.o(.rodata);
         build/data/agb_main_data.c.o(.data);
@@ -1924,7 +1924,7 @@ SECTIONS {
         build/audio/sequences/s_f_marcher2_v_hidarimukeS.mid.o(.rodata*);
         build/audio/sequences/s_f_marcher2_v_hidari.mid.o(.rodata*);
         
-        build/graphics/unknown/unknown_graphics.c.o(.data*);
+        build/graphics/gameplay/gameplay_unused_warioware_graphics.c.o(.data*);
         build/games/sneaky_spirits/graphics/sneaky_spirits_obj.4bpp.c.o(.data*);
         build/games/sneaky_spirits/graphics/sneaky_spirits_bg_tiles.4bpp.c.o(.data*);
         build/games/sneaky_spirits/graphics/sneaky_spirits_bg_map_foreground.tilemap.c.o(.data*);
@@ -2083,7 +2083,7 @@ SECTIONS {
         build/games/wizards_waltz/graphics/wizards_waltz_prologue_obj.4bpp.c.o(.data*);
         build/games/wizards_waltz/graphics/wizards_waltz_prologue_bg_tiles.4bpp.c.o(.data*);
         build/games/wizards_waltz/graphics/wizards_waltz_prologue_bg_map.tilemap.c.o(.data*);
-        build/graphics/unknown/unknown_graphics_08c33f60.4bpp.c.o(.data*);
+        build/graphics/placeholder_prologue/placeholder_prologue_obj.4bpp.c.o(.data*);
         build/games/mannequin_factory/graphics/mannequin_factory_bg_tiles.4bpp.c.o(.data*);
         build/games/mannequin_factory/graphics/mannequin_factory_obj.4bpp.c.o(.data*);
         build/games/mannequin_factory/graphics/mannequin_factory_bg_map.tilemap.c.o(.data*);
@@ -2481,7 +2481,7 @@ SECTIONS {
         build/graphics/game_select/game_select_bg_map_description_unused_riq.tilemap.c.o(.data*);
         build/graphics/game_select/game_select_bg_map_description.tilemap.c.o(.data*);
         build/graphics/game_select/game_select_bg_map_perfect_notice.tilemap.c.o(.data*);
-        build/graphics/unknown/unknown_graphics_08cc9e2c.tilemap.c.o(.data*);
+        build/graphics/game_select/game_select_bg_map_blank_unused.tilemap.c.o(.data*);
         build/graphics/main_menu/main_menu_obj.4bpp.c.o(.data*);
         build/graphics/main_menu/main_menu_bg_tiles.4bpp.c.o(.data*);
         build/graphics/main_menu/main_menu_bg_map.tilemap.c.o(.data*);
@@ -2630,7 +2630,7 @@ SECTIONS {
         build/games/ninja_bodyguard/graphics/ninja_reincarnate_obj.4bpp.c.o(.data*);
         build/games/ninja_bodyguard/graphics/ninja_reincarnate_bg_map_r.tilemap.c.o(.data*);
         build/games/ninja_bodyguard/graphics/ninja_reincarnate_bg_map_l.tilemap.c.o(.data*);
-        build/graphics/unknown/unknown_graphics_08d20534.tilemap.c.o(.data*);
+        build/graphics/gameplay/gameplay_unused_warioware_obj.tilemap.c.o(.data*);
     }
 
     _end = . ;
