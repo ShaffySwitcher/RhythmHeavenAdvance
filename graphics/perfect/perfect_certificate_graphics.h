@@ -5,8 +5,8 @@
 
 /* PERFECT CERTIFICATE - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics perfect_certificate_graphics_08ccc138;
-extern struct CompressedGraphics perfect_certificate_graphics_08ccc39c;
+extern struct CompressedGraphics perfect_certificate_bg_tiles;
+extern struct CompressedGraphics perfect_certificate_bg_map;
 
 /* PERFECT CERTIFICATE - PALETTES */
 

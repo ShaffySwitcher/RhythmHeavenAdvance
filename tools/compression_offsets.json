@@ -1334,43 +1334,43 @@
         13466352,
         13466300
     ],
-    "options_graphics_08c76ca4": [
+    "options_obj": [
         13067024,
         13066972
     ],
-    "options_graphics_08c76d80": [
+    "options_bg_tiles": [
         13069492,
         13069440,
         44
     ],
-    "perfect_certificate_graphics_08ccc138": [
+    "perfect_certificate_bg_tiles": [
         13416528,
         13416476
     ],
-    "results_graphics_08cd4f58": [
+    "score_results_obj": [
         13453948,
         13453896,
         24
     ],
-    "results_graphics_08cd4a50": [
+    "rank_results_obj": [
         13448320,
         13448268,
         28
     ],
-    "studio_graphics_08cd5288": [
+    "studio_obj": [
         13455232,
         13455180
     ],
-    "studio_graphics_08cd5d64": [
+    "studio_bg_tiles": [
         13456024,
         13455972,
         56
     ],
-    "title_graphics_08cd663c": [
+    "title_bg_tiles": [
         13460548,
         13460496
     ],
-    "title_graphics_08cd7948": [
+    "title_obj": [
         13461068,
         13461016,
         76
@@ -1380,7 +1380,7 @@
         13419384,
         36
     ],
-    "studio_memory_usage_graph_graphics_08cc4bcc": [
+    "studio_memory_usage_graph_bg_map": [
         13388304,
         13388252,
         8
@@ -1395,7 +1395,7 @@
         13761356,
         64
     ],
-    "warning_graphics_08d1ad4c": [
+    "warning_bg_tiles": [
         13738800,
         13738748,
         4
