@@ -9,8 +9,8 @@ extern struct Animation anim_warning_text_continue[];
 
 /* WARNING - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics warning_graphics_08d1ad4c;
-extern struct CompressedGraphics warning_graphics_08d1b00c;
+extern struct CompressedGraphics warning_bg_tiles;
+extern struct CompressedGraphics warning_bg_map;
 
 /* WARNING - PALETTES */
 

@@ -22,10 +22,10 @@ extern struct Animation anim_studio_graph_r[];
 
 /* STUDIO - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics studio_graphics_08cd5d64;
-extern struct CompressedGraphics studio_graphics_08cd62ec;
-extern struct CompressedGraphics studio_graphics_08cd6434;
-extern struct CompressedGraphics studio_graphics_08cd5288;
+extern struct CompressedGraphics studio_bg_tiles;
+extern struct CompressedGraphics studio_bg_map;
+extern struct CompressedGraphics studio_bg_map_warning;
+extern struct CompressedGraphics studio_obj;
 
 /* STUDIO - PALETTES */
 
@@ -87,7 +87,7 @@ extern struct Animation anim_studio_mem_chart_borders[];
 
 /* STUDIO MEMORY USAGE GRAPH - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics studio_memory_usage_graph_graphics_08cc4bcc;
+extern struct CompressedGraphics studio_memory_usage_graph_bg_map;
 
 /* STUDIO MEMORY USAGE GRAPH - PALETTES */
 
