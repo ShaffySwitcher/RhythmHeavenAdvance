@@ -25,7 +25,7 @@ u16 mannequin_input_buttons[] = {
 };
 
 // [D_089df3ac] Buffered Textures List
-struct CompressedGraphics *mannequin_buffered_textures[] = {
+struct CompressedData *mannequin_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

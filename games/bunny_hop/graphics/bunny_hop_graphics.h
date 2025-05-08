@@ -28,11 +28,11 @@ extern struct Animation anim_bunny_hop_unused[];
 
 /* BUNNY HOP - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics bunny_hop_bg_tiles;
-extern struct CompressedGraphics bunny_hop_bg_map_water;
-extern struct CompressedGraphics bunny_hop_bg_map;
-extern struct CompressedGraphics bunny_hop_bg_map_ground;
-extern struct CompressedGraphics bunny_hop_obj;
+extern struct CompressedData bunny_hop_bg_tiles;
+extern struct CompressedData bunny_hop_bg_map_water;
+extern struct CompressedData bunny_hop_bg_map;
+extern struct CompressedData bunny_hop_bg_map_ground;
+extern struct CompressedData bunny_hop_obj;
 
 /* BUNNY HOP - PALETTES */
 

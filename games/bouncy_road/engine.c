@@ -12,7 +12,7 @@ struct Animation *bouncy_road_player_bouncer_anim[] = {
 
 
 // [D_089e3c0c] Buffered Textures List
-struct CompressedGraphics *bouncy_road_buffered_textures[] = {
+struct CompressedData *bouncy_road_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

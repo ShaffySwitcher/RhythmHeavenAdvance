@@ -5,7 +5,7 @@
 
 
 // [D_089e5ee0] Buffered Textures List
-struct CompressedGraphics *bunny_hop_buffered_textures[] = {
+struct CompressedData *bunny_hop_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

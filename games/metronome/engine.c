@@ -5,7 +5,7 @@
 
 
 // [D_089e585c] Buffered Textures List
-struct CompressedGraphics *metronome_buffered_textures[] = {
+struct CompressedData *metronome_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

@@ -41,10 +41,10 @@ extern struct Animation anim_mannequin_high_score_num[];
 
 /* MANNEQUIN FACTORY - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics mannequin_factory_bg_tiles;
-extern struct CompressedGraphics mannequin_factory_bg_map;
-extern struct CompressedGraphics mannequin_factory_bg_map_practice;
-extern struct CompressedGraphics mannequin_factory_obj;
+extern struct CompressedData mannequin_factory_bg_tiles;
+extern struct CompressedData mannequin_factory_bg_map;
+extern struct CompressedData mannequin_factory_bg_map_practice;
+extern struct CompressedData mannequin_factory_obj;
 
 /* MANNEQUIN FACTORY - PALETTES */
 

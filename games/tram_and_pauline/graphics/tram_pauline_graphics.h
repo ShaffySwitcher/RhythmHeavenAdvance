@@ -47,13 +47,13 @@ extern struct Animation anim_circus_fox_twitch[];
 
 /* TRAM AND PAULINE - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics tram_pauline_bg_tiles;
-extern struct CompressedGraphics tram_pauline_bg_map_curtain;
-extern struct CompressedGraphics tram_pauline_bg_map;
-extern struct CompressedGraphics tram_pauline_obj;
-extern struct CompressedGraphics tram_pauline_remix_3_bg_tiles;
-extern struct CompressedGraphics tram_pauline_remix_3_bg_map;
-extern struct CompressedGraphics tram_pauline_remix_3_obj;
+extern struct CompressedData tram_pauline_bg_tiles;
+extern struct CompressedData tram_pauline_bg_map_curtain;
+extern struct CompressedData tram_pauline_bg_map;
+extern struct CompressedData tram_pauline_obj;
+extern struct CompressedData tram_pauline_remix_3_bg_tiles;
+extern struct CompressedData tram_pauline_remix_3_bg_map;
+extern struct CompressedData tram_pauline_remix_3_obj;
 
 /* TRAM AND PAULINE - PALETTES */
 

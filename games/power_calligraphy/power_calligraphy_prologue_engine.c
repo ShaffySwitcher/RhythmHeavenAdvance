@@ -5,7 +5,7 @@
 
 
 // [D_089eb530] Buffered Textures List
-struct CompressedGraphics *power_calligraphy_prologue_buffered_textures[] = {
+struct CompressedData *power_calligraphy_prologue_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

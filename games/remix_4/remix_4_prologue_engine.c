@@ -5,7 +5,7 @@
 
 
 // [D_089ec210] Buffered Textures List
-struct CompressedGraphics *remix_4_prologue_buffered_textures[] = {
+struct CompressedData *remix_4_prologue_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

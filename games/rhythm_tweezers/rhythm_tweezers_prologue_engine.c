@@ -5,7 +5,7 @@
 
 
 // [D_089ead54] Buffered Textures List
-struct CompressedGraphics *rhythm_tweezers_prologue_buffered_textures[] = {
+struct CompressedData *rhythm_tweezers_prologue_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

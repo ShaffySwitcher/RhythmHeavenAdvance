@@ -67,7 +67,7 @@ struct SpriteVector3 D_089e69cc[] = {
 };
 
 // [D_089e69ec] Buffered Textures List
-struct CompressedGraphics *ninja_bodyguard_buffered_textures[] = {
+struct CompressedData *ninja_bodyguard_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

@@ -9,11 +9,11 @@ extern struct Animation anim_samurai_slice_prologue_title[];
 
 /* PROLOGUE (SAMURAI SLICE) - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics samurai_slice_prologue_bg_tiles;
-extern struct CompressedGraphics samurai_slice_prologue_bg_map;
-extern struct CompressedGraphics samurai_slice_prologue_bg_map_slice;
-extern struct CompressedGraphics samurai_slice_prologue_obj;
-extern struct CompressedGraphics samurai_slice_prologue_obj_rev1;
+extern struct CompressedData samurai_slice_prologue_bg_tiles;
+extern struct CompressedData samurai_slice_prologue_bg_map;
+extern struct CompressedData samurai_slice_prologue_bg_map_slice;
+extern struct CompressedData samurai_slice_prologue_obj;
+extern struct CompressedData samurai_slice_prologue_obj_rev1;
 
 /* PROLOGUE (SAMURAI SLICE) - PALETTES */
 

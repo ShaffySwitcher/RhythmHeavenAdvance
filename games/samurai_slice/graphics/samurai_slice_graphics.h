@@ -40,11 +40,11 @@ extern struct Animation anim_samurai_finish2[];
 
 /* SAMURAI SLICE - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics samurai_slice_bg_tiles;
-extern struct CompressedGraphics samurai_slice_bg_map_fog_bottom;
-extern struct CompressedGraphics samurai_slice_bg_map_fog_top;
-extern struct CompressedGraphics samurai_slice_bg_map;
-extern struct CompressedGraphics samurai_slice_obj;
+extern struct CompressedData samurai_slice_bg_tiles;
+extern struct CompressedData samurai_slice_bg_map_fog_bottom;
+extern struct CompressedData samurai_slice_bg_map_fog_top;
+extern struct CompressedData samurai_slice_bg_map;
+extern struct CompressedData samurai_slice_obj;
 
 /* SAMURAI SLICE - PALETTES */
 

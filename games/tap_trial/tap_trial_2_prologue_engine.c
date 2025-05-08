@@ -5,7 +5,7 @@
 
 
 // [D_089ed6b4] Buffered Textures List
-struct CompressedGraphics *tap_trial_2_prologue_buffered_textures[] = {
+struct CompressedData *tap_trial_2_prologue_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

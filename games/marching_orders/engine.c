@@ -43,7 +43,7 @@ struct Animation **marching_anim_table[] = {
 };
 
 // [D_089e5204] Buffered Textures List
-struct CompressedGraphics *marching_buffered_textures[] = {
+struct CompressedData *marching_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

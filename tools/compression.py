@@ -210,7 +210,7 @@ class CompressedData:
         output_array(f, self.window2.data, "0x%08x", 8)
         f.write("\n};\n\n")
 
-        f.write("struct Huffman %s_compressed = {\n" % symbol)
+        f.write("struct CompressedGFX %s_compressed = {\n" % symbol)
         f.write("\t/* Compressed data */   %s_data,\n" % symbol)
         f.write("\t/* Decompressed size */ 0x%x,\n" % self.decompressedSize)
         f.write("\t/* Segment count */     %d,\n" % self.segmentCount)
@@ -282,7 +282,7 @@ class RleCompressedData:
         output_array(f, self.counts, "%3d", 16)
         f.write("\n};\n\n")
 
-        f.write("struct CompressedGraphics %s = {\n" % symbol)
+        f.write("struct CompressedData %s = {\n" % symbol)
         if (double):
             f.write("\t/* Compressed data */    &%s_compressed,\n" % symbol)
         else:

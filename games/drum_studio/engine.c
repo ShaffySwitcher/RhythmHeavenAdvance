@@ -221,7 +221,7 @@ struct DrumTechKit *drum_studio_kits[] = {
 
 
 // [D_089e2a04] Buffered Textures List
-struct CompressedGraphics *drum_studio_buffered_textures[] = {
+struct CompressedData *drum_studio_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

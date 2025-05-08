@@ -46,7 +46,7 @@ struct GameEngine karate_man_engine = {
 
 
 // [D_089df064] Buffered Textures List
-struct CompressedGraphics *karate_buffered_textures[] = {
+struct CompressedData *karate_buffered_textures[] = {
     &karate_man_bg_tiles_unused_face_1,
     &karate_man_bg_tiles_unused_face_2,
     &karate_man_bg_tiles_unused_face_3,
@@ -192,7 +192,7 @@ struct GraphicsTable *karate_gfx_tables[] = {
 };
 
 // [D_089df1bc] BG Face Textures
-struct CompressedGraphics *karate_bg_face_textures[] = {
+struct CompressedData *karate_bg_face_textures[] = {
     &karate_man_bg_tiles_unused_face_1,
     &karate_man_bg_tiles_unused_face_2,
     &karate_man_bg_tiles_unused_face_3

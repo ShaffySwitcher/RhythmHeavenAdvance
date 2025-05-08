@@ -35,7 +35,7 @@ struct GraphicsTable perfect_certificate_gfx_table[] = {
 
 
 // [D_089cfc74] Buffered Textures List
-struct CompressedGraphics *perfect_certificate_buffered_textures[] = {
+struct CompressedData *perfect_certificate_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

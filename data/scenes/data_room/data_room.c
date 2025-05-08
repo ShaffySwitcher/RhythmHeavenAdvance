@@ -38,6 +38,6 @@ struct GraphicsTable data_room_gfx_table[] = {
 };
 
 // [D_089cdb3c] Buffered Textures List
-struct CompressedGraphics *data_room_buffered_textures[] = {
+struct CompressedData *data_room_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };

@@ -256,7 +256,7 @@ struct RhythmToysDemo *rhythm_toys_demo_table[] = {
 };
 
 // [D_089e9d4c] Buffered Textures List
-struct CompressedGraphics *rhythm_toys_buffered_textures[] = {
+struct CompressedData *rhythm_toys_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

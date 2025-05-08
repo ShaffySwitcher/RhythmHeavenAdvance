@@ -9,9 +9,9 @@ extern struct Animation anim_toss_boys_prologue_title[];
 
 /* PROLOGUE (TOSS BOYS) - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics toss_boys_prologue_bg_tiles;
-extern struct CompressedGraphics toss_boys_prologue_bg_map;
-extern struct CompressedGraphics toss_boys_prologue_obj;
+extern struct CompressedData toss_boys_prologue_bg_tiles;
+extern struct CompressedData toss_boys_prologue_bg_map;
+extern struct CompressedData toss_boys_prologue_obj;
 
 /* PROLOGUE (TOSS BOYS) - PALETTES */
 
@@ -24,9 +24,9 @@ extern struct Animation anim_toss_boys_2_prologue_title[];
 
 /* PROLOGUE (TOSS BOYS 2) - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics toss_boys_2_prologue_bg_tiles;
-extern struct CompressedGraphics toss_boys_2_prologue_bg_map;
-extern struct CompressedGraphics toss_boys_2_prologue_obj;
+extern struct CompressedData toss_boys_2_prologue_bg_tiles;
+extern struct CompressedData toss_boys_2_prologue_bg_map;
+extern struct CompressedData toss_boys_2_prologue_obj;
 
 /* PROLOGUE (TOSS BOYS 2) - PALETTES */
 

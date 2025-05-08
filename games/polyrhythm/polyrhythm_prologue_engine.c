@@ -5,7 +5,7 @@
 
 
 // [D_089eb9bc] Buffered Textures List
-struct CompressedGraphics *polyrhythm_prologue_buffered_textures[] = {
+struct CompressedData *polyrhythm_prologue_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

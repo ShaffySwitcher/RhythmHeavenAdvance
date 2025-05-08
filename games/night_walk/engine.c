@@ -28,7 +28,7 @@ struct Animation *night_walk_star_expand_anim[] = {
 
 
 // [D_089e3380] Buffered Textures List
-struct CompressedGraphics *night_walk_buffered_textures[] = {
+struct CompressedData *night_walk_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

@@ -19,9 +19,9 @@ extern struct Animation anim_options_cursor_default[];
 
 /* OPTIONS - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics options_bg_tiles;
-extern struct CompressedGraphics options_bg_map;
-extern struct CompressedGraphics options_obj;
+extern struct CompressedData options_bg_tiles;
+extern struct CompressedData options_bg_map;
+extern struct CompressedData options_obj;
 
 /* OPTIONS - PALETTES */
 

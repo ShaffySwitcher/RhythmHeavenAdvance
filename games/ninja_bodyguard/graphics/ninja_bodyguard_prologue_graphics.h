@@ -9,9 +9,9 @@ extern struct Animation anim_ninja_bodyguard_prologue_title[];
 
 /* PROLOGUE (NINJA BODYGUARD) - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics ninja_bodyguard_prologue_bg_tiles;
-extern struct CompressedGraphics ninja_bodyguard_prologue_bg_map;
-extern struct CompressedGraphics ninja_bodyguard_prologue_obj;
+extern struct CompressedData ninja_bodyguard_prologue_bg_tiles;
+extern struct CompressedData ninja_bodyguard_prologue_bg_map;
+extern struct CompressedData ninja_bodyguard_prologue_obj;
 
 /* PROLOGUE (NINJA BODYGUARD) - PALETTES */
 
@@ -23,9 +23,9 @@ extern struct Animation anim_ninja_reincarnate_prologue_title[];
 
 /* PROLOGUE (NINJA REINCARNATE) - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics ninja_reincarnate_prologue_bg_tiles;
-extern struct CompressedGraphics ninja_reincarnate_prologue_bg_map;
-extern struct CompressedGraphics ninja_reincarnate_prologue_obj;
+extern struct CompressedData ninja_reincarnate_prologue_bg_tiles;
+extern struct CompressedData ninja_reincarnate_prologue_bg_map;
+extern struct CompressedData ninja_reincarnate_prologue_obj;
 
 /* PROLOGUE (NINJA REINCARNATE) - PALETTES */
 

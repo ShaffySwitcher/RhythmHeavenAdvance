@@ -10,15 +10,15 @@ struct LoadGfxTableTaskInputs {
 struct GfxTableLoader {
     u16 active:1;
     u16 compressionLevel:2;
-    u16 decodingRLE:1;
-    u16 decompressingHuffman:12;
+    u16 decompressingRLE:1;
+    u16 decompressingGfx:12;
     u32 limit;
     const struct GraphicsTable *gfxTable;
     const void *src;
     u16 *dest;
     s32 size;
-    u32 rleSaveState[8];
-    u32 huffmanSaveState[9];
+    u32 rleDecompressProgress[8];
+    u32 gfxDecompressProgress[9];
 };
 
 extern void *func_08002a54(void *dest);

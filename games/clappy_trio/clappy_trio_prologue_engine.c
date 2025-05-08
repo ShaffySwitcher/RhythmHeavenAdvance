@@ -5,7 +5,7 @@
 
 
 // [D_089eb014] Buffered Textures List
-struct CompressedGraphics *clappy_trio_prologue_buffered_textures[] = {
+struct CompressedData *clappy_trio_prologue_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

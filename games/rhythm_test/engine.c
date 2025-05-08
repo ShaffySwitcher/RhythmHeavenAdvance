@@ -626,7 +626,7 @@ struct DrumTechNote *rhythm_test_trick_drum_seq[] = {
 
 
 // [D_089e4f70] Buffered Textures List
-struct CompressedGraphics *rhythm_test_buffered_textures[] = {
+struct CompressedData *rhythm_test_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

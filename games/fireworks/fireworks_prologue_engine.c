@@ -5,7 +5,7 @@
 
 
 // [D_089eae84] Buffered Textures List
-struct CompressedGraphics *fireworks_prologue_buffered_textures[] = {
+struct CompressedData *fireworks_prologue_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

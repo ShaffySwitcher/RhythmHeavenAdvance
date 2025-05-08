@@ -44,7 +44,7 @@ struct GraphicsTable main_menu_gfx_table[] = {
 };
 
 // [D_089cdc8c] Buffered Textures List
-struct CompressedGraphics *main_menu_buffered_textures[] = {
+struct CompressedData *main_menu_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

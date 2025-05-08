@@ -5,7 +5,7 @@
 
 
 // [D_089ece80] Buffered Textures List
-struct CompressedGraphics *rap_women_prologue_buffered_textures[] = {
+struct CompressedData *rap_women_prologue_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

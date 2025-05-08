@@ -349,7 +349,7 @@ arm_func_start fast_udivsi3_rom
 glabel fast_udivsi3_rom_end
 
 
-@ Huffman Decompression
+@ Graphics Decompression
 arm_func_start func_08000f08
     push    {r4, r5, r6, r7, r8, r9, r10, r11, r12, lr}
     stmfd   sp!, {r0}

@@ -38,7 +38,7 @@ struct GraphicsTable arrival_gfx_table[] = {
 };
 
 // [D_089cd1ec] Buffered Textures List
-struct CompressedGraphics *arrival_buffered_textures[] = {
+struct CompressedData *arrival_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

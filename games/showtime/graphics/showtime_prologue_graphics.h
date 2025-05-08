@@ -10,9 +10,9 @@ extern struct Animation anim_showtime_prologue_penguin[];
 
 /* PROLOGUE (SHOWTIME) - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics showtime_prologue_bg_tiles;
-extern struct CompressedGraphics showtime_prologue_bg_map;
-extern struct CompressedGraphics showtime_prologue_obj;
+extern struct CompressedData showtime_prologue_bg_tiles;
+extern struct CompressedData showtime_prologue_bg_map;
+extern struct CompressedData showtime_prologue_obj;
 
 /* PROLOGUE (SHOWTIME) - PALETTES */
 

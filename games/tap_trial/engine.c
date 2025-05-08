@@ -1955,7 +1955,7 @@ struct TapTrialAction *tap_trial_monkey_action_table[] = {
 
 
 // [D_089e7e14] Buffered Textures List
-struct CompressedGraphics *tap_trial_buffered_textures[] = {
+struct CompressedData *tap_trial_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 
