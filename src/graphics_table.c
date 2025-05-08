@@ -63,7 +63,7 @@ void func_08002a6c(struct GfxTableLoader *info, const struct GraphicsTable *gfxT
         // Double Compressed
         if (((struct CompressedData *)info->src)->doubleCompressed) {
             info->compressionLevel = COMPRESSION_LEVEL_DOUBLE;
-            info->decompressingGfx = FALSE;
+            info->decompressingGFX = FALSE;
         }
     } else {
         info->active = FALSE;
@@ -108,8 +108,8 @@ void func_08002b10(struct GfxTableLoader *info) {
                 if (info->size == 0) {
                     break;
                 }
-                (u32) info->src += size;
-                (u32) info->dest += size;
+                (void *)info->src += size;
+                (void *)info->dest += size;
                 continue;
 
             case COMPRESSION_LEVEL_RLE:
@@ -149,20 +149,20 @@ void func_08002b10(struct GfxTableLoader *info) {
                 break;
 
             case COMPRESSION_LEVEL_DOUBLE:
-                if (info->decompressingGfx) {
-                    finished = func_080085e4(info->gfxDecompressProgress);
+                if (info->decompressingGFX) {
+                    finished = decompress_gfx_resume(&info->gfxDecompressProgress);
                 } else {
                     compressed = info->src;
-                    info->decompressingGfx = TRUE;
+                    info->decompressingGFX = TRUE;
                     compressedGfx = compressed->data;
-                    finished = func_08008594(compressed->data, info->dest + compressed->rleOffset - compressedGfx->size, info->limit, info->gfxDecompressProgress);
+                    finished = decompress_gfx_init(compressed->data, info->dest + compressed->rleOffset - compressedGfx->size, info->limit, &info->gfxDecompressProgress);
                 }
                 info->size -= info->limit;
                 if (info->size < 0) {
                     info->size = 0;
                 }
                 if (finished) {
-                    info->decompressingGfx = FALSE;
+                    info->decompressingGFX = FALSE;
                     info->compressionLevel = COMPRESSION_LEVEL_RLE;
                 }
                 return;
@@ -190,7 +190,7 @@ void func_08002b10(struct GfxTableLoader *info) {
                 compressed = info->src;
                 if (compressed->doubleCompressed) {
                     info->compressionLevel = COMPRESSION_LEVEL_DOUBLE;
-                    info->decompressingGfx = FALSE;
+                    info->decompressingGFX = FALSE;
                 }
             }
         } else {
