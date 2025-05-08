@@ -90,14 +90,13 @@ GRAPHICS       := $(shell find graphics -type d) $(shell find $(GAMES) -type d -
 AUDIO		   := audio
 MUSIC		   := $(AUDIO)/sequences
 SFX            := $(AUDIO)/samples
-UNCOMP_GFX     := graphics/font
 
 C_DIRS		   := $(SOURCES) $(AUDIO) $(GRAPHICS) $(DATA) $(SCENE_DATA) $(LEVEL_DATA) $(GAME_DATA)
 C_DIRS         := $(sort $(C_DIRS)) # remove duplicates
 
 ASM_DIRS       := $(ASM) $(DATA) $(SCENE_DATA) $(LEVEL_DATA)
 BS_DIRS        := $(GAME_DATA) $(SCENE_DATA)
-GFX_DIRS       := $(filter-out $(UNCOMP_GFX),$(GRAPHICS))
+GFX_DIRS       := $(GRAPHICS)
 
 ALL_DIRS       := $(BIN) $(ASM_DIRS) $(C_DIRS) $(MUSIC) $(SFX)
 ALL_DIRS       := $(sort $(ALL_DIRS)) # remove duplicates
@@ -116,18 +115,22 @@ export OUTPUT	:=	$(BUILD)/$(TARGET)
 
 CFILES		:=	$(foreach dir,$(C_DIRS),$(wildcard $(dir)/*.c))
 SFILES		:=	$(foreach dir,$(ASM_DIRS),$(wildcard $(dir)/*.s)) $(foreach dir,$(BS_DIRS),$(wildcard $(dir)/*.bs))
-BINFILES	:=	$(foreach dir,$(BIN),$(wildcard $(dir)/*.bin)) $(foreach dir,$(MUSIC),$(wildcard $(dir)/*.mid)) $(foreach dir,$(GRAPHICS),$(wildcard $(dir)/*.bin)) $(foreach dir,$(UNCOMP_GFX),$(wildcard $(dir)/*.4bpp))
+BINFILES	:=	$(foreach dir,$(BIN),$(wildcard $(dir)/*.bin)) \
+				$(foreach dir,$(MUSIC),$(wildcard $(dir)/*.mid)) \
+				$(foreach dir,$(GRAPHICS),$(wildcard $(dir)/*.bin)) \
+				$(foreach dir,$(GRAPHICS),$(wildcard $(dir)/*.raw.4bpp))
 WAVFILES    :=  $(foreach dir,$(SFX),$(wildcard $(dir)/*.wav))
-4BPPFILES   :=  $(foreach dir,$(GFX_DIRS),$(wildcard $(dir)/*.4bpp))
+
+4BPPFILES   :=  $(filter-out $(BINFILES),$(foreach dir,$(GRAPHICS),$(wildcard $(dir)/*.4bpp)))
 TILEMAPS	:=  $(foreach dir,$(GFX_DIRS),$(wildcard $(dir)/*.tilemap))
 JSONFILES   :=  $(foreach dir,$(AUDIO),$(wildcard $(dir)/*.json))
 
 CFILES := $(filter-out %.inc.c, $(CFILES))
 
 PCMFILES       := $(addprefix $(BUILD)/,$(WAVFILES:.wav=.pcm))
-OFILES_JSON    := $(addprefix $(BUILD)/,$(JSONFILES:.json=.json.c.o)) \
-				  $(addprefix $(BUILD)/,$(4BPPFILES:.4bpp=.4bpp.c.o)) \
-				  $(addprefix $(BUILD)/,$(TILEMAPS:.tilemap=.tilemap.c.o))
+OFILES_JSON    := $(addprefix $(BUILD)/,$(addsuffix .c.o,$(JSONFILES))) \
+				  $(addprefix $(BUILD)/,$(addsuffix .c.o,$(4BPPFILES))) \
+				  $(addprefix $(BUILD)/,$(addsuffix .c.o,$(TILEMAPS)))
 OFILES_SOURCES := $(addprefix $(BUILD)/,$(addsuffix .o,$(SFILES)))   \
 				  $(addprefix $(BUILD)/,$(addsuffix .o,$(CFILES)))   \
 				  $(addprefix $(BUILD)/,$(addsuffix .o,$(BINFILES)))
@@ -196,7 +199,7 @@ $(BUILD)/%.bin.o	$(BUILD)/%.bin.h :	%.bin | $(BUILD_DIRS)
 	$(call print,Copying binary file:,$<,$@)
 	$(V)bin2s -a 4 -H $(BUILD)/$<.h $< | $(AS) -o $(BUILD)/$<.o
 
-$(BUILD)/%.4bpp.o	$(BUILD)/%.4bpp.h :	%.4bpp | $(BUILD_DIRS)
+$(BUILD)/%.raw.4bpp.o	$(BUILD)/%.raw.4bpp.h :	%.raw.4bpp | $(BUILD_DIRS)
 	$(call print,Copying uncompressed graphics file:,$<,$@)
 	$(V)bin2s -a 4 -H $(BUILD)/$<.h $< | $(AS) -o $(BUILD)/$<.o
 
@@ -233,7 +236,6 @@ $(BUILD)/%.tilemap.c : %.tilemap | $(BUILD_DIRS)
 $(OFILES_JSON): $(BUILD)/%.c.o : $(BUILD)/%.c | $(BUILD_DIRS)
 	$(call build_c_file)
 
-# C files
 $(BUILD)/%.c.o : %.c | $(BUILD_DIRS)
 	$(call build_c_file)
 
