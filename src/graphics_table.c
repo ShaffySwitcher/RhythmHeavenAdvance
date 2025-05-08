@@ -76,6 +76,7 @@ void func_08002a6c(struct GfxTableLoader *info, const struct GraphicsTable *gfxT
 void func_08002b10(struct GfxTableLoader *info) {
     const struct GraphicsTable *gfxTable;
     const struct CompressedData *compressed;
+    const struct CompressedGFX *compressedGfx;
     s32 processLimit;
     u32 size;
     u32 offset;
@@ -123,7 +124,8 @@ void func_08002b10(struct GfxTableLoader *info) {
                     compressed = info->src;
                     src = compressed->data;
                     if (compressed->doubleCompressed) {
-                        src = info->dest + compressed->rleOffset - ((struct CompressedGFX *)compressed->data)->size;
+                        compressedGfx = compressed->data;
+                        src = info->dest + compressed->rleOffset - compressedGfx->size;
                     }
                     size = D_03004af0(src, info->dest, compressed->rleData, (compressed->rleSize << 16) | (info->limit / 4));
                 }
@@ -152,10 +154,8 @@ void func_08002b10(struct GfxTableLoader *info) {
                 } else {
                     compressed = info->src;
                     info->decompressingGfx = TRUE;
-                    // Fake-match below:
-                    size = (u32)compressed->data;
-                    // <audible booing>
-                    finished = func_08008594(compressed->data, (info->dest + compressed->rleOffset - ((struct CompressedGFX *)compressed->data)->size), info->limit, info->gfxDecompressProgress);
+                    compressedGfx = compressed->data;
+                    finished = func_08008594(compressed->data, info->dest + compressed->rleOffset - compressedGfx->size, info->limit, info->gfxDecompressProgress);
                 }
                 info->size -= info->limit;
                 if (info->size < 0) {
