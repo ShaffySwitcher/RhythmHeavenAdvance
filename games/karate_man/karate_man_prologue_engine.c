@@ -5,7 +5,7 @@
 
 
 // [D_089ea650] Buffered Textures List
-struct CompressedGraphics *karate_man_prologue_buffered_textures[] = {
+struct CompressedData *karate_man_prologue_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

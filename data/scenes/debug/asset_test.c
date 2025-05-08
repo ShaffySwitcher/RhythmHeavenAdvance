@@ -46,7 +46,7 @@ struct GraphicsTable asset_test_gfx_table[] = {
 
 
 // [D_089de130] Buffered Textures List
-struct CompressedGraphics *asset_test_buffered_textures[] = {
+struct CompressedData *asset_test_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

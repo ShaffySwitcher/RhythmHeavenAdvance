@@ -24,10 +24,10 @@ extern struct Animation anim_polyrhythm_arrow_dpad[];
 
 /* POLYRHYTHM - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics polyrhythm_obj;
-extern struct CompressedGraphics polyrhythm_bg_map;
-extern struct CompressedGraphics polyrhythm_obj;
-extern struct CompressedGraphics polyrhythm_bg_map;
+extern struct CompressedData polyrhythm_obj;
+extern struct CompressedData polyrhythm_bg_map;
+extern struct CompressedData polyrhythm_obj;
+extern struct CompressedData polyrhythm_bg_map;
 
 /* POLYRHYTHM - PALETTES */
 

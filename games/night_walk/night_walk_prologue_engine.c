@@ -5,7 +5,7 @@
 
 
 // [D_089ea988] Buffered Textures List
-struct CompressedGraphics *night_walk_prologue_buffered_textures[] = {
+struct CompressedData *night_walk_prologue_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

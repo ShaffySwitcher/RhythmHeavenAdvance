@@ -5,7 +5,7 @@
 
 
 // [D_089ed188] Buffered Textures List
-struct CompressedGraphics *ninja_bodyguard_prologue_buffered_textures[] = {
+struct CompressedData *ninja_bodyguard_prologue_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

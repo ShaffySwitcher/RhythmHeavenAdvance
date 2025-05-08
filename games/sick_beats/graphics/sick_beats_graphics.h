@@ -49,10 +49,10 @@ extern struct Animation anim_sick_beats_endless_particle[];
 
 /* SICK BEATS - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics sick_beats_bg_tiles;
-extern struct CompressedGraphics sick_beats_bg_map_foreground;
-extern struct CompressedGraphics sick_beats_bg_map;
-extern struct CompressedGraphics sick_beats_obj;
+extern struct CompressedData sick_beats_bg_tiles;
+extern struct CompressedData sick_beats_bg_map_foreground;
+extern struct CompressedData sick_beats_bg_map;
+extern struct CompressedData sick_beats_obj;
 
 /* SICK BEATS - PALETTES */
 

@@ -10,9 +10,9 @@ extern struct Animation anim_bunny_hop_prologue_title[];
 
 /* PROLOGUE (BUNNY HOP) - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics bunny_hop_prologue_bg_tiles;
-extern struct CompressedGraphics bunny_hop_prologue_bg_map;
-extern struct CompressedGraphics bunny_hop_prologue_obj;
+extern struct CompressedData bunny_hop_prologue_bg_tiles;
+extern struct CompressedData bunny_hop_prologue_bg_map;
+extern struct CompressedData bunny_hop_prologue_obj;
 
 /* PROLOGUE (BUNNY HOP) - PALETTES */
 

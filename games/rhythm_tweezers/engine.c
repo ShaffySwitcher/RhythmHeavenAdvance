@@ -12,14 +12,14 @@ struct Animation *rhythm_tweezers_veg_face_anim[] = {
 };
 
 // [D_089e3da4] Vegetable BG Maps
-struct CompressedGraphics *rhythm_tweezers_veg_bg_maps[] = {
+struct CompressedData *rhythm_tweezers_veg_bg_maps[] = {
     &rhythm_tweezers_bg_map_onion,
     &rhythm_tweezers_bg_map_turnip,
     &rhythm_tweezers_bg_map_potato
 };
 
 // [D_089e3db0] Buffered Textures List
-struct CompressedGraphics *rhythm_tweezers_buffered_textures[] = {
+struct CompressedData *rhythm_tweezers_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

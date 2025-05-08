@@ -5,7 +5,7 @@
 
 
 // [D_089ea514] Buffered Textures List
-struct CompressedGraphics *bon_odori_prologue_buffered_textures[] = {
+struct CompressedData *bon_odori_prologue_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

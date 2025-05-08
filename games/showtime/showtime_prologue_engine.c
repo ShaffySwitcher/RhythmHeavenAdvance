@@ -5,7 +5,7 @@
 
 
 // [D_089eaadc] Buffered Textures List
-struct CompressedGraphics *showtime_prologue_buffered_textures[] = {
+struct CompressedData *showtime_prologue_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

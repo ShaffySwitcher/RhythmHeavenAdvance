@@ -5,7 +5,7 @@
 
 
 // [D_089eb37c] Buffered Textures List
-struct CompressedGraphics *samurai_slice_prologue_buffered_textures[] = {
+struct CompressedData *samurai_slice_prologue_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

@@ -5,7 +5,7 @@
 
 
 // [D_089ea088] Buffered Textures List
-struct CompressedGraphics *sneaky_spirits_prologue_buffered_textures[] = {
+struct CompressedData *sneaky_spirits_prologue_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

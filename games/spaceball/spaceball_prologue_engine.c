@@ -5,7 +5,7 @@
 
 
 // [D_089ea26c] Buffered Textures List
-struct CompressedGraphics *spaceball_prologue_buffered_textures[] = {
+struct CompressedData *spaceball_prologue_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

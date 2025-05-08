@@ -5,7 +5,7 @@
 
 
 // [D_089ed820] Buffered Textures List
-struct CompressedGraphics *toss_boys_prologue_buffered_textures[] = {
+struct CompressedData *toss_boys_prologue_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

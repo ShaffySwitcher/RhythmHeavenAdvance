@@ -92,7 +92,7 @@ extern s32 schedule_function_call(u16 memID, void *function, s32 param, u32 dela
 // extern ? func_08008720(?);
 extern struct TextureLoader *init_texture_loader_task(struct TextureLoaderInputs *inputs);
 extern u32 update_texture_loader_task(struct TextureLoader *task);
-extern u32 start_new_texture_loader(u16 memID, struct CompressedGraphics **textureList);
+extern u32 start_new_texture_loader(u16 memID, struct CompressedData **textureList);
 
 /* ? */
 extern s32 clamp_int32(s32 var, s32 min, s32 max); // Signed Clamp

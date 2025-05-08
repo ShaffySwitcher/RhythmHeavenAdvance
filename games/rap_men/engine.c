@@ -35,7 +35,7 @@ struct Animation **rap_men_anim_table[] = {
 };
 
 // [D_089e6424] Buffered Textures List
-struct CompressedGraphics *rap_men_buffered_textures[] = {
+struct CompressedData *rap_men_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

@@ -69,6 +69,6 @@ struct GraphicsTable title_gfx_table[] = {
 
 
 // [D_089dcfec] Buffered Textures List
-struct CompressedGraphics *title_buffered_textures[] = {
+struct CompressedData *title_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };

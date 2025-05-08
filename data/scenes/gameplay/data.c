@@ -23,7 +23,7 @@ struct GraphicsTable gameplay_common_gfx_table[] = {
 };
 
 // [D_089cfda0] Buffered Textures List
-struct CompressedGraphics *gameplay_common_buffered_textures[] = {
+struct CompressedData *gameplay_common_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

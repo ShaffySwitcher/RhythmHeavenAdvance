@@ -117,7 +117,7 @@ u16 bon_odori_anim_durations[] = {
 };
 
 // [D_089ded10] Buffered Textures List
-struct CompressedGraphics *bon_odori_buffered_textures[] = {
+struct CompressedData *bon_odori_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

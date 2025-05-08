@@ -9,9 +9,9 @@ extern struct Animation anim_wizards_waltz_prologue_title[];
 
 /* PROLOGUE (WIZARD'S WALTZ) - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics wizards_waltz_prologue_bg_tiles;
-extern struct CompressedGraphics wizards_waltz_prologue_bg_map;
-extern struct CompressedGraphics wizards_waltz_prologue_obj;
+extern struct CompressedData wizards_waltz_prologue_bg_tiles;
+extern struct CompressedData wizards_waltz_prologue_bg_map;
+extern struct CompressedData wizards_waltz_prologue_obj;
 
 /* PROLOGUE (WIZARD'S WALTZ) - PALETTES */
 

@@ -5,7 +5,7 @@
 
 
 // [D_089ebb7c] Buffered Textures List
-struct CompressedGraphics *quiz_show_prologue_buffered_textures[] = {
+struct CompressedData *quiz_show_prologue_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

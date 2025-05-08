@@ -5,7 +5,7 @@
 
 
 // [D_089edcf4] Buffered Textures List
-struct CompressedGraphics *sick_beats_prologue_buffered_textures[] = {
+struct CompressedData *sick_beats_prologue_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

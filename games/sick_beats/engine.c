@@ -39,7 +39,7 @@ u16 sick_beats_microbe_event_durations[] = {
 };
 
 // [D_089e9100] Buffered Textures List
-struct CompressedGraphics *sick_beats_buffered_textures[] = {
+struct CompressedData *sick_beats_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

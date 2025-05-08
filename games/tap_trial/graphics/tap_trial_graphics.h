@@ -42,27 +42,27 @@ extern struct Animation anim_tap_trial_girl_miss_pose[];
 
 /* TAP TRIAL - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics tap_trial_bg_tiles;
-extern struct CompressedGraphics tap_trial_bg_map;
-extern struct CompressedGraphics tap_trial_bg_map_text_bubble;
-extern struct CompressedGraphics tap_trial_obj;
-extern struct CompressedGraphics tap_trial_remix_8_bg_tiles;
-extern struct CompressedGraphics tap_trial_remix_8_bg_map;
-extern struct CompressedGraphics tap_trial_remix_8_bg_map_text_bubble;
-extern struct CompressedGraphics tap_trial_remix_8_obj;
-extern struct CompressedGraphics tap_trial_remix_7_bg_tiles;
-extern struct CompressedGraphics tap_trial_remix_7_bg_map;
-extern struct CompressedGraphics tap_trial_remix_7_bg_map_text_bubble;
-extern struct CompressedGraphics tap_trial_remix_7_obj;
-extern struct CompressedGraphics tap_trial_2_bg_tiles;
-extern struct CompressedGraphics tap_trial_2_bg_map_stage;
-extern struct CompressedGraphics tap_trial_2_bg_map;
-extern struct CompressedGraphics tap_trial_2_bg_map_text_bubble;
-extern struct CompressedGraphics tap_trial_2_bg_map_2;
-extern struct CompressedGraphics tap_trial_2_obj;
-extern struct CompressedGraphics tap_trial_remix_5_bg_tiles;
-extern struct CompressedGraphics tap_trial_remix_5_bg_map;
-extern struct CompressedGraphics tap_trial_remix_5_obj;
+extern struct CompressedData tap_trial_bg_tiles;
+extern struct CompressedData tap_trial_bg_map;
+extern struct CompressedData tap_trial_bg_map_text_bubble;
+extern struct CompressedData tap_trial_obj;
+extern struct CompressedData tap_trial_remix_8_bg_tiles;
+extern struct CompressedData tap_trial_remix_8_bg_map;
+extern struct CompressedData tap_trial_remix_8_bg_map_text_bubble;
+extern struct CompressedData tap_trial_remix_8_obj;
+extern struct CompressedData tap_trial_remix_7_bg_tiles;
+extern struct CompressedData tap_trial_remix_7_bg_map;
+extern struct CompressedData tap_trial_remix_7_bg_map_text_bubble;
+extern struct CompressedData tap_trial_remix_7_obj;
+extern struct CompressedData tap_trial_2_bg_tiles;
+extern struct CompressedData tap_trial_2_bg_map_stage;
+extern struct CompressedData tap_trial_2_bg_map;
+extern struct CompressedData tap_trial_2_bg_map_text_bubble;
+extern struct CompressedData tap_trial_2_bg_map_2;
+extern struct CompressedData tap_trial_2_obj;
+extern struct CompressedData tap_trial_remix_5_bg_tiles;
+extern struct CompressedData tap_trial_remix_5_bg_map;
+extern struct CompressedData tap_trial_remix_5_obj;
 
 /* TAP TRIAL - PALETTES */
 

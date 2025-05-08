@@ -58,7 +58,7 @@ struct GraphicsTable game_select_gfx_table[] = {
 
 
 // [D_089cf9a8] Buffered Textures List
-struct CompressedGraphics *game_select_buffered_textures[] = {
+struct CompressedData *game_select_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

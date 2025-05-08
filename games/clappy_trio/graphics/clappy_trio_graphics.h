@@ -19,9 +19,9 @@ extern struct Animation anim_clappy_trio_text_box[];
 
 /* THE CLAPPY TRIO - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics clappy_trio_bg_tiles; // BG Tiles - The Clappy Trio
-extern struct CompressedGraphics clappy_trio_bg_map; // BG Map - The Clappy Trio
-extern struct CompressedGraphics clappy_trio_obj; // OBJ Tiles - The Clappy Trio
+extern struct CompressedData clappy_trio_bg_tiles; // BG Tiles - The Clappy Trio
+extern struct CompressedData clappy_trio_bg_map; // BG Map - The Clappy Trio
+extern struct CompressedData clappy_trio_obj; // OBJ Tiles - The Clappy Trio
 
 /* THE CLAPPY TRIO - PALETTES */
 
@@ -44,9 +44,9 @@ extern struct Animation anim_snappy_trio_text_box[];
 
 /* THE SNAPPY TRIO - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics snappy_trio_bg_tiles; // BG Tiles - The Snappy Trio
-extern struct CompressedGraphics snappy_trio_bg_map; // BG Map - The Snappy Trio
-extern struct CompressedGraphics snappy_trio_obj; // OBJ Tiles - The Snappy Trio
+extern struct CompressedData snappy_trio_bg_tiles; // BG Tiles - The Snappy Trio
+extern struct CompressedData snappy_trio_bg_map; // BG Map - The Snappy Trio
+extern struct CompressedData snappy_trio_obj; // OBJ Tiles - The Snappy Trio
 
 /* THE SNAPPY TRIO - PALETTES */
 

@@ -164,7 +164,7 @@ const s32 D_0805aab0[][4] = {
 };
 
 // [D_089e8dcc] Buffered Textures List
-struct CompressedGraphics *mechanical_horse_buffered_textures[] = {
+struct CompressedData *mechanical_horse_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

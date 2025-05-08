@@ -29,7 +29,7 @@ struct Animation *power_calligraphy_people_bow_anim[][2] = {
 };
 
 // [D_089e4990] Buffered Textures List
-struct CompressedGraphics *power_calligraphy_buffered_textures[] = {
+struct CompressedData *power_calligraphy_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

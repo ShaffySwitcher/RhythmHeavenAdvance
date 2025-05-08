@@ -5,7 +5,7 @@
 
 
 // [D_089eac18] Buffered Textures List
-struct CompressedGraphics *bouncy_road_prologue_buffered_textures[] = {
+struct CompressedData *bouncy_road_prologue_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

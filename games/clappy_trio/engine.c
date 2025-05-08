@@ -29,7 +29,7 @@ struct Animation **clappy_trio_anim_table[] = {
 };
 
 // [D_089e4580] Buffered Textures List
-struct CompressedGraphics *clappy_trio_buffered_textures[] = {
+struct CompressedData *clappy_trio_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

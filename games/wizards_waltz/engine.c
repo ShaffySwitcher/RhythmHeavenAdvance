@@ -5,7 +5,7 @@
 
 
 // [D_089e9f10] Buffered Textures List
-struct CompressedGraphics *wizards_waltz_buffered_textures[] = {
+struct CompressedData *wizards_waltz_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

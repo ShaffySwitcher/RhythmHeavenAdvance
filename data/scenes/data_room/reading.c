@@ -34,7 +34,7 @@ struct GraphicsTable reading_gfx_table[] = {
 
 
 // [D_089d7fe4] Buffered Textures List
-struct CompressedGraphics *reading_buffered_textures[] = {
+struct CompressedData *reading_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

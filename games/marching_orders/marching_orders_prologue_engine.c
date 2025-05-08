@@ -5,7 +5,7 @@
 
 
 // [D_089eb66c] Buffered Textures List
-struct CompressedGraphics *marching_orders_prologue_buffered_textures[] = {
+struct CompressedData *marching_orders_prologue_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

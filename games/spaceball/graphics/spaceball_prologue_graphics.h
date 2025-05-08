@@ -9,9 +9,9 @@ extern struct Animation anim_spaceball_prologue_title[];
 
 /* PROLOGUE (SPACEBALL) - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics spaceball_prologue_bg_tiles;
-extern struct CompressedGraphics spaceball_prologue_bg_map;
-extern struct CompressedGraphics spaceball_prologue_obj;
+extern struct CompressedData spaceball_prologue_bg_tiles;
+extern struct CompressedData spaceball_prologue_bg_map;
+extern struct CompressedData spaceball_prologue_obj;
 
 /* PROLOGUE (SPACEBALL) - PALETTES */
 

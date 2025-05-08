@@ -25,19 +25,19 @@ extern struct Animation anim_marching1_commander_annoyed[];
 
 /* MARCHING ORDERS - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics marching_orders_bg_tiles;
-extern struct CompressedGraphics marching_orders_bg_map;
-extern struct CompressedGraphics marching_orders_bg_map_text_bubble;
-extern struct CompressedGraphics marching_orders_bg_map_floor;
-extern struct CompressedGraphics marching_orders_obj;
-extern struct CompressedGraphics marching_orders_remix_7_bg_tiles;
-extern struct CompressedGraphics marching_orders_remix_7_bg_map;
-extern struct CompressedGraphics marching_orders_remix_7_bg_map_floor;
-extern struct CompressedGraphics marching_orders_remix_7_obj;
-extern struct CompressedGraphics marching_orders_2_bg_tiles;
-extern struct CompressedGraphics marching_orders_2_bg_map;
-extern struct CompressedGraphics marching_orders_2_bg_map_floor;
-extern struct CompressedGraphics marching_orders_2_obj;
+extern struct CompressedData marching_orders_bg_tiles;
+extern struct CompressedData marching_orders_bg_map;
+extern struct CompressedData marching_orders_bg_map_text_bubble;
+extern struct CompressedData marching_orders_bg_map_floor;
+extern struct CompressedData marching_orders_obj;
+extern struct CompressedData marching_orders_remix_7_bg_tiles;
+extern struct CompressedData marching_orders_remix_7_bg_map;
+extern struct CompressedData marching_orders_remix_7_bg_map_floor;
+extern struct CompressedData marching_orders_remix_7_obj;
+extern struct CompressedData marching_orders_2_bg_tiles;
+extern struct CompressedData marching_orders_2_bg_map;
+extern struct CompressedData marching_orders_2_bg_map_floor;
+extern struct CompressedData marching_orders_2_obj;
 
 /* MARCHING ORDERS - PALETTES */
 

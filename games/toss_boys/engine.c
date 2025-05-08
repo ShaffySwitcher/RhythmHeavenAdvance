@@ -335,7 +335,7 @@ struct DrumTechInstrument toss_boys_drumtech_bank[] = {
 
 
 // [D_089e8528] Buffered Textures List
-struct CompressedGraphics *toss_boys_buffered_textures[] = {
+struct CompressedData *toss_boys_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

@@ -24,16 +24,16 @@ extern struct Animation anim_fireworks_count[];
 
 /* FIREWORKS - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics fireworks_obj; // OBJ Tiles (+ BG Tiles for Fireworks 1)
-extern struct CompressedGraphics fireworks_bg_map;
-extern struct CompressedGraphics fireworks_remix_5_bg_tiles_1;
-extern struct CompressedGraphics fireworks_remix_5_bg_map_1;
-extern struct CompressedGraphics fireworks_remix_5_bg_tiles_2;
-extern struct CompressedGraphics fireworks_remix_5_bg_map_2;
-extern struct CompressedGraphics fireworks_remix_5_bg_tiles_3;
-extern struct CompressedGraphics fireworks_remix_5_bg_map_3;
-extern struct CompressedGraphics fireworks_remix_5_bg_tiles_4;
-extern struct CompressedGraphics fireworks_remix_5_bg_map_4;
+extern struct CompressedData fireworks_obj; // OBJ Tiles (+ BG Tiles for Fireworks 1)
+extern struct CompressedData fireworks_bg_map;
+extern struct CompressedData fireworks_remix_5_bg_tiles_1;
+extern struct CompressedData fireworks_remix_5_bg_map_1;
+extern struct CompressedData fireworks_remix_5_bg_tiles_2;
+extern struct CompressedData fireworks_remix_5_bg_map_2;
+extern struct CompressedData fireworks_remix_5_bg_tiles_3;
+extern struct CompressedData fireworks_remix_5_bg_map_3;
+extern struct CompressedData fireworks_remix_5_bg_tiles_4;
+extern struct CompressedData fireworks_remix_5_bg_map_4;
 
 /* FIREWORKS - PALETTES */
 

@@ -5,7 +5,7 @@
 
 
 // [D_089e5c40] Buffered Textures List
-struct CompressedGraphics *drum_live_menu_buffered_textures[] = {
+struct CompressedData *drum_live_menu_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

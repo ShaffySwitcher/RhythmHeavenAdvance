@@ -39,7 +39,7 @@ struct GraphicsTable options_gfx_table[] = {
 
 
 // [D_089cfb10] Buffered Textures List
-struct CompressedGraphics *options_buffered_textures[] = {
+struct CompressedData *options_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

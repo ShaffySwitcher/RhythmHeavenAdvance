@@ -72,6 +72,6 @@ struct GraphicsTable cafe_gfx_table[] = {
 
 
 // [D_089cd4e0] Buffered Textures List
-struct CompressedGraphics *cafe_buffered_textures[] = {
+struct CompressedData *cafe_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };

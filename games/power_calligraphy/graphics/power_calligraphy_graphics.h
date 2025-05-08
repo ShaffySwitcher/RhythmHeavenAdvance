@@ -51,10 +51,10 @@ extern struct Animation anim_power_calligraphy_people_w_dance_r[];
 
 /* POWER CALLIGRAPHY - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics power_calligraphy_bg_tiles;
-extern struct CompressedGraphics power_calligraphy_bg_map;
-extern struct CompressedGraphics power_calligraphy_obj;
-extern struct CompressedGraphics power_calligraphy_obj_dancers;
+extern struct CompressedData power_calligraphy_bg_tiles;
+extern struct CompressedData power_calligraphy_bg_map;
+extern struct CompressedData power_calligraphy_obj;
+extern struct CompressedData power_calligraphy_obj_dancers;
 
 /* POWER CALLIGRAPHY - PALETTES */
 

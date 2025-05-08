@@ -44,16 +44,16 @@ extern struct Animation anim_space_gramps_raise_brow[];
 
 /* SPACE DANCE - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics space_dance_bg_tiles;
-extern struct CompressedGraphics space_dance_bg_map;
-extern struct CompressedGraphics space_dance_obj;
-extern struct CompressedGraphics cosmic_dance_bg_tiles;
-extern struct CompressedGraphics cosmic_dance_bg_map_1;
-extern struct CompressedGraphics cosmic_dance_bg_map_2;
-extern struct CompressedGraphics cosmic_dance_obj;
-extern struct CompressedGraphics space_dance_remix_3_bg_tiles;
-extern struct CompressedGraphics space_dance_remix_3_bg_map;
-extern struct CompressedGraphics space_dance_obj;
+extern struct CompressedData space_dance_bg_tiles;
+extern struct CompressedData space_dance_bg_map;
+extern struct CompressedData space_dance_obj;
+extern struct CompressedData cosmic_dance_bg_tiles;
+extern struct CompressedData cosmic_dance_bg_map_1;
+extern struct CompressedData cosmic_dance_bg_map_2;
+extern struct CompressedData cosmic_dance_obj;
+extern struct CompressedData space_dance_remix_3_bg_tiles;
+extern struct CompressedData space_dance_remix_3_bg_map;
+extern struct CompressedData space_dance_obj;
 
 /* SPACE DANCE - PALETTES */
 

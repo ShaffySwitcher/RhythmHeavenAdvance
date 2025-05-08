@@ -36,7 +36,7 @@ struct GraphicsTable score_results_gfx_table[] = {
 
 
 // [D_089d7834] Buffered Textures List
-struct CompressedGraphics *score_results_buffered_textures[] = {
+struct CompressedData *score_results_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

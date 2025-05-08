@@ -44,7 +44,7 @@ struct GraphicsTable studio_gfx_table[] = {
 
 
 // [D_089d849c] Buffered Textures List
-struct CompressedGraphics *studio_buffered_textures[] = {
+struct CompressedData *studio_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

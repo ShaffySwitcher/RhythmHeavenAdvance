@@ -32,23 +32,23 @@ extern struct Animation anim_horse_high_speed_light[];
 
 /* MECHANICAL HORSE - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics mechanical_horse_bg_tiles;
-extern struct CompressedGraphics mechanical_horse_bg_map;
-extern struct CompressedGraphics mechanical_horse_bg_map_ground;
-extern struct CompressedGraphics mechanical_horse_bg_map_speedometer;
-extern struct CompressedGraphics mechanical_horse_obj;
-extern struct CompressedGraphics mechanical_horse_photo_bg_tiles;
-extern struct CompressedGraphics mechanical_horse_photo_bg_map;
-extern struct CompressedGraphics mechanical_horse_space_bg_tiles;
-extern struct CompressedGraphics mechanical_horse_space_bg_map;
-extern struct CompressedGraphics mechanical_horse_blur_bg_tiles;
-extern struct CompressedGraphics mechanical_horse_blur_bg_map;
-extern struct CompressedGraphics mechanical_horse_city_bg_tiles;
-extern struct CompressedGraphics mechanical_horse_city_bg_map;
-extern struct CompressedGraphics mechanical_horse_road_bg_tiles;
-extern struct CompressedGraphics mechanical_horse_road_bg_map;
-extern struct CompressedGraphics mechanical_horse_trees_bg_tiles;
-extern struct CompressedGraphics mechanical_horse_trees_bg_map;
+extern struct CompressedData mechanical_horse_bg_tiles;
+extern struct CompressedData mechanical_horse_bg_map;
+extern struct CompressedData mechanical_horse_bg_map_ground;
+extern struct CompressedData mechanical_horse_bg_map_speedometer;
+extern struct CompressedData mechanical_horse_obj;
+extern struct CompressedData mechanical_horse_photo_bg_tiles;
+extern struct CompressedData mechanical_horse_photo_bg_map;
+extern struct CompressedData mechanical_horse_space_bg_tiles;
+extern struct CompressedData mechanical_horse_space_bg_map;
+extern struct CompressedData mechanical_horse_blur_bg_tiles;
+extern struct CompressedData mechanical_horse_blur_bg_map;
+extern struct CompressedData mechanical_horse_city_bg_tiles;
+extern struct CompressedData mechanical_horse_city_bg_map;
+extern struct CompressedData mechanical_horse_road_bg_tiles;
+extern struct CompressedData mechanical_horse_road_bg_map;
+extern struct CompressedData mechanical_horse_trees_bg_tiles;
+extern struct CompressedData mechanical_horse_trees_bg_map;
 
 /* MECHANICAL HORSE - PALETTES */
 

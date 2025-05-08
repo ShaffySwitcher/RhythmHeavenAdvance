@@ -5,7 +5,7 @@
 
 
 // [D_089e6634] Buffered Textures List
-struct CompressedGraphics *rat_race_buffered_textures[] = {
+struct CompressedData *rat_race_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

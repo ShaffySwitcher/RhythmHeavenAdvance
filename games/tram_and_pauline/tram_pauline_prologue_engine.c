@@ -5,7 +5,7 @@
 
 
 // [D_089edbb8] Buffered Textures List
-struct CompressedGraphics *tram_pauline_prologue_buffered_textures[] = {
+struct CompressedData *tram_pauline_prologue_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

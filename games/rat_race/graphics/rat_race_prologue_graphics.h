@@ -10,9 +10,9 @@ extern struct Animation anim_rat_race_prologue_title[];
 
 /* PROLOGUE (RAT RACE) - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics rat_race_prologue_bg_tiles;
-extern struct CompressedGraphics rat_race_prologue_bg_map;
-extern struct CompressedGraphics rat_race_prologue_obj;
+extern struct CompressedData rat_race_prologue_bg_tiles;
+extern struct CompressedData rat_race_prologue_bg_map;
+extern struct CompressedData rat_race_prologue_obj;
 
 /* PROLOGUE (RAT RACE) - PALETTES */
 

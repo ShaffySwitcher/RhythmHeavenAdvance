@@ -71,7 +71,7 @@ struct Animation **space_dance_anim_table[] = {
 };
 
 // [D_089e6d74] Buffered Textures List
-struct CompressedGraphics *space_dance_buffered_textures[] = {
+struct CompressedData *space_dance_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 
