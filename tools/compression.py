@@ -307,7 +307,7 @@ def get_size_and_segments(cFile):
     return size, segments
 
 def compress_file(input, output, double, revision):
-    symbol = os.path.splitext(os.path.basename(input))[0]
+    symbol = os.path.basename(input).split(".")[0]
     with open(input, 'rb') as f:
         data = array.array("H", f.read())
     
@@ -344,7 +344,7 @@ if __name__ == "__main__":
     inputFile = sys.argv[1]
     outputFile = sys.argv[2]
     revision = int(sys.argv[3])
-    double = (inputFile.endswith(".4bpp"))
+    double = not (inputFile.endswith(".tilemap") or inputFile.endswith(".rle.4bpp"))
 
     if (revision < 1):
         baserom = open("baserom.gba", "rb")
