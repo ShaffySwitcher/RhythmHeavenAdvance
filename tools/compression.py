@@ -11,14 +11,16 @@ def pad4(addr):
     return (addr + 3) & ~3
 
 
-def output_array(f, array, format, linelength):
+def output_array(f, array, prefix, linelength):
     length = len(array)
     for i in range(length):
-        f.write(format % array[i])
-        if (i != length - 1):
+        if (i % linelength == 0):
+            f.write(prefix + " ")
+        f.write("0x%x" % array[i])
+        if (i % linelength == linelength-1 or i == length - 1):
+            f.write("\n")
+        else:
             f.write(", ")
-            if (i % linelength == linelength-1):
-                f.write("\n\t")
 
 
 def append_unique_nibbles(array, unique_nibbles):
@@ -89,7 +91,6 @@ class SlidingWindow:
             word |= bytes[i] << (i*8)
         bitmask = 0xFFFFFFFF >> (32 - self.index)
         bitmask = ~bitmask & 0xFFFFFFFF
-        #print("%08X" % word, "%08X" % bitmask, "%08X" % (address), "%08X" % (address + (len(self.data)-1)*4))
         self.data[-1] = self.data[-1] | (word & bitmask)
 
 class CompressedData:
@@ -122,13 +123,11 @@ class CompressedData:
             mode2NibbleList = get_unique_nibbles(data[i:i+4])
             if len(mode2NibbleList) <= 2 and i+4 <= len(data):
                 # 1:4 ratio encoding
-                #print("Mode 2 encode:   ", mode2NibbleList)
                 newEncodedData = []
                 count = 0
 
                 while len(mode2NibbleList) <= 2:
                     hword = mode_2_encode(mode2NibbleList, data[i:i+4])
-                    #print("%x, %x, %x, %x" % (data[i], data[i+1], data[i+2], data[i+3]), " -> ", "0x%04X" % hword)
                     newEncodedData.append(hword)
                     count += 1
                     i += 4
@@ -151,17 +150,14 @@ class CompressedData:
                 mode1NibbleList = get_unique_nibbles(data[i:i+3])
                 if len(mode1NibbleList) <= 4 and i+3 <= len(data):
                     # 1:2 ratio encoding
-                    #print("Mode 1 encode:   ", mode1NibbleList)
                     newEncodedData = []
                     count = 0
                     startingByte = mode_1_encode(mode1NibbleList, data[i])
-                    #print("%x" % data[i], " -> ", "0x%02X" % startingByte)
                     i += 1
 
                     while len(mode1NibbleList) <= 4:
                         byte1 = mode_1_encode(mode1NibbleList, data[i])
                         byte2 = mode_1_encode(mode1NibbleList, data[i+1])
-                        #print("%x, %x" % (data[i], data[i+1]), " -> ", "0x%04X" % (byte1 << 8 | byte2))
                         newEncodedData.append(byte1 | byte2 << 8)
                         count += 1
                         i += 2
@@ -188,7 +184,6 @@ class CompressedData:
                 break
 
             # Copy mode (no compression)
-            #print("Copy mode: %x" % data[i])
             self.compressed.append(data[i])
             self.window1.append_bit(0)
             i += 1
@@ -200,23 +195,25 @@ class CompressedData:
 
     def output_to_file(self, f, symbol):
         # f is a currently open file object
-        f.write("u16 %s_data[] = {\n\t" % symbol)
-        output_array(f, self.compressed, "0x%04x", 16)
-        f.write("\n};\n\n")
-        f.write("u32 %s_window1[] = {\n\t" % symbol)
-        output_array(f, self.window1.data, "0x%08x", 8)
-        f.write("\n};\n\n")
-        f.write("u32 %s_window2[] = {\n\t" % symbol)
-        output_array(f, self.window2.data, "0x%08x", 8)
-        f.write("\n};\n\n")
+        f.write("\n.balign 2, 0\n")
+        f.write("%s_data:\n" % symbol)
+        output_array(f, self.compressed, ".hword", 16)
 
-        f.write("struct CompressedGFX %s_compressed = {\n" % symbol)
-        f.write("\t/* Compressed data */   %s_data,\n" % symbol)
-        f.write("\t/* Decompressed size */ 0x%x,\n" % self.decompressedSize)
-        f.write("\t/* Segment count */     %d,\n" % self.segmentCount)
-        f.write("\t/* Window 1 */          %s_window1,\n" % symbol)
-        f.write("\t/* Window 2 */          %s_window2,\n" % symbol)
-        f.write("};\n\n")
+        f.write("\n.balign 4, 0\n")
+        f.write("%s_window1:\n" % symbol)
+        output_array(f, self.window1.data, ".word", 8)
+
+        f.write("\n.balign 4, 0\n")
+        f.write("%s_window2:\n" % symbol)
+        output_array(f, self.window2.data, ".word", 8)
+
+        f.write("\n.balign 4, 0\n")
+        f.write("%s_compressed:\n" % symbol)
+        f.write(".word %s_data\n" % symbol)
+        f.write(".hword %d\n" % self.decompressedSize)
+        f.write(".hword %d\n" % self.segmentCount)
+        f.write(".word %s_window1\n" % symbol)
+        f.write(".word %s_window2\n\n" % symbol)
 
         self.dataSize = pad4(self.address + len(self.compressed)*2) + len(self.window1.data)*4 + len(self.window2.data)*4 + 16 - self.address
 
@@ -274,37 +271,26 @@ class RleCompressedData:
 
     def output_to_file(self, f, symbol, double):
         if not double:
-            f.write("u16 %s_data[] = {\n\t" % symbol)
-            output_array(f, self.compressed, "0x%04x", 16)
-            f.write("\n};\n\n")
+            f.write(".balign 2, 0\n")
+            f.write("%s_data:\n" % symbol)
+            output_array(f, self.compressed, ".hword", 16)
+            f.write("\n")
 
-        f.write("u8 %s_rle_segments[] = {\n\t" % symbol)
-        output_array(f, self.counts, "%3d", 16)
-        f.write("\n};\n\n")
+        f.write("%s_rle_segments:\n" % symbol)
+        output_array(f, self.counts, ".byte", 16)
 
-        f.write("struct CompressedData %s = {\n" % symbol)
+        f.write("\n.balign 4, 0\n")
+        f.write(".global %s\n" % symbol)
+        f.write("%s:\n" % symbol)
         if (double):
-            f.write("\t/* Compressed data */    &%s_compressed,\n" % symbol)
+            f.write(".word %s_compressed\n" % symbol)
         else:
-            f.write("\t/* Compressed data */    %s_data,\n" % symbol)
-        f.write("\t/* RLE segments */       %s_rle_segments,\n" % symbol)
-        f.write("\t/* Segment count */      %d,\n" % self.size)
-        f.write("\t/* Decompressed size */  0x%x,\n" % self.offset)
-        f.write("\t/* Double compression */ %s,\n" % ("TRUE" if double else "FALSE"))
-        f.write("};\n")
+            f.write(".word %s_data\n" % symbol)
+        f.write(".word %s_rle_segments\n" % symbol)
+        f.write(".hword %d\n" % self.size)
+        f.write(".hword %d\n" % self.offset)
+        f.write(".word %s\n" % ("1" if double else "0"))
 
-
-
-def get_size_and_segments(cFile):
-    with open(cFile, 'r') as f:
-        lines = f.readlines()
-
-    for (i, line) in enumerate(lines):
-        if "/* Size */" in line:
-            size = int(line.split("/")[2].strip()[2:-1],16)
-        if "/* Count */" in line:
-            segments = int(line.split("/")[2].strip()[2:-1],16)
-    return size, segments
 
 def compress_file(input, output, double, revision):
     symbol = os.path.basename(input).split(".")[0]
@@ -321,7 +307,7 @@ def compress_file(input, output, double, revision):
                 unusedDataLength = offsets[symbol][2]
 
     outputFile = open(output, 'w')
-    outputFile.write('#include "global.h"\n#include "graphics.h"\n\n')
+    outputFile.write('.section .data\n\n')
 
     rleData = RleCompressedData(data)
     if double:
@@ -336,9 +322,11 @@ def compress_file(input, output, double, revision):
             startAddress = address + len(rleData.compressed)*2
         startAddress = pad4(startAddress + len(rleData.counts)) + 16
         unusedData = read_from_rom(startAddress, offsets[symbol][2])
-        outputFile.write("u8 %s_unused[%d] = {\n\t" % (symbol, len(unusedData)))
-        output_array(outputFile, unusedData, "0x%02x", 16)
-        outputFile.write("\n};\n\n")
+        outputFile.write("%s_unused:\n" % symbol)
+        output_array(outputFile, unusedData, ".byte", 16)
+    
+    outputFile.close()
+
 
 if __name__ == "__main__":
     inputFile = sys.argv[1]
