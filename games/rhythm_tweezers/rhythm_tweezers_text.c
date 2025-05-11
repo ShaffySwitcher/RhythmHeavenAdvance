@@ -9,7 +9,7 @@ const char D_0805b490[] = "You left a lot of hairs unplucked...";
 
 const char D_0805b4ac[] = "";
 
-const char D_0805b4b0[] = "You had a hard time with the long hairs";
+const char D_0805b4b0[] = "You had a hard time with the long hairs.";
 
 const char D_0805b4d0[] = "The long hairs were no match for you!";
 
@@ -35,7 +35,7 @@ const char D_0805b614[] = "You left a lot of hairs unplucked...";
 
 const char D_0805b630[] = "";
 
-const char D_0805b634[] = "You had a hard time with the long hairs";
+const char D_0805b634[] = "You had a hard time with the long hairs.";
 
 const char D_0805b654[] = "The long hairs were no match for you!";
 
