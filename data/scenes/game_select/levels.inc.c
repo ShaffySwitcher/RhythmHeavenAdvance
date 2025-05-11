@@ -131,8 +131,8 @@ struct LevelData level_data_table[] = {
     /* RHYTHM_TWEEZERS */ {
         /* Entry Scene   */ &scene_rhythm_tweezers,
         /* Level Name    */ "Rhythm Tweezers",
-        /* Level Desc.   */ "The roots on my\n"
-                            "veggies are showing!\n"
+        /* Level Desc.   */ "\n"
+                            "My roots are showing!\n"
                             "Can you pluck them off?\n",
         /* Level Icon    */ 14,
         /* Level Type    */ LEVEL_TYPE_GAME,
@@ -146,10 +146,10 @@ struct LevelData level_data_table[] = {
     /* RHYTHM_TWEEZERS_2 */ {
         /* Entry Scene   */ &scene_rhythm_tweezers_2,
         /* Level Name    */ "Rhythm Tweezers 2",
-        /* Level Desc.   */ "My veggie's roots\n"
-                            "are growing back!\n"
-                            "Please pluck\n"
-                            "them off again!",
+        /* Level Desc.   */ "My roots are\n"
+                            "growing back!\n"
+                            "Please pluck them\n"
+                            "off again!",
         /* Level Icon    */ 25,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_rhythm_tweezers_2_gfx_tables,
@@ -523,7 +523,7 @@ struct LevelData level_data_table[] = {
         /* Epilogue GFX  */ epilogue_tram_pauline_gfx_tables,
         /* Epilogue Text */ {
             /* TRY_AGAIN */ "We've transformed the show into a failure!",
-            /* OK        */ "At least we only messed up half the show...",
+            /* OK        */ "At least we only half messed up the show...",
             /* SUPERB    */ "We're the perfect duo!"
         }
     },
