@@ -60,9 +60,9 @@ struct GraphicsTable marching_orders_1_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c6cde0,
+        /* Src.  */ &marching_orders_text_bubble_bin,
         /* Dest. */ BG_MAP_BASE(0xF000),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 2048
     },
     /* BG Map */ {
         /* Src.  */ &D_08c6cd78,
@@ -160,9 +160,9 @@ struct GraphicsTable marching_orders_2_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c6cde0,
+        /* Src.  */ &marching_orders_text_bubble_bin,
         /* Dest. */ BG_MAP_BASE(0xF000),
-        /* Size  */ COMPRESSED_GFX_SOURCE
+        /* Size  */ 2048
     },
     /* BG Map */ {
         /* Src.  */ &D_08c6efbc,
