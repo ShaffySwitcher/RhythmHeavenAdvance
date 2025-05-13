@@ -43,6 +43,7 @@ extern struct CompressedGraphics D_08c6e8d4;
 extern const u8 marching_obj_bin;
 extern const u8 mo_map_bin;
 extern const u8 mo_again_bin;
+extern const u8 marching_orders_text_bubble_bin;
 
 /* MARCHING ORDERS - PALETTES */
 
