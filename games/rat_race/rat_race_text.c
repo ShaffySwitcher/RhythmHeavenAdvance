@@ -25,7 +25,7 @@ const char D_0805d1ac[] = "ｔｏ　ｓｔａｙ　ｓｔｉｌｌ！";
 
 const char D_0805d1bc[] = "Ａｎｄ　ａｔ　ｔｈｅ　ｎｅｘｔ　ｓｉｇｎ，";
 
-const char D_0805d1d0[] = "ｒｅｌｅａｓｅ　Ａ";
+const char D_0805d1d0[] = "ｒｅｌｅａｓｅ　￣";
 
 const char D_0805d1e0[] = "ｔｏ　ｓｔａｒｔ　ｒｕｎｎｉｎｇ！";
 
