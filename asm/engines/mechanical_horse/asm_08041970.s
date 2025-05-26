@@ -194,7 +194,7 @@ branch_08041ae4: \n\
 /* 08041aea */ LDR R0, [R0] \n\
 /* 08041aec */ MOVS R4, 0x3C @ Set R4 to 0x3C \n\
 /* 08041aee */ LDRSH R1, [R1, R4] \n\
-/* 08041af0 */ LDR R2, =anim_horse_text_ka \n\
+/* 08041af0 */ LDR R2, =anim_horse_text_ta \n\
 /* 08041af2 */ B branch_08041b26 \n\
 \n\
 .ltorg \n\

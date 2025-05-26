@@ -1,10 +1,10 @@
-# Project Description:
-This project aims to faithfully port the work done on "Rhythm Heaven Advance" to the WIP decompilation of Rhythm Tengoku.
+# Rhythm Heaven Advance:
+This is the newest and latest version of Rhythm Heaven Advance, based on the WIP decompilation of Rhythm Tengoku.
 "Rhythm Heaven Advance" is the brand new and improved translation patch for Rhythm Tengoku, translating all the text and graphics to be as faithful as possible to the original source, while making changes befitting a localization.
 This project (as well as the decompilation itself) **is a Work In Progress!**, meaning its not yet complete, therefore no download link is available.
 However, instruction on how to build the decomp, therefore the project, are available below. And when theres enough of the project done to felicitate a release, a patch dowload will be available.
 
-For any questions, suggestions, and general knowledge check out the [Rhythm Heaven Advance discord server](https://discord.gg/8PET8w8PU8)!
+For any questions, suggestions, or playtesting builds check out the [Rhythm Heaven Advance discord server](https://discord.gg/8PET8w8PU8)!
 The Advance team is currently looking for proofreading of the translated script!
 So if you know japanese and wanna help out you're more than welcome!
 If you have any Musical or Voice Acting experience, the Advance team is planning on reworking the Japanese audio and songs to be in English, so any help in the regard is welcome aswell!
