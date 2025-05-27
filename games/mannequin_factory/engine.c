@@ -25,31 +25,31 @@ u16 mannequin_input_buttons[] = {
 };
 
 // [D_089df3ac] Buffered Textures List
-struct CompressedGraphics *mannequin_buffered_textures[] = {
+struct CompressedData *mannequin_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 
 // [D_089df3b0] Graphics Table
 struct GraphicsTable mannequin_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &mannequin_factory_bg_bin,
+        /* Src.  */ &mannequin_factory_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
-        /* Size  */ 8192
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &mannequin_factory_map_bin,
+        /* Src.  */ &mannequin_factory_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
-        /* Size  */ 2048
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &mannequin_factory_practice_map_bin,
+        /* Src.  */ &mannequin_factory_bg_map_practice,
         /* Dest. */ BG_MAP_BASE(0xF000),
-        /* Size  */ 2048
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &mannequin_factory_obj_bin,
+        /* Src.  */ &mannequin_factory_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ 22420
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Palette */ {
         /* Src.  */ mannequin_factory_pal,

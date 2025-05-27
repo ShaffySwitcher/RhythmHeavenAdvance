@@ -9,9 +9,9 @@ extern struct Animation anim_quiz_show_prologue_title[];
 
 /* PROLOGUE (QUIZ SHOW) - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics D_08c04434;
-extern struct CompressedGraphics D_08c04940;
-extern const u8 quizshow_intro_obj_bin;
+extern struct CompressedData quiz_show_prologue_bg_tiles;
+extern struct CompressedData quiz_show_prologue_bg_map;
+extern struct CompressedData quiz_show_prologue_obj;
 
 /* PROLOGUE (QUIZ SHOW) - PALETTES */
 

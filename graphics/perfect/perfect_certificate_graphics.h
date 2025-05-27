@@ -5,10 +5,8 @@
 
 /* PERFECT CERTIFICATE - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics D_08ccc138;
-extern struct CompressedGraphics D_08ccc39c;
-extern const u8 perfect_bg_bin;
-extern const u8 perfect_map_bin;
+extern struct CompressedData perfect_certificate_bg_tiles;
+extern struct CompressedData perfect_certificate_bg_map;
 
 /* PERFECT CERTIFICATE - PALETTES */
 

@@ -5,26 +5,26 @@
 
 
 // [D_089ed188] Buffered Textures List
-struct CompressedGraphics *ninja_bodyguard_prologue_buffered_textures[] = {
+struct CompressedData *ninja_bodyguard_prologue_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 
 // [D_089ed18c] Graphics Table
 struct GraphicsTable ninja_bodyguard_prologue_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &bodyguard_intro_bg_bin,
+        /* Src.  */ &ninja_bodyguard_prologue_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
-        /* Size  */ 7106
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &bodyguard_intro_bg_map_bin,
+        /* Src.  */ &ninja_bodyguard_prologue_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
-        /* Size  */ 2048
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &bodyguard_intro_obj_bin,
+        /* Src.  */ &ninja_bodyguard_prologue_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ 9056
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Palette */ {
         /* Src.  */ ninja_bodyguard_prologue_pal,

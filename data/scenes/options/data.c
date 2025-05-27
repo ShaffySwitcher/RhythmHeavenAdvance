@@ -10,19 +10,19 @@
 // [D_089cfac8] Graphics Table
 struct GraphicsTable options_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c76d80,
+        /* Src.  */ &options_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c77244,
+        /* Src.  */ &options_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &options_tile_bin,
+        /* Src.  */ &options_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ 13120
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Palette */ {
         /* Src.  */ options_pal,
@@ -39,7 +39,7 @@ struct GraphicsTable options_gfx_table[] = {
 
 
 // [D_089cfb10] Buffered Textures List
-struct CompressedGraphics *options_buffered_textures[] = {
+struct CompressedData *options_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

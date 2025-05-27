@@ -5,26 +5,26 @@
 
 
 // [D_089ea864] Buffered Textures List
-struct CompressedGraphics *cosmic_dance_prologue_buffered_textures[] = {
+struct CompressedData *cosmic_dance_prologue_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 
 // [D_089ea868] Graphics Table
 struct GraphicsTable cosmic_dance_prologue_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08beb2f8,
+        /* Src.  */ &cosmic_dance_prologue_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08beb48c,
+        /* Src.  */ &cosmic_dance_prologue_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &cosmicdance_intro_obj_bin,
+        /* Src.  */ &cosmic_dance_prologue_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ 10896
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Palette */ {
         /* Src.  */ cosmic_dance_prologue_bg_pal,

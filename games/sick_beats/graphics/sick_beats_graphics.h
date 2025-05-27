@@ -5,8 +5,6 @@
 
 /* SICK BEATS - ANIMATIONS */
 
-extern const u8 sick_beats_obj_bin;
-
 extern struct Animation anim_virus_appear[];
 extern struct Animation anim_virus_ready[];
 extern struct Animation anim_yellow_microbe_beat[];
@@ -51,10 +49,10 @@ extern struct Animation anim_sick_beats_endless_particle[];
 
 /* SICK BEATS - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics D_08d19fb4;
-extern struct CompressedGraphics D_08d1a320;
-extern struct CompressedGraphics D_08d1a280;
-extern struct CompressedGraphics D_08d198bc;
+extern struct CompressedData sick_beats_bg_tiles;
+extern struct CompressedData sick_beats_bg_map_foreground;
+extern struct CompressedData sick_beats_bg_map;
+extern struct CompressedData sick_beats_obj;
 
 /* SICK BEATS - PALETTES */
 

@@ -12,12 +12,12 @@ struct GraphicsTable disclamer_gfx_table[] = {
     /* BG Tileset */ {
         /* Src.  */ &disclamer_tile_bin,
         /* Dest. */ BG_TILESET_BASE(0),
-        /* Size  */ 12992
+        /* Size  */ 10880
     },
     /* BG Map */ {
-        /* Src.  */ &disclamer_tile_map_bin,
+        /* Src.  */ &disclamer_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
-        /* Size  */ 2048
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Palette */ {
         /* Src.  */ disclamer_pal,

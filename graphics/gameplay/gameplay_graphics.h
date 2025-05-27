@@ -17,8 +17,7 @@ extern struct Animation anim_gameplay_perfect_hit[];
 
 /* GAMEPLAY - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics D_08ccca5c;
-extern const u8 common_tiles_bin;
+extern struct CompressedData gameplay_obj;
 
 /* GAMEPLAY - PALETTES */
 

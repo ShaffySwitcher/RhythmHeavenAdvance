@@ -5,16 +5,16 @@
 
 
 // [D_089e5c40] Buffered Textures List
-struct CompressedGraphics *drum_live_menu_buffered_textures[] = {
+struct CompressedData *drum_live_menu_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 
 // [D_089e5c44] Graphics Table
 struct GraphicsTable drum_live_menu_gfx_table[] = {
     /* OBJ Tileset */ {
-        /* Src.  */ &drum_samurai_bin,
+        /* Src.  */ &drum_live_menu_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ 12288
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Palette */ {
         /* Src.  */ drum_live_menu_pal,

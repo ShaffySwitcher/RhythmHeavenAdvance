@@ -43,36 +43,36 @@ struct Animation **marching_anim_table[] = {
 };
 
 // [D_089e5204] Buffered Textures List
-struct CompressedGraphics *marching_buffered_textures[] = {
+struct CompressedData *marching_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 
 // [D_089e5208] Graphics Table (Marching Orders)
 struct GraphicsTable marching_orders_1_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &mo_bin,
+        /* Src.  */ &marching_orders_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
-        /* Size  */ 8192 
+        /* Size  */ COMPRESSED_GFX_SOURCE 
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c6cc98,
+        /* Src.  */ &marching_orders_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &marching_orders_text_bubble_bin,
+        /* Src.  */ &marching_orders_bg_map_text_bubble,
         /* Dest. */ BG_MAP_BASE(0xF000),
-        /* Size  */ 2048
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c6cd78,
+        /* Src.  */ &marching_orders_bg_map_floor,
         /* Dest. */ BG_MAP_BASE(0xF800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &marching_obj_bin,
+        /* Src.  */ &marching_orders_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ 20384
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Palette */ {
         /* Src.  */ marching_orders_bg_pal,
@@ -100,27 +100,27 @@ struct GraphicsTable marching_orders_1_gfx_table[] = {
 // [D_089e5280] Graphics Table (Remix 7, Remix 8)
 struct GraphicsTable marching_orders_remix_7_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &mo_again_bin,
+        /* Src.  */ &marching_orders_remix_7_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
-        /* Size  */ 8192
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08ce615c,
+        /* Src.  */ &marching_orders_remix_7_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &mo_map_bin,
+        /* Src.  */ &marching_orders_remix_7_bg_map_text_bubble,
         /* Dest. */ BG_MAP_BASE(0xF000),
-        /* Size  */ 2048
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08ce6278,
+        /* Src.  */ &marching_orders_remix_7_bg_map_floor,
         /* Dest. */ BG_MAP_BASE(0xF800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08ce5b3c,
+        /* Src.  */ &marching_orders_remix_7_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
@@ -150,27 +150,27 @@ struct GraphicsTable marching_orders_remix_7_gfx_table[] = {
 // [D_089e52ec] Graphics Table (Marching Orders 2)
 struct GraphicsTable marching_orders_2_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &mo2_bin,
+        /* Src.  */ &marching_orders_2_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
-        /* Size  */ 8192 
+        /* Size  */ COMPRESSED_GFX_SOURCE 
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c6eedc,
+        /* Src.  */ &marching_orders_2_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &marching_orders_text_bubble_bin,
+        /* Src.  */ &marching_orders_bg_map_text_bubble,
         /* Dest. */ BG_MAP_BASE(0xF000),
-        /* Size  */ 2048
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c6efbc,
+        /* Src.  */ &marching_orders_2_bg_map_floor,
         /* Dest. */ BG_MAP_BASE(0xF800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &D_08c6e8d4,
+        /* Src.  */ &marching_orders_2_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },

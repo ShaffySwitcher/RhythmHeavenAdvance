@@ -29,16 +29,16 @@ struct Animation *mr_upbeat_game_over_anim[][4] = {
 };
 
 // [D_089e56e8] Buffered Textures List
-struct CompressedGraphics *mr_upbeat_buffered_textures[] = {
+struct CompressedData *mr_upbeat_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 
 // [D_089e56ec] Graphics Table
 struct GraphicsTable mr_upbeat_gfx_table[] = {
     /* OBJ Tileset */ {
-        /* Src.  */ &mr_upbeat_obj_bin,
+        /* Src.  */ &metronome_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ 19102
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Palette */ {
         /* Src.  */ metronome_pal,

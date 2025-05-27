@@ -5,26 +5,26 @@
 
 
 // [D_089ebb7c] Buffered Textures List
-struct CompressedGraphics *quiz_show_prologue_buffered_textures[] = {
+struct CompressedData *quiz_show_prologue_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 
 // [D_089ebb80] Graphics Table
 struct GraphicsTable quiz_show_prologue_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c04434,
+        /* Src.  */ &quiz_show_prologue_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c04940,
+        /* Src.  */ &quiz_show_prologue_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &quizshow_intro_obj_bin,
+        /* Src.  */ &quiz_show_prologue_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ 7168
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Palette */ {
         /* Src.  */ quiz_show_prologue_pal,
