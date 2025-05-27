@@ -4,10 +4,6 @@
 #include "graphics.h"
 
 /* MANNEQUIN FACTORY - ANIMATIONS */
-extern const u8 mannequin_factory_map_bin;
-extern const u8 mannequin_factory_practice_map_bin;
-extern const u8 mannequin_factory_bg_bin;
-extern const u8 mannequin_factory_obj_bin;
 
 extern struct Animation anim_mannequin_base[];
 extern struct Animation anim_mannequin_head[];
@@ -45,10 +41,10 @@ extern struct Animation anim_mannequin_high_score_num[];
 
 /* MANNEQUIN FACTORY - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics D_08c34478;
-extern struct CompressedGraphics D_08c35f18;
-extern struct CompressedGraphics D_08c360b0;
-extern struct CompressedGraphics D_08c35c9c;
+extern struct CompressedData mannequin_factory_bg_tiles;
+extern struct CompressedData mannequin_factory_bg_map;
+extern struct CompressedData mannequin_factory_bg_map_practice;
+extern struct CompressedData mannequin_factory_obj;
 
 /* MANNEQUIN FACTORY - PALETTES */
 

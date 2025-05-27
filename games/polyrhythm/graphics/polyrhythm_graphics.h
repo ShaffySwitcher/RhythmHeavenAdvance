@@ -24,11 +24,10 @@ extern struct Animation anim_polyrhythm_arrow_dpad[];
 
 /* POLYRHYTHM - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics D_08c781ac;
-extern struct CompressedGraphics D_08c78a04;
-extern struct CompressedGraphics D_08c781ac;
-extern struct CompressedGraphics D_08c78a04;
-extern const u8 polyrhythm_obj_bin;
+extern struct CompressedData polyrhythm_obj;
+extern struct CompressedData polyrhythm_bg_map;
+extern struct CompressedData polyrhythm_obj;
+extern struct CompressedData polyrhythm_bg_map;
 
 /* POLYRHYTHM - PALETTES */
 

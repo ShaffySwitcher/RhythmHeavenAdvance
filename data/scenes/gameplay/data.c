@@ -10,9 +10,9 @@
 // [D_089cfd7c] Graphics Table
 struct GraphicsTable gameplay_common_gfx_table[] = {
     /* OBJ Tileset */ {
-        /* Src.  */ &common_tiles_bin,
+        /* Src.  */ &gameplay_obj,
         /* Dest. */ OBJ_TILESET_BASE(0x7800),
-        /* Size  */ 2048
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Palette */ {
         /* Src.  */ gameplay_obj_pal,
@@ -23,7 +23,7 @@ struct GraphicsTable gameplay_common_gfx_table[] = {
 };
 
 // [D_089cfda0] Buffered Textures List
-struct CompressedGraphics *gameplay_common_buffered_textures[] = {
+struct CompressedData *gameplay_common_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

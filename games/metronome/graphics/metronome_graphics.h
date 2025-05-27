@@ -5,8 +5,6 @@
 
 /* METRONOME - ANIMATIONS */
 
-extern const u8 mr_upbeat_obj_bin;
-
 extern struct Animation anim_metronome_pendulum[];
 extern struct Animation anim_metronome_bird_marker[];
 extern struct Animation anim_metronome_bird[];
@@ -38,7 +36,7 @@ extern struct Animation anim_mr_upbeat_l_mope_l[];
 
 /* METRONOME - COMPRESSED GRAPHICS */
 
-extern struct CompressedGraphics D_08c702d0;
+extern struct CompressedData metronome_obj;
 
 /* METRONOME - PALETTES */
 

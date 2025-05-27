@@ -19,24 +19,24 @@ union SceneObject game_select_scene_objects[] = {
 // [D_089cf948] Graphics Table
 struct GraphicsTable game_select_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &gameselect_bg_bin,
+        /* Src.  */ &game_select_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0x8000),
-        /* Size  */ 6432
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08cc9d14,
+        /* Src.  */ &game_select_bg_map_description,
         /* Dest. */ BG_MAP_BASE(0xB000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &gameselect_bg_map_bin,
+        /* Src.  */ &game_select_bg_map_perfect_notice,
         /* Dest. */ BG_MAP_BASE(0xB800),
-        /* Size  */ 2048
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &gameselect_obj_bin,
+        /* Src.  */ &game_select_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ 16384
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Palette */ {
         /* Src.  */ game_select_bg_icon_pal,
@@ -58,7 +58,7 @@ struct GraphicsTable game_select_gfx_table[] = {
 
 
 // [D_089cf9a8] Buffered Textures List
-struct CompressedGraphics *game_select_buffered_textures[] = {
+struct CompressedData *game_select_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

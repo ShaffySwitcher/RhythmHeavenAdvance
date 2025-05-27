@@ -17,9 +17,9 @@ union SceneObject score_results_scene_objects[] = {
 // [D_089d7804] Graphics Table
 struct GraphicsTable score_results_gfx_table[] = {
     /* OBJ Tileset */ {
-        /* Src.  */ &results_obj_bin,
+        /* Src.  */ &score_results_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ 4672
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Palette */ {
         /* Src.  */ score_results_pal,
@@ -36,7 +36,7 @@ struct GraphicsTable score_results_gfx_table[] = {
 
 
 // [D_089d7834] Buffered Textures List
-struct CompressedGraphics *score_results_buffered_textures[] = {
+struct CompressedData *score_results_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

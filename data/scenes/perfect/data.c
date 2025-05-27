@@ -11,14 +11,14 @@
 // [D_089cfc38] Graphics Table
 struct GraphicsTable perfect_certificate_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &perfect_bg_bin,
+        /* Src.  */ &perfect_certificate_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
-        /* Size  */ 4128
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &perfect_map_bin,
+        /* Src.  */ &perfect_certificate_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
-        /* Size  */ 2048
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Palette */ {
         /* Src.  */ perfect_certificate_pal,
@@ -35,7 +35,7 @@ struct GraphicsTable perfect_certificate_gfx_table[] = {
 
 
 // [D_089cfc74] Buffered Textures List
-struct CompressedGraphics *perfect_certificate_buffered_textures[] = {
+struct CompressedData *perfect_certificate_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 

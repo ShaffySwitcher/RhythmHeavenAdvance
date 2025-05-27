@@ -35,26 +35,26 @@ struct Animation **rap_men_anim_table[] = {
 };
 
 // [D_089e6424] Buffered Textures List
-struct CompressedGraphics *rap_men_buffered_textures[] = {
+struct CompressedData *rap_men_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 
 // [D_089e6428] Graphics Table (Rap Men)
 struct GraphicsTable rap_men_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c82980,
+        /* Src.  */ &rap_men_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c82cf4,
+        /* Src.  */ &rap_men_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &rapmen_obj_bin,
+        /* Src.  */ &rap_men_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ 26422
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Palette */ {
         /* Src.  */ rap_men_bg_pal,
@@ -92,19 +92,19 @@ struct GraphicsTable rap_men_gfx_table[] = {
 // [D_089e64a0] Graphics Table (Rap Women)
 struct GraphicsTable rap_women_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08c84f54,
+        /* Src.  */ &rap_women_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c852c8,
+        /* Src.  */ &rap_women_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &rapwomen_obj_bin,
+        /* Src.  */ &rap_women_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ 26326
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Palette */ {
         /* Src.  */ rap_women_bg_pal,

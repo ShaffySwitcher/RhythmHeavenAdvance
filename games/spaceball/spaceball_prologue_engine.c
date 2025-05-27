@@ -5,26 +5,26 @@
 
 
 // [D_089ea26c] Buffered Textures List
-struct CompressedGraphics *spaceball_prologue_buffered_textures[] = {
+struct CompressedData *spaceball_prologue_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 
 // [D_089ea270] Graphics Table
 struct GraphicsTable spaceball_prologue_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &D_08be2fd8,
+        /* Src.  */ &spaceball_prologue_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08be3398,
+        /* Src.  */ &spaceball_prologue_bg_map,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &spaceball_intro_obj_bin,
+        /* Src.  */ &spaceball_prologue_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ 6608
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Palette */ {
         /* Src.  */ spaceball_prologue_bg_pal,

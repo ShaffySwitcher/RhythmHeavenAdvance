@@ -5,41 +5,41 @@
 
 
 // [D_089e5d2c] Buffered Textures List
-struct CompressedGraphics *quiz_show_buffered_textures[] = {
+struct CompressedData *quiz_show_buffered_textures[] = {
     END_OF_BUFFERED_TEXTURES_LIST
 };
 
 // [D_089e5d30] Graphics Table
 struct GraphicsTable quiz_show_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &quiz_show_bg_bin,
+        /* Src.  */ &quiz_show_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
-        /* Size  */ 7104
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c7db1c,
+        /* Src.  */ &quiz_show_bg_map_spotlight,
         /* Dest. */ BG_MAP_BASE(0xE000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c7da68,
+        /* Src.  */ &quiz_show_bg_map_text_bubble,
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &quiz_show_bg_map_bin,
+        /* Src.  */ &quiz_show_bg_map_stands,
         /* Dest. */ BG_MAP_BASE(0xF000),
-        /* Size  */ 2048
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
-        /* Src.  */ &D_08c7d9d0,
+        /* Src.  */ &quiz_show_bg_map,
         /* Dest. */ BG_MAP_BASE(0xF800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* OBJ Tileset */ {
-        /* Src.  */ &quiz_show_obj_bin,
+        /* Src.  */ &quiz_show_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ 27648
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Palette */ {
         /* Src.  */ quiz_show_bg_pal,

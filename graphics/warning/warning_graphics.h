@@ -9,8 +9,8 @@ extern struct Animation anim_warning_text_continue[];
 
 /* WARNING - COMPRESSED GRAPHICS */
 
-extern const u8 D1AD4C_healthsafety_tile_bin;
-extern struct CompressedGraphics D1AD4C_healthsafety_tile_map_bin;
+extern struct CompressedData warning_bg_tiles;
+extern struct CompressedData warning_bg_map;
 
 /* WARNING - PALETTES */
 
