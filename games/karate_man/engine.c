@@ -123,7 +123,7 @@ struct GraphicsTable karate_man_remix_gfx_table[] = {
     /* OBJ Tileset */ {
         /* Src.  */ &karate_man_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ 26624
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Palette */ {
         /* Src.  */ karate_man_pal,
