@@ -214,8 +214,9 @@ class CompressedData:
         f.write(".hword %d\n" % self.segmentCount)
         f.write(".word %s_window1\n" % symbol)
         f.write(".word %s_window2\n\n" % symbol)
-
-        self.dataSize = pad4(self.address + len(self.compressed)*2) + len(self.window1.data)*4 + len(self.window2.data)*4 + 16 - self.address
+        
+        if self.address is not None:
+            self.dataSize = pad4(self.address + len(self.compressed)*2) + len(self.window1.data)*4 + len(self.window2.data)*4 + 16 - self.address
 
 
 class RleCompressedData:
