@@ -10,9 +10,9 @@
 // [D_089dda68] Graphics Table
 struct GraphicsTable disclamer_gfx_table[] = {
     /* BG Tileset */ {
-        /* Src.  */ &disclamer_tile_bin,
+        /* Src.  */ &disclamer_bg_tiles,
         /* Dest. */ BG_TILESET_BASE(0),
-        /* Size  */ 10880
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Map */ {
         /* Src.  */ &disclamer_bg_map,

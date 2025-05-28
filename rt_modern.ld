@@ -17,8 +17,8 @@ SECTIONS {
         build/asm/boot.s.o(.text*);
         "build/src/*.o"(.text*);
         "build/asm/*.o"(.text*);
-        "*libgcc.a:*.o"(.text*);
-        "*libc.a:*.o"(.text*);
+        *libgcc.a:*.o(.text*);
+        *libc.a:*.o(.text*);
 
         "build/src/*.o"(.*);
         "build/asm/*.o"(.*);
