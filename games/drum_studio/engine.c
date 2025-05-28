@@ -290,7 +290,7 @@ struct GraphicsTable drum_lessons_gfx_table[] = {
     /* OBJ Tileset */ {
         /* Src.  */ &drum_studio_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ 19192
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Palette */ {
         /* Src.  */ drum_lessons_bg_screen_pal,

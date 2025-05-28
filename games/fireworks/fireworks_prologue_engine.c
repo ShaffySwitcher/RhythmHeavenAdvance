@@ -24,7 +24,7 @@ struct GraphicsTable fireworks_prologue_gfx_table[] = {
     /* OBJ Tileset */ {
         /* Src.  */ &fireworks_prologue_obj,
         /* Dest. */ OBJ_TILESET_BASE(0),
-        /* Size  */ 17072
+        /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Palette */ {
         /* Src.  */ fireworks_prologue_pal,
