@@ -13,7 +13,6 @@ enum CompressionLevelsEnum {
     COMPRESSION_LEVEL_NONE,
     COMPRESSION_LEVEL_RLE,
     COMPRESSION_LEVEL_DOUBLE,
-    COMPRESSION_LEVEL_BIOS      // For Advance!
 };
 
 extern s32 (*D_03004af0)(const u16 *src, u16 *dest, const u8 *rleData, u32 sizeData);
@@ -47,12 +46,6 @@ void func_08002a6c(struct GfxTableLoader *info, const struct GraphicsTable *gfxT
         info->gfxTable = gfxTable;
         info->dest = (void *)func_08002a54(gfxTable->dest);
         info->src = gfxTable->src;
-
-        // BIOS Compressed (LZ77)
-        if (gfxTable->size == (s32)BIOS_GFX_SOURCE) {
-            info->compressionLevel = COMPRESSION_LEVEL_BIOS;
-            return;
-        }
 
         // Uncompressed
         if (gfxTable->size != COMPRESSED_GFX_SOURCE) {
@@ -173,11 +166,6 @@ void func_08002b10(struct GfxTableLoader *info) {
                     info->compressionLevel = COMPRESSION_LEVEL_RLE;
                 }
                 return;
-                break;
-            case COMPRESSION_LEVEL_BIOS:
-                // It's that easy...!
-                LZ77UnCompVram(info->gfxTable->src, info->gfxTable->dest);
-                break;
         }
 
         gfxTable = ++info->gfxTable;

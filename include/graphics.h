@@ -234,7 +234,6 @@ struct GraphicsTable {
 
 #define COMPRESSED_GFX_SOURCE   -1
 #define FUNCTION_GFX_SOURCE     -2
-#define BIOS_GFX_SOURCE         -3
 
 /* Asset-generating functions are assumed to be in this format only. */
 typedef void (*GfxTableSrcFunc)(void *dest);
