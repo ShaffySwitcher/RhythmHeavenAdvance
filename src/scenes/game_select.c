@@ -1785,15 +1785,15 @@ void game_select_init_info_pane(void) {
     gGameSelect->infoPaneName = -1;
     gGameSelect->infoPaneRank = -1;
     gGameSelect->infoPaneDesc = text_printer_create_new(get_current_mem_id(), 4, 104, 32);
-    text_printer_set_x_y(gGameSelect->infoPaneDesc, 128, 55);
+    text_printer_set_x_y(gGameSelect->infoPaneDesc, 129, 50);
     text_printer_set_layer(gGameSelect->infoPaneDesc, 0x800);
     text_printer_set_colors(gGameSelect->infoPaneDesc, 0);
     text_printer_set_palette(gGameSelect->infoPaneDesc, 8);
-    text_printer_set_line_spacing(gGameSelect->infoPaneDesc, 14);
+    text_printer_set_line_spacing(gGameSelect->infoPaneDesc, 15);
     text_printer_center_by_content(gGameSelect->infoPaneDesc, 1);
     text_printer_set_x_y_controller(gGameSelect->infoPaneDesc, &bgOfs->x, &bgOfs->y);
     text_printer_set_shadow_colors(gGameSelect->infoPaneDesc, -1);
-    gGameSelect->perfectClearedSprite = sprite_create(gSpriteHandler, anim_game_select_perfect_rank, 0, 187, 115, 0x80A, 1, 0, 0x8000);
+    gGameSelect->perfectClearedSprite = sprite_create(gSpriteHandler, anim_game_select_perfect_rank, 0, 187, 112, 0x80A, 1, 0, 0x8000);
     sprite_set_origin_x_y(gSpriteHandler, gGameSelect->perfectClearedSprite, &bgOfs->x, &bgOfs->y);
     gGameSelect->infoPaneIsClear = TRUE;
     gGameSelect->infoPaneTask = INFO_PANE_TASK_NONE;
@@ -1837,7 +1837,7 @@ void game_select_print_level_name(struct LevelData *levelData) {
     text_printer_fill_vram_tiles(0, 26, 16, 2, 0);
     string = levelData->name;
     anim = text_printer_get_formatted_line_anim(get_current_mem_id(), 0, 26, TEXT_PRINTER_FONT_SMALL, &string, TEXT_ANCHOR_BOTTOM_CENTER, 0, 104, 0, -1);
-    gGameSelect->infoPaneName = sprite_create(gSpriteHandler, anim, 0, 180, 37, 0x800, 1, 0, 0x8000);
+    gGameSelect->infoPaneName = sprite_create(gSpriteHandler, anim, 0, 180, 30, 0x800, 1, 0, 0x8000);
     sprite_set_base_palette(gSpriteHandler, gGameSelect->infoPaneName, 7);
     gGameSelect->infoPaneIsClear = FALSE;
 }
@@ -1867,7 +1867,7 @@ void game_select_print_level_rank(s32 levelState) {
     text_printer_fill_vram_tiles(16, 26, 16, 2, 0);
     string = game_select_rank_text[levelState];
     anim = text_printer_get_formatted_line_anim(get_current_mem_id(), 16, 26, TEXT_PRINTER_FONT_SMALL, &string, TEXT_ANCHOR_BOTTOM_RIGHT, 0, 104, 0, -1);
-    gGameSelect->infoPaneRank = sprite_create(gSpriteHandler, anim, 0, 228, 116, 0x800, 1, 0, 0x8000);
+    gGameSelect->infoPaneRank = sprite_create(gSpriteHandler, anim, 0, 228, 113, 0x800, 1, 0, 0x8000);
     sprite_set_base_palette(gSpriteHandler, gGameSelect->infoPaneRank, game_select_rank_palette[levelState]);
     gGameSelect->infoPaneIsClear = FALSE;
 }
