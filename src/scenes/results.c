@@ -764,7 +764,7 @@ s24_8 results_get_positive_comments(void) {
                     memcpy(commentsText, "", 1);
                     break;
                 case 1:
-                    memcpy(commentsText, "And ", 9); // ("moreover,")
+                    memcpy(commentsText, "And, ", 10); // ("moreover,")
                     break;
                 default:
                     memcpy(commentsText, "Plus, ", 9); // ("also,")

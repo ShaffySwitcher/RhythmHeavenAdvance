@@ -82,8 +82,8 @@ AnimationCel results_level_cel005[] = {
 // [D_0890b546]
 AnimationCel results_level_cel006[] = {
     2,
-    0x00e6, 0x41c2, 0x2152,
-    0x80e6, 0x01d2, 0x218d
+    0x00ed, 0x41c3, 0x2152,
+    0x80ed, 0x01d3, 0x218d
 };
 
 // [D_0890b554]
