@@ -1,4 +1,4 @@
-name: Build Rhythm Tengoku
+name: Build Rhythm Heaven Advance
 
 on:
   push:
@@ -35,7 +35,7 @@ jobs:
         ./build.sh
         ./install.sh ../
 
-    - name: Build rhythmtengoku
+    - name: Build rhythmheavenadvance
       run: |
         make
 
@@ -43,4 +43,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: rhythmheavenadvance-nightly
-        path: build/rhythmtengoku.gba
+        path: build/rhythmheavenadvance.gba

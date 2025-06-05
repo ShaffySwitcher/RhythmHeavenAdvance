@@ -39,11 +39,9 @@ endef
 REV ?= 0
 
 ifeq ($(REV), 0)
-    TARGET := rhythmtengoku
-    TARGET_SHA1 := $(BASEROM_SHA1)
+    TARGET := rhythmheavenadvance
 else
-    TARGET := rhythmtengoku_rev1
-    TARGET_SHA1 := $(REV1_SHA1)
+    TARGET := rhythmheavenadvance_rev1
 endif
 
 # Preprocessor defines
