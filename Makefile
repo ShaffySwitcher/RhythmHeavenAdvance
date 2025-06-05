@@ -2,19 +2,8 @@
 .SUFFIXES:
 #---------------------------------------------------------------------------------
 
-BASEROM_SHA1 := 67f8adacff79c15d028fffd90de3a77d9ad0602d
-REV1_SHA1 := e0aaca45045e408e7e1072bde5b39278111e1952
-
 ifeq ($(strip $(DEVKITARM)),)
     $(error "Please set DEVKITARM in your environment. export DEVKITARM=<path to>devkitARM")
-endif
-
-ifeq (,$(wildcard baserom.gba))
-    $(error No ROM provided. Please place an unmodified ROM named "baserom.gba" in the root folder)
-endif
-
-ifneq ($(shell sha1sum -t baserom.gba), $(BASEROM_SHA1)  baserom.gba)
-    $(error Provided ROM is not correct)
 endif
 
 SHELL := /bin/bash
@@ -45,9 +34,6 @@ YELLOW  := \033[0;33m
 define print
   $(V)echo -e "$(GREEN)$(1) $(YELLOW)$(2)$(GREEN) -> $(BLUE)$(3)$(NO_COL)"
 endef
-
-# Whether to build a byte-for-byte matching ROM
-NONMATCHING := 1
 
 # Revision to build
 REV ?= 0
@@ -102,11 +88,7 @@ ALL_DIRS       := $(BIN) $(ASM_DIRS) $(C_DIRS) $(MUSIC) $(SFX)
 ALL_DIRS       := $(sort $(ALL_DIRS)) # remove duplicates
 BUILD_DIRS     := $(BUILD) $(addprefix $(BUILD)/,$(ALL_DIRS))
 
-ifeq ($(NONMATCHING), 0)
-    LD_SCRIPT := rt.ld
-else
-    LD_SCRIPT := rt_modern.ld
-endif
+LD_SCRIPT := rt_modern.ld
 UNDEFINED_SYMS := undefined_syms.ld
 
 #---------------------------------------------------------------------------------
@@ -149,15 +131,7 @@ INCLUDE	:=	-I $(foreach dir,$(INCLUDES),$(wildcard $(dir)/*.h)) \
 # If nonmatching, print a generic message
 # otherwise check if the ROM matches the official ROM
 default: $(OUTPUT).gba
-	$(V)if [ "$(NONMATCHING)" = "1" ]; then \
-		echo "Build succeeded!"; \
-	else \
-		if [ "$(shell sha1sum -t $(OUTPUT).gba)" = "$(TARGET_SHA1)  $(OUTPUT).gba" ]; then \
-			echo "$(TARGET).gba: OK"; \
-		else \
-			echo "The build succeeded, but did not match the official ROM."; \
-		fi; \
-	fi \
+	$(V)echo "Build succeeded!"; \
 
 #---------------------------------------------------------------------------------
 
