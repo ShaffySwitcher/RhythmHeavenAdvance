@@ -9,6 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container: devkitpro/devkitarm:latest
 
     steps:
     - name: Checkout repository
@@ -23,22 +24,11 @@ jobs:
       run: |
         sudo ln -s /proc/self/mounts /etc/mtab || true
 
-    - name: Install devkitpro pacman
-      run: |
-        wget https://apt.devkitpro.org/install-devkitpro-pacman
-        chmod +x ./install-devkitpro-pacman
-        sudo ./install-devkitpro-pacman
-
     - name: Set DEVKITPRO environment variables
       run: |
         echo "DEVKITPRO=/opt/devkitpro" >> $GITHUB_ENV
         echo "DEVKITARM=/opt/devkitpro/devkitARM" >> $GITHUB_ENV
         echo "DEVKITPPC=/opt/devkitpro/devkitPPC" >> $GITHUB_ENV
-
-    - name: Sync devkitpro pacman and install gba-dev
-      run: |
-        sudo dkp-pacman -Sy
-        echo -e "y\n" | sudo dkp-pacman -S gba-dev
 
     - name: Clone rhythmtengoku repository
       run: git clone https://github.com/arthurtilly/rhythmtengoku
