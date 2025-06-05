@@ -1,0 +1,66 @@
+name: Build Rhythm Tengoku
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Update and install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential binutils-arm-none-eabi git libpng-dev ffmpeg wget
+
+    - name: Fix /etc/mtab symlink (optional)
+      run: |
+        sudo ln -s /proc/self/mounts /etc/mtab || true
+
+    - name: Install devkitpro pacman
+      run: |
+        wget https://apt.devkitpro.org/install-devkitpro-pacman
+        chmod +x ./install-devkitpro-pacman
+        sudo ./install-devkitpro-pacman
+
+    - name: Set DEVKITPRO environment variables
+      run: |
+        echo "DEVKITPRO=/opt/devkitpro" >> $GITHUB_ENV
+        echo "DEVKITARM=/opt/devkitpro/devkitARM" >> $GITHUB_ENV
+        echo "DEVKITPPC=/opt/devkitpro/devkitPPC" >> $GITHUB_ENV
+
+    - name: Sync devkitpro pacman and install gba-dev
+      run: |
+        sudo dkp-pacman -Sy
+        echo -e "y\n" | sudo dkp-pacman -S gba-dev
+
+    - name: Clone rhythmtengoku repository
+      run: git clone https://github.com/arthurtilly/rhythmtengoku
+
+    - name: Clone agbcc repository
+      run: git clone https://github.com/pret/agbcc
+
+    - name: Build and install agbcc
+      run: |
+        cd agbcc
+        ./build.sh
+        ./install.sh ../rhythmtengoku
+
+    - name: Build rhythmtengoku
+      run: |
+        cd rhythmtengoku
+
+        make
+
+    - name: Upload built .gba artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: rhythmtengoku-gba
+        path: rhythmtengoku/build/rhythmtengoku.gba
