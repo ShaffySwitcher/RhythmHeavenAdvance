@@ -59,7 +59,7 @@ jobs:
         make
 
     - name: Upload built .gba artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v3.1.3
       with:
         name: rhythmtengoku-gba
         path: rhythmtengoku/build/rhythmtengoku.gba
