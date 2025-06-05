@@ -20,18 +20,11 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y build-essential binutils-arm-none-eabi git libpng-dev ffmpeg wget
 
-    - name: Fix /etc/mtab symlink (optional)
-      run: |
-        sudo ln -s /proc/self/mounts /etc/mtab || true
-
     - name: Set DEVKITPRO environment variables
       run: |
         echo "DEVKITPRO=/opt/devkitpro" >> $GITHUB_ENV
         echo "DEVKITARM=/opt/devkitpro/devkitARM" >> $GITHUB_ENV
         echo "DEVKITPPC=/opt/devkitpro/devkitPPC" >> $GITHUB_ENV
-
-    - name: Clone rhythmtengoku repository
-      run: git clone https://github.com/arthurtilly/rhythmtengoku
 
     - name: Clone agbcc repository
       run: git clone https://github.com/pret/agbcc
@@ -40,16 +33,14 @@ jobs:
       run: |
         cd agbcc
         ./build.sh
-        ./install.sh ../rhythmtengoku
+        ./install.sh ../
 
     - name: Build rhythmtengoku
       run: |
-        cd rhythmtengoku
-
         make
 
     - name: Upload built .gba artifact
       uses: actions/upload-artifact@v4
       with:
-        name: rhythmtengoku-gba
-        path: rhythmtengoku/build/rhythmtengoku.gba
+        name: rhythmheavenadvance-nightly
+        path: build/rhythmtengoku.gba
