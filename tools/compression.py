@@ -2,9 +2,10 @@
 import sys, json, os, array
 
 def read_from_rom(start, size):
-    baserom.seek(start)
-    data = baserom.read(size)
-    return data
+    # baserom.seek(start)
+    # data = baserom.read(size)
+    # return data
+    return b'\x00' * size
 
 
 def pad4(addr):
@@ -335,8 +336,8 @@ if __name__ == "__main__":
     revision = int(sys.argv[3])
     double = not (inputFile.endswith(".tilemap") or inputFile.endswith(".rle.4bpp"))
 
-    if (revision < 1):
-        baserom = open("baserom.gba", "rb")
-    else:
-        baserom = open("baserom_rev1.gba", "rb")
+    # if (revision < 1):
+        # baserom = open("baserom.gba", "rb")
+    # else:
+        # baserom = open("baserom_rev1.gba", "rb")
     compress_file(inputFile, outputFile, double, revision)
