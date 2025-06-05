@@ -44,13 +44,6 @@ ifeq ($(REV), 0)
 else
     TARGET := rhythmtengoku_rev1
     TARGET_SHA1 := $(REV1_SHA1)
-    ifeq (,$(wildcard baserom_rev1.gba))
-        $(error No ROM provided. Please place an unmodified Revision 1 ROM named "baserom_rev1.gba" in the root folder)
-    endif
-
-    ifneq ($(shell sha1sum -t baserom_rev1.gba), $(REV1_SHA1)  baserom_rev1.gba)
-        $(error Provided Revision 1 ROM is not correct)
-    endif
 endif
 
 # Preprocessor defines
