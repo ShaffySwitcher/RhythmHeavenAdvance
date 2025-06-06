@@ -447,6 +447,10 @@ struct DebugMenuEntry debug_menu_entry_table[] = {
         /* Scene */ &scene_data_clear,
         /* Label */ "‚r‚‚–‚…@‚c‚‚”‚@‚b‚Œ‚…‚‚’"
     },
+        /* Data Clear */ {
+        /* Scene */ &scene_tanuki_and_monkey,
+        /* Label */ "‚s‚‚‚•‚‹‚‰@‚`‚‚„@‚l‚‚‚‹‚…‚™"
+    },
     END_OF_DEBUG_ENTRIES
 };
 
