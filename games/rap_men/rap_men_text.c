@@ -19,7 +19,7 @@ const char D_0805e9d8[] = "\"The GREATEST!\" lines really were!";
 
 const char D_0805ea04[] = "RAPNOTES from the Boys";
 
-const char D_0805ea18[] = "Ｌｅｔ’ｓ　ｇｅｔ　ｉｎｔｏ　ｉｔ";
+const char D_0805ea18[] = "Ｌｅｔ’ｓ　ｇｅｔ　ｉｎｔｏ　ｉｔ．";
 
 const char D_0805ea34[] = "Ｗｅ　ｓｈｏｕｌｄ　ｄｏ　ｔｈａｔ　ａｇａｉｎ．";
 
