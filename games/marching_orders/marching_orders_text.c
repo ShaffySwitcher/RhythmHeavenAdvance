@@ -33,7 +33,7 @@ const char D_0805c88c[] = "";
 
 const char D_0805c890[] = "Your timing is on point!";
 
-const char D_0805c8a8[] = "Sarge Says";
+const char D_0805c8a8[] = "Sarge says";
 
 const char D_0805c8b4[] = "‚f‚I";
 
