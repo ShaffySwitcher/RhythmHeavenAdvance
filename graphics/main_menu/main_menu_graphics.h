@@ -11,11 +11,13 @@ extern struct Animation anim_main_menu_button_on_rhythm_test[];
 extern struct Animation anim_main_menu_button_on_data_room[];
 extern struct Animation anim_main_menu_button_on_studio[];
 extern struct Animation anim_main_menu_button_on_options[];
+extern struct Animation anim_main_menu_button_on_extra_games[];
 extern struct Animation anim_main_menu_button_off_game_select[];
 extern struct Animation anim_main_menu_button_off_rhythm_test[];
 extern struct Animation anim_main_menu_button_off_data_room[];
 extern struct Animation anim_main_menu_button_off_studio[];
 extern struct Animation anim_main_menu_button_off_options[];
+extern struct Animation anim_main_menu_button_off_extra_games[];
 extern struct Animation anim_main_menu_blank2[];
 extern struct Animation anim_main_menu_blank3[];
 

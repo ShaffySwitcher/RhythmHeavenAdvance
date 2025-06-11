@@ -7,6 +7,42 @@
 #include "src/scenes/studio.h"
 
 
+/* DATA */
+
+u32 levelsWithNoPractice[] = {
+    LEVEL_REMIX_1,
+    LEVEL_REMIX_2,
+    LEVEL_REMIX_3,
+    LEVEL_REMIX_4,
+    LEVEL_REMIX_5,
+    LEVEL_REMIX_6,
+    LEVEL_REMIX_7,
+    LEVEL_REMIX_8,
+    LEVEL_SPACEBALL,
+    LEVEL_SAMURAI_SLICE,
+    LEVEL_SICK_BEATS,
+    LEVEL_BUNNY_HOP,
+    LEVEL_NIGHT_WALK,
+    LEVEL_POLYRHYTHM,
+    LEVEL_NINJA_BODYGUARD,
+    LEVEL_SNAPPY_TRIO,
+    LEVEL_BON_DANCE,
+    LEVEL_COSMIC_DANCE,
+    LEVEL_RAP_WOMEN,
+    LEVEL_TAP_TRIAL_2,
+    LEVEL_KARATE_MAN_2,
+    LEVEL_RHYTHM_TWEEZERS_2,
+    LEVEL_NINJA_REINCARNATE,
+    LEVEL_NIGHT_WALK_2,
+    LEVEL_MARCHING_ORDERS_2,
+    LEVEL_BOUNCY_ROAD_2,
+    LEVEL_TOSS_BOYS_2,
+    LEVEL_POLYRHYTHM_2,
+    LEVEL_SPACEBALL_2,
+    LEVEL_SNEAKY_SPIRITS_2,
+};
+
+
 /* GAME SELECT SCENE */
 
 
@@ -1795,6 +1831,10 @@ void game_select_init_info_pane(void) {
     text_printer_set_shadow_colors(gGameSelect->infoPaneDesc, -1);
     gGameSelect->perfectClearedSprite = sprite_create(gSpriteHandler, anim_game_select_perfect_rank, 0, 187, 112, 0x80A, 1, 0, 0x8000);
     sprite_set_origin_x_y(gSpriteHandler, gGameSelect->perfectClearedSprite, &bgOfs->x, &bgOfs->y);
+
+    gGameSelect->noPracticeSprite = sprite_create(gSpriteHandler, anim_game_select_no_practice, 0, 128, 107, 0x80A, 1, 0, 0x8000);
+    sprite_set_origin_x_y(gSpriteHandler, gGameSelect->noPracticeSprite, &bgOfs->x, &bgOfs->y);
+
     gGameSelect->infoPaneIsClear = TRUE;
     gGameSelect->infoPaneTask = INFO_PANE_TASK_NONE;
 }
@@ -1825,6 +1865,7 @@ void game_select_clear_info_pane(void) {
     game_select_delete_info_pane_sprite(&gGameSelect->infoPaneRank);
     text_printer_clear(gGameSelect->infoPaneDesc);
     sprite_set_visible(gSpriteHandler, gGameSelect->perfectClearedSprite, FALSE);
+    sprite_set_visible(gSpriteHandler, gGameSelect->noPracticeSprite, FALSE);
     gGameSelect->infoPaneIsClear = TRUE;
 }
 
@@ -1877,6 +1918,7 @@ void game_select_print_level_rank(s32 levelState) {
 void game_select_process_info_pane(void) {
     struct Vector2 *bgOfs = &D_03004b10.BG_OFS[BG_LAYER_1];
     s32 campaign;
+    u32 i;
 
     switch (gGameSelect->infoPaneTask) {
         case INFO_PANE_TASK_DELAY:
@@ -1912,6 +1954,13 @@ void game_select_process_info_pane(void) {
                 campaign = get_campaign_from_grid_xy(gGameSelect->cursorX, gGameSelect->cursorY);
                 if ((campaign >= 0) && D_030046a8->data.campaignsCleared[campaign]) {
                     sprite_set_visible(gSpriteHandler, gGameSelect->perfectClearedSprite, TRUE);
+                }
+
+                for(i = 0; i < game_select_get_total_levels(); i++) {
+                    if(levelsWithNoPractice[i] == gGameSelect->infoPaneLevelID) {
+                        sprite_set_visible(gSpriteHandler, gGameSelect->noPracticeSprite, TRUE);
+                        break;
+                    }
                 }
 
                 gGameSelect->infoPaneTask = INFO_PANE_TASK_NONE;

@@ -54,7 +54,8 @@ struct Animation *main_menu_button_on_anim[] = {
     /* Rhythm Test  */ anim_main_menu_button_on_rhythm_test,
     /* R. Data Room */ anim_main_menu_button_on_data_room,
     /* Studio Menu  */ anim_main_menu_button_on_studio,
-    /* Options Menu */ anim_main_menu_button_on_options
+    /* Options Menu */ anim_main_menu_button_on_options,
+    /* Extra Games  */ anim_main_menu_button_on_extra_games,
 };
 
 // [D_089cdca4] Buttons (Unselected)
@@ -63,5 +64,6 @@ struct Animation *main_menu_button_off_anim[] = {
     /* Rhythm Test  */ anim_main_menu_button_off_rhythm_test,
     /* R. Data Room */ anim_main_menu_button_off_data_room,
     /* Studio Menu  */ anim_main_menu_button_off_studio,
-    /* Options Menu */ anim_main_menu_button_off_options
+    /* Options Menu */ anim_main_menu_button_off_options,
+    /* Extra Games  */ anim_main_menu_button_off_extra_games,
 };

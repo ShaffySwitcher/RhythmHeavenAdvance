@@ -541,3 +541,9 @@ AnimationCel main_menu_cel035[] = {
     /* 008 */ 0x8000, 0x9068, 0x6112,
     /* 009 */ 0x8020, 0x9068, 0x6112
 };
+
+AnimationCel main_menu_cel_button_off_extra_games_cel036[] = {
+    /* Len */ 2,
+    0x4058, 0xc1c0, 0x6010,
+    0x4058, 0xd000, 0x6010
+};

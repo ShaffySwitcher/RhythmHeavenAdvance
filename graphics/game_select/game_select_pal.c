@@ -200,7 +200,25 @@ Palette game_select_obj_pal[] = {
         /* 13 */ TO_RGB555(0x000000),
         /* 14 */ TO_RGB555(0x000000),
         /* 15 */ TO_RGB555(0x000000)
-    }
+    },
+    /* PALETTE 11 */ {
+        /* 00 */ TO_RGB555(0x00bdff),
+        /* 01 */ TO_RGB555(0xe6e6e6),
+        /* 02 */ TO_RGB555(0xd7d7d7),
+        /* 03 */ TO_RGB555(0xd2d2d2),
+        /* 04 */ TO_RGB555(0xd4d4d4),
+        /* 05 */ TO_RGB555(0xdcdcdc),
+        /* 06 */ TO_RGB555(0xb8b8b8),
+        /* 07 */ TO_RGB555(0x9e9e9e),
+        /* 08 */ TO_RGB555(0xadadad),
+        /* 09 */ TO_RGB555(0xafafaf),
+        /* 10 */ TO_RGB555(0xb3b3b3),
+        /* 11 */ TO_RGB555(0xb5b5b5),
+        /* 12 */ TO_RGB555(0xc5c5c5),
+        /* 13 */ TO_RGB555(0xa7a7a7),
+        /* 14 */ TO_RGB555(0xdfdfdf),
+        /* 15 */ TO_RGB555(0x000000),
+    },
 };
 
 // [D_08903020] BG Palette

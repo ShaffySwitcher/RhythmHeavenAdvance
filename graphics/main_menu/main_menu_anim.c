@@ -92,3 +92,13 @@ struct Animation anim_main_menu_blank3[] = {
     /* 002 */ { main_menu_cel004, 4 },
     /* End */ END_ANIMATION
 };
+
+struct Animation anim_main_menu_button_on_extra_games[] = {
+    /* 002 */ { main_menu_cel_button_off_extra_games_cel036, 4 },
+    /* End */ END_ANIMATION
+};
+
+struct Animation anim_main_menu_button_off_extra_games[] = {
+    /* 000 */ { main_menu_cel_button_off_extra_games_cel036, 4 },
+    /* End */ END_ANIMATION
+};
