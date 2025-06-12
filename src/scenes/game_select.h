@@ -188,6 +188,8 @@ struct GameSelectSceneData {
 
     /* [0x4F8] Perfect Rank Icon */
     s16 perfectClearedSprite;
+    s16 noPracticeSprite;
+    u32 isNoPracticeLevel;
 };
 
 struct CampaignGiftData {

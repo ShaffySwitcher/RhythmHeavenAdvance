@@ -70,7 +70,7 @@ After running the final command, press enter and then type `y` to finish install
 
 Now you are ready to clone the repository. First, navigate to your home directory with `cd ~/` and then run this command:
 
-`git clone https://github.com/arthurtilly/rhythmtengoku rt`
+`git clone https://github.com/itaific/RhythmHeavenAdvance.git rt`
 
 This will clone the repository into a folder named `rt` in your home directory. You can change `rt` to some other name if you wish to name the repository folder something else.
 
