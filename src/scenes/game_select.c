@@ -7,6 +7,42 @@
 #include "src/scenes/studio.h"
 
 
+/* DATA */
+
+u32 levelsWithNoPractice[] = {
+    LEVEL_REMIX_1,
+    LEVEL_REMIX_2,
+    LEVEL_REMIX_3,
+    LEVEL_REMIX_4,
+    LEVEL_REMIX_5,
+    LEVEL_REMIX_6,
+    LEVEL_REMIX_7,
+    LEVEL_REMIX_8,
+    LEVEL_SPACEBALL,
+    LEVEL_SAMURAI_SLICE,
+    LEVEL_SICK_BEATS,
+    LEVEL_BUNNY_HOP,
+    LEVEL_NIGHT_WALK,
+    LEVEL_POLYRHYTHM,
+    LEVEL_NINJA_BODYGUARD,
+    LEVEL_SNAPPY_TRIO,
+    LEVEL_BON_DANCE,
+    LEVEL_COSMIC_DANCE,
+    LEVEL_RAP_WOMEN,
+    LEVEL_TAP_TRIAL_2,
+    LEVEL_KARATE_MAN_2,
+    LEVEL_RHYTHM_TWEEZERS_2,
+    LEVEL_NINJA_REINCARNATE,
+    LEVEL_NIGHT_WALK_2,
+    LEVEL_MARCHING_ORDERS_2,
+    LEVEL_BOUNCY_ROAD_2,
+    LEVEL_TOSS_BOYS_2,
+    LEVEL_POLYRHYTHM_2,
+    LEVEL_SPACEBALL_2,
+    LEVEL_SNEAKY_SPIRITS_2,
+};
+
+
 /* GAME SELECT SCENE */
 
 
@@ -1730,7 +1766,7 @@ void game_select_set_medal_count(u32 total) {
 
     sprite_set_anim_cel(gSpriteHandler, gGameSelect->medalPaneDigit1, total % 10);
     sprite_set_anim_cel(gSpriteHandler, gGameSelect->medalPaneDigit2, (total < 10) ? 10 : (total / 10));
-    sprite_set_x(gSpriteHandler, gGameSelect->medalPaneDigit1, (total < 10) ? 164 : 168);
+    sprite_set_x(gSpriteHandler, gGameSelect->medalPaneDigit1, (total < 10) ? 163 : 167);
 }
 
 
@@ -1738,10 +1774,10 @@ void game_select_set_medal_count(u32 total) {
 void game_select_init_medal_pane(void) {
     struct Vector2 *bgOfs = &D_03004b10.BG_OFS[BG_LAYER_1];
 
-    gGameSelect->medalPaneTitle = sprite_create(gSpriteHandler, anim_game_select_medal_text, 0, 162, 151, 0x800, 0, 0, 0);
+    gGameSelect->medalPaneTitle = sprite_create(gSpriteHandler, anim_game_select_medal_text, 0, 161, 151, 0x800, 0, 0, 0);
     gGameSelect->medalPaneDigit1 = sprite_create(gSpriteHandler, anim_game_select_medal_num, 0, 168, 151, 0x800, 0, 0x7f, 0);
     gGameSelect->medalPaneDigit2 = sprite_create(gSpriteHandler, anim_game_select_medal_num, 0, 168, 151, 0x800, 0, 0x7f, 0);
-    sprite_set_x_y(gSpriteHandler, gGameSelect->medalPaneDigit2, 161, 151);
+    sprite_set_x_y(gSpriteHandler, gGameSelect->medalPaneDigit2, 160, 151);
 
     sprite_set_origin_x_y(gSpriteHandler, gGameSelect->medalPaneTitle, &bgOfs->x, &bgOfs->y);
     sprite_set_origin_x_y(gSpriteHandler, gGameSelect->medalPaneDigit1, &bgOfs->x, &bgOfs->y);
@@ -1795,6 +1831,8 @@ void game_select_init_info_pane(void) {
     text_printer_set_shadow_colors(gGameSelect->infoPaneDesc, -1);
     gGameSelect->perfectClearedSprite = sprite_create(gSpriteHandler, anim_game_select_perfect_rank, 0, 187, 112, 0x80A, 1, 0, 0x8000);
     sprite_set_origin_x_y(gSpriteHandler, gGameSelect->perfectClearedSprite, &bgOfs->x, &bgOfs->y);
+    gGameSelect->noPracticeSprite = sprite_create(gSpriteHandler, anim_game_select_no_practice, 0, 189, 94, 0x80A, 1, 0, 0x8000);
+    sprite_set_origin_x_y(gSpriteHandler, gGameSelect->noPracticeSprite, &bgOfs->x, &bgOfs->y);
     gGameSelect->infoPaneIsClear = TRUE;
     gGameSelect->infoPaneTask = INFO_PANE_TASK_NONE;
 }
@@ -1825,6 +1863,7 @@ void game_select_clear_info_pane(void) {
     game_select_delete_info_pane_sprite(&gGameSelect->infoPaneRank);
     text_printer_clear(gGameSelect->infoPaneDesc);
     sprite_set_visible(gSpriteHandler, gGameSelect->perfectClearedSprite, FALSE);
+    sprite_set_visible(gSpriteHandler, gGameSelect->noPracticeSprite, FALSE);
     gGameSelect->infoPaneIsClear = TRUE;
 }
 
@@ -1845,6 +1884,14 @@ void game_select_print_level_name(struct LevelData *levelData) {
 
 // Print Level Description
 void game_select_print_level_desc(struct LevelData *levelData) {
+    // Use the flag set in process_info_pane
+    if (gGameSelect->isNoPracticeLevel) {
+        text_printer_set_line_spacing(gGameSelect->infoPaneDesc, 14); // smaller spacing
+        text_printer_set_x_y(gGameSelect->infoPaneDesc, 129, 47); // move description higher
+    } else {
+        text_printer_set_line_spacing(gGameSelect->infoPaneDesc, 15); // default spacing
+        text_printer_set_x_y(gGameSelect->infoPaneDesc, 129, 50); // default position
+    }
     text_printer_set_string(gGameSelect->infoPaneDesc, levelData->description);
     gGameSelect->infoPaneIsClear = FALSE;
 }
@@ -1864,19 +1911,44 @@ void game_select_print_level_rank(s32 levelState) {
         levelState = LEVEL_STATE_PERFECT; // Use the new "perfect" rank
     }
 
+    // Use the isNoPracticeLevel flag for positioning
     text_printer_fill_vram_tiles(16, 26, 16, 2, 0);
     string = game_select_rank_text[levelState];
     anim = text_printer_get_formatted_line_anim(get_current_mem_id(), 16, 26, TEXT_PRINTER_FONT_SMALL, &string, TEXT_ANCHOR_BOTTOM_RIGHT, 0, 104, 0, -1);
-    gGameSelect->infoPaneRank = sprite_create(gSpriteHandler, anim, 0, 228, 113, 0x800, 1, 0, 0x8000);
+    gGameSelect->infoPaneRank = sprite_create(gSpriteHandler, anim, 0, 228, gGameSelect->isNoPracticeLevel ? 116 : 113, 0x800, 1, 0, 0x8000);
     sprite_set_base_palette(gSpriteHandler, gGameSelect->infoPaneRank, game_select_rank_palette[levelState]);
     gGameSelect->infoPaneIsClear = FALSE;
+
+    // Move perfectClearedSprite down for no practice games, just like the rank text
+    if (gGameSelect->isNoPracticeLevel) {
+        sprite_set_y(gSpriteHandler, gGameSelect->perfectClearedSprite, 115);
+    } else {
+        sprite_set_y(gSpriteHandler, gGameSelect->perfectClearedSprite, 113);
+    }
 }
 
+/**
+ * Checks if the given level ID is in the levelsWithNoPractice array.
+ * Returns TRUE if the level has no practice, FALSE otherwise.
+ */
+u32 is_no_practice_level(s32 levelID) {
+    u32 i;
+    for (i = 0; i < sizeof(levelsWithNoPractice)/sizeof(levelsWithNoPractice[0]); i++) {
+        if (levelsWithNoPractice[i] == levelID) {
+            return TRUE;
+        }
+    }
+    return FALSE;
+}
 
 // Update Level Info Pane
 void game_select_process_info_pane(void) {
     struct Vector2 *bgOfs = &D_03004b10.BG_OFS[BG_LAYER_1];
     s32 campaign;
+    u32 i;
+
+    // Set the flag for the current info pane level
+    gGameSelect->isNoPracticeLevel = is_no_practice_level(gGameSelect->infoPaneLevelID);
 
     switch (gGameSelect->infoPaneTask) {
         case INFO_PANE_TASK_DELAY:
@@ -1913,6 +1985,8 @@ void game_select_process_info_pane(void) {
                 if ((campaign >= 0) && D_030046a8->data.campaignsCleared[campaign]) {
                     sprite_set_visible(gSpriteHandler, gGameSelect->perfectClearedSprite, TRUE);
                 }
+                // Use the isNoPracticeLevel flag for the no practice graphic
+                sprite_set_visible(gSpriteHandler, gGameSelect->noPracticeSprite, gGameSelect->isNoPracticeLevel ? TRUE : FALSE);
 
                 gGameSelect->infoPaneTask = INFO_PANE_TASK_NONE;
             }
@@ -2110,14 +2184,14 @@ void game_select_init_flow_pane(void) {
     u32 i;
 
     for (i = 0; i < ARRAY_COUNT(flowPane->digits); i++) {
-        flowPane->digits[i] = sprite_create(gSpriteHandler, anim_game_select_flow_num, 10, 208 - (i * 8), 128, 0, 0, 0, 0);
+        flowPane->digits[i] = sprite_create(gSpriteHandler, anim_game_select_flow_num, 10, 212 - (i * 8), 128, 0, 0, 0, 0);
         sprite_set_origin_x_y(gSpriteHandler, flowPane->digits[i], &bgOfs->x, &bgOfs->y);
     }
 
-    flowPane->title = sprite_create(gSpriteHandler, anim_game_select_flow_text, 0, 128, 128, 0, 0, 0, 0);
+    flowPane->title = sprite_create(gSpriteHandler, anim_game_select_flow_text, 0, 130, 128, 0, 0, 0, 0);
     sprite_set_origin_x_y(gSpriteHandler, flowPane->title, &bgOfs->x, &bgOfs->y);
 
-    flowPane->arrow = sprite_create(gSpriteHandler, anim_game_select_flow_arrow, 0, 224, 128, 0, 0, 0, 0x8000);
+    flowPane->arrow = sprite_create(gSpriteHandler, anim_game_select_flow_arrow, 0, 226, 128, 0, 0, 0, 0x8000);
     sprite_set_origin_x_y(gSpriteHandler, flowPane->arrow, &bgOfs->x, &bgOfs->y);
 
     updateFlow = game_select_update_scores();
