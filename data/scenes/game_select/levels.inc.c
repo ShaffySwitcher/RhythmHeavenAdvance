@@ -52,9 +52,9 @@ struct LevelData level_data_table[] = {
         /* Entry Scene   */ &scene_snappy_trio,
         /* Level Name    */ "The Snappy Trio",
         /* Level Desc.   */ "Look at the trio in their\n"
-                            "Western outfits!\n"
-                            "So cool! Dare we say\n"
-                            "they look... snappy?",
+                            "western outfits! So cool!\n"
+                            "Dare we say they\n"
+                            "look... snappy?",
         /* Level Icon    */ 10,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_snappy_trio_gfx_tables,
@@ -181,7 +181,7 @@ struct LevelData level_data_table[] = {
         /* Level Desc.   */ "See that ball bouncing\n"
                             "down the road?\n"
                             "You wouldn't want to\n"
-							"let it fall...would you?",
+							"let it fall... would you?",
         /* Level Icon    */ 12,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_bouncy_road_gfx_tables,
@@ -210,10 +210,11 @@ struct LevelData level_data_table[] = {
     /* NINJA_BODYGUARD */ {
         /* Entry Scene   */ &scene_ninja_bodyguard,
         /* Level Name    */ "Ninja Bodyguard",
-        /* Level Desc.   */ "An enemy is attacking\n"
-                            "your lord! Block the\n"
-                            "arrows with your sword\n"
-							"using ‡O and ‡M!",
+        /* Level Desc.   */ "An enemy is\n"
+                            "attacking your lord!\n"
+                            "Block the arrows\n"
+							"with your sword\n"
+                            "using ‡O and ‡M!",
         /* Level Icon    */ 5,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_ninja_bodyguard_gfx_tables,
@@ -354,9 +355,10 @@ struct LevelData level_data_table[] = {
     /* MARCHING_ORDERS */ {
         /* Entry Scene   */ &scene_marching_orders,
         /* Level Name    */ "Marching Orders",
-        /* Level Desc.   */ "Ready, march! Following\n"
-                            "orders as a unit builds\n"
-                            "your camaraderie.\n"
+        /* Level Desc.   */ "Ready, march!\n"
+                            "Following orders as\n"
+                            "a unit builds your\n"
+                            "camaraderie.\n"
 							"Also, rhythm.",
         /* Level Icon    */ 21,
         /* Level Type    */ LEVEL_TYPE_GAME,
@@ -403,9 +405,10 @@ struct LevelData level_data_table[] = {
         /* Entry Scene   */ &scene_bunny_hop,
         /* Level Name    */ "Bunny Hop",
         /* Level Desc.   */ "This rabbit has an\n"
-                            "impossible goal: to jump\n"
-                            "to the moon! Can you\n"
-                            "make his dream reality?",
+                            "impossible goal: to\n"
+                            "jump to the moon!\n"
+                            "Can you make his\n"
+                            "dream reality?",
         /* Level Icon    */ 24,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_bunny_hop_gfx_tables,
@@ -740,8 +743,9 @@ struct LevelData level_data_table[] = {
         /* Level Name    */ "Remix ‚U",
         /* Level Desc.   */ "Let's test your skills!\n"
                             "Every game you've\n"
-                            "played is here! Show\n"
-                            "us what you've learned!",
+                            "played is here!\n"
+                            "Show us what you've\n"
+                            "learned!",
         /* Level Icon    */ 2,
         /* Level Type    */ LEVEL_TYPE_REMIX,
         /* Epilogue GFX  */ epilogue_remix6_gfx_tables,
@@ -866,10 +870,9 @@ struct LevelData level_data_table[] = {
     /* LIVE_MENU */ {
         /* Entry Scene   */ &scene_drum_live,
         /* Level Name    */ "Concert",
-        /* Level Desc.   */ "We're hosting a\n"
-                            "concert! We think\n"
-                            "you've got good rhythm,\n"
-                            "so give it a try!",
+        /* Level Desc.   */ "We're hosting a\nconcert! We think\n"
+                            "you've got good\n"
+                            "rhythm, so give\nit a try!",
         /* Level Icon    */ 44,
         /* Level Type    */ LEVEL_TYPE_BONUS,
         /* Epilogue GFX  */ epilogue_drum_live_gfx_tables,

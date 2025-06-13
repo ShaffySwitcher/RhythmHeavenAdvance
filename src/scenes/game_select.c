@@ -1820,13 +1820,13 @@ void game_select_init_info_pane(void) {
 
     gGameSelect->infoPaneName = -1;
     gGameSelect->infoPaneRank = -1;
-    gGameSelect->infoPaneDesc = text_printer_create_new(get_current_mem_id(), 5, 104, 26);
-    text_printer_set_x_y(gGameSelect->infoPaneDesc, 129, 48);
+    gGameSelect->infoPaneDesc = text_printer_create_new(get_current_mem_id(), 5, 110, 26);
+    text_printer_set_x_y(gGameSelect->infoPaneDesc, 125, 48);
     text_printer_set_layer(gGameSelect->infoPaneDesc, 0x800);
     text_printer_set_colors(gGameSelect->infoPaneDesc, 0);
     text_printer_set_palette(gGameSelect->infoPaneDesc, 8);
     text_printer_set_line_spacing(gGameSelect->infoPaneDesc, 13);
-    text_printer_center_by_content(gGameSelect->infoPaneDesc, 1);
+    text_printer_set_alignment(gGameSelect->infoPaneDesc, TEXT_ALIGNMENT_CENTER);
     text_printer_set_x_y_controller(gGameSelect->infoPaneDesc, &bgOfs->x, &bgOfs->y);
     text_printer_set_shadow_colors(gGameSelect->infoPaneDesc, -1);
     gGameSelect->perfectClearedSprite = sprite_create(gSpriteHandler, anim_game_select_perfect_rank, 0, 187, 112, 0x80A, 1, 0, 0x8000);
@@ -1899,10 +1899,10 @@ void game_select_print_level_desc(struct LevelData *levelData) {
 
     if (lineCount <= 4) {
         text_printer_set_line_spacing(gGameSelect->infoPaneDesc, 15);
-        text_printer_set_x_y(gGameSelect->infoPaneDesc, 129, 50);
+        text_printer_set_y(gGameSelect->infoPaneDesc, 50);
     } else {
         text_printer_set_line_spacing(gGameSelect->infoPaneDesc, 13);
-        text_printer_set_x_y(gGameSelect->infoPaneDesc, 129, 47);
+        text_printer_set_y(gGameSelect->infoPaneDesc, 47);
     }
 
     text_printer_set_string(gGameSelect->infoPaneDesc, levelData->description);
