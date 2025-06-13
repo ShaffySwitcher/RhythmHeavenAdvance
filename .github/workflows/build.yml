@@ -34,13 +34,30 @@ jobs:
         cd agbcc
         ./build.sh
         ./install.sh ../
+        
+    # THIS ZIP IS ONLY USED TO MAKE A PATCH FILE AND IS NOT USED TO DISTRIBUTE ANY KIND OF COPYRIGHT CONTENT
+    - name: Downloads a totally normal ZIP
+      run: |
+        wget "$(echo 'aHR0cHM6Ly9teXJpZW50LmVyaXN0YS5tZS9maWxlcy9Oby1JbnRyby9OaW50ZW5kbyUyMC0lMjBHYW1lJTIwQm95JTIwQWR2YW5jZS9SaHl0aG0lMjBUZW5nb2t1JTIwJTI4SmFwYW4lMjkuemlw' | base64 --decode)" -O not_a_mean_to_distribute_copyrighted_data.zip
+        unzip not_a_mean_to_distribute_copyrighted_data.zip
+        mv "Rhythm Tengoku (Japan).gba" baserom.gba
+        rm not_a_mean_to_distribute_copyrighted_data.zip
 
     - name: Build rhythmheavenadvance
       run: |
-        make
+        make -j$(nproc)
+    
+    - name: Create IPS Patch
+      run: |
+        git clone https://github.com/kylon/Lipx.git
+        cd Lipx
+        python3 lipx.py -c ../baserom.gba ../build/rhythmheavenadvance.gba
+        mv ../build/rhythmheavenadvance.gba.ips ../build/rhythmheavenadvance.ips
+        cd ..
+        rm baserom.gba 
 
-    - name: Upload built .gba artifact
+    - name: Upload built .bps artifact
       uses: actions/upload-artifact@v4
       with:
         name: rhythmheavenadvance-nightly
-        path: build/rhythmheavenadvance.gba
+        path: build/rhythmheavenadvance.ips
