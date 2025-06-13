@@ -1908,8 +1908,8 @@ void game_select_print_level_rank(s32 levelState) {
         levelState = LEVEL_STATE_PERFECT; // Use the new "perfect" rank
     }
 
-    for(i = 0; i < game_select_get_total_levels(); i++) {
-        if(levelsWithNoPractice[i] == gGameSelect->infoPaneLevelID && levelsWithNoPractice[i] != LEVEL_KARATE_MAN) {
+    for(i = 0; i < ARRAY_COUNT(levelsWithNoPractice); i++) {
+        if(levelsWithNoPractice[i] == gGameSelect->infoPaneLevelID) {
             found = TRUE;
             break;
         }
@@ -1953,8 +1953,8 @@ void game_select_process_info_pane(void) {
         case INFO_PANE_TASK_PRINT_DESC:
             game_select_print_level_desc(gGameSelect->infoPaneLevelData);
             gGameSelect->infoPaneTask = INFO_PANE_TASK_RENDER;
-            for(i = 0; i < game_select_get_total_levels(); i++) {
-                if(levelsWithNoPractice[i] == gGameSelect->infoPaneLevelID && levelsWithNoPractice[i] != LEVEL_KARATE_MAN) {
+            for(i = 0; i < ARRAY_COUNT(levelsWithNoPractice); i++) {
+                if(levelsWithNoPractice[i] == gGameSelect->infoPaneLevelID) {
                     text_printer_set_line_spacing(gGameSelect->infoPaneDesc, 14);
                     text_printer_set_x_y(gGameSelect->infoPaneDesc, 129, 47);
                     break;
@@ -1973,8 +1973,8 @@ void game_select_process_info_pane(void) {
                     sprite_set_visible(gSpriteHandler, gGameSelect->perfectClearedSprite, TRUE);
                 }
 
-                for(i = 0; i < game_select_get_total_levels(); i++) {
-                    if(levelsWithNoPractice[i] == gGameSelect->infoPaneLevelID && levelsWithNoPractice[i] != LEVEL_KARATE_MAN) {
+                for(i = 0; i < ARRAY_COUNT(levelsWithNoPractice); i++) {
+                    if(levelsWithNoPractice[i] == gGameSelect->infoPaneLevelID) {
                         sprite_set_visible(gSpriteHandler, gGameSelect->noPracticeSprite, TRUE);
                         sprite_set_x_y(gSpriteHandler, gGameSelect->perfectClearedSprite, 187, 115);
                         text_printer_set_line_spacing(gGameSelect->infoPaneDesc, 14);
