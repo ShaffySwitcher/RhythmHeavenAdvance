@@ -292,6 +292,6 @@ struct Animation anim_game_select_perfect_rank[] = {
 };
 
 struct Animation anim_game_select_no_practice[] = {
-    /* 000 */ { game_select_cel127, 4 },
+    /* 000 */ { game_select_cel127, 1 },
     /* End */ END_ANIMATION
 };  

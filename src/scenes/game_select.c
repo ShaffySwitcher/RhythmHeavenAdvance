@@ -1864,6 +1864,9 @@ void game_select_clear_info_pane(void) {
     text_printer_clear(gGameSelect->infoPaneDesc);
     sprite_set_visible(gSpriteHandler, gGameSelect->perfectClearedSprite, FALSE);
     sprite_set_visible(gSpriteHandler, gGameSelect->noPracticeSprite, FALSE);
+    sprite_set_x_y(gSpriteHandler, gGameSelect->perfectClearedSprite, 187, 112);
+    text_printer_set_x_y(gGameSelect->infoPaneDesc, 129, 50);
+    text_printer_set_line_spacing(gGameSelect->infoPaneDesc, 15);
     gGameSelect->infoPaneIsClear = TRUE;
 }
 
@@ -1884,14 +1887,6 @@ void game_select_print_level_name(struct LevelData *levelData) {
 
 // Print Level Description
 void game_select_print_level_desc(struct LevelData *levelData) {
-    // Use the flag set in process_info_pane
-    if (gGameSelect->isNoPracticeLevel) {
-        text_printer_set_line_spacing(gGameSelect->infoPaneDesc, 14); // smaller spacing
-        text_printer_set_x_y(gGameSelect->infoPaneDesc, 129, 47); // move description higher
-    } else {
-        text_printer_set_line_spacing(gGameSelect->infoPaneDesc, 15); // default spacing
-        text_printer_set_x_y(gGameSelect->infoPaneDesc, 129, 50); // default position
-    }
     text_printer_set_string(gGameSelect->infoPaneDesc, levelData->description);
     gGameSelect->infoPaneIsClear = FALSE;
 }
@@ -1901,6 +1896,8 @@ void game_select_print_level_desc(struct LevelData *levelData) {
 void game_select_print_level_rank(s32 levelState) {
     struct Animation *anim;
     const char *string;
+    u32 i;
+    u32 found = FALSE;
 
     if (D_030046a8->data.levelScores[gGameSelect->infoPaneLevelID] == DEFAULT_LEVEL_SCORE) {
         levelState = LEVEL_STATE_OPEN;
@@ -1911,34 +1908,19 @@ void game_select_print_level_rank(s32 levelState) {
         levelState = LEVEL_STATE_PERFECT; // Use the new "perfect" rank
     }
 
-    // Use the isNoPracticeLevel flag for positioning
+    for(i = 0; i < game_select_get_total_levels(); i++) {
+        if(levelsWithNoPractice[i] == gGameSelect->infoPaneLevelID) {
+            found = TRUE;
+            break;
+        }
+    }
     text_printer_fill_vram_tiles(16, 26, 16, 2, 0);
     string = game_select_rank_text[levelState];
     anim = text_printer_get_formatted_line_anim(get_current_mem_id(), 16, 26, TEXT_PRINTER_FONT_SMALL, &string, TEXT_ANCHOR_BOTTOM_RIGHT, 0, 104, 0, -1);
-    gGameSelect->infoPaneRank = sprite_create(gSpriteHandler, anim, 0, 228, gGameSelect->isNoPracticeLevel ? 116 : 113, 0x800, 1, 0, 0x8000);
+    gGameSelect->infoPaneRank = sprite_create(gSpriteHandler, anim, 0, 228, found ? 116 : 113, 0x800, 1, 0, 0x8000);
     sprite_set_base_palette(gSpriteHandler, gGameSelect->infoPaneRank, game_select_rank_palette[levelState]);
     gGameSelect->infoPaneIsClear = FALSE;
 
-    // Move perfectClearedSprite down for no practice games, just like the rank text
-    if (gGameSelect->isNoPracticeLevel) {
-        sprite_set_y(gSpriteHandler, gGameSelect->perfectClearedSprite, 115);
-    } else {
-        sprite_set_y(gSpriteHandler, gGameSelect->perfectClearedSprite, 113);
-    }
-}
-
-/**
- * Checks if the given level ID is in the levelsWithNoPractice array.
- * Returns TRUE if the level has no practice, FALSE otherwise.
- */
-u32 is_no_practice_level(s32 levelID) {
-    u32 i;
-    for (i = 0; i < sizeof(levelsWithNoPractice)/sizeof(levelsWithNoPractice[0]); i++) {
-        if (levelsWithNoPractice[i] == levelID) {
-            return TRUE;
-        }
-    }
-    return FALSE;
 }
 
 // Update Level Info Pane
@@ -1948,7 +1930,6 @@ void game_select_process_info_pane(void) {
     u32 i;
 
     // Set the flag for the current info pane level
-    gGameSelect->isNoPracticeLevel = is_no_practice_level(gGameSelect->infoPaneLevelID);
 
     switch (gGameSelect->infoPaneTask) {
         case INFO_PANE_TASK_DELAY:
@@ -1972,7 +1953,13 @@ void game_select_process_info_pane(void) {
         case INFO_PANE_TASK_PRINT_DESC:
             game_select_print_level_desc(gGameSelect->infoPaneLevelData);
             gGameSelect->infoPaneTask = INFO_PANE_TASK_RENDER;
-            break;
+            for(i = 0; i < game_select_get_total_levels(); i++) {
+                if(levelsWithNoPractice[i] == gGameSelect->infoPaneLevelID) {
+                    text_printer_set_line_spacing(gGameSelect->infoPaneDesc, 14);
+                    text_printer_set_x_y(gGameSelect->infoPaneDesc, 129, 47);
+                    break;
+                }
+            }
 
         case INFO_PANE_TASK_RENDER:
             if (!text_printer_is_busy(gGameSelect->infoPaneDesc)) {
@@ -1985,8 +1972,16 @@ void game_select_process_info_pane(void) {
                 if ((campaign >= 0) && D_030046a8->data.campaignsCleared[campaign]) {
                     sprite_set_visible(gSpriteHandler, gGameSelect->perfectClearedSprite, TRUE);
                 }
-                // Use the isNoPracticeLevel flag for the no practice graphic
-                sprite_set_visible(gSpriteHandler, gGameSelect->noPracticeSprite, gGameSelect->isNoPracticeLevel ? TRUE : FALSE);
+
+                for(i = 0; i < game_select_get_total_levels(); i++) {
+                    if(levelsWithNoPractice[i] == gGameSelect->infoPaneLevelID) {
+                        sprite_set_visible(gSpriteHandler, gGameSelect->noPracticeSprite, TRUE);
+                        sprite_set_x_y(gSpriteHandler, gGameSelect->perfectClearedSprite, 187, 115);
+                        text_printer_set_line_spacing(gGameSelect->infoPaneDesc, 14);
+                        text_printer_set_x_y(gGameSelect->infoPaneDesc, 129, 47);
+                        break;
+                    }
+                }
 
                 gGameSelect->infoPaneTask = INFO_PANE_TASK_NONE;
             }
