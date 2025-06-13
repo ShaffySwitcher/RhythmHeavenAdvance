@@ -1975,7 +1975,7 @@ void game_select_process_info_pane(void) {
                     sprite_set_visible(gSpriteHandler, gGameSelect->perfectClearedSprite, TRUE);
                 }
 
-                for(i = 0; i < game_select_get_total_levels(); i++) {
+                for(i = 0; i < 29; i++) {
                     if(levelsWithNoPractice[i] == gGameSelect->infoPaneLevelID) {
                         sprite_set_visible(gSpriteHandler, gGameSelect->noPracticeSprite, TRUE);
                         break;
