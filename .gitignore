@@ -10,6 +10,5 @@ tools/agbcc/*
 *.dump
 .vscode/*
 ctx.c
-*.png
 *.pdn
 bitesthedust.py
