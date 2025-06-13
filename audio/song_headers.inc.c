@@ -8661,3 +8661,16 @@ struct SongHeader s_f_marcher2_v_hidari_seqData = {
     /* Song Title    */ s_f_marcher2_v_hidari_seqName,
     /* Song Number   */ 709
 };
+
+
+extern const u8 s_a4_mid[];
+struct SongHeader s_a4_seqData = {
+    /* MIDI Sequence */ s_a4_mid,
+    /* Sound Player  */ MUSIC_PLAYER_0,
+    /* Bank Number   */ INST_BANK_13,
+    /* Volume        */ 127,
+    /* Priority      */ 127,
+    /* unk8          */ 0xff,
+    /* Song Title    */ s_a4_seqName,
+    /* Song Number   */ 1096
+};
