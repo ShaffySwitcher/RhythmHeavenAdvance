@@ -2,12 +2,13 @@
 #include "audio_check.h"
 #include "src/scenes/game_select.h"
 
-
-/* AUDIO CHECK SCENE */
+/* EXTERNS */
 
 extern void midi_note_start(struct MidiBus *midiBus, u32 track, u8 noteKey, u8 noteVelocity);
 extern void midi_note_stop(struct MidiBus *midiBus, u32 track, u8 noteKey);
 extern union Instrument *instrument_banks[];
+
+/* AUDIO CHECK SCENE */
 
 const char *noteNames[] = {
     "C-1",  "C#-1", "D-1",  "D#-1", "E-1",  "F-1",  "F#-1", "G-1",  "G#-1", "A-1",  "A#-1", "B-1",
@@ -95,6 +96,7 @@ void audio_check_scene_start(void *sVar, s32 dArg) {
 
     audio_check_print_note();
 
+    // to-do: initialize the sound player without playing a midi (i could do an empty midi but i can do cleaner)
     scene_play_music(&s_a4_seqData);
 }
 
@@ -144,11 +146,18 @@ void audio_check_scene_update(void *sVar, s32 dArg) {
         previousInstrument = gAudioCheck->currentInstrument;
 
         if (D_030053b8 & LEFT_SHOULDER_BUTTON) {
-            gAudioCheck->currentBank--;
-            while(instrument_banks[gAudioCheck->currentBank] == NULL) {
+            if (gAudioCheck->currentBank == 0) {
+                gAudioCheck->currentBank = gAudioCheck->maxBanks;
+            } else {
                 gAudioCheck->currentBank--;
-                if (gAudioCheck->currentBank < 0) {
+            }
+            while(instrument_banks[gAudioCheck->currentBank] == NULL) {
+                if (gAudioCheck->currentBank == 0) {
                     gAudioCheck->currentBank = gAudioCheck->maxBanks;
+                } else {
+                    gAudioCheck->currentBank--;
+                }
+                if (gAudioCheck->currentBank == previousBank) {
                     break;
                 }
             }
@@ -157,7 +166,11 @@ void audio_check_scene_update(void *sVar, s32 dArg) {
         }
 
         if (D_030053b8 & RIGHT_SHOULDER_BUTTON) {
-            gAudioCheck->currentBank++;
+            if (gAudioCheck->currentBank == gAudioCheck->maxBanks) {
+                gAudioCheck->currentBank = 0;
+            } else {
+                gAudioCheck->currentBank++;
+            }
             if (gAudioCheck->currentBank > gAudioCheck->maxBanks) {
                 gAudioCheck->currentBank = 0;
             }
