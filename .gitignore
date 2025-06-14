@@ -8,6 +8,7 @@ tools/agbcc/*
 *.gba
 *.sav
 *.dump
+*.bps
 .vscode/*
 ctx.c
 *.pdn
