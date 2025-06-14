@@ -8674,3 +8674,15 @@ struct SongHeader s_a4_seqData = {
     /* Song Title    */ s_a4_seqName,
     /* Song Number   */ 1096
 };
+
+extern const u8 s_debug_palmtree_bgm_mid[];
+struct SongHeader s_debug_palmtree_bgm_seqData = {
+    /* MIDI Sequence */ s_debug_palmtree_bgm_mid,
+    /* Sound Player  */ MUSIC_PLAYER_0,
+    /* Bank Number   */ INST_BANK_DEBUG_PALMTREE,
+    /* Volume        */ 100,
+    /* Priority      */ 127,
+    /* unk8          */ 0xff,
+    /* Song Title    */ s_debug_palmtree_bgm_seqName,
+    /* Song Number   */ 1097
+};

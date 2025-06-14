@@ -4,7 +4,8 @@
 
 @ Script
 script script_scene_debug_menu
-    set_tempo 140
+    set_tempo 124
+    play_music s_debug_palmtree_bgm_seqData
     pause_scene
 
     run func_08007324 TRUE
@@ -33,7 +34,7 @@ struct scene_debug_menu
     /* Start  */ .word func_0801d86c, sub_scene_debug_menu
     /* Update */ .word func_0801d8d8, 0
     /* Stop   */ .word NULL,          0
-    /* Memory */ .word 0x28
+    /* Memory */ .word 0x2C
 endstruct
 
 .end

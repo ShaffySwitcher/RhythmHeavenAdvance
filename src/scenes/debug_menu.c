@@ -59,6 +59,7 @@ void debug_menu_scene_init_gfx2(void) {
 void debug_menu_scene_init_gfx1(void) {
     schedule_function_call(get_current_mem_id(), debug_menu_scene_init_gfx2, 0, 2);
     scene_show_obj_layer();
+    scene_set_bg_layer_display(BG_LAYER_1, TRUE, 0, 0, 0, 29, BGCNT_PRIORITY(1));
 }
 
 
@@ -67,6 +68,9 @@ void debug_menu_scene_start(void *sVar, s32 dArg) {
     struct PrintedTextAnim *textAnim;
     struct DebugMenuEntry *entry;
     u32 i;
+
+    gDebugMenu->bgY = 0;
+    gDebugMenu->bgX = 0;
 
     func_08007324(FALSE);
     func_080073f0();
@@ -120,6 +124,10 @@ void debug_menu_scene_paused(void *sVar, s32 dArg) {
 void debug_menu_scene_update(void *sVar, s32 dArg) {
     s32 maxRow;
 
+    gDebugMenu->bgX += 1;
+    gDebugMenu->bgY += 2;
+    scene_set_bg_layer_pos(BG_LAYER_1, gDebugMenu->bgX >> 2, gDebugMenu->bgY >> 2);
+
     if (!debug_menu_scene_inputs_enabled()) {
         return;
     }
@@ -132,24 +140,25 @@ void debug_menu_scene_update(void *sVar, s32 dArg) {
 
     if (D_030053b8 & DPAD_UP) {
         debug_menu_render_table(gDebugMenu->page, (gDebugMenu->row > 0) ? gDebugMenu->row - 1 : maxRow - 1);
-    }
-
-    if (D_030053b8 & DPAD_DOWN) {
+        play_sound(&s_menu_cursor1_seqData);
+    } else if (D_030053b8 & DPAD_DOWN) {
         debug_menu_render_table(gDebugMenu->page, (gDebugMenu->row < maxRow - 1) ? gDebugMenu->row + 1 : 0);
+        play_sound(&s_menu_cursor1_seqData);
     }
 
     if (D_030053b8 & DPAD_LEFT) {
         debug_menu_render_table(gDebugMenu->page - 1, gDebugMenu->row);
-    }
-
-    if (D_030053b8 & DPAD_RIGHT) {
+        play_sound(&s_f_pause_cursor_seqData);
+    } else if (D_030053b8 & DPAD_RIGHT) {
         debug_menu_render_table(gDebugMenu->page + 1, gDebugMenu->row);
+        play_sound(&s_f_pause_cursor_seqData);
     }
 
     if (D_03004afc & (START_BUTTON | A_BUTTON)) {
         set_next_scene(debug_menu_entry_table[(gDebugMenu->page * 8) + gDebugMenu->row].scene);
         set_pause_beatscript_scene(FALSE);
         gDebugMenu->inputsEnabled = FALSE;
+        play_sound(&s_menu_kettei1_seqData);
     } else if (D_03004afc & B_BUTTON) {
         set_next_scene(&scene_main_menu);
         set_pause_beatscript_scene(FALSE);

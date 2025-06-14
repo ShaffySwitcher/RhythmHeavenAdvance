@@ -721,3 +721,4 @@ extern struct SongHeader s_f_marcher2_v_hidarimukeL_seqData;
 extern struct SongHeader s_f_marcher2_v_hidarimukeS_seqData;
 extern struct SongHeader s_f_marcher2_v_hidari_seqData;
 extern struct SongHeader s_a4_seqData;
+extern struct SongHeader s_debug_palmtree_bgm_seqData;

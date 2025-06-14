@@ -5126,6 +5126,38 @@
         {
             "sample": "sample_962.wav",
             "pitch": "C5"
+        },
+        {
+            "sample": "s_debug_palmtree_drums.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "s_debug_palmtree_ep1.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "s_debug_palmtree_bass.wav",
+            "pitch": "C3"
+        },
+        {
+            "sample": "s_debug_palmtree_flute.wav",
+            "pitch": "C6",
+            "loop": [
+                10384,
+                25502
+            ]
+        },
+        {
+            "sample": "s_debug_palmtree_piano.wav",
+            "pitch": "C7"
+        },
+        {
+            "sample": "s_debug_palmtree_strings.wav",
+            "pitch": "C6",
+            "loop": [
+                11018,
+                26433
+            ]
         }
     ]
 }

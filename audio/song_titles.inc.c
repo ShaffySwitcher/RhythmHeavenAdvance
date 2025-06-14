@@ -724,3 +724,4 @@ char s_f_marcher2_v_hidarimukeL_seqName[] = "";
 char s_f_marcher2_v_hidarimukeS_seqName[] = "";
 char s_f_marcher2_v_hidari_seqName[] = "";
 char s_a4_seqName[] = "";
+char s_debug_palmtree_bgm_seqName[] = "";
