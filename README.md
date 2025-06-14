@@ -1,4 +1,4 @@
-**‚ö??∏? This is not the main Advance repository. Please refer to the parent repository for main development!**
+**‚ö†Ô∏è This is not the main Advance repository. Please refer to the parent repository for main development!**
 
 # Rhythm Heaven Advance: Ex-Director's Cut
 ![Rhythm Heaven Advance : Ex-Director's Cut](images/logo.png?raw=true "Rhythm Heaven Advance : Ex-Director's Cut")
