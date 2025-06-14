@@ -36,7 +36,7 @@ void disclamer_scene_init_gfx3(void) {
     s32 task;
 
     func_08007324(TRUE);
-    task = palette_fade_in(0, ticks_to_frames(12), 1, 0x7FFF, &disclamer_pal[0][0], BG_PALETTE_BUFFER(0));
+    task = palette_fade_in(0, ticks_to_frames(12), 1, 0x0000, &disclamer_pal[0][0], BG_PALETTE_BUFFER(0));
     run_func_after_task(task, disclamer_scene_wait_if_not_seen, 0);
 }
 

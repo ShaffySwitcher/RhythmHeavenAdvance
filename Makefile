@@ -53,10 +53,10 @@ NONMATCHING := 1
 REV ?= 0
 
 ifeq ($(REV), 0)
-    TARGET := rhythmtengoku
+    TARGET := rhythmheavenadvance
     TARGET_SHA1 := $(BASEROM_SHA1)
 else
-    TARGET := rhythmtengoku_rev1
+    TARGET := rhythmheavenadvance_rev1
     TARGET_SHA1 := $(REV1_SHA1)
     ifeq (,$(wildcard baserom_rev1.gba))
         $(error No ROM provided. Please place an unmodified Revision 1 ROM named "baserom_rev1.gba" in the root folder)
@@ -268,3 +268,9 @@ $(OFILES_GENERATED): $(BUILD)/%.s.o : $(BUILD)/%.s | $(BUILD_DIRS)
 #---------------------------------------------------------------------------------------
 
 print-% : ; $(info $* is a $(flavor $*) variable set to [$($*)]) @true
+
+patch.bps: baserom.gba build/rhythmheavenadvance.gba
+	flips --create baserom.gba build/rhythmheavenadvance.gba build/RHA.bps
+
+.PHONY: patch
+patch: patch.bps
