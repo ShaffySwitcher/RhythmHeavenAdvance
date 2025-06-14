@@ -18,7 +18,7 @@ jobs:
     - name: Update and install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y build-essential binutils-arm-none-eabi git libpng-dev ffmpeg wget
+        sudo apt-get install -y build-essential binutils-arm-none-eabi git libpng-dev ffmpeg wget g++ libgtk-3-dev pkg-config
 
     - name: Set DEVKITPRO environment variables
       run: |
@@ -47,17 +47,20 @@ jobs:
       run: |
         make -j$(nproc)
     
-    - name: Create IPS Patch
+    - name: Compile Flips
       run: |
-        git clone https://github.com/kylon/Lipx.git
-        cd Lipx
-        python3 lipx.py -c ../baserom.gba ../build/rhythmheavenadvance.gba
-        mv ../build/rhythmheavenadvance.gba.ips ../build/rhythmheavenadvance.ips
+        git clone https://github.com/Alcaro/Flips
+        cd Flips
+        ./make-linux.sh
         cd ..
+
+    - name: Make BPS patch
+      run: |
+        Flips/flips --create baserom.gba build/rhythmheavenadvance.gba rhythmheavenadvance.bps
         rm baserom.gba 
 
     - name: Upload built .bps artifact
       uses: actions/upload-artifact@v4
       with:
         name: rhythmheavenadvance-nightly
-        path: build/rhythmheavenadvance.ips
+        path: rhythmheavenadvance.bps
