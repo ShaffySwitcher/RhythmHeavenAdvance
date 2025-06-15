@@ -1,3 +1,5 @@
+
+![Rhythm Heaven Advance](https://github.com/user-attachments/assets/c8afc75d-d86d-48e7-9e94-42f2207fac84)
 # Rhythm Heaven Advance:
 This is the newest and latest version of Rhythm Heaven Advance, based on the WIP decompilation of Rhythm Tengoku.
 "Rhythm Heaven Advance" is the brand new and improved translation patch for Rhythm Tengoku, translating all the text and graphics to be as faithful as possible to the original source, while making changes befitting a localization.
@@ -12,6 +14,7 @@ If you have any Musical or Voice Acting experience, the Advance team is planning
 # Original Rhythm Tengoku Decompilation Description And Installation Guide
 
 This is a decompilation of Rhythm Tengoku for the Gameboy Advance. It can build either a fully byte-for-byte matching ROM from scratch, or rebuild a different functionally equivalent ROM with a different memory layout to be easier to mod with. This can be controlled with the `NONMATCHING` parameter when building.
+
 
 This repository requires an unmodified ROM of Rhythm Tengoku (rev. 0) to build. This ROM will not be provided for you.
 
