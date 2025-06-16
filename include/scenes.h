@@ -70,7 +70,6 @@ extern struct Scene scene_wizards_waltz;
 extern struct Scene scene_bunny_hop;
 extern struct Scene scene_fireworks;
 extern struct Scene scene_power_calligraphy;
-extern struct Scene scene_power_calligraphy;
 extern struct Scene scene_toss_boys;
 extern struct Scene scene_toss_boys_2;
 extern struct Scene scene_rat_race;

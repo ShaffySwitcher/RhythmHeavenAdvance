@@ -190,8 +190,6 @@ endstruct
 
 script script_tanuki_and_monkey_main
     set_tempo 120
-    @ set_results_header tanuki_and_monkey_results_header
-    import_marking_criteria tanuki_and_monkey_marking_criteria
     enable_pause_menu
     dmi_event0D
     dmi_event0B tanuki_and_monkey_text_table_08a2f378, 0

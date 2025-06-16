@@ -45,6 +45,7 @@ script script_bouncy_road_unused_2_main
     set_results_header D_0805b778
     set_tempo 120
     set_music_volume 256
+    enable_pause_menu
     rest 24
     enable_pause_menu
     play_music s_f_even_road_seqData

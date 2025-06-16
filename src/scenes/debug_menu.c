@@ -4,6 +4,8 @@
 
 /* DEBUG MENU SCENE */
 
+/* EXTERNS */
+extern struct LevelData *get_level_data_from_id(s32 id);
 
 static s8 sMenuPage;
 static s8 sMenuRow;
@@ -154,13 +156,15 @@ void debug_menu_scene_update(void *sVar, s32 dArg) {
     }
 
     if (D_03004afc & (START_BUTTON | A_BUTTON)) {
+        set_next_scene(debug_menu_entry_table[(gDebugMenu->page * DEBUG_MENU_ENTRY_PER_PAGE) + gDebugMenu->row].scene);
         if(debug_menu_entry_table[(gDebugMenu->page * DEBUG_MENU_ENTRY_PER_PAGE) + gDebugMenu->row].seeEpilogue) {
             set_scene_trans_target(&scene_results_ver_rank, &scene_debug_menu);
             set_scene_trans_target(&scene_results_ver_score, &scene_debug_menu);
+            set_scene_trans_target(&scene_epilogue, &scene_debug_menu);
+            set_scene_trans_var(&scene_epilogue, (s32)get_level_data_from_id(agb_random(TOTAL_LEVELS))); // yes it's on purpose that PC2 might show up here, it'll show the debug one
         } else {
             set_scene_trans_target(debug_menu_entry_table[(gDebugMenu->page * DEBUG_MENU_ENTRY_PER_PAGE) + gDebugMenu->row].scene, &scene_debug_menu);
         }
-        set_next_scene(debug_menu_entry_table[(gDebugMenu->page * DEBUG_MENU_ENTRY_PER_PAGE) + gDebugMenu->row].scene);
         set_pause_beatscript_scene(FALSE);
         gDebugMenu->inputsEnabled = FALSE;
         play_sound(&s_menu_kettei1_seqData);

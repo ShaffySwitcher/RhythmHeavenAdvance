@@ -83,6 +83,7 @@ script script_spaceball_unused_main
     stop_tracking_inputs
     set_tempo 105
     set_music_volume 256
+    enable_pause_menu
     run gameplay_force_stop_music_midi_track, 6
     spaceball_zoom_camera 0xff00, 96
     loop_start
