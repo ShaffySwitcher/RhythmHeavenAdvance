@@ -5158,6 +5158,38 @@
                 11018,
                 26433
             ]
+        },
+        {
+            "sample": "s_extra_game_fm.wav",
+            "pitch": "C6"
+        },
+        {
+            "sample": "s_extra_game_oboe.wav",
+            "pitch": "C7",
+            "loop": [
+                23842,
+                26564
+            ]
+        },
+        {
+            "sample": "s_extra_game_marimba.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "s_extra_game_bass.wav",
+            "pitch": "F#2",
+            "loop": [
+                13930,
+                27598
+            ]
+        },
+        {
+            "sample": "s_extra_game_organ.wav",
+            "pitch": "G6",
+            "loop": [
+                6424,
+                23221
+            ]
         }
     ]
 }

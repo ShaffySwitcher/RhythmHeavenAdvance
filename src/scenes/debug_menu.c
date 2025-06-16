@@ -2,7 +2,6 @@
 #include "debug_menu.h"
 #include "src/scenes/medal_corner.h"
 
-
 /* DEBUG MENU SCENE */
 
 
@@ -17,8 +16,8 @@ void debug_menu_scene_init_memory(void) {
 
     for (i = 0; entries[i].scene != NULL; i++) {
         if (entries[i].scene == &scene_title) {
-            sMenuPage = i / 8;
-            sMenuRow = i % 8;
+            sMenuPage = i / DEBUG_MENU_ENTRY_PER_PAGE;
+            sMenuRow = i % DEBUG_MENU_ENTRY_PER_PAGE;
             return;
         }
     }
@@ -92,7 +91,7 @@ void debug_menu_scene_start(void *sVar, s32 dArg) {
     gDebugMenu->page = -1;
     gDebugMenu->row = 0;
 
-    for (i = 0; i < 8; i++) {
+    for (i = 0; i < DEBUG_MENU_ENTRY_PER_PAGE; i++) {
         gDebugMenu->textLines[i] = -1;
     }
 
@@ -133,7 +132,7 @@ void debug_menu_scene_update(void *sVar, s32 dArg) {
     }
 
     for (maxRow = 0; gDebugMenu->textLines[maxRow] > -1; maxRow++) {
-        if (maxRow > 7) {
+        if (maxRow > DEBUG_MENU_ENTRY_PER_PAGE-1) {
             break;
         }
     }

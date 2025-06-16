@@ -20,6 +20,7 @@ extern struct Scene scene_disclamer;
 extern struct Scene scene_title;
 extern struct Scene scene_main_menu;
 extern struct Scene scene_game_select;
+extern struct Scene scene_extra_game_select;
 extern struct Scene scene_results_ver_rank;
 extern struct Scene scene_results_ver_debug;
 extern struct Scene scene_results_ver_score;

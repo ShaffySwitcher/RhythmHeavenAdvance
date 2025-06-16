@@ -469,7 +469,7 @@ void debug_menu_render_table(s32 targetPage, s32 targetRow) {
     s32 totalPages;
     u32 i, j;
 
-    totalPages = (gDebugMenu->totalEntries - 1) / 8;
+    totalPages = (gDebugMenu->totalEntries - 1) / DEBUG_MENU_ENTRY_PER_PAGE;
 
     if (targetPage < 0) {
         targetPage = totalPages;
@@ -479,14 +479,14 @@ void debug_menu_render_table(s32 targetPage, s32 targetRow) {
         targetPage = 0;
     }
 
-    if ((targetPage * 8) + targetRow >= gDebugMenu->totalEntries) {
-        targetRow = (gDebugMenu->totalEntries - 1) - (totalPages * 8);
+    if ((targetPage * DEBUG_MENU_ENTRY_PER_PAGE) + targetRow >= gDebugMenu->totalEntries) {
+        targetRow = (gDebugMenu->totalEntries - 1) - (totalPages * DEBUG_MENU_ENTRY_PER_PAGE);
     }
 
     if (targetPage != gDebugMenu->page) {
         struct PrintedTextAnim *textAnim;
 
-        for (i = 0; i < 8; i++) {
+        for (i = 0; i < DEBUG_MENU_ENTRY_PER_PAGE; i++) {
             if (gDebugMenu->textLines[i] > -1) {
                 delete_bmp_font_obj_text_anim(gDebugMenu->objFont, gDebugMenu->textLines[i]);
                 sprite_delete(gSpriteHandler, gDebugMenu->textLines[i]);
@@ -494,9 +494,9 @@ void debug_menu_render_table(s32 targetPage, s32 targetRow) {
             }
         }
 
-        for (j = 0, i = (targetPage * 8); (i < (targetPage * 8) + 8) && (i < gDebugMenu->totalEntries); j++, i++) {
+        for (j = 0, i = (targetPage * DEBUG_MENU_ENTRY_PER_PAGE); (i < (targetPage * DEBUG_MENU_ENTRY_PER_PAGE) + DEBUG_MENU_ENTRY_PER_PAGE) && (i < gDebugMenu->totalEntries); j++, i++) {
             textAnim = bmp_font_obj_print_l(gDebugMenu->objFont, debug_menu_entry_table[i].label, 1, 0);
-            gDebugMenu->textLines[j] = sprite_create(gSpriteHandler, textAnim->frames, 0, 32, (j * 16) + 32, 0x800, 0, 0, 0);
+            gDebugMenu->textLines[j] = sprite_create(gSpriteHandler, textAnim->frames, 0, 32, (j * 18) + 32, 0x800, 0, 0, 0);
         }
 
         delete_bmp_font_obj_text_anim(gDebugMenu->objFont, gDebugMenu->counter);
@@ -511,12 +511,12 @@ void debug_menu_render_table(s32 targetPage, s32 targetRow) {
     gDebugMenu->page = targetPage;
     gDebugMenu->row = targetRow;
 
-    for (i = 0; i < 8; i++) {
+    for (i = 0; i < DEBUG_MENU_ENTRY_PER_PAGE; i++) {
         if (gDebugMenu->textLines[i] > -1) {
             sprite_set_base_palette(gSpriteHandler, gDebugMenu->textLines[i], 0);
         }
     }
 
     sprite_set_base_palette(gSpriteHandler, gDebugMenu->textLines[gDebugMenu->row], 7);
-    sprite_set_x_y(gSpriteHandler, gDebugMenu->cursor, 16, (gDebugMenu->row * 16) + 32);
+    sprite_set_x_y(gSpriteHandler, gDebugMenu->cursor, 16, (gDebugMenu->row * 18) + 32);
 }

@@ -1098,7 +1098,7 @@
 /* 1095 */ DEFINE_SONG( &L8_pat_honki_seqData,               MUSIC_PLAYER_0 )
 /* 1096 */ DEFINE_SONG( &s_a4_seqData,                       MUSIC_PLAYER_0 )
 /* 1097 */ DEFINE_SONG( &s_debug_palmtree_bgm_seqData,       MUSIC_PLAYER_0 )
-/* 1098 */ DEFINE_SONG( NULL, 0 )
+/* 1098 */ DEFINE_SONG( &s_extra_game_select_bgm_seqData,    MUSIC_PLAYER_0 )
 /* 1099 */ DEFINE_SONG( NULL, 0 )
 /* 1100 */ DEFINE_SONG( NULL, 0 )
 /* 1101 */ DEFINE_SONG( NULL, 0 )
