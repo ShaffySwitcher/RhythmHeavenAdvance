@@ -493,7 +493,7 @@ struct DebugMenuEntry debug_menu_entry_table[] = {
     },
     /* Data Clear */ {
         /* Scene */ &scene_snappy_trio_unused,
-        /* Label */ "Ｔｈｅ　Ｃｌａｐｐｙ　Ｔｒｉｏ　（Ｔｅｓｔ）"
+        /* Label */ "Ｔｈｅ　Ｓｎａｐｐｙ　Ｔｒｉｏ　（Ｔｅｓｔ）"
     },
     END_OF_DEBUG_ENTRIES
 };
