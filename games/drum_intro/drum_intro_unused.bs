@@ -151,6 +151,8 @@ return
 
 
 script script_drum_intro_unused_main
+    import_marking_criteria bouncy_road_marking_criteria
+    enable_pause_menu
     set_tempo 120
     set_music_volume 0
     mod_music_volume 256, 192
