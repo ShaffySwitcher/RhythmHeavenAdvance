@@ -154,6 +154,8 @@ void debug_menu_scene_update(void *sVar, s32 dArg) {
     }
 
     if (D_03004afc & (START_BUTTON | A_BUTTON)) {
+        set_scene_trans_target(&scene_results_ver_rank, &scene_debug_menu);
+        set_scene_trans_target(&scene_results_ver_score, &scene_debug_menu);
         set_next_scene(debug_menu_entry_table[(gDebugMenu->page * DEBUG_MENU_ENTRY_PER_PAGE) + gDebugMenu->row].scene);
         set_pause_beatscript_scene(FALSE);
         gDebugMenu->inputsEnabled = FALSE;
