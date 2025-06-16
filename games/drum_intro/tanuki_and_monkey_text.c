@@ -5,6 +5,7 @@
 /* Game Text - Tanuki & Monkey */
 
 
+
 const char D_0805dcb8[] =
     "ブブー！！\n"
     "ゲームオーバーです！\n"
@@ -18,23 +19,26 @@ const char D_0805dd04[] =
 
 const char D_0805dd28[] = "また、　あそんでネ！";
 
+// Rhythm Heaven Advance spreadsheet text since it's not translated in upstream
 const char D_0805dd40[] =
     "\n"
     "\n"
-    "こんにちわ！";
+    "Hello!";
 
 const char D_0805dd50[] =
-    "サルとポン太です。\n"
-    "ドラム侍さんのご紹介で\n"
-    "あそびに来ました。";
+    "We're Saru and Ponta.\n"
+    "The Samurai Drummer\n"
+    "introduced us here to play\n"
+    "with you.";
 
 const char D_0805dd90[] =
-    "今回は　ボクたちが\n"
-    "レッスンしますネ！";
+    "We'll be giving out\n"
+    "the lessons this time!";
 
 const char D_0805ddb8[] =
-    "さっそくですが、\n"
-    "Ａボタンの練習です。";
+    "Now, without further ado,\n"
+    "let's start practice\n"
+    "by hitting ⑭.";
 
 const char D_0805dde0[] =
     "よく　きいて\n"
@@ -69,3 +73,5 @@ const char D_0805def8[] =
 const char D_0805df28[] =
     "さて、　どこまで\n"
     "ついてこれるかな？";
+
+const char tanuki_and_monkey_results_header[] = "Your drum performance is...";
