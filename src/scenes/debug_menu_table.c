@@ -149,11 +149,11 @@ struct DebugMenuEntry debug_menu_entry_table[] = {
     },
     /* Lesson (High-Tech 1) */ {
         /* Scene */ &scene_drum_lesson_hi_tech_1,
-        /* Label */ "Ｌｅｓｓｏｎ　（Ｔｅｃｈｎｉｃａｌ　１）"
+        /* Label */ "Ｌｅｓｓｏｎ　（Ｔｅｃｈ．　１）"
     },
     /* Lesson (High-Tech 2) */ {
         /* Scene */ &scene_drum_lesson_hi_tech_2,
-        /* Label */ "Ｌｅｓｓｏｎ　（Ｔｅｃｈｎｉｃａｌ　２）"
+        /* Label */ "Ｌｅｓｓｏｎ　（Ｔｅｃｈ．　２）"
     },
     /* Studio Drummer */ {
         /* Scene */ &scene_drum_studio_ver0,
@@ -449,7 +449,51 @@ struct DebugMenuEntry debug_menu_entry_table[] = {
     },
         /* Data Clear */ {
         /* Scene */ &scene_tanuki_and_monkey,
-        /* Label */ "Ｔａｎｕｋｉ　Ａｎｄ　Ｍｏｎｋｅｙ"
+        /* Label */ "Ｔａｎｕｋｉ　＆　Ｍｏｎｋｅｙ"
+    },
+        /* Data Clear */ {
+        /* Scene */ &scene_drum_intro_unused,
+        /* Label */ "Ｕｎｕｓｅｄ　Ｄｒｕｍ　Ｌｅｓｓｏｎ　１"
+    },
+        /* Data Clear */ {
+        /* Scene */ &scene_drum_intro_unused_2,
+        /* Label */ "Ｕｎｕｓｅｄ　Ｄｒｕｍ　Ｌｅｓｓｏｎ　２"
+    },
+        /* Data Clear */ {
+        /* Scene */ &scene_drum_intro_unused_3,
+        /* Label */ "Ｕｎｕｓｅｄ　Ｄｒｕｍ　Ｌｅｓｓｏｎ　３"
+    },
+    /* Data Clear */ {
+        /* Scene */ &scene_spaceball_unused,
+        /* Label */ "Ｓｐａｃｅｂａｌｌ　（Ｔｅｓｔ　１）"
+    },
+    /* Data Clear */ {
+        /* Scene */ &scene_spaceball_unused_2,
+        /* Label */ "Ｓｐａｃｅｂａｌｌ　（Ｔｅｓｔ　２）"
+    },
+    /* Data Clear */ {
+        /* Scene */ &scene_bouncy_road_unused,
+        /* Label */ "Ｂｏｕｎｃｙ　Ｒｏａｄ　（Ｔｅｓｔ　１）"
+    },
+    /* Data Clear */ {
+        /* Scene */ &scene_bouncy_road_unused_2,
+        /* Label */ "Ｂｏｕｎｃｙ　Ｒｏａｄ　（Ｔｅｓｔ　１）"
+    },
+    /* Data Clear */ {
+        /* Scene */ &scene_marching_orders_unused,
+        /* Label */ "Ｍａｒｃｈｉｎｇ　Ｏｒｄｅｒｓ　２　（Ｕｎｕｓｅｄ）"
+    },
+    /* Data Clear */ {
+        /* Scene */ &scene_tap_trial_unused,
+        /* Label */ "Ｔａｐ　Ｔｒｉａｌ　（Ｔｅｓｔ）"
+    },
+    /* Data Clear */ {
+        /* Scene */ &scene_mechanical_horse_unused,
+        /* Label */ "Ｈｏｒｓｅ　Ｍａｃｈｉｎｅ　（Ｕｎｕｓｅｄ）"
+    },
+    /* Data Clear */ {
+        /* Scene */ &scene_snappy_trio_unused,
+        /* Label */ "Ｔｈｅ　Ｃｌａｐｐｙ　Ｔｒｉｏ　（Ｔｅｓｔ）"
     },
     END_OF_DEBUG_ENTRIES
 };

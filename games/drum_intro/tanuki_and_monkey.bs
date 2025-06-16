@@ -8,6 +8,7 @@
 
 script script_tanuki_and_monkey_entry
     set_tempo 124
+    enable_pause_menu
     rest 24
     rest 24
     load_tanuki_and_monkey
@@ -182,6 +183,7 @@ return
 
 
 script script_tanuki_and_monkey_main
+    import_marking_criteria bouncy_road_marking_criteria
     set_tempo 120
     dmi_event0D
     dmi_event0B tanuki_and_monkey_text_table_08a2f378, 0

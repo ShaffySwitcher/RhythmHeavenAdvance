@@ -132,24 +132,29 @@ void debug_menu_scene_update(void *sVar, s32 dArg) {
 
     if (D_030053b8 & DPAD_UP) {
         debug_menu_render_table(gDebugMenu->page, (gDebugMenu->row > 0) ? gDebugMenu->row - 1 : maxRow - 1);
+        play_sound(&s_menu_cursor1_seqData);
     }
 
     if (D_030053b8 & DPAD_DOWN) {
         debug_menu_render_table(gDebugMenu->page, (gDebugMenu->row < maxRow - 1) ? gDebugMenu->row + 1 : 0);
+        play_sound(&s_menu_cursor1_seqData);
     }
 
     if (D_030053b8 & DPAD_LEFT) {
         debug_menu_render_table(gDebugMenu->page - 1, gDebugMenu->row);
+        play_sound(&s_f_pause_cursor_seqData);
     }
 
     if (D_030053b8 & DPAD_RIGHT) {
         debug_menu_render_table(gDebugMenu->page + 1, gDebugMenu->row);
+        play_sound(&s_f_pause_cursor_seqData);
     }
 
     if (D_03004afc & (START_BUTTON | A_BUTTON)) {
         set_next_scene(debug_menu_entry_table[(gDebugMenu->page * 8) + gDebugMenu->row].scene);
         set_pause_beatscript_scene(FALSE);
         gDebugMenu->inputsEnabled = FALSE;
+        play_sound(&s_menu_kettei1_seqData);
     } else if (D_03004afc & B_BUTTON) {
         set_next_scene(&scene_main_menu);
         set_pause_beatscript_scene(FALSE);
