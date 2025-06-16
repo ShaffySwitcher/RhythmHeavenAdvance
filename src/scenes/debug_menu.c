@@ -154,7 +154,7 @@ void debug_menu_scene_update(void *sVar, s32 dArg) {
     }
 
     if (D_03004afc & (START_BUTTON | A_BUTTON)) {
-        set_next_scene(debug_menu_entry_table[(gDebugMenu->page * 8) + gDebugMenu->row].scene);
+        set_next_scene(debug_menu_entry_table[(gDebugMenu->page * DEBUG_MENU_ENTRY_PER_PAGE) + gDebugMenu->row].scene);
         set_pause_beatscript_scene(FALSE);
         gDebugMenu->inputsEnabled = FALSE;
         play_sound(&s_menu_kettei1_seqData);
