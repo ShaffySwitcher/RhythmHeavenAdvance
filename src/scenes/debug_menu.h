@@ -28,6 +28,7 @@ struct DebugMenuSceneData {
 struct DebugMenuEntry {
     struct Scene *scene;
     const char *label;
+    u8 seeEpilogue;
 };
 
 
