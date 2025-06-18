@@ -1,0 +1,68 @@
+name: Build Rhythm Heaven Advance
+
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: devkitpro/devkitarm:latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Update and install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential binutils-arm-none-eabi git libpng-dev ffmpeg wget g++ libgtk-3-dev pkg-config
+
+    - name: Set DEVKITPRO environment variables
+      run: |
+        echo "DEVKITPRO=/opt/devkitpro" >> $GITHUB_ENV
+        echo "DEVKITARM=/opt/devkitpro/devkitARM" >> $GITHUB_ENV
+        echo "DEVKITPPC=/opt/devkitpro/devkitPPC" >> $GITHUB_ENV
+
+    - name: Clone agbcc repository
+      run: git clone https://github.com/pret/agbcc
+
+    - name: Build and install agbcc
+      run: |
+        cd agbcc
+        ./build.sh
+        ./install.sh ../
+        
+    # THIS ZIP IS ONLY USED TO MAKE A PATCH FILE AND IS NOT USED TO DISTRIBUTE ANY KIND OF COPYRIGHT CONTENT
+    - name: Downloads a totally normal ZIP
+      env:
+        AUTH_TOKEN: '${{ secrets.token }}'
+      run: |
+        wget "$(echo $AUTH_TOKEN | base64 --decode)" -O not_a_mean_to_distribute_copyrighted_data.zip
+        unzip not_a_mean_to_distribute_copyrighted_data.zip
+        mv "Rhythm Tengoku (Japan).gba" baserom.gba
+        rm not_a_mean_to_distribute_copyrighted_data.zip
+
+    - name: Build rhythmheavenadvance
+      run: |
+        make -j$(nproc)
+    
+    - name: Compile Flips
+      run: |
+        git clone https://github.com/Alcaro/Flips
+        cd Flips
+        ./make-linux.sh
+        cd ..
+
+    - name: Make BPS patch
+      run: |
+        Flips/flips --create baserom.gba build/rhythmheavenadvance.gba rhythmheavenadvance.bps
+        rm baserom.gba 
+
+    - name: Upload built .bps artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: rhythmheavenadvance-nightly
+        path: rhythmheavenadvance.bps
