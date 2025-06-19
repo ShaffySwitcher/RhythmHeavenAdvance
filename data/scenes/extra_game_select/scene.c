@@ -5,6 +5,7 @@
 #include "src/bitmap_font.h"
 #include "src/scenes/extra_game_select.h"
 #include "graphics/game_select/game_select_graphics.h"
+#include "graphics/extra_game_select/extra_game_select_graphics.h"
 
 
 /* EXTRA GAME SELECT - SCENE DATA */
@@ -21,8 +22,18 @@ struct GraphicsTable extra_game_select_gfx_table[] = {
         /* Dest. */ BG_TILESET_BASE(0x8000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
+    /* BG Tileset */ {
+        /* Src.  */ &extra_game_select_bg_tiles,
+        /* Dest. */ BG_TILESET_BASE(0x7800),
+        /* Size  */ COMPRESSED_GFX_SOURCE
+    },
     /* BG Map */ {
-        /* Src.  */ &game_select_bg_map_description,
+        /* Src.  */ &extra_game_select_bg_map,
+        /* Dest. */ BG_MAP_BASE(0x5000),
+        /* Size  */ COMPRESSED_GFX_SOURCE
+    },
+    /* BG Map */ {
+        /* Src.  */ &game_select_bg_map_description_unused_riq,
         /* Dest. */ BG_MAP_BASE(0xB000),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },

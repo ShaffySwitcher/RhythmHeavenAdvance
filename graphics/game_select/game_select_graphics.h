@@ -42,6 +42,8 @@ extern struct CompressedData game_select_bg_tiles;
 extern struct CompressedData game_select_bg_map_description;
 extern struct CompressedData game_select_bg_map_perfect_notice;
 extern struct CompressedData game_select_obj;
+extern struct CompressedData game_select_bg_map_description_unused_rgames;
+extern struct CompressedData game_select_bg_map_description_unused_riq;
 
 /* GAME SELECT - PALETTES */
 

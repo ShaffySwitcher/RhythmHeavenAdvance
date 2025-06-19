@@ -562,6 +562,11 @@ struct DebugMenuEntry debug_menu_entry_table[] = {
         /* Label */ "‚q|‚h‚p@‚`‚•‚„‚‰‚@‚b‚ˆ‚…‚ƒ‚‹",
         /* Epil. */ FALSE
     },
+    /* Extra Game Select */ {
+        /* Scene */ &scene_extra_game_select,
+        /* Label */ "‚d‚˜‚”‚’‚@‚f‚‚‚…@‚r‚…‚Œ‚…‚ƒ‚”",
+        /* Epil. */ FALSE
+    },
     /* Warning */ {
         /* Scene */ &scene_warning,
         /* Label */ "‚v‚‚’‚‚‰‚‚‡",
@@ -570,11 +575,6 @@ struct DebugMenuEntry debug_menu_entry_table[] = {
     /* Disclaimer */ {
         /* Scene */ &scene_disclamer,
         /* Label */ "‚c‚‰‚“‚ƒ‚Œ‚‚‰‚‚…‚’",
-        /* Epil. */ FALSE
-    },
-    /* Extra Game Select */ {
-        /* Scene */ &scene_extra_game_select,
-        /* Label */ "‚d‚˜‚”‚’‚@‚f‚‚‚…@‚r‚…‚Œ‚…‚ƒ‚”",
         /* Epil. */ FALSE
     },
     /* Snappy Trio (Unused) */ {
