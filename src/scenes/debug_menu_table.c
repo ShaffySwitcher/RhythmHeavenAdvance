@@ -415,33 +415,29 @@ struct DebugMenuEntry debug_menu_entry_table[] = {
         /* Scene */ &scene_perfect,
         /* Label */ "‚q|‚h‚p@i‚o‚…‚’‚†‚…‚ƒ‚”j"
     },
-    /* R-IQ (Cafe) */ {
-        /* Scene */ &scene_cafe,
-        /* Label */ "‚q|‚h‚p@i‚b‚‚†‚…j"
-    },
     /* R-IQ (Endless Games) */ {
         /* Scene */ &scene_endless_menu,
         /* Label */ "‚q|‚h‚p@i‚l‚‰‚‚‰‚‡‚‚‚…j"
     },
     /* R-IQ (Drum Lessons) */ {
         /* Scene */ &scene_lessons_menu,
-        /* Label */ "‚q|‚h‚p@i‚c‚’‚•‚@‚k‚…‚“‚“‚‚‚“j"
+        /* Label */ "‚c‚’‚•‚@‚k‚…‚“‚“‚‚‚“@‚l‚…‚‚•"
     },
     /* R-IQ (Rhythm Toys) */ {
         /* Scene */ &scene_toys_menu,
-        /* Label */ "‚q|‚h‚p@i‚s‚‚™‚“j"
+        /* Label */ "‚s‚‚™‚“@‚l‚…‚‚•"
     },
     /* R-IQ (Cafe) */ {
         /* Scene */ &scene_cafe,
-        /* Label */ "‚q|‚h‚p@i‚b‚‚†‚…j"
+        /* Label */ "‚b‚‚†‚…@‚l‚…‚‚•"
     },
     /* Ending (from clearing Remix 6) */ {
         /* Scene */ &scene_staff_credit_remix_6,
-        /* Label */ "‚d‚‚„‚‰‚‚‡@i‚f‚‚‚…@‚b‚Œ‚…‚‚’‚…‚„j"
+        /* Label */ "‚P‚“‚”@‚d‚‚„‚‰‚‚‡"
     },
     /* Ending (from Game Select) */ {
         /* Scene */ &scene_staff_credit,
-        /* Label */ "‚d‚‚„‚‰‚‚‡@i‚d‚˜‚”‚’‚@‚u‚‰‚…‚—‚‰‚‚‡‚“j"
+        /* Label */ "‚Q‚‚„@‚d‚‚„‚‰‚‚‡"
     },
     /* Data Clear */ {
         /* Scene */ &scene_data_clear,
