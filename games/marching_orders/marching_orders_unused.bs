@@ -93,7 +93,6 @@ script script_marching_orders_unused_main
     set_results_header D_0805c80c
     import_marking_criteria marching_orders_unused_marking_criteria
     start_tracking_inputs
-    enable_pause_menu
     set_tempo 135
     set_music_volume 256
     play_music s_guntai2_seqData
@@ -296,7 +295,7 @@ script script_marching_orders_unused_practice
     loop_start
         run beatscript_disable_loops
         marching_orders_event01
-        play_sfx s_guntai_v_zentai1_seqData
+
         rest 24
         rest 24
         marching_orders_event01
@@ -350,7 +349,7 @@ script script_marching_orders_unused_practice
         rest 24
         marching_orders_event02 -1
         marching_orders_event01
-        play_sfx s_guntai_v_zentai1_seqData
+
         marching_orders_event00 8
         play_sfx s_guntai_foot1_seqData
         spawn_cue CUE_STEP
@@ -382,7 +381,7 @@ script script_marching_orders_unused_practice
     loop_start
         run beatscript_disable_loops
         marching_orders_event01
-        play_sfx s_guntai_v_zentai1_seqData
+
         rest 24
         rest 24
         marching_orders_event01
@@ -454,7 +453,7 @@ script script_marching_orders_unused_practice
         rest 24
         marching_orders_event02 -1
         marching_orders_event01
-        play_sfx s_guntai_v_zentai1_seqData
+
         marching_orders_event00 8
         play_sfx s_guntai_foot1_seqData
         spawn_cue CUE_STEP

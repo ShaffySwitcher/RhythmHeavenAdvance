@@ -117,7 +117,9 @@ script script_remix_1_main
     enable_pause_menu
     rest 24
     rest 24
-    rest 24
+    rest 18
+    play_sfx s_guntai_v_zentai_a_seqData
+    rest 6
     start_tracking_perfect_campaign
     set_results_header D_0805cba0
     import_marking_criteria remix_1_marking_criteria
@@ -126,12 +128,20 @@ script script_remix_1_main
     set_marking_criteria 0
     set_game_fade_in_time 0
     play_music Lesson1_seqData
-    call marching_orders_sub_08a83848
+    clear_text_f
+    marching_orders_event01
+    play_sfx s_guntai_v_zentai_ten_seqData
+    rest 12
+    play_sfx s_guntai_v_zentai_ttion_seqData
+    rest 12
+    rest 24
+    call marching_orders_sub_08a837ac
+    rest 24
     play_music L1_pat01_seqData
     call marching_orders_sub_08a8386c
     call marching_orders_sub_08a8386c
     call marching_orders_sub_08a8386c
-    call marching_orders_sub_08a8386c
+    call marching_orders_sub_08a8386c_nobeat
     call marching_orders_sub_08a83998
 
     load_karate_man
@@ -158,7 +168,7 @@ script script_remix_1_main
     call marching_orders_sub_08a8386c
     call marching_orders_sub_08a8386c
     call marching_orders_sub_08a8386c
-    call marching_orders_sub_08a8386c
+    call marching_orders_sub_08a8386c_nobeat
     call marching_orders_sub_08a83998
 
     load_karate_man
@@ -194,7 +204,7 @@ script script_remix_1_main
     call marching_orders_sub_08a8386c
     call marching_orders_sub_08a8386c
     call marching_orders_sub_08a8386c
-    call marching_orders_sub_08a8386c
+    call marching_orders_sub_08a8386c_nobeat
     call marching_orders_sub_08a83998
 
     load_karate_man
