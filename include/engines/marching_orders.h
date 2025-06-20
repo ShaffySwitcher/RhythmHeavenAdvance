@@ -43,12 +43,17 @@ enum MarchingOrdersSoundEffectsEnum {
     MARCHING_SFX_CMD_TURN_RIGHT,
     MARCHING_SFX_CMD_LEFT_FACE,
     MARCHING_SFX_CMD_LEFT_FACE_F,
-    MARCHING_SFX_CMD_TURN_LEFT
+    MARCHING_SFX_CMD_TURN_LEFT,
+    MARCHING_SFX_CMD_ATTENTION_2,
+    MARCHING_SFX_CMD_ATTENTION_3,
+    MARCHING_SFX_CMD_F_FACE_RIGHT,
+    MARCHING_SFX_CMD_F_FACE_LEFT,
 };
 
 
 // Engine Types:
 struct MarchingOrdersEngineData {
+    u8 version;
     u8 pad[0x48];
 };
 
@@ -72,7 +77,7 @@ extern struct Animation **marching_anim_table[];
 extern struct CompressedData *marching_buffered_textures[];
 extern struct GraphicsTable *marching_gfx_tables[];
 extern struct Vector2 D_089e5368[][4];
-extern struct MarchingSfxData marching_sfx_table[][12];
+extern struct MarchingSfxData marching_sfx_table[][18];
 
 
 // Functions:
