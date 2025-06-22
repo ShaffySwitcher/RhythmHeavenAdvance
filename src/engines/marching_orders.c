@@ -71,4 +71,9 @@ asm(".include \"include/gba.inc\""); // Temporary
 
 #include "asm/engines/marching_orders/asm_08034ae0.s"
 
-#include "asm/engines/marching_orders/asm_08034ae4.s"
+void func_08034ae4(u32 arg0) {
+    struct MarchingSfxData *sfx = &marching_sfx_table[gMarchingOrders->version][arg0];
+
+    play_sound_w_pitch_volume(sfx->sound, sfx->volume, sfx->pitch);
+}
+

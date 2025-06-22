@@ -223,7 +223,6 @@ script script_tap_trial_unused_main
     set_tempo 120
     set_music_volume 180
     set_marking_criteria 0
-    enable_pause_menu
     print_text_f D_0805c174
     beat_anim
     rest 24
