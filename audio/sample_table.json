@@ -5157,7 +5157,7 @@
         },
                 {
             "sample": "march_ord_8.wav",
-            "pitch": "B4"
+            "pitch": "C5"
         },
                 {
             "sample": "march_ord_9.wav",
@@ -5173,11 +5173,11 @@
         },
                         {
             "sample": "march_ord_12.wav",
-            "pitch": "C4"
+            "pitch": "C5"
         },
                         {
             "sample": "march_ord_13.wav",
-            "pitch": "B4"
+            "pitch": "C5"
         },
                         {
             "sample": "march_ord_14.wav",
@@ -5213,15 +5213,15 @@
         },
                 {
             "sample": "march_ord_w_8.wav",
-            "pitch": "B4"
+            "pitch": "C5"
         },
                 {
             "sample": "march_ord_w_9.wav",
-            "pitch": "C#5"
+            "pitch": "C5"
         },
                 {
             "sample": "march_ord_w_10.wav",
-            "pitch": "C#5"
+            "pitch": "C5"
         },
                 {
             "sample": "march_ord_w_11.wav",

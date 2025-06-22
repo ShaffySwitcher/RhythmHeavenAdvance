@@ -163,9 +163,9 @@ script script_remix_7_main
     play_music Lesson1_seqData
     marching_orders_event01
     play_sfx s_guntai_v_zentai_ten_seqData
-    rest 12
+    rest 9
     play_sfx s_guntai_v_zentai_ttion_seqData
-    rest 12
+    rest 15
     rest 24
     call marching_orders_sub_08a837ac
     rest 24
@@ -461,13 +461,12 @@ script script_remix_7_main
     rest 18
     play_sfx s_guntai_v_zentai_a_seqData
     rest 6
-    play_sfx s_guntai_v_zentai_ten_seqData
-    rest 12
-    play_sfx s_guntai_v_zentai_ttion_seqData
-    rest 12
     play_music L2_pat01_seqData
     marching_orders_event01
-    rest 24
+    play_sfx s_guntai_v_zentai_ten_seqData
+    rest 9
+    play_sfx s_guntai_v_zentai_ttion_seqData
+    rest 15
     rest 24
     call marching_orders_sub_08a837ac
     rest 24

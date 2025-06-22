@@ -130,9 +130,9 @@ script script_remix_8_main
     play_music L8_pat_intro_seqData
     marching_orders_event01
     marching_orders_play_voice_sfx VOICE_ATTENTION_2
-    rest 12
+    rest 9
     marching_orders_play_voice_sfx VOICE_ATTENTION_3
-    rest 12
+    rest 15
     rest 24
     call marching_orders_sub_08a837ac
     rest 24

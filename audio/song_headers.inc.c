@@ -3423,7 +3423,7 @@ struct SongHeader s_guntai_v_muke_f_seqData = {
     /* MIDI Sequence */ s_guntai_v_muke_f_mid,
     /* Sound Player  */ SFX_PLAYER_1,
     /* Bank Number   */ INST_BANK_4,
-    /* Volume        */ 120,
+    /* Volume        */ 127,
     /* Priority      */ 90,
     /* unk8          */ 0x40,
     /* Song Title    */ s_guntai_v_muke_f_seqName,
