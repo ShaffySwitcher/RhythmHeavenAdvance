@@ -259,9 +259,9 @@ script script_marching_orders_practice
         marching_orders_event02 3
         marching_orders_event01
         play_sfx s_guntai_v_migi_muke1_seqData
-        rest 12
+        rest 11
         play_sfx s_guntai_v_migi_muke1_face_seqData
-        rest 12
+        rest 13
         rest 24
         marching_orders_event01
         play_sfx s_guntai_v_migi_seqData
@@ -277,9 +277,9 @@ script script_marching_orders_practice
         marching_orders_event02 4
         marching_orders_event01
         play_sfx s_guntai_v_hidari_muke1_seqData
-        rest 12
+        rest 11
         play_sfx s_guntai_v_hidari_muke1_face_seqData
-        rest 12
+        rest 13
         rest 24
         marching_orders_event01
         play_sfx s_guntai_v_hidari_seqData
@@ -299,9 +299,9 @@ script script_marching_orders_practice
         play_sfx s_guntai_v_zentai_ten_seqData
         marching_orders_event01
         clear_text_f
-        rest 12
+        rest 9
         play_sfx s_guntai_v_zentai_ttion_seqData
-        rest 12
+        rest 15
         rest 24
         marching_orders_event01
         play_sfx s_guntai_v_susume_seqData
@@ -362,9 +362,9 @@ script script_marching_orders_practice
         play_sfx s_guntai_foot1_seqData
         spawn_cue CUE_STEP
         marching_orders_event01
-        rest 12
+        rest 9
         play_sfx s_guntai_v_zentai_ttion_seqData
-        rest 12
+        rest 15
         marching_orders_event00 7
         play_sfx s_guntai_foot2_seqData
         spawn_cue CUE_STEP

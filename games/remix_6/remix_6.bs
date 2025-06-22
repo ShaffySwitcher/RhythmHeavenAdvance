@@ -1324,15 +1324,14 @@ script script_remix_6_main
     rest 18
     play_sfx s_guntai_v_zentai_a_seqData
     rest 6
-    play_sfx s_guntai_v_zentai_ten_seqData
-    rest 12
-    play_sfx s_guntai_v_zentai_ttion_seqData
-    rhythm_tweezers_removed_event
-    rest 12
 
     load_marching_orders
     marching_orders_event01
-    rest 24
+    play_sfx s_guntai_v_zentai_ten_seqData
+    rest 9
+    play_sfx s_guntai_v_zentai_ttion_seqData
+    rhythm_tweezers_removed_event
+    rest 15
     rest 24
     call marching_orders_sub_08a837ac
     rest 24
