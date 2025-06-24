@@ -161,8 +161,8 @@ endtext
 text D_080617f0
     .ascii "The left lights blink if you're\n"
     .ascii "early! The right ones blink if\n"
-    .ascii "you're late. center blinks\n"
-    .asciz "green if your're just right!"
+    .ascii "you're late. The enter blinks\n"
+    .asciz "green if you're perfect!"
 endtext
 
 

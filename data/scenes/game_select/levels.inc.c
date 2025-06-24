@@ -171,7 +171,7 @@ struct LevelData level_data_table[] = {
         /* Epilogue GFX  */ epilogue_sick_beats_gfx_tables,
         /* Epilogue Text */ {
             /* TRY_AGAIN */ "All our research... amounted to nothing...",
-            /* OK        */ "Failure may be key to success!",
+            /* OK        */ "Failure may be the key to success!",
             /* SUPERB    */ "We've finally found our cure!"
         }
     },
