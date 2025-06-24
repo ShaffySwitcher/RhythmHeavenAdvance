@@ -276,6 +276,9 @@ void options_scene_stop(void *sVar, s32 dArg) {
 
     if (gOptionsMenu->clearDataOnExit) {
         clear_save_data();
+#ifdef PLAYTEST
+        set_playtest_save_data();
+#endif
         flush_save_buffer_to_sram();
         set_sound_mode(D_030046a8->data.unk294[8]);
         init_scene_static_var();

@@ -46,10 +46,7 @@ define print
   $(V)echo -e "$(GREEN)$(1) $(YELLOW)$(2)$(GREEN) -> $(BLUE)$(3)$(NO_COL)"
 endef
 
-# Whether to build a byte-for-byte matching ROM
-NONMATCHING := 1
-
-# Revision to build
+# Revision to build (always should be 0 for Advance, even though 1 is available)
 REV ?= 0
 
 ifeq ($(REV), 0)
@@ -68,7 +65,8 @@ else
 endif
 
 # Preprocessor defines
-DEFINES := REV=$(REV)
+FEATURES ?= 
+DEFINES := REV=$(REV) $(FEATURES)
 C_DEFINES := $(foreach d,$(DEFINES),-D$(d))
 
 CFLAGS := -mthumb-interwork -Wparentheses -O2 -fhex-asm
@@ -102,11 +100,7 @@ ALL_DIRS       := $(BIN) $(ASM_DIRS) $(C_DIRS) $(MUSIC) $(SFX)
 ALL_DIRS       := $(sort $(ALL_DIRS)) # remove duplicates
 BUILD_DIRS     := $(BUILD) $(addprefix $(BUILD)/,$(ALL_DIRS))
 
-ifeq ($(NONMATCHING), 0)
-    LD_SCRIPT := rt.ld
-else
-    LD_SCRIPT := rt_modern.ld
-endif
+LD_SCRIPT := advance.ld
 UNDEFINED_SYMS := undefined_syms.ld
 
 #---------------------------------------------------------------------------------
@@ -142,22 +136,12 @@ INCLUDE	:=	-I $(foreach dir,$(INCLUDES),$(wildcard $(dir)/*.h)) \
 			-I $(CURDIR)/$(BUILD)
 
 #---------------------------------------------------------------------------------
-.PHONY: default clean distclean rebuild
+.PHONY: default clean distclean rebuild patch
 .SECONDARY:
 #---------------------------------------------------------------------------------
 
-# If nonmatching, print a generic message
-# otherwise check if the ROM matches the official ROM
 default: $(OUTPUT).gba
-	$(V)if [ "$(NONMATCHING)" = "1" ]; then \
-		echo "Build succeeded!"; \
-	else \
-		if [ "$(shell sha1sum -t $(OUTPUT).gba)" = "$(TARGET_SHA1)  $(OUTPUT).gba" ]; then \
-			echo "$(TARGET).gba: OK"; \
-		else \
-			echo "The build succeeded, but did not match the official ROM."; \
-		fi; \
-	fi \
+	$(V)echo "Build succeeded!"; \
 
 #---------------------------------------------------------------------------------
 
@@ -173,6 +157,12 @@ distclean:
 #---------------------------------------------------------------------------------
 
 rebuild: clean default
+
+#---------------------------------------------------------------------------------
+
+patch: $(OUTPUT).gba
+	$(V)echo "Applying patch..."
+	$(V)flips --create baserom.gba $< $(OUTPUT).bps
 
 #---------------------------------------------------------------------------------
 
@@ -268,9 +258,3 @@ $(OFILES_GENERATED): $(BUILD)/%.s.o : $(BUILD)/%.s | $(BUILD_DIRS)
 #---------------------------------------------------------------------------------------
 
 print-% : ; $(info $* is a $(flavor $*) variable set to [$($*)]) @true
-
-patch.bps: baserom.gba build/rhythmheavenadvance.gba
-	flips --create baserom.gba build/rhythmheavenadvance.gba build/RHA.bps
-
-.PHONY: patch
-patch: patch.bps

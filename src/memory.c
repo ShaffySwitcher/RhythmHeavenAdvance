@@ -12,6 +12,8 @@ extern u8 *backup_save_memory_base; // CartRAMBase + 0x4000 (0x0E004000)
 extern char D_08935fbc[]; // "RIQ"
 extern char D_08935fc4[]; // "CAL"
 
+extern void unlock_all_unassigned_campaign_gift_songs(void);
+
 
 /* SAVE/MEMORY */
 
@@ -106,6 +108,36 @@ void clear_save_data(void) {
     buffer->header.checksum = 0;
     buffer->header.unkC = 0x26040000;
     reset_game_save_data();
+}
+
+void set_playtest_save_data(void) {
+    struct TengokuSaveData *data = &D_030046a8->data;
+    u32 i;
+    
+    // unlock all levels
+    for (i = 0; i < TOTAL_LEVELS; i++) {
+        data->levelStates[i] = (i >= TOTAL_LEVELS-6) ? LEVEL_STATE_CLEARED : LEVEL_STATE_HAS_MEDAL;
+        data->levelScores[i] = DEFAULT_LEVEL_SCORE;
+    }
+
+    data->campaignState = CAMPAIGN_STATE_INACTIVE;
+
+    // set medals to 99
+    data->totalMedals = 99;
+
+    // unlock all reading materials
+    for (i = 0; i < ARRAY_COUNT(data->readingMaterialUnlocked); i++) {
+        data->readingMaterialUnlocked[i] = TRUE;
+    }
+    // unlock all drum kits
+    for (i = 0; i < ARRAY_COUNT(data->drumKitsUnlocked); i++) {
+        data->drumKitsUnlocked[i] = TRUE;
+    }
+    // unlock all songs
+    unlock_all_unassigned_campaign_gift_songs();
+
+    data->currentFlow = 0;
+    data->unkB0 = TRUE;
 }
 
 

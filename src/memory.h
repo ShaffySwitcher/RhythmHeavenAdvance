@@ -98,6 +98,7 @@ extern u32 get_memory_heap_length(void);
 extern s32 generate_save_buffer_checksum(s32 *buffer, u32 size);
 extern void init_save_buffer(void);
 extern void clear_save_data(void);
+extern void set_playtest_save_data(void);
 extern s32 copy_to_save_buffer(u8 *cartRAM);
 extern s32 copy_sram_to_save_buffer(void);
 extern s32 copy_sram_backup_to_save_buffer(void);

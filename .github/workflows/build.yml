@@ -43,7 +43,7 @@ jobs:
 
     - name: Build rhythmheavenadvance
       run: |
-        make -j$(nproc)
+        make -j$(nproc) FEATURES=PLAYTEST
     
     - name: Compile Flips
       run: |
