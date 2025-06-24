@@ -557,11 +557,6 @@ struct DebugMenuEntry debug_menu_entry_table[] = {
         /* Label */ "‚q|‚h‚p@i‚b‚‚†‚…j",
         /* Epil. */ FALSE
     },
-    /* Data Clear */ {
-        /* Scene */ &scene_data_clear,
-        /* Label */ "‚r‚‚–‚…@‚c‚‚”‚@‚b‚Œ‚…‚‚’",
-        /* Epil. */ FALSE
-    },
     /* Ending (from clearing Remix 6) */ {
         /* Scene */ &scene_staff_credit_remix_6,
         /* Label */ "‚d‚‚„‚‰‚‚‡@i‚f‚‚‚…@‚b‚Œ‚…‚‚’‚…‚„j",
@@ -570,6 +565,21 @@ struct DebugMenuEntry debug_menu_entry_table[] = {
     /* Ending (from Game Select) */ {
         /* Scene */ &scene_staff_credit,
         /* Label */ "‚d‚‚„‚‰‚‚‡@i‚d‚˜‚”‚’‚@‚u‚‰‚…‚—‚‰‚‚‡‚“j",
+        /* Epil. */ FALSE
+    },
+    /* Data Clear */ {
+        /* Scene */ &scene_data_clear,
+        /* Label */ "‚r‚‚–‚…@‚c‚‚”‚@‚b‚Œ‚…‚‚’",
+        /* Epil. */ FALSE
+    },
+    /* Warning */ {
+        /* Scene */ &scene_warning,
+        /* Label */ "‚v‚‚’‚‚‰‚‚‡",
+        /* Epil. */ FALSE
+    },
+    /* Disclaimer */ {
+        /* Scene */ &scene_disclamer,
+        /* Label */ "‚c‚‰‚“‚ƒ‚Œ‚‚‰‚‚…‚’",
         /* Epil. */ FALSE
     },
     /* Snappy Trio (Unused) */ {
@@ -601,16 +611,6 @@ struct DebugMenuEntry debug_menu_entry_table[] = {
         /* Scene */ &scene_tap_trial_unused,
         /* Label */ "‚s‚‚@‚s‚’‚‰‚‚Œ@i‚t‚‚•‚“‚…‚„j",
         /* Epil. */ TRUE
-    },
-    /* Warning */ {
-        /* Scene */ &scene_warning,
-        /* Label */ "‚v‚‚’‚‚‰‚‚‡",
-        /* Epil. */ FALSE
-    },
-    /* Disclaimer */ {
-        /* Scene */ &scene_disclamer,
-        /* Label */ "‚c‚‰‚“‚ƒ‚Œ‚‚‰‚‚…‚’",
-        /* Epil. */ FALSE
     },
     /* Marching Orders (Unused) */ {
         /* Scene */ &scene_marching_orders_unused,
