@@ -671,7 +671,7 @@ u32 results_get_negative_comments(void) {
         
         // Convert the first character of the statement to lowercase if it's uppercase
         // An exception is made for sentences starting in the word "I" and contractions like "I'm"
-        if (commentsText[prefixLength] >= 'A' && commentsText[prefixLength] <= 'Z' && !(commentsText[prefixLength] == 'I' && (commentsText[prefixLength+1] == ' ' || commentsText[prefixLength+1]  == '\''))) {
+        if (commentsText[prefixLength] >= 'A' && commentsText[prefixLength] <= 'Z' && results_try_again_comment_pool[i] != "" && !(commentsText[prefixLength] == 'I' && (commentsText[prefixLength+1] == ' ' || commentsText[prefixLength+1]  == '\''))) {
             commentsText[prefixLength] += 32;
         }
         anim = results_get_comment_anim(commentsText, TEXT_ANCHOR_BOTTOM_LEFT, 3);
