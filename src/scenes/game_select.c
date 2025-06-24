@@ -80,6 +80,7 @@ static u16 D_0300131e_padding; // unused
 static s8 sCurrentCampaign; // Current Perfect Campaign ID
 static u16 D_03001322_padding; // unused
 static u8 sPlayCreditsAfterEpilogue; // Currently playing through Remix 6 for the first time.
+extern u8 sReplayingCampaign;
 
 
 extern u32 D_03005590; // Unused
@@ -689,6 +690,7 @@ void game_select_update_bg_colors(void) {
 void game_select_scene_init_memory(void) {
     D_030055d4 = 0;
     D_03005590 = 0;
+    sReplayingCampaign = FALSE; 
     clear_current_campaign();
     game_select_disable_credits_after_epilogue();
     disable_game_select_2_bgm();
@@ -1085,6 +1087,19 @@ void game_select_read_inputs(void) {
                         sPlayCreditsAfterEpilogue = TRUE;
                     }
                     canHaveCampaign = TRUE;
+
+                    // hold select to replay a cleared campaign level
+                    if(D_030046a8->data.campaignsCleared[get_campaign_from_level_id(levelID)] && (D_03004ac0 & SELECT_BUTTON)) {
+                        D_030046a8->data.campaignState = CAMPAIGN_STATE_ACTIVE;
+                        D_030046a8->data.campaignAttemptsLeft = 1;
+                        gGameSelect->campaignNotice.id = get_campaign_from_level_id(levelID);
+                        gGameSelect->campaignNotice.x = gGameSelect->cursorX;
+                        gGameSelect->campaignNotice.y = gGameSelect->cursorY;
+                        sReplayingCampaign = TRUE;
+                    } else {
+                        sReplayingCampaign = FALSE;
+                    }
+
                     break;
 
                 case LEVEL_TYPE_BONUS:
