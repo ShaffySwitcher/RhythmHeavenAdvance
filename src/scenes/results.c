@@ -6,7 +6,9 @@
 #include "cues.h"
 #include "src/scenes/game_select.h"
 
-
+const struct MarkingCriteria *genericMarkingCriteria[] = {
+    NULL,
+};
 
 /* RESULTS */
 
@@ -890,6 +892,12 @@ void results_publish_comments(void) {
     s16 textSprite;
     u32 totalCriteriaFailed, averageCriteriaSucceeded;
     u32 previousResult;
+
+    // bye bye crashes~!
+    if(criteriaTable == NULL) {
+        criteriaTable = genericMarkingCriteria;
+        score_handler->markingData = criteriaTable;
+    }
 
     update_plays_until_next_campaign();
 
