@@ -171,12 +171,14 @@ s32 copy_sram_backup_to_save_buffer(void) {
 
 
 void flush_save_buffer(u8 *cartRAM) {
+#ifndef PLAYTEST
     struct SaveBuffer *buffer = D_030046a8;
 
     buffer->header.checksum = 0;
     buffer->header.checksum = generate_save_buffer_checksum((s32 *)D_030046a8, SAVE_BUFFER_SIZE);
 
     write_sram_fast((u8 *)D_030046a8, cartRAM, SAVE_BUFFER_SIZE);
+#endif
 }
 
 
