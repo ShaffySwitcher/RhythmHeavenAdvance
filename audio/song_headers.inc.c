@@ -5327,8 +5327,13 @@ struct SongHeader s_check_result_bgm_seqData = {
 };
 
 extern const u8 s_lesson_sel_bgm_mid[];
+extern const u8 s_lesson_sel_bgm_english_mid[];
 struct SongHeader s_lesson_sel_bgm_seqData = {
+#ifdef SFX
+    /* MIDI Sequence */ s_lesson_sel_bgm_english_mid,
+#else
     /* MIDI Sequence */ s_lesson_sel_bgm_mid,
+#endif
     /* Sound Player  */ MUSIC_PLAYER_0,
     /* Bank Number   */ INST_BANK_46,
     /* Volume        */ 100,
