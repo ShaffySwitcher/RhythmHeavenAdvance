@@ -156,7 +156,7 @@ void spaceball_init_gfx2(void) {
     u32 data;
 
     func_0800c604(0);
-    data = func_08002ee0(get_current_mem_id(), spaceball_gfx_table, 0x2000);
+    data = func_08002ee0(get_current_mem_id(), spaceball_gfx_tables[gSpaceball->version], 0x2000);
     run_func_after_task(data, spaceball_init_gfx3, 0);
 }
 

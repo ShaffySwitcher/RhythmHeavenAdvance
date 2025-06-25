@@ -40,6 +40,22 @@ struct GraphicsTable spaceball_gfx_table[] = {
     END_OF_GRAPHICS_TABLE
 };
 
+// i can just make my own table mwehehehe >:) i got freewill
+// i don't have funny moth facts unfortunately
+// writting this comment is a waste of time
+// but i don't care, i like to write comments
+// especially when they serve absolutely no purpose
+// not like anyone read those anyway
+// yeah
+// writting code is fun but you do get a bit lonely
+// i just realized this is going to be seen when implement tempo up
+// yeah right, just replace the second table with a tempo up table
+// that is made like the one above (the fact that the bg is 8bpp doesn't matter)
+struct GraphicsTable *spaceball_gfx_tables[] = {
+    /* 0x00 */ spaceball_gfx_table,
+    /* 0x01 */ spaceball_gfx_table
+};
+
 
 // [D_089de988] Batter Animations (Close)
 struct Animation *spaceball_anim_table_batter_close[] = {

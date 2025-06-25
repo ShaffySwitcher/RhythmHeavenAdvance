@@ -5,15 +5,15 @@
 
 
 // [D_089e4520] All Animations
-struct Animation *clappy_trio_anim[][2] = {
-    /* BEAT  */ { anim_clappy_trio_beat, anim_snappy_trio_beat },
-    /* SMILE */ { anim_clappy_trio_smile, anim_snappy_trio_smile },
-    /* GLARE */ { anim_clappy_trio_glare, anim_snappy_trio_glare },
-    /* SMIRK */ { anim_clappy_trio_smirk, anim_snappy_trio_smirk },
-    /* CLAP  */ { anim_clappy_trio_clap, anim_snappy_trio_clap },
-    /* YOU   */ { anim_clappy_trio_player_icon, anim_snappy_trio_player_icon },
-    /* SIGN  */ { anim_clappy_trio_sign, anim_snappy_trio_sign },
-    /* TEXT  */ { anim_clappy_trio_text_box, anim_snappy_trio_text_box }
+struct Animation *clappy_trio_anim[][3] = {
+    /* BEAT  */ { anim_clappy_trio_beat, anim_snappy_trio_beat, anim_clappy_trio_beat },
+    /* SMILE */ { anim_clappy_trio_smile, anim_snappy_trio_smile, anim_clappy_trio_smile },
+    /* GLARE */ { anim_clappy_trio_glare, anim_snappy_trio_glare, anim_clappy_trio_glare },
+    /* SMIRK */ { anim_clappy_trio_smirk, anim_snappy_trio_smirk, anim_clappy_trio_smirk },
+    /* CLAP  */ { anim_clappy_trio_clap, anim_snappy_trio_clap, anim_clappy_trio_clap },
+    /* YOU   */ { anim_clappy_trio_player_icon, anim_snappy_trio_player_icon, anim_clappy_trio_player_icon },
+    /* SIGN  */ { anim_clappy_trio_sign, anim_snappy_trio_sign, anim_clappy_trio_sign },
+    /* TEXT  */ { anim_clappy_trio_text_box, anim_snappy_trio_text_box, anim_clappy_trio_text_box }
 };
 
 // [D_089e4560] Animation Table
@@ -96,7 +96,8 @@ struct GraphicsTable snappy_trio_gfx_table[] = {
 // [D_089e4614] Graphics Table Index
 struct GraphicsTable *clappy_trio_gfx_tables[] = {
     /* 0x00 */ clappy_trio_gfx_table,
-    /* 0x01 */ snappy_trio_gfx_table
+    /* 0x01 */ snappy_trio_gfx_table,
+    /* 0x02 */ clappy_trio_gfx_table,
 };
 
 
