@@ -5242,6 +5242,19 @@
                                 {
             "sample": "march_ord_w_15.wav",
             "pitch": "C5"
+        },
+        {
+            "_comment": "wtf is this formatting :sob:",
+            "sample": "dlessons_one.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "dlessons_two.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "dlessons_three.wav",
+            "pitch": "C5"
         }
     ]
 }
