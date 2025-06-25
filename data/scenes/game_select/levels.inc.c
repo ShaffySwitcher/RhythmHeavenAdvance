@@ -492,7 +492,7 @@ struct LevelData level_data_table[] = {
         /* Epilogue Text */ {
             /* TRY_AGAIN */ "Our spirits have been deflated...",
             /* OK        */ "We still have a long way to go!",
-            /* SUPERB    */ "Three cheers for our star tosser!"
+            /* SUPERB    */ "Three cheers for our star tossers!"
         }
     },
     /* RAT_RACE */ {
