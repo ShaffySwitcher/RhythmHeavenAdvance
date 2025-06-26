@@ -395,7 +395,6 @@ script cosmic_dance_sub_08a85858
     #endif
     rest 8
     space_dance_event00 2
-    play_sfx s_space_kou_down_seqData
     play_sfx s_space_ikeo_down_seqData
     beat_anim
     rest 24
