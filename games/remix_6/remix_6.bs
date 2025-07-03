@@ -1285,6 +1285,7 @@ script script_remix_6_main
     beat_anim
     rest 24
 
+    #ifdef SFX
     load_rhythm_tweezers
     rhythm_tweezers_start_hair_cycle
     spawn_cue CUE_SHORT
@@ -1343,6 +1344,60 @@ script script_remix_6_main
     rest 24
     beat_anim
     rest 24
+
+    #else
+    load_rhythm_tweezers
+    rhythm_tweezers_start_hair_cycle
+    spawn_cue CUE_SHORT
+    rest 24
+    spawn_cue CUE_SHORT
+    rest 24
+    rhythm_tweezers_spawn_tweezers
+    spawn_cue CUE_SHORT
+    rest 24
+    spawn_cue CUE_SHORT
+    rest 24
+    rest 24
+    rest 24
+    rest 24
+    rest 6
+    rhythm_tweezers_set_next_veg VEG_ONION
+    rhythm_tweezers_scroll_veg 12
+    rhythm_tweezers_play_register_sfx
+    rest 6
+    rhythm_tweezers_removed_event
+    rest 12
+    rhythm_tweezers_start_hair_cycle
+    spawn_cue CUE_SHORT
+    rest 24
+    spawn_cue CUE_SHORT
+    rest 12
+    spawn_cue CUE_SHORT
+    rest 12
+    rhythm_tweezers_spawn_tweezers
+    spawn_cue CUE_LONG
+    rest 24
+    spawn_cue CUE_SHORT
+    rest 24
+    rest 24
+    rest 24
+    rest 24
+    rest 6
+    rest 6
+    rhythm_tweezers_removed_event
+    rest 12
+
+    load_marching_orders
+    call marching_orders_sub_08a83848
+    call marching_orders_sub_08a8386c
+    call marching_orders_sub_08a83998
+    beat_anim
+    rest 24
+    beat_anim
+    rest 24
+    beat_anim
+    rest 24
+    #endif
 
     load_space_dance
     space_dance_event01 -8, -24
