@@ -280,18 +280,33 @@ extern struct SongHeader s_guntai1_seqData;
 extern struct SongHeader s_guntai2_seqData;
 extern struct SongHeader s_guntai_foot1_seqData;
 extern struct SongHeader s_guntai_foot2_seqData;
+#ifdef SFX
 extern struct SongHeader s_guntai_v_zentai_a_seqData;
+#else
+extern struct SongHeader s_guntai_v_zentai1_seqData;
+#endif
 extern struct SongHeader s_guntai_v_zentai2_seqData;
 extern struct SongHeader s_guntai_v_susume_seqData;
 extern struct SongHeader s_guntai_v_tomare_seqData;
+#ifdef SFX
 extern struct SongHeader s_guntai_v_migi_muke1_seqData;
 extern struct SongHeader s_guntai_v_migi_muke1_face_seqData;
 extern struct SongHeader s_guntai_v_migi_muke2_seqData;
 extern struct SongHeader s_guntai_v_hidari_muke1_seqData;
 extern struct SongHeader s_guntai_v_hidari_muke1_face_seqData;
+#else
+extern struct SongHeader s_guntai_v_migi_muke1_jp_seqData;
+extern struct SongHeader s_guntai_v_migi_muke2_jp_seqData;
+extern struct SongHeader s_guntai_v_hidari_muke1_jp_seqData;
+#endif
 extern struct SongHeader s_guntai_v_hidari_muke2_seqData;
+#ifdef SFX
 extern struct SongHeader s_guntai_v_migi_seqData;
 extern struct SongHeader s_guntai_v_hidari_seqData;
+#else
+extern struct SongHeader s_guntai_v_migi_jp_seqData;
+extern struct SongHeader s_guntai_v_hidari_jp_seqData;
+#endif
 extern struct SongHeader s_guntai_v_yoh_seqData;
 extern struct SongHeader s_guntai_v_es_seqData;
 extern struct SongHeader s_guntai_v_ka_seqData;
@@ -735,3 +750,12 @@ extern struct SongHeader s_sdance_one_seqData;
 extern struct SongHeader s_sdance_two_seqData;
 extern struct SongHeader s_sdance_three_seqData;
 extern struct SongHeader s_sdance_go_seqData;
+extern struct SongHeader s_f_marcher2_v_zentai_jp_seqData;
+extern struct SongHeader s_f_marcher2_v_susume_jp_seqData;
+extern struct SongHeader s_f_marcher2_v_tomare_jp_seqData;
+extern struct SongHeader s_f_marcher2_v_migimukeL_jp_seqData;
+extern struct SongHeader s_f_marcher2_v_migimukeS_jp_seqData;
+extern struct SongHeader s_f_marcher2_v_migi_jp_seqData;
+extern struct SongHeader s_f_marcher2_v_hidarimukeL_jp_seqData;
+extern struct SongHeader s_f_marcher2_v_hidarimukeS_jp_seqData;
+extern struct SongHeader s_f_marcher2_v_hidari_jp_seqData;

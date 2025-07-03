@@ -3382,6 +3382,7 @@ struct SongHeader s_guntai_foot2_seqData = {
     /* Song Number   */ 1543
 };
 
+#ifdef SFX
 extern const u8 s_guntai_v_zentai_a_mid[];
 struct SongHeader s_guntai_v_zentai_a_seqData = {
     /* MIDI Sequence */ s_guntai_v_zentai_a_mid,
@@ -3429,6 +3430,19 @@ struct SongHeader s_guntai_v_muke_f_seqData = {
     /* Song Title    */ s_guntai_v_muke_f_seqName,
     /* Song Number   */ 1932
 };
+#else
+extern const u8 s_guntai_v_zentai1_mid[];
+struct SongHeader s_guntai_v_zentai1_seqData = {
+    /* MIDI Sequence */ s_guntai_v_zentai1_mid,
+    /* Sound Player  */ SFX_PLAYER_1,
+    /* Bank Number   */ INST_BANK_4,
+    /* Volume        */ 115,
+    /* Priority      */ 90,
+    /* unk8          */ 0x40,
+    /* Song Title    */ s_guntai_v_zentai1_seqName,
+    /* Song Number   */ 1544
+};
+#endif
 
 extern const u8 s_guntai_v_zentai2_mid[];
 struct SongHeader s_guntai_v_zentai2_seqData = {
@@ -3466,6 +3480,7 @@ struct SongHeader s_guntai_v_tomare_seqData = {
     /* Song Number   */ 1547
 };
 
+#ifdef SFX
 extern const u8 s_guntai_v_migi_muke1_mid[];
 struct SongHeader s_guntai_v_migi_muke1_seqData = {
     /* MIDI Sequence */ s_guntai_v_migi_muke1_mid,
@@ -3525,6 +3540,43 @@ struct SongHeader s_guntai_v_hidari_muke1_face_seqData = {
     /* Song Title    */ s_guntai_v_hidari_muke1_face_seqName,
     /* Song Number   */ 1927
 };
+#else
+extern const u8 s_guntai_v_migi_muke1_jp_mid[];
+struct SongHeader s_guntai_v_migi_muke1_jp_seqData = {
+    /* MIDI Sequence */ s_guntai_v_migi_muke1_jp_mid,
+    /* Sound Player  */ SFX_PLAYER_1,
+    /* Bank Number   */ INST_BANK_4,
+    /* Volume        */ 80,
+    /* Priority      */ 90,
+    /* unk8          */ 0x40,
+    /* Song Title    */ s_guntai_v_migi_muke1_jp_seqName,
+    /* Song Number   */ 1548
+};
+
+extern const u8 s_guntai_v_migi_muke2_jp_mid[];
+struct SongHeader s_guntai_v_migi_muke2_jp_seqData = {
+    /* MIDI Sequence */ s_guntai_v_migi_muke2_jp_mid,
+    /* Sound Player  */ SFX_PLAYER_1,
+    /* Bank Number   */ INST_BANK_4,
+    /* Volume        */ 80,
+    /* Priority      */ 90,
+    /* unk8          */ 0x40,
+    /* Song Title    */ s_guntai_v_migi_muke2_jp_seqName,
+    /* Song Number   */ 1549
+};
+
+extern const u8 s_guntai_v_hidari_muke1_jp_mid[];
+struct SongHeader s_guntai_v_hidari_muke1_jp_seqData = {
+    /* MIDI Sequence */ s_guntai_v_hidari_muke1_jp_mid,
+    /* Sound Player  */ SFX_PLAYER_1,
+    /* Bank Number   */ INST_BANK_4,
+    /* Volume        */ 90,
+    /* Priority      */ 90,
+    /* unk8          */ 0x40,
+    /* Song Title    */ s_guntai_v_hidari_muke1_jp_seqName,
+    /* Song Number   */ 1550
+};
+#endif
 
 extern const u8 s_guntai_v_hidari_muke2_mid[];
 struct SongHeader s_guntai_v_hidari_muke2_seqData = {
@@ -3538,6 +3590,7 @@ struct SongHeader s_guntai_v_hidari_muke2_seqData = {
     /* Song Number   */ 1551
 };
 
+#ifdef SFX
 extern const u8 s_guntai_v_migi_mid[];
 struct SongHeader s_guntai_v_migi_seqData = {
     /* MIDI Sequence */ s_guntai_v_migi_mid,
@@ -3561,6 +3614,31 @@ struct SongHeader s_guntai_v_hidari_seqData = {
     /* Song Title    */ s_guntai_v_hidari_seqName,
     /* Song Number   */ 1553
 };
+#else
+extern const u8 s_guntai_v_migi_jp_mid[];
+struct SongHeader s_guntai_v_migi_jp_seqData = {
+    /* MIDI Sequence */ s_guntai_v_migi_jp_mid,
+    /* Sound Player  */ SFX_PLAYER_1,
+    /* Bank Number   */ INST_BANK_4,
+    /* Volume        */ 80,
+    /* Priority      */ 90,
+    /* unk8          */ 0x40,
+    /* Song Title    */ s_guntai_v_migi_jp_seqName,
+    /* Song Number   */ 1552
+};
+
+extern const u8 s_guntai_v_hidari_jp_mid[];
+struct SongHeader s_guntai_v_hidari_jp_seqData = {
+    /* MIDI Sequence */ s_guntai_v_hidari_jp_mid,
+    /* Sound Player  */ SFX_PLAYER_1,
+    /* Bank Number   */ INST_BANK_4,
+    /* Volume        */ 70,
+    /* Priority      */ 90,
+    /* unk8          */ 0x40,
+    /* Song Title    */ s_guntai_v_hidari_jp_seqName,
+    /* Song Number   */ 1553
+};
+#endif
 
 extern const u8 s_guntai_v_yoh_mid[];
 struct SongHeader s_guntai_v_yoh_seqData = {
@@ -8667,6 +8745,7 @@ struct SongHeader s_f_neko6_seqData = {
     /* Song Number   */ 700
 };
 
+#ifdef SFX
 extern const u8 s_f_marcher2_v_zentai_mid[];
 struct SongHeader s_f_marcher2_v_zentai_seqData = {
     /* MIDI Sequence */ s_f_marcher2_v_zentai_mid,
@@ -8846,3 +8925,112 @@ struct SongHeader s_f_marcher2_v_hidari_seqData = {
     /* Song Title    */ s_f_marcher2_v_hidari_seqName,
     /* Song Number   */ 709
 };
+
+#else
+extern const u8 s_f_marcher2_v_zentai_jp_mid[];
+struct SongHeader s_f_marcher2_v_zentai_jp_seqData = {
+    /* MIDI Sequence */ s_f_marcher2_v_zentai_jp_mid,
+    /* Sound Player  */ SFX_PLAYER_1,
+    /* Bank Number   */ INST_BANK_57,
+    /* Volume        */ 90,
+    /* Priority      */ 127,
+    /* unk8          */ 0xff,
+    /* Song Title    */ s_f_marcher2_v_zentai_jp_seqName,
+    /* Song Number   */ 701
+};
+extern const u8 s_f_marcher2_v_susume_jp_mid[];
+struct SongHeader s_f_marcher2_v_susume_jp_seqData = {
+    /* MIDI Sequence */ s_f_marcher2_v_susume_jp_mid,
+    /* Sound Player  */ SFX_PLAYER_1,
+    /* Bank Number   */ INST_BANK_57,
+    /* Volume        */ 85,
+    /* Priority      */ 127,
+    /* unk8          */ 0xff,
+    /* Song Title    */ s_f_marcher2_v_susume_jp_seqName,
+    /* Song Number   */ 702
+};
+
+extern const u8 s_f_marcher2_v_tomare_jp_mid[];
+struct SongHeader s_f_marcher2_v_tomare_jp_seqData = {
+    /* MIDI Sequence */ s_f_marcher2_v_tomare_jp_mid,
+    /* Sound Player  */ SFX_PLAYER_1,
+    /* Bank Number   */ INST_BANK_57,
+    /* Volume        */ 90,
+    /* Priority      */ 127,
+    /* unk8          */ 0xff,
+    /* Song Title    */ s_f_marcher2_v_tomare_jp_seqName,
+    /* Song Number   */ 703
+};
+
+extern const u8 s_f_marcher2_v_migimukeL_jp_mid[];
+struct SongHeader s_f_marcher2_v_migimukeL_jp_seqData = {
+    /* MIDI Sequence */ s_f_marcher2_v_migimukeL_jp_mid,
+    /* Sound Player  */ SFX_PLAYER_1,
+    /* Bank Number   */ INST_BANK_57,
+    /* Volume        */ 90,
+    /* Priority      */ 127,
+    /* unk8          */ 0xff,
+    /* Song Title    */ s_f_marcher2_v_migimukeL_jp_seqName,
+    /* Song Number   */ 704
+};
+
+extern const u8 s_f_marcher2_v_migimukeS_jp_mid[];
+struct SongHeader s_f_marcher2_v_migimukeS_jp_seqData = {
+    /* MIDI Sequence */ s_f_marcher2_v_migimukeS_jp_mid,
+    /* Sound Player  */ SFX_PLAYER_1,
+    /* Bank Number   */ INST_BANK_57,
+    /* Volume        */ 90,
+    /* Priority      */ 127,
+    /* unk8          */ 0xff,
+    /* Song Title    */ s_f_marcher2_v_migimukeS_jp_seqName,
+    /* Song Number   */ 705
+};
+
+extern const u8 s_f_marcher2_v_migi_jp_mid[];
+struct SongHeader s_f_marcher2_v_migi_jp_seqData = {
+    /* MIDI Sequence */ s_f_marcher2_v_migi_jp_mid,
+    /* Sound Player  */ SFX_PLAYER_1,
+    /* Bank Number   */ INST_BANK_57,
+    /* Volume        */ 90,
+    /* Priority      */ 127,
+    /* unk8          */ 0xff,
+    /* Song Title    */ s_f_marcher2_v_migi_jp_seqName,
+    /* Song Number   */ 706
+};
+
+extern const u8 s_f_marcher2_v_hidarimukeL_jp_mid[];
+struct SongHeader s_f_marcher2_v_hidarimukeL_jp_seqData = {
+    /* MIDI Sequence */ s_f_marcher2_v_hidarimukeL_jp_mid,
+    /* Sound Player  */ SFX_PLAYER_1,
+    /* Bank Number   */ INST_BANK_57,
+    /* Volume        */ 90,
+    /* Priority      */ 127,
+    /* unk8          */ 0xff,
+    /* Song Title    */ s_f_marcher2_v_hidarimukeL_jp_seqName,
+    /* Song Number   */ 707
+};
+
+extern const u8 s_f_marcher2_v_hidarimukeS_jp_mid[];
+struct SongHeader s_f_marcher2_v_hidarimukeS_jp_seqData = {
+    /* MIDI Sequence */ s_f_marcher2_v_hidarimukeS_jp_mid,
+    /* Sound Player  */ SFX_PLAYER_1,
+    /* Bank Number   */ INST_BANK_57,
+    /* Volume        */ 90,
+    /* Priority      */ 127,
+    /* unk8          */ 0xff,
+    /* Song Title    */ s_f_marcher2_v_hidarimukeS_jp_seqName,
+    /* Song Number   */ 708
+};
+
+extern const u8 s_f_marcher2_v_hidari_jp_mid[];
+struct SongHeader s_f_marcher2_v_hidari_jp_seqData = {
+    /* MIDI Sequence */ s_f_marcher2_v_hidari_jp_mid,
+    /* Sound Player  */ SFX_PLAYER_1,
+    /* Bank Number   */ INST_BANK_57,
+    /* Volume        */ 90,
+    /* Priority      */ 127,
+    /* unk8          */ 0xff,
+    /* Song Title    */ s_f_marcher2_v_hidari_jp_seqName,
+    /* Song Number   */ 709
+};
+#endif
