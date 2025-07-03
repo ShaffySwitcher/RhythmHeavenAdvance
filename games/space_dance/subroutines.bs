@@ -335,9 +335,8 @@ script space_dance_sub_08a8566c
     play_sfx s_space_ikeo_sit_seqData
     rest 4
     play_sfx s_space_kou_sit_seqData
-    rest 12
+    rest 14
     play_sfx s_space_kou_down_seqData
-    rest 2
     #else
     rest 10
     play_sfx s_space_kou_sit_seqData
