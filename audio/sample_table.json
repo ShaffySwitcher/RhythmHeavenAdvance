@@ -5335,6 +5335,10 @@
         {
             "sample": "sdance_go.wav",
             "pitch": "C5"
+        },
+        {
+            "sample": "ninja_bodyguard_huh.wav",
+            "pitch": "C5"
         }
     ]
 }
