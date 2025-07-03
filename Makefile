@@ -65,6 +65,8 @@ else
 endif
 
 # Preprocessor defines
+
+# Features: SFX, PLUS, PLAYTEST
 FEATURES ?= 
 DEFINES := REV=$(REV) $(FEATURES)
 C_DEFINES := $(foreach d,$(DEFINES),-D$(d))

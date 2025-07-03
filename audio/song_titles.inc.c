@@ -283,35 +283,26 @@ char s_guntai1_seqName[] = "";
 char s_guntai2_seqName[] = "";
 char s_guntai_foot1_seqName[] = "";
 char s_guntai_foot2_seqName[] = "";
-#ifdef SFX
 char s_guntai_v_zentai_a_seqName[] = "";
 char s_guntai_v_zentai_ten_seqName[] = "";
 char s_guntai_v_zentai_ttion_seqName[] = "";
-#else
 char s_guntai_v_zentai1_seqName[] = "";
-#endif
 char s_guntai_v_zentai2_seqName[] = "";
 char s_guntai_v_susume_seqName[] = "";
 char s_guntai_v_tomare_seqName[] = "";
-#ifdef SFX
 char s_guntai_v_migi_muke1_seqName[] = "";
 char s_guntai_v_migi_muke1_face_seqName[] = "";
 char s_guntai_v_migi_muke2_seqName[] = "";
 char s_guntai_v_hidari_muke1_seqName[] = "";
 char s_guntai_v_hidari_muke1_face_seqName[] = "";
-#else
 char s_guntai_v_migi_muke1_jp_seqName[] = "";
 char s_guntai_v_migi_muke2_jp_seqName[] = "";
 char s_guntai_v_hidari_muke1_jp_seqName[] = "";
-#endif
 char s_guntai_v_hidari_muke2_seqName[] = "";
-#ifdef SFX
 char s_guntai_v_migi_seqName[] = "";
 char s_guntai_v_hidari_seqName[] = "";
-#else
 char s_guntai_v_migi_jp_seqName[] = "";
 char s_guntai_v_hidari_jp_seqName[] = "";
-#endif
 char s_guntai_v_yoh_seqName[] = "";
 char s_guntai_v_es_seqName[] = "";
 char s_guntai_v_ka_seqName[] = "";
@@ -733,7 +724,6 @@ char s_f_neko3_seqName[] = "";
 char s_f_neko4_seqName[] = "";
 char s_f_neko5_seqName[] = "";
 char s_f_neko6_seqName[] = "";
-#ifdef SFX
 char s_f_marcher2_v_zentai_seqName[] = "";
 char s_f_marcher2_v_zentai_ten_seqName[] = "";
 char s_f_marcher2_v_zentai_ttion_seqName[] = "";
@@ -750,7 +740,6 @@ char s_f_marcher2_v_hidarimukeS_seqName[] = "";
 char s_f_marcher2_v_hidarimukeS2_seqName[] = "";
 char s_f_marcher2_v_hidari_seqName[] = "";
 char s_guntai_v_muke_f_seqName[] = "";
-#else
 char s_f_marcher2_v_zentai_jp_seqName[] = "";
 char s_f_marcher2_v_susume_jp_seqName[] = "";
 char s_f_marcher2_v_tomare_jp_seqName[] = "";
@@ -760,4 +749,3 @@ char s_f_marcher2_v_migi_jp_seqName[] = "";
 char s_f_marcher2_v_hidarimukeL_jp_seqName[] = "";
 char s_f_marcher2_v_hidarimukeS_jp_seqName[] = "";
 char s_f_marcher2_v_hidari_jp_seqName[] = "";
-#endif

@@ -280,33 +280,24 @@ extern struct SongHeader s_guntai1_seqData;
 extern struct SongHeader s_guntai2_seqData;
 extern struct SongHeader s_guntai_foot1_seqData;
 extern struct SongHeader s_guntai_foot2_seqData;
-#ifdef SFX
 extern struct SongHeader s_guntai_v_zentai_a_seqData;
-#else
 extern struct SongHeader s_guntai_v_zentai1_seqData;
-#endif
 extern struct SongHeader s_guntai_v_zentai2_seqData;
 extern struct SongHeader s_guntai_v_susume_seqData;
 extern struct SongHeader s_guntai_v_tomare_seqData;
-#ifdef SFX
 extern struct SongHeader s_guntai_v_migi_muke1_seqData;
 extern struct SongHeader s_guntai_v_migi_muke1_face_seqData;
 extern struct SongHeader s_guntai_v_migi_muke2_seqData;
 extern struct SongHeader s_guntai_v_hidari_muke1_seqData;
 extern struct SongHeader s_guntai_v_hidari_muke1_face_seqData;
-#else
 extern struct SongHeader s_guntai_v_migi_muke1_jp_seqData;
 extern struct SongHeader s_guntai_v_migi_muke2_jp_seqData;
 extern struct SongHeader s_guntai_v_hidari_muke1_jp_seqData;
-#endif
 extern struct SongHeader s_guntai_v_hidari_muke2_seqData;
-#ifdef SFX
 extern struct SongHeader s_guntai_v_migi_seqData;
 extern struct SongHeader s_guntai_v_hidari_seqData;
-#else
 extern struct SongHeader s_guntai_v_migi_jp_seqData;
 extern struct SongHeader s_guntai_v_hidari_jp_seqData;
-#endif
 extern struct SongHeader s_guntai_v_yoh_seqData;
 extern struct SongHeader s_guntai_v_es_seqData;
 extern struct SongHeader s_guntai_v_ka_seqData;

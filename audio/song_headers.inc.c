@@ -3382,7 +3382,6 @@ struct SongHeader s_guntai_foot2_seqData = {
     /* Song Number   */ 1543
 };
 
-#ifdef SFX
 extern const u8 s_guntai_v_zentai_a_mid[];
 struct SongHeader s_guntai_v_zentai_a_seqData = {
     /* MIDI Sequence */ s_guntai_v_zentai_a_mid,
@@ -3430,7 +3429,7 @@ struct SongHeader s_guntai_v_muke_f_seqData = {
     /* Song Title    */ s_guntai_v_muke_f_seqName,
     /* Song Number   */ 1932
 };
-#else
+
 extern const u8 s_guntai_v_zentai1_mid[];
 struct SongHeader s_guntai_v_zentai1_seqData = {
     /* MIDI Sequence */ s_guntai_v_zentai1_mid,
@@ -3442,7 +3441,6 @@ struct SongHeader s_guntai_v_zentai1_seqData = {
     /* Song Title    */ s_guntai_v_zentai1_seqName,
     /* Song Number   */ 1544
 };
-#endif
 
 extern const u8 s_guntai_v_zentai2_mid[];
 struct SongHeader s_guntai_v_zentai2_seqData = {
@@ -3480,7 +3478,6 @@ struct SongHeader s_guntai_v_tomare_seqData = {
     /* Song Number   */ 1547
 };
 
-#ifdef SFX
 extern const u8 s_guntai_v_migi_muke1_mid[];
 struct SongHeader s_guntai_v_migi_muke1_seqData = {
     /* MIDI Sequence */ s_guntai_v_migi_muke1_mid,
@@ -3540,7 +3537,7 @@ struct SongHeader s_guntai_v_hidari_muke1_face_seqData = {
     /* Song Title    */ s_guntai_v_hidari_muke1_face_seqName,
     /* Song Number   */ 1927
 };
-#else
+
 extern const u8 s_guntai_v_migi_muke1_jp_mid[];
 struct SongHeader s_guntai_v_migi_muke1_jp_seqData = {
     /* MIDI Sequence */ s_guntai_v_migi_muke1_jp_mid,
@@ -3576,7 +3573,6 @@ struct SongHeader s_guntai_v_hidari_muke1_jp_seqData = {
     /* Song Title    */ s_guntai_v_hidari_muke1_jp_seqName,
     /* Song Number   */ 1550
 };
-#endif
 
 extern const u8 s_guntai_v_hidari_muke2_mid[];
 struct SongHeader s_guntai_v_hidari_muke2_seqData = {
@@ -3590,7 +3586,6 @@ struct SongHeader s_guntai_v_hidari_muke2_seqData = {
     /* Song Number   */ 1551
 };
 
-#ifdef SFX
 extern const u8 s_guntai_v_migi_mid[];
 struct SongHeader s_guntai_v_migi_seqData = {
     /* MIDI Sequence */ s_guntai_v_migi_mid,
@@ -3614,7 +3609,7 @@ struct SongHeader s_guntai_v_hidari_seqData = {
     /* Song Title    */ s_guntai_v_hidari_seqName,
     /* Song Number   */ 1553
 };
-#else
+
 extern const u8 s_guntai_v_migi_jp_mid[];
 struct SongHeader s_guntai_v_migi_jp_seqData = {
     /* MIDI Sequence */ s_guntai_v_migi_jp_mid,
@@ -3638,7 +3633,6 @@ struct SongHeader s_guntai_v_hidari_jp_seqData = {
     /* Song Title    */ s_guntai_v_hidari_jp_seqName,
     /* Song Number   */ 1553
 };
-#endif
 
 extern const u8 s_guntai_v_yoh_mid[];
 struct SongHeader s_guntai_v_yoh_seqData = {
@@ -8745,7 +8739,6 @@ struct SongHeader s_f_neko6_seqData = {
     /* Song Number   */ 700
 };
 
-#ifdef SFX
 extern const u8 s_f_marcher2_v_zentai_mid[];
 struct SongHeader s_f_marcher2_v_zentai_seqData = {
     /* MIDI Sequence */ s_f_marcher2_v_zentai_mid,
@@ -8926,7 +8919,6 @@ struct SongHeader s_f_marcher2_v_hidari_seqData = {
     /* Song Number   */ 709
 };
 
-#else
 extern const u8 s_f_marcher2_v_zentai_jp_mid[];
 struct SongHeader s_f_marcher2_v_zentai_jp_seqData = {
     /* MIDI Sequence */ s_f_marcher2_v_zentai_jp_mid,
@@ -9033,4 +9025,3 @@ struct SongHeader s_f_marcher2_v_hidari_jp_seqData = {
     /* Song Title    */ s_f_marcher2_v_hidari_jp_seqName,
     /* Song Number   */ 709
 };
-#endif
