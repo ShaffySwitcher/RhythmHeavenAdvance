@@ -731,3 +731,7 @@ extern struct SongHeader s_f_marcher2_v_zentai_ttion_seqData;
 extern struct SongHeader s_f_marcher2_v_hidarimukeL_face_seqData;
 extern struct SongHeader s_f_marcher2_v_migimukeL_face_seqData;
 extern struct SongHeader s_guntai_v_muke_f_seqData;
+extern struct SongHeader s_sdance_one_seqData;
+extern struct SongHeader s_sdance_two_seqData;
+extern struct SongHeader s_sdance_three_seqData;
+extern struct SongHeader s_sdance_go_seqData;

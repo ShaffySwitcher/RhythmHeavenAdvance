@@ -5331,6 +5331,10 @@
         {
             "sample": "sdance_and_g_s.wav",
             "pitch": "C5"
+        },
+        {
+            "sample": "sdance_go.wav",
+            "pitch": "C5"
         }
     ]
 }
