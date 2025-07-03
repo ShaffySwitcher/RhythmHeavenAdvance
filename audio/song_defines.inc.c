@@ -1951,7 +1951,6 @@
 /* 1921 */ DEFINE_SONG( &s_iai_bgm_studio_seqData,           MUSIC_PLAYER_0 )
 /* 1922 */ DEFINE_SONG( &s_rabbit_bgm_studio_seqData,        MUSIC_PLAYER_0 )
 /* 1923 */ DEFINE_SONG( &s_rat_bgm_studio_seqData,           MUSIC_PLAYER_0 )
-#ifdef SFX
 /* 1924 */ DEFINE_SONG( &s_guntai_v_zentai_ten_seqData,      SFX_PLAYER_1   )
 /* 1925 */ DEFINE_SONG( &s_guntai_v_zentai_ttion_seqData,    SFX_PLAYER_1   )
 /* 1926 */ DEFINE_SONG( &s_guntai_v_migi_muke1_face_seqData, SFX_PLAYER_1   )
@@ -1963,4 +1962,3 @@
 /* 1932 */ DEFINE_SONG( &s_guntai_v_muke_f_seqData,    SFX_PLAYER_1   )
 /* 1933 */ DEFINE_SONG( &s_f_marcher2_v_hidarimukeS2_seqData, SFX_PLAYER_1   )
 /* 1934 */ DEFINE_SONG( &s_f_marcher2_v_migimukeS2_seqData, SFX_PLAYER_1   )
-#endif
