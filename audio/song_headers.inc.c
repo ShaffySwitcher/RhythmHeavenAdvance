@@ -6483,6 +6483,54 @@ struct SongHeader s_rat_bgm_studio_seqData = {
     /* Song Number   */ 1923
 };
 
+extern const u8 s_sdance_one_mid[];
+struct SongHeader s_sdance_one_seqData = {
+    /* MIDI Sequence */ s_sdance_one_mid,
+    /* Sound Player  */ MUSIC_PLAYER_1,
+    /* Bank Number   */ INST_BANK_8,
+    /* Volume        */ 127,
+    /* Priority      */ 80,
+    /* unk8          */ 0x40,
+    /* Song Title    */ NULL,
+    /* Song Number   */ 1491
+};
+
+extern const u8 s_sdance_two_mid[];
+struct SongHeader s_sdance_two_seqData = {
+    /* MIDI Sequence */ s_sdance_two_mid,
+    /* Sound Player  */ MUSIC_PLAYER_1,
+    /* Bank Number   */ INST_BANK_8,
+    /* Volume        */ 127,
+    /* Priority      */ 80,
+    /* unk8          */ 0x40,
+    /* Song Title    */ NULL,
+    /* Song Number   */ 1492
+};
+
+extern const u8 s_sdance_three_mid[];
+struct SongHeader s_sdance_three_seqData = {
+    /* MIDI Sequence */ s_sdance_three_mid,
+    /* Sound Player  */ MUSIC_PLAYER_1,
+    /* Bank Number   */ INST_BANK_8,
+    /* Volume        */ 127,
+    /* Priority      */ 80,
+    /* unk8          */ 0x40,
+    /* Song Title    */ NULL,
+    /* Song Number   */ 1493
+};
+
+extern const u8 s_sdance_go_mid[];
+struct SongHeader s_sdance_go_seqData = {
+    /* MIDI Sequence */ s_sdance_go_mid,
+    /* Sound Player  */ MUSIC_PLAYER_1,
+    /* Bank Number   */ INST_BANK_8,
+    /* Volume        */ 127,
+    /* Priority      */ 80,
+    /* unk8          */ 0x40,
+    /* Song Title    */ NULL,
+    /* Song Number   */ 1494
+};
+
 extern const u8 s_f_dummy_mid[];
 struct SongHeader s_f_dummy_seqData = {
     /* MIDI Sequence */ s_f_dummy_mid,
