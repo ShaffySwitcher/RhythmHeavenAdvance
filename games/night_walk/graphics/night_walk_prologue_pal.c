@@ -16,7 +16,7 @@ Palette night_walk_prologue_pal[] = {
         /* 09 */ TO_RGB555(0x051544),
         /* 10 */ TO_RGB555(0x090d77),
         /* 11 */ TO_RGB555(0x000ec3),
-        /* 12 */ TO_RGB555(0x636363),
+        /* 12 */ TO_RGB555(0x001eff),
         /* 13 */ TO_RGB555(0x636363),
         /* 14 */ TO_RGB555(0x636363),
         /* 15 */ TO_RGB555(0x636363)
