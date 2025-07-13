@@ -42,12 +42,12 @@ script script_karate_man_2_prologue
     rest 6
     run karate_man_2_prologue_set_text_frame, 4
     rest 6
-    run karate_man_2_prologue_set_text_frame, 5
     rest 6
     rest 6
     rest 6
     rest 12
     play_sfx s_f_boxing_title_hit_seqData
+    run karate_man_2_prologue_set_text_frame, 5
     run karate_man_2_prologue_play_kick_anim, 0
     rest 3
     rest 3
