@@ -143,10 +143,6 @@ script script_karate_man_2_main
     rest 24
     beat_anim
     rest 24
-    beat_anim
-    rest 24
-    beat_anim
-    rest 24
     set_marking_criteria 2
     mod_tempo 80, 96
     beat_anim
