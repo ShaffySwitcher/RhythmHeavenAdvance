@@ -134,7 +134,7 @@ endtext
 text D_08a2f340
     .ascii "Heh, you're better\n"
     .ascii "than we thought!\n"
-    .ascii "Looks like we'll have"
+    .ascii "Looks like we'll have\n"
     .asciz "to bring out the big guns!\n"
 endtext
 
