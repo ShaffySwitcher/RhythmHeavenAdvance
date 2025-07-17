@@ -8,7 +8,7 @@ AnimationCel rhythm_tweezers_2_prologue_cel000[] = {
     /* 003 */ 0x40de, 0xc1d2, 0x0020,
     /* 004 */ 0x00de, 0x8012, 0x0028,
     /* 005 */ 0x80de, 0x4032, 0x002c,
-    /* 006 */ 0x00fa, 0x41fb, 0x000e
+    /* 006 */ 0x00fb, 0x41fb, 0x000e
 };
 
 AnimationCel rhythm_tweezers_2_prologue_cel001[] = {
@@ -19,7 +19,7 @@ AnimationCel rhythm_tweezers_2_prologue_cel001[] = {
     /* 003 */ 0x40de, 0xc1d2, 0x1020,
     /* 004 */ 0x00de, 0x8012, 0x1028,
     /* 005 */ 0x80de, 0x4032, 0x102c,
-    /* 006 */ 0x00fa, 0x41fb, 0x100e
+    /* 006 */ 0x00fb, 0x41fb, 0x100e
 };
 
 AnimationCel rhythm_tweezers_2_prologue_cel002[] = {
@@ -30,7 +30,7 @@ AnimationCel rhythm_tweezers_2_prologue_cel002[] = {
     /* 003 */ 0x40de, 0xc1d2, 0x2020,
     /* 004 */ 0x00de, 0x8012, 0x2028,
     /* 005 */ 0x80de, 0x4032, 0x202c,
-    /* 006 */ 0x00fa, 0x41fb, 0x200e
+    /* 006 */ 0x00fb, 0x41fb, 0x200e
 };
 
 AnimationCel rhythm_tweezers_2_prologue_cel003[] = {
@@ -41,7 +41,7 @@ AnimationCel rhythm_tweezers_2_prologue_cel003[] = {
     /* 003 */ 0x40de, 0xc1d2, 0x3020,
     /* 004 */ 0x00de, 0x8012, 0x3028,
     /* 005 */ 0x80de, 0x4032, 0x302c,
-    /* 006 */ 0x00fa, 0x41fb, 0x300e
+    /* 006 */ 0x00fb, 0x41fb, 0x300e
 };
 
 AnimationCel rhythm_tweezers_2_prologue_cel004[] = {
@@ -52,5 +52,5 @@ AnimationCel rhythm_tweezers_2_prologue_cel004[] = {
     /* 003 */ 0x40de, 0xc1d2, 0x4020,
     /* 004 */ 0x00de, 0x8012, 0x4028,
     /* 005 */ 0x80de, 0x4032, 0x402c,
-    /* 006 */ 0x00fa, 0x41fb, 0x400e
+    /* 006 */ 0x00fb, 0x41fb, 0x400e
 };
