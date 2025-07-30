@@ -13,8 +13,3 @@ tools/agbcc/*
 *.Identifier
 .vscode/*
 ctx.c
-
-# Ex-Director's Cut
-bitesthedust.py
-*.pdn
-images/
