@@ -1,6 +1,6 @@
 union Instrument *instrument_banks[] = {
-    /* 000 */ NULL,
-    /* 001 */ NULL,
+    /* 000 */ inst_bank_s_debug_palmtree,
+    /* 001 */ inst_bank_s_extra_game_select,
     /* 002 */ NULL,
     /* 003 */ NULL,
     /* 004 */ NULL,

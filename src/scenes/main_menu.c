@@ -13,7 +13,8 @@ enum MainMenuButtonsEnum {
     /* 01 */ RHYTHM_TEST,
     /* 02 */ RHYTHM_DATA_ROOM,
     /* 03 */ STUDIO,
-    /* 04 */ OPTIONS_MENU
+    /* 04 */ OPTIONS_MENU,
+    /* 05 */ EXTRA_GAMES,
 };
 
 
@@ -68,17 +69,29 @@ void main_menu_scene_start(void *sVar, s32 dArg) {
     main_menu_scene_init_gfx1();
     sprite_create(gSpriteHandler, anim_main_menu_blank1, 0, 120, 64, 0x6E, 1, 0, 0);
 
+    if (sMainMenuButton < MAIN_MENU_VISIBLE_BUTTONS) {
+        gMainMenu->topVisibleButton = 0;
+    } else if (sMainMenuButton > TOTAL_MAIN_MENU_BUTTONS - MAIN_MENU_VISIBLE_BUTTONS) {
+        gMainMenu->topVisibleButton = TOTAL_MAIN_MENU_BUTTONS - MAIN_MENU_VISIBLE_BUTTONS;
+    } else {
+        gMainMenu->topVisibleButton = sMainMenuButton;
+    }
+    gMainMenu->windowY = MAIN_MENU_BASE_Y - (gMainMenu->topVisibleButton * MAIN_MENU_BUTTON_SPACING);
+
     for (i = 0; i < TOTAL_MAIN_MENU_BUTTONS; i++) {
         if (i == sMainMenuButton) {
-            gMainMenu->buttons[i] = sprite_create(gSpriteHandler, main_menu_button_on_anim[i], 0, 120, 64, 0x64, 1, 0, 0);
+            gMainMenu->buttons[i] = sprite_create(gSpriteHandler, main_menu_button_on_anim[i], 0, 120, 64 + gMainMenu->windowY, 0x64, 1, 0, 0);
         } else {
-            gMainMenu->buttons[i] = sprite_create(gSpriteHandler, main_menu_button_off_anim[i], 0, 120, 64, 0x64, 1, 0, 0);
+            gMainMenu->buttons[i] = sprite_create(gSpriteHandler, main_menu_button_off_anim[i], 0, 120, 64 + gMainMenu->windowY, 0x64, 1, 0, 0);
         }
     }
 
     gMainMenu->inputsEnabled = FALSE;
     gMainMenu->bgY = 0;
     gMainMenu->bgX = 0;
+    gMainMenu->windowNewY = 0;
+    gMainMenu->isMoving = FALSE;
+    gMainMenu->windowYMotion = 0;
     gMainMenu->enteredFromOptionsMenu = (enteredFromOptionsMenu != FALSE);
     gMainMenu->exitingToOptionsMenu = FALSE;
     set_next_scene(&scene_debug_menu);
@@ -94,6 +107,7 @@ void main_menu_scene_paused(void *sVar, s32 dArg) {
 // Scene Update (Active)
 void main_menu_scene_update(void *sVar, s32 dArg) {
     s32 prevButton;
+    u32 i;
 
     gMainMenu->bgX += 1;
     gMainMenu->bgY -= 1;
@@ -103,18 +117,52 @@ void main_menu_scene_update(void *sVar, s32 dArg) {
         prevButton = sMainMenuButton;
         if (D_030053b8 & DPAD_UP) {
             sMainMenuButton -= 1;
+
+            if (sMainMenuButton < GAME_SELECT) {
+                sMainMenuButton = TOTAL_MAIN_MENU_BUTTONS - 1;
+            }
         }
         if (D_030053b8 & DPAD_DOWN) {
             sMainMenuButton += 1;
+
+            if (sMainMenuButton >= TOTAL_MAIN_MENU_BUTTONS) {
+                sMainMenuButton = GAME_SELECT;
+            }
         }
-        sMainMenuButton = clamp_int32(sMainMenuButton, GAME_SELECT, OPTIONS_MENU);
+        sMainMenuButton = clamp_int32(sMainMenuButton, GAME_SELECT, EXTRA_GAMES);
+
+        if (sMainMenuButton < gMainMenu->topVisibleButton) {
+            gMainMenu->topVisibleButton = sMainMenuButton;
+        } else if (sMainMenuButton >= gMainMenu->topVisibleButton + MAIN_MENU_VISIBLE_BUTTONS) {
+            gMainMenu->topVisibleButton = sMainMenuButton - MAIN_MENU_VISIBLE_BUTTONS + 1;
+        }
+
+        if(prevButton != sMainMenuButton) {
+            gMainMenu->windowNewY = MAIN_MENU_BASE_Y - (gMainMenu->topVisibleButton * MAIN_MENU_BUTTON_SPACING);
+            gMainMenu->isMoving = TRUE;
+            gMainMenu->windowYMotion = INT_TO_FIXED(1.0);
+        }
+
+        if (gMainMenu->isMoving == TRUE) {
+            gMainMenu->windowYMotion = FIXED_POINT_MUL(gMainMenu->windowYMotion, INT_TO_FIXED(0.9));
+            gMainMenu->windowY = math_lerp(gMainMenu->windowNewY, gMainMenu->windowY, gMainMenu->windowYMotion, INT_TO_FIXED(1.0));
+
+            if (gMainMenu->windowYMotion < INT_TO_FIXED(0.01)) {
+                gMainMenu->windowYMotion = 0;
+                gMainMenu->isMoving = FALSE;
+                gMainMenu->windowY = gMainMenu->windowNewY;
+            }
+
+            for (i = 0; i < TOTAL_MAIN_MENU_BUTTONS; i++) {
+                sprite_set_x_y(gSpriteHandler, gMainMenu->buttons[i], 120, 64 + gMainMenu->windowY);
+            }
+        }
 
         if (prevButton != sMainMenuButton) {
             play_sound(&s_menu_cursor2_seqData);
             sprite_set_anim(gSpriteHandler, gMainMenu->buttons[prevButton], main_menu_button_off_anim[prevButton], 0, 1, 0, 0);
             sprite_set_anim(gSpriteHandler, gMainMenu->buttons[sMainMenuButton], main_menu_button_on_anim[sMainMenuButton], 0, 1, 0, 0);
         }
-
         else if (D_03004afc & (START_BUTTON | A_BUTTON)) {
             switch (prevButton) {
                 case GAME_SELECT:
@@ -139,10 +187,18 @@ void main_menu_scene_update(void *sVar, s32 dArg) {
                     set_scene_trans_target(&scene_options_menu, &scene_main_menu);
                     gMainMenu->exitingToOptionsMenu = TRUE;
                     break;
+                default:
+                    set_next_scene(&scene_debug_menu);
+                    break;
             }
             set_pause_beatscript_scene(FALSE);
             gMainMenu->inputsEnabled = FALSE;
             play_sound(&s_menu_kettei1_seqData);
+        } else if (D_03004afc & B_BUTTON) {
+            set_next_scene(&scene_title);
+            set_pause_beatscript_scene(FALSE);
+            gMainMenu->inputsEnabled = FALSE;
+            play_sound(&s_menu_cancel3_seqData);
         }
     }
 }

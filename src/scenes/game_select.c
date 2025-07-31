@@ -1844,7 +1844,7 @@ void game_select_init_info_pane(void) {
     text_printer_set_colors(gGameSelect->infoPaneDesc, 0);
     text_printer_set_palette(gGameSelect->infoPaneDesc, 8);
     text_printer_set_line_spacing(gGameSelect->infoPaneDesc, 15);
-    text_printer_center_by_content(gGameSelect->infoPaneDesc, 1);
+    text_printer_set_alignment(gGameSelect->infoPaneDesc, TEXT_ALIGNMENT_CENTER);
     text_printer_set_x_y_controller(gGameSelect->infoPaneDesc, &bgOfs->x, &bgOfs->y);
     text_printer_set_shadow_colors(gGameSelect->infoPaneDesc, -1);
     gGameSelect->perfectClearedSprite = sprite_create(gSpriteHandler, anim_game_select_perfect_rank, 0, 187, 112, 0x80A, 1, 0, 0x8000);

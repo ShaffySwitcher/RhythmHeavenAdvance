@@ -756,3 +756,6 @@ char s_f_boxing_hit_sfx_seqName[] = "";
 char s_f_boxing_three_sfx_seqName[] = "";
 char s_f_boxing_two_sfx_seqName[] = "";
 char s_f_boxing_four_sfx_seqName[] = "";
+char s_a4_seqName[] = "";
+char s_debug_palmtree_bgm_seqName[] = "";
+char s_extra_game_select_bgm_seqName[] = "";

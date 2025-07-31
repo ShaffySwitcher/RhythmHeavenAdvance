@@ -2,6 +2,7 @@
 #include "graphics.h"
 #include "src/bitmap_font.h"
 #include "src/scenes/debug_menu.h"
+#include "graphics/debug/menu/menu_graphics.h"
 
 
   /* DEBUG MENU - SCENE DATA */
@@ -54,6 +55,21 @@ struct GraphicsTable debug_menu_gfx_table[] = {
         /* Src.  */ D_089ccbc8[7],
         /* Dest. */ OBJ_PALETTE_BUFFER(7.5),
         /* Size  */ 0x8
+    },
+    /* BG Tileset */ {
+        /* Src.  */ &debug_menu_bg_tiles,
+        /* Dest. */ BG_TILESET_BASE(0),
+        /* Size  */ COMPRESSED_GFX_SOURCE
+    },
+    /* BG Map */ {
+        /* Src.  */ &debug_menu_bg_map,
+        /* Dest. */ BG_MAP_BASE(0xE800),
+        /* Size  */ COMPRESSED_GFX_SOURCE
+    },
+        /* BG Palette */ {
+        /* Src.  */ debug_menu_bg_pal,
+        /* Dest. */ BG_PALETTE_BUFFER(0),
+        /* Size  */ 0x20
     },
     END_OF_GRAPHICS_TABLE
 };

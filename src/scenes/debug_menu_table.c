@@ -652,6 +652,11 @@ struct DebugMenuEntry debug_menu_entry_table[] = {
         /* Label */ "‚g‚‚’‚“‚…@‚l‚‚ƒ‚ˆ‚‰‚‚…@i‚t‚‚•‚“‚…‚„j",
         /* Epil. */ TRUE
     },
+    /* RIQ Audio Check */ {
+        /* Scene */ &scene_audio_check,
+        /* Label */ "‚q|‚h‚p@‚`‚•‚„‚‰‚@‚b‚ˆ‚…‚ƒ‚‹",
+        /* Epil. */ FALSE
+    },
     END_OF_DEBUG_ENTRIES
 };
 

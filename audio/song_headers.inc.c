@@ -9254,4 +9254,39 @@ struct SongHeader s_f_boxing_four_sfx_seqData = {
     /* unk8          */ 0xff,
     /* Song Title    */ s_f_boxing_four_sfx_seqName,
     /* Song Number   */ 1940
+
+extern const u8 s_a4_mid[];
+struct SongHeader s_a4_seqData = {
+    /* MIDI Sequence */ s_a4_mid,
+    /* Sound Player  */ MUSIC_PLAYER_0,
+    /* Bank Number   */ INST_BANK_13,
+    /* Volume        */ 127,
+    /* Priority      */ 127,
+    /* unk8          */ 0xff,
+    /* Song Title    */ s_a4_seqName,
+    /* Song Number   */ 1096
+};
+
+extern const u8 s_debug_palmtree_bgm_mid[];
+struct SongHeader s_debug_palmtree_bgm_seqData = {
+    /* MIDI Sequence */ s_debug_palmtree_bgm_mid,
+    /* Sound Player  */ MUSIC_PLAYER_0,
+    /* Bank Number   */ INST_BANK_DEBUG_PALMTREE,
+    /* Volume        */ 100,
+    /* Priority      */ 127,
+    /* unk8          */ 0xff,
+    /* Song Title    */ s_debug_palmtree_bgm_seqName,
+    /* Song Number   */ 1097
+};
+
+extern const u8 s_extra_game_select_bgm_mid[];
+struct SongHeader s_extra_game_select_bgm_seqData = {
+    /* MIDI Sequence */ s_extra_game_select_bgm_mid,
+    /* Sound Player  */ MUSIC_PLAYER_0,
+    /* Bank Number   */ INST_BANK_EXTRA_GAME_SELECT,
+    /* Volume        */ 100,
+    /* Priority      */ 127,
+    /* unk8          */ 0xff,
+    /* Song Title    */ s_extra_game_select_bgm_seqName,
+    /* Song Number   */ 1098
 };

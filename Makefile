@@ -3,7 +3,6 @@
 #---------------------------------------------------------------------------------
 
 BASEROM_SHA1 := 67f8adacff79c15d028fffd90de3a77d9ad0602d
-REV1_SHA1 := e0aaca45045e408e7e1072bde5b39278111e1952
 
 ifeq ($(strip $(DEVKITARM)),)
     $(error "Please set DEVKITARM in your environment. export DEVKITARM=<path to>devkitARM")
@@ -51,17 +50,9 @@ REV ?= 0
 
 ifeq ($(REV), 0)
     TARGET := rhythmheavenadvance
-    TARGET_SHA1 := $(BASEROM_SHA1)
+	TARGET_SHA1 := $(BASEROM_SHA1)
 else
     TARGET := rhythmheavenadvance_rev1
-    TARGET_SHA1 := $(REV1_SHA1)
-    ifeq (,$(wildcard baserom_rev1.gba))
-        $(error No ROM provided. Please place an unmodified Revision 1 ROM named "baserom_rev1.gba" in the root folder)
-    endif
-
-    ifneq ($(shell sha1sum -t baserom_rev1.gba), $(REV1_SHA1)  baserom_rev1.gba)
-        $(error Provided Revision 1 ROM is not correct)
-    endif
 endif
 
 # Preprocessor defines

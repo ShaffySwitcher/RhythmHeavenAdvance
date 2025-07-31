@@ -5,7 +5,7 @@
 
 /* DISCLAMER SCENE */
 
-extern u8 haveSeenDisclamer, isInDisclamer;
+extern u8 haveSeenDisclamer, isInDisclamer, D_03004498;
 
 // Render Animated Text (Script Function)
 void disclamer_scene_render_anim(void) {
@@ -17,6 +17,7 @@ void disclamer_scene_render_anim(void) {
 void disclamer_scene_stop(void *sVar, s32 dArg) {
     haveSeenDisclamer = TRUE;
     isInDisclamer = FALSE;
+    D_03004498 = TRUE;
 
     SET_ADVANCE_FLAG(D_030046a8->data.advanceFlags, ADVANCE_FLAG_SEEN_DISCLAMER);
     flush_save_buffer_to_sram();
@@ -63,10 +64,10 @@ void disclamer_scene_init_gfx1(void) {
 void disclamer_scene_start(void *sVar, s32 dArg) {
     func_0801d860(TRUE);
     disclamer_scene_init_gfx1();
+    gDisclamer->timer = 3600;
     isInDisclamer = TRUE;
     haveSeenDisclamer = FALSE;
     gDisclamer->inputsEnabled = FALSE;
-    gDisclamer->timer = 3600;
 }
 
 

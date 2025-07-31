@@ -6,7 +6,9 @@
 
 // VALUES
 #define TOTAL_MAIN_MENU_BUTTONS 5
-
+#define MAIN_MENU_VISIBLE_BUTTONS 5
+#define MAIN_MENU_BUTTON_SPACING 29
+#define MAIN_MENU_BASE_Y 0
 
 // MACROS
 #define gMainMenu ((struct MainMenuSceneData *)gCurrentSceneData)
@@ -22,6 +24,11 @@ struct MainMenuSceneData {
     s16 bgY;
     u8 enteredFromOptionsMenu;
     u8 exitingToOptionsMenu;
+    s8 windowY;
+    s8 windowNewY;
+    u8 isMoving;
+    u8 topVisibleButton;
+    u16 windowYMotion;
 };
 
 

@@ -6,7 +6,7 @@
 script script_scene_main_menu
     set_tempo 155
     pause_scene
-    scene_if_eq INT32, 0x1A, TRUE
+    scene_if_eq INT32, 0x1C, TRUE
         set_music_volume 70
         mod_music_volume 256, 24
         run scene_set_music_player_by_sound, s_manza_bgm_seqData
@@ -15,7 +15,7 @@ script script_scene_main_menu
     run func_08007324, TRUE
     fade_screen_in 12, BLACK
     rest 12
-    scene_if_eq INT32, 0x1A, FALSE
+    scene_if_eq INT32, 0x1C, FALSE
         play_music s_manza_bgm_seqData
         set_music_volume 0x100
     end_if
@@ -23,7 +23,7 @@ script script_scene_main_menu
     pause_scene
 
     scene_set_byte 8, FALSE
-    scene_if_eq INT32, 0x1B, TRUE
+    scene_if_eq INT32, 0x1D, TRUE
         mod_music_volume 70, 34
     else
         fade_music_out 48
@@ -48,7 +48,7 @@ struct scene_main_menu
     /* Start  */ .word func_0801d86c, sub_scene_main_menu
     /* Update */ .word func_0801d8d8, 0
     /* Stop   */ .word NULL,          0
-    /* Memory */ .word 0x1C
+    /* Memory */ .word 0x26
 endstruct
 
 .end

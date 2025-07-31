@@ -20,7 +20,9 @@ struct DebugMenuSceneData {
     s16 row;
     s16 cursor;
     s16 counter;
-    s16 textLines[8];
+    s16 textLines[DEBUG_MENU_ENTRY_PER_PAGE];
+    s16 bgX;
+    s16 bgY;
 };
 
 struct DebugMenuEntry {

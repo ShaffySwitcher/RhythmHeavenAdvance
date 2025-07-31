@@ -5,7 +5,7 @@
 # Rhythm Heaven Advance: Ex-Director's Cut
 ![Rhythm Heaven Advance : Ex-Director's Cut](images/logo.png?raw=true "Rhythm Heaven Advance : Ex-Director's Cut")
 
-This is a personal fork of the main Advance repository, it includes custom games, quality-of-life improvements, and other tweaks not present in the mainline version.
+This is a personal fork of the main Advance repository, it includes custom games, quality-of-life improvements, improved audio output, and other tweaks not present in the mainline version.
 
 ## Installation
 ### Requirements

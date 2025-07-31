@@ -98,6 +98,7 @@ void agb_main(void) {
 	midi_sound_init(); // Init. MIDI Sound Library
 	midi_player_set_reverb(35, 2, 2, 4);
 	set_sound_mode(D_030046a8->data.unk294[8]); // Set DirectSound Mode (Stereo/Mono)
+    REG_SOUNDBIAS = (REG_SOUNDBIAS & ~SOUNDBIAS_AMP_RESOLUTION_MASK) | (AMP_RESOLUTION_8BIT_65KHZ << 14);
 
 	REG_DISPSTAT = 8;
 	REG_IE = (INTERRUPT_CART | INTERRUPT_DMA2 | INTERRUPT_TIMER3 | INTERRUPT_VBLANK);
