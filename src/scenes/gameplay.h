@@ -11,34 +11,34 @@
 
 // Scene Types:
 struct GameplaySceneData {
-	s32 unk0;
-	s32 unk4;
-	u8 playInputsEnabled; // A, B, +, L, R
-	u8 assessIrrelevantInputs; // Register inputs with no relevant cue.
+    s32 unk0;
+    s32 unk4;
+    u8 playInputsEnabled; // A, B, +, L, R
+    u8 assessIrrelevantInputs; // Register inputs with no relevant cue.
     u16 buttonPressFilter;
-	u16 buttonReleaseFilter;
-	const struct GameEngine *gameEngine; // Game Engine Pointer
-	void *gameEngineData; // Same value as gCurrentEngineData
-	struct Cue *cues; // Linked List (most recent element)
-	const struct CueDefinition *cueDefinitions[12]; // Cue Definitions (copied from Game Engine)
-	EngineEvent commonFunctions[3]; // Engine "Common" Functions
-	struct Cue *currentCue; // Current Cue
-	u8 cueSpawnsEnabled;
+    u16 buttonReleaseFilter;
+    const struct GameEngine *gameEngine; // Game Engine Pointer
+    void *gameEngineData; // Same value as gCurrentEngineData
+    struct Cue *cues; // Linked List (most recent element)
+    const struct CueDefinition *cueDefinitions[12]; // Cue Definitions (copied from Game Engine)
+    EngineEvent commonFunctions[3]; // Engine "Common" Functions
+    struct Cue *currentCue; // Current Cue
+    u8 cueSpawnsEnabled;
     u8 cancelThisCueSpawning;
     u8 allowCueInputOverlap; // If multiple cues for the same input overlap, register the input for all cues (otherwise only consider the most relevant cue).
     s32 engineFuncParam; // Parameter used when calling Engine-specific Functions
     u8 unk64;
-	struct SongHeader *nextCueSpawnSfx;
-	struct SongHeader *nextCueHitSfx;
-	struct SongHeader *nextCueBarelySfx;
-	struct SongHeader *nextCueMissSfx;
-	u8 ignoreThisCueResult;
+    struct SongHeader *nextCueSpawnSfx;
+    struct SongHeader *nextCueHitSfx;
+    struct SongHeader *nextCueBarelySfx;
+    struct SongHeader *nextCueMissSfx;
+    u8 ignoreThisCueResult;
     s8 lastCueInputOffset; // Most Recent Input Timing Offset (how early/late the most recent input was)
-	u8 currentMarkingCriteria; // Current Marking Criteria
-	u8 isTutorial;
-	u8 skippingTutorial; // Currently changing scenes.
-	struct Scene *skipDestination; // Skip Tutorial destination scene
-	u16 fadeInTicks; // Remaining ticks for screen fade-in?
+    u8 currentMarkingCriteria; // Current Marking Criteria
+    u8 isTutorial;
+    u8 skippingTutorial; // Currently changing scenes.
+    struct Scene *skipDestination; // Skip Tutorial destination scene
+    u16 fadeInTicks; // Remaining ticks for screen fade-in?
     u16 nextCueDuration;
     u16 loopCounter;
     u16 loopCounterStart;
@@ -72,6 +72,7 @@ struct GameplaySceneData {
     u8  dpadClosedTimer;
     u8  mercyEnabled;
     u8  forgivableMisses;
+    u8  autoPlayEnabled;
 };
 
 

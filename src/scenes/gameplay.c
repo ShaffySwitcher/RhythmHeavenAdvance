@@ -24,6 +24,10 @@ extern u8 sReplayingCampaign;
 
 static struct Scene *D_03001328; // Pause Menu Quit Destination
 
+void gameplay_enable_auto_play(u32 enable) {
+    gGameplay->autoPlayEnabled = enable;
+}
+
 
 // [func_08016e04] Set Sound Effect Original Tempo
 void gameplay_set_sound_tempo(u32 tempo) {
@@ -144,44 +148,72 @@ void gameplay_update_scene(void) {
         }
     }
 
-    pressed = D_03004afc & gGameplay->buttonPressFilter;
-    released = D_03004b00 & gGameplay->buttonReleaseFilter;
-
-    if (gGameplay->dpadCannotOverlap == TRUE) {
-        if (gGameplay->dpadIsOpen) {
-            if (pressed & DPAD_ALL) {
-                buttonsOnly = pressed & ~DPAD_ALL;
-                if (pressed & DPAD_UP) {
-                    pressed = DPAD_UP;
-                }
-                if (pressed & DPAD_DOWN) {
-                    pressed = DPAD_DOWN;
-                }
-                if (pressed & DPAD_LEFT) {
-                    pressed = DPAD_LEFT;
-                }
-                if (pressed & DPAD_RIGHT) {
-                    pressed = DPAD_RIGHT;
-                }
-                pressed |= buttonsOnly;
-                gGameplay->dpadIsOpen = FALSE;
-                gGameplay->dpadClosedTimer = 10;
-            }
-        } else {
-            pressed &= ~DPAD_ALL;
-            if (D_03004ac0 & DPAD_ALL) {
-                if (--gGameplay->dpadClosedTimer == 0) {
-                    gGameplay->dpadIsOpen = TRUE;
-                }
-            } else {
-                gGameplay->dpadIsOpen = TRUE;
-            }
-        }
+    // if L and R are held then enable auto play else disable auto play
+    if ((D_03004ac0 & (LEFT_SHOULDER_BUTTON | RIGHT_SHOULDER_BUTTON)) == (LEFT_SHOULDER_BUTTON | RIGHT_SHOULDER_BUTTON)) {
+        gGameplay->autoPlayEnabled = TRUE;
+    } else {
+        gGameplay->autoPlayEnabled = FALSE;
     }
 
-    if (gameplay_inputs_are_enabled()) { // if play inputs are enabled
-        if ((pressed != 0) || (released != 0)) {
-            gameplay_update_inputs(pressed, released); // Update Inputs
+    // AUTOPLAY
+    if (gGameplay->autoPlayEnabled) {
+        struct Cue *cue = gGameplay->cues;
+        while (cue != NULL) {
+            struct CueDefinition *cueDef = &cue->data;
+            s32 runningTime = cue->runningTime;
+            s32 duration = cue->duration;
+            if (!cue->unk48_b0 && !cue->hasExpired && runningTime == duration) {
+                u16 input = (cueDef->buttonFilter & 0x8000) ? 0 : cueDef->buttonFilter;
+                u16 release = (cueDef->buttonFilter & 0x8000) ? cueDef->buttonFilter : 0;
+                
+                if (gameplay_inputs_are_enabled()) { // if play inputs are enabled
+                    if ((input != 0) || (release != 0)) {
+                        gameplay_update_inputs(input, release); // Update Inputs
+                    }
+                }
+            }
+            cue = cue->prev;
+        }
+    } else {
+        pressed = D_03004afc & gGameplay->buttonPressFilter;
+        released = D_03004b00 & gGameplay->buttonReleaseFilter;
+
+        if (gGameplay->dpadCannotOverlap == TRUE) {
+            if (gGameplay->dpadIsOpen) {
+                if (pressed & DPAD_ALL) {
+                    buttonsOnly = pressed & ~DPAD_ALL;
+                    if (pressed & DPAD_UP) {
+                        pressed = DPAD_UP;
+                    }
+                    if (pressed & DPAD_DOWN) {
+                        pressed = DPAD_DOWN;
+                    }
+                    if (pressed & DPAD_LEFT) {
+                        pressed = DPAD_LEFT;
+                    }
+                    if (pressed & DPAD_RIGHT) {
+                        pressed = DPAD_RIGHT;
+                    }
+                    pressed |= buttonsOnly;
+                    gGameplay->dpadIsOpen = FALSE;
+                    gGameplay->dpadClosedTimer = 10;
+                }
+            } else {
+                pressed &= ~DPAD_ALL;
+                if (D_03004ac0 & DPAD_ALL) {
+                    if (--gGameplay->dpadClosedTimer == 0) {
+                        gGameplay->dpadIsOpen = TRUE;
+                    }
+                } else {
+                    gGameplay->dpadIsOpen = TRUE;
+                }
+            }
+        }
+
+        if (gameplay_inputs_are_enabled()) { // if play inputs are enabled
+            if ((pressed != 0) || (released != 0)) {
+                gameplay_update_inputs(pressed, released); // Update Inputs
+            }
         }
     }
 
