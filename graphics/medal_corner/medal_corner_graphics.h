@@ -69,6 +69,16 @@ extern struct CompressedData endless_games_menu_obj;
 
 extern Palette endless_menu_pal[];
 
+/* EXTRA GAMES MENU - COMPRESSED GRAPHICS */
+
+extern struct CompressedData extra_games_menu_bg_tiles;
+extern struct CompressedData extra_games_menu_bg_map;
+//extern struct CompressedData extra_games_menu_obj;
+
+/* EXTRA GAMES MENU - PALETTES */
+
+extern Palette extra_menu_pal[];
+
 /* RHYTHM TOYS MENU - ANIMATIONS */
 
 extern struct Animation anim_toys_menu_cat_machine[];

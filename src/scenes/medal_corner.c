@@ -51,8 +51,13 @@ void medal_corner_set_current_level(s32 item) {
 
     if (medal_corner_level_is_unlocked(item)) {
         sprite_set_visible(gSpriteHandler, gMedalCorner->lockedLevelIcon, FALSE);
-        sprite_set_visible(gSpriteHandler, gMedalCorner->currentLevelIcon, TRUE);
-        sprite_set_anim(gSpriteHandler, gMedalCorner->currentLevelIcon, levels[item].icon, 0, 1, 0, 0);
+
+        if(levels[item].icon != NULL) {
+            sprite_set_visible(gSpriteHandler, gMedalCorner->currentLevelIcon, TRUE);
+            sprite_set_anim(gSpriteHandler, gMedalCorner->currentLevelIcon, levels[item].icon, 0, 1, 0, 0);
+        } else {
+            sprite_set_visible(gSpriteHandler, gMedalCorner->currentLevelIcon, FALSE);
+        }
     } else {
         sprite_set_visible(gSpriteHandler, gMedalCorner->lockedLevelIcon, TRUE);
         sprite_set_visible(gSpriteHandler, gMedalCorner->currentLevelIcon, FALSE);
@@ -154,7 +159,8 @@ void medal_corner_listbox_init(void) {
     u32 totalLevels = gMedalCorner->menuData->levelCount;
 
     gMedalCorner->listbox = create_new_listbox(
-            get_current_mem_id(), 8, 128, 32, 10, 11, 0, 143, 40, 0x8800, 16,
+            get_current_mem_id(), 4, (gMedalCorner->menuID == MEDAL_CORNER_MENU_EXTRA_GAMES) ? 256 : 128, 30, 10, 11, 0, (gMedalCorner->menuID == MEDAL_CORNER_MENU_EXTRA_GAMES) ? 37 : 143,
+            40, 0x8800, 16,
             sListSelItems[gMedalCorner->menuID], totalLevels, anim_medal_corner_cursor, 2, 4,
             sListSelLines[gMedalCorner->menuID], medal_corner_listbox_get_string, NULL);
     medal_corner_use_ui_texture_base(listbox_get_sel_sprite(gMedalCorner->listbox));
@@ -207,7 +213,10 @@ void medal_corner_scene_start(void *sVar, s32 dArg) {
     func_080073f0();
     medal_corner_scene_init_gfx1();
 
-    medal_corner_init_counters();
+    if(gMedalCorner->menuID != MEDAL_CORNER_MENU_EXTRA_GAMES){
+        medal_corner_init_counters();
+    }
+
     gMedalCorner->lockedLevelIcon = sprite_create(gSpriteHandler, anim_medal_corner_locked_icon, 0, 0x38, 0x58, 0x800, 1, 0, 0);
     medal_corner_use_ui_texture_base(gMedalCorner->lockedLevelIcon);
     medal_corner_init_level_icon();
@@ -242,7 +251,7 @@ void medal_corner_scene_paused(void *sVar, s32 dArg) {
 
 // Set Sprite Texture Base Tile
 void medal_corner_use_ui_texture_base(s32 sprite) {
-    sprite_set_base_tile(gSpriteHandler, sprite, 640);
+    sprite_set_base_tile(gSpriteHandler, sprite, (gMedalCorner->menuID == MEDAL_CORNER_MENU_EXTRA_GAMES) ? 512 : 640);
 }
 
 

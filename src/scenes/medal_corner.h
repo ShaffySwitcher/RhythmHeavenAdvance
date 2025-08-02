@@ -9,6 +9,7 @@ enum MedalCornerMenusEnum {
     /* 00 */ MEDAL_CORNER_MENU_RHYTHM_TOYS,
     /* 01 */ MEDAL_CORNER_MENU_ENDLESS_GAMES,
     /* 02 */ MEDAL_CORNER_MENU_DRUM_LESSONS,
+    /* 03 */ MEDAL_CORNER_MENU_EXTRA_GAMES,
 
     /* -- */ TOTAL_MEDAL_CORNER_MENUS
 };
@@ -55,6 +56,12 @@ enum DrumLessonsEnum {
     /* 18 */ DRUM_LESSON_HI_TECH_2,
 
     /* -- */ TOTAL_DRUM_LESSONS
+};
+
+enum ExtraGamesEnum {
+    /* 00 */ EXTRA_GAME_PLACEHOLDER,
+
+    /* -- */ TOTAL_EXTRA_GAMES
 };
 
 enum MedalCornerEventsEnum {

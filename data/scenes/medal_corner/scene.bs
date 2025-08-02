@@ -75,4 +75,21 @@ struct scene_lessons_menu
     /* Memory */ .word 0x1C
 endstruct
 
+@ Local Scene
+struct sub_scene_extra_games
+    /* Start  */ .word medal_corner_scene_start,  3
+    /* Paused */ .word medal_corner_scene_paused, 0
+    /* Active */ .word medal_corner_scene_update, 0
+    /* Stop   */ .word medal_corner_scene_stop,   0
+    /* Script */ .word script_medal_corner_menu
+endstruct
+
+@ RIQ Extra Games Menu Scene
+struct scene_extra_games
+    /* Start  */ .word func_0801d86c, sub_scene_extra_games
+    /* Update */ .word func_0801d8d8, 0
+    /* Stop   */ .word NULL,          0
+    /* Memory */ .word 0x1C
+endstruct
+
 .end

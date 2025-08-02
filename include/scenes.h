@@ -39,6 +39,7 @@ extern struct Scene scene_data_check;
 extern struct Scene scene_data_clear;
 extern struct Scene scene_flash_mem_test;
 extern struct Scene scene_audio_check;
+extern struct Scene scene_extra_games;
 
 // Main Games
 extern struct Scene scene_karate_man;
