@@ -159,7 +159,7 @@ void medal_corner_listbox_init(void) {
     u32 totalLevels = gMedalCorner->menuData->levelCount;
 
     gMedalCorner->listbox = create_new_listbox(
-            get_current_mem_id(), 4, (gMedalCorner->menuID == MEDAL_CORNER_MENU_EXTRA_GAMES) ? 256 : 128, 30, 10, 11, 0, (gMedalCorner->menuID == MEDAL_CORNER_MENU_EXTRA_GAMES) ? 37 : 143,
+            get_current_mem_id(), 8, (gMedalCorner->menuID == MEDAL_CORNER_MENU_EXTRA_GAMES) ? 256 : 128, (gMedalCorner->menuID == MEDAL_CORNER_MENU_EXTRA_GAMES) ? 36 : 30, 10, 11, 0, (gMedalCorner->menuID == MEDAL_CORNER_MENU_EXTRA_GAMES) ? 37 : 143,
             40, 0x8800, 16,
             sListSelItems[gMedalCorner->menuID], totalLevels, anim_medal_corner_cursor, 2, 4,
             sListSelLines[gMedalCorner->menuID], medal_corner_listbox_get_string, NULL);

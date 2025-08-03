@@ -1,10 +1,35 @@
 struct MedalCornerLevel extra_menu_levels[] = {
-    /* MR_UPBEAT */ {
-        /* Scene  */ &scene_mr_upbeat,
-        /* Title  */ "Mr. Upbeat (from Rhythm Tengoku)",
+    /* UNUSED_TANUKI_AND_MONKEY */ {
+        /* Scene  */ &scene_tanuki_and_monkey,
+        /* Title  */ "Tanuki & Monkey",
         /* Anim   */ NULL,
         /* Medals */ 0
     },
+    /* UNUSED_DANCE_LESSON_1 */ {
+        /* Scene  */ &scene_remix_1_unused,
+        /* Title  */ "Dance Lesson 1",
+        /* Anim   */ NULL,
+        /* Medals */ 0
+    },
+    /* UNUSED_RAPWOMEN_BY_KAZU */ {
+        /* Scene  */ &scene_rap_women_unused,
+        /* Title  */ "RAPWOMEN (by KAZU)",
+        /* Anim   */ NULL,
+        /* Medals */ 0
+    },
+    /* UNUSED_SPACEBALL*/ {
+        /* Scene  */ &scene_spaceball_unused,
+        /* Title  */ "Spaceball (Unused)",
+        /* Anim   */ NULL,
+        /* Medals */ 0
+    },
+    /* UNUSED_METRONOME */ {
+        /* Scene  */ &scene_metronome,
+        /* Title  */ "Metronome (Unused)",
+        /* Anim   */ NULL,
+        /* Medals */ 0
+    }
+
 };
 
 struct GraphicsTable extra_menu_gfx_table[] = {
@@ -18,11 +43,6 @@ struct GraphicsTable extra_menu_gfx_table[] = {
         /* Dest. */ BG_MAP_BASE(0xE800),
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
-    /* OBJ Tileset / {
-        /* Src.  / &endless_games_menu_obj,
-        /* Dest. / OBJ_TILESET_BASE(0),
-        /* Size  / COMPRESSED_GFX_SOURCE
-    },*/
     /* OBJ Tileset */ {
         /* Src.  */ &medal_corner_obj,
         /* Dest. */ OBJ_TILESET_BASE(0x4000),

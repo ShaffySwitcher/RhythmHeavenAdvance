@@ -59,7 +59,11 @@ enum DrumLessonsEnum {
 };
 
 enum ExtraGamesEnum {
-    /* 00 */ EXTRA_GAME_PLACEHOLDER,
+    /* 00 */ UNUSED_TANUKI_AND_MONKEY,
+    /* 01 */ UNUSED_SPACEBALL,
+    /* 02 */ UNUSED_RAPWOMEN_BY_KAZU,
+    /* 03 */ UNUSED_DANCE_LESSON_1,
+    /* 04 */ UNUSED_METRONOME,
 
     /* -- */ TOTAL_EXTRA_GAMES
 };

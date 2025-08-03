@@ -183,7 +183,7 @@ Palette extra_menu_pal[] = {
         /* 15 */ TO_RGB555(0x2030A8)
     },
     /* PALETTE 10 */ {
-        /* 00 */ TO_RGB555(0xF078C0),
+        /* 00 */ TO_RGB555(0x4B4BE5),
         /* 01 */ TO_RGB555(0x000000),
         /* 02 */ TO_RGB555(0x000000),
         /* 03 */ TO_RGB555(0x000000),
@@ -201,8 +201,8 @@ Palette extra_menu_pal[] = {
         /* 15 */ TO_RGB555(0x000000)
     },
     /* PALETTE 11 */ {
-        /* 00 */ TO_RGB555(0xF078C0),
-        /* 01 */ TO_RGB555(0x702050),
+        /* 00 */ TO_RGB555(0x4B4BE5),
+        /* 01 */ TO_RGB555(0x18186D),
         /* 02 */ TO_RGB555(0x000000),
         /* 03 */ TO_RGB555(0x000000),
         /* 04 */ TO_RGB555(0x000000),
