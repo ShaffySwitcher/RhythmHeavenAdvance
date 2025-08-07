@@ -6,7 +6,9 @@
 #include "cues.h"
 #include "src/scenes/game_select.h"
 
-
+const struct MarkingCriteria *genericMarkingCriteria[] = {
+    NULL,
+};
 
 /* RESULTS */
 
@@ -669,7 +671,7 @@ u32 results_get_negative_comments(void) {
         
         // Convert the first character of the statement to lowercase if it's uppercase
         // An exception is made for sentences starting in the word "I" and contractions like "I'm"
-        if (commentsText[prefixLength] >= 'A' && commentsText[prefixLength] <= 'Z' && results_try_again_comment_pool[i] == "Likewise, " && !(commentsText[prefixLength] == 'I' && (commentsText[prefixLength+1] == ' ' || commentsText[prefixLength+1]  == '\''))) {
+        if (commentsText[prefixLength] >= 'A' && commentsText[prefixLength] <= 'Z' && results_try_again_comment_pool[i] != "" && !(commentsText[prefixLength] == 'I' && (commentsText[prefixLength+1] == ' ' || commentsText[prefixLength+1]  == '\''))) {
             commentsText[prefixLength] += 32;
         }
         anim = results_get_comment_anim(commentsText, TEXT_ANCHOR_BOTTOM_LEFT, 3);
@@ -890,6 +892,12 @@ void results_publish_comments(void) {
     s16 textSprite;
     u32 totalCriteriaFailed, averageCriteriaSucceeded;
     u32 previousResult;
+
+    // bye bye crashes~!
+    if(criteriaTable == NULL) {
+        criteriaTable = genericMarkingCriteria;
+        score_handler->markingData = criteriaTable;
+    }
 
     update_plays_until_next_campaign();
 

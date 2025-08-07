@@ -270,7 +270,10 @@ struct GraphicsTable *rhythm_tweezers_gfx_tables[] = {
     /* 0x02 */ rhythm_tweezers_1_potato_gfx_table,
     /* 0x03 */ rhythm_tweezers_2_onion_gfx_table,
     /* 0x04 */ rhythm_tweezers_2_turnip_gfx_table,
-    /* 0x05 */ rhythm_tweezers_2_potato_gfx_table
+    /* 0x05 */ rhythm_tweezers_2_potato_gfx_table,
+    /* 0x06 */ rhythm_tweezers_1_onion_gfx_table,
+    /* 0x07 */ rhythm_tweezers_1_turnip_gfx_table,
+    /* 0x08 */ rhythm_tweezers_1_potato_gfx_table,
 };
 
 

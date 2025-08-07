@@ -40,6 +40,12 @@
     load_game spaceball_engine, 0
 .endm
 
+@ Load Game: Spaceball (Extra)
+.macro load_spaceball_extra
+    load_spaceball_labels
+    load_game spaceball_engine, 1
+.endm
+
 
 /* ---------------- Game Engine Events ---------------- */
 

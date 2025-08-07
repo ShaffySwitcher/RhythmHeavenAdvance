@@ -157,14 +157,14 @@ endtext
 text D_08061d70
     .ascii "\n"
     .ascii "Hit the bass drum with ‡N\n"
-    .asciz "or by pressing down on ‡O!\n"
+    .asciz "or by pressing Down on ‡O!\n"
 endtext
 
 
 text D_08061dbc
     .ascii "If you've played the last\n"
     .ascii "lesson, you know you can\n"
-    .ascii "hit either ‡M and Left on ‡O\n"
+    .ascii "hit either ‡M or Left on ‡O\n"
     .asciz "to play the snare."
 endtext
 

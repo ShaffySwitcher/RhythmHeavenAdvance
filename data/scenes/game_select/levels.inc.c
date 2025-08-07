@@ -171,7 +171,7 @@ struct LevelData level_data_table[] = {
         /* Epilogue GFX  */ epilogue_sick_beats_gfx_tables,
         /* Epilogue Text */ {
             /* TRY_AGAIN */ "All our research... amounted to nothing...",
-            /* OK        */ "Failure may be key to success!",
+            /* OK        */ "Failure may be the key to success!",
             /* SUPERB    */ "We've finally found our cure!"
         }
     },
@@ -225,7 +225,7 @@ struct LevelData level_data_table[] = {
     },
     /* NINJA_REINCARNATE */ {
         /* Entry Scene   */ &scene_ninja_reincarnate,
-        /* Level Name    */ "Ninja Reincarnate",
+        /* Level Name    */ "Ninja Descendant",
         /* Level Desc.   */ "You know, my family's\n"
                             "ancestors came from\n"
                             "a long lineage of ninjas.\n"
@@ -492,7 +492,7 @@ struct LevelData level_data_table[] = {
         /* Epilogue Text */ {
             /* TRY_AGAIN */ "Our spirits have been deflated...",
             /* OK        */ "We still have a long way to go!",
-            /* SUPERB    */ "Three cheers for our star tosser!"
+            /* SUPERB    */ "Three cheers for our star tossers!"
         }
     },
     /* RAT_RACE */ {

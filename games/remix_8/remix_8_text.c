@@ -19,7 +19,7 @@ const char D_0806aa0c[] = "";
 
 const char D_0806aa24[] = "Rhythm League notes:";
 
-const char D_0806aa40[] = "Ｉｔ　ｉｓ　ｐｏｓｓｉｂｌｅ　ｆｏｒ　ｙｏｕ！";
+const char D_0806aa40[] = "Ｆｏｒ　ｙｏｕ　ｉｔ　ｉｓ　ｐｏｓｓｉｂｌｅ！";
 
 const char D_0806aa50[] = "Ｋｅｅｐ　ｉｔ　ｕｐ！";
 

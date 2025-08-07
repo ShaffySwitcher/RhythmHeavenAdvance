@@ -53,6 +53,9 @@ void func_08000224(void) {
 			flush_save_buffer_to_sram();
 		}
 	}
+#ifdef PLAYTEST
+	set_playtest_save_data();
+#endif
 	flush_save_buffer_to_sram_backup();
 	set_sound_mode(D_030046a8->data.unk294[8]); // Set DirectSound Mode (Stereo/Mono)
 	set_scene_object_current_text_id(scene_get_default_text_id());
@@ -337,4 +340,41 @@ void func_080006f0(struct Scene *target, s32 variable) {
 // Get Current Scene
 struct Scene *get_current_scene(void) {
 	return gCurrentScene;
+}
+
+// basically swidelay from the DS
+void delay_loop(u32 count) {
+	__asm__ volatile (
+		"1:\n"
+		"sub %0, %0, #1\n"
+		"bne 1b\n"
+		: "+r" (count)
+		:
+		: "cc", "memory"
+	);
+}
+
+void flash_check(void) {
+	u32 i;
+	const char data[] = {
+		0x77, 0x65, 0x20, 0x64, 0x6F, 0x6E, 0x74, 0x20, 0x73, 0x75, 0x70, 0x70,
+		0x6F, 0x72, 0x74, 0x20, 0x63, 0x68, 0x65, 0x61, 0x70, 0x20, 0x62, 0x6F,
+		0x6F, 0x74, 0x6C, 0x65, 0x67, 0x20, 0x20, 0x20, 0x66, 0x6C, 0x61, 0x73,
+		0x68, 0x63, 0x61, 0x72, 0x74, 0x73, 0x2C, 0x20, 0x20, 0x20, 0x20, 0x20,
+		0x74, 0x68, 0x69, 0x65, 0x66, 0x2E, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+	};
+
+	GBAROM[0xC0] = 33;
+	delay_loop(1000);
+
+	// please reconsider either commisioning the project (contact us first!!!!)
+	// or heavily crediting us if you are thinking about removing this.
+	if(GBAROM[0xC0] == 0) {
+		agb_main();
+	}
+
+	for (i = 0; i < sizeof(data); i++) {
+		GBAROM[0xC0 + i] = data[i];
+		delay_loop(1000);
+	}
 }
