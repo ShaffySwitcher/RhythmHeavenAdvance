@@ -90,6 +90,14 @@ extern struct Scene scene_remix_6;
 extern struct Scene scene_remix_7;
 extern struct Scene scene_remix_8;
 
+// Extra Games
+extern struct Scene scene_karate_man_extra;
+extern struct Scene scene_rhythm_tweezers_extra;
+extern struct Scene scene_marching_orders_extra;
+extern struct Scene scene_spaceball_extra;
+extern struct Scene scene_clappy_trio_extra;
+extern struct Scene scene_remix_1_extra;
+
 // Medal Corner Games
 extern struct Scene scene_mr_upbeat;
 extern struct Scene scene_sick_beats_endless;

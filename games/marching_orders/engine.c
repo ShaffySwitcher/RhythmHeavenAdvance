@@ -5,22 +5,22 @@
 
 
 // [D_089e50d8] All Animations
-struct Animation *marching_anim[][4] = {
-    /* 0x00 */ { anim_marching1_turn_l, anim_space_rabbit_turn_l, anim_marching1_turn_l, anim_marching2_turn_l },
-    /* 0x01 */ { anim_marching1_turn_r, anim_space_rabbit_turn_r, anim_marching1_turn_r, anim_marching2_turn_r },
-    /* 0x02 */ { anim_marching1_point_l, anim_space_rabbit_point_l, anim_marching1_point_l, anim_marching2_point_l },
-    /* 0x03 */ { anim_marching1_point_r, anim_space_rabbit_point_r, anim_marching1_point_r, anim_marching2_point_r },
-    /* 0x04 */ { anim_marching1_commander_angry, anim_space_rabbit_commander_angry, anim_marching1_commander_angry, anim_marching2_commander_angry },
-    /* 0x05 */ { anim_marching1_stop_beat, anim_space_rabbit_stop_beat, anim_marching1_stop_beat, anim_marching2_stop_beat },
-    /* 0x06 */ { anim_marching1_beat, anim_space_rabbit_beat, anim_marching1_beat, anim_marching2_beat },
-    /* 0x07 */ { anim_marching1_step_r, anim_space_rabbit_step_r, anim_marching1_step_r, anim_marching2_step_r },
-    /* 0x08 */ { anim_marching1_step_l, anim_space_rabbit_step_l, anim_marching1_step_l, anim_marching2_step_l },
-    /* 0x09 */ { anim_marching1_head_turn_r, anim_space_rabbit_head_turn_r, anim_marching1_head_turn_r, anim_marching2_head_turn_r },
-    /* 0x0A */ { anim_marching1_head_turn_l, anim_space_rabbit_head_turn_l, anim_marching1_head_turn_l, anim_marching2_head_turn_l },
-    /* 0x0B */ { anim_marching1_tutorial_icons, anim_space_rabbit_tutorial_icons, anim_marching1_tutorial_icons, anim_marching2_tutorial_icons },
-    /* 0x0C */ { anim_marching1_angry_puff, anim_space_rabbit_angry_puff, anim_marching1_angry_puff, anim_marching2_angry_puff },
-    /* 0x0D */ { anim_marching1_clap, anim_space_rabbit_clap, anim_marching1_clap, anim_marching2_clap },
-    /* 0x0E */ { anim_marching1_commander_annoyed, anim_space_rabbit_commander_annoyed, anim_marching1_commander_annoyed, anim_marching2_commander_annoyed }
+struct Animation *marching_anim[][5] = {
+    /* 0x00 */ { anim_marching1_turn_l, anim_space_rabbit_turn_l, anim_marching1_turn_l, anim_marching2_turn_l, anim_marching1_turn_l },
+    /* 0x01 */ { anim_marching1_turn_r, anim_space_rabbit_turn_r, anim_marching1_turn_r, anim_marching2_turn_r, anim_marching1_turn_r },
+    /* 0x02 */ { anim_marching1_point_l, anim_space_rabbit_point_l, anim_marching1_point_l, anim_marching2_point_l, anim_marching1_point_l },
+    /* 0x03 */ { anim_marching1_point_r, anim_space_rabbit_point_r, anim_marching1_point_r, anim_marching2_point_r, anim_marching1_point_r },
+    /* 0x04 */ { anim_marching1_commander_angry, anim_space_rabbit_commander_angry, anim_marching1_commander_angry, anim_marching2_commander_angry, anim_marching1_commander_angry },
+    /* 0x05 */ { anim_marching1_stop_beat, anim_space_rabbit_stop_beat, anim_marching1_stop_beat, anim_marching2_stop_beat, anim_marching1_stop_beat },
+    /* 0x06 */ { anim_marching1_beat, anim_space_rabbit_beat, anim_marching1_beat, anim_marching2_beat, anim_marching1_beat },
+    /* 0x07 */ { anim_marching1_step_r, anim_space_rabbit_step_r, anim_marching1_step_r, anim_marching2_step_r, anim_marching1_step_r },
+    /* 0x08 */ { anim_marching1_step_l, anim_space_rabbit_step_l, anim_marching1_step_l, anim_marching2_step_l, anim_marching1_step_l },
+    /* 0x09 */ { anim_marching1_head_turn_r, anim_space_rabbit_head_turn_r, anim_marching1_head_turn_r, anim_marching2_head_turn_r, anim_marching1_head_turn_r },
+    /* 0x0A */ { anim_marching1_head_turn_l, anim_space_rabbit_head_turn_l, anim_marching1_head_turn_l, anim_marching2_head_turn_l, anim_marching1_head_turn_l },
+    /* 0x0B */ { anim_marching1_tutorial_icons, anim_space_rabbit_tutorial_icons, anim_marching1_tutorial_icons, anim_marching2_tutorial_icons, anim_marching1_tutorial_icons },
+    /* 0x0C */ { anim_marching1_angry_puff, anim_space_rabbit_angry_puff, anim_marching1_angry_puff, anim_marching2_angry_puff, anim_marching1_angry_puff },
+    /* 0x0D */ { anim_marching1_clap, anim_space_rabbit_clap, anim_marching1_clap, anim_marching2_clap, anim_marching1_clap },
+    /* 0x0E */ { anim_marching1_commander_annoyed, anim_space_rabbit_commander_annoyed, anim_marching1_commander_annoyed, anim_marching2_commander_annoyed, anim_marching1_commander_annoyed }
 };
 
 // [D_089e51c8] Animation Table
@@ -202,7 +202,8 @@ struct GraphicsTable *marching_gfx_tables[] = {
     /* 0x00 */ marching_orders_1_gfx_table,
     /* 0x01 */ marching_orders_remix_7_gfx_table,
     /* 0x02 */ marching_orders_1_gfx_table,
-    /* 0x03 */ marching_orders_2_gfx_table
+    /* 0x03 */ marching_orders_2_gfx_table,
+    /* 0x04 */ marching_orders_1_gfx_table,
 };
 
 // [D_089e5368] Position of <sprite> per Animation Frame
@@ -372,12 +373,12 @@ EngineEvent marching_common_events[] = {
 
 // [D_089e54fc] Engine Events
 EngineEvent marching_engine_events[] = {
-    /* 0x00 */ func_08034544,
-    /* 0x01 */ func_080346e0,
-    /* 0x02 */ func_080347c0,
-    /* 0x03 */ func_0803481c,
-    /* 0x04 */ func_08034850,
-    /* 0x05 */ func_08034ae4,
+    /* 0x00 */ marching_play_action,
+    /* 0x01 */ marching_set_commander_action,
+    /* 0x02 */ marching_set_tutorial_icon,
+    /* 0x03 */ marching_enable_conveyor,
+    /* 0x04 */ marching_set_marchers_pointing,
+    /* 0x05 */ marching_play_sound,
     /* 0x06 */ marching_engine_event_stub
 };
 
@@ -764,6 +765,68 @@ struct MarchingSfxData marching_sfx_table[][18] = {
         },
         /* CMD_TURN_LEFT */ {
             /* Sound  */ &s_f_marcher2_v_hidarimukeS2_seqData,
+            /* Volume */ INT_TO_FIXED(1.0),
+            /* Pitch  */ INT_TO_FIXED(0.0)
+        }
+    },
+    /* ver4 */ {
+        /* SHOUT_START */ {
+            /* Sound  */ &s_guntai_v_es_seqData,
+            /* Volume */ INT_TO_FIXED(1.0),
+            /* Pitch  */ INT_TO_FIXED(0.0)
+        },
+        /* SHOUT_HALT */ {
+            /* Sound  */ &s_guntai_v_yoh_seqData,
+            /* Volume */ INT_TO_FIXED(1.0),
+            /* Pitch  */ INT_TO_FIXED(0.0)
+        },
+        /* SHOUT_TURN */ {
+            /* Sound  */ &s_guntai_v_ka_seqData,
+            /* Volume */ INT_TO_FIXED(1.0),
+            /* Pitch  */ INT_TO_FIXED(0.0)
+        },
+        /* CMD_ATTENTION */ {
+            /* Sound  */ &s_guntai_v_zentai1_seqData,
+            /* Volume */ INT_TO_FIXED(1.0),
+            /* Pitch  */ INT_TO_FIXED(0.0)
+        },
+        /* CMD_MARCH */ {
+            /* Sound  */ &s_guntai_v_susume_seqData,
+            /* Volume */ INT_TO_FIXED(1.0),
+            /* Pitch  */ INT_TO_FIXED(0.0)
+        },
+        /* CMD_HALT */ {
+            /* Sound  */ &s_guntai_v_tomare_seqData,
+            /* Volume */ INT_TO_FIXED(1.0),
+            /* Pitch  */ INT_TO_FIXED(0.0)
+        },
+        /* CMD_RIGHT_FACE */ {
+            /* Sound  */ &s_guntai_v_migi_muke1_seqData,
+            /* Volume */ INT_TO_FIXED(1.0),
+            /* Pitch  */ INT_TO_FIXED(0.0)
+        },
+        /* CMD_RIGHT_FACE_F */ {
+            /* Sound  */ &s_guntai_v_migi_muke2_seqData,
+            /* Volume */ INT_TO_FIXED(1.0),
+            /* Pitch  */ INT_TO_FIXED(0.0)
+        },
+        /* CMD_TURN_RIGHT */ {
+            /* Sound  */ &s_guntai_v_migi_seqData,
+            /* Volume */ INT_TO_FIXED(1.0),
+            /* Pitch  */ INT_TO_FIXED(0.0)
+        },
+        /* CMD_LEFT_FACE */ {
+            /* Sound  */ &s_guntai_v_hidari_muke1_seqData,
+            /* Volume */ INT_TO_FIXED(1.0),
+            /* Pitch  */ INT_TO_FIXED(0.0)
+        },
+        /* CMD_LEFT_FACE_F */ {
+            /* Sound  */ &s_guntai_v_hidari_muke2_seqData,
+            /* Volume */ INT_TO_FIXED(1.0),
+            /* Pitch  */ INT_TO_FIXED(0.0)
+        },
+        /* CMD_TURN_LEFT */ {
+            /* Sound  */ &s_guntai_v_hidari_seqData,
             /* Volume */ INT_TO_FIXED(1.0),
             /* Pitch  */ INT_TO_FIXED(0.0)
         }

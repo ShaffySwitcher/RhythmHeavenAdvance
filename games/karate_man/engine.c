@@ -188,7 +188,8 @@ struct GraphicsTable *karate_gfx_tables[] = {
     /* 0x00 */ karate_man_remix_gfx_table,
     /* 0x01 */ karate_man_faces_gfx_table,
     /* 0x02 */ karate_man_remix_gfx_table,
-    /* 0x03 */ karate_man_2_gfx_table
+    /* 0x03 */ karate_man_2_gfx_table,
+    /* 0x04 */ karate_man_remix_gfx_table,
 };
 
 // [D_089df1bc] BG Face Textures

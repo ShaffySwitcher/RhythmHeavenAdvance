@@ -151,6 +151,7 @@ return
 
 
 script script_drum_intro_unused_main
+    enable_pause_menu
     set_tempo 120
     set_music_volume 0
     mod_music_volume 256, 192
@@ -235,7 +236,6 @@ script script_drum_intro_unused_main
     run gameplay_display_text_and_wait
     dmi_event02 1
     rest 12
-    run set_next_scene, scene_game_select
 return
 
 .end

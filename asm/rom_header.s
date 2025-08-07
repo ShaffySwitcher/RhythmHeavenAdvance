@@ -51,7 +51,7 @@
 /* 080000a0 */ .ascii "RHYTHMADVANC"
 
 @ Game Code
-/* 080000ac */ .ascii "BRIE"
+/* 080000ac */ .ascii "BRIE" // shoutout to shaffy for this one
 
 @ Maker Code
 /* 080000b0 */ .ascii "01"

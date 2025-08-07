@@ -51,6 +51,7 @@ define_gameplay_scene scene_drum_intro_unused_2_skipped_intro, script_drum_intro
 @ Drum Intro (Unused 2) - Main Script
 
 script script_drum_intro_unused_2_main
+    enable_pause_menu
     mod_music_volume 0, 192
     rest 24
     dmi_event04 TRUE

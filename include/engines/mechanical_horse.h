@@ -16,7 +16,68 @@ enum HorseLessonsEnum {
 
 // Engine Types:
 struct MechanicalHorseEngineData {
-    u8 pad[0x310];
+    u8 version;
+    struct MechanicalHorseHorse {
+        s16 sprite;
+        u8 unk2;
+        u8 cel;
+        u8 unk4;
+        s24_8 pos_x;
+        s24_8 pos_y;
+        u32 unk10;
+        u32 unk14;
+    } horse[2];
+    struct MechanicalHorseJockey {
+        s16 sprite;
+        u8 unk2;
+        u8 cel;
+    } jockey[2];
+    struct MechanicalHorseSub {
+        s16 sprite;
+        u8 unk2;
+        u8 unk3;
+        u8 unk4;
+        s24_8 pos_x;
+        s24_8 pos_y;
+        u32 pos_z;
+        s24_8 unk14[2];
+    } unk3c[20]; // clip clop text?
+    struct MechanicalHorseSub4 {
+        s16 sprite;
+        u8 unk2;
+        u8 unk3;
+        u8 unk4;
+        s24_8 pos_x;
+        s24_8 pos_y;
+        u32 unk10;
+        u32 unk14;
+    } unk26c[4]; // no clue
+    u8 unk2cc;
+    s32 unk2d0;
+    u32 unk2d4;
+    u32 unk2d8;
+    struct BitmapFontOBJ* text_font;
+    s16 text_sprite;
+    u32 unk2e4;
+    u8 unk2e8;
+    u8 unk2e9;
+    u8 unk2ea;
+    u8 unk2eb;
+    u16 music_volume;
+    u16 unk2ee;
+    u16 unk2f0;
+    struct AffineSprite* tachometer_hand;
+    struct AffineSprite* speedometer_hand;
+    s16 high_speed_light_sprite;
+    s8 unk2fe; // current bg?
+    s8 unk2ff; // next bg?
+    u8 unk300;
+    u16 unk302;
+    u8 unk304;
+    u8 pad305;
+    s8 unk306;
+    u8 pad307[0x5];
+    u24_8 unk30c;
 };
 
 struct MechanicalHorseCue {
@@ -40,7 +101,7 @@ extern const char D_0805a9fc[];
 extern const s32 D_0805aa00[];
 extern const s32 D_0805aa10[];
 extern const s32 D_0805aa20[];
-extern const s32 D_0805aa40[];
+extern const s32 D_0805aa40[][2];
 extern const u32 D_0805aa60[][4];
 extern const s32 D_0805aaa0[];
 extern const s32 D_0805aab0[][4];
