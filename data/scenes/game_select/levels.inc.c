@@ -218,8 +218,8 @@ struct LevelData level_data_table[] = {
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_ninja_bodyguard_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "I cannot apologize enough, my lord!",
-            /* OK        */ "Sorry...",
+            /* TRY_AGAIN */ "My lord has fainted! Nooooo!",
+            /* OK        */ "I cannot apologize enough, my lord!",
             /* SUPERB    */ "Not a scratch!"
         }
     },
