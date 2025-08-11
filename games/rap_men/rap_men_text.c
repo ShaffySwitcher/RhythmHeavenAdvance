@@ -9,13 +9,13 @@ const char D_0805e914[] = "The \"Huh?\" lines were just confusing.";
 
 const char D_0805e938[] = "The \"Huh?\" lines were really rhythmical!";
 
-const char D_0805e960[] = "\"I suppose\" we fumbled those lines.";
+const char D_0805e960[] = "I dont think \"ya feel me\" all too well";
 
-const char D_0805e988[] = "\"I suppose\" those verses were good!";
+const char D_0805e988[] = "I think \"ya feel me\" a lot!";
 
-const char D_0805e9ac[] = "\"The GREATEST!\" lines were the WORST.";
+const char D_0805e9ac[] = "\"The AWESOME\" lines were anything but!";
 
-const char D_0805e9d8[] = "\"The GREATEST!\" lines really were!";
+const char D_0805e9d8[] = "\"The AWESOME!\" lines were exactly that!";
 
 const char D_0805ea04[] = "RAPNOTES from the Boys";
 
@@ -47,13 +47,13 @@ const char D_0805eb34[] = "ＯＫ！　Ｙｏｕ’ｖｅ　ｇｏｔ　ｉｔ！";
 
 const char D_0805eb3c[] = "Ｔｈａｔ　ｗａｓ　ｔｈｅ　“.bＨｕｈ？.8”　ｖｅｒｓｅ．";
 
-const char D_0805eb6c[] = "Ｎｏｗ　ｌｅｔ’ｓ　ｔｒｙ　ｔｈｅ　　“.9Ｉ　ｓｕｐｐｏｓｅ.8”　ｖｅｒｓｅ．";
+const char D_0805eb6c[] = "Ｎｏｗ　ｌｅｔ’ｓ　ｔｒｙ　ｔｈｅ　　“.9Ｙａ　ｆｅｅｌ　ｍｅ．.8”　ｖｅｒｓｅ．";
 
 const char D_0805eb94[] = "Ｔａｋｅ　ａ　ｌｉｓｔｅｎ．";
 
 const char D_0805ebac[] = "Ｙｏｕ　ｇｏｔ　ｔｈｉｓ！";
 
-const char D_0805ebc4[] = "Ｎｏｗ　ｌｅｔ’ｓ　ｔｒｙ　ｏｕｒ　“.aＧＲＥＡＴＥＳＴ！.8”　ｖｅｒｓｅ．";
+const char D_0805ebc4[] = "Ｎｏｗ　ｌｅｔ’ｓ　ｔｒｙ　ｏｕｒ　“.aｓｏ　ＡＷＥＳＯＭＥ！.8”　ｖｅｒｓｅ．";
 
 const char D_0805ebf4[] = "Ｇｉｖｅ　ｉｔ　ａ　ｌｉｓｔｅｎ．．．";
 
