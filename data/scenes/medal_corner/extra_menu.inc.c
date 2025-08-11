@@ -17,19 +17,6 @@ struct MedalCornerLevel extra_menu_levels[] = {
         /* Anim   */ NULL,
         /* Medals */ 0
     },
-    /* UNUSED_SPACEBALL*/ {
-        /* Scene  */ &scene_spaceball_unused,
-        /* Title  */ "Spaceball (Unused)",
-        /* Anim   */ NULL,
-        /* Medals */ 0
-    },
-    /* UNUSED_METRONOME */ {
-        /* Scene  */ &scene_metronome,
-        /* Title  */ "Metronome (Unused)",
-        /* Anim   */ NULL,
-        /* Medals */ 0
-    }
-
 };
 
 struct GraphicsTable extra_menu_gfx_table[] = {
