@@ -1,5 +1,6 @@
 
-![Rhythm Heaven Advance](https://github.com/user-attachments/assets/c8afc75d-d86d-48e7-9e94-42f2207fac84)
+<img width="1536" height="1370" alt="Rhythm Heaven Advance" src="https://github.com/user-attachments/assets/f3d2c074-bd62-4c75-bd14-90f377e27762" />
+
 # Rhythm Heaven Advance:
 This is the newest and latest version of Rhythm Heaven Advance, based on the WIP decompilation of Rhythm Tengoku.
 "Rhythm Heaven Advance" is the brand new and improved translation patch for Rhythm Tengoku, translating all the text and graphics to be as faithful as possible to the original source, while making changes befitting a localization.
