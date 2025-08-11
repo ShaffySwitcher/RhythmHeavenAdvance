@@ -43,7 +43,7 @@ text text_rap_women_unused_naisho_desu_ka
 endtext
 
 text text_rap_women_unused_kare_no_oyatsu_da_ne
-    .asciz ".9:1‚s‚ˆ‚…‚“‚…@‚‚’‚…@‚‚Œ‚Œ@‚”‚ˆ‚…‚‰‚’@‚“‚‚‚ƒ‚‹‚“C.9:0@‚x‚@‚“‚…‚…H.8:1"
+    .asciz ".9:1‚s‚ˆ‚…‚“‚…@‚‚’‚…@‚‚Œ‚Œ@‚”‚ˆ‚…‚‰‚’@‚“‚‚‚ƒ‚‹‚“C.9:0@‚™‚@‚“‚…‚…H.8:1"
 endtext
 
 text text_rap_women_unused_tabeteii_kamo_ne
@@ -71,11 +71,11 @@ text text_rap_women_unused_betsubara_saikou
 endtext
 
 text text_rap_women_unused_kare_ni_wa_naisho
-    .asciz ".a:1‚b‚Œ‚•‚…‚Œ‚…‚“‚“@‚”‚ˆ‚‚”@‚—‚…@.a:0‚‚•‚’@‚r‚d‚b‚q‚d‚sI.8:1"
+    .asciz ".a:1‚b‚Œ‚•‚…‚Œ‚…‚“‚“@‚”‚ˆ‚‚”@‚—‚…@.a:0‚r‚s‚n‚k‚d@‚r‚n‚l‚dI.8:1"
 endtext
 
 text text_rap_women_unused_dare_ni_mo_naisho
-    .asciz ".a:1‚c‚‚f‚”@‚”‚…‚Œ‚Œ@f‚…‚@‚”‚ˆ‚‚”@‚—‚…f‚’‚…@.a:0‚k‚n‚`‚s‚g‚r‚n‚l‚dI.8:1"
+    .asciz ".a:1‚s‚…‚Œ‚Œ@f‚…‚@‚—‚…@‚‚’‚…@.a:0‚k‚n‚`‚s‚g‚r‚n‚l‚dI.8:1"
 endtext
 
 
