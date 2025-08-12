@@ -355,9 +355,11 @@ script script_remix_6_main
     rest 12
     rest 6
     rat_race_event05 5
-    rest 6
+    rest 4
     rat_race_event0D 2
     rat_race_event01 2
+    play_sfx s_rat_squeak_seqData
+    rest 2
     spawn_cue CUE_DASH
     rest 12
     rest 6

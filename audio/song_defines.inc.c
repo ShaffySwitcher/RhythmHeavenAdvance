@@ -1924,3 +1924,5 @@
 /* 1921 */ DEFINE_SONG( &s_iai_bgm_studio_seqData,           MUSIC_PLAYER_0 )
 /* 1922 */ DEFINE_SONG( &s_rabbit_bgm_studio_seqData,        MUSIC_PLAYER_0 )
 /* 1923 */ DEFINE_SONG( &s_rat_bgm_studio_seqData,           MUSIC_PLAYER_0 )
+/* 1924 */ DEFINE_SONG( &s_rat_paw_seqData,                  SFX_PLAYER_0   )
+/* 1925 */ DEFINE_SONG( &s_rat_squeak_seqData,               SFX_PLAYER_0   )
