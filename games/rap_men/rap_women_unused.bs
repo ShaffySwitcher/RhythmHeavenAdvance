@@ -71,7 +71,7 @@ text text_rap_women_unused_betsubara_saikou
 endtext
 
 text text_rap_women_unused_kare_ni_wa_naisho
-    .asciz ".a:1‚b‚Œ‚•‚…‚Œ‚…‚“‚“@‚”‚ˆ‚‚”@‚—‚…@.a:0‚r‚s‚n‚k‚d@‚r‚n‚l‚dI.8:1"
+    .asciz ".a:1‚b‚Œ‚•‚…‚Œ‚…‚“‚“@‚”‚ˆ‚‚”@‚—‚…@.a:0‚r‚s‚n‚k‚d@f‚d‚lI.8:1"
 endtext
 
 text text_rap_women_unused_dare_ni_mo_naisho
