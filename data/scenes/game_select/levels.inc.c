@@ -197,7 +197,7 @@ struct LevelData level_data_table[] = {
         /* Level Desc.   */ "See that ball bouncing\n"
                             "down the road?\n"
                             "It's a rather nice ball,\n"
-                            "so dont let it fall!",
+                            "so don't let it fall!",
         /* Level Icon    */ 50,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_bouncy_road_2_gfx_tables,
