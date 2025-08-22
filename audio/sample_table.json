@@ -5339,6 +5339,78 @@
         {
             "sample": "ninja_bodyguard_huh.wav",
             "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_01.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_02.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_03.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_04.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_05.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_06.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_07.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_08.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_09.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_10.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_11.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_12.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_13.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_14.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_15.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_16.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_17.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_18.wav",
+            "pitch": "C5"
         }
     ]
 }
