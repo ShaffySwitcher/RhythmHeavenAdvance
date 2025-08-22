@@ -9,7 +9,7 @@ const char D_0805e914[] = "The \"Huh?\" lines were just confusing.";
 
 const char D_0805e938[] = "The \"Huh?\" lines were really rhythmical!";
 
-const char D_0805e960[] = "I dont think \"ya feel me\" all too well";
+const char D_0805e960[] = "I don't think \"ya feel me\" all too well";
 
 const char D_0805e988[] = "I think \"ya feel me\" a lot!";
 
