@@ -5411,6 +5411,14 @@
         {
             "sample": "confmachine_18.wav",
             "pitch": "C5"
+        },
+        {
+            "sample": "fireworks_01.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "fireworks_02.wav",
+            "pitch": "C5"
         }
     ]
 }
