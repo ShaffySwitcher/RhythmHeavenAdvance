@@ -422,17 +422,17 @@ script script_fireworks_practice
         rest 24
         rest 24
         fireworks_play_sfx SFX_THREE
-        play_sfx_synced s_hanabi_1_seqData, 150, 256
+        play_sfx_synced s_hanabi_wish1_seqData, 150, 256
         print_text_f D_0805ce80
         spawn_cue CUE_NORMAL_FIREWORK
         rest 24
-        play_sfx s_hanabi_2_seqData
+        play_sfx s_hanabi_wish2_seqData
         print_text_f D_0805cea4
         rest 24
-        play_sfx s_hanabi_3_seqData
+        play_sfx s_hanabi_wish3_seqData
         print_text_f D_0805cec8
         rest 24
-        play_sfx s_hanabi_hai_seqData
+        play_sfx s_hanabi_wish4_seqData
         print_text_f D_0805ceec
         rest 24
         clear_text_f
@@ -442,17 +442,17 @@ script script_fireworks_practice
         rest 24
         rest 24
         fireworks_play_sfx SFX_THREE
-        play_sfx_synced s_hanabi_1_seqData, 150, 256
+        play_sfx_synced s_hanabi_wish1_seqData, 150, 256
         print_text_f D_0805ce80
         spawn_cue CUE_NORMAL_FIREWORK
         rest 24
-        play_sfx s_hanabi_2_seqData
+        play_sfx s_hanabi_wish2_seqData
         print_text_f D_0805cea4
         rest 24
-        play_sfx s_hanabi_3_seqData
+        play_sfx s_hanabi_wish3_seqData
         print_text_f D_0805cec8
         rest 24
-        play_sfx s_hanabi_hai_seqData
+        play_sfx s_hanabi_wish4_seqData
         print_text_f D_0805ceec
         rest 24
         clear_text_f
@@ -492,7 +492,7 @@ script script_fireworks_practice
         print_text_f D_0805cfac
         spawn_cue CUE_SPIRIT_SPARKLER
         rest 24
-        play_sfx s_hanabi_hai_seqData
+        play_sfx s_hanabi_wish4_seqData
         print_text_f D_0805cfcc
         rest 24
         clear_text_f
@@ -513,7 +513,7 @@ script script_fireworks_practice
         print_text_f D_0805cfac
         spawn_cue CUE_SPIRIT_SPARKLER
         rest 24
-        play_sfx s_hanabi_hai_seqData
+        play_sfx s_hanabi_wish4_seqData
         print_text_f D_0805cfcc
         rest 24
         clear_text_f
@@ -552,7 +552,7 @@ script script_fireworks_practice
         rest 8
         print_text_f D_0805d090
         rest 24
-        play_sfx s_hanabi_hai_seqData
+        play_sfx s_hanabi_wish4_seqData
         print_text_f D_0805d0b0
         rest 24
         clear_text_f
@@ -571,7 +571,7 @@ script script_fireworks_practice
         rest 8
         print_text_f D_0805d090
         rest 24
-        play_sfx s_hanabi_hai_seqData
+        play_sfx s_hanabi_wish4_seqData
         print_text_f D_0805d0b0
         rest 24
         clear_text_f
