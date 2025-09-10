@@ -314,7 +314,41 @@ struct ReadingMaterial reading_material_table[] = {
             "Korezo Made in Japan\n"
             "\n"
             "Sore Hikkuri Kaette\n"
-            "Ha~ Bon Odori~",
+            "Ha~ Bon Odori~\n"
+            "\n"
+            "\n"
+            "Translation: Mizuka Lover & ThisIsMyUsername\n"
+            "\n"
+            "\n"
+            "Haa~\n"
+            "             When the fireworks fly~\n"
+            "\n"
+            "Haa~ Ah~\n"
+            "            Our spirits will be high~\n"
+            "\n"
+            "Haa~\n"
+            "            If we perform for more eyes~\n"
+            "\n"
+            "Haa~ Ah~\n"
+            "            Ensure our profits will rise~\n"
+            "\n"
+            "Here's our celebration!\n"
+            "Of their generation!\n"
+            "\n"
+            "So let's all turn around and Dondo Pan Pan\n"
+            "Ha~ Bon Odori~\n"
+            "\n"
+            "Haa~\n"
+            "            When the rain goes away~\n"
+            "\n"
+            "Haa~ Ah~\n"
+            "            Climb the tower and play~\n"
+            "\n"
+            "Come on! Join our Celebration!\n"
+            "Honor our Festival Made in Japan\n"
+            "\n"
+            "So let's all turn around and Dondo Pan Pan\n"
+            "Ha~ Bon Odori~\n",
         /* STYLE ---------------------------------------------------------- */
             /* GFX */ reading_style_sea_gfx_table,
             /* BGM */ &reading_style_sea_bgm
@@ -922,6 +956,28 @@ struct ReadingMaterial reading_material_table[] = {
         /* STYLE ---------------------------------------------------------- */
             /* GFX */ reading_style_haiku_gfx_table,
             /* BGM */ &reading_style_haiku_bgm
+        /* ---------------------------------------------------------------- */
+    },
+
+    /* READING_MATERIAL_TEST */ {
+        /* TITLE ---------------------------------------------------------- */
+            "Test Material",
+        /* BODY ----------------------------------------------------------- */
+            "This is a test reading material for the\n"
+            "Rhythm Heaven Advance project.\n"
+            "\n"
+            "If you can see this text, then the reading material\n"
+            "system is working correctly!\n"
+            "\n"
+            "This entry was added as index 20 in the\n"
+            "reading materials table and is automatically\n"
+            "unlocked from the start of the game.\n"
+            "\n"
+            "You can replace this content with proper\n"
+            "credits or any other information.",
+        /* STYLE ---------------------------------------------------------- */
+            /* GFX */ reading_style_mail_gfx_table,
+            /* BGM */ &reading_style_mail_bgm
         /* ---------------------------------------------------------------- */
     }
 };
