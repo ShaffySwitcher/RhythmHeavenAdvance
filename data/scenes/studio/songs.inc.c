@@ -93,7 +93,7 @@ struct StudioEntry studio_song_table[] = {
         /* Drum Script */ script_studio_bon_odori
     },
     /* BON_DANCE */ {
-        /* Full Title  */ "Bon Dance",
+        /* Full Title  */ "TheÅôBon Dance",
         /* Short Title */ NULL,
         /* Drum Script */ script_studio_bon_dance
     },

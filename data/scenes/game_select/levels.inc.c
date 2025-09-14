@@ -641,7 +641,7 @@ struct LevelData level_data_table[] = {
     },
     /* BON_DANCE */ {
         /* Entry Scene   */ &scene_bon_dance,
-        /* Level Name    */ "Bon Dance",
+        /* Level Name    */ "TheÅôBon Dance",
         /* Level Desc.   */ "The Bon Festival has\n"
                             "a new, modern look!\n"
                             "Clap along to the\n"
