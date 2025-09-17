@@ -959,22 +959,54 @@ struct ReadingMaterial reading_material_table[] = {
         /* ---------------------------------------------------------------- */
     },
 
-    /* READING_MATERIAL_TEST */ {
+    /* READING_MATERIAL_CREDITS */ {
         /* TITLE ---------------------------------------------------------- */
-            "Test Material",
+            "Credits",
         /* BODY ----------------------------------------------------------- */
-            "This is a test reading material for the\n"
+            "This is a temporary, unlocked from the start,\n"
+            "credits reading material for the\n"
             "Rhythm Heaven Advance project.\n"
             "\n"
-            "If you can see this text, then the reading material\n"
+            "I implemented this to see if its possible and if the\n"
             "system is working correctly!\n"
             "\n"
-            "This entry was added as index 20 in the\n"
-            "reading materials table and is automatically\n"
-            "unlocked from the start of the game.\n"
+            "For the actual system, I want it to be unlockable\n"
+            "And for the writing to be (not to spoil it) unique\n"
+            "But for now though, here are the proper credits for all\n"
+            "the incredible people who contributed to this project:\n"
             "\n"
-            "You can replace this content with proper\n"
-            "credits or any other information.",
+            "Asset Assembly:\n"
+            "+ SkyeStage\n"
+            "+ Cash Banooka\n"
+            "+ Geometricentric\n"
+            "+ SomethingAccurate\n"
+            "+ TinyCastleGuy\n"
+            "+ TheEggo5\n"
+            "+ Vincells\n"
+            "\n"
+            "Main Programming:\n"
+            "+ Itaific\n"
+            "\n"
+            "Coding Contributions:\n"
+            "+ Deni_iguess\n"
+            "+ patataofcourse\n"
+            "+ Arthurtilly\n"
+            "+ Estexnt\n"
+            "+ Nibblez\n"
+            "+ Conhlee\n"
+            "\n"
+            "Translation and Localization:\n"
+            "+ Mizuka Lover\n"
+            "+ somethingAccurate\n"
+            "+ patataofcourse\n"
+            "\n"
+            "SFX:\n"
+            "+ Rhythm Heaven Megamix\n"
+            "+ Cherryberryfaygo\n"
+            "+ Nabix and all of his siblings\n"
+            "\n"
+            "Thank you all for your hard work!\n"
+            "Rhythm Heaven Advance exists because of you!\n",
         /* STYLE ---------------------------------------------------------- */
             /* GFX */ reading_style_mail_gfx_table,
             /* BGM */ &reading_style_mail_bgm
