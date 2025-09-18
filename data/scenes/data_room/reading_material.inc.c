@@ -992,6 +992,7 @@ struct ReadingMaterial reading_material_table[] = {
             "+ Borists\n"
             "Main Programming:\n"
             "+ Itaific\n"
+            "+ Shaffy\n"
             "\n"
             "Coding Contributions:\n"
             "+ Deni_iguess\n"
