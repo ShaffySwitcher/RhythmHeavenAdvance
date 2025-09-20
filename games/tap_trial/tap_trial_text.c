@@ -5,7 +5,7 @@
 /* Game Text - Tap Trial */
 
 
-const char D_0805c0d0[] = "‚«‚Ù‚ñ‚ª@‚Å‚«‚Ä‚Ü‚¹‚ñ‚ËB";
+const char D_0805c0d0[] = "You need to go over the basics again.";
 
 const char D_0805c0ec[] = "";
 
