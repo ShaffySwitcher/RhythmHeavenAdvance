@@ -26,7 +26,6 @@ enum ReadingMaterialEnum {
     /* 17 */ READING_MATERIAL_RHYTHM_DIAGNOSIS,
     /* 18 */ READING_MATERIAL_RHYTHM_POEM,
     /* 19 */ READING_MATERIAL_RHYTHM_HAIKU,
-    /* 20 */ READING_MATERIAL_CREDITS
 };
 
 enum ReadingEventsEnum {

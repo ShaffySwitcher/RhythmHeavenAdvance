@@ -47,7 +47,7 @@ void dataroom_scene_init_gfx1(void) {
 
 // Listbox - Get Item Name
 const char *dataroom_listbox_get_item_name(u32 item) {
-    if (item >= 21) {
+    if (item >= 20) {
         return NULL;
     }
 
@@ -118,7 +118,7 @@ void dataroom_scene_start(void *sVar, s32 dArg) {
 
     gDataRoom->listbox = create_new_listbox(
             get_current_mem_id(), 10, 128, 30, 0, 1, 3,
-            80, 16, 0x8800, 16, sListSelItem, 21, anim_data_room_cursor, 3, 4, sListSelLine,
+            80, 16, 0x8800, 16, sListSelItem, 20, anim_data_room_cursor, 3, 4, sListSelLine,
             dataroom_listbox_get_item_name, NULL);
     listbox_run_func_on_scroll(gDataRoom->listbox, dataroom_listbox_on_scroll, 0);
     listbox_run_func_on_finish(gDataRoom->listbox, dataroom_listbox_on_finish, 0);

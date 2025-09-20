@@ -55,7 +55,7 @@ extern struct SaveBuffer {
         u8 playsUntilNextCampaign;
         u8 currentCampaign;
         u8 unk26A;
-        u8 readingMaterialUnlocked[21];
+        u8 readingMaterialUnlocked[20];
         u8 drumKitsUnlocked[15];
         u8 totalMedals;
         u8 unk28F;
