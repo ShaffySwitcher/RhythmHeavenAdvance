@@ -137,16 +137,16 @@ const char D_0805a038[] = "\n前のめりです。";
 
 const char D_0805a048[] = "\n遅れてます。";
 
-const char D_0805a058[] = "\nベリー　グッド！！";
+const char D_0805a058[] = "\nFlawless!";
 
-const char D_0805a06c[] = "\nグー！";
+const char D_0805a06c[] = "\nPretty good!";
 
 // [D_089e1778] Rank Text
 const char *drum_lessons_rank_text[] = {
     /* RANK_0 */ "\n",
     /* RANK_C */ "\nNot bad!",
-    /* RANK_B */ "\nThat's pretty good, man!",
-    /* RANK_A */ "\nVery good!",
+    /* RANK_B */ "\nYou're doin' pretty good!",
+    /* RANK_A */ "\nYeah! That was great!",
     /* RANK_S */ "\nUnbelievable!",
 };
 

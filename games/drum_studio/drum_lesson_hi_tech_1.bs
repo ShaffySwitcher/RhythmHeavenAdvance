@@ -30,10 +30,10 @@ define_gameplay_scene scene_drum_lesson_hi_tech_1, script_drum_lesson_hi_tech_1_
 @ Drum Lesson (Hi-Tech 1) - Data
 
 text D_0806557c
-    .ascii "Listen carefully, then copy my\n"
-    .ascii "pattern whenever you're\n"
-    .ascii "ready. If you stop playing,\n"
-    .asciz "I'll show it to you again!"
+    .ascii "Listen to my pattern, then\n"
+    .ascii "repeat when you're ready.\n"
+    .ascii "I'll show it to you again\n"
+    .asciz "if you stop playing."
 endtext
 
 
