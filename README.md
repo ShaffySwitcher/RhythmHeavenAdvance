@@ -1,3 +1,6 @@
+### A quick note for now: this project will be subject to updates, but it is being closed-sourced*. Releases will be posted on the project page.
+*\* Assets will still be uploaded here when applicable.*
+
 [**>>> Download the nightly build here! <<<**](https://nightly.link/ShaffySwitcher/RhythmHeavenAdvance/workflows/build/main/rhythmheavenadvance-nightly.zip)
 
 **⚠️ This is not the main Advance repository. Please refer to the parent repository for main development!**
