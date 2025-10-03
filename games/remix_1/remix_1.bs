@@ -716,7 +716,7 @@ script script_remix_1_main
     rest 24
 
     load_karate_man
-    print_text_f 4
+    print_text_f 5
     rest 24
     rest 24
     clear_text_f
