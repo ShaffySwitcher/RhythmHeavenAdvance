@@ -122,7 +122,7 @@ text text_remix_4_honto_desu_ka
 endtext
 
 text text_remix_4_wakarimasu_ka
-    .asciz ".b:1‚h‚”f‚“@‚‚’‚…‚”‚”‚™@‚ƒ‚Œ‚…‚‚’C@.b:0‚ˆ‚•‚ˆH.8:1"
+    .asciz ".b:1‚x‚‚•@‚‡‚…‚”@‚‰‚”@‚‚‚—C@.b:0‚ˆ‚•‚ˆH.8:1"
 endtext
 
 text text_remix_4_oishii_kamo_ne
@@ -134,11 +134,11 @@ text text_remix_4_herushii_kamo_ne
 endtext
 
 text text_remix_4_ore_no_sei_kamo_ne
-    .asciz ".9:1‚`‚”‚…@‚•‚@‚‚•‚’@‚“‚”‚‚“‚ˆC@.9:0‚h@‚“‚•‚‚‚‚“‚….8:1D"
+    .asciz ".9:1‚l‚‰‚‡‚ˆ‚”f‚–‚…@‚‚‚…‚…‚@‚•‚“C@.9:0‚h@‚“‚•‚‚‚‚“‚….8:1D"
 endtext
 
 text text_remix_4_sore_mo_sou_kamo_ne
-    .asciz ".9:1‚l‚•‚“‚”f‚–‚…@‚‚‚…‚…‚@‚‚…C@.9:0‚h@‚“‚•‚‚‚‚“‚….8:1D"
+    .asciz ".9:1‚s‚ˆ‚‚”f‚“@‚ˆ‚‚—@‚‰‚”@‚‚‚…C@.9:0‚h@‚“‚•‚‚‚‚“‚….8:1D"
 endtext
 
 text text_remix_4_tanoshii_kamo_ne
@@ -146,27 +146,27 @@ text text_remix_4_tanoshii_kamo_ne
 endtext
 
 text text_remix_4_oyatsu_wa_saikou
-    .asciz ".a:1‚r‚‚‚ƒ‚‹‚‰‚‚‡@‚‰‚“@.a:0‚”‚ˆ‚…@‚f‚q‚d‚`‚s‚d‚r‚sI.8:1"
+    .asciz ".a:1‚r‚‚‚ƒ‚‹‚‰‚‚‡@‚‰‚“@.a:0‚“‚@‚`‚v‚d‚r‚n‚l‚dI.8:1"
 endtext
 
 text text_remix_4_kibun_wa_saikou
-    .asciz ".a:1‚h@‚†‚…‚…‚Œ@.a:0‚”‚ˆ‚…@‚f‚q‚d‚`‚s‚d‚r‚sI.8:1"
+    .asciz ".a:1‚h@‚†‚…‚…‚Œ@.a:0‚“‚@‚`‚v‚d‚r‚n‚l‚dI.8:1"
 endtext
 
 text text_remix_4_ore_tte_saikou
-    .asciz ".a:1‚v‚…@‚‚’‚…@.a:0‚”‚ˆ‚…@‚f‚q‚d‚`‚s‚d‚r‚sI.8:1"
+    .asciz ".a:1‚v‚…@‚‚’‚…@.a:0‚“‚@‚`‚v‚d‚r‚n‚l‚dI.8:1"
 endtext
 
 text text_remix_4_kimi_tte_saikou
-    .asciz ".a:1‚x‚‚•@‚‚’‚…@.a:0‚”‚ˆ‚…@‚f‚q‚d‚`‚s‚d‚r‚sI.8:0"
+    .asciz ".a:1‚x‚‚•@‚‚’‚…@.a:0‚“‚@‚`‚v‚d‚r‚n‚l‚dI.8:0"
 endtext
 
 text text_remix_4_oyatsu_ga_nai_yo
-    .asciz ".a:1‚g‚…‚™I@‚v‚ˆ‚@.a:0‚`‚s‚d@‚h‚sIH.8:1"
+    .asciz ".a:1‚v‚‚‰‚”@‚@‚“‚…‚ƒC.a:0‚k‚n‚r‚s@‚r‚n‚l‚dI.8:1"
 endtext
 
 text text_remix_4_ore_shiranai_yo
-    .asciz ".a:1‚h@‚‹‚‚‚—@‚“‚‚‚…‚‚‚…@.a:0‚`‚s‚d@‚h‚sIH.8:1"
+    .asciz ".a:1‚f‚•‚…‚“‚“@‚”‚ˆ‚‚”f‚“@‚ˆ‚‚—@‚—‚…@.a:0‚k‚n‚r‚s@‚r‚n‚l‚dI.8:1"
 endtext
 
 
