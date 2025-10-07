@@ -79,3 +79,66 @@ Lastly, you will need to acquire an unmodified rev0 Rhythm Tengoku ROM in order 
 You are finally ready to build the repository! Navigate to the repository folder with `cd ~/rt`, and build the ROM by running `make -j`. (The `-j` parameter makes the build process able to run on multiple cores of your CPU, heavily speeding up the process.) Once the ROM has finished building, it will output a file at `build/rhythmheavenadvance.gba`! This is your compiled ROM.
 
 If you have any other questions or concerns, join the [RHModding discord server](https://discord.com/invite/ps4rq53)!
+
+## Credits (To Be Added)
+
+#### this project wouldn't be possible without all the incredible people that came together to help out!
+
+Asset Assembly:
++ SkyeStage
++ Cash Banooka
++ geometricentric
++ somethingAccurate
++ TinyCastleGuy
++ The Eggo55
++ Vincells
++ WindowsTiger
++ Kievit
++ NotWario
++ amdree
++ patataofcourse
++ Nate Candles
+
+Graphic Design:
++ Tailx
++ vincells
++ Borists
+
+Main Programming:
++ Itaific
++ ShaffySwitcher
+
+Coding Contributions:
++ Deni_iguess
++ patataofcourse
++ Arthurtilly
++ Estexnt
++ Nibblez
++ Conhlee
++ MissKnowledge
+
+Translation and Localization:
++ Mizuka Lover
++ ShaffySwitcher
++ somethingAccurate
++ patataofcourse
++ castle
+
+Localization Support:
++ Cash Banooka
++ SkyStage
++ RedRobocon
++ ThisIsMyUsername
+
+SFX:
++ Rhythm Heaven Megamix
++ Cherryberryfaygo
++ Nabix and all of his family
+
+Bug Testing:
+Everyone on the Rhythm Heaven Advance discord!
+With special mention to nwqol
+
+Thank you all for your support!
+
+Want to be here? Join our [Server!](https://discord.gg/8PET8w8PU8)
