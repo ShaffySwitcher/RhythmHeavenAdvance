@@ -2084,6 +2084,19 @@ struct SongHeader s_toss_blue_break_seqData = {
     /* Song Number   */ 1343
 };
 
+#ifdef SFX
+extern const u8 s_toss_yelw_red1_en_mid[];
+struct SongHeader s_toss_yelw_red1_seqData = {
+    /* MIDI Sequence */ s_toss_yelw_red1_en_mid,
+    /* Sound Player  */ SFX_PLAYER_2,
+    /* Bank Number   */ INST_BANK_9,
+    /* Volume        */ 127,
+    /* Priority      */ 90,
+    /* unk8          */ 0x40,
+    /* Song Title    */ s_toss_yelw_red1_seqName,
+    /* Song Number   */ 1344
+};
+#else
 extern const u8 s_toss_yelw_red1_mid[];
 struct SongHeader s_toss_yelw_red1_seqData = {
     /* MIDI Sequence */ s_toss_yelw_red1_mid,
@@ -2095,6 +2108,7 @@ struct SongHeader s_toss_yelw_red1_seqData = {
     /* Song Title    */ s_toss_yelw_red1_seqName,
     /* Song Number   */ 1344
 };
+#endif
 
 extern const u8 s_toss_yelw_red2_mid[];
 struct SongHeader s_toss_yelw_red2_seqData = {
