@@ -5,6 +5,7 @@
 #include "levels.h"
 #include "src/scenes/reading.h"
 #include "src/scenes/studio.h"
+#include "src/char_remap.h"  // Character remapping for custom fonts
 
 
 /* DATA */
@@ -1893,9 +1894,14 @@ void game_select_clear_info_pane(void) {
 void game_select_print_level_name(struct LevelData *levelData) {
     struct Animation *anim;
     const char *string;
+    char remapped_name[256];  // Buffer for remapped string
 
     text_printer_fill_vram_tiles(0, 26, 16, 2, 0);
-    string = levelData->name;
+    
+    // Apply character remapping to the level name
+    char_remap_string(levelData->name, remapped_name);
+    string = remapped_name;
+    
     anim = text_printer_get_formatted_line_anim(get_current_mem_id(), 0, 26, TEXT_PRINTER_FONT_SMALL, &string, TEXT_ANCHOR_BOTTOM_CENTER, 0, 104, 0, -1);
     gGameSelect->infoPaneName = sprite_create(gSpriteHandler, anim, 0, 180, 30, 0x800, 1, 0, 0x8000);
     sprite_set_base_palette(gSpriteHandler, gGameSelect->infoPaneName, 7);

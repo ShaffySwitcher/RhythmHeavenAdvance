@@ -248,7 +248,7 @@ struct StudioEntry studio_song_table[] = {
         /* Drum Script */ script_studio_game_select_2
     },
     /* CAFE */ {
-        /* Full Title  */ "Caf" "\x87\x51" " Counselling",
+        /* Full Title  */ "Cafe^ Counselling",
         /* Short Title */ NULL,
         /* Drum Script */ script_studio_cafe
     },
