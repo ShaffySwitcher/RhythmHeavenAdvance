@@ -213,7 +213,7 @@ struct LevelData level_data_table[] = {
         /* Level Desc.   */ "An enemy is attacking\n"
                             "your lord! Block the\n"
                             "arrows with your sword\n"
-							"using ‡O and ‡M!",
+							"using @D and @A!",
         /* Level Icon    */ 5,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_ninja_bodyguard_gfx_tables,

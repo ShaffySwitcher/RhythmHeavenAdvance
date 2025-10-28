@@ -12,7 +12,7 @@ struct CharRemap {
 // Define your custom 2-byte character mappings here
 // Format: {input_byte1, input_byte2, output_byte1, output_byte2}
 const struct CharRemap char_remap_table[] = {
-    // Controller buttons (2-byte codes)
+    // Controller buttons - Menu font (2-byte codes)
     {'@', 'A', 0x87, 0x4D},   // @A Å® A button graphic (áM slot)
     {'@', 'B', 0x87, 0x4E},   // @B Å® B button graphic (áN slot)
     {'@', 'D', 0x87, 0x4F},   // @D Å® D-pad graphic (áO slot)
