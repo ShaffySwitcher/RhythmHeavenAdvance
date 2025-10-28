@@ -19,7 +19,7 @@ const char D_0805cde0[] = "‚a‚…‚†‚‚’‚…@‚”‚ˆ‚…@‚†‚…‚“‚”‚‰‚–‚‚Œ@‚‚‚…‚‡‚‰‚Ž‚“
 
 const char D_0805ce00[] = "DDD‚Œ‚…‚”f‚“@‚ˆ‚‚–‚…@‚@‚ƒ‚’‚‚“‚ˆ@‚ƒ‚‚•‚’‚“‚…I";
 
-const char D_0805ce10[] = "‚v‚ˆ‚…‚Ž@‚™‚‚•@‚ˆ‚…‚‚’@h‚f‚Ih@‚‚’‚…‚“‚“@P";
+const char D_0805ce10[] = "‚v‚ˆ‚…‚Ž@‚™‚‚•@‚ˆ‚…‚‚’@h‚f‚Ih@‚‚’‚…‚“‚“@T";
 
 const char D_0805ce34[] = "‚e‚‰‚’‚“‚”@‚‚†@‚‚Œ‚ŒC@‚Ž‚‚’‚‚‚Œ@‚†‚‰‚’‚…‚—‚‚’‚‹‚“D";
 
