@@ -41,6 +41,8 @@ void func_080415c0(u32 lesson) {
 
     sprite_set_anim(gSpriteHandler, gMechanicalHorse->horse[0].sprite, mechanical_horse_anim[lesson], 0, 0, 0, SPRITE_PLAYBACK_NORMAL_LOOP);
     sprite_set_anim(gSpriteHandler, gMechanicalHorse->jockey[0].sprite, mechanical_horse_jockey_anim[lesson], 0, 0, 0, SPRITE_PLAYBACK_NORMAL_LOOP);
+    sprite_set_anim(gSpriteHandler, gMechanicalHorse->horse[1].sprite, mechanical_horse_anim[lesson], 0, 0, 0, SPRITE_PLAYBACK_NORMAL_LOOP);
+    sprite_set_anim(gSpriteHandler, gMechanicalHorse->jockey[1].sprite, mechanical_horse_jockey_anim[lesson], 0, 0, 0, SPRITE_PLAYBACK_NORMAL_LOOP);
 
     for(i = 0; i < 4; i++){
         gMechanicalHorse->unk26c[i].pos_x = D_0805aab0[lesson][i] << 8;
