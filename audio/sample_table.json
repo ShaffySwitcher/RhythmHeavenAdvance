@@ -5563,6 +5563,22 @@
         {
             "sample": "sample_EN_182.wav",
             "pitch": "C5"
+        },
+        {
+            "sample": "fireworks_count_one.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "fireworks_count_two.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "fireworks_count_three.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "fireworks_count_go.wav",
+            "pitch": "C5"
         }
     ]
 }
