@@ -42,14 +42,14 @@ struct ReadingMaterial reading_material_table[] = {
         /* TITLE ---------------------------------------------------------- */
             "From the Barista",
         /* BODY ----------------------------------------------------------- */
-            "I own and operate a Cafe^.\n"
+            "I own and operate a Caf‡Q.\n"
             "Or, to put it simple, I'm the barista.\n"
             "It's going well thanks to the regulars\n"
             "And, uh, just to let you know, I'm a dog.\n"
             "Many of my customers love listening to music.\n"
             "A lot of them even achieved Perfect Campaigns!\n"
             "I was pretty surprised to learn that.\n"
-            "I may look all professional when I run my Cafe^\n"
+            "I may look all professional when I run my Caf‡Q\n"
             "but I'll be honest, I'm really putting on a front.\n"
             "See, it's a little embarrassing, but when I'm off the\n"
             "clock, I'm always jamming out with these little\n"
