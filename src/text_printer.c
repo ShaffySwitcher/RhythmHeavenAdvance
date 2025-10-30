@@ -4,7 +4,6 @@
 #include "src/memory_heap.h"
 #include "src/lib_0804ca80.h"
 #include "data/text_printer_data.h"
-#include "src/char_remap.h"  // Character remapping
 
 asm(".include \"include/gba.inc\"");//Temporary
 
@@ -447,15 +446,9 @@ s32 text_printer_get_glyph_id(const char **string) {
     char c2;
     s8 r0;
     s32 id;
-    char remapped[3];
 
     s = *string;
-    
-    // Apply character remapping first
-    char_remap_get(s, remapped);
-    remapped[2] = '\0';
-    
-    c1 = remapped[0];
+    c1 = s[0];
     (*string)++;
 
     r0 = (c1 - 0x20);
@@ -463,7 +456,7 @@ s32 text_printer_get_glyph_id(const char **string) {
         c2 = D_08938194[((u8)r0 * 2) + 1];
         c1 = D_08938194[(u8)r0 * 2];
     } else {
-        c2 = remapped[1];  // Use remapped character
+        c2 = s[1];
         (*string)++;
     }
 

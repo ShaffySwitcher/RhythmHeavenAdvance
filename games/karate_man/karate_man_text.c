@@ -26,7 +26,7 @@ const char D_0805abec[] =
     "training!";
 
 const char D_0805ac0c[] = 
-    "Press @A to punch the\n"
+    "Press ‡M to punch the\n"
     "objects that are flying\n"
     "your way.\n"
     "The timing's a little tricky!";
