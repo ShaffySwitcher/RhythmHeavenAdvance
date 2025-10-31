@@ -71,10 +71,10 @@ script D_0805f670
 return
 
 text D_0805f6ac
+    .ascii "\n"
     .ascii "There's a new addition to the\n"
-    .ascii "drum set! Can you guess what\n"
-    .ascii "it is?\n"
-    .asciz "Press Up on ‡O to find out!"
+    .ascii "drum set - what could it be?\n"
+    .asciz "Press Up on @D to find out!"
 endtext
 
 
@@ -111,10 +111,10 @@ return
 
 
 text D_0805f7f4
-    .ascii "Now for a tom beat at the\n"
-    .ascii "very end!\n"
-    .ascii "You remember where that is?\n"
-    .asciz "Use Right on ‡O to get it."
+    .ascii "Now for a tom beat, right\n"
+    .ascii "at the very end!\n"
+    .ascii "Remember where that is?\n"
+    .asciz "(Hint: Right on (+)!)"
 endtext
 
 
@@ -162,15 +162,15 @@ return
 
 text D_0805f9cc
     .ascii "\n"
-    .ascii "That just now was a hi-hat\n"
-    .ascii "cymbal! The one you press\n"
-    .asciz "Up on ‡O to use it!\n"
+    .ascii "That just now was our first\n"
+    .ascii "cymbal - the hi-hat!\n"
+    .asciz "You can hit it with Up on @D.\n"
 endtext
 
 
 text D_0805fa10
     .ascii "\n"
-    .ascii "Up on ‡O can be either the\n"
+    .ascii "Up on @D can be either the\n"
     .ascii "hi-hat or the roll, depending\n"
     .asciz "on the drum set we're using.\n"
 endtext

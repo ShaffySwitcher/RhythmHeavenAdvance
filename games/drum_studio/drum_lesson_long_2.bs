@@ -64,10 +64,10 @@ return
 
 
 text D_08062ee0
+    .ascii "\n"
     .ascii "Time to kick things up a notch!\n"
-    .ascii "Let's add a cymbal at the\n"
-    .ascii "start and a snare beat\n"
-    .asciz "at the end!"
+    .ascii "Add a cymbal crash at the\n"
+    .asciz "start and a snare at the end!\n"
 endtext
 
 
@@ -101,10 +101,10 @@ return
 
 
 text D_08063024
-    .ascii "Let's change the bass\n"
-    .ascii "just a little bit.\n"
+    .ascii "\n"
+    .ascii "Let's change the bass a bit.\n"
     .ascii "Listen carefully and keep\n"
-    .asciz "with the rhythm!"
+    .asciz "up with the rhythm!"
 endtext
 
 
@@ -137,10 +137,10 @@ return
 
 
 text D_08063184
-    .ascii "\n"
-    .ascii "Finally, let's add one more\n"
-    .ascii "bass beat.\n"
-    .asciz "It's up to you now!\n"
+    .ascii "Finally,\n"
+    .ascii "let's add one more bass beat.\n"
+    .ascii "We're reaching the end, so\n"
+    .asciz "Let's drive it home now!\n"
 endtext
 
 

@@ -57,9 +57,9 @@ return
 
 text D_080623c0
     .ascii "\n"
-    .ascii "Let's try using a new drum:\n"
-    .ascii "This is what we call a tom!\n"
-    .asciz "Hit it by pressing Right on ‡O!\n"
+    .ascii "Here's a drum we haven't\n"
+    .ascii "given a try yet - the tom!\n"
+    .asciz "Hit it by pressing Right on @D!\n"
 endtext
 
 
@@ -78,10 +78,10 @@ return
 
 
 text D_08062488
-    .ascii "Now, let's replace\n"
-    .ascii "the tom beat! Instead\n"
-    .ascii "you'll do a drum roll!\n"
-    .asciz "Press Up on ‡O to perform it!\n"
+    .ascii "\n"
+    .ascii "Next up - it's the same as\n"
+    .ascii "before but with a drum roll!\n"
+    .asciz "Do it with Up on @D!\n"
 endtext
 
 
@@ -103,7 +103,7 @@ text D_08062558
     .ascii "\n"
     .ascii "Let's work the tom back in,\n"
     .ascii "but at the end instead.\n"
-    .asciz "Try not to get mixed up!\n"
+    .asciz "Don't mix it up!\n"
 endtext
 
 
