@@ -33,7 +33,7 @@ text D_08064874
     .ascii "\n"
     .ascii "Let's start with a review\n"
     .ascii "of the last lesson.\n"
-    .asciz "Show me you remember it!"
+    .asciz "Show me you still got it!"
 endtext
 
 
@@ -211,9 +211,9 @@ return
 
 
 text D_08064fd8
-    .ascii "Let's add in some toms and\n"
-    .ascii "make the beat even\n"
-    .ascii "more funky!\n"
+    .ascii "\n"
+    .ascii "Let's add in some toms,\n"
+    .ascii "gives the beat some oomph!\n"
     .asciz "Now we're on a roll!"
 endtext
 
@@ -274,8 +274,8 @@ return
 text D_08065268
     .ascii "\n"
     .ascii "Now to replace the tom\n"
-    .ascii "we just added with a roll!\n"
-    .asciz "It's almost too cool to bear!"
+    .ascii "with a roll instead!\n"
+    .asciz "It sounds so cool now!"
 endtext
 
 
@@ -344,14 +344,14 @@ text D_08065530
     .ascii "\n"
     .ascii "I recommend brushing up\n"
     .ascii "on the previous lesson\n"
-    .asciz "before you try this one!"
+    .asciz "before giving this a shot!"
 endtext
 
 
 text D_08065564
     .ascii "\n"
     .ascii "You ready to go?\n"
-    .asciz "With that, let's begin!"
+    .asciz "Alright, let's begin!"
 
 endtext
 
@@ -364,7 +364,7 @@ struct D_08a43358
     .word D_08064ad0
     .word D_0806489c
     .word s_hakushu_solo_seqData
-    .word D_08064874
+    .word D_08065268
 endstruct
 
 struct D_08a43368

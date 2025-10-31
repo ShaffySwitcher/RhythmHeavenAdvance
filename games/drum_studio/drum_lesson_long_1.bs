@@ -83,7 +83,7 @@ return
 text D_08063bc8
     .ascii "\n"
     .ascii "Time to switch things up\n"
-    .ascii "at the very end!\n"
+    .ascii "right at the very end!\n"
     .asciz "Ready to play it?\n"
 endtext
 
@@ -114,7 +114,7 @@ text D_08063cd4
     .ascii "\n"
     .ascii "Just one new beat left!\n"
     .ascii "It might seem simple,\n"
-    .asciz "but still give it your all!\n"
+    .asciz "but give it your all!\n"
 endtext
 
 
