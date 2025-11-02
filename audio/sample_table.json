@@ -5493,6 +5493,10 @@
             "pitch": "C5"
         },
         {
+            "sample": "sample_EN_NEW_2.wav",
+            "pitch": "C5"
+        },
+        {
             "sample": "sample_EN_165.wav",
             "pitch": "C5"
         },
