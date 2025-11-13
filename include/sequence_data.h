@@ -403,6 +403,7 @@ extern struct SongHeader s_karate_fan_seqData;
 extern struct SongHeader s_datumo_nuki_seqData;
 extern struct SongHeader s_datumo_kegire_seqData;
 extern struct SongHeader s_datumo_bgm_seqData;
+extern struct SongHeader s_rap_two_seqData;
 extern struct SongHeader s_rap_bgm_renshu_seqData;
 extern struct SongHeader s_rap_bgm_seqData;
 extern struct SongHeader s_rap_jazz_bgm_seqData;

@@ -128,11 +128,11 @@ text text_rap_men_kimi_tte_saikou
 endtext
 
 text text_rap_men_oyatsu_ga_nai_yo
-    .asciz ".a:1‚v‚‚‰‚”@‚@‚“‚…‚ƒC.a:0‚k‚n‚r‚s@‚r‚n‚l‚dI.8:1"
+    .asciz ".a:1‚v‚‚‰‚”@‚@‚“‚…‚ƒC@‚v‚…@.a:0‚k‚n‚r‚s@‚r‚n‚l‚dI.8:1"
 endtext
 
 text text_rap_men_ore_shiranai_yo
-    .asciz ".a:1‚f‚•‚…‚“‚“@‚”‚ˆ‚‚”f‚“@‚ˆ‚‚—@‚—‚…@.a:0‚k‚n‚r‚s@‚r‚n‚l‚dI.8:1"
+    .asciz ".a:1‚f‚•‚…‚“‚“@‚‰‚”f‚“@‚ˆ‚‚—@‚—‚…@.a:0‚k‚n‚r‚s@‚r‚n‚l‚dI.8:1"
 endtext
 
 
