@@ -31,7 +31,7 @@ const char D_08067dec[] = "\"Ya feel me\"? clearly you DON'T!";
 
 const char D_08067e14[] = "\"Ya feel me\"? I think you really DO!";
 
-const char D_08067e3c[] = "\"The AWESOME!\" lines were AWFUL.";
+const char D_08067e3c[] = "\"The AWESOME!\" lines were just AWFUL.";
 
 const char D_08067e6c[] = "\"The AWESOME!\" lines really were!";
 

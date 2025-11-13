@@ -5413,6 +5413,10 @@
             "pitch": "C5"
         },
         {
+            "sample": "mrupbeat_a.wav",
+            "pitch": "C5"
+        },
+        {
             "sample": "fireworks_01.wav",
             "pitch": "C5"
         },
@@ -5582,6 +5586,118 @@
         },
         {
             "sample": "fireworks_count_go.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_241.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_242.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_243.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_244.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_245.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_246.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_247.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_248.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_249.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_250.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_251.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_252.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_253.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_254.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_255.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_256.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_257.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_265.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_266.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_267.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_268.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_269.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_270.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_271.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_272.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_273.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_274.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_275.wav",
             "pitch": "C5"
         }
     ]
