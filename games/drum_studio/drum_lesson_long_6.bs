@@ -364,7 +364,7 @@ struct D_08a43358
     .word D_08064ad0
     .word D_0806489c
     .word s_hakushu_solo_seqData
-    .word D_08065268
+    .word D_08064874
 endstruct
 
 struct D_08a43368
