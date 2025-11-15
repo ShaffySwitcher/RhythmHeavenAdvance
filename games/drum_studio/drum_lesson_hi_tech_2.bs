@@ -32,8 +32,8 @@ define_gameplay_scene scene_drum_lesson_hi_tech_2, script_drum_lesson_hi_tech_2_
 text D_08065f9c
     .ascii "Let's not jump into the\n"
     .ascii "deep end yet - here's\n"
-    .ascii "of the last lesson.\n"
-    .asciz "Do your best!"
+    .ascii "a bit of a refresher.\n"
+    .asciz "You've got this!"
 endtext
 
 
@@ -263,7 +263,7 @@ return
 
 
 text D_08066918
-    .ascii "Here comes some more\n"
+    .ascii "Here come some more\n"
     .ascii "bass and snare beats!\n"
     .ascii "I know you can do it!\n"
     .asciz "Put your heart into it!"
