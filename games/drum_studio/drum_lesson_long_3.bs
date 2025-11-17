@@ -63,9 +63,9 @@ return
 
 text D_08063438
     .ascii "\n"
-    .ascii "Let's keep the bass going\n"
-    .ascii "And add snares to the mix!\n"
-    .asciz "Thing's are getting groovy!"
+    .ascii "Let's keep the bass going,\n"
+    .ascii "and add snares to the mix!\n"
+    .asciz "Things are getting groovy!"
 endtext
 
 
@@ -93,9 +93,9 @@ return
 
 text D_0806354c
     .ascii "\n"
-    .ascii "Let's keep the beat tight\n"
-    .ascii "with a cymbal crash!\n"
-    .asciz "We're are still warming up!"
+    .ascii "Let's spice things up, and\n"
+    .ascii "hit the crash! We're still\n"
+    .asciz "jusr still warming , y'know?"
 endtext
 
 
@@ -108,9 +108,9 @@ return
 
 text D_080635bc
     .ascii "\n"
-    .ascii "Alright, time to shake up the\n"
-    .ascii "snare drum's ending a bit.\n"
-    .asciz "It's starting to sound cool!\n"
+    .ascii "Alright, time to switch up\n"
+    .ascii "the end with some snares.\n"
+    .asciz "It's starting to take shape!\n"
 endtext
 
 
@@ -140,10 +140,10 @@ return
 
 
 text D_08063708
-    .ascii "Let's add one more beat on\n"
-    .ascii "top of the last part.\n"
-    .ascii "It might be a bit tricky,\n"
-    .asciz "but you got this!\n"
+    .ascii "Let's add one more beat\n"
+    .ascii "on top of the last part.\n"
+    .ascii "Yes, it's a bit tricky, but\n"
+    .asciz "I'm sure you've got this!\n"
 endtext
 
 
@@ -176,10 +176,10 @@ return
 
 
 text D_08063870
-    .ascii "This is the last change!\n"
+    .ascii "Okay, last change!\n"
     .ascii "If you can pull this off,\n"
-    .ascii "you'll be considered a\n"
-    .asciz "full on professional!"
+    .ascii "you're basically a full-on\n"
+    .asciz "pro drummer in my eyes!"
 endtext
 
 

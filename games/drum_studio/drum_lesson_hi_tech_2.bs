@@ -507,7 +507,7 @@ return
 text D_08067370
     .ascii "This is it! The final pattern!\n"
     .ascii "Just one more tom beat!\n"
-    .ascii "Feel the rhythm and let it\n"
+    .ascii "Ride the rhythm and let it\n"
     .asciz "flow within your soul!"
 endtext
 
