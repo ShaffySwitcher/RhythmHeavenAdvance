@@ -111,7 +111,7 @@ return
 text D_08061c00
     .ascii "You hear that new bass beat?\n"
     .ascii "Alternating between both\n"
-    .ascii "@B and Down on ‡O should\n"
+    .ascii "‡N and Down on ‡O should\n"
     .asciz "make it easy!"
 endtext
 
@@ -156,7 +156,7 @@ endtext
 
 text D_08061d70
     .ascii "\n"
-    .ascii "Hit the bass drum with @B\n"
+    .ascii "Hit the bass drum with ‡N\n"
     .asciz "or by pressing Down on ‡O!\n"
 endtext
 
