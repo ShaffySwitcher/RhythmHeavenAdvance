@@ -74,7 +74,7 @@ text D_0805f6ac
     .ascii "\n"
     .ascii "There's a new addition to the\n"
     .ascii "drum set - what could it be?\n"
-    .asciz "Press Up on @D to find out!"
+    .asciz "Press Up on ‡O to find out!"
 endtext
 
 
@@ -164,13 +164,13 @@ text D_0805f9cc
     .ascii "\n"
     .ascii "That just now was our first\n"
     .ascii "cymbal - the hi-hat!\n"
-    .asciz "You can hit it with Up on @D.\n"
+    .asciz "You can hit it with Up on ‡O.\n"
 endtext
 
 
 text D_0805fa10
     .ascii "\n"
-    .ascii "Up on @D can be either the\n"
+    .ascii "Up on ‡O can be either the\n"
     .ascii "hi-hat or the roll, depending\n"
     .asciz "on the drum set we're using.\n"
 endtext
