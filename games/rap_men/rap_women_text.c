@@ -13,7 +13,7 @@ const char D_08067ccc[] = "\"Ya feel me\"? clearly you DON'T!";
 
 const char D_08067cf4[] = "\"Ya feel me\"? I think you really DO!";
 
-const char D_08067d18[] = "\"The AWESOME!\" lines were the WORST.";
+const char D_08067d18[] = "\"The AWESOME!\" lines were AWFUL.";
 
 const char D_08067d44[] = "\"The AWESOME!\" lines really were!";
 
@@ -31,7 +31,7 @@ const char D_08067dec[] = "\"Ya feel me\"? clearly you DON'T!";
 
 const char D_08067e14[] = "\"Ya feel me\"? I think you really DO!";
 
-const char D_08067e3c[] = "\"The AWESOME!\" lines were the WORST.";
+const char D_08067e3c[] = "\"The AWESOME!\" lines were AWFUL.";
 
 const char D_08067e6c[] = "\"The AWESOME!\" lines really were!";
 

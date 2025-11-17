@@ -88,27 +88,27 @@ text text_rap_men_honto_desu_ka
 endtext
 
 text text_rap_men_wakarimasu_ka
-    .asciz ".b:1Ｉｔ’ｓ　ｐｒｅｔｔｙ　ｃｌｅａｒ，　.b:0ｈｕｈ？.8:1"
+    .asciz ".b:1Ｙｏｕ　ｇｅｔ　ｉｔ　ｎｏｗ，　.b:0ｈｕｈ？.8:1"
 endtext
 
 text text_rap_men_oishii_kamo_ne
-    .asciz ".9:1Ｔａｓｔｙ　ｓｎａｃｋｓ，　.9:0ｙａ　ｆｅｅｌ　ｍｅ．.8:1"
+    .asciz ".9:1Ｔａｓｔｙ　ｓｎａｃｋｓ，　.9:0ｙａ　ｆｅｅｌ　ｍｅ？.8:1"
 endtext
 
 text text_rap_men_herushii_kamo_ne
-    .asciz ".9:1Ｈｅａｌｔｈｙ　ｓｎａｃｋｓ，　.9:0ｙａ　ｆｅｅｌ　ｍｅ．.8:1"
+    .asciz ".9:1Ｈｅａｌｔｈｙ　ｓｎａｃｋｓ，　.9:0ｙａ　ｆｅｅｌ　ｍｅ？.8:1"
 endtext
 
 text text_rap_men_ore_no_sei_kamo_ne
-    .asciz ".9:1Ｍｕｓｔ’ｖｅ　ｂｅｅｎ　ｍｅ，　.9:0ｙａ　ｆｅｅｌ　ｍｅ．.8:1"
+    .asciz ".9:1Ｍｉｇｈｔ’ｖｅ　ｂｅｅｎ　ｕｓ，　.9:0ｙａ　ｆｅｅｌ　ｍｅ？.8:1"
 endtext
 
 text text_rap_men_sore_mo_sou_kamo_ne
-    .asciz ".9:1Ｔｈａｔ’ｓ　ｈｏｗ　ｉｔ　ｂｅ，　.9:0ｙａ　ｆｅｅｌ　ｍｅ．.8:1"
+    .asciz ".9:1Ｔｈａｔ’ｓ　ｈｏｗ　ｉｔ　ｂｅ，　.9:0ｙａ　ｆｅｅｌ　ｍｅ？.8:1"
 endtext
 
 text text_rap_men_tanoshii_kamo_ne
-    .asciz ".9:1Ｈａｖｉｎ’　ｆｕｎ，　.9:0ｙａ　ｆｅｅｌ　ｍｅ．.8:1"
+    .asciz ".9:1Ｈａｖｉｎ’　ｆｕｎ，　.9:0ｙａ　ｆｅｅｌ　ｍｅ？.8:1"
 endtext
 
 text text_rap_men_oyatsu_wa_saikou
@@ -128,11 +128,11 @@ text text_rap_men_kimi_tte_saikou
 endtext
 
 text text_rap_men_oyatsu_ga_nai_yo
-    .asciz ".a:1Ｈｏｌｄ　ｕｐ！　Ｗｅ　.a:0ＬＯＳＴ　ＳＯＭＥ！.8:1"
+    .asciz ".a:1Ｗａｉｔ　ａ　ｓｅｃ，　Ｗｅ　.a:0ＬＯＳＴ　ＳＯＭＥ！.8:1"
 endtext
 
 text text_rap_men_ore_shiranai_yo
-    .asciz ".a:1Ｈｏｗ　ｅｌｓｅ　ｈａｄ　ｗｅ　.a:0ＬＯＳＴ　ＳＯＭＥ！.8:1"
+    .asciz ".a:1Ｇｕｅｓｓ　ｉｔ’ｓ　ｈｏｗ　ｗｅ　.a:0ＬＯＳＴ　ＳＯＭＥ！.8:1"
 endtext
 
 

@@ -13,9 +13,9 @@ const char D_0805e960[] = "I \"feel\" like we fumbled those lines.";
 
 const char D_0805e988[] = "I \"feel\" like those lines were great!";
 
-const char D_0805e9ac[] = "\"The AWESOME\" lines were anything but!";
+const char D_0805e9ac[] = "The \"AWESOME!\" lines were anything but!";
 
-const char D_0805e9d8[] = "\"The AWESOME!\" lines were exactly that!";
+const char D_0805e9d8[] = "The \"AWESOME!\" lines were exactly that!";
 
 const char D_0805ea04[] = "RAPNOTES from the Boys";
 
@@ -47,7 +47,7 @@ const char D_0805eb34[] = "ＯＫ！　Ｙｏｕ’ｖｅ　ｇｏｔ　ｉｔ！";
 
 const char D_0805eb3c[] = "Ｔｈａｔ　ｗａｓ　ｔｈｅ　“.bＨｕｈ？.8”　ｖｅｒｓｅ．";
 
-const char D_0805eb6c[] = "Ｎｏｗ　ｌｅｔ’ｓ　ｔｒｙ　ｔｈｅ　“.9ｙａ　ｆｅｅｌ　ｍｅ．.8”　ｖｅｒｓｅ．";
+const char D_0805eb6c[] = "Ｎｏｗ　ｌｅｔ’ｓ　ｔｒｙ　ｔｈｅ　“.9ｙａ　ｆｅｅｌ　ｍｅ？.8”　ｖｅｒｓｅ．";
 
 const char D_0805eb94[] = "Ｔａｋｅ　ａ　ｌｉｓｔｅｎ．";
 

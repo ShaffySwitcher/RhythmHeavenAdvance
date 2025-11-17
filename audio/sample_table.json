@@ -5134,6 +5134,579 @@
         {
             "sample": "rat_sfx_02.wav",
             "pitch": "C5"
+        },
+        {
+            "sample": "march_ord_1.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "march_ord_2.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "march_ord_3.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "march_ord_4.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "march_ord_5.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "march_ord_6.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "march_ord_7.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "march_ord_8.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "march_ord_9.wav",
+            "pitch": "C#5"
+        },
+        {
+            "sample": "march_ord_10.wav",
+            "pitch": "C#5"
+        },
+        {
+            "sample": "march_ord_11.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "march_ord_12.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "march_ord_13.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "march_ord_14.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "march_ord_w_1.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "march_ord_w_2.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "march_ord_w_3.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "march_ord_w_4.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "march_ord_w_5.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "march_ord_w_6.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "march_ord_w_7.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "march_ord_w_8.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "march_ord_w_9.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "march_ord_w_10.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "march_ord_w_11.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "march_ord_w_12.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "march_ord_w_13.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "march_ord_w_14.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "march_ord_w_15.wav",
+            "pitch": "C5"
+        },
+        {
+            "_comment": "wtf is this formatting :sob:",
+            "sample": "dlessons_one.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "dlessons_two.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "dlessons_three.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sdance_and.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sdance_down.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sdance_let.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sdance_one.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sdance_pap.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sdance_pose.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sdance_punch.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sdance_sit.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sdance_three.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sdance_two.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sdance_and_g.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sdance_down_g.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sdance_let_g.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sdance_pap_g.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sdance_pose_g.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sdance_punch_g.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sdance_sit_g.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sdance_and_s.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sdance_and_g_s.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sdance_go.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "ninja_bodyguard_huh.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_01.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_02.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_03.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_04.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_05.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_06.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_07.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_08.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_09.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_10.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_11.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_12.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_13.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_14.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_15.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_16.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_17.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "confmachine_18.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "mrupbeat_a.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "fireworks_01.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "fireworks_02.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_148.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_149.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_150.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_151.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_152.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_153.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_154.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_155.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_156.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_157.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_158.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_159.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_160.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_161.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_162.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_163.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_164.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_NEW.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_NEW_2.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_165.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_166.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_167.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_168.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_169.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_170.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_171.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_172.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_173.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_174.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_175.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_176.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_177.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_178.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_179.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_180.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_181.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "sample_EN_182.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "fireworks_count_one.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "fireworks_count_two.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "fireworks_count_three.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "fireworks_count_go.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_241.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_242.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_243.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_244.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_245.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_246.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_247.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_248.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_249.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_250.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_251.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_252.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_253.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_254.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_255.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_256.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_257.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_265.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_266.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_267.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_268.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_269.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_270.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_271.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_272.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_273.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_274.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_sample_275.wav",
+            "pitch": "C5"
         }
     ]
 }

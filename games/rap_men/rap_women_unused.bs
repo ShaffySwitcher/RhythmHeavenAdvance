@@ -47,11 +47,11 @@ text text_rap_women_unused_kare_no_oyatsu_da_ne
 endtext
 
 text text_rap_women_unused_tabeteii_kamo_ne
-    .asciz ".9:1Ｅａｔ　’ｅｍ　ａｌｌ　ｕｐ，　.9:0ｙａ　ｆｅｅｌ　ｍｅ．.8:1"
+    .asciz ".9:1Ｅａｔ　’ｅｍ　ａｌｌ　ｕｐ，　.9:0ｙａ　ｆｅｅｌ　ｍｅ？.8:1"
 endtext
 
 text text_rap_women_unused_aketeii_kamo_ne
-    .asciz ".9:1Ｏｐｅｎ　’ｅｍ　ｕｐ，　.9:0ｙａ　ｆｅｅｌ　ｍｅ．.8:1"
+    .asciz ".9:1Ｏｐｅｎ　’ｅｍ　ｕｐ，　.9:0ｙａ　ｆｅｅｌ　ｍｅ？.8:1"
 endtext
 
 text text_rap_women_unused_oyatsu_wa_saikou
