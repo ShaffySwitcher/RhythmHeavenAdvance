@@ -8,7 +8,6 @@ script script_scene_disclamer
     pause_scene
 
     rest 12
-    rest 48
     set_tempo 120
     scene_set_byte 0, TRUE
     pause_scene

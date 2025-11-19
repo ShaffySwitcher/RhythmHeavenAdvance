@@ -96,8 +96,8 @@ return
 
 
 text D_080640d8
-    .ascii "Now then, Let's add a bit more\n"
-    .ascii "snares and cymbal crashes!\n"
+    .ascii "Now then, How about a bit\n"
+    .ascii "more snares and crashes?\n"
     .ascii "Stay focused and try not to\n"
     .asciz "lose your head over this.\n"
 endtext
@@ -166,7 +166,7 @@ return
 text D_0806439c
     .ascii "Let's spice it up a little!\n"
     .ascii "Switch the snare with a tom.\n"
-    .ascii "Just flow along with the beat\n"
+    .ascii "Just follow along the beat\n"
     .asciz "and you'll be good to go!\n"
 endtext
 
@@ -224,7 +224,7 @@ text D_080645fc
     .ascii "To end it off, one last snare!\n"
     .ascii "Pay attention and remember\n"
     .ascii "the order you hit the drums.\n"
-    .asciz "You've got this!\n"
+    .asciz "You got this!\n"
 endtext
 
 
