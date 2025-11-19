@@ -68,8 +68,8 @@ return
 text D_08062794
     .ascii "\n"
     .ascii "Let's tack on some more\n"
-    .ascii "cymbal crashes and snares!\n"
-    .asciz "Just follow my lead."
+    .ascii "crashes and snares!\n"
+    .asciz "Follow my lead!"
 endtext
 
 
@@ -140,9 +140,9 @@ return
 
 text D_08062a64
     .ascii "\n"
-    .ascii "Let's make the ending cool!\n"
+    .ascii "Let's make the pop a little!\n"
     .ascii "Think you can pull this off?\n"
-    .asciz "Follow me as well as you can!\n"
+    .asciz "Follow as best as you can!\n"
 endtext
 
 
@@ -177,8 +177,8 @@ return
 
 
 text D_08062be4
-    .ascii "Lastly, Add a cymbal crash.\n"
-    .ascii "This beat's getting groovy!\n"
+    .ascii "And lastly, Add a crash!\n"
+    .ascii "Things are heating up here!\n"
     .ascii "There's no going back now,\n"
     .asciz "so let's finish this right!"
 endtext
