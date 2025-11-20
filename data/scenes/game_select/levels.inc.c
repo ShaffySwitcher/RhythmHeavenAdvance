@@ -67,7 +67,7 @@ struct LevelData level_data_table[] = {
     /* POLYRHYTHM */ {
         /* Entry Scene   */ &scene_polyrhythm,
         /* Level Name    */ "Polyrhythm",
-        /* Level Desc.   */ "Man‡cge the ‡O and ‡M\n"
+        /* Level Desc.   */ "Manage the ‡O and ‡M\n"
 							"paths at the same time\n"
 							"to keep the red things\n"
 							"rolling! Simple enough?",
