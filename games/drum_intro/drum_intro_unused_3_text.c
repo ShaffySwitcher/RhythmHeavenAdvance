@@ -76,14 +76,14 @@ const char *const D_0805e5e4[] = {
 };
 
 const char D_0805e5f8[] =
-    "次は、　曲のスタートでシンバルをたたいてみましょう。\n"
-    "シンバルは、　Rボタンです。";
+    "Next, start off the song with a crash.\n"
+    "Press ⑬ to hit the cymbals.";
 
-const char D_0805e64c[] = "つまり、　最初だけBボタンとRボタンを同時に押すんです。";
+const char D_0805e64c[] = "You only need to press both\n (B) and (R) at the same time once.";
 
-const char D_0805e684[] = "曲のスタートの練習を思い出してくださいネ。";
+const char D_0805e684[] = "We went over this in the previous lesson, so remember \nour practice from then.";
 
-const char D_0805e6b0[] = "じゃ、　いきます。";
+const char D_0805e6b0[] = "With that, let's start!";
 
 const char *const D_0805e6c4[] = {
     D_0805e6b0,
@@ -93,12 +93,12 @@ const char *const D_0805e6c4[] = {
 };
 
 const char D_0805e6d4[] =
-    "すばらしい！\n"
-    "その調子です。";
+    "Great work!\n"
+    "Keep it up.";
 
-const char D_0805e6f0[] = "けっこう　簡単でしたか？";
+const char D_0805e6f0[] = "Was that pretty easy?";
 
-const char D_0805e70c[] = "ちょっと、　苦労しちゃいましたね。";
+const char D_0805e70c[] = "That was tough, right?";
 
 const char *const D_0805e730[] = {
     D_0805e58c,
@@ -108,9 +108,9 @@ const char *const D_0805e730[] = {
     NULL
 };
 
-const char D_0805e744[] = "では、　曲の終わりをかっこよくキメてみましょう。";
+const char D_0805e744[] = "Let's end this on a high note!";
 
-const char D_0805e778[] = "お手本、　いきます。";
+const char D_0805e778[] = "Here's an example.";
 
 const char *const D_0805e790[] = {
     D_0805e778,
@@ -121,7 +121,7 @@ const char *const D_0805e790[] = {
 
 const char D_0805e7a0[] =
     "\n"
-    "がんばって！";
+    "Good luck!";
 
 const char *const D_0805e7b0[] = {
     D_0805e7a0,
