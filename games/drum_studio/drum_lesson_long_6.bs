@@ -31,8 +31,8 @@ define_gameplay_scene scene_drum_lesson_long_6, script_drum_lesson_long_6_entry
 
 text D_08064874
     .ascii "\n"
-    .ascii "Let's start with a review\n"
-    .ascii "of the last lesson.\n"
+    .ascii "Let's start with a recap\n"
+    .ascii "from the last lesson.\n"
     .asciz "Show me you still got it!"
 endtext
 
@@ -154,9 +154,9 @@ return
 
 text D_08064d70
     .ascii "\n"
-    .ascii "Let's stack up some cymbals\n"
-    .ascii "for a fancy rhythm! It's not\n"
-    .asciz "too different from before!"
+    .ascii "Let's stack up some cymbals!\n"
+    .ascii "Helps the beat feel fancy,\n"
+    .asciz "yet not too much different!"
 endtext
 
 
@@ -275,7 +275,7 @@ text D_08065268
     .ascii "\n"
     .ascii "Now to replace the tom\n"
     .ascii "with a roll instead!\n"
-    .asciz "It sounds so cool now!"
+    .asciz "It's sounding so cool now!"
 endtext
 
 

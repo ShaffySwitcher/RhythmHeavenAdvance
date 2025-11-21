@@ -221,9 +221,9 @@ return
 
 
 text D_080645fc
-    .ascii "To end it off, one last snare!\n"
-    .ascii "Pay attention and remember\n"
-    .ascii "the order you hit the drums.\n"
+    .ascii "And finally, one last snare!\n"
+    .ascii "Stay sharp, and remember the\n"
+    .ascii "order you hit the drums.\n"
     .asciz "You got this!\n"
 endtext
 
