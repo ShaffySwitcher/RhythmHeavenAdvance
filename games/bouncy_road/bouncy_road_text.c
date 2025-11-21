@@ -5,7 +5,7 @@
 /* Game Text - Bouncy Road */
 
 
-const char D_0805b778[] = "•—‚ÌƒEƒƒT";
+const char D_0805b778[] = "Gossip from the Wind";
 
 const char D_0805b784[] = "You need to focus on the basics.";
 
