@@ -5707,6 +5707,22 @@
         {
             "sample": "RAPMEN_EN_sample_275.wav",
             "pitch": "C5"
+        },
+        {
+            "sample": "hit.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "three.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "two.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "four.wav",
+            "pitch": "C5"
         }
     ]
 }
