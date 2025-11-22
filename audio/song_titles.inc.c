@@ -752,3 +752,7 @@ char s_f_marcher2_v_hidarimukeS_jp_seqName[] = "";
 char s_f_marcher2_v_hidari_jp_seqName[] = "";
 char s_rat_paw_seqName[] = "";
 char s_rat_squeak_seqName[] = "";
+char s_f_boxing_hit_sfx_seqName[] = "";
+char s_f_boxing_three_sfx_seqName[] = "";
+char s_f_boxing_two_sfx_seqName[] = "";
+char s_f_boxing_four_sfx_seqName[] = "";

@@ -1964,3 +1964,7 @@
 /* 1934 */ DEFINE_SONG( &s_f_marcher2_v_migimukeS2_seqData, SFX_PLAYER_1   )
 /* 1935 */ DEFINE_SONG( &s_rat_paw_seqData,                  SFX_PLAYER_0   )
 /* 1936 */ DEFINE_SONG( &s_rat_squeak_seqData,               SFX_PLAYER_0   )
+/* 1937 */ DEFINE_SONG( &s_f_boxing_hit_sfx_seqData,       SFX_PLAYER_2   )
+/* 1938 */ DEFINE_SONG( &s_f_boxing_three_sfx_seqData,       SFX_PLAYER_2   )
+/* 1939 */ DEFINE_SONG( &s_f_boxing_two_sfx_seqData,       SFX_PLAYER_2   )
+/* 1940 */ DEFINE_SONG( &s_f_boxing_four_sfx_seqData,       SFX_PLAYER_2   )
