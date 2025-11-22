@@ -775,6 +775,7 @@ script script_rat_race_main
     rest 12
     rat_race_event0B
     rat_race_event0C
+    disable_play_inputs
     stop_tracking_perfect_campaign
     rest 24
     rest 24
