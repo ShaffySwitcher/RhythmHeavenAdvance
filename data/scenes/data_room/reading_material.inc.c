@@ -264,7 +264,7 @@ struct ReadingMaterial reading_material_table[] = {
             "RM: \"It said 'Sweets are so AWESOME!'\"\n"
             "DJ: \"Oh wow. How loathsome.\"\n"
             "RM: \"Right!? It was enough to make me yell...\"\n"
-            "DJ \"You were like, 'Wait a sec, We LOST SOME!'\"\n"
+            "DJ: \"You were like 'Wait a sec, We LOST SOME!'\"\n"
             "RM: \"Uh... Yeah! How do you know that?\"\n"
             "DJ: \"Because I've been playing Rhythm Heaven\n"
             "Advance! Roll the commercial!\"\n"
