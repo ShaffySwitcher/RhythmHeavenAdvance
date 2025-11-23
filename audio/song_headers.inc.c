@@ -1657,7 +1657,7 @@ struct SongHeader s_CC3_seqData = {
 extern const u8 s_CC4_mid[];
 struct SongHeader s_CC4_seqData = {
     /* MIDI Sequence */ s_CC4_mid,
-    /* Sound Player  */ SFX_PLAYER_1,
+    /* Sound Player  */ SFX_PLAYER_6,
     /* Bank Number   */ INST_BANK_18,
     /* Volume        */ 110,
     /* Priority      */ 80,
@@ -2754,7 +2754,7 @@ struct SongHeader s_rat_dash_seqData = {
 extern const u8 s_rat_squeak_mid[];
 struct SongHeader s_rat_squeak_seqData = {
     /* MIDI Sequence */ s_rat_squeak_mid,
-    /* Sound Player  */ SFX_PLAYER_1,
+    /* Sound Player  */ SFX_PLAYER_0,
     /* Bank Number   */ INST_BANK_6,
     /* Volume        */ 110,
     /* Priority      */ 80,
@@ -7904,7 +7904,7 @@ struct SongHeader s_f_boxing_v_nua_seqData = {
 extern const u8 s_f_boxing_hard_mid[];
 struct SongHeader s_f_boxing_hard_seqData = {
     /* MIDI Sequence */ s_f_boxing_hard_mid,
-    /* Sound Player  */ SFX_PLAYER_0,
+    /* Sound Player  */ SFX_PLAYER_6,
     /* Bank Number   */ INST_BANK_56,
     /* Volume        */ 100,
     /* Priority      */ 127,
@@ -9211,7 +9211,7 @@ struct SongHeader s_rat_paw_seqData = {
 extern const u8 s_f_boxing_hit_sfx_mid[];
 struct SongHeader s_f_boxing_hit_sfx_seqData = {
     /* MIDI Sequence */ s_f_boxing_hit_sfx_mid,
-    /* Sound Player  */ SFX_PLAYER_2,
+    /* Sound Player  */ SFX_PLAYER_5,
     /* Bank Number   */ INST_BANK_56,
     /* Volume        */ 120,
     /* Priority      */ 90,
@@ -9223,7 +9223,7 @@ struct SongHeader s_f_boxing_hit_sfx_seqData = {
 extern const u8 s_f_boxing_three_sfx_mid[];
 struct SongHeader s_f_boxing_three_sfx_seqData = {
     /* MIDI Sequence */ s_f_boxing_three_sfx_mid,
-    /* Sound Player  */ SFX_PLAYER_2,
+    /* Sound Player  */ SFX_PLAYER_5,
     /* Bank Number   */ INST_BANK_56,
     /* Volume        */ 120,
     /* Priority      */ 90,
@@ -9235,7 +9235,7 @@ struct SongHeader s_f_boxing_three_sfx_seqData = {
 extern const u8 s_f_boxing_two_sfx_mid[];
 struct SongHeader s_f_boxing_two_sfx_seqData = {
     /* MIDI Sequence */ s_f_boxing_two_sfx_mid,
-    /* Sound Player  */ SFX_PLAYER_2,
+    /* Sound Player  */ SFX_PLAYER_5,
     /* Bank Number   */ INST_BANK_56,
     /* Volume        */ 120,
     /* Priority      */ 90,
@@ -9247,7 +9247,7 @@ struct SongHeader s_f_boxing_two_sfx_seqData = {
 extern const u8 s_f_boxing_four_sfx_mid[];
 struct SongHeader s_f_boxing_four_sfx_seqData = {
     /* MIDI Sequence */ s_f_boxing_four_sfx_mid,
-    /* Sound Player  */ SFX_PLAYER_2,
+    /* Sound Player  */ SFX_PLAYER_5,
     /* Bank Number   */ INST_BANK_56,
     /* Volume        */ 120,
     /* Priority      */ 90,
