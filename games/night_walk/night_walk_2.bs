@@ -264,6 +264,7 @@ script script_night_walk_2_main
     night_walk_set_platform 0
     spawn_cue CUE_SNARE
     rest 24
+    print_text_s D_0805b335
     spawn_cue CUE_KICK
     rest 24
     spawn_cue CUE_KICK
@@ -273,7 +274,11 @@ script script_night_walk_2_main
     spawn_cue CUE_SNARE
     rest 24
     spawn_cue CUE_KICK
-    rest 24
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
     spawn_cue CUE_KICK
     rest 24
     night_walk_set_platform 3
@@ -295,7 +300,11 @@ script script_night_walk_2_main
     rest 24
     set_marking_criteria 2
     spawn_cue CUE_KICK
-    rest 24
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
     night_walk_set_platform 3
     spawn_cue CUE_SNARE
     rest 24
@@ -312,7 +321,11 @@ script script_night_walk_2_main
     spawn_cue CUE_KICK
     rest 24
     spawn_cue CUE_SNARE
-    rest 24
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
     spawn_cue CUE_KICK
     rest 24
     spawn_cue CUE_SNARE
@@ -334,7 +347,11 @@ script script_night_walk_2_main
     spawn_cue CUE_SNARE
     rest 24
     spawn_cue CUE_KICK
-    rest 24
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
     spawn_cue CUE_SNARE
     rest 24
     spawn_cue CUE_KICK
@@ -362,7 +379,11 @@ script script_night_walk_2_main
     spawn_cue CUE_SNARE
     rest 24
     spawn_cue CUE_KICK
-    rest 24
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
     spawn_cue CUE_SNARE
     rest 24
     spawn_cue CUE_KICK
@@ -370,7 +391,11 @@ script script_night_walk_2_main
     spawn_cue CUE_SNARE
     rest 24
     spawn_cue CUE_KICK
-    rest 24
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
     spawn_cue CUE_SNARE
     rest 24
     night_walk_set_platform 3
@@ -392,7 +417,11 @@ script script_night_walk_2_main
     night_walk_set_platform 1
     set_marking_criteria 1
     spawn_cue CUE_KICK
-    rest 24
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
     spawn_cue CUE_SNARE
     rest 24
     spawn_cue CUE_KICK
@@ -450,7 +479,11 @@ script script_night_walk_2_main
     spawn_cue CUE_KICK
     rest 24
     spawn_cue CUE_SNARE
-    rest 24
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
     spawn_cue CUE_KICK
     rest 24
     spawn_cue CUE_SNARE
@@ -458,7 +491,11 @@ script script_night_walk_2_main
     spawn_cue CUE_KICK
     rest 24
     spawn_cue CUE_SNARE
-    rest 24
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
     spawn_cue CUE_KICK
     rest 24
     spawn_cue CUE_SNARE
@@ -504,12 +541,20 @@ script script_night_walk_2_main
     spawn_cue CUE_KICK
     rest 24
     spawn_cue CUE_SNARE
-    rest 24
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
     spawn_cue CUE_KICK
     rest 24
     night_walk_set_platform 3
     spawn_cue CUE_SNARE
-    rest 24
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
     night_walk_set_platform 2
     spawn_cue CUE_KICK
     rest 24
@@ -524,12 +569,20 @@ script script_night_walk_2_main
     spawn_cue CUE_KICK
     rest 24
     spawn_cue CUE_SNARE
-    rest 24
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
     spawn_cue CUE_KICK
     rest 24
     night_walk_set_platform 3
     spawn_cue CUE_SNARE
-    rest 24
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
     night_walk_set_platform 1
     spawn_cue CUE_KICK
     rest 24
@@ -548,17 +601,29 @@ script script_night_walk_2_main
     spawn_cue CUE_KICK
     rest 24
     spawn_cue CUE_KICK
-    rest 24
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
     night_walk_set_platform 0
     set_marking_criteria 2
     spawn_cue CUE_SNARE
     rest 24
     spawn_cue CUE_SNARE
-    rest 24
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
     spawn_cue CUE_SNARE
     rest 24
     spawn_cue CUE_SNARE
-    rest 24
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
+    rest 12
+    play_sfx s_dontan_count_seqData
     night_walk_set_platform 1
     spawn_cue CUE_STAR_WAND
     rest 24

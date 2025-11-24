@@ -1882,7 +1882,7 @@
 /* 1852 */ DEFINE_SONG( NULL, 0 )
 /* 1853 */ DEFINE_SONG( NULL, 0 )
 /* 1854 */ DEFINE_SONG( NULL, 0 )
-/* 1855 */ DEFINE_SONG( &s_dontan_count_seqData,             SFX_PLAYER_2   )
+/* 1855 */ DEFINE_SONG( &s_dontan_count_seqData,             SFX_PLAYER_7   )
 /* 1856 */ DEFINE_SONG( &s_dontan_water_seqData,             SFX_PLAYER_2   )
 /* 1857 */ DEFINE_SONG( NULL, 0 )
 /* 1858 */ DEFINE_SONG( NULL, 0 )

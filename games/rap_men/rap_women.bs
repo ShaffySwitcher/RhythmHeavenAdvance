@@ -95,7 +95,7 @@ text text_rap_women_betsubara_saikou
 endtext
 
 text text_rap_women_kare_ni_wa_naisho
-    .asciz ".a:1‚b‚Œ‚•‚…‚Œ‚…‚“‚“@‚”‚ˆ‚‚”@‚—‚…@.a:0‚s‚n‚n‚j@‚r‚n‚l‚dI.8:1"
+    .asciz ".a:1‚b‚Œ‚•‚…‚Œ‚…‚“‚“@‚”‚ˆ‚‚”@‚—‚…@.a:0‚r‚s‚n‚k‚d@'‚d‚lI.8:1"
 endtext
 
 text text_rap_women_dare_ni_mo_naisho
