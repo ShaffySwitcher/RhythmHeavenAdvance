@@ -1423,44 +1423,14 @@ u32 game_select_check_level_event_req(s32 x, s32 y, s32 newState) {
                 if (state == LEVEL_STATE_CLEARED) {
                     return FALSE;
                 }
-                if (state == LEVEL_STATE_OPEN) {
-                    return FALSE;
-                }
-                if (state == LEVEL_STATE_CLOSED) {
-                    return FALSE;
-                }
-                if (state == LEVEL_STATE_APPEARING) {
-                    return FALSE;
-                }
-                if (state == LEVEL_STATE_HIDDEN) {
-                    return FALSE;
-                }
-                break;
             case LEVEL_STATE_CLEARED:
                 if (state == LEVEL_STATE_OPEN) {
                     return FALSE;
                 }
-                if (state == LEVEL_STATE_CLOSED) {
-                    return FALSE;
-                }
-                if (state == LEVEL_STATE_APPEARING) {
-                    return FALSE;
-                }
-                if (state == LEVEL_STATE_HIDDEN) {
-                    return FALSE;
-                }
-                break;
             case LEVEL_STATE_OPEN:
                 if (state == LEVEL_STATE_CLOSED) {
                     return FALSE;
                 }
-                if (state == LEVEL_STATE_APPEARING) {
-                    return FALSE;
-                }
-                if (state == LEVEL_STATE_HIDDEN) {
-                    return FALSE;
-                }
-                break;
             case LEVEL_STATE_CLOSED:
                 if (state == LEVEL_STATE_APPEARING) {
                     return FALSE;
