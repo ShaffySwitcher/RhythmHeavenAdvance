@@ -10,6 +10,8 @@
 
 This is a personal fork of the main Advance repository, it includes custom games, quality-of-life improvements, improved audio output, and other tweaks not present in the mainline version.
 
+As a side note, this fork does not use any kind of generative AI ("LLMs") compared to its parent repository now.
+
 ## Installation
 ### Requirements
 
