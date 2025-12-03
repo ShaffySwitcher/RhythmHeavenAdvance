@@ -9254,6 +9254,7 @@ struct SongHeader s_f_boxing_four_sfx_seqData = {
     /* unk8          */ 0xff,
     /* Song Title    */ s_f_boxing_four_sfx_seqName,
     /* Song Number   */ 1940
+};
 
 extern const u8 s_a4_mid[];
 struct SongHeader s_a4_seqData = {
