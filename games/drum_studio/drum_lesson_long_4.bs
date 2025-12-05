@@ -105,7 +105,7 @@ return
 
 
 text D_080628f0
-    .ascii "One more funky beat!\n"
+    .ascii "Now, one more beat!\n"
     .ascii "It sounds complicated,\n"
     .ascii "but it really isn't!\n"
     .asciz "Can you keep up?"
@@ -177,10 +177,10 @@ return
 
 
 text D_08062be4
-    .ascii "And lastly, Add a crash!\n"
+    .ascii "And lastly, add a crash!\n"
     .ascii "Things are heating up here!\n"
-    .ascii "There's no going back now,\n"
-    .asciz "so let's finish this right!"
+    .ascii "and there's no going back!\n"
+    .asciz "So let's finish this right!"
 endtext
 
 

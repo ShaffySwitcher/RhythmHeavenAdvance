@@ -96,10 +96,10 @@ return
 
 
 text D_080640d8
-    .ascii "Now then, How about a bit\n"
-    .ascii "more snares and crashes?\n"
-    .ascii "Stay focused and try not to\n"
-    .asciz "lose your head over this.\n"
+    .ascii "Now then, let's add a\n"
+    .ascii "snare and a crash in here.\n"
+    .ascii "Don't get too comfortable,\n"
+    .asciz "and stay focused!\n"
 endtext
 
 
@@ -165,8 +165,8 @@ return
 
 text D_0806439c
     .ascii "Let's spice it up a little!\n"
-    .ascii "Switch the snare with a tom.\n"
-    .ascii "Just follow along the beat\n"
+    .ascii "Switch this snare with a tom.\n"
+    .ascii "Just go along with the beat\n"
     .asciz "and you'll be good to go!\n"
 endtext
 
@@ -221,10 +221,10 @@ return
 
 
 text D_080645fc
-    .ascii "And finally, one last snare!\n"
-    .ascii "Stay sharp, and remember the\n"
+    .ascii "To end it off, one last snare!\n"
+    .ascii "Keep your focus on the\n"
     .ascii "order you hit the drums.\n"
-    .asciz "You got this!\n"
+    .asciz "You've got this!\n"
 endtext
 
 

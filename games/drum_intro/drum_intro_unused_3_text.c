@@ -46,7 +46,7 @@ const char D_0805e544[] =
 
 const char D_0805e55c[] =
     "\n"
-    "さあ、　こんどこそ！";
+    "Now, it's your turn!";
 
 const char *const D_0805e574[] = {
     D_0805e530,
@@ -63,9 +63,9 @@ const char D_0805e58c[] = "";
 
 const char D_0805e590[] = "Good, you've got it now!";
 
-const char D_0805e5ac[] = "なかなか　のみこみが早いですね！";
+const char D_0805e5ac[] = "You're picking this up quickly!";
 
-const char D_0805e5d0[] = "いいかんじです。";
+const char D_0805e5d0[] = "Nicely done!";
 
 const char *const D_0805e5e4[] = {
     D_0805e58c,
@@ -79,9 +79,9 @@ const char D_0805e5f8[] =
     "Next, start off the song with a crash.\n"
     "Press ⑬ to hit the cymbals.";
 
-const char D_0805e64c[] = "You only need to press both\n (B) and (R) at the same time once.";
+const char D_0805e64c[] = "You only need to press both\n ⑮ and ⑬ at the same time once.";
 
-const char D_0805e684[] = "We went over this in the previous lesson, so remember \nour practice from then.";
+const char D_0805e684[] = "We went over this in the previous\n lesson, so remember our practice from then.";
 
 const char D_0805e6b0[] = "With that, let's start!";
 
@@ -131,16 +131,16 @@ const char *const D_0805e7b0[] = {
 };
 
 const char D_0805e7c0[] =
-    "１回で 出来ちゃいましたネ！\n"
-    "すごいです！";
+    "You did it all at once!\n"
+    "I can't believe it!";
 
 const char D_0805e7ec[] =
-    "たったの２回で　できました！\n"
-    "やりますネ！";
+    "You did it in only two tries!\n"
+    "Good job!";
 
 const char D_0805e818[] =
-    "なんとか　出来ましたネ！\n"
-    "イイ感じですヨ！";
+    "You managed to do it somehow!\n"
+    "That's looking good!";
 
 const char *const D_0805e844[] = {
     D_0805e58c,
@@ -150,10 +150,10 @@ const char *const D_0805e844[] = {
     NULL
 };
 
-const char D_0805e858[] = "こんなかんじで、　曲のスタート、　中間、　キメを表\現できれば楽しく演奏できるのではないかと思います。";
+const char D_0805e858[] = "Since you've aced all parts of the songs,\nI think you'll enjoy my drum lessons!";
 
-const char D_0805e8c0[] = "あのコーナーで練習して、　ぜひ楽しくなってください。";
+const char D_0805e8c0[] = "You can play them in the bonus corner.\n Enjoy yourself!";
 
 const char D_0805e8f8[] =
-    "では、　また。\n"
-    "さようなら。";
+    "Well, see you later!\n"
+    "Goodbye!";
