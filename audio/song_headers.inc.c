@@ -5246,6 +5246,30 @@ struct SongHeader s_rap_kimitte_saiko_seqData = {
     /* Song Number   */ 1764
 };
 
+extern const u8 s_rap_kimitte_saiko_slow_mid[];
+struct SongHeader s_rap_kimitte_saiko_slow_seqData = {
+    /* MIDI Sequence */ s_rap_kimitte_saiko_slow_mid,
+    /* Sound Player  */ SFX_PLAYER_1,
+    /* Bank Number   */ INST_BANK_15,
+    /* Volume        */ 100,
+    /* Priority      */ 90,
+    /* unk8          */ 0xff,
+    /* Song Title    */ s_rap_kimitte_saiko_slow_seqName,
+    /* Song Number   */ 1747
+};
+
+extern const u8 s_rap_honto_desuka_slow_mid[];
+struct SongHeader s_rap_honto_desuka_slow_seqData = {
+    /* MIDI Sequence */ s_rap_honto_desuka_slow_mid,
+    /* Sound Player  */ SFX_PLAYER_1,
+    /* Bank Number   */ INST_BANK_15,
+    /* Volume        */ 100,
+    /* Priority      */ 90,
+    /* unk8          */ 0xff,
+    /* Song Title    */ s_rap_honto_desuka_slow_seqName,
+    /* Song Number   */ 1746
+};
+
 extern const u8 s_rap_oyatuga_naiyo_en_mid[];
 extern const u8 s_rap_oyatuga_naiyo_mid[];
 struct SongHeader s_rap_oyatuga_naiyo_seqData = {

@@ -5709,6 +5709,14 @@
             "pitch": "C5"
         },
         {
+            "sample": "RAPMEN_EN_slow_1.wav",
+            "pitch": "C5"
+        },
+        {
+            "sample": "RAPMEN_EN_slow_2.wav",
+            "pitch": "C5"
+        },
+        {
             "sample": "hit.wav",
             "pitch": "C5"
         },

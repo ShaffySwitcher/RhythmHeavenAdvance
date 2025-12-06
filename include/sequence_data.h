@@ -420,6 +420,8 @@ extern struct SongHeader s_rap_oyatuha_saiko_seqData;
 extern struct SongHeader s_rap_kibunha_saiko_seqData;
 extern struct SongHeader s_rap_orette_saiko_seqData;
 extern struct SongHeader s_rap_kimitte_saiko_seqData;
+extern struct SongHeader s_rap_kimitte_saiko_slow_seqData;
+extern struct SongHeader s_rap_honto_desuka_slow_seqData;
 extern struct SongHeader s_rap_oyatuga_naiyo_seqData;
 extern struct SongHeader s_rap_oresira_naiyo_seqData;
 extern struct SongHeader s_rap_un_seqData;
