@@ -150,6 +150,11 @@ void midi_player_stop(struct SoundPlayer *soundPlayer) {
 // Set Pause
 void midi_player_set_pause(struct SoundPlayer *soundPlayer, u8 pause) {
     soundPlayer->isPaused = pause;
+
+    // Since we already froze DirectSound, all we need to do is stop the PSG channels
+    if (pause) {
+        midi_channel_stop_psg_all(soundPlayer->midiBus);
+    }
 }
 
 
@@ -884,8 +889,8 @@ void midi_sound_main(void) {
             break;
         }
     }
-    
-    // Only update DirectSound if no players are paused
+
+    // Only update DirectSound if no players are paused (only works for samples and not PSG)
     if (!anyPlayerPaused) {
         midi_directsound_update();
     }
