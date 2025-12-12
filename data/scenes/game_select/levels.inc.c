@@ -20,7 +20,7 @@ struct LevelData level_data_table[] = {
         /* Entry Scene   */ &scene_karate_man_2,
         /* Level Name    */ "Karate Man 2",
         /* Level Desc.   */ "Something's up with\n"
-                            "the speed! Take care\n"
+                            "the speed! Look alive\n"
                             "as we throw you some\n"
                             "more stuff to punch.",
         /* Level Icon    */ 0,
@@ -69,7 +69,7 @@ struct LevelData level_data_table[] = {
         /* Level Name    */ "Polyrhythm",
         /* Level Desc.   */ "Manage the áO and áM\n"
 							"paths at the same time\n"
-							"to keep the red things\n"
+							"to keep those red things\n"
 							"rolling! Simple enough?",
         /* Level Icon    */ 3,
         /* Level Type    */ LEVEL_TYPE_GAME,
@@ -276,8 +276,8 @@ struct LevelData level_data_table[] = {
         /* Level Name    */ "Samurai Slice",
         /* Level Desc.   */ "Demons have put\n"
                             "the town in a panic!\n"
-                            "Look out! Samurai--\n"
-                            "slice them allÅI",
+                            "Come on Samurai,\n"
+                            "slice them all!",
         /* Level Icon    */ 18,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_samurai_slice_gfx_tables,
@@ -389,7 +389,7 @@ struct LevelData level_data_table[] = {
         /* Level Desc.   */ "There's a lonely girl\n"
                             "over there. Put your\n"
                             "flower power to good\n"
-                            "use to cheer her up!",
+                            "use and cheer her up!",
         /* Level Icon    */ 23,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_wizards_waltz_gfx_tables,
@@ -516,7 +516,7 @@ struct LevelData level_data_table[] = {
         /* Level Name    */ "Tram & Pauline",
         /* Level Desc.   */ "Gather round, one and\n"
                             "all! Tram and Pauline's\n"
-                            "acrobatic fox show\n"
+                            "acrobatic magic show\n"
 							"is about to begin!",
         /* Level Icon    */ 32,
         /* Level Type    */ LEVEL_TYPE_GAME,
@@ -530,10 +530,10 @@ struct LevelData level_data_table[] = {
     /* SHOWTIME */ {
         /* Entry Scene   */ &scene_showtime,
         /* Level Name    */ "Showtime",
-        /* Level Desc.   */ "It's showtime!\n"
-                            "Our plucky penguins\n"
-                            "are ready to start\n"
-                            "their routine!",
+        /* Level Desc.   */ "Our plucky penguins\n"
+                            "are ready for their act!\n"
+                            "Get out there and wow\n"
+                            "the crowd! It's showtime!",
         /* Level Icon    */ 36,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_showtime_gfx_tables,
@@ -596,7 +596,7 @@ struct LevelData level_data_table[] = {
         /* Level Name    */ "RAPWOMEN",
         /* Level Desc.   */ "The RAPMEN have\n"
                             "some new rivals!\n"
-                            "Don't be distracted\n"
+                            "Don't be deceived\n"
                             "by their cute voices!",
         /* Level Icon    */ 15,
         /* Level Type    */ LEVEL_TYPE_GAME,
@@ -657,7 +657,7 @@ struct LevelData level_data_table[] = {
     },
     /* REMIX_1 */ {
         /* Entry Scene   */ &scene_remix_1,
-        /* Level Name    */ "Remix ÇP",
+        /* Level Name    */ "Remix 1",
         /* Level Desc.   */ "Let's test your skills!\n"
                             "Stage 1's games have\n"
                             "all been remixed!\n"
@@ -673,7 +673,7 @@ struct LevelData level_data_table[] = {
     },
     /* REMIX_2 */ {
         /* Entry Scene   */ &scene_remix_2,
-        /* Level Name    */ "Remix ÇQ",
+        /* Level Name    */ "Remix 2",
         /* Level Desc.   */ "Let's test your skills!\n"
                             "This one's got a lively\n"
                             "atmosphere perfect\n"
@@ -689,7 +689,7 @@ struct LevelData level_data_table[] = {
     },
     /* REMIX_3 */ {
         /* Entry Scene   */ &scene_remix_3,
-        /* Level Name    */ "Remix ÇR",
+        /* Level Name    */ "Remix 3",
         /* Level Desc.   */ "Let's test your skills!\n"
                             "This one's got an\n"
                             "adorable love song with\n"
@@ -705,7 +705,7 @@ struct LevelData level_data_table[] = {
     },
     /* REMIX_4 */ {
         /* Entry Scene   */ &scene_remix_4,
-        /* Level Name    */ "Remix ÇS",
+        /* Level Name    */ "Remix 4",
         /* Level Desc.   */ "Let's test your skills!\n"
                             "This one's got a casual,\n"
                             "easygoing vibe, like a\n"
@@ -721,7 +721,7 @@ struct LevelData level_data_table[] = {
     },
     /* REMIX_5 */ {
         /* Entry Scene   */ &scene_remix_5,
-        /* Level Name    */ "Remix ÇT",
+        /* Level Name    */ "Remix 5",
         /* Level Desc.   */ "Let's test your skills!\n"
                             "This one's got some\n"
                             "melancholic lyrics.\n"
@@ -737,7 +737,7 @@ struct LevelData level_data_table[] = {
     },
     /* REMIX_6 */ {
         /* Entry Scene   */ &scene_remix_6,
-        /* Level Name    */ "Remix ÇU",
+        /* Level Name    */ "Remix 6",
         /* Level Desc.   */ "Let's test your skills!\n"
                             "Every game you've\n"
                             "played is here! Show\n"
@@ -753,7 +753,7 @@ struct LevelData level_data_table[] = {
     },
     /* REMIX_7 */ {
         /* Entry Scene   */ &scene_remix_7,
-        /* Level Name    */ "Remix ÇV",
+        /* Level Name    */ "Remix 7",
         /* Level Desc.   */ "Let's test your skills!\n"
                             "A lot of the Remixes\n"
                             "make a comeback here!\n"
@@ -769,7 +769,7 @@ struct LevelData level_data_table[] = {
     },
     /* REMIX_8 */ {
         /* Entry Scene   */ &scene_remix_8,
-        /* Level Name    */ "Remix ÇW",
+        /* Level Name    */ "Remix 8",
         /* Level Desc.   */ "Let's test your skills!\n"
                             "This final remix is a\n"
                             "real challenge! Show\n"
@@ -867,8 +867,8 @@ struct LevelData level_data_table[] = {
         /* Entry Scene   */ &scene_drum_live,
         /* Level Name    */ "Concert",
         /* Level Desc.   */ "We're hosting a\n"
-                            "concert! We think\n"
-                            "you've got good rhythm,\n"
+                            "concert! You've got\n"
+                            "good rhythm, right?\n"
                             "so give it a try!",
         /* Level Icon    */ 44,
         /* Level Type    */ LEVEL_TYPE_BONUS,

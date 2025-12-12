@@ -90,7 +90,7 @@ return
 
 text D_08061b64
     .ascii "\n"
-    .ascii "let's throw in one\n"
+    .ascii "Let's throw in one\n"
     .ascii "more bass beat!\n"
     .asciz "You got this!"
 endtext
@@ -171,9 +171,9 @@ endtext
 
 text D_08061e04
     .ascii "\n"
-    .ascii "Keep that in mind\n"
+    .ascii "Keep all of that in mind\n"
     .ascii "as you play this set!\n"
-    .ascii "Let's start by taking it slow.\n"
+    .ascii "Let's begin, taking it slow.\n"
 endtext
 
 

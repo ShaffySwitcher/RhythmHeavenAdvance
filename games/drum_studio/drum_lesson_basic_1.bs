@@ -95,8 +95,9 @@ return
 
 text D_080615e4
     .ascii "\n"
-    .ascii "Here's one last drumbeat!\n"
-    .asciz "Can you do it?\n"
+    .ascii "And now for another\n"
+    .ascii "drumbeat right at the\n"
+    .asciz "end! Can you get it?\n"
 endtext
 
 
