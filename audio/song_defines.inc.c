@@ -689,7 +689,7 @@
 /* 0686 */ DEFINE_SONG( &s_f_drumtech_miss_seqData,          SFX_PLAYER_5   )
 /* 0687 */ DEFINE_SONG( &s_f_drumtech_fall_seqData,          SFX_PLAYER_5   )
 /* 0688 */ DEFINE_SONG( &s_f_drumtech_damage_seqData,        SFX_PLAYER_6   )
-/* 0689 */ DEFINE_SONG( NULL, 0 )
+/* 0689 */ DEFINE_SONG( &s_f_shock_seqData,                  SFX_PLAYER_7   )
 /* 0690 */ DEFINE_SONG( NULL, 0 )
 /* 0691 */ DEFINE_SONG( NULL, 0 )
 /* 0692 */ DEFINE_SONG( NULL, 0 )

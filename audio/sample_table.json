@@ -5731,6 +5731,10 @@
         {
             "sample": "four.wav",
             "pitch": "C5"
+        },
+        {
+            "sample": "shockshort.wav",
+            "pitch": "C5"
         }
     ]
 }

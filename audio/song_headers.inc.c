@@ -8861,6 +8861,18 @@ struct SongHeader s_f_drumtech_damage_seqData = {
     /* Song Number   */ 688
 };
 
+extern const u8 s_f_shock_mid[];
+struct SongHeader s_f_shock_seqData = {
+    /* MIDI Sequence */ s_f_shock_mid,
+    /* Sound Player  */ SFX_PLAYER_7,
+    /* Bank Number   */ INST_BANK_61,
+    /* Volume        */ 127,
+    /* Priority      */ 120,
+    /* unk8          */ 0xff,
+    /* Song Title    */ s_f_shock_seqName,
+    /* Song Number   */ 689
+};
+
 extern const u8 s_f_neko1_mid[];
 struct SongHeader s_f_neko1_seqData = {
     /* MIDI Sequence */ s_f_neko1_mid,

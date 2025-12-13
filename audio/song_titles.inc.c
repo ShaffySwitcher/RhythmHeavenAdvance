@@ -721,6 +721,7 @@ char s_f_base_1note_seqName[] = "";
 char s_f_drumtech_miss_seqName[] = "";
 char s_f_drumtech_fall_seqName[] = "";
 char s_f_drumtech_damage_seqName[] = "";
+char s_f_shock_seqName[] = "";
 char s_f_neko1_seqName[] = "";
 char s_f_neko2_seqName[] = "";
 char s_f_neko3_seqName[] = "";
