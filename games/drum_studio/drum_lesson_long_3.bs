@@ -95,7 +95,7 @@ text D_0806354c
     .ascii "\n"
     .ascii "Let's spice things up, and\n"
     .ascii "hit the crash! We're still\n"
-    .asciz "jusr still warming , y'know?"
+    .asciz "just warming up, y'know?"
 endtext
 
 

@@ -88,7 +88,7 @@ return
 text D_08060af4
     .ascii "Now let's do a new snare\n"
     .ascii "beat, right before the end.\n"
-    .ascii "Careful, though - the bass\n"
+    .ascii "Careful though, the bass\n"
     .asciz "is still the same as before!"
 endtext
 

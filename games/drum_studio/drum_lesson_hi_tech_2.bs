@@ -263,7 +263,7 @@ return
 
 
 text D_08066918
-    .ascii "Here come some more\n"
+    .ascii "Here comes some more\n"
     .ascii "bass and snare beats!\n"
     .ascii "I know you can do it!\n"
     .asciz "Put your heart into it!"

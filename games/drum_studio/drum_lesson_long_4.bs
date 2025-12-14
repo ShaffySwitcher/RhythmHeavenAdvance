@@ -140,7 +140,7 @@ return
 
 text D_08062a64
     .ascii "\n"
-    .ascii "Let's make the pop a little!\n"
+    .ascii "Let's make it pop a little!\n"
     .ascii "Think you can pull this off?\n"
     .asciz "Follow as best as you can!\n"
 endtext

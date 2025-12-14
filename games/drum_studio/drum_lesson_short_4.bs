@@ -58,8 +58,7 @@ return
 text D_0805f648
     .ascii "\n"
     .ascii "I slipped in another bass beat!\n"
-    .ascii "We're only just starting!\n"
-    .asciz "Can you guess what it is?\n"
+    .asciz "We're only just starting!\n"
 endtext
 
 
@@ -73,7 +72,7 @@ return
 text D_0805f6ac
     .ascii "\n"
     .ascii "There's a new addition to the\n"
-    .ascii "drum set - what could it be?\n"
+    .ascii "drum set! what could it be?\n"
     .asciz "Press Up on ‡O to find out!"
 endtext
 
@@ -114,7 +113,7 @@ text D_0805f7f4
     .ascii "Now for a tom beat, right\n"
     .ascii "at the very end!\n"
     .ascii "Remember where that is?\n"
-    .asciz "(Hint: Right on (+)!)"
+    .asciz "(Hint: Right on ‡O!)"
 endtext
 
 
@@ -163,7 +162,7 @@ return
 text D_0805f9cc
     .ascii "\n"
     .ascii "That just now was our first\n"
-    .ascii "cymbal - the hi-hat!\n"
+    .ascii "cymbal, the hi-hat!\n"
     .asciz "You can hit it with Up on ‡O.\n"
 endtext
 

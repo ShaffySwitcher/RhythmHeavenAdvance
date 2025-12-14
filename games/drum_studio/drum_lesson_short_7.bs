@@ -108,7 +108,7 @@ return
 
 text D_08060568
     .ascii "Would you look at that?\n"
-    .ascii "Another bass beat!\n"
+    .ascii "Yet another bass beat!\n"
     .ascii "Careful, though, things\n"
     .asciz "are getting trickier!"
 endtext

@@ -55,7 +55,7 @@ return
 
 text D_08061070
     .ascii "Now, let's add a snare\n"
-    .ascii "right at the end.\n"
+    .ascii "right at the very end.\n"
     .ascii "Keep the bass pattern\n"
     .asciz "the same, though!"
 endtext
