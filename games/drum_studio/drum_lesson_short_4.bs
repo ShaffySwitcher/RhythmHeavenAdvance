@@ -72,7 +72,7 @@ return
 text D_0805f6ac
     .ascii "\n"
     .ascii "There's a new addition to the\n"
-    .ascii "drum set! what could it be?\n"
+    .ascii "drum set, what could it be?\n"
     .asciz "Press Up on ‡O to find out!"
 endtext
 
