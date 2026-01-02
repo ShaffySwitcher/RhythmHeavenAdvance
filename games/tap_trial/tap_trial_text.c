@@ -7,17 +7,17 @@
 
 const char D_0805c0d0[] = "You need to go over the basics again.";
 
-const char D_0805c0ec[] = "";
+const char D_0805c0ec[] = "You were able to adapt no matter what!";
 
-const char D_0805c104[] = "You lack judgment.";
+const char D_0805c104[] = "You couldn't decide on anything in the moment.";
 
-const char D_0805c11c[] = "Great judgment!";
+const char D_0805c11c[] = "You had great decision-making skills!";
 
 const char D_0805c130[] = "You needed to concentrate more.";
 
 const char D_0805c144[] = "You were clearly concentrating hard.";
 
-const char D_0805c15c[] = "You're not quite there yet.";
+const char D_0805c15c[] = "You let your guard down at the very end.";
 
 const char D_0805c170[] = "";
 
@@ -53,11 +53,11 @@ const char D_0805c2a8[] = "You needed to concentrate more.";
 
 const char D_0805c2bc[] = "You were clearly concentrating hard.";
 
-const char D_0805c2d4[] = "You might need more practice.";
+const char D_0805c2d4[] = "You might need some more practice.";
 
 const char D_0805c2e8[] = "";
 
-const char D_0805c2ec[] = "Monkey Feedback";
+const char D_0805c2ec[] = "Monkey feedback";
 
 const char D_0805c300[] = "ÇkÇÖÇîÅfÇìÅ@ÇÑÇÅÇéÇÉÇÖÅI";
 

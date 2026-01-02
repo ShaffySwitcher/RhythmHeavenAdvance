@@ -20,14 +20,14 @@ struct LevelData level_data_table[] = {
         /* Entry Scene   */ &scene_karate_man_2,
         /* Level Name    */ "Karate Man 2",
         /* Level Desc.   */ "Something's up with\n"
-                            "the speed! Look alive\n"
+                            "the speed! Stay sharp\n"
                             "as we throw you some\n"
                             "more stuff to punch.",
         /* Level Icon    */ 0,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_karate_man_2_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "Who cares about the speed, anyway!",
+            /* TRY_AGAIN */ "What's the point of these speed switchups, anyway!?",
             /* OK        */ "Well, that's that. Let's eat!",
             /* SUPERB    */ "I think we went through everything!"
         }
@@ -148,8 +148,8 @@ struct LevelData level_data_table[] = {
         /* Level Name    */ "Rhythm Tweezers 2",
         /* Level Desc.   */ "My roots are\n"
                             "growing back!\n"
-                            "Please pluck them\n"
-                            "off again!",
+                            "You've got to pluck\n"
+                            "them off again!",
         /* Level Icon    */ 25,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_rhythm_tweezers_2_gfx_tables,
@@ -196,7 +196,7 @@ struct LevelData level_data_table[] = {
         /* Level Name    */ "Bouncy Road 2",
         /* Level Desc.   */ "See that ball bouncing\n"
                             "down the road?\n"
-                            "It's a rather nice ball,\n"
+                            "It's such a nice ball,\n"
                             "so don't let it fall!",
         /* Level Icon    */ 50,
         /* Level Type    */ LEVEL_TYPE_GAME,
@@ -234,7 +234,7 @@ struct LevelData level_data_table[] = {
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_ninja_reincarnate_gfx_tables,
         /* Epilogue Text */ {
-            /* TRY_AGAIN */ "Don't give up! We're counting on you!",
+            /* TRY_AGAIN */ "You can't give up now! We're counting on you!",
             /* OK        */ "You are... strong. Don't give up yet.",
             /* SUPERB    */ "You have proven your worth! You have our blessing..."
         }
@@ -338,7 +338,7 @@ struct LevelData level_data_table[] = {
     /* TAP_TRIAL_2 */ {
         /* Entry Scene   */ &scene_tap_trial_2,
         /* Level Name    */ "Tap Trial 2",
-        /* Level Desc.   */ "The monkeys are \n"
+        /* Level Desc.   */ "The monkeys are\n"
                             "bringing their A game!\n"
                             "Can you keep up? Don't\n"
                             "let them out-tap you!",
@@ -492,7 +492,7 @@ struct LevelData level_data_table[] = {
         /* Epilogue Text */ {
             /* TRY_AGAIN */ "Our spirits have been deflated...",
             /* OK        */ "We still have a long way to go!",
-            /* SUPERB    */ "Three cheers for our star tossers!"
+            /* SUPERB    */ "Three cheers for our star tosser!"
         }
     },
     /* RAT_RACE */ {
@@ -523,7 +523,7 @@ struct LevelData level_data_table[] = {
         /* Epilogue GFX  */ epilogue_tram_pauline_gfx_tables,
         /* Epilogue Text */ {
             /* TRY_AGAIN */ "We've transformed the show into a failure!",
-            /* OK        */ "At least we only half messed up the show...",
+            /* OK        */ "At least we only messed up half the show...",
             /* SUPERB    */ "We're the perfect duo!"
         }
     },
@@ -643,9 +643,9 @@ struct LevelData level_data_table[] = {
         /* Entry Scene   */ &scene_bon_dance,
         /* Level Name    */ "TheÅôBon Dance",
         /* Level Desc.   */ "The Bon Festival has\n"
-                            "a new, modern look!\n"
-                            "Clap along to the\n"
-                            "groovy tune! Yay!",
+                            "a modern-day style!\n"
+                            "Clap along to this\n"
+                            "New arrangement!",
         /* Level Icon    */ 17,
         /* Level Type    */ LEVEL_TYPE_GAME,
         /* Epilogue GFX  */ epilogue_bon_dance_gfx_tables,
@@ -755,9 +755,9 @@ struct LevelData level_data_table[] = {
         /* Entry Scene   */ &scene_remix_7,
         /* Level Name    */ "Remix 7",
         /* Level Desc.   */ "Let's test your skills!\n"
-                            "A lot of the Remixes\n"
+                            "A lot of the remixes\n"
                             "make a comeback here!\n"
-                            "It's a Remix Remix!",
+                            "It's a remix remix!",
         /* Level Icon    */ 19,
         /* Level Type    */ LEVEL_TYPE_REMIX,
         /* Epilogue GFX  */ epilogue_remix7_gfx_tables,
@@ -771,7 +771,7 @@ struct LevelData level_data_table[] = {
         /* Entry Scene   */ &scene_remix_8,
         /* Level Name    */ "Remix 8",
         /* Level Desc.   */ "Let's test your skills!\n"
-                            "This final remix is a\n"
+                            "This special remix is a\n"
                             "real challenge! Show\n"
                             "us what you've learned!",
         /* Level Icon    */ 37,
@@ -869,7 +869,7 @@ struct LevelData level_data_table[] = {
         /* Level Desc.   */ "We're hosting a\n"
                             "concert! You've got\n"
                             "good rhythm, right?\n"
-                            "so give it a try!",
+                            "So give it a try!",
         /* Level Icon    */ 44,
         /* Level Type    */ LEVEL_TYPE_BONUS,
         /* Epilogue GFX  */ epilogue_drum_live_gfx_tables,

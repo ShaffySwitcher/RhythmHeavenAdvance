@@ -7,17 +7,17 @@
 
 const char D_0805e914[] = "The \"Huh?\" lines were just confusing.";
 
-const char D_0805e938[] = "The \"Huh?\" lines were really rhythmical!";
+const char D_0805e938[] = "The \"Huh?\" lines had some real groove!";
 
-const char D_0805e960[] = "I \"feel\" like we fumbled those lines.";
+const char D_0805e960[] = "I \"feel\" like we we could've done better.";
 
-const char D_0805e988[] = "I \"feel\" like those lines were great!";
+const char D_0805e988[] = "Your \"feel\" for this is impressive!";
 
-const char D_0805e9ac[] = "The \"AWESOME!\" lines were anything but!";
+const char D_0805e9ac[] = "The \"AWESOME!\" lines... weren't.";
 
-const char D_0805e9d8[] = "The \"AWESOME!\" lines were exactly that!";
+const char D_0805e9d8[] = "The \"AWESOME!\" lines were nothing less!";
 
-const char D_0805ea04[] = "RAPNOTES from the Boys";
+const char D_0805ea04[] = "RAPNOTES from the Boys:";
 
 const char D_0805ea18[] = "‚k‚…‚”f‚“@‚‡‚…‚”@‚‰‚‚”‚@‚‰‚”D";
 
@@ -27,7 +27,7 @@ const char D_0805ea44[] = "‚x‚D";
 
 const char D_0805ea50[] = "‚v‚‚‚‚@‚’‚‚@‚”‚‚‡‚…‚”‚ˆ‚…‚’H";
 
-const char D_0805ea6c[] = "‚k‚…‚‚‚…@‚“‚ˆ‚‚—@‚™‚‚•@‚”‚ˆ‚…@‚’‚‚‚…‚“D";
+const char D_0805ea6c[] = "‚k‚…‚‚‚…@‚‚‚’‚…‚‚‹@‚‰‚”@‚„‚‚—‚@‚†‚‚’@‚™‚‚•D";
 
 const char D_0805ea84[] = "‚o‚’‚…‚“‚“@T@‚‚”@‚”‚ˆ‚…@h‚t‚ˆIh";
 
@@ -45,15 +45,15 @@ const char D_0805eb14[] = "‚x‚‚•@‚‡‚‚”‚”‚@‚‚’‚…‚“‚“@T@‚‚”@‚”‚ˆ‚…@h‚
 
 const char D_0805eb34[] = "‚n‚jI@‚x‚‚•f‚–‚…@‚‡‚‚”@‚‰‚”I";
 
-const char D_0805eb3c[] = "‚s‚ˆ‚‚”@‚—‚‚“@‚”‚ˆ‚…@g.b‚g‚•‚ˆH.8h@‚–‚…‚’‚“‚…D";
+const char D_0805eb3c[] = "‚s‚ˆ‚‚”@‚—‚‚“@‚@g.b‚ˆ‚•‚ˆH.8h@‚Œ‚‰‚‚…D";
 
-const char D_0805eb6c[] = "‚m‚‚—@‚Œ‚…‚”f‚“@‚”‚’‚™@‚”‚ˆ‚…@g.9‚™‚@‚†‚…‚…‚Œ@‚‚…H.8h@‚–‚…‚’‚“‚…D";
+const char D_0805eb6c[] = "‚m‚‚—@‚Œ‚…‚”f‚“@‚”‚’‚™@‚”‚ˆ‚…@g.9‚™‚@‚†‚…‚…‚Œ@‚‚…H.8h@‚Œ‚‰‚‚…D";
 
 const char D_0805eb94[] = "‚s‚‚‹‚…@‚@‚Œ‚‰‚“‚”‚…‚D";
 
 const char D_0805ebac[] = "‚x‚‚•@‚‡‚‚”@‚”‚ˆ‚‰‚“I";
 
-const char D_0805ebc4[] = "‚m‚‚—@‚Œ‚…‚”f‚“@‚”‚’‚™@‚‚•‚’@g.a‚`‚v‚d‚r‚n‚l‚dI.8h@‚–‚…‚’‚“‚…D";
+const char D_0805ebc4[] = "‚`‚Œ‚Œ@‚”‚ˆ‚‚”f‚“@‚Œ‚…‚†‚”@‚‰‚“@‚‚•‚’@g.a‚`‚v‚d‚r‚n‚l‚dI.8h@‚Œ‚‰‚‚…D";
 
 const char D_0805ebf4[] = "‚f‚‰‚–‚…@‚‰‚”@‚@‚Œ‚‰‚“‚”‚…‚DDD";
 

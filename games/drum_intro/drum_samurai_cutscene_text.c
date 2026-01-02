@@ -23,7 +23,7 @@ const char D_0805dfcc[] =
 
 
 const char D_0805e000[] =
-    "Everyone's got a\n"
+    "Everyone has a\n"
     "sense of rhythm in\n"
     "some form or fashion.";
 
@@ -53,7 +53,7 @@ const char D_0805e0d8[] =
 
 const char D_0805e10c[] =
     "...how about trying out\n"
-    "some Rhythm Games? You\n"
+    "some rhythm games? You\n"
     "might find it getting\n"
     "sharper and sharper!";
 

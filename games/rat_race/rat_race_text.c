@@ -5,11 +5,11 @@
 /* Game Text - Rat Race */
 
 
-const char D_0805d104[] = "You stops need work.";
+const char D_0805d104[] = "You don't know when to stop.";
 
 const char D_0805d118[] = "You stopped on a dime!";
 
-const char D_0805d130[] = "You started too slowly...";
+const char D_0805d130[] = "You need to move sooner!";
 
 const char D_0805d14c[] = "You took off right on cue!";
 
