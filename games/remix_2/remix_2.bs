@@ -465,8 +465,8 @@ script script_remix_2_main
     sneaky_spirits_print_text D_08068028
     rest 1
     sneaky_spirits_show_ghost 6
+    spawn_cue CUE_STRICT
     sneaky_spirits_print_text D_08068019
-    spawn_cue CUE_TUTORIAL
     beat_anim
     rest 23
     sneaky_spirits_print_text D_08068028
