@@ -4,6 +4,8 @@
 #include "bitmap_font.h"
 #include "memory_heap.h"
 
+extern u8 haveSeenDisclamer;
+
 
 static struct Scene *gCurrentScene;
 static struct Scene *gNextScene;
@@ -57,6 +59,12 @@ void func_08000224(void) {
 	set_playtest_save_data();
 #endif
 	flush_save_buffer_to_sram_backup();
+	
+	// Initialize disclaimer flag from save data
+	if (CHECK_ADVANCE_FLAG(D_030046a8->data.advanceFlags, ADVANCE_FLAG_SEEN_DISCLAMER)) {
+		haveSeenDisclamer = TRUE;
+	}
+	
 	set_sound_mode(D_030046a8->data.unk294[8]); // Set DirectSound Mode (Stereo/Mono)
 	set_scene_object_current_text_id(scene_get_default_text_id());
 	init_scene_static_var();

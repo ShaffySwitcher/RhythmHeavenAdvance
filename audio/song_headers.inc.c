@@ -1786,16 +1786,28 @@ struct SongHeader s_tran_hensin_seqData = {
     /* Song Number   */ 1303
 };
 
-extern const u8 s_tran_jump_se_mid[];
-struct SongHeader s_tran_jump_se_seqData = {
-    /* MIDI Sequence */ s_tran_jump_se_mid,
+extern const u8 s_tran_jump_se_left_mid[];
+struct SongHeader s_tran_jump_se_left_seqData = {
+    /* MIDI Sequence */ s_tran_jump_se_left_mid,
     /* Sound Player  */ SFX_PLAYER_2,
     /* Bank Number   */ INST_BANK_13,
     /* Volume        */ 60,
     /* Priority      */ 90,
     /* unk8          */ 0xff,
-    /* Song Title    */ s_tran_jump_se_seqName,
+    /* Song Title    */ s_tran_jump_se_left_seqName,
     /* Song Number   */ 1304
+};
+
+extern const u8 s_tran_jump_se_right_mid[];
+struct SongHeader s_tran_jump_se_right_seqData = {
+    /* MIDI Sequence */ s_tran_jump_se_right_mid,
+    /* Sound Player  */ SFX_PLAYER_3,
+    /* Bank Number   */ INST_BANK_13,
+    /* Volume        */ 60,
+    /* Priority      */ 90,
+    /* unk8          */ 0xff,
+    /* Song Title    */ s_tran_jump_se_right_seqName,
+    /* Song Number   */ 1305
 };
 
 extern const u8 s_toss_red_blue1_mid[];
