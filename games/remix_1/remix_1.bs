@@ -559,6 +559,7 @@ script script_remix_1_main
     rest 24
     rest 24
     rest 24
+    spaceball_prep_pitcher
     spaceball_zoom_camera 0xfc00, 23
     rest 24
     play_music L1_pat13_seqData
