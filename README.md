@@ -122,6 +122,7 @@ Translation and Localization:
 + Mizuka Lover
 + somethingAccurate
 + ShaffySwitcher
++ castIe
 + patataofcourse
 
 Localization Support:
@@ -145,7 +146,6 @@ Audio Engineering:
 Bug Testing:
 Everyone on the Rhythm Heaven Advance discord!
 with special mention to nwqol 
-
 
 Thank you all for your support!
 
