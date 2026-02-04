@@ -102,7 +102,7 @@ Asset Assembly:
 
 Graphic Design:
 + Tailx
-+ vincells
++ Vincells
 + Borists
 
 Main Programming:
