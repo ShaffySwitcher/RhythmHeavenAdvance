@@ -98,6 +98,7 @@ Asset Assembly:
 + amdree
 + patataofcourse
 + Nate Candles
++ Itaific
 
 Graphic Design:
 + Tailx
@@ -119,10 +120,9 @@ Coding Contributions:
 
 Translation and Localization:
 + Mizuka Lover
-+ ShaffySwitcher
 + somethingAccurate
++ ShaffySwitcher
 + patataofcourse
-+ castle
 
 Localization Support:
 + Cash Banooka
@@ -134,10 +134,18 @@ SFX:
 + Rhythm Heaven Megamix
 + Cherryberryfaygo
 + Nabix and all of his family
++ itaific
++ Sesu
+
+Audio Engineering:
++ FireChat
++ castIe
++ Kievit
 
 Bug Testing:
 Everyone on the Rhythm Heaven Advance discord!
-With special mention to nwqol
+with special mention to nwqol 
+
 
 Thank you all for your support!
 
