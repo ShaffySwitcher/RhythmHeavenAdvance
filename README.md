@@ -135,7 +135,7 @@ SFX:
 + Rhythm Heaven Megamix
 + Cherryberryfaygo
 + Nabix and all of his family
-+ itaific
++ Itaific
 + Sesu
 
 Audio Engineering:
