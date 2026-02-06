@@ -13,7 +13,7 @@ struct ReadingMaterial reading_material_table[] = {
             "Rhythm Heaven Advance.\n"
             #endif
             "Oh... you've borrowed it from a friend?\n"
-            "A-and it's... u-used?\n"
+            "Or is it... s-secondhand?\n"
             "Well, that's beside the point. The fact is, we're truly\n"
             "honored that you've put your interest into this game.\n"
             "It's been nice meeting you, and we hope this game\n"
