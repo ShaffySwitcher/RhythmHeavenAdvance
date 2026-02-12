@@ -10,6 +10,7 @@
 
 static u8 D_0300155c;
 
+extern u8 haveSeenDisclaimer;
 
 /* GLOBAL RIQ SCENE */
 
@@ -302,7 +303,7 @@ struct DebugText *create_new_dev_text(u16 memID, u32 layer, u16 *arg2, u32 tiles
 
 
 // [D_089dd908] ?
-char D_089dd908[] = "QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ";
+char D_089dd908[] = "ï¿½Qï¿½Qï¿½Qï¿½Qï¿½Qï¿½Qï¿½Qï¿½Qï¿½Qï¿½Qï¿½Qï¿½Qï¿½Qï¿½Qï¿½Qï¿½Qï¿½Qï¿½Qï¿½Qï¿½Qï¿½Qï¿½Qï¿½Qï¿½Qï¿½Qï¿½Qï¿½Qï¿½Qï¿½Qï¿½Qï¿½Qï¿½Q";
 
 // Print DebugText object.
 void dev_text_print(struct DebugText *debugText, const char *string) {
@@ -317,7 +318,7 @@ void dev_text_print(struct DebugText *debugText, const char *string) {
     debugText->xOffset = -1;
 
     bgMap = debugText->cursorMap;
-    bmp_font_bg_print_text(debugText->bgFont, bgMap, 32, "Q", debugText->palette);
+    bmp_font_bg_print_text(debugText->bgFont, bgMap, 32, "ï¿½Q", debugText->palette);
     t1 = bgMap[0];
     t2 = bgMap[32];
     bgMap++;
@@ -513,7 +514,12 @@ FontPalette dev_text_font_pal2[] = {
 // Stop
 void soft_reset_scene_stop(void *endParam) {
     func_08000224();
-    set_next_scene(D_08935fb0);
+    if (haveSeenDisclaimer) {
+        set_next_scene(&scene_title);
+    } else {
+        set_next_scene(&scene_disclaimer);
+        set_scene_trans_target(&scene_disclaimer, &scene_title);
+    }
 }
 
 
