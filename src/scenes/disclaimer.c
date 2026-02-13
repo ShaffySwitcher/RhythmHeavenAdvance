@@ -17,14 +17,14 @@ void disclaimer_scene_render_anim(void) {
 void disclaimer_scene_stop(void *sVar, s32 dArg) {
     haveSeenDisclaimer = TRUE;
 
-    SET_ADVANCE_FLAG(D_030046a8->data.advanceFlags, ADVANCE_FLAG_SEEN_disclaimer);
+    SET_ADVANCE_FLAG(D_030046a8->data.advanceFlags, ADVANCE_FLAG_SEEN_DISCLAIMER);
     flush_save_buffer_to_sram();
 }
 
 void disclaimer_scene_wait_if_not_seen(void) {
     s32 task;
 
-    if(!CHECK_ADVANCE_FLAG(D_030046a8->data.advanceFlags, ADVANCE_FLAG_SEEN_disclaimer)) {
+    if(!CHECK_ADVANCE_FLAG(D_030046a8->data.advanceFlags, ADVANCE_FLAG_SEEN_DISCLAIMER)) {
         set_beatscript_tempo(20);
     }
     set_pause_beatscript_scene(FALSE);
