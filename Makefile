@@ -31,8 +31,8 @@ CC1 := tools/agbcc/bin/agbcc
 
 # Verbose toggle
 V := @
-ifeq (VERBOSE, 1)
-    V=
+ifeq ($(VERBOSE),1)
+	V=
 endif
 
 # Colors
@@ -67,8 +67,19 @@ endif
 # Preprocessor defines
 
 # Features: SFX, PLUS, PLAYTEST, PARADISE
-FEATURES ?= 
-DEFINES := REV=$(REV) $(FEATURES)
+# Usage:
+#   make FEATURES="SFX PLUS"
+#   make SFX=1 PLAYTEST=1
+FEATURES ?=
+FEATURES_ALLOWED := SFX PLUS PLAYTEST PARADISE
+FEATURES_FROM_VARS := $(foreach f,$(FEATURES_ALLOWED),$(if $(filter 1,$($(f))),$(f),))
+FEATURES_LIST := $(sort $(strip $(FEATURES) $(FEATURES_FROM_VARS)))
+INVALID_FEATURES := $(filter-out $(FEATURES_ALLOWED),$(FEATURES_LIST))
+ifneq ($(INVALID_FEATURES),)
+	$(error Unknown FEATURES: $(INVALID_FEATURES). Allowed: $(FEATURES_ALLOWED))
+endif
+
+DEFINES := REV=$(REV) $(FEATURES_LIST)
 C_DEFINES := $(foreach d,$(DEFINES),-D$(d))
 
 CFLAGS := -mthumb-interwork -Wparentheses -O2 -fhex-asm
@@ -138,12 +149,17 @@ INCLUDE	:=	-I $(foreach dir,$(INCLUDES),$(wildcard $(dir)/*.h)) \
 			-I $(CURDIR)/$(BUILD)
 
 #---------------------------------------------------------------------------------
-.PHONY: default clean distclean rebuild patch
+.PHONY: default clean distclean rebuild patch help
 .SECONDARY:
 #---------------------------------------------------------------------------------
 
 default: $(OUTPUT).gba
 	$(V)echo "Build succeeded!"; \
+
+help:
+	@echo "Usage: make [target] [REV=0|1] [VERBOSE=1] [FEATURES=\"SFX PLUS\"] [SFX=1 PLAYTEST=1]"
+	@echo "Targets: default clean distclean rebuild patch"
+	@echo "Features: $(FEATURES_ALLOWED)"
 
 #---------------------------------------------------------------------------------
 
