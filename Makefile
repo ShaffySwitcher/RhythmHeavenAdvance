@@ -114,7 +114,7 @@ ALL_DIRS       := $(sort $(ALL_DIRS)) # remove duplicates
 BUILD_DIRS     := $(BUILD) $(addprefix $(BUILD)/,$(ALL_DIRS))
 
 LD_SCRIPT := advance.ld
-UNDEFINED_SYMS := undefined_syms.ld
+UNDEFINED_SYMS := symbols.ld
 
 #---------------------------------------------------------------------------------
 
