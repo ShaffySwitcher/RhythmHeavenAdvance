@@ -23,7 +23,7 @@ const char D_0805ea18[] = "Ｌｅｔ’ｓ　ｇｅｔ　ｉｎｔｏ　ｉｔ．";
 
 const char D_0805ea34[] = "Ｗｅ　ｓｈｏｕｌｄ　ｄｏ　ｔｈａｔ　ａｇａｉｎ．";
 
-const char D_0805ea44[] = "は";
+const char D_0805ea44[] = "Ｙｏ．";
 
 const char D_0805ea50[] = "Ｗａｎｎａ　ｒａｐ　ｔｏｇｅｔｈｅｒ？";
 
