@@ -48,11 +48,11 @@
 - Kievit
 
 
-### Special Thanks
+## Special Thanks
 - nwqol
 - The decomp folks again
 - ...and you! 
 
 ---
 Information on the credits was taken from multiple sources, including the RHAdvance repository and the Rhythm Heaven Advance wiki page.
-Feel free to contact me if there's any mistakes (or wait until I update those again ?\\_(ƒc)\_/?)
+Feel free to contact me if there's any mistakes (or wait until I update those again ?\\_(Æ’c)\_/?)
