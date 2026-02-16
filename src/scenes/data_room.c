@@ -51,7 +51,7 @@ const char *dataroom_listbox_get_item_name(u32 item) {
         return NULL;
     }
 
-    return D_030046a8->data.readingMaterialUnlocked[item]
+    return get_reading_material_unlocked(&D_030046a8->data, item)
         ? reading_material_table[item].title : "???";
 }
 
@@ -192,7 +192,7 @@ void dataroom_scene_update(void *sVar, s32 dArg) {
 
     switch (event) {
         case DATAROOM_EV_CONFIRM:
-            if (!D_030046a8->data.readingMaterialUnlocked[listbox_get_sel_item(gDataRoom->listbox)]) {
+            if (!get_reading_material_unlocked(&D_030046a8->data, listbox_get_sel_item(gDataRoom->listbox))) {
                 play_sound(&s_menu_error_seqData);
             } else {
                 func_080006f0(get_scene_trans_target(&scene_data_room), get_scene_trans_var(&scene_data_room));

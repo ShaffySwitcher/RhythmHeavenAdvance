@@ -42,7 +42,8 @@ enum LevelIconOverlaysEnum {
     /* 04 */ LEVEL_ICON_OVERLAY_MEDAL,
     /* 05 */ LEVEL_ICON_OVERLAY_REMIX_CLOSED,
     /* 06 */ LEVEL_ICON_OVERLAY_REMIX_UNCLEARED,
-    /* 07 */ LEVEL_ICON_OVERLAY_BONUS
+    /* 07 */ LEVEL_ICON_OVERLAY_BONUS,
+    /* 08 */ LEVEL_ICON_OVERLAY_PERFECT
 };
 
 
@@ -189,12 +190,20 @@ struct GameSelectSceneData {
     /* [0x4F8] Perfect Rank Icon */
     s16 perfectClearedSprite;
     s16 noPracticeSprite;
+    s16 tempoUpSprite;
+    s32 modelCornerHidden;
 };
 
 struct CampaignGiftData {
     s8 x, y;
     u8 type;
     u32 id;
+};
+
+enum LevelDataFlags {
+    LEVEL_DATA_FLAG_NONE = 0,
+    LEVEL_DATA_FLAG_IS_EXTRA = (1 << 0),
+    LEVEL_DATA_FLAG_NO_PRACTICE = (1 << 1),
 };
 
 struct LevelData {
@@ -205,6 +214,7 @@ struct LevelData {
     u8 type;
     const struct GraphicsTable **epilogueGfx;
     const char *epilogueText[3];
+    u8 flags;
 };
 
 struct GameSelectGridEntry {
@@ -275,8 +285,10 @@ extern s32 get_campaign_from_level_id(s32 id);
 extern s32 get_level_id_from_grid_xy(s32 x, s32 y);
 extern struct LevelData *get_level_data_from_id(s32 id);
 extern s32 get_level_state_from_id(s32 id);
+extern s32 get_level_state_with_perfect_from_id(s32 id);
 extern struct LevelData *get_level_data_from_grid_xy(s32 x, s32 y);
 extern s32 get_level_state_from_grid_xy(s32 x, s32 y);
+extern s32 get_level_state_with_perfect_from_grid_xy(s32 x, s32 y);
 extern void get_grid_xy_from_level_id(s32 id, s32 *xReq, s32 *yReq);
 extern void init_game_select_grid_gfx(void);
 extern void get_pixel_xy_from_grid_xy(s32 x, s32 y, s16 *xReq, s16 *yReq);
@@ -364,3 +376,4 @@ extern void game_select_update_icon_square(struct NewIconSquare *shadow);
 extern void game_select_update_icon_squares(void);
 extern u32 game_select_check_for_icon_squares(void);
 extern void game_select_update_bg_squares(s32 dx, s32 dy);
+extern void game_select_clear_bg_tiles(u32 baseMap, u32 mapSize, u32 tileX, u32 tileY, u32 width, u32 height, u32 tileNum, u32 palette);

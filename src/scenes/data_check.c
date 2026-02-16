@@ -153,9 +153,12 @@ void data_check_print_page(s32 id) {
     strcat(string, number);
     strcat(string, ":  ");
     strcat(string, game_select_get_level_name(id));
+    if(level_data_table[id].flags & LEVEL_DATA_FLAG_IS_EXTRA) {
+        strcat(string, " (Tempo Up!)"); // (Extra)
+    }
     data_check_print_line(2, 0, string);
 
-    avgPoints = saveData->levelScores[id];
+    avgPoints = get_level_score(saveData, id);
 
     if (avgPoints == DEFAULT_LEVEL_SCORE) {
         memcpy(number, "---", 4);
@@ -173,9 +176,9 @@ void data_check_print_page(s32 id) {
 
     data_check_print_line(3, 0, string);
 
-    totalPlays = saveData->levelTotalPlays[id];
-    firstOK = saveData->levelFirstOK[id];
-    firstSuperb = saveData->levelFirstSuperb[id];
+    totalPlays = get_level_total_plays(saveData, id);
+    firstOK = get_level_first_ok(saveData, id);
+    firstSuperb = get_level_first_superb(saveData, id);
 
     memcpy(string, "  ", 3);
     strcat(string, "Number of Times Played: "); // Number of Times Played:

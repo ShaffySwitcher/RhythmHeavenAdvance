@@ -60,7 +60,7 @@ void perfect_scene_start(void *sVar, s32 dArg) {
         giftType = campaign_gifts_table[gPerfect->campaignID].type;
         giftID = campaign_gifts_table[gPerfect->campaignID].id;
 
-        if (!D_030046a8->data.campaignsCleared[gPerfect->campaignID]) {
+        if (!get_campaign_cleared(&D_030046a8->data, gPerfect->campaignID)) {
             switch (giftType) {
                 case CAMPAIGN_GIFT_SONG:
                     save_studio_song(giftID, -1, 1, 0);
@@ -71,12 +71,12 @@ void perfect_scene_start(void *sVar, s32 dArg) {
                     break;
 
                 case CAMPAIGN_GIFT_READING_MATERIAL:
-                    D_030046a8->data.readingMaterialUnlocked[giftID] = TRUE;
+                    set_reading_material_unlocked(&D_030046a8->data, giftID, TRUE);
                     break;
             }
 
             D_030046a8->data.totalPerfects++;
-            D_030046a8->data.campaignsCleared[gPerfect->campaignID] = TRUE;
+            set_campaign_cleared(&D_030046a8->data, gPerfect->campaignID, TRUE);
 
             if (D_030046a8->data.totalPerfects == TOTAL_PERFECT_CAMPAIGNS) {
                 unlock_all_unassigned_campaign_gift_songs();

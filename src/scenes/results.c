@@ -62,7 +62,7 @@ void results_save_to_cart(u32 levelState) {
     cafe_session_add_level(levelID);
 
     if (levelID >= 0) {
-        D_030046a8->data.levelTotalPlays[levelID]++;
+        set_level_total_plays(&D_030046a8->data, levelID, get_level_total_plays(&D_030046a8->data, levelID) + 1);
     }
 
     flush_save_buffer_to_sram();

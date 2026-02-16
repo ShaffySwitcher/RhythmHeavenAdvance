@@ -402,40 +402,44 @@ const struct GraphicsTable *epilogue_drum_live_gfx_tables[] = {
     /* SUPERB    */ INLINE_GFX_TABLE(&drum_live_epilogue_bg_tiles, &drum_live_epilogue_bg_map_superb, epilogue_drum_live_bg_pal)
 };
 
-// Extra Games
-
+// Karate Man Extra
 const struct GraphicsTable *epilogue_karate_man_extra_gfx_tables[] = {
-    /* TRY AGAIN */ INLINE_GFX_TABLE(&karate_man_epilogue_bg_tiles, &karate_man_epilogue_bg_map_try_again, epilogue_karate_man_bg_pal),
-    /* JUST OK   */ INLINE_GFX_TABLE(&karate_man_epilogue_bg_tiles, &karate_man_epilogue_bg_map_ok, epilogue_karate_man_bg_pal),
-    /* SUPERB    */ INLINE_GFX_TABLE(&karate_man_epilogue_bg_tiles, &karate_man_epilogue_bg_map_superb, epilogue_karate_man_bg_pal)
+    /* TRY AGAIN */ INLINE_GFX_TABLE(&karate_man_extra_epilogue_bg_tiles, &karate_man_extra_epilogue_bg_map_try_again, epilogue_karate_man_extra_bg_pal),
+    /* JUST OK   */ INLINE_GFX_TABLE(&karate_man_extra_epilogue_bg_tiles, &karate_man_extra_epilogue_bg_map_ok, epilogue_karate_man_extra_bg_pal),
+    /* SUPERB    */ INLINE_GFX_TABLE(&karate_man_extra_epilogue_bg_tiles, &karate_man_extra_epilogue_bg_map_superb, epilogue_karate_man_extra_bg_pal)
 };
 
+// Rhythm Tweezers Extra
 const struct GraphicsTable *epilogue_rhythm_tweezers_extra_gfx_tables[] = {
-    /* TRY AGAIN */ INLINE_GFX_TABLE(&rhythm_tweezers_epilogue_bg_tiles, &rhythm_tweezers_epilogue_bg_map_try_again, epilogue_rhythm_tweezers_bg_pal),
-    /* JUST OK   */ INLINE_GFX_TABLE(&rhythm_tweezers_epilogue_bg_tiles, &rhythm_tweezers_epilogue_bg_map_ok, epilogue_rhythm_tweezers_bg_pal),
-    /* SUPERB    */ INLINE_GFX_TABLE(&rhythm_tweezers_epilogue_bg_tiles, &rhythm_tweezers_epilogue_bg_map_superb, epilogue_rhythm_tweezers_bg_pal)
+    /* TRY AGAIN */ INLINE_GFX_TABLE(&rhythm_tweezers_extra_epilogue_bg_tiles, &rhythm_tweezers_extra_epilogue_bg_map_try_again, epilogue_rhythm_tweezers_extra_bg_pal),
+    /* JUST OK   */ INLINE_GFX_TABLE(&rhythm_tweezers_extra_epilogue_bg_tiles, &rhythm_tweezers_extra_epilogue_bg_map_ok, epilogue_rhythm_tweezers_extra_bg_pal),
+    /* SUPERB    */ INLINE_GFX_TABLE(&rhythm_tweezers_extra_epilogue_bg_tiles, &rhythm_tweezers_extra_epilogue_bg_map_superb, epilogue_rhythm_tweezers_extra_bg_pal)
 };
 
+// Marching Orders Extra
 const struct GraphicsTable *epilogue_marching_orders_extra_gfx_tables[] = {
-    /* TRY AGAIN */ INLINE_GFX_TABLE(&marching_orders_epilogue_bg_tiles, &marching_orders_epilogue_bg_map_try_again, epilogue_marching_orders_bg_pal),
-    /* JUST OK   */ INLINE_GFX_TABLE(&marching_orders_epilogue_bg_tiles, &marching_orders_epilogue_bg_map_ok, epilogue_marching_orders_bg_pal),
-    /* SUPERB    */ INLINE_GFX_TABLE(&marching_orders_epilogue_bg_tiles, &marching_orders_epilogue_bg_map_superb, epilogue_marching_orders_bg_pal)
+    /* TRY AGAIN */ INLINE_GFX_TABLE(&marching_orders_extra_epilogue_bg_tiles, &marching_orders_extra_epilogue_bg_map_try_again, epilogue_marching_orders_extra_bg_pal),
+    /* JUST OK   */ INLINE_GFX_TABLE(&marching_orders_extra_epilogue_bg_tiles, &marching_orders_extra_epilogue_bg_map_ok, epilogue_marching_orders_extra_bg_pal),
+    /* SUPERB    */ INLINE_GFX_TABLE(&marching_orders_extra_epilogue_bg_tiles, &marching_orders_extra_epilogue_bg_map_superb, epilogue_marching_orders_extra_bg_pal)
 };
 
+// Spaceball Extra
 const struct GraphicsTable *epilogue_spaceball_extra_gfx_tables[] = {
-    /* TRY AGAIN */ INLINE_GFX_TABLE(&spaceball_epilogue_bg_tiles, &spaceball_epilogue_bg_map_try_again, epilogue_spaceball_bg_pal),
-    /* JUST OK   */ INLINE_GFX_TABLE(&spaceball_epilogue_bg_tiles, &spaceball_epilogue_bg_map_ok, epilogue_spaceball_bg_pal),
-    /* SUPERB    */ INLINE_GFX_TABLE(&spaceball_epilogue_bg_tiles, &spaceball_epilogue_bg_map_superb, epilogue_spaceball_bg_pal)
+    /* TRY AGAIN */ INLINE_GFX_TABLE(&spaceball_extra_epilogue_bg_tiles, &spaceball_extra_epilogue_bg_map_try_again, epilogue_spaceball_extra_bg_pal),
+    /* JUST OK   */ INLINE_GFX_TABLE(&spaceball_extra_epilogue_bg_tiles, &spaceball_extra_epilogue_bg_map_ok, epilogue_spaceball_extra_bg_pal),
+    /* SUPERB    */ INLINE_GFX_TABLE(&spaceball_extra_epilogue_bg_tiles, &spaceball_extra_epilogue_bg_map_superb, epilogue_spaceball_extra_bg_pal)
 };
 
+// Clappy Trio Extra
 const struct GraphicsTable *epilogue_clappy_trio_extra_gfx_tables[] = {
-    /* TRY AGAIN */ INLINE_GFX_TABLE(&clappy_trio_epilogue_bg_tiles, &clappy_trio_epilogue_bg_map_try_again, epilogue_clappy_trio_bg_pal),
-    /* JUST OK   */ INLINE_GFX_TABLE(&clappy_trio_epilogue_bg_tiles, &clappy_trio_epilogue_bg_map_ok, epilogue_clappy_trio_bg_pal),
-    /* SUPERB    */ INLINE_GFX_TABLE(&clappy_trio_epilogue_bg_tiles, &clappy_trio_epilogue_bg_map_superb, epilogue_clappy_trio_bg_pal)
+    /* TRY AGAIN */ INLINE_GFX_TABLE(&clappy_trio_extra_epilogue_bg_tiles, &clappy_trio_extra_epilogue_bg_map_try_again, epilogue_clappy_trio_extra_bg_pal),
+    /* JUST OK   */ INLINE_GFX_TABLE(&clappy_trio_extra_epilogue_bg_tiles, &clappy_trio_extra_epilogue_bg_map_ok, epilogue_clappy_trio_extra_bg_pal),
+    /* SUPERB    */ INLINE_GFX_TABLE(&clappy_trio_extra_epilogue_bg_tiles, &clappy_trio_extra_epilogue_bg_map_superb, epilogue_clappy_trio_extra_bg_pal)
 };
 
+// Remix 1 Extra
 const struct GraphicsTable *epilogue_remix1_extra_gfx_tables[] = {
-    /* TRY AGAIN */ INLINE_GFX_TABLE(&remix_1_epilogue_bg_tiles, &remix_1_epilogue_bg_map_try_again, epilogue_remix1_bg_pal),
-    /* JUST OK   */ INLINE_GFX_TABLE(&remix_1_epilogue_bg_tiles, &remix_1_epilogue_bg_map_ok, epilogue_remix1_bg_pal),
-    /* SUPERB    */ INLINE_GFX_TABLE(&remix_1_epilogue_bg_tiles, &remix_1_epilogue_bg_map_superb, epilogue_remix1_bg_pal)
+    /* TRY AGAIN */ INLINE_GFX_TABLE(&remix_1_extra_epilogue_bg_tiles, &remix_1_extra_epilogue_bg_map_try_again, epilogue_remix1_extra_bg_pal),
+    /* JUST OK   */ INLINE_GFX_TABLE(&remix_1_extra_epilogue_bg_tiles, &remix_1_extra_epilogue_bg_map_ok, epilogue_remix1_extra_bg_pal),
+    /* SUPERB    */ INLINE_GFX_TABLE(&remix_1_extra_epilogue_bg_tiles, &remix_1_extra_epilogue_bg_map_superb, epilogue_remix1_extra_bg_pal)
 };
