@@ -13,3 +13,6 @@ tools/agbcc/*
 *.Identifier
 .vscode/*
 ctx.c
+
+# devkitPro
+install-devkitpro-pacman
