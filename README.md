@@ -3,7 +3,7 @@
 
 ![Rhythm Heaven Advance](media/rha.png?raw=true "Rhythm Heaven Advance")
 
-An unofficial English localization patch for *Rhythm Tengoku (リズム天国)* on the Game Boy Advance.
+An unofficial English localization patch for *Rhythm Tengoku (リズ�?天国)* on the Game Boy Advance.
 
 ## About
 
@@ -104,7 +104,7 @@ The patched ROM will be generated in the `build/` directory.
 macOS build instructions are coming soon!
 
 ## Credits
-Check out the full credits [here](https://github.com/RHAdvance/RhythmHeavenAdvance/blob/main/README.md) on the community-maintained repository of this project.
+Check out the full credits [here](CREDITS.md)!
 
 ## License
 
