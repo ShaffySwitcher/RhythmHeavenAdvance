@@ -183,7 +183,7 @@ struct GraphicsTable karate_man_2_gfx_table[] = {
     END_OF_GRAPHICS_TABLE
 };
 
-// [D_089df0e0] Graphics Table (Remix)
+// [D_089df0e0] Graphics Table (Extra)
 struct GraphicsTable karate_man_extra_gfx_table[] = {
     /* BG Tileset */ {
         /* Src.  */ &karate_man_bg_tiles_serious,
@@ -211,7 +211,7 @@ struct GraphicsTable karate_man_extra_gfx_table[] = {
         /* Size  */ COMPRESSED_GFX_SOURCE
     },
     /* BG Palette */ {
-        /* Src.  */ karate_man_pal,
+        /* Src.  */ karate_man_extra_pal,
         /* Dest. */ BG_PALETTE_BUFFER(0),
         /* Size  */ 0x200
     },
