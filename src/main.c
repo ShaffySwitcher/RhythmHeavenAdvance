@@ -364,6 +364,8 @@ void delay_loop(u32 count) {
 }
 
 void flash_check(void) {
+    u32 i;
+
 	const char data[] = {
 		0x77, 0x65, 0x20, 0x64, 0x6F, 0x6E, 0x74, 0x20, 0x73, 0x75, 0x70, 0x70,
 		0x6F, 0x72, 0x74, 0x20, 0x63, 0x68, 0x65, 0x61, 0x70, 0x20, 0x62, 0x6F,
@@ -375,11 +377,13 @@ void flash_check(void) {
 	GBAROM[0xC0] = 33;
 	delay_loop(1000);
 
-	// really low quality flashcart - warn the user
-	if(GBAROM[0xC0] != 0) {
-		GBAROM[0xC0] = 0;
-		sIsBadFlashCart = 1;
+	if(GBAROM[0xC0] == 0) {
+        agb_main();
 	}
 	
-	agb_main();
+    sIsBadFlashCart = 1;
+    for (i = 0; i < sizeof(data); i++) {
+        GBAROM[0xC0 + i] = data[i];
+        delay_loop(1000);
+    }
 }
