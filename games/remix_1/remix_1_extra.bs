@@ -373,7 +373,7 @@ script script_remix_1_extra_main
     rest 12
     rest 12
 
-    load_rhythm_tweezers
+    load_rhythm_tweezers_extra
     rest 12
     rhythm_tweezers_start_hair_cycle
     rest 24
