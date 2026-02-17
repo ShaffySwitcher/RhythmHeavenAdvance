@@ -3,7 +3,7 @@
 
 ![Rhythm Heaven Advance](media/rha.png?raw=true "Rhythm Heaven Advance")
 
-An unofficial English localization patch for *Rhythm Tengoku (リズ�?天国)* on the Game Boy Advance.
+An unofficial English localization patch for *Rhythm Tengoku (ãƒªã‚ºãƒ?å¤©å›½)* on the Game Boy Advance.
 
 ## About
 
@@ -110,11 +110,11 @@ Check out the full credits [here](CREDITS.md)!
 
 This project is licensed under the terms specified in [LICENSE.txt](LICENSE.txt).
 
-The license primarily covers original code written for this project. This is a fan-made patch and is not affiliated with or endorsed by Nintendo. You must own a legal copy of *Rhythm Tengoku* to use this patch.
+The license covers the code I've written for this project, NOT any of the assets or other parts I haven't written. This is a fan-made patch and is not affiliated with or endorsed by Nintendo. You must own a legal copy of *Rhythm Tengoku* to use this patch.
 
-Do not use, modify, or redistribute this code without prior permission. For licensing inquiries, please see the [Contact](#contact) section.
+Do not use, modify, or redistribute the copyrighted code without prior permission. For licensing inquiries, please see the [Contact](#contact) section.
 
-All rights reserved concerning the assets to the original authors. 
+All rights reserved concerning the assets to the original authors as it is unlicensed.
 
 ## Contact
 
