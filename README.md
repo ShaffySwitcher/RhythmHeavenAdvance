@@ -112,7 +112,7 @@ This project is licensed under the terms specified in [LICENSE.txt](LICENSE.txt)
 
 The license covers the code I've written for this project, NOT any of the assets or other parts I haven't written. This is a fan-made patch and is not affiliated with or endorsed by Nintendo. You must own a legal copy of *Rhythm Tengoku* to use this patch.
 
-Do not use, modify, or redistribute the copyrighted code without prior permission. For licensing inquiries, please see the [Contact](#contact) section.
+For licensing inquiries, please see the [Contact](#contact) section.
 
 All rights reserved concerning the assets to the original authors as it is unlicensed.
 
