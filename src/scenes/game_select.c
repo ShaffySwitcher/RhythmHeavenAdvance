@@ -751,7 +751,7 @@ void game_select_scene_start(void *sVar, s32 dArg) {
     s16 bgOfsX, bgOfsY;
     s32 prevX, prevY;
     s32 i;
-
+    
     // Init. Graphics
     gGameSelect->loadingSceneGfx = TRUE;
     func_08007324(FALSE);
@@ -824,6 +824,8 @@ void game_select_scene_start(void *sVar, s32 dArg) {
         if ((get_level_id_from_grid_xy(prevX, prevY) == LEVEL_REMIX_6) && (recentLevelState >= LEVEL_STATE_CLEARED)) {
             enable_game_select_2_bgm();
         }
+    } else if (game_select_try_queue_tempo_up_unlock(TRUE)) {
+        gGameSelect->runningLevelEvents = TRUE;
     } else {
         gGameSelect->runningLevelEvents = FALSE;
         gGameSelect->levelEventTimer = 0;
@@ -837,15 +839,6 @@ void game_select_scene_start(void *sVar, s32 dArg) {
         }
     }
 
-    // unlock tempo up (if existing save file for example) (this is FUCKING dirty and stupid i dont like that and it makes me cry at night)
-    if (D_030046a8->data.totalMedals >= 48 && get_level_state_from_id(LEVEL_KARATE_MAN_EXTRA) == LEVEL_STATE_HIDDEN) {
-        set_level_state(saveData, LEVEL_KARATE_MAN_EXTRA, LEVEL_STATE_OPEN);
-        set_level_state(saveData, LEVEL_RHYTHM_TWEEZERS_EXTRA, LEVEL_STATE_CLOSED);
-        set_level_state(saveData, LEVEL_MARCHING_ORDERS_EXTRA, LEVEL_STATE_CLOSED);
-        set_level_state(saveData, LEVEL_SPACEBALL_EXTRA, LEVEL_STATE_CLOSED);
-        set_level_state(saveData, LEVEL_CLAPPY_TRIO_EXTRA, LEVEL_STATE_CLOSED);
-        set_level_state(saveData, LEVEL_REMIX_1_EXTRA, LEVEL_STATE_CLOSED);
-    }
 
     saveData->recentLevelState = LEVEL_STATE_NULL;
     saveData->recentLevelClearedByBarista = FALSE;
@@ -1447,6 +1440,14 @@ u32 game_select_check_level_event_req(s32 x, s32 y, s32 newState) {
             return TRUE;
         }
 
+        if (requirements[0] == LEVEL_EVENT_REQ_TOTAL_MEDALS) {
+            if (saveData->totalMedals < (u8)requirements[1]) {
+                return FALSE;
+            }
+            requirements += 3;
+            continue;
+        }
+
         x = requirements[1];
         y = requirements[2];
         gridEntry = game_select_grid_data + x + (y * GS_GRID_WIDTH);
@@ -1673,6 +1674,7 @@ u32 game_select_process_level_events(void) {
 
             D_030046a8->data.totalMedals++;
             game_select_refresh_medal_count(127);
+            game_select_try_queue_tempo_up_unlock(FALSE);
             cafe_session_remove_level(id);
             set_level_first_superb(&D_030046a8->data, id, get_level_total_plays(&D_030046a8->data, id));
             if(get_level_first_ok(&D_030046a8->data, id) == 0) {
@@ -2921,4 +2923,45 @@ https://www.coranac.com/tonc/text/regbg.htm
             mapDest += 0x20;
         }
     }
+}
+
+
+u32 game_select_try_queue_tempo_up_unlock(u32 startEvents) {
+    s32 x, y;
+    s32 state;
+
+    if (D_030046a8->data.totalMedals < 48) {
+        return FALSE;
+    }
+
+    get_grid_xy_from_level_id(LEVEL_KARATE_MAN_EXTRA, &x, &y);
+    state = get_level_state_from_grid_xy(x, y);
+
+    if (state >= LEVEL_STATE_OPEN) {
+        return FALSE;
+    }
+
+    if (state == LEVEL_STATE_HIDDEN) {
+        if (!game_select_check_level_event_req(x, y, LEVEL_STATE_CLOSED)) {
+            return FALSE;
+        }
+        if (startEvents) {
+            game_select_start_level_events(60);
+        }
+        game_select_enqueue_level_event(x, y, LEVEL_STATE_CLOSED);
+        return TRUE;
+    }
+
+    if (state == LEVEL_STATE_CLOSED) {
+        if (!game_select_check_level_event_req(x, y, LEVEL_STATE_OPEN)) {
+            return FALSE;
+        }
+        if (startEvents) {
+            game_select_start_level_events(60);
+        }
+        game_select_enqueue_level_event(x, y, LEVEL_STATE_OPEN);
+        return TRUE;
+    }
+
+    return FALSE;
 }
