@@ -19,9 +19,9 @@ const char D_08067d44[] = "The \"AWESOME!\" lines really were!";
 
 const char D_08067d70[] = "RAPNOTES from the Girls:";
 
-const char D_08067d84[] = "‚r‚ˆ‚‚Œ‚Œ@‚—‚…H";
+const char D_08067d84[] = "ï¼³ï½ˆï½ï½Œï½Œã€€ï½—ï½…ï¼Ÿ";
 
-const char D_08067d90[] = "‚v‚…@‚“‚ˆ‚‚•‚Œ‚„@‚„‚@‚”‚ˆ‚‚”@‚‚‡‚‚‰‚@‚“‚‚‚…‚”‚‰‚‚…I";
+const char D_08067d90[] = "ï¼·ï½…ã€€ï½“ï½ˆï½ï½•ï½Œï½„ã€€ï½„ï½ã€€ï½”ï½ˆï½ï½”ã€€ï½ï½‡ï½ï½‰ï½ã€€ï½“ï½ï½ï½…ï½”ï½‰ï½ï½…ï¼";
 
 const char D_08067da0[] = "The \"Huh?\" lines were baffling.";
 
@@ -37,6 +37,6 @@ const char D_08067e6c[] = "The \"AWESOME!\" lines really were!";
 
 const char D_08067e98[] = "RAPNOTES from the Girls:";
 
-const char D_08067eb0[] = "‚r‚ˆ‚‚Œ‚Œ@‚—‚…H";
+const char D_08067eb0[] = "ï¼³ï½ˆï½ï½Œï½Œã€€ï½—ï½…ï¼Ÿ";
 
-const char D_08067ebc[] = "‚v‚…@‚“‚ˆ‚‚•‚Œ‚„@‚„‚@‚”‚ˆ‚‚”@‚‚‡‚‚‰‚@‚“‚‚‚…‚”‚‰‚‚…I";
+const char D_08067ebc[] = "ï¼·ï½…ã€€ï½“ï½ˆï½ï½•ï½Œï½„ã€€ï½„ï½ã€€ï½”ï½ˆï½ï½”ã€€ï½ï½‡ï½ï½‰ï½ã€€ï½“ï½ï½ï½…ï½”ï½‰ï½ï½…ï¼";

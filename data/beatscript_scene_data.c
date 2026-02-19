@@ -171,14 +171,14 @@ u16 D_089ccc80[] = {
 
 
 // [D_089ccc94] Full Width Characters
-char D_089ccc94[] = "‚‚‚‚ƒ‚„‚…‚†‚‡‚ˆ‚‰‚Š‚‹‚Œ‚‚‚‚‚‘‚’‚“‚”‚•‚–‚—‚˜‚™‚š";
+char D_089ccc94[] = "ï½ï½‚ï½ƒï½„ï½…ï½†ï½‡ï½ˆï½‰ï½Šï½‹ï½Œï½ï½ï½ï½ï½‘ï½’ï½“ï½”ï½•ï½–ï½—ï½˜ï½™ï½š";
 
-const char D_0804f370[] = "Q";
+const char D_0804f370[] = "ï¼¿";
 
-const char D_0804f374[] = "I";
+const char D_0804f374[] = "ï¼";
 
-const char D_0804f378[] = "H";
+const char D_0804f378[] = "ï¼Ÿ";
 
-const char D_0804f37c[] = "C";
+const char D_0804f37c[] = "ï¼Œ";
 
-const char D_0804f380[] = "|";
+const char D_0804f380[] = "âˆ’";

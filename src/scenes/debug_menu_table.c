@@ -9,647 +9,647 @@
 struct DebugMenuEntry debug_menu_entry_table[] = {
     /* Drum LIVE */ {
         /* Scene */ &scene_drum_live,
-        /* Label */ "‚b‚‚Ž‚ƒ‚…‚’‚”",
+        /* Label */ "ï¼£ï½ï½Žï½ƒï½…ï½’ï½”",
         /* Epil. */ TRUE
     },
     /* Sick Beats Endless */ {
         /* Scene */ &scene_sick_beats_endless,
-        /* Label */ "‚r‚‰‚ƒ‚‹@‚a‚…‚‚”‚“@‚r‚o",
+        /* Label */ "ï¼³ï½‰ï½ƒï½‹ã€€ï¼¢ï½…ï½ï½”ï½“ã€€ï¼³ï¼°",
         /* Epil. */ FALSE
     },
     /* Quiz Show Endless */ {
         /* Scene */ &scene_quiz_show_endless,
-        /* Label */ "‚p‚•‚‰‚š@‚r‚ˆ‚‚—@‚r‚o",
+        /* Label */ "ï¼±ï½•ï½‰ï½šã€€ï¼³ï½ˆï½ï½—ã€€ï¼³ï¼°",
         /* Epil. */ FALSE
     },
     /* Mannequin Factory */ {
         /* Scene */ &scene_mannequin_factory,
-        /* Label */ "‚l‚‚Ž‚Ž‚…‚‘‚•‚‰‚Ž@‚e‚‚ƒ‚”‚‚’‚™",
+        /* Label */ "ï¼­ï½ï½Žï½Žï½…ï½‘ï½•ï½‰ï½Žã€€ï¼¦ï½ï½ƒï½”ï½ï½’ï½™",
         /* Epil. */ FALSE
     },
     /* Mr. Upbeat */ {
         /* Scene */ &scene_mr_upbeat,
-        /* Label */ "‚l‚’D@‚t‚‚‚‚…‚‚”",
+        /* Label */ "ï¼­ï½’ï¼Žã€€ï¼µï½ï½‚ï½…ï½ï½”",
         /* Epil. */ FALSE
     },
     /* Remix 8 */ {
         /* Scene */ &scene_remix_8,
-        /* Label */ "‚q‚…‚‚‰‚˜@‚W",
+        /* Label */ "ï¼²ï½…ï½ï½‰ï½˜ã€€ï¼˜",
         /* Epil. */ TRUE
     },
     /* Remix 7 */ {
         /* Scene */ &scene_remix_7,
-        /* Label */ "‚q‚…‚‚‰‚˜@‚V",
+        /* Label */ "ï¼²ï½…ï½ï½‰ï½˜ã€€ï¼—",
         /* Epil. */ TRUE
     },
     /* Remix 6 */ {
         /* Scene */ &scene_remix_6,
-        /* Label */ "‚q‚…‚‚‰‚˜@‚U",
+        /* Label */ "ï¼²ï½…ï½ï½‰ï½˜ã€€ï¼–",
         /* Epil. */ TRUE
     },
     /* Remix 5 */ {
         /* Scene */ &scene_remix_5,
-        /* Label */ "‚q‚…‚‚‰‚˜@‚T",
+        /* Label */ "ï¼²ï½…ï½ï½‰ï½˜ã€€ï¼•",
         /* Epil. */ TRUE
     },
     /* Remix 4 */ {
         /* Scene */ &scene_remix_4,
-        /* Label */ "‚q‚…‚‚‰‚˜@‚S",
+        /* Label */ "ï¼²ï½…ï½ï½‰ï½˜ã€€ï¼”",
         /* Epil. */ TRUE
     },
     /* Remix 3 */ {
         /* Scene */ &scene_remix_3,
-        /* Label */ "‚q‚…‚‚‰‚˜@‚R",
+        /* Label */ "ï¼²ï½…ï½ï½‰ï½˜ã€€ï¼“",
         /* Epil. */ TRUE
     },
     /* Remix 2 */ {
         /* Scene */ &scene_remix_2,
-        /* Label */ "‚q‚…‚‚‰‚˜@‚Q",
+        /* Label */ "ï¼²ï½…ï½ï½‰ï½˜ã€€ï¼’",
         /* Epil. */ TRUE
     },
     /* Remix 1 */ {
         /* Scene */ &scene_remix_1,
-        /* Label */ "‚q‚…‚‚‰‚˜@‚P",
+        /* Label */ "ï¼²ï½…ï½ï½‰ï½˜ã€€ï¼‘",
         /* Epil. */ TRUE
     },
     /* Remix 1 (Tempo Up) */ {
         /* Scene */ &scene_remix_1_extra,
-        /* Label */ "‚q‚…‚‚‰‚˜@‚P@i‚s‚…‚‚‚@‚t‚j",
+        /* Label */ "ï¼²ï½…ï½ï½‰ï½˜ã€€ï¼‘ã€€ï¼ˆï¼´ï½…ï½ï½ï½ã€€ï¼µï½ï¼‰",
         /* Epil. */ TRUE
     },
     /* The Bon Odori */ {
         /* Scene */ &scene_bon_odori,
-        /* Label */ "‚s‚ˆ‚…@‚a‚‚Ž@‚n‚„‚‚’‚‰",
+        /* Label */ "ï¼´ï½ˆï½…ã€€ï¼¢ï½ï½Žã€€ï¼¯ï½„ï½ï½’ï½‰",
         /* Epil. */ TRUE
     },
     /* Bon Dance */ {
         /* Scene */ &scene_bon_dance,
-        /* Label */ "‚s‚ˆ‚…@‚a‚‚Ž@‚c‚‚Ž‚ƒ‚…",
+        /* Label */ "ï¼´ï½ˆï½…ã€€ï¼¢ï½ï½Žã€€ï¼¤ï½ï½Žï½ƒï½…",
         /* Epil. */ TRUE
     },
     /* Rhythm Toys (Cat Machine) */ {
         /* Scene */ &scene_cat_machine,
-        /* Label */ "‚b‚‚”@‚l‚‚ƒ‚ˆ‚‰‚Ž‚…",
+        /* Label */ "ï¼£ï½ï½”ã€€ï¼­ï½ï½ƒï½ˆï½‰ï½Žï½…",
         /* Epil. */ FALSE
     },
     /* Rhythm Toys (Confession Machine) */ {
         /* Scene */ &scene_love_machine,
-        /* Label */ "‚k‚‚–‚…@‚l‚‚ƒ‚ˆ‚‰‚Ž‚…",
+        /* Label */ "ï¼¬ï½ï½–ï½…ã€€ï¼­ï½ï½ƒï½ˆï½‰ï½Žï½…",
         /* Epil. */ FALSE
     },
     /* Rhythm Toys (Rap Machine) */ {
         /* Scene */ &scene_rap_machine,
-        /* Label */ "‚q‚‚@‚l‚‚ƒ‚ˆ‚‰‚Ž‚…",
+        /* Label */ "ï¼²ï½ï½ã€€ï¼­ï½ï½ƒï½ˆï½‰ï½Žï½…",
         /* Epil. */ FALSE
     },
     /* Lesson (Short 1) */ {
         /* Scene */ &scene_drum_lesson_short_1,
-        /* Label */ "‚k‚…‚“‚“‚‚Ž@i‚r‚ˆ‚‚’‚”@‚Pj",
+        /* Label */ "ï¼¬ï½…ï½“ï½“ï½ï½Žã€€ï¼ˆï¼³ï½ˆï½ï½’ï½”ã€€ï¼‘ï¼‰",
         /* Epil. */ FALSE
     },
     /* Lesson (Short 4) */ {
         /* Scene */ &scene_drum_lesson_short_4,
-        /* Label */ "‚k‚…‚“‚“‚‚Ž@i‚r‚ˆ‚‚’‚”@‚Sj",
+        /* Label */ "ï¼¬ï½…ï½“ï½“ï½ï½Žã€€ï¼ˆï¼³ï½ˆï½ï½’ï½”ã€€ï¼”ï¼‰",
         /* Epil. */ FALSE
     },
     /* Lesson (Short 8) */ {
         /* Scene */ &scene_drum_lesson_short_8,
-        /* Label */ "‚k‚…‚“‚“‚‚Ž@i‚r‚ˆ‚‚’‚”@‚Wj",
+        /* Label */ "ï¼¬ï½…ï½“ï½“ï½ï½Žã€€ï¼ˆï¼³ï½ˆï½ï½’ï½”ã€€ï¼˜ï¼‰",
         /* Epil. */ FALSE
     },
     /* Lesson (Short 5) */ {
         /* Scene */ &scene_drum_lesson_short_5,
-        /* Label */ "‚k‚…‚“‚“‚‚Ž@i‚r‚ˆ‚‚’‚”@‚Tj",
+        /* Label */ "ï¼¬ï½…ï½“ï½“ï½ï½Žã€€ï¼ˆï¼³ï½ˆï½ï½’ï½”ã€€ï¼•ï¼‰",
         /* Epil. */ FALSE
     },
     /* Lesson (Short 7) */ {
         /* Scene */ &scene_drum_lesson_short_7,
-        /* Label */ "‚k‚…‚“‚“‚‚Ž@i‚r‚ˆ‚‚’‚”@‚Vj",
+        /* Label */ "ï¼¬ï½…ï½“ï½“ï½ï½Žã€€ï¼ˆï¼³ï½ˆï½ï½’ï½”ã€€ï¼—ï¼‰",
         /* Epil. */ FALSE
     },
     /* Lesson (Short 6) */ {
         /* Scene */ &scene_drum_lesson_short_6,
-        /* Label */ "‚k‚…‚“‚“‚‚Ž@i‚r‚ˆ‚‚’‚”@‚Uj",
+        /* Label */ "ï¼¬ï½…ï½“ï½“ï½ï½Žã€€ï¼ˆï¼³ï½ˆï½ï½’ï½”ã€€ï¼–ï¼‰",
         /* Epil. */ FALSE
     },
     /* Lesson (Short 9) */ {
         /* Scene */ &scene_drum_lesson_short_9,
-        /* Label */ "‚k‚…‚“‚“‚‚Ž@i‚r‚ˆ‚‚’‚”@‚Xj",
+        /* Label */ "ï¼¬ï½…ï½“ï½“ï½ï½Žã€€ï¼ˆï¼³ï½ˆï½ï½’ï½”ã€€ï¼™ï¼‰",
         /* Epil. */ FALSE
     },
     /* Lesson (Basic 1) */ {
         /* Scene */ &scene_drum_lesson_basic_1,
-        /* Label */ "‚k‚…‚“‚“‚‚Ž@i‚a‚‚“‚‰‚ƒ@‚Pj",
+        /* Label */ "ï¼¬ï½…ï½“ï½“ï½ï½Žã€€ï¼ˆï¼¢ï½ï½“ï½‰ï½ƒã€€ï¼‘ï¼‰",
         /* Epil. */ FALSE
     },
     /* Lesson (Basic 2) */ {
         /* Scene */ &scene_drum_lesson_basic_2,
-        /* Label */ "‚k‚…‚“‚“‚‚Ž@i‚a‚‚“‚‰‚ƒ@‚Qj",
+        /* Label */ "ï¼¬ï½…ï½“ï½“ï½ï½Žã€€ï¼ˆï¼¢ï½ï½“ï½‰ï½ƒã€€ï¼’ï¼‰",
         /* Epil. */ FALSE
     },
     /* Lesson (Short 2) */ {
         /* Scene */ &scene_drum_lesson_short_2,
-        /* Label */ "‚k‚…‚“‚“‚‚Ž@i‚r‚ˆ‚‚’‚”@‚Qj",
+        /* Label */ "ï¼¬ï½…ï½“ï½“ï½ï½Žã€€ï¼ˆï¼³ï½ˆï½ï½’ï½”ã€€ï¼’ï¼‰",
         /* Epil. */ FALSE
     },
     /* Lesson (Short 3) */ {
         /* Scene */ &scene_drum_lesson_short_3,
-        /* Label */ "‚k‚…‚“‚“‚‚Ž@i‚r‚ˆ‚‚’‚”@‚Rj",
+        /* Label */ "ï¼¬ï½…ï½“ï½“ï½ï½Žã€€ï¼ˆï¼³ï½ˆï½ï½’ï½”ã€€ï¼“ï¼‰",
         /* Epil. */ FALSE
     },
     /* Lesson (Long 4) */ {
         /* Scene */ &scene_drum_lesson_long_4,
-        /* Label */ "‚k‚…‚“‚“‚‚Ž@i‚k‚‚Ž‚‡@‚Sj",
+        /* Label */ "ï¼¬ï½…ï½“ï½“ï½ï½Žã€€ï¼ˆï¼¬ï½ï½Žï½‡ã€€ï¼”ï¼‰",
         /* Epil. */ FALSE
     },
     /* Lesson (Long 2) */ {
         /* Scene */ &scene_drum_lesson_long_2,
-        /* Label */ "‚k‚…‚“‚“‚‚Ž@i‚k‚‚Ž‚‡@‚Qj",
+        /* Label */ "ï¼¬ï½…ï½“ï½“ï½ï½Žã€€ï¼ˆï¼¬ï½ï½Žï½‡ã€€ï¼’ï¼‰",
         /* Epil. */ FALSE
     },
     /* Lesson (Long 3) */ {
         /* Scene */ &scene_drum_lesson_long_3,
-        /* Label */ "‚k‚…‚“‚“‚‚Ž@i‚k‚‚Ž‚‡@‚Rj",
+        /* Label */ "ï¼¬ï½…ï½“ï½“ï½ï½Žã€€ï¼ˆï¼¬ï½ï½Žï½‡ã€€ï¼“ï¼‰",
         /* Epil. */ FALSE
     },
     /* Lesson (Long 1) */ {
         /* Scene */ &scene_drum_lesson_long_1,
-        /* Label */ "‚k‚…‚“‚“‚‚Ž@i‚k‚‚Ž‚‡@‚Pj",
+        /* Label */ "ï¼¬ï½…ï½“ï½“ï½ï½Žã€€ï¼ˆï¼¬ï½ï½Žï½‡ã€€ï¼‘ï¼‰",
         /* Epil. */ FALSE
     },
     /* Lesson (Long 5) */ {
         /* Scene */ &scene_drum_lesson_long_5,
-        /* Label */ "‚k‚…‚“‚“‚‚Ž@i‚k‚‚Ž‚‡@‚Tj",
+        /* Label */ "ï¼¬ï½…ï½“ï½“ï½ï½Žã€€ï¼ˆï¼¬ï½ï½Žï½‡ã€€ï¼•ï¼‰",
         /* Epil. */ FALSE
     },
     /* Lesson (Long 6) */ {
         /* Scene */ &scene_drum_lesson_long_6,
-        /* Label */ "‚k‚…‚“‚“‚‚Ž@i‚k‚‚Ž‚‡@‚Uj",
+        /* Label */ "ï¼¬ï½…ï½“ï½“ï½ï½Žã€€ï¼ˆï¼¬ï½ï½Žï½‡ã€€ï¼–ï¼‰",
         /* Epil. */ FALSE
     },
     /* Lesson (High-Tech 1) */ {
         /* Scene */ &scene_drum_lesson_hi_tech_1,
-        /* Label */ "‚k‚…‚“‚“‚‚Ž@i‚s‚…‚ƒ‚ˆ‚Ž‚‰‚ƒ‚‚Œ@‚Pj",
+        /* Label */ "ï¼¬ï½…ï½“ï½“ï½ï½Žã€€ï¼ˆï¼´ï½…ï½ƒï½ˆï½Žï½‰ï½ƒï½ï½Œã€€ï¼‘ï¼‰",
         /* Epil. */ FALSE
     },
     /* Lesson (High-Tech 2) */ {
         /* Scene */ &scene_drum_lesson_hi_tech_2,
-        /* Label */ "‚k‚…‚“‚“‚‚Ž@i‚s‚…‚ƒ‚ˆ‚Ž‚‰‚ƒ‚‚Œ@‚Qj",
+        /* Label */ "ï¼¬ï½…ï½“ï½“ï½ï½Žã€€ï¼ˆï¼´ï½…ï½ƒï½ˆï½Žï½‰ï½ƒï½ï½Œã€€ï¼’ï¼‰",
         /* Epil. */ FALSE
     },
     /* Studio Drummer */ {
         /* Scene */ &scene_drum_studio_ver0,
-        /* Label */ "‚r‚”‚•‚„‚‰‚@‚c‚’‚•‚‚“@i‚u‚…‚’D‚Oj",
+        /* Label */ "ï¼³ï½”ï½•ï½„ï½‰ï½ã€€ï¼¤ï½’ï½•ï½ï½“ã€€ï¼ˆï¼¶ï½…ï½’ï¼Žï¼ï¼‰",
         /* Epil. */ FALSE
     },
     /* Studio Drummer */ {
         /* Scene */ &scene_drum_studio_ver2,
-        /* Label */ "‚r‚”‚•‚„‚‰‚@‚c‚’‚•‚‚“@i‚u‚…‚’D‚Qj",
+        /* Label */ "ï¼³ï½”ï½•ï½„ï½‰ï½ã€€ï¼¤ï½’ï½•ï½ï½“ã€€ï¼ˆï¼¶ï½…ï½’ï¼Žï¼’ï¼‰",
         /* Epil. */ FALSE
     },
     /* Rhythm Test */ {
         /* Scene */ &scene_rhythm_test,
-        /* Label */ "‚q‚ˆ‚™‚”‚ˆ‚@‚s‚…‚“‚”",
+        /* Label */ "ï¼²ï½ˆï½™ï½”ï½ˆï½ã€€ï¼´ï½…ï½“ï½”",
         /* Epil. */ FALSE
     },
     /* Reading Material */ {
         /* Scene */ &scene_reading,
-        /* Label */ "‚d‚‚‚‰‚Œ",
+        /* Label */ "ï¼¥ï½ï½ï½‰ï½Œ",
         /* Epil. */ FALSE
     },
     /* Quiz Show */ {
         /* Scene */ &scene_quiz_show,
-        /* Label */ "‚p‚•‚‰‚š@‚r‚ˆ‚‚—",
+        /* Label */ "ï¼±ï½•ï½‰ï½šã€€ï¼³ï½ˆï½ï½—",
         /* Epil. */ TRUE
     },
     /* Rap Men */ {
         /* Scene */ &scene_rap_men,
-        /* Label */ "‚q‚`‚o‚l‚d‚m",
+        /* Label */ "ï¼²ï¼¡ï¼°ï¼­ï¼¥ï¼®",
         /* Epil. */ TRUE
     },
     /* Rap Women (by YONE) */ {
         /* Scene */ &scene_rap_women,
-        /* Label */ "‚q‚`‚o‚v‚n‚l‚d‚m@i‚‚‚™@‚x‚n‚m‚dj",
+        /* Label */ "ï¼²ï¼¡ï¼°ï¼·ï¼¯ï¼­ï¼¥ï¼®ã€€ï¼ˆï½‚ï½™ã€€ï¼¹ï¼¯ï¼®ï¼¥ï¼‰",
         /* Epil. */ TRUE
     },
     /* Rap Women (by KAZU) */ {
         /* Scene */ &scene_rap_women_unused,
-        /* Label */ "‚q‚`‚o‚v‚n‚l‚d‚m@i‚a‚™@‚j‚`‚y‚tj",
+        /* Label */ "ï¼²ï¼¡ï¼°ï¼·ï¼¯ï¼­ï¼¥ï¼®ã€€ï¼ˆï¼¢ï½™ã€€ï¼«ï¼¡ï¼ºï¼µï¼‰",
         /* Epil. */ TRUE
     },
     /* Space Dance */ {
         /* Scene */ &scene_space_dance,
-        /* Label */ "‚r‚‚‚ƒ‚…@‚c‚‚Ž‚ƒ‚…",
+        /* Label */ "ï¼³ï½ï½ï½ƒï½…ã€€ï¼¤ï½ï½Žï½ƒï½…",
         /* Epil. */ TRUE
     },
     /* Cosmic Dance */ {
         /* Scene */ &scene_cosmic_dance,
-        /* Label */ "‚b‚‚“‚‚‰‚ƒ@‚c‚‚Ž‚ƒ‚…",
+        /* Label */ "ï¼£ï½ï½“ï½ï½‰ï½ƒã€€ï¼¤ï½ï½Žï½ƒï½…",
         /* Epil. */ TRUE
     },
     /* Showtime */ {
         /* Scene */ &scene_showtime,
-        /* Label */ "‚r‚ˆ‚‚—‚”‚‰‚‚…",
+        /* Label */ "ï¼³ï½ˆï½ï½—ï½”ï½‰ï½ï½…",
         /* Epil. */ TRUE
     },
     /* RIQ Data Check */ {
         /* Scene */ &scene_data_check,
-        /* Label */ "‚q|‚h‚p@‚c‚‚”‚@‚b‚ˆ‚…‚ƒ‚‹",
+        /* Label */ "ï¼²âˆ’ï¼©ï¼±ã€€ï¼¤ï½ï½”ï½ã€€ï¼£ï½ˆï½…ï½ƒï½‹",
         /* Epil. */ FALSE
     },
     /* Opening (B Type) */ {
         /* Scene */ &scene_drum_samurai_opening_cutscene,
-        /* Label */ "‚n‚‚…‚Ž‚‰‚Ž‚‡@i‚s‚™‚‚…@‚aj",
+        /* Label */ "ï¼¯ï½ï½…ï½Žï½‰ï½Žï½‡ã€€ï¼ˆï¼´ï½™ï½ï½…ã€€ï¼¢ï¼‰",
         /* Epil. */ FALSE
     },
     /* Opening (A Type) */ {
         /* Scene */ &scene_drum_samurai_demo_cutscene,
-        /* Label */ "‚n‚‚…‚Ž‚‰‚Ž‚‡@i‚s‚™‚‚…@‚`j",
+        /* Label */ "ï¼¯ï½ï½…ï½Žï½‰ï½Žï½‡ã€€ï¼ˆï¼´ï½™ï½ï½…ã€€ï¼¡ï¼‰",
         /* Epil. */ FALSE
     },
     /* Drum Inrto (Unused 1) */ {
         /* Scene */ &scene_drum_intro_unused,
-        /* Label */ "‚c‚’‚•‚@‚h‚Ž‚”‚’‚@i‚t‚Ž‚•‚“‚…‚„j",
+        /* Label */ "ï¼¤ï½’ï½•ï½ã€€ï¼©ï½Žï½”ï½’ï½ã€€ï¼ˆï¼µï½Žï½•ï½“ï½…ï½„ï¼‰",
         /* Epil. */ TRUE
     },
     /* Drum Intro (Unused 2) */ {
         /* Scene */ &scene_drum_intro_unused_2,
-        /* Label */ "‚c‚’‚•‚@‚h‚Ž‚”‚’‚@i‚t‚Ž‚•‚“‚…‚„@‚Qj",
+        /* Label */ "ï¼¤ï½’ï½•ï½ã€€ï¼©ï½Žï½”ï½’ï½ã€€ï¼ˆï¼µï½Žï½•ï½“ï½…ï½„ã€€ï¼’ï¼‰",
         /* Epil. */ TRUE
     },
     /* Drum Intro (Unused 3) */ {
         /* Scene */ &scene_drum_intro_unused_3,
-        /* Label */ "‚c‚’‚•‚@‚h‚Ž‚”‚’‚@i‚t‚Ž‚•‚“‚…‚„@‚Rj",
+        /* Label */ "ï¼¤ï½’ï½•ï½ã€€ï¼©ï½Žï½”ï½’ï½ã€€ï¼ˆï¼µï½Žï½•ï½“ï½…ï½„ã€€ï¼“ï¼‰",
         /* Epil. */ TRUE
     },
     /* Tram & Pauline */ {
         /* Scene */ &scene_tram_pauline,
-        /* Label */ "‚s‚’‚‚@•@‚o‚‚•‚Œ‚‰‚Ž‚…",
+        /* Label */ "ï¼´ï½’ï½ï½ã€€ï¼†ã€€ï¼°ï½ï½•ï½Œï½‰ï½Žï½…",
         /* Epil. */ TRUE
     },
     /* Toss Boys */ {
         /* Scene */ &scene_toss_boys,
-        /* Label */ "‚s‚‚“‚“@‚s‚…‚‚",
+        /* Label */ "ï¼´ï½ï½“ï½“ã€€ï¼´ï½…ï½ï½",
         /* Epil. */ TRUE
     },
     /* Toss Boys 2 */ {
         /* Scene */ &scene_toss_boys_2,
-        /* Label */ "‚s‚‚“‚“@‚s‚…‚‚@‚Q",
+        /* Label */ "ï¼´ï½ï½“ï½“ã€€ï¼´ï½…ï½ï½ã€€ï¼’",
         /* Epil. */ TRUE
     },
     /* Drum Girls LIVE */ {
         /* Scene */ &scene_drum_girls_live_unused,
-        /* Label */ "‚c‚’‚•‚@‚f‚‰‚’‚Œ‚“",
+        /* Label */ "ï¼¤ï½’ï½•ï½ã€€ï¼§ï½‰ï½’ï½Œï½“",
         /* Epil. */ TRUE
     },
     /* Power Calligraphy */ {
         /* Scene */ &scene_power_calligraphy,
-        /* Label */ "‚o‚‚—‚…‚’@‚b‚‚Œ‚Œ‚‰‚‡‚’‚‚‚ˆ‚™",
+        /* Label */ "ï¼°ï½ï½—ï½…ï½’ã€€ï¼£ï½ï½Œï½Œï½‰ï½‡ï½’ï½ï½ï½ˆï½™",
         /* Epil. */ TRUE
     },
     /* Rat Race */ {
         /* Scene */ &scene_rat_race,
-        /* Label */ "‚q‚‚”@‚q‚‚ƒ‚…",
+        /* Label */ "ï¼²ï½ï½”ã€€ï¼²ï½ï½ƒï½…",
         /* Epil. */ TRUE
     },
     /* Flash Memory Test */ {
         /* Scene */ &scene_flash_mem_test,
-        /* Label */ "‚e‚Œ‚‚“‚ˆ@‚l‚…‚‚‚’‚™@‚s‚…‚“‚”",
+        /* Label */ "ï¼¦ï½Œï½ï½“ï½ˆã€€ï¼­ï½…ï½ï½ï½’ï½™ã€€ï¼´ï½…ï½“ï½”",
         /* Epil. */ FALSE
     },
     /* Fireworks */ {
         /* Scene */ &scene_fireworks,
-        /* Label */ "‚e‚‰‚’‚…‚—‚‚’‚‹‚“",
+        /* Label */ "ï¼¦ï½‰ï½’ï½…ï½—ï½ï½’ï½‹ï½“",
         /* Epil. */ TRUE
     },
     /* Metronome */ {
         /* Scene */ &scene_metronome,
-        /* Label */ "‚l‚…‚”‚’‚‚Ž‚‚‚…",
+        /* Label */ "ï¼­ï½…ï½”ï½’ï½ï½Žï½ï½ï½…",
         /* Epil. */ TRUE
     },
     /* Bunny Hop */ {
         /* Scene */ &scene_bunny_hop,
-        /* Label */ "‚a‚•‚Ž‚Ž‚™@‚g‚‚",
+        /* Label */ "ï¼¢ï½•ï½Žï½Žï½™ã€€ï¼¨ï½ï½",
         /* Epil. */ TRUE
     },
     /* Dance Lesson 1 */ {
         /* Scene */ &scene_remix_1_unused,
-        /* Label */ "‚c‚‚Ž‚ƒ‚…@‚k‚…‚“‚“‚‚Ž@‚P",
+        /* Label */ "ï¼¤ï½ï½Žï½ƒï½…ã€€ï¼¬ï½…ï½“ï½“ï½ï½Žã€€ï¼‘",
         /* Epil. */ TRUE
     },
     /* Wizard's Waltz */ {
         /* Scene */ &scene_wizards_waltz,
-        /* Label */ "‚v‚‰‚š‚‚’‚„f‚“@‚v‚‚Œ‚”‚š",
+        /* Label */ "ï¼·ï½‰ï½šï½ï½’ï½„â€™ï½“ã€€ï¼·ï½ï½Œï½”ï½š",
         /* Epil. */ TRUE
     },
     /* Marching Orders */ {
         /* Scene */ &scene_marching_orders,
-        /* Label */ "‚l‚‚’‚ƒ‚ˆ‚‰‚Ž‚‡@‚n‚’‚„‚…‚’‚“",
+        /* Label */ "ï¼­ï½ï½’ï½ƒï½ˆï½‰ï½Žï½‡ã€€ï¼¯ï½’ï½„ï½…ï½’ï½“",
         /* Epil. */ TRUE
     },
     /* Marching Orders 2 */ {
         /* Scene */ &scene_marching_orders_2,
-        /* Label */ "‚l‚‚’‚ƒ‚ˆ‚‰‚Ž‚‡@‚n‚’‚„‚…‚’‚“@‚Q",
+        /* Label */ "ï¼­ï½ï½’ï½ƒï½ˆï½‰ï½Žï½‡ã€€ï¼¯ï½’ï½„ï½…ï½’ï½“ã€€ï¼’",
         /* Epil. */ TRUE
     },
     /* Marching Orders (Tempo Up) */ {
         /* Scene */ &scene_marching_orders_extra,
-        /* Label */ "‚l‚‚’‚ƒ‚ˆ‚‰‚Ž‚‡@‚n‚’‚„‚…‚’‚“@i‚s‚…‚‚‚@‚t‚j",
+        /* Label */ "ï¼­ï½ï½’ï½ƒï½ˆï½‰ï½Žï½‡ã€€ï¼¯ï½’ï½„ï½…ï½’ï½“ã€€ï¼ˆï¼´ï½…ï½ï½ï½ã€€ï¼µï½ï¼‰",
         /* Epil. */ TRUE
     },
     /* Mechanical Horse */ {
         /* Scene */ &scene_mechanical_horse,
-        /* Label */ "‚g‚‚’‚“‚…@‚l‚‚ƒ‚ˆ‚‰‚Ž‚…",
+        /* Label */ "ï¼¨ï½ï½’ï½“ï½…ã€€ï¼­ï½ï½ƒï½ˆï½‰ï½Žï½…",
         /* Epil. */ FALSE
     },
     /* Tap Trial */ {
         /* Scene */ &scene_tap_trial,
-        /* Label */ "‚s‚‚@‚s‚’‚‰‚‚Œ",
+        /* Label */ "ï¼´ï½ï½ã€€ï¼´ï½’ï½‰ï½ï½Œ",
         /* Epil. */ TRUE
     },
     /* Tap Trial 2 */ {
         /* Scene */ &scene_tap_trial_2,
-        /* Label */ "‚s‚‚@‚s‚’‚‰‚‚Œ@‚Q",
+        /* Label */ "ï¼´ï½ï½ã€€ï¼´ï½’ï½‰ï½ï½Œã€€ï¼’",
         /* Epil. */ TRUE
     },
     /* Samurai Slice */ {
         /* Scene */ &scene_samurai_slice,
-        /* Label */ "‚r‚‚‚•‚’‚‚‰@‚r‚Œ‚‰‚ƒ‚…",
+        /* Label */ "ï¼³ï½ï½ï½•ï½’ï½ï½‰ã€€ï¼³ï½Œï½‰ï½ƒï½…",
         /* Epil. */ TRUE
     },
     /* Spaceball */ {
         /* Scene */ &scene_spaceball,
-        /* Label */ "‚r‚‚‚ƒ‚…‚‚‚‚Œ‚Œ",
+        /* Label */ "ï¼³ï½ï½ï½ƒï½…ï½‚ï½ï½Œï½Œ",
         /* Epil. */ TRUE
     },
     /* Spaceball 2 */ {
         /* Scene */ &scene_spaceball_2,
-        /* Label */ "‚r‚‚‚ƒ‚…‚‚‚‚Œ‚Œ@‚Q",
+        /* Label */ "ï¼³ï½ï½ï½ƒï½…ï½‚ï½ï½Œï½Œã€€ï¼’",
         /* Epil. */ TRUE
     },
     /* Spaceball (Tempo Up) */ {
         /* Scene */ &scene_spaceball_extra,
-        /* Label */ "‚r‚‚‚ƒ‚…‚‚‚‚Œ‚Œ@i‚s‚…‚‚‚@‚t‚j",
+        /* Label */ "ï¼³ï½ï½ï½ƒï½…ï½‚ï½ï½Œï½Œã€€ï¼ˆï¼´ï½…ï½ï½ï½ã€€ï¼µï½ï¼‰",
         /* Epil. */ TRUE
     },
     /* Sneaky Spirits */ {
         /* Scene */ &scene_sneaky_spirits,
-        /* Label */ "‚r‚Ž‚…‚‚‹‚™@‚r‚‚‰‚’‚‰‚”‚“",
+        /* Label */ "ï¼³ï½Žï½…ï½ï½‹ï½™ã€€ï¼³ï½ï½‰ï½’ï½‰ï½”ï½“",
         /* Epil. */ TRUE
     },
     /* Sneaky Spirits 2 */ {
         /* Scene */ &scene_sneaky_spirits_2,
-        /* Label */ "‚r‚Ž‚…‚‚‹‚™@‚r‚‚‰‚’‚‰‚”‚“@‚Q",
+        /* Label */ "ï¼³ï½Žï½…ï½ï½‹ï½™ã€€ï¼³ï½ï½‰ï½’ï½‰ï½”ï½“ã€€ï¼’",
         /* Epil. */ TRUE
     },
     /* Ninja Bodyguard */ {
         /* Scene */ &scene_ninja_bodyguard,
-        /* Label */ "‚m‚‰‚Ž‚Š‚@‚a‚‚„‚™‚‡‚•‚‚’‚„",
+        /* Label */ "ï¼®ï½‰ï½Žï½Šï½ã€€ï¼¢ï½ï½„ï½™ï½‡ï½•ï½ï½’ï½„",
         /* Epil. */ TRUE
     },
     /* Ninja Bodyguard 2 */ {
         /* Scene */ &scene_ninja_reincarnate,
-        /* Label */ "‚m‚‰‚Ž‚Š‚@‚c‚…‚“‚ƒ‚…‚Ž‚„‚‚Ž‚”",
+        /* Label */ "ï¼®ï½‰ï½Žï½Šï½ã€€ï¼¤ï½…ï½“ï½ƒï½…ï½Žï½„ï½ï½Žï½”",
         /* Epil. */ TRUE
     },
     /* Bouncy Road */ {
         /* Scene */ &scene_bouncy_road,
-        /* Label */ "‚a‚‚•‚Ž‚ƒ‚™@‚q‚‚‚„",
+        /* Label */ "ï¼¢ï½ï½•ï½Žï½ƒï½™ã€€ï¼²ï½ï½ï½„",
         /* Epil. */ TRUE
     },
     /* Bouncy Road 2 */ {
         /* Scene */ &scene_bouncy_road_2,
-        /* Label */ "‚a‚‚•‚Ž‚ƒ‚™@‚q‚‚‚„@‚Q",
+        /* Label */ "ï¼¢ï½ï½•ï½Žï½ƒï½™ã€€ï¼²ï½ï½ï½„ã€€ï¼’",
         /* Epil. */ TRUE
     },
     /* Sick Beats */ {
         /* Scene */ &scene_sick_beats,
-        /* Label */ "‚r‚‰‚ƒ‚‹@‚a‚…‚‚”‚“",
+        /* Label */ "ï¼³ï½‰ï½ƒï½‹ã€€ï¼¢ï½…ï½ï½”ï½“",
         /* Epil. */ TRUE
     },
     /* Rhythm Tweezers */ {
         /* Scene */ &scene_rhythm_tweezers,
-        /* Label */ "‚q‚ˆ‚™‚”‚ˆ‚@‚s‚—‚…‚…‚š‚…‚’‚“",
+        /* Label */ "ï¼²ï½ˆï½™ï½”ï½ˆï½ã€€ï¼´ï½—ï½…ï½…ï½šï½…ï½’ï½“",
         /* Epil. */ TRUE
     },
     /* Rhythm Tweezers 2 */ {
         /* Scene */ &scene_rhythm_tweezers_2,
-        /* Label */ "‚q‚ˆ‚™‚”‚ˆ‚@‚s‚—‚…‚…‚š‚…‚’‚“@‚Q",
+        /* Label */ "ï¼²ï½ˆï½™ï½”ï½ˆï½ã€€ï¼´ï½—ï½…ï½…ï½šï½…ï½’ï½“ã€€ï¼’",
         /* Epil. */ TRUE
     },
     /* Rhythm Tweezers (Tempo Up) */ {
         /* Scene */ &scene_rhythm_tweezers_extra,
-        /* Label */ "‚q‚ˆ‚™‚”‚ˆ‚@‚s‚—‚…‚…‚š‚…‚’‚“@i‚s‚…‚‚‚@‚t‚j",
+        /* Label */ "ï¼²ï½ˆï½™ï½”ï½ˆï½ã€€ï¼´ï½—ï½…ï½…ï½šï½…ï½’ï½“ã€€ï¼ˆï¼´ï½…ï½ï½ï½ã€€ï¼µï½ï¼‰",
         /* Epil. */ TRUE
     },
     /* Night Walk */ {
         /* Scene */ &scene_night_walk,
-        /* Label */ "‚m‚‰‚‡‚ˆ‚”@‚v‚‚Œ‚‹",
+        /* Label */ "ï¼®ï½‰ï½‡ï½ˆï½”ã€€ï¼·ï½ï½Œï½‹",
         /* Epil. */ TRUE
     },
     /* Night Walk 2 */ {
         /* Scene */ &scene_night_walk_2,
-        /* Label */ "‚m‚‰‚‡‚ˆ‚”@‚v‚‚Œ‚‹@‚Q",
+        /* Label */ "ï¼®ï½‰ï½‡ï½ˆï½”ã€€ï¼·ï½ï½Œï½‹ã€€ï¼’",
         /* Epil. */ TRUE
     },
     /* Polyrhythm */ {
         /* Scene */ &scene_polyrhythm,
-        /* Label */ "‚o‚‚Œ‚™‚’‚ˆ‚™‚”‚ˆ‚",
+        /* Label */ "ï¼°ï½ï½Œï½™ï½’ï½ˆï½™ï½”ï½ˆï½",
         /* Epil. */ TRUE
     },
     /* Polyrhythm 2 */ {
         /* Scene */ &scene_polyrhythm_2,
-        /* Label */ "‚o‚‚Œ‚™‚’‚ˆ‚™‚”‚ˆ‚@‚Q",
+        /* Label */ "ï¼°ï½ï½Œï½™ï½’ï½ˆï½™ï½”ï½ˆï½ã€€ï¼’",
         /* Epil. */ TRUE
     },
     /* The Clappy Trio */ {
         /* Scene */ &scene_clappy_trio,
-        /* Label */ "‚s‚ˆ‚…@‚b‚Œ‚‚‚‚™@‚s‚’‚‰‚",
+        /* Label */ "ï¼´ï½ˆï½…ã€€ï¼£ï½Œï½ï½ï½ï½™ã€€ï¼´ï½’ï½‰ï½",
         /* Epil. */ TRUE
     },
     /* The Snappy Trio */ {
         /* Scene */ &scene_snappy_trio,
-        /* Label */ "‚s‚ˆ‚…@‚r‚Ž‚‚‚‚™@‚s‚’‚‰‚",
+        /* Label */ "ï¼´ï½ˆï½…ã€€ï¼³ï½Žï½ï½ï½ï½™ã€€ï¼´ï½’ï½‰ï½",
         /* Epil. */ TRUE
     },
     /* The Clappy Trio (Tempo Up) */ {
         /* Scene */ &scene_clappy_trio_extra,
-        /* Label */ "‚s‚ˆ‚…@‚b‚Œ‚‚‚‚™@‚s‚’‚‰‚@i‚s‚…‚‚‚@‚t‚j",
+        /* Label */ "ï¼´ï½ˆï½…ã€€ï¼£ï½Œï½ï½ï½ï½™ã€€ï¼´ï½’ï½‰ï½ã€€ï¼ˆï¼´ï½…ï½ï½ï½ã€€ï¼µï½ï¼‰",
         /* Epil. */ TRUE
     }, 
     /* Karate Man */ {
         /* Scene */ &scene_karate_man,
-        /* Label */ "‚j‚‚’‚‚”‚…@‚l‚‚Ž",
+        /* Label */ "ï¼«ï½ï½’ï½ï½”ï½…ã€€ï¼­ï½ï½Ž",
         /* Epil. */ TRUE
     },
     /* Karate Man 2 */ {
         /* Scene */ &scene_karate_man_2,
-        /* Label */ "‚j‚‚’‚‚”‚…@‚l‚‚Ž@‚Q",
+        /* Label */ "ï¼«ï½ï½’ï½ï½”ï½…ã€€ï¼­ï½ï½Žã€€ï¼’",
         /* Epil. */ TRUE
     },
     /* Karate Man (Tempo Up) */ {
         /* Scene */ &scene_karate_man_extra,
-        /* Label */ "‚j‚‚’‚‚”‚…@‚l‚‚Ž@i‚s‚…‚‚‚@‚t‚j",
+        /* Label */ "ï¼«ï½ï½’ï½ï½”ï½…ã€€ï¼­ï½ï½Žã€€ï¼ˆï¼´ï½…ï½ï½ï½ã€€ï¼µï½ï¼‰",
         /* Epil. */ TRUE
     },
     /* Tanuki and Monkey */ {
         /* Scene */ &scene_tanuki_and_monkey,
-        /* Label */ "‚s‚‚Ž‚•‚‹‚‰@•@‚l‚‚Ž‚‹‚…‚™",
+        /* Label */ "ï¼´ï½ï½Žï½•ï½‹ï½‰ã€€ï¼†ã€€ï¼­ï½ï½Žï½‹ï½…ï½™",
         /* Epil. */ TRUE
     },
     /* R-IQ (Title Screen) */ {
         /* Scene */ &scene_title,
-        /* Label */ "‚q|‚h‚p@i‚s‚‰‚”‚Œ‚…j",
+        /* Label */ "ï¼²âˆ’ï¼©ï¼±ã€€ï¼ˆï¼´ï½‰ï½”ï½Œï½…ï¼‰",
         /* Epil. */ FALSE
     },
     /* R-IQ (Main Menu) */ {
         /* Scene */ &scene_main_menu,
-        /* Label */ "‚q|‚h‚p@i‚l‚…‚Ž‚•j",
+        /* Label */ "ï¼²âˆ’ï¼©ï¼±ã€€ï¼ˆï¼­ï½…ï½Žï½•ï¼‰",
         /* Epil. */ FALSE
     },
     /* R-IQ (Game Select) */ {
         /* Scene */ &scene_game_select,
-        /* Label */ "‚q|‚h‚p@i‚f‚‚‚…j",
+        /* Label */ "ï¼²âˆ’ï¼©ï¼±ã€€ï¼ˆï¼§ï½ï½ï½…ï¼‰",
         /* Epil. */ FALSE
     },
     /* R-IQ (Rhythm Data Room) */ {
         /* Scene */ &scene_data_room,
-        /* Label */ "‚q|‚h‚p@i‚k‚…‚”‚”‚…‚’j",
+        /* Label */ "ï¼²âˆ’ï¼©ï¼±ã€€ï¼ˆï¼¬ï½…ï½”ï½”ï½…ï½’ï¼‰",
         /* Epil. */ FALSE
     },
     /* R-IQ (Studio) */ {
         /* Scene */ &scene_studio,
-        /* Label */ "‚q|‚h‚p@i‚r‚”‚•‚„‚‰‚j",
+        /* Label */ "ï¼²âˆ’ï¼©ï¼±ã€€ï¼ˆï¼³ï½”ï½•ï½„ï½‰ï½ï¼‰",
         /* Epil. */ FALSE
     },
     /* R-IQ (Options) */ {
         /* Scene */ &scene_options_menu,
-        /* Label */ "‚q|‚h‚p@i‚n‚‚”‚‰‚‚Žj",
+        /* Label */ "ï¼²âˆ’ï¼©ï¼±ã€€ï¼ˆï¼¯ï½ï½”ï½‰ï½ï½Žï¼‰",
         /* Epil. */ FALSE
     },
     /* R-IQ (Result 1) */ {
         /* Scene */ &scene_results_ver_debug,
-        /* Label */ "‚q|‚h‚p@i‚q‚…‚“‚•‚Œ‚”j",
+        /* Label */ "ï¼²âˆ’ï¼©ï¼±ã€€ï¼ˆï¼²ï½…ï½“ï½•ï½Œï½”ï¼‰",
         /* Epil. */ FALSE
     },
     /* R-IQ (Result 2) */ {
         /* Scene */ &scene_results_ver_rank,
-        /* Label */ "‚q|‚h‚p@i‚q‚…‚“‚•‚Œ‚”@‚Qj",
+        /* Label */ "ï¼²âˆ’ï¼©ï¼±ã€€ï¼ˆï¼²ï½…ï½“ï½•ï½Œï½”ã€€ï¼’ï¼‰",
         /* Epil. */ FALSE
     },
     /* R-IQ (Result 3) */ {
         /* Scene */ &scene_results_ver_score,
-        /* Label */ "‚q|‚h‚p@i‚q‚…‚“‚•‚Œ‚”@‚Rj",
+        /* Label */ "ï¼²âˆ’ï¼©ï¼±ã€€ï¼ˆï¼²ï½…ï½“ï½•ï½Œï½”ã€€ï¼“ï¼‰",
         /* Epil. */ FALSE
     },
     /* R-IQ (Result 4) */ {
         /* Scene */ &scene_epilogue,
-        /* Label */ "‚q|‚h‚p@i‚q‚…‚“‚•‚Œ‚”@‚Sj",
+        /* Label */ "ï¼²âˆ’ï¼©ï¼±ã€€ï¼ˆï¼²ï½…ï½“ï½•ï½Œï½”ã€€ï¼”ï¼‰",
         /* Epil. */ TRUE
     },
     /* R-IQ (Debug Menu) */ {
         /* Scene */ &scene_debug_menu,
-        /* Label */ "‚q|‚h‚p@i‚c‚…‚‚‚•‚‡j",
+        /* Label */ "ï¼²âˆ’ï¼©ï¼±ã€€ï¼ˆï¼¤ï½…ï½‚ï½•ï½‡ï¼‰",
         /* Epil. */ FALSE
     },
     /* R-IQ (Rhythm Library) */ {
         /* Scene */ &scene_arrival,
-        /* Label */ "‚q|‚h‚p@i‚d‚‚‚‰‚Œj",
+        /* Label */ "ï¼²âˆ’ï¼©ï¼±ã€€ï¼ˆï¼¥ï½ï½ï½‰ï½Œï¼‰",
         /* Epil. */ FALSE
     },
     /* R-IQ (Perfect) */ {
         /* Scene */ &scene_perfect,
-        /* Label */ "‚q|‚h‚p@i‚o‚…‚’‚†‚…‚ƒ‚”j",
+        /* Label */ "ï¼²âˆ’ï¼©ï¼±ã€€ï¼ˆï¼°ï½…ï½’ï½†ï½…ï½ƒï½”ï¼‰",
         /* Epil. */ FALSE
     },
     /* R-IQ (Cafe) */ {
         /* Scene */ &scene_cafe,
-        /* Label */ "‚q|‚h‚p@i‚b‚‚†‚…j",
+        /* Label */ "ï¼²âˆ’ï¼©ï¼±ã€€ï¼ˆï¼£ï½ï½†ï½…ï¼‰",
         /* Epil. */ FALSE
     },
     /* R-IQ (Endless Games) */ {
         /* Scene */ &scene_endless_menu,
-        /* Label */ "‚q|‚h‚p@i‚l‚‰‚Ž‚‰‚‡‚‚‚…j",
+        /* Label */ "ï¼²âˆ’ï¼©ï¼±ã€€ï¼ˆï¼­ï½‰ï½Žï½‰ï½‡ï½ï½ï½…ï¼‰",
         /* Epil. */ FALSE
     },
     /* R-IQ (Drum Lessons) */ {
         /* Scene */ &scene_lessons_menu,
-        /* Label */ "‚q|‚h‚p@i‚c‚’‚•‚@‚k‚…‚“‚“‚‚Ž‚“j",
+        /* Label */ "ï¼²âˆ’ï¼©ï¼±ã€€ï¼ˆï¼¤ï½’ï½•ï½ã€€ï¼¬ï½…ï½“ï½“ï½ï½Žï½“ï¼‰",
         /* Epil. */ FALSE
     },
     /* R-IQ (Rhythm Toys) */ {
         /* Scene */ &scene_toys_menu,
-        /* Label */ "‚q|‚h‚p@i‚s‚‚™‚“j",
+        /* Label */ "ï¼²âˆ’ï¼©ï¼±ã€€ï¼ˆï¼´ï½ï½™ï½“ï¼‰",
         /* Epil. */ FALSE
     },
     /* R-IQ (Cafe) */ {
         /* Scene */ &scene_cafe,
-        /* Label */ "‚q|‚h‚p@i‚b‚‚†‚…j",
+        /* Label */ "ï¼²âˆ’ï¼©ï¼±ã€€ï¼ˆï¼£ï½ï½†ï½…ï¼‰",
         /* Epil. */ FALSE
     },
     /* Ending (from clearing Remix 6) */ {
         /* Scene */ &scene_staff_credit_remix_6,
-        /* Label */ "‚d‚Ž‚„‚‰‚Ž‚‡@i‚f‚‚‚…@‚b‚Œ‚…‚‚’‚…‚„j",
+        /* Label */ "ï¼¥ï½Žï½„ï½‰ï½Žï½‡ã€€ï¼ˆï¼§ï½ï½ï½…ã€€ï¼£ï½Œï½…ï½ï½’ï½…ï½„ï¼‰",
         /* Epil. */ FALSE
     },
     /* Ending (from Game Select) */ {
         /* Scene */ &scene_staff_credit,
-        /* Label */ "‚d‚Ž‚„‚‰‚Ž‚‡@i‚d‚˜‚”‚’‚@‚u‚‰‚…‚—‚‰‚Ž‚‡‚“j",
+        /* Label */ "ï¼¥ï½Žï½„ï½‰ï½Žï½‡ã€€ï¼ˆï¼¥ï½˜ï½”ï½’ï½ã€€ï¼¶ï½‰ï½…ï½—ï½‰ï½Žï½‡ï½“ï¼‰",
         /* Epil. */ FALSE
     },
     /* Data Clear */ {
         /* Scene */ &scene_data_clear,
-        /* Label */ "‚r‚‚–‚…@‚c‚‚”‚@‚b‚Œ‚…‚‚’",
+        /* Label */ "ï¼³ï½ï½–ï½…ã€€ï¼¤ï½ï½”ï½ã€€ï¼£ï½Œï½…ï½ï½’",
         /* Epil. */ FALSE
     },
     /* Warning */ {
         /* Scene */ &scene_warning,
-        /* Label */ "‚v‚‚’‚Ž‚‰‚Ž‚‡",
+        /* Label */ "ï¼·ï½ï½’ï½Žï½‰ï½Žï½‡",
         /* Epil. */ FALSE
     },
     /* Disclaimer */ {
         /* Scene */ &scene_disclaimer,
-        /* Label */ "‚c‚‰‚“‚ƒ‚Œ‚‚‰‚‚…‚’",
+        /* Label */ "ï¼¤ï½‰ï½“ï½ƒï½Œï½ï½‰ï½ï½…ï½’",
         /* Epil. */ FALSE
     },
     /* Snappy Trio (Unused) */ {
         /* Scene */ &scene_snappy_trio_unused,
-        /* Label */ "‚s‚ˆ‚…@‚r‚Ž‚‚‚‚™@‚s‚’‚‰‚@i‚t‚Ž‚•‚“‚…‚„j",
+        /* Label */ "ï¼´ï½ˆï½…ã€€ï¼³ï½Žï½ï½ï½ï½™ã€€ï¼´ï½’ï½‰ï½ã€€ï¼ˆï¼µï½Žï½•ï½“ï½…ï½„ï¼‰",
         /* Epil. */ TRUE
     },
     /* Bouncy Road (Unused) */ {
         /* Scene */ &scene_bouncy_road_unused,
-        /* Label */ "‚a‚‚•‚Ž‚ƒ‚™@‚q‚‚‚„@i‚t‚Ž‚•‚“‚…‚„j",
+        /* Label */ "ï¼¢ï½ï½•ï½Žï½ƒï½™ã€€ï¼²ï½ï½ï½„ã€€ï¼ˆï¼µï½Žï½•ï½“ï½…ï½„ï¼‰",
         /* Epil. */ TRUE
     },
     /* Bouncy Road (Unused 2) */ {
         /* Scene */ &scene_bouncy_road_unused_2,
-        /* Label */ "‚a‚‚•‚Ž‚ƒ‚™@‚q‚‚‚„@i‚t‚Ž‚•‚“‚…‚„@‚Qj",
+        /* Label */ "ï¼¢ï½ï½•ï½Žï½ƒï½™ã€€ï¼²ï½ï½ï½„ã€€ï¼ˆï¼µï½Žï½•ï½“ï½…ï½„ã€€ï¼’ï¼‰",
         /* Epil. */ TRUE
     },
     /* Spaceball (Unused) */ {
         /* Scene */ &scene_spaceball_unused,
-        /* Label */ "‚r‚‚‚ƒ‚…‚‚‚‚Œ‚Œ@i‚t‚Ž‚•‚“‚…‚„j",
+        /* Label */ "ï¼³ï½ï½ï½ƒï½…ï½‚ï½ï½Œï½Œã€€ï¼ˆï¼µï½Žï½•ï½“ï½…ï½„ï¼‰",
         /* Epil. */ TRUE
     },
     /* Spaceball (Unused 2) */ {
         /* Scene */ &scene_spaceball_unused_2,
-        /* Label */ "‚r‚‚‚ƒ‚…‚‚‚‚Œ‚Œ@i‚t‚Ž‚•‚“‚…‚„@‚Qj",
+        /* Label */ "ï¼³ï½ï½ï½ƒï½…ï½‚ï½ï½Œï½Œã€€ï¼ˆï¼µï½Žï½•ï½“ï½…ï½„ã€€ï¼’ï¼‰",
         /* Epil. */ TRUE
     },
     /* Tap Trial (Unused) */ {
         /* Scene */ &scene_tap_trial_unused,
-        /* Label */ "‚s‚‚@‚s‚’‚‰‚‚Œ@i‚t‚Ž‚•‚“‚…‚„j",
+        /* Label */ "ï¼´ï½ï½ã€€ï¼´ï½’ï½‰ï½ï½Œã€€ï¼ˆï¼µï½Žï½•ï½“ï½…ï½„ï¼‰",
         /* Epil. */ TRUE
     },
     /* Marching Orders (Unused) */ {
         /* Scene */ &scene_marching_orders_unused,
-        /* Label */ "‚l‚‚’‚ƒ‚ˆ‚‰‚Ž‚‡@‚n‚’‚„‚…‚’‚“@i‚t‚Ž‚•‚“‚…‚„j",
+        /* Label */ "ï¼­ï½ï½’ï½ƒï½ˆï½‰ï½Žï½‡ã€€ï¼¯ï½’ï½„ï½…ï½’ï½“ã€€ï¼ˆï¼µï½Žï½•ï½“ï½…ï½„ï¼‰",
         /* Epil. */ TRUE
     },
     /* Horse Machine (Unused) */ {
         /* Scene */ &scene_mechanical_horse_unused,
-        /* Label */ "‚g‚‚’‚“‚…@‚l‚‚ƒ‚ˆ‚‰‚Ž‚…@i‚t‚Ž‚•‚“‚…‚„j",
+        /* Label */ "ï¼¨ï½ï½’ï½“ï½…ã€€ï¼­ï½ï½ƒï½ˆï½‰ï½Žï½…ã€€ï¼ˆï¼µï½Žï½•ï½“ï½…ï½„ï¼‰",
         /* Epil. */ TRUE
     },
     END_OF_DEBUG_ENTRIES
@@ -657,7 +657,7 @@ struct DebugMenuEntry debug_menu_entry_table[] = {
 
 
 // [D_089ddf60] Page Number Digits
-char debug_menu_counter_digits[] = "‚O‚P‚Q‚R‚S‚T‚U‚V‚W‚X‚`‚a‚b‚c‚d‚e‚f‚g‚h‚i‚j‚k‚l‚m‚n‚o‚p‚q‚r‚s‚t‚u‚v‚w‚x‚y";
+char debug_menu_counter_digits[] = "ï¼ï¼‘ï¼’ï¼“ï¼”ï¼•ï¼–ï¼—ï¼˜ï¼™ï¼¡ï¼¢ï¼£ï¼¤ï¼¥ï¼¦ï¼§ï¼¨ï¼©ï¼ªï¼«ï¼¬ï¼­ï¼®ï¼¯ï¼°ï¼±ï¼²ï¼³ï¼´ï¼µï¼¶ï¼·ï¼¸ï¼¹ï¼º";
 
 
 // Render Text
@@ -699,7 +699,7 @@ void debug_menu_render_table(s32 targetPage, s32 targetRow) {
         delete_bmp_font_obj_text_anim(gDebugMenu->objFont, gDebugMenu->counter);
         strncpy(string, &debug_menu_counter_digits[(targetPage + 1) * 2], 2);
         string[2] = '\0';
-        strcat(string, "^");
+        strcat(string, "ï¼");
         strncat(string, &debug_menu_counter_digits[(totalPages + 1) * 2], 2);
         textAnim = bmp_font_obj_print_r(gDebugMenu->objFont, string, 1, 4);
         sprite_set_anim(gSpriteHandler, gDebugMenu->counter, textAnim->frames, 0, 0, 0, 0);

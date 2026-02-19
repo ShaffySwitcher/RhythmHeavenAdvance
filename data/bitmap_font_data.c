@@ -1,7 +1,7 @@
 #include "bitmap_font_data.h"
 
 // [D_08936b50] Full-Width Lowercase Latin Alphabet
-const char *D_08936b50 = "‚‚‚‚ƒ‚„‚…‚†‚‡‚ˆ‚‰‚Š‚‹‚Œ‚‚‚‚‚‘‚’‚“‚”‚•‚–‚—‚˜‚™‚š";
+const char *D_08936b50 = "ï½ï½‚ï½ƒï½„ï½…ï½†ï½‡ï½ˆï½‰ï½Šï½‹ï½Œï½ï½ï½ï½ï½‘ï½’ï½“ï½”ï½•ï½–ï½—ï½˜ï½™ï½š";
 
 // [D_08936b54] Bitmap Font OBJ Multi-Printer Task
 struct TaskMethods D_08936b54 = {

@@ -731,7 +731,7 @@ void interp_screen_window_size(u16 memID, u32 window, u32 duration,
 /* STRING */
 
 
-extern char D_08936c64[]; // "?申O?申P?申Q?申R?申S?申T?申U?申V?申W?申X"
+extern char D_08936c64[]; // no idea what that was supposed to be in the first place, whatever
 
 
 // Copy Substring

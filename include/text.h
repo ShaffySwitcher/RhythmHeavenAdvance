@@ -66,10 +66,10 @@
 #define FONT_WW_BODY_ICON   ":" "1"
 
 // Shift JIS Encoding Support: (because the GCC compiler doesn't like the second byte being 0x5C, or '\')
-#define KATAKANA_SO "\x83\x5C" // Should be É\, now written as É\\.
-#define KANJI_JUU   "\x8F\x5C" // Should be è\, now written as è\\.
-#define KANJI_NOU   "\x94\x5C" // Should be î\, now written as î\\.
-#define KANJI_HYOU  "\x95\x5C" // Should be ï\, now written as ï\\.
+#define KATAKANA_SO "\x83\x5C" // Should be „ÇΩ, now written as „ÇΩ\.
+#define KANJI_JUU   "\x8F\x5C" // Should be ÂçÅ, now written as ÂçÅ\.
+#define KANJI_NOU   "\x94\x5C" // Should be ËÉΩ, now written as ËÉΩ\.
+#define KANJI_HYOU  "\x95\x5C" // Should be Ë°®, now written as Ë°®\.
 
 // Custom Character Slots
 #define TEXT_L_SHOULDER "\xEE\x80\x80" // U+E000

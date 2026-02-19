@@ -9,27 +9,27 @@ const char D_0806a010[] = "Try a little harder.";
 
 const char D_0806a020[] = "That was really great!";
 
-const char D_0806a03c[] = "‚Í‚ñ‚¾‚ñ@‚è‚å‚­‚ª@‚©‚¯‚Ä‚Ü‚·B";
+const char D_0806a03c[] = "ã¯ã‚“ã ã‚“ã€€ã‚Šã‚‡ããŒã€€ã‹ã‘ã¦ã¾ã™ã€‚";
 
-const char D_0806a060[] = "‚·‚Î‚ç‚µ‚¢@‚Í‚ñ‚¾‚ñ@‚è‚å‚­‚¾I";
+const char D_0806a060[] = "ã™ã°ã‚‰ã—ã„ã€€ã¯ã‚“ã ã‚“ã€€ã‚Šã‚‡ãã ï¼";
 
-const char D_0806a084[] = "‚à‚Á‚Æ@ƒEƒf‚ğ@‚İ‚ª‚±‚¤B";
+const char D_0806a084[] = "ã‚‚ã£ã¨ã€€ã‚¦ãƒ‡ã‚’ã€€ã¿ãŒã“ã†ã€‚";
 
-const char D_0806a0a0[] = "‚Æ‚Ä‚à@ƒeƒNƒjƒJƒ‹‚¾I";
+const char D_0806a0a0[] = "ã¨ã¦ã‚‚ã€€ãƒ†ã‚¯ãƒ‹ã‚«ãƒ«ã ï¼";
 
 const char D_0806a0b8[] = "Rhythm League notes:";
 
 const char D_0806a0d4[] =
-    "\x05\x31" "\x01\x35" "@ô@Honey Sweet Angel of Love";
+    "\x05\x31" "\x01\x35" "ã€€â™ªã€€Honey Sweet Angel of Love";
 
 const char D_0806a0fc[] =
-    "\x05\x31" "\x01\x35" "@Singer:@@Ami Tokito";
+    "\x05\x31" "\x01\x35" "ã€€Singer:ã€€ã€€Ami Tokito";
 
 const char D_0806a118[] =
-    "\x05\x31" "\x01\x35" "@Music:@@TSUNKU‰";
+    "\x05\x31" "\x01\x35" "ã€€Music:ã€€ã€€TSUNKUâ™‚";
 
 const char D_0806a134[] =
-    "\x05\x31" "\x01\x35" "@Arrangement: H. D. Suzuki";
+    "\x05\x31" "\x01\x35" "ã€€Arrangement: H. D. Suzuki";
 
 const char D_0806a154[] =
     "\n"

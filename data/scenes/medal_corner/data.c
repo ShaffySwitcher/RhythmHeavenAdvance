@@ -34,7 +34,7 @@ struct MedalCornerMenu *medal_corner_menu_table[] = {
 
 
 // [D_089dd794] ???
-char medal_corner_locked_text[] = "HHH";
+char medal_corner_locked_text[] = "ï¼Ÿï¼Ÿï¼Ÿ";
 
 
 // [D_089dd79c] Buffered Textures List

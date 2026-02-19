@@ -10,19 +10,19 @@
 
 // [D_089d7984] Letter Ranks
 const char *results_letter_ranks[] = {
-    ":1.1" "‚c",
-    ":1.5" "‚b",
-    ":1.4" "‚a",
-    ":1.6" "‚`",
-    ":1.2" "‚r"
+    ":1.1" "ï¼¤",
+    ":1.5" "ï¼£",
+    ":1.4" "ï¼¢",
+    ":1.6" "ï¼¡",
+    ":1.2" "ï¼³"
 };
 
 
 // [D_089d7998] DEBUG Skill Comments - Accuracy
 const char *results_skill_text_accuracy[] = {
-    "‚o‚’‚‚†‚…‚“‚“‚‰‚‚Ž‚‚Œ@‚‚ƒ‚ƒ‚•‚’‚‚ƒ‚™",
-    "‚r‚…‚Ž‚“‚…@‚‚†@‚’‚ˆ‚™‚”‚ˆ‚",
-    "‚r‚‚”‚‰‚“‚†‚™‚‰‚Ž‚‡@‚‚ƒ‚ƒ‚•‚’‚‚ƒ‚™",
+    "ï¼°ï½’ï½ï½†ï½…ï½“ï½“ï½‰ï½ï½Žï½ï½Œã€€ï½ï½ƒï½ƒï½•ï½’ï½ï½ƒï½™",
+    "ï¼³ï½…ï½Žï½“ï½…ã€€ï½ï½†ã€€ï½’ï½ˆï½™ï½”ï½ˆï½",
+    "ï¼³ï½ï½”ï½‰ï½“ï½†ï½™ï½‰ï½Žï½‡ã€€ï½ï½ƒï½ƒï½•ï½’ï½ï½ƒï½™",
     NULL
 };
 
@@ -32,9 +32,9 @@ const char *results_skill_text_accuracy[] = {
     // Adaptability
     // Reflexes
 const char *results_skill_text_barely_trk2[] = {
-    "‚s‚…‚ƒ‚ˆ‚Ž‚‰‚‘‚•‚…@‚k‚…‚–‚…‚Œ",
-    "‚`‚„‚‚‚”‚‚‚‚‰‚Œ‚‰‚”‚™",
-    "‚q‚…‚†‚Œ‚…‚˜‚…‚“",
+    "ï¼´ï½…ï½ƒï½ˆï½Žï½‰ï½‘ï½•ï½…ã€€ï¼¬ï½…ï½–ï½…ï½Œ",
+    "ï¼¡ï½„ï½ï½ï½”ï½ï½‚ï½‰ï½Œï½‰ï½”ï½™",
+    "ï¼²ï½…ï½†ï½Œï½…ï½˜ï½…ï½“",
     NULL
 };
 
@@ -44,67 +44,67 @@ const char *results_skill_text_barely_trk2[] = {
     //
     // Steadiness
 const char *results_skill_text_barely_trk1[] = {
-    "‚q‚…‚“‚‚‚Ž‚“‚‰‚‚‚‰‚Œ‚‰‚”‚™",
-    "‚s‚ˆ‚…@‚ƒ‚’‚•‚ƒ‚‰‚‚Œ@‚‚‚’‚”",
-    "‚r‚”‚…‚‚„‚‰‚Ž‚…‚“‚“",
+    "ï¼²ï½…ï½“ï½ï½ï½Žï½“ï½‰ï½‚ï½‰ï½Œï½‰ï½”ï½™",
+    "ï¼´ï½ˆï½…ã€€ï½ƒï½’ï½•ï½ƒï½‰ï½ï½Œã€€ï½ï½ï½’ï½”",
+    "ï¼³ï½”ï½…ï½ï½„ï½‰ï½Žï½…ï½“ï½“",
     NULL
 };
 
 
 // [D_089d79c8] DEBUG Skill Comments - Hits
 const char *results_skill_text_hit_avg[] = {
-    "‚`‚‚‚”‚…‚•‚’|‚Œ‚…‚–‚…‚Œ@‚‚ƒ‚ƒ‚•‚’‚‚ƒ‚™",
-    "‚n‚’‚„‚‰‚Ž‚‚’‚™@‚‚ƒ‚ƒ‚•‚’‚‚ƒ‚™",
-    "‚l‚‚„‚…‚’‚‚”‚…@‚‚ƒ‚ƒ‚•‚’‚‚ƒ‚™",
+    "ï¼¡ï½ï½ï½”ï½…ï½•ï½’âˆ’ï½Œï½…ï½–ï½…ï½Œã€€ï½ï½ƒï½ƒï½•ï½’ï½ï½ƒï½™",
+    "ï¼¯ï½’ï½„ï½‰ï½Žï½ï½’ï½™ã€€ï½ï½ƒï½ƒï½•ï½’ï½ï½ƒï½™",
+    "ï¼­ï½ï½„ï½…ï½’ï½ï½”ï½…ã€€ï½ï½ƒï½ƒï½•ï½’ï½ï½ƒï½™",
     NULL
 };
 
 
 // [D_089d79d8] DEBUG Skill Comments - Irrelevant Inputs
 const char *results_skill_text_irrelevant_inputs[] = {
-    "‚r‚”‚‚‚‰‚Ž‚@‚’‚…‚“‚‚•‚’‚ƒ‚…‚†‚•‚Œ‚Ž‚…‚“‚“",
-    "‚q‚‚”‚‰‚‚Ž‚‚Œ@‚”‚‚Œ‚…‚Ž‚”",
-    "‚b‚‚Œ‚‚Ž‚…‚“‚“",
+    "ï¼³ï½”ï½ï½ï½‰ï½Žï½ã€€ï½’ï½…ï½“ï½ï½•ï½’ï½ƒï½…ï½†ï½•ï½Œï½Žï½…ï½“ï½“",
+    "ï¼²ï½ï½”ï½‰ï½ï½Žï½ï½Œã€€ï½”ï½ï½Œï½…ï½Žï½”",
+    "ï¼£ï½ï½Œï½ï½Žï½…ï½“ï½“",
     NULL
 };
 
 
 // [D_089d79e8] DEBUG Skill Comments - Accuracy (Lenient)
 const char *results_skill_text_accuracy_lenient[] = {
-    "‚r‚”‚‚‚‚‰‚Œ‚‰‚”‚™",
-    "‚s‚ˆ‚…@‚ƒ‚‚’‚…@‚‚†@‚™‚‚•‚’@‚’‚ˆ‚™‚”‚ˆ‚",
-    "‚b‚‚Ž‚“‚‰‚“‚”‚…‚Ž‚ƒ‚™",
+    "ï¼³ï½”ï½ï½‚ï½‰ï½Œï½‰ï½”ï½™",
+    "ï¼´ï½ˆï½…ã€€ï½ƒï½ï½’ï½…ã€€ï½ï½†ã€€ï½™ï½ï½•ï½’ã€€ï½’ï½ˆï½™ï½”ï½ˆï½",
+    "ï¼£ï½ï½Žï½“ï½‰ï½“ï½”ï½…ï½Žï½ƒï½™",
     NULL
 };
 
 
 // [D_089d79f8] DEBUG Skill Comments - Misses
 const char *results_skill_text_miss[] = {
-    "‚l‚‚”‚‰‚–‚‚”‚‰‚‚Ž",
-    "‚u‚‰‚“‚•‚‚Œ@‚‚ƒ‚•‚‰‚”‚™",
-    "‚o‚‚“‚‰‚”‚‰‚–‚‰‚”‚™",
+    "ï¼­ï½ï½”ï½‰ï½–ï½ï½”ï½‰ï½ï½Ž",
+    "ï¼¶ï½‰ï½“ï½•ï½ï½Œã€€ï½ï½ƒï½•ï½‰ï½”ï½™",
+    "ï¼°ï½ï½“ï½‰ï½”ï½‰ï½–ï½‰ï½”ï½™",
     NULL
 };
 
 
 // [D_089d7a08] DEBUG Skill Comments - Misses (Tracker 2)
 const char *results_skill_text_miss_trk2[] = {
-    "‚q‚…‚†‚Œ‚…‚˜‚…‚“",
-    "‚e‚Œ‚…‚˜‚‰‚‚‚‰‚Œ‚‰‚”‚™",
-    "‚b‚‚’‚…‚†‚•‚Œ‚Ž‚…‚“‚“",
+    "ï¼²ï½…ï½†ï½Œï½…ï½˜ï½…ï½“",
+    "ï¼¦ï½Œï½…ï½˜ï½‰ï½‚ï½‰ï½Œï½‰ï½”ï½™",
+    "ï¼£ï½ï½’ï½…ï½†ï½•ï½Œï½Žï½…ï½“ï½“",
     NULL
 };
 
 
 // [D_089d7a18] DEBUG Skill Comments - Random
 const char *results_skill_text_random[] = {
-    "‚k‚‚–‚…@‚†‚‚’‚”‚•‚Ž‚…@‚†‚‚’@‚Ž‚…‚˜‚”@‚™‚…‚‚’",
-    "‚s‚ˆ‚‰‚“@‚™‚…‚‚’'‚“@‚†‚‰‚Ž‚‚Ž‚ƒ‚‰‚‚Œ@‚†‚‚’‚”‚•‚Ž‚…",
-    "‚s‚‚‚‚’‚’‚‚—'‚“@‚—‚…‚‚”‚ˆ‚…‚’",
-    "‚x‚…‚“‚”‚…‚’‚„‚‚™'‚“@‚„‚‰‚Ž‚Ž‚…‚’",
-    "i‚o‚’‚…‚„‚‰‚ƒ‚”‚‰‚Ž‚‡j@‚x‚‚•‚’@‚‚‚Œ‚‚‚„@‚”‚™‚‚…",
-    "‚x‚‚•‚’@‚Œ‚…‚–‚…‚Œ@‚‚†@‚•‚‚‚‚’‚‰‚Ž‚‡‚‰‚Ž‚‡",
-    "‚x‚‚•‚’@‚ˆ‚•‚‚‚Ž‚‰‚”‚™",
+    "ï¼¬ï½ï½–ï½…ã€€ï½†ï½ï½’ï½”ï½•ï½Žï½…ã€€ï½†ï½ï½’ã€€ï½Žï½…ï½˜ï½”ã€€ï½™ï½…ï½ï½’",
+    "ï¼´ï½ˆï½‰ï½“ã€€ï½™ï½…ï½ï½’'ï½“ã€€ï½†ï½‰ï½Žï½ï½Žï½ƒï½‰ï½ï½Œã€€ï½†ï½ï½’ï½”ï½•ï½Žï½…",
+    "ï¼´ï½ï½ï½ï½’ï½’ï½ï½—'ï½“ã€€ï½—ï½…ï½ï½”ï½ˆï½…ï½’",
+    "ï¼¹ï½…ï½“ï½”ï½…ï½’ï½„ï½ï½™'ï½“ã€€ï½„ï½‰ï½Žï½Žï½…ï½’",
+    "ï¼ˆï¼°ï½’ï½…ï½„ï½‰ï½ƒï½”ï½‰ï½Žï½‡ï¼‰ã€€ï¼¹ï½ï½•ï½’ã€€ï½‚ï½Œï½ï½ï½„ã€€ï½”ï½™ï½ï½…",
+    "ï¼¹ï½ï½•ï½’ã€€ï½Œï½…ï½–ï½…ï½Œã€€ï½ï½†ã€€ï½•ï½ï½‚ï½’ï½‰ï½Žï½‡ï½‰ï½Žï½‡",
+    "ï¼¹ï½ï½•ï½’ã€€ï½ˆï½•ï½ï½ï½Žï½‰ï½”ï½™",
     NULL
 };
 

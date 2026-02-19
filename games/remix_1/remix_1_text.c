@@ -9,13 +9,13 @@ const char D_0805ca34[] = "Try a little harder.";
 
 const char D_0805ca44[] = "That was really great!";
 
-const char D_0805ca60[] = "‚Í‚ñ‚¾‚ñ@‚è‚å‚­‚ª@‚©‚¯‚Ä‚Ü‚·B";
+const char D_0805ca60[] = "ã¯ã‚“ã ã‚“ã€€ã‚Šã‚‡ããŒã€€ã‹ã‘ã¦ã¾ã™ã€‚";
 
-const char D_0805ca84[] = "‚·‚Î‚ç‚µ‚¢@‚Í‚ñ‚¾‚ñ@‚è‚å‚­‚¾I";
+const char D_0805ca84[] = "ã™ã°ã‚‰ã—ã„ã€€ã¯ã‚“ã ã‚“ã€€ã‚Šã‚‡ãã ï¼";
 
-const char D_0805caa8[] = "‚à‚Á‚Æ@ƒEƒf‚ğ@‚İ‚ª‚±‚¤B";
+const char D_0805caa8[] = "ã‚‚ã£ã¨ã€€ã‚¦ãƒ‡ã‚’ã€€ã¿ãŒã“ã†ã€‚";
 
-const char D_0805cac4[] = "‚Æ‚Ä‚à@ƒeƒNƒjƒJƒ‹‚¾I";
+const char D_0805cac4[] = "ã¨ã¦ã‚‚ã€€ãƒ†ã‚¯ãƒ‹ã‚«ãƒ«ã ï¼";
 
 const char D_0805cadc[] = "Rhythm League notes:";
 
@@ -27,12 +27,12 @@ const char D_0805caf8[] = "Try a little harder.";
 
 const char D_0805cb08[] = "That was really great!";
 
-const char D_0805cb24[] = "‚Í‚ñ‚¾‚ñ@‚è‚å‚­‚ª@‚©‚¯‚Ä‚Ü‚·B";
+const char D_0805cb24[] = "ã¯ã‚“ã ã‚“ã€€ã‚Šã‚‡ããŒã€€ã‹ã‘ã¦ã¾ã™ã€‚";
 
-const char D_0805cb48[] = "‚·‚Î‚ç‚µ‚¢@‚Í‚ñ‚¾‚ñ@‚è‚å‚­‚¾I";
+const char D_0805cb48[] = "ã™ã°ã‚‰ã—ã„ã€€ã¯ã‚“ã ã‚“ã€€ã‚Šã‚‡ãã ï¼";
 
-const char D_0805cb6c[] = "‚à‚Á‚Æ@ƒEƒf‚ğ@‚İ‚ª‚±‚¤B";
+const char D_0805cb6c[] = "ã‚‚ã£ã¨ã€€ã‚¦ãƒ‡ã‚’ã€€ã¿ãŒã“ã†ã€‚";
 
-const char D_0805cb88[] = "‚Æ‚Ä‚à@ƒeƒNƒjƒJƒ‹‚¾I";
+const char D_0805cb88[] = "ã¨ã¦ã‚‚ã€€ãƒ†ã‚¯ãƒ‹ã‚«ãƒ«ã ï¼";
 
 const char D_0805cba0[] = "Rhythm League notes:";
