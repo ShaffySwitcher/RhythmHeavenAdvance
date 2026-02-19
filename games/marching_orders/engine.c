@@ -197,13 +197,62 @@ struct GraphicsTable marching_orders_2_gfx_table[] = {
     END_OF_GRAPHICS_TABLE
 };
 
+struct GraphicsTable marching_order_extra_gfx_table[] = {
+    /* BG Tileset */ {
+        /* Src.  */ &marching_orders_extra_bg_tiles,
+        /* Dest. */ BG_TILESET_BASE(0),
+        /* Size  */ COMPRESSED_GFX_SOURCE
+    },
+    /* BG Map */ {
+        /* Src.  */ &marching_orders_extra_bg_map,
+        /* Dest. */ BG_MAP_BASE(0xE800),
+        /* Size  */ COMPRESSED_GFX_SOURCE
+    },
+    /* BG Map */ {
+        /* Src.  */ &marching_orders_extra_bg_map_text_bubble,
+        /* Dest. */ BG_MAP_BASE(0xF000),
+        /* Size  */ COMPRESSED_GFX_SOURCE
+    },
+    /* BG Map */ {
+        /* Src.  */ &marching_orders_extra_bg_map_floor,
+        /* Dest. */ BG_MAP_BASE(0xF800),
+        /* Size  */ COMPRESSED_GFX_SOURCE
+    },
+    /* OBJ Tileset */ {
+        /* Src.  */ &marching_orders_extra_obj,
+        /* Dest. */ OBJ_TILESET_BASE(0),
+        /* Size  */ COMPRESSED_GFX_SOURCE
+    },
+    /* BG Palette */ {
+        /* Src.  */ marching_orders_extra_bg_pal,
+        /* Dest. */ BG_PALETTE_BUFFER(0),
+        /* Size  */ 0x140
+    },
+    /* OBJ Palette */ {
+        /* Src.  */ marching_orders_extra_obj_pal,
+        /* Dest. */ OBJ_PALETTE_BUFFER(0),
+        /* Size  */ 0x140
+    },
+    /* OBJ Palette */ {
+        /* Src.  */ D_089ccbc8[0],
+        /* Dest. */ OBJ_PALETTE_BUFFER(12.5),
+        /* Size  */ 0x8
+    },
+    /* OBJ Palette */ {
+        /* Src.  */ D_089ccbc8[4],
+        /* Dest. */ OBJ_PALETTE_BUFFER(13.5),
+        /* Size  */ 0x8
+    },
+    END_OF_GRAPHICS_TABLE
+};
+
 // [D_089e5358] Graphics Table Index
 struct GraphicsTable *marching_gfx_tables[] = {
     /* 0x00 */ marching_orders_1_gfx_table,
     /* 0x01 */ marching_orders_remix_7_gfx_table,
     /* 0x02 */ marching_orders_1_gfx_table,
     /* 0x03 */ marching_orders_2_gfx_table,
-    /* 0x04 */ marching_orders_1_gfx_table,
+    /* 0x04 */ marching_order_extra_gfx_table,
 };
 
 // [D_089e5368] Position of <sprite> per Animation Frame
