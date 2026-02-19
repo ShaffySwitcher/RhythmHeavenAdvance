@@ -87,11 +87,10 @@ script D_08060014
     rest 24
 return
 
-
 text D_08060080
     .ascii "Let's add a tom beat.\n"
     .ascii "Remember, you can use\n"
-    .ascii "either ‡M or Right on ‡O\n"
+    .ascii "either \xEE\x80\x82 or Right on \xEE\x80\x84\n"
     .asciz "for the snare.\n"
 endtext
 

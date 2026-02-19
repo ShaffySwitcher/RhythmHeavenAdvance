@@ -4,7 +4,7 @@
 /* TEXT PRINTER DATA */
 
 
-#define TEXT_PRINTER_TOTAL_GLYPHS 0x1CA4
+#define TEXT_PRINTER_TOTAL_GLYPHS 65510
 
 struct TextPrinterFont {
     u8 *glyphData;
@@ -28,9 +28,9 @@ extern char D_08938194[];
 extern u8 D_08938258[];
 extern u8 D_0893825d[];
 
-extern u8 text_small_glyphs_bin[]; // [D_08938264]
-extern u8 text_small_glyph_sizes_bin[]; // [D_089631c4]
-extern u8 text_medium_glyphs_bin[]; // [D_08964e68]
-extern u8 text_medium_glyph_sizes_bin[]; // [D_0898fdc8]
-extern u8 text_large_glyphs_bin[]; // [D_08991a6c]
-extern u8 text_large_glyph_sizes_bin[]; // [D_089caeec]
+extern u8 text_small_glyphs_bin[];
+extern u8 text_small_glyph_sizes_bin[];
+extern u8 text_medium_glyphs_bin[];
+extern u8 text_medium_glyph_sizes_bin[];
+extern u8 text_large_glyphs_bin[];
+extern u8 text_large_glyph_sizes_bin[];

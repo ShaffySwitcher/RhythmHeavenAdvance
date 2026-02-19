@@ -18,7 +18,7 @@ extern PrintGlyphToVRAMFunc text_print_glyph_to_vram_rom;
 static struct FormattedGlyph {
     const char *formatSrc;
     const char *charSrc;
-    s16 id;
+    u16 id;
     u16 xOffset;
     u8 width;
     u8 lineColors;
@@ -36,6 +36,104 @@ static s8 sPrinterColors;       // Printer Colors
 static s8 sPrinterFont;         // Printer Font
 static s8 sPrinterIndentWidth;  // Printer Indent Width
 static s8 sPrinterShadowColors; // Printer Shadow Colors
+
+static s32 text_decode_utf8_char(const char *string, u32 *codepoint, u32 *length) {
+    const u8 *s;
+    u8 c0, c1, c2, c3;
+    u32 cp;
+
+    s = (const u8 *)string;
+    c0 = s[0];
+
+    // if null terminator
+    if (c0 == '\0') {
+        *codepoint = 0;
+        *length = 0;
+        return FALSE;
+    }
+
+    // 1-byte ascii character
+    if (c0 < 0x80) {
+        *codepoint = c0;
+        *length = 1;
+        return TRUE;
+    }
+
+    if ((c0 >= 0xC2) && (c0 <= 0xDF)) {
+        c1 = s[1];
+        if ((c1 & 0xC0) != 0x80) {
+            *codepoint = 0;
+            *length = 1;
+            return FALSE;
+        }
+
+        cp = ((c0 & 0x1F) << 6) | (c1 & 0x3F);
+        *codepoint = cp;
+        *length = 2;
+        return TRUE;
+    }
+
+    if ((c0 >= 0xE0) && (c0 <= 0xEF)) {
+        c1 = s[1];
+        c2 = s[2];
+
+        if (((c1 & 0xC0) != 0x80) || ((c2 & 0xC0) != 0x80)) {
+            *codepoint = 0;
+            *length = 1;
+            return FALSE;
+        }
+
+        if ((c0 == 0xE0) && (c1 < 0xA0)) {
+            *codepoint = 0;
+            *length = 1;
+            return FALSE;
+        }
+
+        if ((c0 == 0xED) && (c1 >= 0xA0)) {
+            *codepoint = 0;
+            *length = 1;
+            return FALSE;
+        }
+
+        cp = ((c0 & 0x0F) << 12) | ((c1 & 0x3F) << 6) | (c2 & 0x3F);
+        *codepoint = cp;
+        *length = 3;
+        return TRUE;
+    }
+
+    if ((c0 >= 0xF0) && (c0 <= 0xF4)) {
+        c1 = s[1];
+        c2 = s[2];
+        c3 = s[3];
+
+        if (((c1 & 0xC0) != 0x80) || ((c2 & 0xC0) != 0x80) || ((c3 & 0xC0) != 0x80)) {
+            *codepoint = 0;
+            *length = 1;
+            return FALSE;
+        }
+
+        if ((c0 == 0xF0) && (c1 < 0x90)) {
+            *codepoint = 0;
+            *length = 1;
+            return FALSE;
+        }
+
+        if ((c0 == 0xF4) && (c1 > 0x8F)) {
+            *codepoint = 0;
+            *length = 1;
+            return FALSE;
+        }
+
+        cp = ((c0 & 0x07) << 18) | ((c1 & 0x3F) << 12) | ((c2 & 0x3F) << 6) | (c3 & 0x3F);
+        *codepoint = cp;
+        *length = 4;
+        return TRUE;
+    }
+
+    *codepoint = 0;
+    *length = 1;
+    return FALSE;
+}
 
 
 
@@ -163,22 +261,28 @@ s32 text_printer_print_unformatted_line(s32 tileBaseX, s32 tileBaseY, s32 font, 
 // Check if Character is Any Sort of Open Bracket
 s32 text_glyph_is_open_bracket(const char *c) {
     const char *brackets;
-    char c1, c2;
+    u32 codepoint, bracketCodepoint;
+    u32 length, bracketLength;
 
-    c1 = c[0];
-    c2 = c[1];
+    if (!text_decode_utf8_char(c, &codepoint, &length)) {
+        return FALSE;
+    }
 
-    if ((char)(c1 - '\x20') < '\x5f') {
+    if ((codepoint - 0x20) < 0x5f) {
         // Half-Width Open Brackets
         for (brackets = D_089380e4; brackets[0] != '\0'; brackets += 1) {
-            if (c1 == brackets[0]) {
+            if (codepoint == (u8)brackets[0]) {
                 return TRUE;
             }
         }
     } else {
         // Full-Width Open Brackets
-        for (brackets = D_089380d4; brackets[0] != '\0'; brackets += 2) {
-            if ((c1 == brackets[0]) && (c2 == brackets[1])) {
+        for (brackets = D_089380d4; brackets[0] != '\0'; brackets += bracketLength) {
+            if (!text_decode_utf8_char(brackets, &bracketCodepoint, &bracketLength)) {
+                break;
+            }
+
+            if (codepoint == bracketCodepoint) {
                 return TRUE;
             }
         }
@@ -191,22 +295,28 @@ s32 text_glyph_is_open_bracket(const char *c) {
 // Check if Character is Any Sort of Ending Punctuation
 s32 text_glyph_is_end_punctuation(const char *c) {
     const char *punctuation;
-    char c1, c2;
+    u32 codepoint, punctuationCodepoint;
+    u32 length, punctuationLength;
 
-    c1 = c[0];
-    c2 = c[1];
+    if (!text_decode_utf8_char(c, &codepoint, &length)) {
+        return FALSE;
+    }
 
-    if ((char)(c1 - '\x20') < '\x5f') {
+    if ((codepoint - 0x20) < 0x5f) {
         // Half-Width Ending Punctuation
         for (punctuation = D_08938138; punctuation[0] != '\0'; punctuation += 1) {
-            if (c1 == punctuation[0]) {
+            if (codepoint == (u8)punctuation[0]) {
                 return TRUE;
             }
         }
     } else {
         // Full-Width Ending Punctuation
-        for (punctuation = D_089380e8; punctuation[0] != '\0'; punctuation += 2) {
-            if ((c1 == punctuation[0]) && (c2 == punctuation[1])) {
+        for (punctuation = D_089380e8; punctuation[0] != '\0'; punctuation += punctuationLength) {
+            if (!text_decode_utf8_char(punctuation, &punctuationCodepoint, &punctuationLength)) {
+                break;
+            }
+
+            if (codepoint == punctuationCodepoint) {
                 return TRUE;
             }
         }
@@ -447,50 +557,23 @@ void text_printer_fill_vram_tiles(u32 tileBaseX, u32 tileBaseY, u32 allocatedTil
 // Get Glyph ID 
 s32 text_printer_get_glyph_id(const char **string) {
     const char *s;
-    char c1;
-    char c2;
-    s8 r0;
-    s32 id;
+    u32 codepoint;
+    u32 length;
 
     s = *string;
-    c1 = s[0];
-    (*string)++;
 
-    r0 = (c1 - 0x20);
-    if ((u8)r0 < 0x5f) {
-        c2 = D_08938194[((u8)r0 * 2) + 1];
-        c1 = D_08938194[(u8)r0 * 2];
-    } else {
-        c2 = s[1];
-        (*string)++;
+    if (!text_decode_utf8_char(s, &codepoint, &length)) {
+        *string += length;
+        return -1;
     }
 
-    r0 = (c1 + 0x7f);
-    if ((u8)r0 < 0x1f) {
-        id = (u16)D_08938140[c1 - 0x81];
-    } else {
-        r0 = (c1 + 0x20);
-        if ((u8)r0 < 0xb) {
-            id = (u16)D_0893817e[c1 - 0xe0];
-        } else {
-            id = -1;
-        }
+    *string += length;
+
+    if (codepoint >= TEXT_PRINTER_TOTAL_GLYPHS) {
+        return -1;
     }
 
-    if (id != -1) {
-        if (c2 < 0x7f) {
-            id -= 0x40 - c2;
-        } else {
-            r0 = (c2 + 0x80);
-            if ((u8)r0 < 0x7d) {
-                id -= 0x41 - c2;
-            } else {
-                id = -1;
-            }
-        }
-    }
-
-    return id;
+    return (s32)codepoint;
 }
 
 

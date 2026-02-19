@@ -70,3 +70,12 @@
 #define KANJI_JUU   "\x8F\x5C" // Should be 十, now written as 十\.
 #define KANJI_NOU   "\x94\x5C" // Should be 能, now written as 能\.
 #define KANJI_HYOU  "\x95\x5C" // Should be 表, now written as 表\.
+
+// Custom Character Slots
+#define TEXT_L_SHOULDER "\xEE\x80\x80" // U+E000
+#define TEXT_R_SHOULDER "\xEE\x80\x81" // U+E001
+#define TEXT_A_BUTTON   "\xEE\x80\x82" // U+E002
+#define TEXT_B_BUTTON   "\xEE\x80\x83" // U+E003
+#define TEXT_DPAD       "\xEE\x80\x84" // U+E004
+#define TEXT_1PX_GAP    "\xEE\x80\x85" // U+E005
+#define TEXT_2PX_GAP    "\xEE\x80\x86" // U+E006

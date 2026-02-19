@@ -1,5 +1,5 @@
 #include "engines/metronome.h"
-
+#include "text.h"
 
   //  //  //  GRAPHICS DATA  //  //  //
 
@@ -98,7 +98,7 @@ struct CueDefinition *metronome_cue_index[] = {
     END_OF_CUE_INDEX
 };
 
-const char D_0805a694[] = "Press ‡M in time with the signal.";
+const char D_0805a694[] = "Press " TEXT_A_BUTTON " in time with the signal.";
 
 const char D_0805a6c0[] = "Measuring...";
 
