@@ -19,26 +19,26 @@ const char D_0805db74[] = "Amazing acrobatics on both ends!";
 
 const char D_0805db94[] = "The Ringmaster's advice";
 
-const char D_0805dba0[] = "‚g‚‰C@‚hf‚@‚s‚’‚‚DDD";
+const char D_0805dba0[] = "ï¼¨ï½‰ï¼Œã€€ï¼©â€™ï½ã€€ï¼´ï½’ï½ï½ï¼Žï¼Žï¼Ž";
 
-const char D_0805dbb0[] = "‚‚Ž‚„@‚hf‚@‚o‚‚•‚Œ‚‰‚Ž‚…DDD";
+const char D_0805dbb0[] = "ï½ï½Žï½„ã€€ï¼©â€™ï½ã€€ï¼°ï½ï½•ï½Œï½‰ï½Žï½…ï¼Žï¼Žï¼Ž";
 
-const char D_0805dbc0[] = "‚‚Ž‚„@‚”‚‚‡‚…‚”‚ˆ‚…‚’C@‚—‚…@‚”‚’‚‚‚‚‚Œ‚‰‚Ž‚…I";
+const char D_0805dbc0[] = "ï½ï½Žï½„ã€€ï½”ï½ï½‡ï½…ï½”ï½ˆï½…ï½’ï¼Œã€€ï½—ï½…ã€€ï½”ï½’ï½ï½ï½ï½ï½Œï½‰ï½Žï½…ï¼";
 
-const char D_0805dbd8[] = "‚`‚”@‚”‚ˆ‚…@‚‚…‚‚‹@‚‚†@‚‚•‚’@‚Š‚•‚‚‚“C";
+const char D_0805dbd8[] = "ï¼¡ï½”ã€€ï½”ï½ˆï½…ã€€ï½ï½…ï½ï½‹ã€€ï½ï½†ã€€ï½ï½•ï½’ã€€ï½Šï½•ï½ï½ï½“ï¼Œ";
 
-const char D_0805dbf4[] = "‚‚’‚…‚“‚“@{@‚†‚‚’@‚‚…C";
+const char D_0805dbf4[] = "ï½ï½’ï½…ï½“ï½“ã€€ï¼‹ã€€ï½†ï½ï½’ã€€ï½ï½…ï¼Œ";
 
-const char D_0805dc0c[] = "‚‚Ž‚„@T@‚†‚‚’@‚‚…C";
+const char D_0805dc0c[] = "ï½ï½Žï½„ã€€ã‚ã€€ï½†ï½ï½’ã€€ï½ï½…ï¼Œ";
 
-const char D_0805dc24[] = "‚‚Ž‚„@‚—‚…f‚Œ‚Œ@‚”‚’‚‚Ž‚“‚†‚‚’‚I";
+const char D_0805dc24[] = "ï½ï½Žï½„ã€€ï½—ï½…â€™ï½Œï½Œã€€ï½”ï½’ï½ï½Žï½“ï½†ï½ï½’ï½ï¼";
 
-const char D_0805dc38[] = "‚k‚…‚”f‚“@‚‚’‚‚ƒ‚”‚‰‚ƒ‚…@‚†‚‚’@‚@‚‚‚‰‚”I";
+const char D_0805dc38[] = "ï¼¬ï½…ï½”â€™ï½“ã€€ï½ï½’ï½ï½ƒï½”ï½‰ï½ƒï½…ã€€ï½†ï½ï½’ã€€ï½ã€€ï½‚ï½‰ï½”ï¼";
 
-const char D_0805dc58[] = "‚r‚•‚ƒ‚ƒ‚…‚“‚“‚‰‚–‚…@‚Š‚•‚‚‚“@‚Ž‚‚—I";
+const char D_0805dc58[] = "ï¼³ï½•ï½ƒï½ƒï½…ï½“ï½“ï½‰ï½–ï½…ã€€ï½Šï½•ï½ï½ï½“ã€€ï½Žï½ï½—ï¼";
 
-const char D_0805dc70[] = "‚s‚—‚@‚Š‚•‚‚‚“C@‚‰‚Ž@‚”‚•‚’‚Ž‚“I";
+const char D_0805dc70[] = "ï¼´ï½—ï½ã€€ï½Šï½•ï½ï½ï½“ï¼Œã€€ï½‰ï½Žã€€ï½”ï½•ï½’ï½Žï½“ï¼";
 
-const char D_0805dc88[] = "‚s‚—‚@‚Š‚•‚‚‚“C@‚”‚‚‡‚…‚”‚ˆ‚…‚’I";
+const char D_0805dc88[] = "ï¼´ï½—ï½ã€€ï½Šï½•ï½ï½ï½“ï¼Œã€€ï½”ï½ï½‡ï½…ï½”ï½ˆï½…ï½’ï¼";
 
-const char D_0805dc9c[] = "‚m‚‚—@‚—‚…f‚’‚…@‚’‚…‚‚„‚™@‚”‚@‚“‚”‚‚’‚”I";
+const char D_0805dc9c[] = "ï¼®ï½ï½—ã€€ï½—ï½…â€™ï½’ï½…ã€€ï½’ï½…ï½ï½„ï½™ã€€ï½”ï½ã€€ï½“ï½”ï½ï½’ï½”ï¼";

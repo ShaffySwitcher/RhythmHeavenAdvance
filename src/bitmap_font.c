@@ -24,6 +24,164 @@ enum FTextLatinCharTypesEnum {
 extern s32 (*math_sqrt)(s32);
 extern u8 sSceneTextCurrentStringId; // Current String in Scene Text Table to Print with SceneObject
 
+struct BmpFontUtf8LegacyPair {
+    u16 codepoint;
+    u16 legacySjis;
+};
+
+static const struct BmpFontUtf8LegacyPair sBmpFontUtf8ToLegacyTable[] = {
+#include "bitmap_font_utf8_table.inc.c"
+};
+
+static s32 bmp_font_decode_utf8_char(const char *string, u32 *codepoint, u32 *length) {
+    const u8 *s;
+    u8 c0, c1, c2, c3;
+    u32 cp;
+
+    s = (const u8 *)string;
+    c0 = s[0];
+
+    if (c0 == '\0') {
+        *codepoint = 0;
+        *length = 0;
+        return FALSE;
+    }
+
+    if (c0 < 0x80) {
+        *codepoint = c0;
+        *length = 1;
+        return TRUE;
+    }
+
+    if ((c0 >= 0xC2) && (c0 <= 0xDF)) {
+        c1 = s[1];
+        if ((c1 & 0xC0) != 0x80) {
+            *codepoint = 0;
+            *length = 1;
+            return FALSE;
+        }
+
+        cp = ((c0 & 0x1F) << 6) | (c1 & 0x3F);
+        *codepoint = cp;
+        *length = 2;
+        return TRUE;
+    }
+
+    if ((c0 >= 0xE0) && (c0 <= 0xEF)) {
+        c1 = s[1];
+        c2 = s[2];
+
+        if (((c1 & 0xC0) != 0x80) || ((c2 & 0xC0) != 0x80)) {
+            *codepoint = 0;
+            *length = 1;
+            return FALSE;
+        }
+
+        if ((c0 == 0xE0) && (c1 < 0xA0)) {
+            *codepoint = 0;
+            *length = 1;
+            return FALSE;
+        }
+
+        if ((c0 == 0xED) && (c1 >= 0xA0)) {
+            *codepoint = 0;
+            *length = 1;
+            return FALSE;
+        }
+
+        cp = ((c0 & 0x0F) << 12) | ((c1 & 0x3F) << 6) | (c2 & 0x3F);
+        *codepoint = cp;
+        *length = 3;
+        return TRUE;
+    }
+
+    if ((c0 >= 0xF0) && (c0 <= 0xF4)) {
+        c1 = s[1];
+        c2 = s[2];
+        c3 = s[3];
+
+        if (((c1 & 0xC0) != 0x80) || ((c2 & 0xC0) != 0x80) || ((c3 & 0xC0) != 0x80)) {
+            *codepoint = 0;
+            *length = 1;
+            return FALSE;
+        }
+
+        if ((c0 == 0xF0) && (c1 < 0x90)) {
+            *codepoint = 0;
+            *length = 1;
+            return FALSE;
+        }
+
+        if ((c0 == 0xF4) && (c1 > 0x8F)) {
+            *codepoint = 0;
+            *length = 1;
+            return FALSE;
+        }
+
+        cp = ((c0 & 0x07) << 18) | ((c1 & 0x3F) << 12) | ((c2 & 0x3F) << 6) | (c3 & 0x3F);
+        *codepoint = cp;
+        *length = 4;
+        return TRUE;
+    }
+
+    *codepoint = 0;
+    *length = 1;
+    return FALSE;
+}
+
+static u16 bmp_font_utf8_to_legacy_sjis(u32 codepoint) {
+    u32 i;
+
+    for (i = 0; i < ARRAY_COUNT(sBmpFontUtf8ToLegacyTable); i++) {
+        if (sBmpFontUtf8ToLegacyTable[i].codepoint == codepoint) {
+            return sBmpFontUtf8ToLegacyTable[i].legacySjis;
+        }
+    }
+
+    return 0;
+}
+
+static u32 bmp_font_get_next_legacy_glyph(const char *string, char out[3], u32 *consumed) {
+    u32 codepoint;
+    u16 legacySjis;
+    u32 length;
+
+    if (string[0] == '\0') {
+        *consumed = 0;
+        return FALSE;
+    }
+
+    if ((u8)string[0] < 0x80) {
+        if (string[1] == '\0') {
+            *consumed = 1;
+            return FALSE;
+        }
+
+        out[0] = string[0];
+        out[1] = string[1];
+        out[2] = '\0';
+        *consumed = 2;
+        return TRUE;
+    }
+
+    if (!bmp_font_decode_utf8_char(string, &codepoint, &length)) {
+        *consumed = length;
+        return FALSE;
+    }
+
+    legacySjis = bmp_font_utf8_to_legacy_sjis(codepoint);
+    if (legacySjis == 0) {
+        *consumed = length;
+        return FALSE;
+    }
+
+    out[0] = legacySjis >> 8;
+    out[1] = legacySjis;
+    out[2] = '\0';
+    *consumed = length;
+    return TRUE;
+}
+
 
 // Get printable glyph texture and width.
 void bmp_font_get_glyph(const struct BitmapFontData *font, const char *string, const u16 **textureReq, u32 *widthReq) {
@@ -191,20 +349,40 @@ void bmp_font_obj_clear_print_data(struct BitmapFontOBJ *textObj) {
 
 // Get total animation objects required for generated text (ignoring whitespace).
 u32 bmp_font_obj_get_anim_total(const char *string) {
+    char glyph[3];
+    u32 glyphLength;
     u32 total = 0;
 
-    for (; string[0] != '\0'; string += 2) {
+    while (string[0] != '\0') {
         if (string[0] == '.') {
+            if (string[1] == '\0') {
+                break;
+            }
+            string += 2;
             continue;
         }
 
         if (string[0] == ':') {
+            if (string[1] == '\0') {
+                break;
+            }
+            string += 2;
             continue;
         }
 
-        if (!bmp_font_obj_glyph_is_whitespace(string)) {
+        if (!bmp_font_get_next_legacy_glyph(string, glyph, &glyphLength)) {
+            if (glyphLength == 0) {
+                break;
+            }
+            string += glyphLength;
+            continue;
+        }
+
+        if (!bmp_font_obj_glyph_is_whitespace(glyph)) {
             total++;
         }
+
+        string += glyphLength;
     }
 
     return total;
@@ -255,26 +433,47 @@ u8 bmp_font_obj_parse_hex_digit(char c) {
 
 // Get string width.
 u32 bmp_font_obj_get_string_width(const struct BitmapFontData *font, const char *string) {
+    char glyph[3];
+    u32 glyphLength;
     const struct BitmapFontData *currentFont;
     s32 width;
 
     currentFont = font;
     width = 0;
 
-    for (; string[0] != '\0'; string += 2) {
+    while (string[0] != '\0') {
         switch (string[0]) {
             case '.':
+                if (string[1] == '\0') {
+                    string += 1;
+                    break;
+                }
+                string += 2;
                 break;
 
             case ':':
+                if (string[1] == '\0') {
+                    string += 1;
+                    break;
+                }
                 currentFont = &font[bmp_font_obj_parse_hex_digit(string[1])];
+                string += 2;
                 break;
 
             default:
+                if (!bmp_font_get_next_legacy_glyph(string, glyph, &glyphLength)) {
+                    if (glyphLength == 0) {
+                        return width;
+                    }
+                    string += glyphLength;
+                    break;
+                }
+
                 if (width != 0) {
                     width += currentFont->spacingWidth;
                 }
-                width += bmp_font_obj_get_glyph_width(currentFont, string);
+                width += bmp_font_obj_get_glyph_width(currentFont, glyph);
+                string += glyphLength;
                 break;
         }
     }
@@ -420,12 +619,115 @@ u32 bmp_font_obj_get_latin_glyph_type(const char *string) {
 
 // Convert halfwidth Latin Alphabet character to fullwidth.
 const char *bmp_font_obj_convert_latin_hw_to_fw(const char *string) {
-    return &D_08936b50[(string[0] - 'a') * 2];
+    return &D_08936b50[(string[0] - 'a') * 3];
 }
 
 
-// Create Animation. (https://decomp.me/scratch/QO7Bu)
-#include "asm/code_08003980/asm_080049f0.s"
+// Create Animation.
+struct PrintedTextAnim *bmp_font_obj_print_text(struct BitmapFontOBJ *textObj, const char *string, u32 *widthReq, u32 fontStyle, u32 palette) {
+    struct PrintedTextAnim *anim;
+    const char *stream;
+    u16 *oam;
+    u32 totalGlyphs;
+    u32 size;
+    u32 width;
+    u32 color;
+    u32 glyphWidth;
+    u16 tileNum;
+    u16 yOfs;
+    char glyph[3];
+    u32 glyphLength;
+
+    stream = string;
+    if (textObj->parseString != NULL) {
+        textObj->parseString(textObj->parsedOutput, string);
+        stream = textObj->parsedOutput;
+    }
+
+    totalGlyphs = bmp_font_obj_get_anim_total(stream);
+    size = (sizeof(struct Animation) * 2) + ((1 + (totalGlyphs * 3)) * sizeof(u16));
+    anim = mem_heap_alloc_id(textObj->memID, size);
+    oam = anim->oam;
+
+    sObjFontStyle = fontStyle;
+    oam[0] = 0;
+    oam += 1;
+    color = palette;
+    width = 0;
+
+    while (stream[0] != '\0') {
+        if (stream[0] == '.') {
+            if (stream[1] == '\0') {
+                break;
+            }
+            color = bmp_font_obj_parse_hex_digit(stream[1]);
+            stream += 2;
+            continue;
+        }
+
+        if (stream[0] == ':') {
+            if (stream[1] == '\0') {
+                break;
+            }
+            sObjFontStyle = bmp_font_obj_parse_hex_digit(stream[1]);
+            stream += 2;
+            continue;
+        }
+
+        if (width != 0) {
+            width += (s8)textObj->fonts[sObjFontStyle].spacingWidth;
+        }
+
+        if (!bmp_font_get_next_legacy_glyph(stream, glyph, &glyphLength)) {
+            if (glyphLength == 0) {
+                break;
+            }
+            stream += glyphLength;
+            continue;
+        }
+
+        if (bmp_font_obj_glyph_is_whitespace(glyph)) {
+            width += textObj->fonts[sObjFontStyle].whitespaceWidth;
+            stream += glyphLength;
+            continue;
+        }
+
+        tileNum = bmp_font_obj_print_glyph(textObj, glyph, &glyphWidth);
+        if (tileNum == (u16)-1) {
+            break;
+        }
+
+        if (bmp_font_obj_get_latin_glyph_type(glyph) != F_TEXT_NON_LATIN) {
+            yOfs = textObj->fonts[sObjFontStyle].descensionHeight;
+        } else {
+            yOfs = 0;
+        }
+
+        oam[0] = yOfs;
+        oam[1] = (width & 0x1FF) | 0x4000;
+        oam[2] = (color << 12) | tileNum;
+        width += glyphWidth;
+
+        if (anim->oam[0] <= 0x3F) {
+            sObjStringGlyphWidths[anim->oam[0]] = glyphWidth;
+        }
+
+        anim->oam[0]++;
+        oam += 3;
+        stream += glyphLength;
+    }
+
+    anim->frames[0].cel = anim->oam;
+    anim->frames[0].duration = 100;
+    anim->frames[1].cel = NULL;
+    anim->frames[1].duration = 0;
+
+    if (widthReq != NULL) {
+        *widthReq = width;
+    }
+
+    return anim;
+}
 
 
 // Get Animation (Unaligned, default FontStyle and Palette).
@@ -900,6 +1202,8 @@ u8 bmp_font_bg_parse_hex_digit(char c) {
 
 // Print to BG Map.
 void bmp_font_bg_print_text(struct BitmapFontBG *textObj, u16 *bgMap, u32 mapWidth, const char *string, u32 palette) {
+    char glyph[3];
+    u32 glyphLength;
     u16 tileNum;
     u32 mapX;
 
@@ -915,17 +1219,34 @@ void bmp_font_bg_print_text(struct BitmapFontBG *textObj, u16 *bgMap, u32 mapWid
                 break;
 
             case '.':
+                if (string[1] == '\0') {
+                    string += 1;
+                    break;
+                }
                 palette = bmp_font_bg_parse_hex_digit(string[1]);
                 string += 2;
                 break;
 
             case ':':
+                if (string[1] == '\0') {
+                    string += 1;
+                    break;
+                }
                 sBgFontStyle = bmp_font_bg_parse_hex_digit(string[1]);
                 string += 2;
                 break;
 
             default:
-                tileNum = bmp_font_bg_print_glyph(textObj, string);
+                if (!bmp_font_get_next_legacy_glyph(string, glyph, &glyphLength)) {
+                    if (glyphLength == 0) {
+                        return;
+                    }
+                    string += glyphLength;
+                    mapX++;
+                    break;
+                }
+
+                tileNum = bmp_font_bg_print_glyph(textObj, glyph);
 
                 if (tileNum < 0x400) {
                     u16 mapTile;
@@ -935,7 +1256,7 @@ void bmp_font_bg_print_text(struct BitmapFontBG *textObj, u16 *bgMap, u32 mapWid
                     bgMap[mapWidth + mapX] = mapTile + 1;
                 }
 
-                string += 2;
+                string += glyphLength;
                 mapX++;
                 break;
         }
@@ -945,6 +1266,8 @@ void bmp_font_bg_print_text(struct BitmapFontBG *textObj, u16 *bgMap, u32 mapWid
 
 // Delete printed BitmapFontBG.
 void bmp_font_bg_delete_printed_data(struct BitmapFontBG *textObj, const char *string) {
+    char glyph[3];
+    u32 glyphLength;
     u8 glyphByte0, glyphByte1;
     u8 *printed;
     u32 fontStyle;
@@ -959,17 +1282,33 @@ void bmp_font_bg_delete_printed_data(struct BitmapFontBG *textObj, const char *s
                 break;
 
             case '.':
-                string += 2;
+                if (string[1] == '\0') {
+                    string += 1;
+                } else {
+                    string += 2;
+                }
                 break;
 
             case ':':
-                fontStyle = bmp_font_bg_parse_hex_digit(string[1]);
-                string += 2;
+                if (string[1] == '\0') {
+                    string += 1;
+                } else {
+                    fontStyle = bmp_font_bg_parse_hex_digit(string[1]);
+                    string += 2;
+                }
                 break;
 
             default:
-                glyphByte0 = (fontStyle << 4) | string[0];
-                glyphByte1 = string[1];
+                if (!bmp_font_get_next_legacy_glyph(string, glyph, &glyphLength)) {
+                    if (glyphLength == 0) {
+                        return;
+                    }
+                    string += glyphLength;
+                    break;
+                }
+
+                glyphByte0 = (fontStyle << 4) | glyph[0];
+                glyphByte1 = glyph[1];
                 printed = (u8 *)textObj->printedGlyphs;
 
                 for (i = 0; i < (textObj->maxAllocatedTileRows * 16); i++) {
@@ -981,7 +1320,7 @@ void bmp_font_bg_delete_printed_data(struct BitmapFontBG *textObj, const char *s
                     }
                     printed += 2;
                 }
-                string += 2;
+                string += glyphLength;
                 break;
         }
     }
@@ -1003,6 +1342,8 @@ struct BitmapFontBGPrinter *bmp_font_bg_init_printer(struct BitmapFontBGPrinter 
 
 // Update BitmapFontBGPrinter task.
 u32 bmp_font_bg_update_printer(struct BitmapFontBGPrinter *info) {
+    char glyph[3];
+    u32 glyphLength;
     const char *string;
     u16 *bgMap;
     u32 mapX, mapWidth, palette, tileNum;
@@ -1025,17 +1366,50 @@ u32 bmp_font_bg_update_printer(struct BitmapFontBGPrinter *info) {
                 break;
 
             case '.': // Palette
+                if (string[1] == '\0') {
+                    string += 1;
+                    break;
+                }
                 palette = bmp_font_bg_parse_hex_digit(string[1]);
                 string += 2;
                 break;
 
             case ':': // Font/Style
+                if (string[1] == '\0') {
+                    string += 1;
+                    break;
+                }
                 sBgFontStyle = bmp_font_bg_parse_hex_digit(string[1]);
                 string += 2;
                 break;
 
             default:
-                tileNum = bmp_font_bg_print_glyph(info->textObj, string);
+                if (!bmp_font_get_next_legacy_glyph(string, glyph, &glyphLength)) {
+                    if (glyphLength == 0) {
+                        info->fontStyle = sBgFontStyle;
+                        info->bgMap = bgMap;
+                        info->currentMapX = mapX;
+                        info->string = string;
+                        info->palette = palette;
+                        return TRUE;
+                    }
+
+                    string += glyphLength;
+                    mapX++;
+                    processLimit--;
+
+                    if (processLimit == 0) {
+                        info->fontStyle = sBgFontStyle;
+                        info->bgMap = bgMap;
+                        info->currentMapX = mapX;
+                        info->string = string;
+                        info->palette = palette;
+                        return FALSE;
+                    }
+                    break;
+                }
+
+                tileNum = bmp_font_bg_print_glyph(info->textObj, glyph);
 
                 if (tileNum < 0x400) {
                     u16 mapTile;
@@ -1045,7 +1419,7 @@ u32 bmp_font_bg_update_printer(struct BitmapFontBGPrinter *info) {
                     bgMap[mapWidth + mapX] = mapTile + 1;
                 }
 
-                string += 2;
+                string += glyphLength;
                 mapX++;
                 processLimit--;
 
@@ -1082,34 +1456,46 @@ s32 start_bmp_font_bg_printer_task(u16 memID, struct BitmapFontBG *textObj, u16 
 
 // Count the total printable characters in a string (including characters not supported by the font).
 u32 bmp_font_bg_get_total_printable_chars(const char *string) {
+    u32 glyphLength;
+    char glyph[3];
     u32 count = 0;
 
     while (string[0] != '\0') {
-        if (string[0] < 0x80) {
-            switch (string[0]) {
-                case '\n':
+        switch (string[0]) {
+            case '\n':
+                string += 1;
+                break;
+
+            case '.':
+                if (string[1] == '\0') {
                     string += 1;
-                    break;
-
-                case '.':
+                } else {
                     string += 2;
-                    break;
+                }
+                break;
 
-                case ':':
+            case ':':
+                if (string[1] == '\0') {
+                    string += 1;
+                } else {
                     string += 2;
-                    break;
+                }
+                break;
 
-                default:
-                    string += 2;
+            default:
+                if (!bmp_font_get_next_legacy_glyph(string, glyph, &glyphLength)) {
+                    if (glyphLength == 0) {
+                        return count;
+                    }
+                    string += glyphLength;
                     count++;
                     break;
-            }
-        } else {
-            while (string[0] >= 0x80) {
-                string += 2;
+                }
+
+                string += glyphLength;
                 count++;
+                break;
             }
-        }
     }
 
     return count;

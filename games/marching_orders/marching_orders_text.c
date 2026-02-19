@@ -19,11 +19,11 @@ const char D_0805c7f4[] = "Very technically sound!";
 
 const char D_0805c80c[] = "Sarge says";
 
-const char D_0805c818[] = "‚f‚I";
+const char D_0805c818[] = "ï¼§ï½ï¼";
 
-const char D_0805c828[] = "‚e‚‚Œ‚Œ@‚‰‚I";
+const char D_0805c828[] = "ï¼¦ï½ï½Œï½Œã€€ï½‰ï½ï¼";
 
-const char D_0805c844[] = "‚s‚‰‚‚…@‚†‚‚’@‚”‚ˆ‚…@‚’‚…‚‚Œ@‚”‚ˆ‚‰‚‚‡I";
+const char D_0805c844[] = "ï¼´ï½‰ï½ï½…ã€€ï½†ï½ï½’ã€€ï½”ï½ˆï½…ã€€ï½’ï½…ï½ï½Œã€€ï½”ï½ˆï½‰ï½ï½‡ï¼";
 
 const char D_0805c858[] = "You needed to focus on the basics.";
 
@@ -35,19 +35,19 @@ const char D_0805c890[] = "Your timing is on point!";
 
 const char D_0805c8a8[] = "Sarge says";
 
-const char D_0805c8b4[] = "‚f‚I";
+const char D_0805c8b4[] = "ï¼§ï½ï¼";
 
-const char D_0805c8c4[] = "‚e‚‚Œ‚Œ@‚‰‚I";
+const char D_0805c8c4[] = "ï¼¦ï½ï½Œï½Œã€€ï½‰ï½ï¼";
 
-const char D_0805c8e0[] = "‚s‚‰‚‚…@‚†‚‚’@‚”‚ˆ‚…@‚’‚…‚‚Œ@‚”‚ˆ‚‰‚‚‡I";
+const char D_0805c8e0[] = "ï¼´ï½‰ï½ï½…ã€€ï½†ï½ï½’ã€€ï½”ï½ˆï½…ã€€ï½’ï½…ï½ï½Œã€€ï½”ï½ˆï½‰ï½ï½‡ï¼";
 
-const char D_0805c8e1[] = "‚q‚‰‚‡‚ˆ‚”I";
+const char D_0805c8e1[] = "ï¼²ï½‰ï½‡ï½ˆï½”ï¼";
 
-const char D_0805c8e2[] = "‚k‚…‚†‚”I";
+const char D_0805c8e2[] = "ï¼¬ï½…ï½†ï½”ï¼";
 
-const char D_0805c8e3[] = "‚l‚‚’‚ƒ‚ˆI";
+const char D_0805c8e3[] = "ï¼­ï½ï½’ï½ƒï½ˆï¼";
 
-const char D_0805c8e4[] = "‚g‚‚Œ‚”I";
+const char D_0805c8e4[] = "ï¼¨ï½ï½Œï½”ï¼";
 
 const char D_0805c8f4[] = "You still don't have the basics down!";
 

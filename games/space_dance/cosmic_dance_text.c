@@ -19,4 +19,4 @@ const char D_080682d4[] = "Your pre-chorus performance was perfect!";
 
 const char D_080682f4[] = "Cosmic Girl says...";
 
-const char D_08068310[] = "‚k‚…‚”f‚“@‚‚‚…‚‡‚‰‚I";
+const char D_08068310[] = "ï¼¬ï½…ï½”â€™ï½“ã€€ï½‚ï½…ï½‡ï½‰ï½ï¼";

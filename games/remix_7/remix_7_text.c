@@ -9,12 +9,12 @@ const char D_0806a16c[] = "Try a little harder.";
 
 const char D_0806a17c[] = "That was really great!";
 
-const char D_0806a198[] = "‚Í‚ñ‚¾‚ñ@‚è‚å‚­‚ª@‚©‚¯‚Ä‚Ü‚·B";
+const char D_0806a198[] = "ã¯ã‚“ã ã‚“ã€€ã‚Šã‚‡ããŒã€€ã‹ã‘ã¦ã¾ã™ã€‚";
 
-const char D_0806a1bc[] = "‚·‚Î‚ç‚µ‚¢@‚Í‚ñ‚¾‚ñ@‚è‚å‚­‚¾I";
+const char D_0806a1bc[] = "ã™ã°ã‚‰ã—ã„ã€€ã¯ã‚“ã ã‚“ã€€ã‚Šã‚‡ãã ï¼";
 
-const char D_0806a1e0[] = "‚à‚Á‚Æ@ƒEƒf‚ğ@‚İ‚ª‚±‚¤B";
+const char D_0806a1e0[] = "ã‚‚ã£ã¨ã€€ã‚¦ãƒ‡ã‚’ã€€ã¿ãŒã“ã†ã€‚";
 
-const char D_0806a1fc[] = "‚Æ‚Ä‚à@ƒeƒNƒjƒJƒ‹‚¾I";
+const char D_0806a1fc[] = "ã¨ã¦ã‚‚ã€€ãƒ†ã‚¯ãƒ‹ã‚«ãƒ«ã ï¼";
 
 const char D_0806a214[] = "Rhythm League notes:";

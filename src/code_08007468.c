@@ -731,7 +731,7 @@ void interp_screen_window_size(u16 memID, u32 window, u32 duration,
 /* STRING */
 
 
-extern char D_08936c64[]; // "?申O?申P?申Q?申R?申S?申T?申U?申V?申W?申X"
+extern char D_08936c64[]; // no idea what that was supposed to be in the first place, whatever
 
 
 // Copy Substring
@@ -842,15 +842,16 @@ void strintf(char *s, u32 n) {
         len++;
     }
 
-    s += (len * 2);
+    s += (len * 3);
     *s = '\0';
 
     for (i = 0; i < len; i++) {
-        char *c = &D_08936c64[(n % 10) * 2];
+        char *c = &D_08936c64[(n % 10) * 3];
 
-        s -= 2;
+        s -= 3;
         s[0] = c[0];
         s[1] = c[1];
+        s[2] = c[2];
         n /= 10;
     }
 }
@@ -860,15 +861,16 @@ void strintf(char *s, u32 n) {
 void strnintf(char *s, u32 n, u32 len) {
     u32 i;
 
-    s += (len * 2);
+    s += (len * 3);
     *s = '\0';
 
     for (i = 0; i < len; i++) {
-        char *c = &D_08936c64[(n % 10) * 2];
+        char *c = &D_08936c64[(n % 10) * 3];
 
-        s -= 2;
+        s -= 3;
         s[0] = c[0];
         s[1] = c[1];
+        s[2] = c[2];
         n /= 10;
     }
 }

@@ -47,7 +47,7 @@ const char D_0805af48[] = "You do the third clap, OK?";
 
 const char D_0805af60[] = "Let's practice!";
 
-const char D_0805af7c[] = "Press ‡M for the third clap.";
+const char D_0805af7c[] = "Press " TEXT_A_BUTTON " for the third clap.";
 
 const char D_0805afa0[] = "OK.";
 

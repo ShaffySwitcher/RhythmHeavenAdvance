@@ -72,7 +72,7 @@ void arrival_scene_start(void *sVar, s32 dArg) {
 
     printer = text_printer_create_new(get_current_mem_id(), 1, 240, 30);
     text_printer_set_x_y(printer, 24, 96);
-    text_printer_set_string(printer, "　　　　　　　　　　　　　　　　　　　　 Has been received"); // "You have received [_______]."
+    text_printer_set_string(printer, "縲縲縲縲縲縲縲縲縲縲縲縲縲縲縲縲縲縲縲縲 Has been received"); // "You have received [_______]."
     text_printer_update(printer);
     text_printer_update(printer);
 

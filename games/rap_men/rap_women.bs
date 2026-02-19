@@ -55,51 +55,51 @@ return
 @ Rap Women - Text
 
 text text_rap_women_juji_desu_ka
-    .asciz ".b:1‚h‚”f‚“@‚P‚O@‚`‚lC@.b:0‚ˆ‚•‚ˆH.8:1"
+    .asciz ".b:1ï¼©ï½”â€™ï½“ã€€ï¼‘ï¼ã€€ï¼¡ï¼­ï¼Œã€€.b:0ï½ˆï½•ï½ˆï¼Ÿ.8:1"
 endtext
 
 text text_rap_women_oyatsu_desu_ka
-    .asciz ".b:1‚h‚”f‚“@‚“‚‚‚ƒ‚‹@‚”‚‰‚‚…C@.b:0‚ˆ‚•‚ˆH.8:1"
+    .asciz ".b:1ï¼©ï½”â€™ï½“ã€€ï½“ï½ï½ï½ƒï½‹ã€€ï½”ï½‰ï½ï½…ï¼Œã€€.b:0ï½ˆï½•ï½ˆï¼Ÿ.8:1"
 endtext
 
 text text_rap_women_naisho_desu_ka
-    .asciz ".b:1‚v‚ˆ‚f‚“@‚”‚@‚‹‚‚‚—C@.b:0‚ˆ‚•‚ˆH.8:1"
+    .asciz ".b:1ï¼·ï½ˆï½â€™ï½“ã€€ï½”ï½ã€€ï½‹ï½ï½ï½—ï¼Œã€€.b:0ï½ˆï½•ï½ˆï¼Ÿ.8:1"
 endtext
 
 text text_rap_women_kare_no_oyatsu_da_ne
-    .asciz ".9:1‚s‚ˆ‚…‚“‚…@‚‚’‚…@‚‚Œ‚Œ@‚”‚ˆ‚…‚‰‚’@‚“‚‚‚ƒ‚‹‚“C.9:0@‚™‚@‚“‚…‚…H.8:1"
+    .asciz ".9:1ï¼´ï½ˆï½…ï½“ï½…ã€€ï½ï½’ï½…ã€€ï½ï½Œï½Œã€€ï½”ï½ˆï½…ï½‰ï½’ã€€ï½“ï½ï½ï½ƒï½‹ï½“ï¼Œ.9:0ã€€ï½™ï½ã€€ï½“ï½…ï½…ï¼Ÿ.8:1"
 endtext
 
 text text_rap_women_tabeteii_kamo_ne
-    .asciz ".9:1‚d‚‚”@f‚…‚@‚‚Œ‚Œ@‚•‚C@.9:0‚™‚@‚†‚…‚…‚Œ@‚‚…H.8:1"
+    .asciz ".9:1ï¼¥ï½ï½”ã€€â€™ï½…ï½ã€€ï½ï½Œï½Œã€€ï½•ï½ï¼Œã€€.9:0ï½™ï½ã€€ï½†ï½…ï½…ï½Œã€€ï½ï½…ï¼Ÿ.8:1"
 endtext
 
 text text_rap_women_aketeii_kamo_ne
-    .asciz ".9:1‚n‚‚…‚@f‚…‚@‚•‚C@.9:0‚™‚@‚†‚…‚…‚Œ@‚‚…H.8:1"
+    .asciz ".9:1ï¼¯ï½ï½…ï½ã€€â€™ï½…ï½ã€€ï½•ï½ï¼Œã€€.9:0ï½™ï½ã€€ï½†ï½…ï½…ï½Œã€€ï½ï½…ï¼Ÿ.8:1"
 endtext
 
 text text_rap_women_oyatsu_wa_saikou
-    .asciz ".a:1‚r‚‚‚ƒ‚‹‚‰‚‚‡@‚‰‚“@.a:0‚“‚@‚`‚v‚d‚r‚n‚l‚dI.8:1"
+    .asciz ".a:1ï¼³ï½ï½ï½ƒï½‹ï½‰ï½ï½‡ã€€ï½‰ï½“ã€€.a:0ï½“ï½ã€€ï¼¡ï¼·ï¼¥ï¼³ï¼¯ï¼­ï¼¥ï¼.8:1"
 endtext
 
 text text_rap_women_kibun_wa_saikou
-    .asciz ".a:1‚h@‚†‚…‚…‚Œ@.a:0‚“‚@‚`‚v‚d‚r‚n‚l‚dI.8:1"
+    .asciz ".a:1ï¼©ã€€ï½†ï½…ï½…ï½Œã€€.a:0ï½“ï½ã€€ï¼¡ï¼·ï¼¥ï¼³ï¼¯ï¼­ï¼¥ï¼.8:1"
 endtext
 
 text text_rap_women_amakute_saikou
-    .asciz ".a:1‚r‚—‚…‚…‚”‚“@‚‚’‚…@.a:0‚“‚@‚`‚v‚d‚r‚n‚l‚dI.8:1"
+    .asciz ".a:1ï¼³ï½—ï½…ï½…ï½”ï½“ã€€ï½ï½’ï½…ã€€.a:0ï½“ï½ã€€ï¼¡ï¼·ï¼¥ï¼³ï¼¯ï¼­ï¼¥ï¼.8:1"
 endtext
 
 text text_rap_women_betsubara_saikou
-    .asciz ".a:1‚b‚‚‹‚…‚“@‚‚’‚…@.a:0‚“‚@‚`‚v‚d‚r‚n‚l‚dI.8:1"
+    .asciz ".a:1ï¼£ï½ï½‹ï½…ï½“ã€€ï½ï½’ï½…ã€€.a:0ï½“ï½ã€€ï¼¡ï¼·ï¼¥ï¼³ï¼¯ï¼­ï¼¥ï¼.8:1"
 endtext
 
 text text_rap_women_kare_ni_wa_naisho
-    .asciz ".a:1‚b‚Œ‚•‚…‚Œ‚…‚“‚“@‚”‚ˆ‚‚”@‚—‚…@.a:0‚r‚s‚n‚k‚d@f‚d‚lI.8:1"
+    .asciz ".a:1ï¼£ï½Œï½•ï½…ï½Œï½…ï½“ï½“ã€€ï½”ï½ˆï½ï½”ã€€ï½—ï½…ã€€.a:0ï¼³ï¼´ï¼¯ï¼¬ï¼¥ã€€â€™ï¼¥ï¼­ï¼.8:1"
 endtext
 
 text text_rap_women_dare_ni_mo_naisho
-    .asciz ".a:1‚s‚…‚Œ‚Œ@f‚…‚@‚—‚…@‚‚’‚…@.a:0‚k‚n‚`‚s‚g‚r‚n‚l‚dI.8:1"
+    .asciz ".a:1ï¼´ï½…ï½Œï½Œã€€â€™ï½…ï½ã€€ï½—ï½…ã€€ï½ï½’ï½…ã€€.a:0ï¼¬ï¼¯ï¼¡ï¼´ï¼¨ï¼³ï¼¯ï¼­ï¼¥ï¼.8:1"
 endtext
 
 

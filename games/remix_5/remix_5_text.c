@@ -9,27 +9,27 @@ const char D_0806a230[] = "Try a little harder.";
 
 const char D_0806a240[] = "That was really great!";
 
-const char D_0806a25c[] = "‚Í‚ñ‚¾‚ñ@‚è‚å‚­‚ª@‚©‚¯‚Ä‚Ü‚·B";
+const char D_0806a25c[] = "ã¯ã‚“ã ã‚“ã€€ã‚Šã‚‡ããŒã€€ã‹ã‘ã¦ã¾ã™ã€‚";
 
-const char D_0806a280[] = "‚·‚Î‚ç‚µ‚¢@‚Í‚ñ‚¾‚ñ@‚è‚å‚­‚¾I";
+const char D_0806a280[] = "ã™ã°ã‚‰ã—ã„ã€€ã¯ã‚“ã ã‚“ã€€ã‚Šã‚‡ãã ï¼";
 
-const char D_0806a2a4[] = "‚à‚Á‚Æ@ƒEƒf‚ğ@‚İ‚ª‚±‚¤B";
+const char D_0806a2a4[] = "ã‚‚ã£ã¨ã€€ã‚¦ãƒ‡ã‚’ã€€ã¿ãŒã“ã†ã€‚";
 
-const char D_0806a2c0[] = "‚Æ‚Ä‚à@ƒeƒNƒjƒJƒ‹‚¾I";
+const char D_0806a2c0[] = "ã¨ã¦ã‚‚ã€€ãƒ†ã‚¯ãƒ‹ã‚«ãƒ«ã ï¼";
 
 const char D_0806a2d8[] = "Rhythm League notes:";
 
 const char D_0806a2f4[] =
-    "\x01\x52" "\x05\x31" "\x01\x35" "ô WISH - Can't Wait For You@";
+    "\x01\x52" "\x05\x31" "\x01\x35" "â™ª WISH - Can't Wait For Youã€€";
 
 const char D_0806a314[] =
-    "\x01\x4c" "@Singer:@@Sohshi Tanaka";
+    "\x01\x4c" "ã€€Singer:ã€€ã€€Sohshi Tanaka";
 
 const char D_0806a32c[] =
     "\x01\x4c" "Music:\n"
-    "@@@@@@@@TSUNKU‰\n"
+    "ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€TSUNKUâ™‚\n"
     "Arrangement:\n"
-    "@@@@@@@@Yuasa Koichi";
+    "ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€Yuasa Koichi";
 
 const char D_0806a370[] =
     "\x01\x43" "Managed by J.P. ROOM";

@@ -77,9 +77,9 @@ const char *const D_0805e5e4[] = {
 
 const char D_0805e5f8[] =
     "Next, start off the song with a crash.\n"
-    "Press ‡L to hit the cymbals.";
+    "Press " TEXT_R_SHOULDER " to hit the cymbals.";
 
-const char D_0805e64c[] = "You only need to press both\n ‡N and ‡L at the same time once.";
+const char D_0805e64c[] = "You only need to press both\n " TEXT_B_BUTTON " and " TEXT_R_SHOULDER " at the same time once.";
 
 const char D_0805e684[] = "We went over this in the previous\n lesson, so remember our practice from then.";
 

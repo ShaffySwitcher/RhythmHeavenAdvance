@@ -19,12 +19,12 @@ const char D_0805bd30[] = "Even the fastest ones couldn't pass you!";
 
 const char D_0805bd50[] = "The slow ones couldn't trip you up!";
 
-const char D_0805bd68[] = "@@@‚r‚Œ‚‰‚ƒ‚…@‚”‚ˆ‚…@‚…‚‚…‚‚‰‚…‚“I";
+const char D_0805bd68[] = "ã€€ã€€ã€€ï¼³ï½Œï½‰ï½ƒï½…ã€€ï½”ï½ˆï½…ã€€ï½…ï½ï½…ï½ï½‰ï½…ï½“ï¼";
 
-const char D_0805bd7c[] = "‚g‚DDD";
+const char D_0805bd7c[] = "ï¼¨ï½ï¼ï¼ï¼";
 
-const char D_0805bd88[] = "‚h‚”f‚“@‚‡‚…‚”‚”‚‰‚‚‡@‚†‚‚‡‚‡‚™DDD";
+const char D_0805bd88[] = "ï¼©ï½”â€™ï½“ã€€ï½‡ï½…ï½”ï½”ï½‰ï½ï½‡ã€€ï½†ï½ï½‡ï½‡ï½™ï¼ï¼ï¼";
 
-const char D_0805bda4[] = "‚s‚—‚@‚‚†@‚”‚ˆ‚…‚DDDH";
+const char D_0805bda4[] = "ï¼´ï½—ï½ã€€ï½ï½†ã€€ï½”ï½ˆï½…ï½ï¼ï¼ï¼ï¼Ÿ";
 
 const char D_0805bdb8[] = "The Spectators' Tale";
