@@ -72,10 +72,10 @@
 #define KANJI_HYOU  "\x95\x5C" // Should be 表, now written as 表\.
 
 // Custom Character Slots
-#define TEXT_L_SHOULDER "\xEE\x80\x80" // U+E000
-#define TEXT_R_SHOULDER "\xEE\x80\x81" // U+E001
-#define TEXT_A_BUTTON   "\xEE\x80\x82" // U+E002
-#define TEXT_B_BUTTON   "\xEE\x80\x83" // U+E003
-#define TEXT_DPAD       "\xEE\x80\x84" // U+E004
-#define TEXT_1PX_GAP    "\xEE\x80\x85" // U+E005
-#define TEXT_2PX_GAP    "\xEE\x80\x86" // U+E006
+#define TEXT_L_SHOULDER "\xE4\xAC\x80" // U+4B00
+#define TEXT_R_SHOULDER "\xE4\xAC\x81" // U+4B01
+#define TEXT_A_BUTTON   "\xE4\xAC\x82" // U+4B02
+#define TEXT_B_BUTTON   "\xE4\xAC\x83" // U+4B03
+#define TEXT_DPAD       "\xE4\xAC\x84" // U+4B04
+#define TEXT_1PX_GAP    "\xE4\xAC\x85" // U+4B05
+#define TEXT_2PX_GAP    "\xE4\xAC\x86" // U+4B06

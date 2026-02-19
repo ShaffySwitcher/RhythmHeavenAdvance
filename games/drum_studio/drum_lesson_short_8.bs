@@ -97,7 +97,7 @@ text D_0805fc90
     .ascii "\n"
     .ascii "And another one!\n"
     .ascii "It's easier if you use both\n"
-    .asciz "‡N and Down on \xEE\x80\x84 for it.\n"
+    .asciz "\xEE\x80\x83 and Down on \xEE\x80\x84 for it.\n"
 endtext
 
 

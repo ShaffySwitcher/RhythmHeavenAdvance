@@ -36,20 +36,25 @@ branch_0800eede: \n\
 /* 0800eeec */ LDR R2, =D_089ccc94 \n\
  \n\
 branch_0800eeee: \n\
-/* 0800eeee */ LSLS R1, R0, 0x1 \n\
-/* 0800eef0 */ ADDS R1, R1, R2 @ Set R1 to R1 + R2 \n\
-/* 0800eef2 */ LDRB R0, [R1] \n\
-/* 0800eef4 */ STRB R0, [R4] \n\
-/* 0800eef6 */ ADDS R4, 0x1 @ Add 0x1 to R4 \n\
-/* 0800eef8 */ LDRB R0, [R1, 0x1] \n\
-/* 0800eefa */ STRB R0, [R4] \n\
-/* 0800eefc */ ADDS R4, 0x1 @ Add 0x1 to R4 \n\
-/* 0800eefe */ ADDS R5, 0x1 @ Add 0x1 to R5 \n\
-/* 0800ef00 */ LDRB R0, [R5] \n\
-/* 0800ef02 */ SUBS R0, 0x41 @ Subtract 0x41 from R0 \n\
-/* 0800ef04 */ CMP R0, 0x19 @ Compare R0 and 0x19 \n\
-/* 0800ef06 */ BLS branch_0800eeee \n\
-/* 0800ef08 */ B branch_0800f05a \n\
+/* [utf-8] multiply by 3 for table stride */ \n\
+ADDS R1, R0, R0 @ R1 = R0 * 2 \n\
+ADDS R1, R1, R0 @ R1 = R0 * 3 \n\
+ADDS R1, R1, R2 @ R1 = &table[(char - 'A') * 3] \n\
+LDRB R0, [R1] \n\
+STRB R0, [R4] \n\
+ADDS R4, 0x1 \n\
+LDRB R0, [R1, 0x1] \n\
+STRB R0, [R4] \n\
+ADDS R4, 0x1 \n\
+LDRB R0, [R1, 0x2] @ [utf-8] copy third byte \n\
+STRB R0, [R4] \n\
+ADDS R4, 0x1 \n\
+ADDS R5, 0x1 \n\
+LDRB R0, [R5] \n\
+SUBS R0, 0x41 \n\
+CMP R0, 0x19 \n\
+BLS branch_0800eeee \n\
+B branch_0800f05a \n\
 \n\
 .ltorg \n\
  \n\
@@ -226,9 +231,12 @@ branch_0800f00c: \n\
 /* 0800f014 */ LDR R1, =D_0804f380 \n\
  \n\
 branch_0800f016: \n\
-/* 0800f016 */ BL strcat \n\
-/* 0800f01a */ ADDS R4, 0x2 @ Add 0x2 to R4 \n\
-/* 0800f01c */ B branch_0800f02e \n\
+BL strcat \n\
+/* [utf-8] use strlen to advance past appended string */ \n\
+ADDS R0, R4, 0x0 \n\
+BL strlen \n\
+ADDS R4, R4, R0 \n\
+B branch_0800f02e \n\
 \n\
 .ltorg \n\
  \n\
@@ -247,27 +255,25 @@ branch_0800f032: \n\
 /* 0800f032 */ CMP R7, 0x0 @ Compare R7 and 0x0 \n\
 /* 0800f034 */ BEQ branch_0800f050 \n\
  \n\
+/* [utf-8] copy one byte at a time to avoid reading past null terminator */ \n\
 branch_0800f036: \n\
-/* 0800f036 */ LDRB R0, [R5] \n\
-/* 0800f038 */ STRB R0, [R4] \n\
-/* 0800f03a */ ADDS R5, 0x1 @ Add 0x1 to R5 \n\
-/* 0800f03c */ ADDS R4, 0x1 @ Add 0x1 to R4 \n\
-/* 0800f03e */ LDRB R0, [R5] \n\
-/* 0800f040 */ STRB R0, [R4] \n\
-/* 0800f042 */ ADDS R5, 0x1 @ Add 0x1 to R5 \n\
-/* 0800f044 */ ADDS R4, 0x1 @ Add 0x1 to R4 \n\
-/* 0800f046 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
-/* 0800f048 */ LDRSB R0, [R5, R0] \n\
-/* 0800f04a */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
-/* 0800f04c */ BLT branch_0800f036 \n\
-/* 0800f04e */ B branch_0800f05a \n\
+LDRB R0, [R5] \n\
+STRB R0, [R4] \n\
+ADDS R5, 0x1 \n\
+ADDS R4, 0x1 \n\
+MOVS R0, 0x0 \n\
+LDRSB R0, [R5, R0] \n\
+CMP R0, 0x0 \n\
+BLT branch_0800f036 \n\
+B branch_0800f05a \n\
  \n\
+/* [utf-8] skip one byte at a time */ \n\
 branch_0800f050: \n\
-/* 0800f050 */ ADDS R5, 0x2 @ Add 0x2 to R5 \n\
-/* 0800f052 */ MOVS R0, 0x0 @ Set R0 to 0x0 \n\
-/* 0800f054 */ LDRSB R0, [R5, R0] \n\
-/* 0800f056 */ CMP R0, 0x0 @ Compare R0 and 0x0 \n\
-/* 0800f058 */ BLT branch_0800f050 \n\
+ADDS R5, 0x1 \n\
+MOVS R0, 0x0 \n\
+LDRSB R0, [R5, R0] \n\
+CMP R0, 0x0 \n\
+BLT branch_0800f050 \n\
  \n\
 branch_0800f05a: \n\
 /* 0800f05a */ LDRB R0, [R5] \n\

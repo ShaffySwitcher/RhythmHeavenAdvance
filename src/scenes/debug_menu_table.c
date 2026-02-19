@@ -657,7 +657,12 @@ struct DebugMenuEntry debug_menu_entry_table[] = {
 
 
 // [D_089ddf60] Page Number Digits
-char debug_menu_counter_digits[] = "０１２３４５６７８９ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ";
+const char *debug_menu_counter_digits[] = {
+    "０", "１", "２", "３", "４", "５", "６", "７", "８", "９",
+    "Ａ", "Ｂ", "Ｃ", "Ｄ", "Ｅ", "Ｆ", "Ｇ", "Ｈ", "Ｉ", "Ｊ",
+    "Ｋ", "Ｌ", "Ｍ", "Ｎ", "Ｏ", "Ｐ", "Ｑ", "Ｒ", "Ｓ", "Ｔ",
+    "Ｕ", "Ｖ", "Ｗ", "Ｘ", "Ｙ", "Ｚ"
+};
 
 
 // Render Text
@@ -697,10 +702,10 @@ void debug_menu_render_table(s32 targetPage, s32 targetRow) {
         }
 
         delete_bmp_font_obj_text_anim(gDebugMenu->objFont, gDebugMenu->counter);
-        strncpy(string, &debug_menu_counter_digits[(targetPage + 1) * 2], 2);
-        string[2] = '\0';
+        string[0] = '\0';
+        strcat(string, debug_menu_counter_digits[targetPage + 1]);
         strcat(string, "／");
-        strncat(string, &debug_menu_counter_digits[(totalPages + 1) * 2], 2);
+        strcat(string, debug_menu_counter_digits[totalPages + 1]);
         textAnim = bmp_font_obj_print_r(gDebugMenu->objFont, string, 1, 4);
         sprite_set_anim(gSpriteHandler, gDebugMenu->counter, textAnim->frames, 0, 0, 0, 0);
     }

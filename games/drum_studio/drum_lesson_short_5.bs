@@ -57,7 +57,7 @@ return
 text D_0805ff7c
     .ascii "\n"
     .ascii "Now, let's add a crash cymbal!\n"
-    .ascii "Hit it with ‡L, and time it with\n"
+    .ascii "Hit it with \xEE\x80\x81, and time it with\n"
     .asciz "the bass drum here."
 endtext
 
@@ -86,6 +86,7 @@ script D_08060014
     spawn_cue CUE_SNARE_L
     rest 24
 return
+
 
 text D_08060080
     .ascii "Let's add a tom beat.\n"

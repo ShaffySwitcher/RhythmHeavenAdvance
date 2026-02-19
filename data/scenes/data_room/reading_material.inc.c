@@ -46,7 +46,7 @@ struct ReadingMaterial reading_material_table[] = {
         /* TITLE ---------------------------------------------------------- */
             "From the Barista",
         /* BODY ----------------------------------------------------------- */
-            "I own and operate a Caf?.\n"
+            "I own and operate a Caf√©.\n"
             "I guess you could call me the barista.\n"
             "It's going well thanks to the regulars.\n"
             "And, uh, just to let you know, I'm a dog.\n"
@@ -54,7 +54,7 @@ struct ReadingMaterial reading_material_table[] = {
             "A lot of them have especially good rhythm,\n"
             "and a few have even achieved a full set of Perfects!\n"
             "I'm always amazed by them!\n"
-            "I may look all professional when I run my Caf?,\n"
+            "I may look all professional when I run my Caf√©,\n"
             "but I'll be honest, I'm really putting on a front.\n"
             "See, it's a little embarrassing, but when I'm off the\n"
             "clock, I'm always jamming out with these little\n"
@@ -109,7 +109,7 @@ struct ReadingMaterial reading_material_table[] = {
             "Okay, time for a quiz!\n"
             "His name is...\n"
             "\n"
-            "\001C" "\0031" "\001m" "á@áAáBáC-áCáBáD\n"
+            "\001C" "\0031" "\001m" "‚ë†‚ë°‚ë¢‚ë£-‚ë£‚ë¢‚ë§\n"
             "\001L" "\0030" "\001s" "\n"
             "Answer which letters go in each of the numbers!\n"
             "If you answer correctly, you'll be able to read the\n"
@@ -118,11 +118,11 @@ struct ReadingMaterial reading_material_table[] = {
             "\n"
             "\0031" "\001m" "\001C" "Quiz Show's Secret\n\n"
             "\0030" "\001s" "\001C" "\n"
-            "In this g" "\0031" "\001m" "áB" "\0030" "\001s" "me, the" "\0031" "\001m" "á@áAáBáC" "\0030" "\001s" "er has to m" "\0031" "\001m" "áB" "\0030" "\001s" "tch\n"
-            "\0030" "\001s" "the host's " "\0031" "\001m" "áD" "\0030" "\001s" "umber of button " "\0031" "\001m" "á@" "\0030" "\001s" "resses. But\n"
-            "\0030" "\001s" "if you mash the butto" "\0031" "\001m" "áD" "\0030" "\001s" "s rea" "\0031" "\001m" "áAáA" "\0030" "\001s" "y f" "\0031" "\001m" "áB" "\0030" "\001s" "st instead,\n"
-            "\0030" "\001s" "somethi" "\0031" "\001m" "áD" "\0030" "\001s" "g interesting can h" "\0031" "\001m" "áB" "\0030" "\001s" "ppen.\n"
-            "\0030" "\001s" "It's nothing crazy or an" "\0031" "\001m" "áC" "\0030" "\001s" "thing, but it's neat!",
+            "In this g" "\0031" "\001m" "‚ë¢" "\0030" "\001s" "me, the" "\0031" "\001m" "‚ë†‚ë°‚ë¢‚ë£" "\0030" "\001s" "er has to m" "\0031" "\001m" "‚ë¢" "\0030" "\001s" "tch\n"
+            "\0030" "\001s" "the host's " "\0031" "\001m" "‚ë§" "\0030" "\001s" "umber of button " "\0031" "\001m" "‚ë†" "\0030" "\001s" "resses. But\n"
+            "\0030" "\001s" "if you mash the butto" "\0031" "\001m" "‚ë§" "\0030" "\001s" "s rea" "\0031" "\001m" "‚ë°‚ë°" "\0030" "\001s" "y f" "\0031" "\001m" "‚ë¢" "\0030" "\001s" "st instead,\n"
+            "\0030" "\001s" "somethi" "\0031" "\001m" "‚ë§" "\0030" "\001s" "g interesting can h" "\0031" "\001m" "‚ë¢" "\0030" "\001s" "ppen.\n"
+            "\0030" "\001s" "It's nothing crazy or an" "\0031" "\001m" "‚ë£" "\0030" "\001s" "thing, but it's neat!",
         /* STYLE ---------------------------------------------------------- */
             /* GFX */ reading_style_train_gfx_table,
             /* BGM */ &reading_style_train_bgm
@@ -297,13 +297,13 @@ struct ReadingMaterial reading_material_table[] = {
 
     /* BON_ODORI ("Lyrics - The Bon Odori") */ {
         /* TITLE ---------------------------------------------------------- */
-            "Lyrics Card á@",
+            "Lyrics Card ‚ë†",
         /* BODY ----------------------------------------------------------- */
-            "TheÅôBon Odori\n"
+            "The‚òÜBon Odori\n"
             "Song: Ami Tokito\n"
             "Music: TSUNKU\n"
             "\n"
-            "(This song appears in TheÅôBon Odori.)\n"
+            "(This song appears in The‚òÜBon Odori.)\n"
             "\n"
             "Haa~\n"
             "            Hanabi Agare ba~\n"
@@ -375,7 +375,7 @@ struct ReadingMaterial reading_material_table[] = {
 
     /* REMIX3 ("Lyrics - Honey Sweet Angel of Love") */ {
         /* TITLE ---------------------------------------------------------- */
-            "Lyrics Card áA",
+            "Lyrics Card ‚ë°",
         /* BODY ----------------------------------------------------------- */
             "Honey Sweet Angel of Love\n"
             "Song: Ami Tokito\n"
@@ -420,7 +420,7 @@ struct ReadingMaterial reading_material_table[] = {
 
     /* REMIX5 ("Lyrics - WISH Can't Wait For You") */ {
         /* TITLE ---------------------------------------------------------- */
-            "Lyrics Card áB",
+            "Lyrics Card ‚ë¢",
         /* BODY ----------------------------------------------------------- */
             "Can't Wait For You\n"
             "Song: Sohshi Tanaka\n"
@@ -665,9 +665,9 @@ struct ReadingMaterial reading_material_table[] = {
         /* BODY ----------------------------------------------------------- */
             "\001C" "\0032" "\001m" "\n"
             "\n"
-            "Sense of rhythm ÅΩ Flow\n"
+            "Sense of rhythm ‚äÉ Flow\n"
             "\n"
-            "Sense of rhythm ÅÇ Flow\n"
+            "Sense of rhythm ‚â† Flow\n"
             "\001L" "\0030" "\001s" "\n"
             "\001C" "Explanation: Flow is an element included in anyone's\n"
             "sense of rhythm, but not a sense of rhythm itself.\n"
@@ -675,7 +675,7 @@ struct ReadingMaterial reading_material_table[] = {
             "\n"
             "\n"
             "\n"
-            "Rhythm ÅÇ Sense of rhythm\n"
+            "Rhythm ‚â† Sense of rhythm\n"
             "\n"
             "\001C" "\0030" "\001s" "\n"
             "Explanation: Rhythm is what ticks at a steady pace.\n"
@@ -684,7 +684,7 @@ struct ReadingMaterial reading_material_table[] = {
             "\001C" "\0031" "\001m" "\n"
             "\n"
             "\n"
-            "Good dancing ÅÇ Good sense of rhythm\n"
+            "Good dancing ‚â† Good sense of rhythm\n"
             "\n"
             "\001C" "\0030" "\001s" "\n"
             "Explanation: Someone who's a good dancer does not\n"

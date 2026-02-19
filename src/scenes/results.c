@@ -588,7 +588,7 @@ void results_render_skill_screen(void) {
     }
 
     strintf(numString, score);
-    memcpy(scoreString, ".5:1" "Ｒ−ＩＱ　　" ".6:0", 21);
+    memcpy(scoreString, ".5:1" "Ｒ−ＩＱ　　" ".6:0", 27);
     strcat(scoreString, numString);
 
     textAnim = bmp_font_obj_print_r(gResults->objFont, scoreString, 0, 0);
